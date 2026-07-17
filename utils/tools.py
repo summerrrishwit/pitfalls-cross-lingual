@@ -10,10 +10,15 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from functools import wraps
 
-load_dotenv()
+load_dotenv(override=True)
 
-os.environ['http_proxy'] = os.getenv('HTTP_PROXY')
-os.environ['https_proxy'] = os.getenv('HTTPS_PROXY')
+for uppercase, lowercase in (("HTTP_PROXY", "http_proxy"), ("HTTPS_PROXY", "https_proxy")):
+    proxy = os.getenv(uppercase)
+    if proxy:
+        os.environ[lowercase] = proxy
+    else:
+        os.environ.pop(uppercase, None)
+        os.environ.pop(lowercase, None)
 
 # Set up logging
 logging.basicConfig(
@@ -130,13 +135,81 @@ model_dict = {
     'qwen-2.5-32B': 'Qwen/Qwen2.5-32B-Instruct',
     'qwen-2.5-14B': 'Qwen/Qwen2.5-14B-Instruct',
     'qwen-2.5-7B': 'Qwen/Qwen2.5-7B-Instruct',
+    'qwen3.7-plus': 'qwen3.7-plus',
+    'qwen3.7-max': 'qwen3.7-max',
     'yi-lightning': 'yi-lightning',
     'claude-3.5-sonnet': 'claude-3-5-sonnet-20241022'
 }
 
+BAILIAN_MODELS = {'qwen3.7-plus', 'qwen3.7-max'}
+LOCAL_QWEN_MODELS = {'qwen-2.5-7B'}
+_LOCAL_QWEN_TOKENIZER = None
+_LOCAL_QWEN_MODEL = None
+
+def get_bailian_api_key():
+    return os.getenv('BAILIAN_API_KEY') or os.getenv('DASHSCOPE_API_KEY')
+
+def get_bailian_base_url():
+    return os.getenv('BAILIAN_BASE_URL') or os.getenv(
+        'DASHSCOPE_BASE_URL',
+        'https://dashscope.aliyuncs.com/compatible-mode/v1'
+    )
+
+def get_bailian_timeout():
+    return float(os.getenv('BAILIAN_TIMEOUT_SECONDS', '120'))
+
+def get_local_qwen_model_dir():
+    return os.getenv('QWEN25_7B_MODEL_DIR', '/root/autodl-tmp/models/Qwen2.5-7B')
+
+def get_local_qwen_max_new_tokens():
+    return int(os.getenv('QWEN25_7B_MAX_NEW_TOKENS', '64'))
+
+def get_local_qwen_response(prompt, temperature=0.001):
+    global _LOCAL_QWEN_TOKENIZER, _LOCAL_QWEN_MODEL
+
+    if _LOCAL_QWEN_MODEL is None or _LOCAL_QWEN_TOKENIZER is None:
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
+        model_dir = get_local_qwen_model_dir()
+        logger.info(f"Loading local qwen-2.5-7B from {model_dir}")
+        _LOCAL_QWEN_TOKENIZER = AutoTokenizer.from_pretrained(
+            model_dir,
+            local_files_only=True,
+        )
+        _LOCAL_QWEN_MODEL = AutoModelForCausalLM.from_pretrained(
+            model_dir,
+            torch_dtype="auto",
+            local_files_only=True,
+        )
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        _LOCAL_QWEN_MODEL.to(device)
+        _LOCAL_QWEN_MODEL.eval()
+
+    import torch
+
+    inputs = _LOCAL_QWEN_TOKENIZER(prompt, return_tensors='pt')
+    device = next(_LOCAL_QWEN_MODEL.parameters()).device
+    inputs = {key: value.to(device) for key, value in inputs.items()}
+    do_sample = temperature is not None and temperature > 0.001
+    generation_kwargs = {
+        'max_new_tokens': get_local_qwen_max_new_tokens(),
+        'do_sample': do_sample,
+        'pad_token_id': _LOCAL_QWEN_TOKENIZER.eos_token_id,
+    }
+    if do_sample:
+        generation_kwargs['temperature'] = temperature
+    with torch.inference_mode():
+        outputs = _LOCAL_QWEN_MODEL.generate(**inputs, **generation_kwargs)
+    generated = outputs[0][inputs['input_ids'].shape[-1]:]
+    return _LOCAL_QWEN_TOKENIZER.decode(generated, skip_special_tokens=True).strip()
+
 @retry_on_failure()
 @token_logger_decorator
 def get_response(model='chatgpt-4o-latest', prompt=None, temperature=0.001):
+    if model in LOCAL_QWEN_MODELS:
+        return get_local_qwen_response(prompt=prompt, temperature=temperature)
+
     if model in ['claude-3.5-sonnet']:
         client = anthropic.Anthropic(
             api_key=os.getenv('ANTHROPIC_API_KEY')
@@ -153,6 +226,12 @@ def get_response(model='chatgpt-4o-latest', prompt=None, temperature=0.001):
         client = OpenAI(
             api_key=os.getenv('DEEPINFRA_API_KEY'),
             base_url=os.getenv('DEEPINFRA_BASE_URL')
+        )
+    elif model in BAILIAN_MODELS:
+        client = OpenAI(
+            api_key=get_bailian_api_key(),
+            base_url=get_bailian_base_url(),
+            timeout=get_bailian_timeout()
         )
     elif model == 'yi-lightning':
         client = OpenAI(

@@ -7,8 +7,6 @@ from utils.answers import simulate
 from utils.question import generate_question
 from utils.tools import logger as utils_logger
 from utils.translate import translate_question, translate_text
-os.environ['http_proxy'] = 'http://127.0.0.1:7890'
-os.environ['https_proxy'] = 'http://127.0.0.1:7890'
 # Configure logging
 logger = utils_logger
 count={}

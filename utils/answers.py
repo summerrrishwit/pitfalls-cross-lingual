@@ -1,4 +1,5 @@
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .prompt import extract_answer_dk,answer_question_withoutcot
 from .tools import get_response, clear_json
@@ -30,8 +31,15 @@ def simulate(language='English',question=None, model_list=[], choices=[], ground
     def get_answer_dk(model='gpt-4o'):
         tries = max_tries
         response = get_response(model=model, prompt=prompt, temperature=0.0001)
+        if response is None:
+            print(f"{model}: request failed after retries")
+            return
         extract_prompt = extract_answer_dk(question=question, answer=response, choices=choices)
-        answer = clear_json(get_response(model='gpt-4o-mini', prompt=extract_prompt, temperature=0.0001))
+        extractor_model = os.getenv('ANSWER_EXTRACT_MODEL', 'gpt-4o-mini')
+        answer = clear_json(get_response(model=extractor_model, prompt=extract_prompt, temperature=0.0001))
+        if answer is None:
+            print(f"{model}: answer extraction failed after retries with {extractor_model}")
+            return
         if answer==None:
             print(f"Failed to extract answer.")
             tries -= 1

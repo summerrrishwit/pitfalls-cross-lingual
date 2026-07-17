@@ -63,6 +63,15 @@ DEEPINFRA_API_KEY=your_deepinfra_api_key
 YI_BASE_URL=https://api.lingyiwanwu.com/v1/
 YI_API_KEY=your_yi_api_key
 
+# Alibaba Cloud Model Studio / Bailian (OpenAI-compatible)
+# You only need to fill one key variable. BAILIAN_API_KEY is preferred;
+# DASHSCOPE_API_KEY is also supported for compatibility with DashScope docs.
+BAILIAN_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+BAILIAN_TIMEOUT_SECONDS=120
+BAILIAN_API_KEY=your_bailian_api_key
+# DASHSCOPE_API_KEY=your_dashscope_api_key
+ANSWER_EXTRACT_MODEL=qwen3.7-plus
+
 ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
@@ -87,6 +96,17 @@ python eva.py
   --lang Chinese 
   --input_file data/Chinese.json 
   --output_file data/Chinese_results.json
+```
+
+To evaluate only Bailian Qwen 3.7 models:
+
+```bash
+python eva.py \
+  --lang Chinese \
+  --input_file data/Chinese.json \
+  --output_file data/Chinese_qwen37_results.json \
+  --models qwen3.7-plus qwen3.7-max \
+  --max-workers 2
 ```
 
 ### Step 3: Analyze Results
