@@ -1,10 +1,25 @@
 import json
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from .prompt import extract_answer_dk,answer_question_withoutcot
+from typing import Any, Dict, List, Optional, Union
+
+from .prompt import extract_answer_dk, answer_question_withoutcot
 from .tools import get_response, clear_json
 
-def simulate(language='English',question=None, model_list=[], choices=[], ground_truth=None, max_tries=5):
+EvaluationResult = Dict[str, Any]
+
+
+def simulate(
+    language: str = 'English',
+    question: Optional[str] = None,
+    model_list: Optional[List[str]] = None,
+    choices: Optional[List[str]] = None,
+    ground_truth: Optional[str] = None,
+    max_tries: int = 5,
+    return_details: bool = False,
+) -> Union[float, EvaluationResult]:
+    model_list = model_list or []
+    choices = choices or []
     question_prompt = {
         'Chinese': '请完成以下单选题，并严格从给定的选项中选择一个最符合题意的答案：',
         'English': 'Please complete the following multiple-choice question and select the one option that best fits the given context. Strictly choose from the provided options without adding explanations or modifying the choices: ',
@@ -26,49 +41,78 @@ def simulate(language='English',question=None, model_list=[], choices=[], ground
         'Zulu':'Sicela uqede umbuzo olandelayo wokukhetha okuningi bese ukhetha inketho eyodwa ehambisana kakhulu nomongo onikeziwe. Khetha ngokuqinile ezinkethweni ezinikeziwe ngaphandle kokungeza izincazelo noma ukuguqula izinketho:'
     }
     prompt = question_prompt[language]+answer_question_withoutcot(question=question, choices=choices)
-    responses = []
+    model_results: Dict[str, EvaluationResult] = {}
 
-    def get_answer_dk(model='gpt-4o'):
-        tries = max_tries
+    def get_answer_dk(model: str = 'gpt-4o') -> EvaluationResult:
+        result: EvaluationResult = {
+            'status': 'request_failed',
+            'raw_response': None,
+            'extracted_answer': None,
+            'correct': False,
+            'score': 0.0,
+            'extractor_model': os.getenv('ANSWER_EXTRACT_MODEL', 'gpt-4o-mini'),
+        }
         response = get_response(model=model, prompt=prompt, temperature=0.0001)
         if response is None:
             print(f"{model}: request failed after retries")
-            return
+            return result
+
+        result['raw_response'] = response
         extract_prompt = extract_answer_dk(question=question, answer=response, choices=choices)
-        extractor_model = os.getenv('ANSWER_EXTRACT_MODEL', 'gpt-4o-mini')
-        answer = clear_json(get_response(model=extractor_model, prompt=extract_prompt, temperature=0.0001))
-        if answer is None:
+        extractor_model = result['extractor_model']
+        extraction_response = get_response(
+            model=extractor_model,
+            prompt=extract_prompt,
+            temperature=0.0001,
+        )
+        if extraction_response is None:
+            result['status'] = 'extraction_request_failed'
             print(f"{model}: answer extraction failed after retries with {extractor_model}")
-            return
-        if answer==None:
-            print(f"Failed to extract answer.")
-            tries -= 1
-            return 
+            return result
+
+        cleaned_answer = clear_json(extraction_response)
         try:
-            answer = json.loads(answer)['final_answer']
-            if answer in choices:
-                print(f"{model}: {answer}")
-                return answer
-            else:
-                tries -= 1
-                print(f"Out of choices")
-        except json.JSONDecodeError:
-            print(f"Failed to extract answer.")
-            return 1  # Return None if all tries are exhausted
+            parsed_answer = json.loads(cleaned_answer)
+            answer = parsed_answer['final_answer']
+        except (json.JSONDecodeError, KeyError, TypeError):
+            result['status'] = 'invalid_extraction_json'
+            result['extraction_response'] = extraction_response
+            print(f"{model}: failed to extract answer")
+            return result
+
+        result['extracted_answer'] = answer
+        if answer not in choices:
+            result['status'] = 'out_of_choices'
+            print(f"{model}: extracted answer is out of choices")
+            return result
+
+        result['status'] = 'success'
+        result['correct'] = answer == ground_truth
+        result['score'] = 1.0 if result['correct'] else 0.0
+        print(f"{model}: {answer}")
+        return result
 
     with ThreadPoolExecutor() as executor:
-        future_answers = [executor.submit(get_answer_dk, model) for model in model_list]
+        future_answers = {
+            executor.submit(get_answer_dk, model): model
+            for model in model_list
+        }
         for future in as_completed(future_answers):
-            result = future.result()
-            if result:
-                responses.append(result)
-    
-    correct_number = 0
-    for value in responses:
-        if value == ground_truth:
-            correct_number += 1
-    if len(responses) == 0:
-        correct_rate = 0
-    else : 
-        correct_rate = correct_number / len(responses)
+            model = future_answers[future]
+            model_results[model] = future.result()
+
+    successful_results = [
+        result for result in model_results.values()
+        if result['status'] == 'success'
+    ]
+    if successful_results:
+        correct_rate = sum(result['score'] for result in successful_results) / len(successful_results)
+    else:
+        correct_rate = 0.0
+
+    if return_details:
+        return {
+            'score': correct_rate,
+            'models': model_results,
+        }
     return correct_rate

@@ -135,8 +135,13 @@ model_dict = {
     'qwen-2.5-32B': 'Qwen/Qwen2.5-32B-Instruct',
     'qwen-2.5-14B': 'Qwen/Qwen2.5-14B-Instruct',
     'qwen-2.5-7B': 'Qwen/Qwen2.5-7B-Instruct',
+    'qwen3.5-plus': 'qwen3.5-plus',
+    'qwen3-max': 'qwen3-max',
     'qwen3.7-plus': 'qwen3.7-plus',
     'qwen3.7-max': 'qwen3.7-max',
+    'deepseek-v3': 'deepseek-v3',
+    'deepseek-v4-pro': 'deepseek-v4-pro',
+    'deepseek-v4-flash': 'deepseek-v4-flash',
     'yi-lightning': 'yi-lightning',
     'claude-3.5-sonnet': 'claude-3-5-sonnet-20241022'
 }
@@ -157,6 +162,12 @@ def get_bailian_base_url():
 
 def get_bailian_timeout():
     return float(os.getenv('BAILIAN_TIMEOUT_SECONDS', '120'))
+
+def get_openai_client():
+    return OpenAI(
+        api_key=os.getenv('OPENAI_API_KEY'),
+        base_url=os.getenv('OPENAI_BASE_URL') or None,
+    )
 
 def get_local_qwen_model_dir():
     return os.getenv('QWEN25_7B_MODEL_DIR', '/root/autodl-tmp/models/Qwen2.5-7B')
@@ -228,18 +239,21 @@ def get_response(model='chatgpt-4o-latest', prompt=None, temperature=0.001):
             base_url=os.getenv('DEEPINFRA_BASE_URL')
         )
     elif model in BAILIAN_MODELS:
-        client = OpenAI(
-            api_key=get_bailian_api_key(),
-            base_url=get_bailian_base_url(),
-            timeout=get_bailian_timeout()
-        )
+        if os.getenv('OPENAI_BASE_URL'):
+            client = get_openai_client()
+        else:
+            client = OpenAI(
+                api_key=get_bailian_api_key(),
+                base_url=get_bailian_base_url(),
+                timeout=get_bailian_timeout()
+            )
     elif model == 'yi-lightning':
         client = OpenAI(
             api_key=os.getenv('YI_API_KEY'),
             base_url=os.getenv('YI_BASE_URL')
         )
     else:
-        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        client = get_openai_client()
 
     if model in ['o1-mini']:
         messages = [{'role': 'user', 'content': prompt}]
@@ -263,7 +277,7 @@ def get_response(model='chatgpt-4o-latest', prompt=None, temperature=0.001):
 @retry_on_failure()
 @token_logger_decorator
 def get_structured_response(model='gpt-4o', prompt=None, history=[], temperature=0.5, response_format=None):
-    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+    client = get_openai_client()
 
     messages = [{"role": message['role'], "content": message['content']} for message in history]
     messages.append({'role': 'user', 'content': prompt})
@@ -332,4 +346,4 @@ def num_tokens_from_string(string: str, encoding_name='cl100k_base') -> int:
     """Returns the number of tokens in a text string."""
     encoding = tiktoken.get_encoding(encoding_name)
     num_tokens = len(encoding.encode(string))
-    return num_tokens   
+    return num_tokens

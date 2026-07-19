@@ -92,11 +92,16 @@ python run.py
 
 ### Step 2: Evaluate performance disparities
 ```bash
-python eva.py 
-  --lang Chinese 
-  --input_file data/Chinese.json 
-  --output_file data/Chinese_results.json
+python eva.py \
+  --lang Chinese \
+  --input_file data/Chinese.json \
+  --output_file data/Chinese_results.json \
+  --models qwen3.7-plus qwen3.7-max
 ```
+
+`--models` is required. Only the models passed on the command line are evaluated
+and checkpointed. Checkpoints are stored separately under `data/Chinese/`, for
+example `Chinese_results_qwen3.7-plus_progress.json`.
 
 To evaluate only Bailian Qwen 3.7 models:
 
@@ -106,6 +111,17 @@ python eva.py \
   --input_file data/Chinese.json \
   --output_file data/Chinese_qwen37_results.json \
   --models qwen3.7-plus qwen3.7-max \
+  --max-workers 2
+```
+
+To evaluate the additional OpenAI-compatible Qwen and DeepSeek models:
+
+```bash
+python eva.py \
+  --lang Chinese \
+  --input_file data/Chinese.json \
+  --output_file data/Chinese_qwen_deepseek_results.json \
+  --models qwen3.5-plus qwen3-max deepseek-v3 deepseek-v4-pro deepseek-v4-flash \
   --max-workers 2
 ```
 
