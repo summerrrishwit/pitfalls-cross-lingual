@@ -133,6 +133,53 @@ python visualization.py
   --output_folder visualizations/
 ```
 
+### Cross-Lingual Factual Pitfalls curation (MVP)
+
+The factual-pitfall workflow is intentionally separate from `run.py` and `eva.py`.
+It starts from the five immutable English QA datasets under `data/source/`, creates a
+raw-source manifest before any model request, audits only the raw English QA, then
+generates, translates, and screens new bilingual candidates. Existing
+`data/<language>.json` files are not inputs to this workflow.
+
+Create and inspect a 600-record raw-source manifest without an API call:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_mvp.json \
+  sample --run-id raw-mvp-v1 --dry-run
+```
+
+After inspecting `data_processed/raw_factual_pitfalls/raw-mvp-v1/raw_source_manifest.json`,
+run a bounded `qwen3.7-plus` factual-audit pilot. The factual audit receives only
+the raw English question, choices, answer, source, and optional subject; it never
+receives translations, perturbations, rates, or screening outputs.
+
+```bash
+FACTUAL_AUDIT_MODEL=qwen3.7-plus conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_mvp.json \
+  audit \
+  --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 \
+  --limit 10
+```
+
+After reviewing the audit results, run each stage from the same run directory. The
+configured generator, translator, screen models, and answer extractor live under
+`roles` in `configs/raw_factual_pitfalls_mvp.json` and are recorded in derived output.
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json generate --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
+conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json translate --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
+conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json screen --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
+```
+
+Pass `--resume` to continue from the existing checkpoint and skip every already
+terminal candidate. If a network recovery is needed, use `--resume --retry-failed`
+to retry only terminal failures while preserving a retry-history entry; successful,
+rejected, and needs-review candidates are not called again. The pipeline retries only
+transient connection, timeout, rate-limit, and 5xx failures. Review at least 10% of
+all results and 20% of records that will enter a later test split before using retained
+samples for downstream experiments.
+
 ## Citation
 
 If you use this code or dataset, please cite the ACL 2025 version:

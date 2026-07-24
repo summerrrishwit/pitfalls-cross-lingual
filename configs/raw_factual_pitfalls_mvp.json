@@ -1,0 +1,31 @@
+{
+  "source_datasets": {
+    "ai2_arc_easy": "data/source/ai2_arc_easy.json",
+    "commonsense_qa": "data/source/commonsense_qa.json",
+    "mmlu": "data/source/mmlu.json",
+    "sciq": "data/source/sciq.json",
+    "truthful_qa": "data/source/truthful_qa.json"
+  },
+  "raw_sample_size": 600,
+  "seed": 20260724,
+  "target_languages": ["Chinese", "Japanese", "French"],
+  "supported_models": ["qwen3.7-plus", "qwen3-max", "deepseek-v3"],
+  "roles": {
+    "factual_audit_model": "qwen3.7-plus",
+    "perturbation_generator_model": "qwen3-max",
+    "translation_model": "qwen3.7-plus",
+    "screen_models": ["qwen3-max", "deepseek-v3"],
+    "answer_extract_model": "qwen3.7-plus"
+  },
+  "weakness_thresholds": {
+    "min_rate_ori": 0.8,
+    "max_rate_trans": 0.5,
+    "min_pitfall_score": 0.3
+  },
+  "runtime": {
+    "temperature": 0.0,
+    "timeout_seconds": 120,
+    "max_retries": 3
+  },
+  "output_root": "data_processed/raw_factual_pitfalls"
+}
