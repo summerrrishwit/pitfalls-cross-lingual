@@ -22,16 +22,16 @@ The system SHALL persist the raw-source manifest before issuing a factual-audit,
 - **WHEN** a factual audit, generation, translation, or screen request reaches a terminal failure state
 - **THEN** the selected raw candidate remains in the manifest and the failure is recorded without replacement sampling
 
-### Requirement: Reproducible source-stratified sampling
-The system SHALL deterministically sample 600 eligible raw English records using a supplied seed and strata composed of `source` plus optional `subject`. It SHALL deduplicate normalized English questions across the complete source pool and record allocations, shortfalls, duplicate exclusions, and selected original indices per source file.
+### Requirement: Reproducible pilot and full-population manifests
+The system SHALL deterministically sample 600 eligible raw English records for prompt calibration using strata composed of `source` plus optional `subject`. After prompt calibration is accepted, a separate full configuration SHALL include every eligible record. Both modes SHALL deduplicate normalized English questions across the complete source pool and record allocations, shortfalls, duplicate exclusions, and selected original indices per source file.
 
-#### Scenario: Same source snapshots and seed reproduce selection
-- **WHEN** the sampler runs twice with identical source-file fingerprints, configuration, and seed
+#### Scenario: Same source snapshots and seed reproduce pilot selection
+- **WHEN** the pilot manifest builder runs twice with identical source-file fingerprints, configuration, and seed
 - **THEN** both manifests contain the same selected source paths and original indices in the same per-stratum order
 
-#### Scenario: A source stratum is undersized
-- **WHEN** a configured source or subject stratum has fewer eligible unique records than its allocated count
-- **THEN** the system selects all eligible records in that stratum and records the shortfall and deterministic redistribution in the manifest
+#### Scenario: Create the full run after prompt calibration
+- **WHEN** prompt v4 calibration is accepted
+- **THEN** the system creates a separately identified full-population manifest without modifying the 600-item pilot manifest or its v1 review checkpoint
 
 ### Requirement: Raw-source manifest provenance
 The system SHALL write a machine-readable manifest containing run ID, source paths and fingerprints, source record counts, raw QA schema criteria, random seed, requested and actual sample counts, stratum allocations, selected original indices, duplicate exclusions, and immutable English source snapshots. The manifest MUST NOT contain translations, generated perturbations, rates, or LLM responses.

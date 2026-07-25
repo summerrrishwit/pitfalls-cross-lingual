@@ -1,6 +1,6 @@
 ## 1. Raw-source configuration and contracts
 
-- [x] 1.1 Replace the bilingual-source configuration with a raw-source MVP configuration for the five `data/source/` files, 600 total candidates, source/subject strata, random seed, three target languages, weakness thresholds, and a new output root.
+- [x] 1.1 Replace the bilingual-source configuration with separate 600-item calibration and full-population configurations for the five `data/source/` files, source/subject provenance, three target languages, weakness thresholds, and a new output root.
 - [x] 1.2 Define and validate typed schemas for raw-source manifests, raw English snapshots, factual-review records, generation records, translation records, screen checkpoints, retained-pitfall records, and summaries.
 - [x] 1.3 Define explicit configuration roles for `FACTUAL_AUDIT_MODEL=qwen3.7-plus`, perturbation generator, translator, screening model list, and answer extractor; reject missing or unsupported role configuration.
 
@@ -18,6 +18,9 @@
 - [x] 3.2 Update the audit runner to consume only raw-manifest candidates, call `FACTUAL_AUDIT_MODEL=qwen3.7-plus`, and persist terminal structured reviews.
 - [x] 3.3 Validate tri-state factual-review outputs and allow only validated accepts to enter generation.
 - [x] 3.4 Add transient-only retry, terminal failure records, and a bounded audit-pilot command for the raw manifest.
+- [x] 3.5 Analyze all 600 v1 pilot reviews and iteratively implement prompt v2-v4 from the observed exact-answer, decision-boundary, contextual-inference, time-sensitivity, mutable-role, and mutable-location failure modes.
+- [x] 3.6 Add separately named prompt-calibration checkpoints, pilot-ID reuse, and prompt-version isolation on resume.
+- [ ] 3.7 Run a larger representative qwen3.7-plus v4 calibration and manually compare v1/v4 decisions before authorizing the full run.
 
 ## 4. Perturbation generation and translation
 
@@ -37,5 +40,5 @@
 - [x] 6.1 Add unit tests for raw-source schema validation, cross-source deduplication, deterministic source/subject sampling, and manifest-before-model-call enforcement.
 - [x] 6.2 Add unit tests for English-only qwen3.7-plus audit prompts, generation integrity validation, translation alignment validation, screening threshold calculations, and transient versus permanent failures.
 - [x] 6.3 Run a no-network raw-source dry-run and inspect source fingerprints, allocations, and absence of downstream artifacts.
-- [ ] 6.4 Run bounded factual-audit, generation, translation, and screening pilots from the same raw manifest; manually inspect representative terminal records before the 600-source run.
+- [ ] 6.4 After prompt v4 calibration is accepted, run bounded generation, translation, and screening pilots; manually inspect representative terminal records before the full-population run.
 - [x] 6.5 Replace the current curation documentation with raw-source commands, required model-role configuration, stage output locations, resume behavior, and the planned manual-review procedure.

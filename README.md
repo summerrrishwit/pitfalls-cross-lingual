@@ -73,6 +73,11 @@ BAILIAN_API_KEY=your_bailian_api_key
 ANSWER_EXTRACT_MODEL=qwen3.7-plus
 
 ANTHROPIC_API_KEY=your_anthropic_api_key
+
+# SenseNova Anthropic SDK base URL; the SDK appends /v1/messages
+SENSENOVA_BASE_URL=https://token.sensenova.cn
+SENSENOVA_API_KEY=
+FACTUAL_AUDIT_MODEL=sensenova-6.7-flash-lite
 ```
 
 ## Usage
@@ -141,7 +146,7 @@ raw-source manifest before any model request, audits only the raw English QA, th
 generates, translates, and screens new bilingual candidates. Existing
 `data/<language>.json` files are not inputs to this workflow.
 
-Create and inspect a 600-record raw-source manifest without an API call:
+Create and inspect the 600-item prompt-calibration pilot without an API call:
 
 ```bash
 conda run -n clp python scripts/build_raw_factual_pitfalls.py \
@@ -150,19 +155,50 @@ conda run -n clp python scripts/build_raw_factual_pitfalls.py \
 ```
 
 After inspecting `data_processed/raw_factual_pitfalls/raw-mvp-v1/raw_source_manifest.json`,
-run a bounded `qwen3.7-plus` factual-audit pilot. The factual audit receives only
+run the `sensenova-6.7-flash-lite` factual-audit pilot. The factual audit receives only
 the raw English question, choices, answer, source, and optional subject; it never
 receives translations, perturbations, rates, or screening outputs.
 
 ```bash
-FACTUAL_AUDIT_MODEL=qwen3.7-plus conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
   --config configs/raw_factual_pitfalls_mvp.json \
   audit \
   --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 \
+  --output-name factual_reviews_sensenova.jsonl \
   --limit 10
 ```
 
-After reviewing the audit results, run each stage from the same run directory. The
+The original 600 records use `raw-english-factual-audit-v1`. Analyze them before
+scaling. The calibrated prompt v7 adds exact canonical-answer copying, an explicit
+`accept`/`reject`/`needs_review` boundary, contextual-inference and time-sensitivity
+checks, question-premise validation, structured reason codes, and stricter decision
+consistency. Re-audit the
+same pilot into a separate checkpoint so v1 is preserved. The stratification flag
+round-robins prior decisions and source datasets for a representative bounded check:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_mvp.json \
+  audit \
+  --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 \
+  --candidate-ids-from factual_reviews.jsonl \
+  --stratify-candidate-ids \
+  --output-name factual_reviews_sensenova_v7_calibration.jsonl \
+  --limit 100
+```
+
+Once the v7 calibration is manually accepted, create a separate full-population
+run. Do not seed final v7 labels from the v1 checkpoint because that would mix
+prompt protocols:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_full.json \
+  sample --run-id raw-full-v1 --dry-run
+```
+
+After reviewing the calibrated audit results, run each downstream stage from the
+chosen run directory. The
 configured generator, translator, screen models, and answer extractor live under
 `roles` in `configs/raw_factual_pitfalls_mvp.json` and are recorded in derived output.
 
@@ -173,7 +209,9 @@ conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/r
 ```
 
 Pass `--resume` to continue from the existing checkpoint and skip every already
-terminal candidate. If a network recovery is needed, use `--resume --retry-failed`
+terminal candidate. Resume is rejected when the existing audit checkpoint uses a
+different prompt version, preventing mixed-protocol labels. If a network recovery
+is needed, use `--resume --retry-failed`
 to retry only terminal failures while preserving a retry-history entry; successful,
 rejected, and needs-review candidates are not called again. The pipeline retries only
 transient connection, timeout, rate-limit, and 5xx failures. Review at least 10% of

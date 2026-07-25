@@ -15,12 +15,34 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple, TypedDict
 
+from anthropic import (
+    APIConnectionError as AnthropicAPIConnectionError,
+    APIStatusError as AnthropicAPIStatusError,
+    APITimeoutError as AnthropicAPITimeoutError,
+    Anthropic,
+    Omit,
+    RateLimitError as AnthropicRateLimitError,
+)
 from dotenv import load_dotenv
 from openai import APIConnectionError, APIStatusError, APITimeoutError, OpenAI, RateLimitError
 
 
-AUDIT_MODEL = "qwen3.7-plus"
-PROMPT_VERSION = "raw-english-factual-audit-v1"
+AUDIT_MODEL = "sensenova-6.7-flash-lite"
+SENSENOVA_BASE_URL = "https://token.sensenova.cn"
+PROMPT_VERSION = "raw-english-factual-audit-v7"
+AUDIT_REASON_CODES = {
+    "direct_fact",
+    "not_factual_recall",
+    "option_dependent",
+    "ambiguous",
+    "multi_step_reasoning",
+    "contextual_inference",
+    "subjective_or_normative",
+    "time_sensitive",
+    "canonical_answer_problem",
+    "malformed_question",
+    "other",
+}
 ROLE_NAMES = {
     "factual_audit_model",
     "perturbation_generator_model",
@@ -105,8 +127,9 @@ def validate_config(config: Dict[str, Any]) -> None:
     sources = config.get("source_datasets")
     if not isinstance(sources, dict) or not sources:
         raise ValueError("source_datasets must be a non-empty object")
-    if not isinstance(config.get("raw_sample_size"), int) or config["raw_sample_size"] <= 0:
-        raise ValueError("raw_sample_size must be a positive integer")
+    raw_sample_size = config.get("raw_sample_size")
+    if raw_sample_size != "all" and (not isinstance(raw_sample_size, int) or raw_sample_size <= 0):
+        raise ValueError('raw_sample_size must be a positive integer or "all"')
     if not isinstance(config.get("seed"), int):
         raise ValueError("seed must be an integer")
     if not isinstance(config.get("target_languages"), list) or not config["target_languages"]:
@@ -138,6 +161,8 @@ def validate_config(config: Dict[str, Any]) -> None:
     for key in ("temperature", "timeout_seconds"):
         if not isinstance(runtime.get(key), (int, float)):
             raise ValueError(f"runtime.{key} must be numeric")
+    if not isinstance(runtime.get("max_tokens", 4096), int) or runtime.get("max_tokens", 4096) <= 0:
+        raise ValueError("runtime.max_tokens must be a positive integer")
     if not isinstance(runtime.get("max_retries"), int) or runtime["max_retries"] < 0:
         raise ValueError("runtime.max_retries must be a non-negative integer")
 
@@ -235,7 +260,9 @@ def build_raw_manifest(config: Dict[str, Any], project_root: Path, run_id: str) 
     groups: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     for candidate in all_candidates:
         groups[candidate["stratum"]].append(candidate)
-    allocation = proportional_allocation(groups, config["raw_sample_size"])
+    full_population = config["raw_sample_size"] == "all"
+    desired_count = len(all_candidates) if full_population else config["raw_sample_size"]
+    allocation = proportional_allocation(groups, desired_count)
     selected = []
     stratum_details = {}
     for stratum in sorted(groups):
@@ -269,7 +296,8 @@ def build_raw_manifest(config: Dict[str, Any], project_root: Path, run_id: str) 
                 "requested_count": config["raw_sample_size"],
                 "available_count": len(all_candidates),
                 "actual_count": len(selected),
-                "shortfall": max(0, config["raw_sample_size"] - len(selected)),
+                "shortfall": max(0, desired_count - len(selected)),
+                "selection_mode": "full_population" if full_population else "stratified_sample",
                 "strata": stratum_details,
             },
         },
@@ -279,25 +307,54 @@ def build_raw_manifest(config: Dict[str, Any], project_root: Path, run_id: str) 
 
 def raw_audit_prompt(candidate: Dict[str, Any]) -> str:
     record = candidate["source_snapshot"]["record"]
-    return f'''You are curating an English factual-recall dataset.
+    return f'''You are curating a high-precision English factual-recall dataset.
 Review ONLY the raw English QA below. Do not evaluate translations, generated perturbations, model performance, or any cross-lingual metric.
 
-Accept only a question with a single stable, objective, directly retrievable factual answer that can be expressed as a subject-relation-answer triple and a natural English completion prompt. Reject or flag questions requiring the options, subjective judgment, material ambiguity, or multi-step reasoning.
+Apply this decision rubric:
+1. ACCEPT only when the question asks for one objective fact that can be retrieved directly from knowledge, without using the answer choices, resolving clues, predicting a typical action, interpreting a scenario, or performing multi-step reasoning.
+2. REJECT when it is clearly commonsense, subjective/normative, materially ambiguous, option-dependent, asks for one example among many, or requires contextual inference or multi-step reasoning.
+3. NEEDS_REVIEW when it appears factual but is time-sensitive without an explicit date, contains a malformed or suspicious canonical answer, has uncertain/disputed scope, or lies on the boundary between direct retrieval and contextual inference.
+
+Important lessons from the 600-item pilot:
+- A multiple-choice item is not automatically option-dependent. Ignore the choices and ask whether the question itself identifies one canonical fact.
+- Clue-solving and scenario classification are contextual inference, not direct factual recall.
+- Typical locations, tools, actions, preferences, and social expectations are commonsense unless they express a definitional fact.
+- A date-anchored historical statistic may be stable; an unanchored changing statistic is not.
+- Treat unanchored counts, rankings, budgets, populations, award totals, group comparisons, operating locations, and current role-holders as time-sensitive even when they summarize past events.
+- This rule is mandatory even when the entity is famous or the relationship is long-running: an unanchored business/restaurant location or a person's sidekick, co-host, office, employer, or similar mutable role MUST be NEEDS_REVIEW. Do not call it stable merely because it has remained true for a long time.
+- If a demographic, religious, national, racial, or similar group comparison depends on disputed membership definitions, use NEEDS_REVIEW for uncertain scope.
+- For ACCEPT, copy Canonical English answer into answer_en EXACTLY, character-for-character, including capitalization, punctuation, articles, and parentheses. Do not shorten, normalize, explain, or paraphrase it.
+- For ACCEPT, prompt_en must be a natural English completion stem whose missing completion is exactly answer_en.
+- A full-sentence canonical answer is allowed. Use a neutral stem such as "The factual answer is:" when needed. Do not reject an otherwise suitable fact merely because its canonical answer is a complete sentence.
+
+Before returning JSON, perform these mandatory literal checks:
+1. Verify every factual premise in the question. If a premise is false, contradictory, or scientifically malformed, set question_premise_valid=false and use NEEDS_REVIEW with reason_code="malformed_question". Do not invent a contradiction when the premise is correct.
+   - For scientific questions, verify every listed reactant, product, cause, component, and comparison separately. For example, oxygen is a product rather than a reactant of photosynthesis; a question that lists it as a reactant has an invalid premise.
+   - Two true facts are not contradictory merely because they mention different ranks. For example, Saturn is known for its rings and is the second-largest planet; Jupiter being the largest does not contradict that statement.
+   - Never substitute an unstated famous entity into a vague clue. If the clue does not uniquely identify the canonical answer, classify it as ambiguous or contextual inference rather than inventing a false premise about a different entity.
+2. Inspect Canonical English answer character by character. Unmatched quotes, stray trailing punctuation, truncation, or source-extraction artifacts require canonical_answer_well_formed=false and NEEDS_REVIEW with reason_code="canonical_answer_problem".
+3. Enforce the decision mapping: direct_fact -> ACCEPT; time_sensitive, canonical_answer_problem, or malformed_question -> NEEDS_REVIEW; contextual_inference, multi_step_reasoning, subjective_or_normative, option_dependent, or not_factual_recall -> REJECT.
+4. Scenario details and descriptive clues are not harmless flavor when they must be interpreted to identify or explain the answer; classify those items as contextual inference.
 
 Return exactly one JSON object and no Markdown:
 {{
   "decision": "accept" | "reject" | "needs_review",
+  "reason_code": "direct_fact" | "not_factual_recall" | "option_dependent" | "ambiguous" | "multi_step_reasoning" | "contextual_inference" | "subjective_or_normative" | "time_sensitive" | "canonical_answer_problem" | "malformed_question" | "other",
   "is_factual_recall": true | false,
   "factual_type": "geography" | "history" | "science" | "culture" | "entity_attribute" | "other" | "unknown",
   "answer_unique": true | false,
   "has_material_ambiguity": true | false,
   "option_dependent": true | false,
   "requires_multistep_reasoning": true | false,
-  "reason": "short explanation",
+  "requires_contextual_inference": true | false,
+  "is_time_sensitive": true | false,
+  "question_premise_valid": true | false,
+  "canonical_answer_well_formed": true | false,
+  "reason": "short explanation tied to the rubric",
   "subject_en": "required for accept",
   "relation_en": "required for accept",
-  "answer_en": "required for accept",
-  "prompt_en": "required for accept"
+  "answer_en": "for accept, exact character-for-character copy of Canonical English answer",
+  "prompt_en": "required for accept; completion must be exactly answer_en"
 }}
 
 Source: {record.get("source", "")}
@@ -370,22 +427,60 @@ def validate_audit_response(response: Dict[str, Any], canonical_answer: str) -> 
     decision = response.get("decision")
     if decision not in {"accept", "reject", "needs_review"}:
         return "needs_review", ["invalid_decision"]
-    for field in ("is_factual_recall", "answer_unique", "has_material_ambiguity", "option_dependent", "requires_multistep_reasoning"):
+    if response.get("reason_code") not in AUDIT_REASON_CODES:
+        errors.append("invalid_reason_code")
+    for field in (
+        "is_factual_recall",
+        "answer_unique",
+        "has_material_ambiguity",
+        "option_dependent",
+        "requires_multistep_reasoning",
+        "requires_contextual_inference",
+        "is_time_sensitive",
+        "question_premise_valid",
+        "canonical_answer_well_formed",
+    ):
         if not isinstance(response.get(field), bool):
             errors.append(f"invalid_{field}")
     for field in ("factual_type", "reason"):
         if not isinstance(response.get(field), str) or not response[field].strip():
             errors.append(f"invalid_{field}")
     if decision == "accept":
-        expected = {"is_factual_recall": True, "answer_unique": True, "has_material_ambiguity": False, "option_dependent": False, "requires_multistep_reasoning": False}
+        expected = {
+            "is_factual_recall": True,
+            "answer_unique": True,
+            "has_material_ambiguity": False,
+            "option_dependent": False,
+            "requires_multistep_reasoning": False,
+            "requires_contextual_inference": False,
+            "is_time_sensitive": False,
+            "question_premise_valid": True,
+            "canonical_answer_well_formed": True,
+        }
         for field, value in expected.items():
             if response.get(field) is not value:
                 errors.append(f"contradictory_accept_{field}")
+        if response.get("reason_code") != "direct_fact":
+            errors.append("contradictory_accept_reason_code")
         for field in ("subject_en", "relation_en", "answer_en", "prompt_en"):
             if not isinstance(response.get(field), str) or not response[field].strip():
                 errors.append(f"invalid_{field}")
         if response.get("answer_en", "").strip() != canonical_answer.strip():
             errors.append("answer_en_does_not_match_canonical")
+    if response.get("question_premise_valid") is False and decision != "needs_review":
+        errors.append("invalid_premise_decision")
+    needs_review_reason_codes = {"time_sensitive", "canonical_answer_problem", "malformed_question"}
+    if response.get("reason_code") in needs_review_reason_codes and decision != "needs_review":
+        errors.append("invalid_needs_review_reason_decision")
+    reject_reason_codes = {
+        "not_factual_recall",
+        "option_dependent",
+        "multi_step_reasoning",
+        "contextual_inference",
+        "subjective_or_normative",
+    }
+    if response.get("reason_code") in reject_reason_codes and decision != "reject":
+        errors.append("invalid_reject_reason_decision")
     return ("needs_review" if errors else decision), errors
 
 
@@ -428,10 +523,38 @@ def make_client(project_root: Path, timeout_seconds: float) -> OpenAI:
     )
 
 
+def make_audit_client(project_root: Path, timeout_seconds: float) -> Anthropic:
+    _load_environment(project_root)
+    api_key = os.getenv("SENSENOVA_API_KEY")
+    if not api_key:
+        raise ValueError("SENSENOVA_API_KEY is required for factual auditing")
+    return Anthropic(
+        api_key="",
+        auth_token=api_key,
+        base_url=os.getenv("SENSENOVA_BASE_URL") or SENSENOVA_BASE_URL,
+        timeout=timeout_seconds,
+        max_retries=0,
+        default_headers={
+            "Authorization": f"Bearer {api_key}",
+            "X-Api-Key": Omit(),
+        },
+    )
+
+
 def transient_error(error: Exception) -> bool:
-    if isinstance(error, (APIConnectionError, APITimeoutError, RateLimitError)):
+    if isinstance(
+        error,
+        (
+            APIConnectionError,
+            APITimeoutError,
+            RateLimitError,
+            AnthropicAPIConnectionError,
+            AnthropicAPITimeoutError,
+            AnthropicRateLimitError,
+        ),
+    ):
         return True
-    return isinstance(error, APIStatusError) and error.status_code >= 500
+    return isinstance(error, (APIStatusError, AnthropicAPIStatusError)) and error.status_code >= 500
 
 
 def call_model(client: OpenAI, model: str, prompt: str, runtime: Dict[str, Any]) -> Dict[str, Any]:
@@ -459,11 +582,39 @@ def call_model(client: OpenAI, model: str, prompt: str, runtime: Dict[str, Any])
     return {"raw_response": None, "attempt_count": attempts, "error": {"category": "unknown_failure", "message": "no call attempt"}}
 
 
-def audit_candidate(candidate: Dict[str, Any], config: Dict[str, Any], client: OpenAI) -> Dict[str, Any]:
+def call_audit_model(client: Anthropic, model: str, prompt: str, runtime: Dict[str, Any]) -> Dict[str, Any]:
+    attempts = 0
+    for attempts in range(1, runtime["max_retries"] + 2):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=runtime.get("max_tokens", 4096),
+                system="You are a careful dataset pipeline component. Follow the requested output format.",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=runtime["temperature"],
+            )
+            content = "".join(
+                block.text
+                for block in response.content
+                if getattr(block, "type", None) == "text"
+            ).strip()
+            if not content:
+                return {"raw_response": None, "attempt_count": attempts, "error": {"category": "empty_response", "message": "empty model response"}}
+            return {"raw_response": content, "attempt_count": attempts, "error": None}
+        except Exception as error:
+            retryable = transient_error(error)
+            if retryable and attempts <= runtime["max_retries"]:
+                time.sleep(min(2 ** (attempts - 1), 4))
+                continue
+            return {"raw_response": None, "attempt_count": attempts, "error": {"category": "transient_failure" if retryable else "permanent_failure", "message": str(error)}}
+    return {"raw_response": None, "attempt_count": attempts, "error": {"category": "unknown_failure", "message": "no call attempt"}}
+
+
+def audit_candidate(candidate: Dict[str, Any], config: Dict[str, Any], client: Anthropic) -> Dict[str, Any]:
     configured = os.getenv("FACTUAL_AUDIT_MODEL", config["roles"]["factual_audit_model"])
     if configured != AUDIT_MODEL:
         raise ValueError(f"FACTUAL_AUDIT_MODEL must be {AUDIT_MODEL!r}")
-    call = call_model(client, AUDIT_MODEL, raw_audit_prompt(candidate), config["runtime"])
+    call = call_audit_model(client, AUDIT_MODEL, raw_audit_prompt(candidate), config["runtime"])
     record = {"review_id": candidate["candidate_id"], "candidate_id": candidate["candidate_id"], "source_snapshot": candidate["source_snapshot"], "audit": {"model": AUDIT_MODEL, "role": "FACTUAL_AUDIT_MODEL", "prompt_version": PROMPT_VERSION, "temperature": config["runtime"]["temperature"], **call}, "created_at": utc_now()}
     if call["error"]:
         return {**record, "terminal_status": "audit_failed", "decision": "needs_review", "parsed_response": None, "validation_errors": ["audit_request_failed"]}

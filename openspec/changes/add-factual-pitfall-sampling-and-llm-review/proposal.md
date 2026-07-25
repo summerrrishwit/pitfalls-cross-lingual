@@ -2,11 +2,11 @@
 
 The current curation workflow samples from already-generated bilingual Cross-Lingual Pitfalls files. That can analyze an existing benchmark, but it cannot create a new factual-pitfall dataset with controlled source selection, generation, translation, and screening.
 
-This change moves the pipeline upstream to the raw English QA sources in `data/source/`. It will sample original questions first, audit their factual-recall suitability with `qwen3.7-plus`, then generate and translate perturbations before screening the resulting bilingual pairs for cross-lingual weaknesses.
+This change moves the pipeline upstream to the raw English QA sources in `data/source/`. It first audits a reproducible 600-item pilot, uses the observed failure modes to calibrate and version the `qwen3.7-plus` prompt, then creates a separate full-population run before generating, translating, and screening bilingual candidates.
 
 ## What Changes
 
-- Replace sampling from `data/Chinese.json`, `data/Japanese.json`, and `data/French.json` with deterministic, source-stratified sampling from `data/source/ai2_arc_easy.json`, `commonsense_qa.json`, `mmlu.json`, `sciq.json`, and `truthful_qa.json`.
+- Replace sampling from `data/Chinese.json`, `data/Japanese.json`, and `data/French.json` with a deterministic 600-item calibration pilot followed by a separate full-population manifest from the five `data/source/` datasets.
 - Preserve a raw-source manifest before any LLM call, including file fingerprints, original indices, source metadata, random seed, allocations, and source snapshots.
 - Retain the English-only `qwen3.7-plus` factual audit, now applied to sampled raw English QA records before any perturbation or translation is generated.
 - Add configurable perturbation-generation, translation, and screening stages. The pipeline will create candidate bilingual pairs only from English factual-audit accepts, then retain candidates that satisfy configured English-versus-target-language weakness thresholds.
@@ -17,7 +17,7 @@ This change moves the pipeline upstream to the raw English QA sources in `data/s
 
 ### New Capabilities
 
-- `raw-factual-source-sampling`: Deterministically sample immutable English QA records from `data/source/` before any model request.
+- `raw-factual-source-sampling`: Deterministically sample a 600-item calibration pilot, then include every immutable eligible English QA record in a separate full run after prompt calibration.
 - `english-factual-review`: Use `qwen3.7-plus` and a structured English-only prompt to determine whether a raw English QA item is a suitable factual-recall probe.
 - `cross-lingual-pitfall-generation`: Generate perturbations, translate accepted English factual QA items, and screen bilingual candidates for configured cross-lingual weaknesses.
 

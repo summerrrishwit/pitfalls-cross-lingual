@@ -13,13 +13,13 @@ raw English source sample
   → retain cross-lingual factual pitfalls
 ```
 
-The MVP keeps the design document's target languages—Chinese, Japanese, and French—and aims for up to 100 retained factual-pitfall records per language. It samples 600 raw English candidates, stratified across the five source datasets, before any LLM call. The source sample, factual audit, generation, translation, and screening all have distinct provenance.
+The MVP keeps the design document's target languages—Chinese, Japanese, and French—and aims for up to 100 retained factual-pitfall records per language. It first creates and audits a reproducible 600-item calibration pilot. Pilot outcomes are used to revise and version the factual-audit prompt; only after a bounded v4 re-audit is accepted does the pipeline create a separate full-population manifest. The source manifest, prompt version, factual audit, generation, translation, and screening all have distinct provenance.
 
 ## Goals / Non-Goals
 
 **Goals:**
 
-- Deterministically sample 600 raw English records from `data/source/`, stratified by `source` and optional `subject`.
+- Deterministically sample 600 eligible raw English records for prompt calibration, then create a separate full-population manifest after the calibrated prompt is accepted.
 - Use `qwen3.7-plus` to audit only the raw English QA for factual-recall suitability before generation or translation.
 - Generate perturbations only for accepted English factual records and preserve the wrong option used, perturbation text, insertion position, and generator model configuration.
 - Translate each generated English candidate into Chinese, Japanese, and French with an explicit translation model and preserve the translated question, choices, and answer.
@@ -37,7 +37,7 @@ The MVP keeps the design document's target languages—Chinese, Japanese, and Fr
 
 ### Sample raw source records before all model stages
 
-The pipeline creates a manifest from the five `data/source/` files before calling `qwen3.7-plus`, a generator, a translator, or screen models. It validates the English QA schema, deduplicates normalized English questions across the complete source pool, stratifies by source and optional subject, and records source-file fingerprints and excluded duplicates. The default MVP allocation is proportional across available strata for 600 total records; actual allocation and any shortfall are stored in the manifest.
+The pipeline creates a 600-item pilot manifest from the five `data/source/` files before calling `qwen3.7-plus`. It validates the English QA schema, deduplicates normalized English questions across the complete source pool, stratifies the pilot by source and optional subject, and records source-file fingerprints and excluded duplicates. A separate full configuration selects every eligible record only after prompt calibration.
 
 Alternative considered: sample independently per target language or sample after factual review. Rejected because the raw English source population must be stable across languages and reviewers; target-language-specific selection happens only after translated screening outcomes exist.
 
@@ -46,6 +46,12 @@ Alternative considered: sample independently per target language or sample after
 `FACTUAL_AUDIT_MODEL=qwen3.7-plus` receives only a raw English question, choices, canonical answer, and optional English source/subject metadata. It returns an accept/reject/needs-review decision and, when accepted, an English subject-relation-answer triple and natural completion prompt. It does not receive target-language text, candidate perturbations, rates, or screen-model answers.
 
 Alternative considered: audit generated bilingual candidates directly. Rejected because this would confound source factuality with generation and translation quality, making later error attribution impossible.
+
+### Calibrate and version the audit prompt before the full run
+
+The 600-item v1 audit is a calibration artifact rather than final full-run labeling. Analysis showed that 40 of 127 model accepts were downgraded because `answer_en` paraphrased rather than exactly copied the canonical answer, the model never selected `needs_review`, and several clue-solving or typical-commonsense items were accepted as direct facts. Iterations v2-v4 therefore require exact canonical copying, define the three decision boundaries, add contextual-inference, time-sensitivity, canonical-answer-quality, mutable-role and mutable-location checks, and record a structured reason code.
+
+Prompt-calibration reruns write to a separate JSONL. Resume rejects checkpoints produced by another prompt version. This prevents v1 and v2 labels from being silently mixed.
 
 ### Treat perturbation, translation, and screening as explicit model roles
 
@@ -65,7 +71,7 @@ The output root contains one raw-source manifest, English factual-review JSONL, 
 
 ## Risks / Trade-offs
 
-- [Many raw samples fail factual review or cross-lingual screening] → Start with 600 raw candidates, retain all terminal outcomes, and increase a new manifest's sample size rather than mutating an existing manifest.
+- [Prompt calibration changes audit decisions] → Preserve v1 pilot results, write every calibration version to a separate checkpoint, and create a separate full v4 run instead of treating v1 labels as resumable v4 labels.
 - [Generation changes the answer or introduces contradictory facts] → Require a generator validation prompt/contract, retain the wrong option and raw response, and reject candidates whose canonical answer or question integrity changes.
 - [Translation changes answer semantics] → Preserve translated choices and answer, perform schema/option alignment checks before screening, and reserve semantic-equivalence adjudication for a later validation change.
 - [Different model roles bias results] → Record all role/model IDs, temperatures, prompt versions, and per-model outputs; run controlled comparisons with one role changed at a time.
@@ -77,8 +83,8 @@ The output root contains one raw-source manifest, English factual-review JSONL, 
 1. Retain the existing bilingual-source manifest as a historical prototype and do not reuse it as input.
 2. Refactor the curation configuration and sampler to use `data/source/` and write a new raw-source manifest.
 3. Implement and test the English factual audit against the raw manifest with `qwen3.7-plus`.
-4. Implement generation, translation, and screening as distinct resumable stages; begin with a bounded raw-source pilot.
-5. Inspect retained examples and all stage failures before scaling to the 600-source MVP run.
+4. Analyze the completed 600-item v1 audit, revise the prompt, and run bounded v2-v4 calibration into separate checkpoints.
+5. After manual acceptance of a representative v4 calibration, create a separate full-population run and implement generation, translation, and screening as distinct resumable stages.
 
 ## Open Questions
 

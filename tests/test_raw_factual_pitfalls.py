@@ -3,7 +3,8 @@ import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from types import SimpleNamespace
+from unittest.mock import ANY, MagicMock, patch
 
 from factual_pitfalls import pipeline
 
@@ -31,16 +32,16 @@ def config(paths):
         "raw_sample_size": 4,
         "seed": 11,
         "target_languages": ["Chinese", "Japanese", "French"],
-        "supported_models": ["qwen3.7-plus", "qwen3-max", "deepseek-v3"],
+        "supported_models": ["sensenova-6.7-flash-lite", "qwen3.7-plus", "qwen3-max", "deepseek-v3"],
         "roles": {
-            "factual_audit_model": "qwen3.7-plus",
+            "factual_audit_model": "sensenova-6.7-flash-lite",
             "perturbation_generator_model": "qwen3-max",
             "translation_model": "qwen3.7-plus",
             "screen_models": ["qwen3-max", "deepseek-v3"],
             "answer_extract_model": "qwen3.7-plus",
         },
         "weakness_thresholds": {"min_rate_ori": 0.8, "max_rate_trans": 0.5, "min_pitfall_score": 0.3},
-        "runtime": {"temperature": 0.0, "timeout_seconds": 5, "max_retries": 0},
+        "runtime": {"temperature": 0.0, "max_tokens": 4096, "timeout_seconds": 5, "max_retries": 0},
         "output_root": "derived",
     }
 
@@ -78,6 +79,14 @@ class RawSamplingTests(unittest.TestCase):
         second_ids = [candidate["candidate_id"] for candidate in second["candidates"]]
         self.assertEqual(first_ids, second_ids)
 
+    def test_all_mode_selects_every_deduplicated_candidate(self):
+        all_config = {**self.config, "raw_sample_size": "all"}
+        manifest = pipeline.build_raw_manifest(all_config, self.root, "all")
+        allocation = manifest["source_datasets"]["allocation"]
+        self.assertEqual(allocation["selection_mode"], "full_population")
+        self.assertEqual(allocation["requested_count"], "all")
+        self.assertEqual(allocation["actual_count"], allocation["available_count"])
+
 
 class StageContractTests(unittest.TestCase):
     def setUp(self):
@@ -92,14 +101,18 @@ class StageContractTests(unittest.TestCase):
     def test_audit_prompt_excludes_downstream_fields(self):
         prompt = pipeline.raw_audit_prompt(self.candidate)
         self.assertIn("What is the capital of France?", prompt)
+        self.assertIn("character-for-character", prompt)
+        self.assertIn("contextual inference", prompt)
         self.assertNotIn("Chinese", prompt)
         self.assertNotIn("rate_ori", prompt)
         self.assertNotIn("巴黎", prompt)
 
     def test_accepting_audit_contract_requires_factual_fields(self):
         response = {
-            "decision": "accept", "is_factual_recall": True, "factual_type": "geography", "answer_unique": True,
+            "decision": "accept", "reason_code": "direct_fact", "is_factual_recall": True, "factual_type": "geography", "answer_unique": True,
             "has_material_ambiguity": False, "option_dependent": False, "requires_multistep_reasoning": False,
+            "requires_contextual_inference": False, "is_time_sensitive": False, "question_premise_valid": True,
+            "canonical_answer_well_formed": True,
             "reason": "Direct fact.", "subject_en": "France", "relation_en": "capital", "answer_en": "Paris", "prompt_en": "The capital of France is",
         }
         self.assertEqual(pipeline.validate_audit_response(response, "Paris"), ("accept", []))
@@ -107,6 +120,34 @@ class StageContractTests(unittest.TestCase):
         decision, errors = pipeline.validate_audit_response(response, "Paris")
         self.assertEqual(decision, "needs_review")
         self.assertIn("invalid_prompt_en", errors)
+
+    def test_accept_cannot_require_contextual_inference(self):
+        response = {
+            "decision": "accept", "reason_code": "direct_fact", "is_factual_recall": True, "factual_type": "other",
+            "answer_unique": True, "has_material_ambiguity": False, "option_dependent": False,
+            "requires_multistep_reasoning": False, "requires_contextual_inference": True,
+            "is_time_sensitive": False, "question_premise_valid": True,
+            "canonical_answer_well_formed": True, "reason": "Clue solving.",
+            "subject_en": "game", "relation_en": "identified as", "answer_en": "hockey game",
+            "prompt_en": "The game is",
+        }
+        decision, errors = pipeline.validate_audit_response(response, "hockey game")
+        self.assertEqual(decision, "needs_review")
+        self.assertIn("contradictory_accept_requires_contextual_inference", errors)
+
+    def test_malformed_question_must_be_sent_to_review(self):
+        response = {
+            "decision": "reject", "reason_code": "malformed_question", "is_factual_recall": True,
+            "factual_type": "science", "answer_unique": True, "has_material_ambiguity": False,
+            "option_dependent": False, "requires_multistep_reasoning": False,
+            "requires_contextual_inference": False, "is_time_sensitive": False,
+            "question_premise_valid": False, "canonical_answer_well_formed": True,
+            "reason": "The premise is scientifically incorrect.",
+        }
+        decision, errors = pipeline.validate_audit_response(response, "photosynthesis")
+        self.assertEqual(decision, "needs_review")
+        self.assertIn("invalid_premise_decision", errors)
+        self.assertIn("invalid_needs_review_reason_decision", errors)
 
     def test_generation_and_translation_validation(self):
         generated, errors = pipeline.validate_generation_response({"distraction": "A small detail is worth noting.", "insertion": "prefix", "answer_preserved": True})
@@ -134,6 +175,46 @@ class StageContractTests(unittest.TestCase):
 
     def test_permanent_failure_is_not_retryable(self):
         self.assertFalse(pipeline.transient_error(ValueError("bad configuration")))
+
+    def test_sensenova_audit_uses_anthropic_messages_api(self):
+        client = MagicMock()
+        client.messages.create.return_value = SimpleNamespace(
+            content=[SimpleNamespace(type="text", text='{"decision":"reject"}')]
+        )
+        call = pipeline.call_audit_model(
+            client,
+            pipeline.AUDIT_MODEL,
+            "Review this item.",
+            self.config["runtime"],
+        )
+        self.assertEqual(call["raw_response"], '{"decision":"reject"}')
+        client.messages.create.assert_called_once_with(
+            model="sensenova-6.7-flash-lite",
+            max_tokens=4096,
+            system="You are a careful dataset pipeline component. Follow the requested output format.",
+            messages=[{"role": "user", "content": "Review this item."}],
+            temperature=0.0,
+        )
+
+    @patch("factual_pitfalls.pipeline.Anthropic")
+    def test_sensenova_client_uses_bearer_auth_token(self, anthropic_client):
+        with patch.dict(
+            "os.environ",
+            {"SENSENOVA_API_KEY": "fill-me", "SENSENOVA_BASE_URL": "https://token.sensenova.cn"},
+            clear=False,
+        ):
+            pipeline.make_audit_client(Path("."), 30)
+        anthropic_client.assert_called_once_with(
+            api_key="",
+            auth_token="fill-me",
+            base_url="https://token.sensenova.cn",
+            timeout=30,
+            max_retries=0,
+            default_headers={
+                "Authorization": "Bearer fill-me",
+                "X-Api-Key": ANY,
+            },
+        )
 
 
 class ResumeStageTests(unittest.TestCase):
@@ -163,3 +244,57 @@ class ResumeStageTests(unittest.TestCase):
         self.assertEqual(calls, ["raw_1"])
         self.assertEqual(records[0]["terminal_status"], "completed")
         self.assertEqual(records[0]["retry_history"][0]["terminal_status"], "audit_failed")
+
+    def test_parallel_stage_processes_each_pending_item_once(self):
+        inputs = [{"candidate_id": f"raw_{index}"} for index in range(4)]
+
+        def transform(item):
+            return [{"review_id": item["candidate_id"], "terminal_status": "completed"}]
+
+        records = build_script.run_stage(
+            inputs,
+            self.output,
+            "review_id",
+            lambda item: [item["candidate_id"]],
+            transform,
+            False,
+            False,
+            None,
+            max_workers=2,
+        )
+        self.assertEqual({record["review_id"] for record in records}, {f"raw_{index}" for index in range(4)})
+
+    def test_full_manifest_expansion_preserves_checkpoint_candidates(self):
+        candidate = {"candidate_id": "raw_1", "source_snapshot": {"original_index": 1}}
+        previous = {"candidates": [candidate]}
+        expanded = {"candidates": [candidate, {"candidate_id": "raw_2", "source_snapshot": {"original_index": 2}}]}
+        metadata = build_script.expansion_metadata(previous, expanded, self.output)
+        self.assertEqual(metadata["previous_candidate_count"], 1)
+        self.assertEqual(metadata["existing_factual_review_count"], 1)
+
+    def test_prompt_calibration_can_reuse_pilot_candidate_ids(self):
+        manifest = {"candidates": [{"candidate_id": "raw_1"}, {"candidate_id": "raw_2"}]}
+        selected = build_script.audit_inputs(manifest, self.output.parent, self.output.name)
+        self.assertEqual([item["candidate_id"] for item in selected], ["raw_1"])
+
+    def test_resume_rejects_a_different_prompt_version(self):
+        pipeline.write_jsonl(
+            self.output,
+            [{"review_id": "raw_1", "audit": {"prompt_version": "raw-english-factual-audit-v1"}}],
+        )
+        with self.assertRaisesRegex(ValueError, "Cannot resume"):
+            build_script.validate_audit_resume_version(self.output, True)
+
+    def test_resume_rejects_qwen_audit_records(self):
+        pipeline.write_jsonl(
+            self.output,
+            [{
+                "review_id": "raw_1",
+                "audit": {
+                    "prompt_version": pipeline.PROMPT_VERSION,
+                    "model": "qwen3.7-plus",
+                },
+            }],
+        )
+        with self.assertRaisesRegex(ValueError, "existing audit models"):
+            build_script.validate_audit_resume_version(self.output, True)
