@@ -1,93 +1,107 @@
 ## Context
 
-`data/source/` contains immutable English multiple-choice source datasets: AI2 ARC Easy, CommonsenseQA, MMLU, SciQ, and TruthfulQA. These records contain English `question`, `choices`, `answer`, and `source` fields (with optional `subject`), but do not contain translations or measured cross-lingual performance. By contrast, the repository's language-specific JSON files are derived artifacts from an earlier generation pipeline and already embed those later-stage properties.
+`data/source/` contains immutable English multiple-choice records with `question`, `choices`, `answer`, `source`, and optional dataset-subject metadata. The correct answer is already known, so the model does not need to solve the MCQ. It must determine whether the question-answer pair expresses one atomic fact and, if so, orient a triple whose object is exactly the canonical source answer.
 
-The new dataset must make the construction path explicit:
+The revised experiment is intentionally limited to factual-triple construction and relation normalization:
 
 ```text
-raw English source sample
-  → qwen3.7-plus English factual audit
-  → perturb English factual QA
-  → translate candidate to each target language
-  → screen English and target-language answers
-  → retain cross-lingual factual pitfalls
+raw_source_manifest.json
+  -> models/sensenova-6.7-flash-lite/triple_extractions.jsonl
+  -> models/qwen3.7-plus/triple_extractions.jsonl
+  -> calibration/codex_reference_labels.jsonl
+  -> calibration/model_evaluation.json
+  -> codex_summary.json
+  -> relation_inventory.json
+  -> relation_taxonomy_v1.json
+  -> relation_mapping_v1.json
+  -> triples_normalized.jsonl
 ```
 
-The MVP keeps the design document's target languages—Chinese, Japanese, and French—and aims for up to 100 retained factual-pitfall records per language. It first creates and audits a reproducible 600-item calibration pilot. Pilot outcomes are used to revise and version the factual-audit prompt; only after a bounded v4 re-audit is accepted does the pipeline create a separate full-population manifest. The source manifest, prompt version, factual audit, generation, translation, and screening all have distinct provenance.
+No factual completion prompt, distractor, translation, screening score, or retained badcase is generated in this phase.
 
 ## Goals / Non-Goals
 
 **Goals:**
 
-- Deterministically sample 600 eligible raw English records for prompt calibration, then create a separate full-population manifest after the calibrated prompt is accepted.
-- Use `qwen3.7-plus` to audit only the raw English QA for factual-recall suitability before generation or translation.
-- Generate perturbations only for accepted English factual records and preserve the wrong option used, perturbation text, insertion position, and generator model configuration.
-- Translate each generated English candidate into Chinese, Japanese, and French with an explicit translation model and preserve the translated question, choices, and answer.
-- Screen English and target-language candidates with a configurable model ensemble; retain a pair only when it meets the configured `rate_ori`, `rate_trans`, and pitfall-score thresholds.
-- Produce append-safe derived artifacts and checkpoints without modifying `data/source/` or the older language-specific files.
+- Run `sensenova-6.7-flash-lite` and `qwen3.7-plus` independently with the same extraction contract.
+- Balance the calibration pilot across the five source datasets, then stratify within each source by optional subject metadata.
+- Preserve source provenance and original choices without asking the model to reproduce them.
+- Extract only atomic facts and record a machine-readable exclusion reason when no triple is extractable.
+- Exclude full-sentence, explanatory, procedural, recommendation, and multi-clause canonical answers that are unsuitable as one triple object.
+- Preserve the canonical `source_answer` exactly while permitting `answer` to be a shorter normalized entity or phrase explicitly entailed by it.
+- Require triple direction to remain `subject -> canonical answer` even when the reverse relation has a more familiar name.
+- Aggregate relation signatures globally before defining normalized labels.
+- Freeze a versioned taxonomy and explicit mapping so normalization is reproducible.
+- Reserve `qwen3.7-plus` or Codex for global taxonomy induction, mapping review, and ambiguous cases.
 
 **Non-Goals:**
 
-- Using existing `data/Chinese.json`, `data/Japanese.json`, or `data/French.json` as source inputs for the new construction run.
-- Choosing one fixed perturbation generator, translator, or screening ensemble in the specification; each run must declare provider-valid model IDs explicitly.
-- Final bilingual semantic-equivalence adjudication, train/dev/test splitting, logit-lens analysis, activation patching, vector intervention, or downstream benchmark reporting.
-- Deleting the existing 600-item manifest or retroactively treating it as a raw-source manifest.
+- Retaining or recalibrating the previous `accept` / `reject` / `needs_review` audit.
+- Generating `prompt_en` during triple extraction.
+- Selecting `distractor_answer`, generating perturbations, translating prompts, screening models, or searching cross-lingual badcases.
+- Modifying raw files in `data/source/`.
+- Forcing every record or every relation into the taxonomy.
 
 ## Decisions
 
-### Sample raw source records before all model stages
+### Preserve choices in code, not in the LLM response
 
-The pipeline creates a 600-item pilot manifest from the five `data/source/` files before calling `qwen3.7-plus`. It validates the English QA schema, deduplicates normalized English questions across the complete source pool, stratifies the pilot by source and optional subject, and records source-file fingerprints and excluded duplicates. A separate full configuration selects every eligible record only after prompt calibration.
+The output writer copies `source_choices` from the immutable source snapshot. The extraction prompt intentionally omits choices so extractability is tested without option comparison. This also prevents the model from altering choice text or order.
 
-Alternative considered: sample independently per target language or sample after factual review. Rejected because the raw English source population must be stable across languages and reviewers; target-language-specific selection happens only after translated screening outcomes exist.
+### Keep extraction and normalization separate
 
-### Keep the qwen3.7-plus audit English-only and upstream
+The extraction model returns `relation_raw`, not `relation_normalized`. A global inventory groups observed signatures using:
 
-`FACTUAL_AUDIT_MODEL=qwen3.7-plus` receives only a raw English question, choices, canonical answer, and optional English source/subject metadata. It returns an accept/reject/needs-review decision and, when accepted, an English subject-relation-answer triple and natural completion prompt. It does not receive target-language text, candidate perturbations, rates, or screen-model answers.
+```text
+relation_raw + subject_type + answer_type + direction + examples + count
+```
 
-Alternative considered: audit generated bilingual candidates directly. Rejected because this would confound source factuality with generation and translation quality, making later error attribution impossible.
+A stronger model can then propose a taxonomy and mapping with global visibility. After review, the taxonomy and mapping are frozen and applied programmatically. This is less expensive than two strong-model calls per row and more consistent than allowing each row to invent a normalized label.
 
-### Calibrate and version the audit prompt before the full run
+The weak model's `subject_type` and `answer_type` are evidence rather than ground truth. Each mapped signature therefore also records `subject_type_normalized` and `answer_type_normalized`, which must match the frozen taxonomy and may correct weak-model type errors without rewriting the raw extraction.
 
-The 600-item v1 audit is a calibration artifact rather than final full-run labeling. Analysis showed that 40 of 127 model accepts were downgraded because `answer_en` paraphrased rather than exactly copied the canonical answer, the model never selected `needs_review`, and several clue-solving or typical-commonsense items were accepted as direct facts. Iterations v2-v4 therefore require exact canonical copying, define the three decision boundaries, add contextual-inference, time-sensitivity, canonical-answer-quality, mutable-role and mutable-location checks, and record a structured reason code.
+### Keep an extraction gate without recreating the old audit
 
-Prompt-calibration reruns write to a separate JSONL. Resume rejects checkpoints produced by another prompt version. This prevents v1 and v2 labels from being silently mixed.
+Every row has `extraction_status=extracted|not_extractable`. A non-extractable record includes one exclusion reason and null triple fields. This gate expresses only whether an atomic triple can be formed; it does not retain the old tri-state review decision or its audit findings.
 
-### Treat perturbation, translation, and screening as explicit model roles
+### Canonical grounding and relation direction are hard constraints
 
-Each run configuration must declare `PERTURBATION_GENERATOR_MODEL`, `TRANSLATION_MODEL`, `SCREEN_MODELS`, and `ANSWER_EXTRACT_MODEL`, in addition to the fixed factual-audit role. The generation stage uses the accepted English factual QA and a selected incorrect option to produce a subtle, answer-preserving distraction. Translation creates a target-language version of the full candidate and its choices/answer. Screening evaluates the enhanced English and translated questions independently for every configured screen model, using the answer extractor only to normalize a model answer to an option.
+The source answer is authoritative and remains unchanged in provenance. For an extracted row, `answer` must either copy it or normalize an explicitly stated entity or short phrase without adding unsupported information. For example, the source sentence `Obama was born in Hawaii, which is a US state` may normalize to `United States` for a `country_of_birth` answer. The model must not reverse the triple.
 
-Alternative considered: retain the `run.py` hard-coded GPT generation and translation values. Rejected because it obscures experimental variables and does not support controlled generator/translator comparisons.
+The subject must be an independently identifiable anchor from the question and must not repeat the answer. A single definitional description may be represented with a stable `definition_term` or classification relation. Multi-clue biographical riddles, scenario interpretation, and descriptions combining several independent facts remain clue solving.
 
-### Screen only after generation and translation
+### Calibrate before expansion
 
-Raw source records have no `rate_ori` or `rate_trans`. The pipeline computes these values only from screening results for each generated bilingual candidate. A candidate is retained when configured thresholds hold, initially following the dataset design: `rate_ori >= 0.8`, `rate_trans <= 0.5`, and `rate_ori - rate_trans >= 0.3`. The manifest records the model list so rate interpretation remains reproducible.
+The 100-row pilot has a frozen Codex reference decision for every row. Model error is the fraction whose `extraction_status` differs from that binary reference label; field-level issues are reported separately and cannot be hidden by label accuracy. Both models must have at most three label errors out of 100 before a disjoint 300-row manifest is run. This is a calibration criterion against a Codex reference, not an estimate of human-gold accuracy.
 
-Alternative considered: infer weaknesses from source labels or historical language files. Rejected because the new perturbation and translation can change model behavior.
+### Isolate model outputs and endpoints
 
-### Persist each stage separately
+Every model writes to `models/<model-slug>/`. Resume reads only that model's checkpoint and rejects mixed prompt/model IDs. Model calls may run concurrently inside a model and the two model processes may run concurrently because they never share an output file. `qwen3.7-plus` uses `OPENAI_BASE_URL`, whose experiment value is `https://ctapi.csxdtx.com:16000/v1`; API credentials and base URLs are never persisted in result rows.
 
-The output root contains one raw-source manifest, English factual-review JSONL, generation records, per-language translation records, screen checkpoints, retained-pitfall JSONL, and summaries. A terminal failure is recorded at its own stage and is not silently replaced by another raw source record. Re-running a stage consumes its preceding artifact rather than resampling.
+### Normalize only through explicit artifacts
+
+`relation_taxonomy_v1.json` defines every relation ID, definition, subject type, answer type, direction, and examples. `relation_mapping_v1.json` maps observed relation signatures to those IDs. `triples_normalized.jsonl` is produced only from these artifacts. Unknown and ambiguous signatures remain unresolved and are never silently coerced.
+
+### Version and isolate extraction outputs
+
+The extraction prompt version, model ID, raw response, validation errors, retry history, and timestamps are retained. Resume rejects a checkpoint created by another prompt version or extraction model.
 
 ## Risks / Trade-offs
 
-- [Prompt calibration changes audit decisions] → Preserve v1 pilot results, write every calibration version to a separate checkpoint, and create a separate full v4 run instead of treating v1 labels as resumable v4 labels.
-- [Generation changes the answer or introduces contradictory facts] → Require a generator validation prompt/contract, retain the wrong option and raw response, and reject candidates whose canonical answer or question integrity changes.
-- [Translation changes answer semantics] → Preserve translated choices and answer, perform schema/option alignment checks before screening, and reserve semantic-equivalence adjudication for a later validation change.
-- [Different model roles bias results] → Record all role/model IDs, temperatures, prompt versions, and per-model outputs; run controlled comparisons with one role changed at a time.
-- [Screening is expensive or unstable] → Use per-stage checkpoints, conservative concurrency, transient-only retries, and bounded pilots before a full run.
-- [A provider model ID is unavailable] → Validate configured model IDs with a small preflight call before creating a costly full run; do not fall back silently.
+- [Weak-model extraction errors propagate] -> Run a stratified pilot, validate exact answers locally, and manually inspect relation direction and atomicity before scaling.
+- [Sentence-like source answers waste calls or become malformed triples] -> Apply a conservative program-owned answer-suitability gate before the model and record the skipped row with full provenance.
+- [Free-form relations fragment] -> Build a counted global inventory and freeze an explicit mapping before normalization.
+- [A broad relation collapses different semantics] -> Include subject/answer types and representative canonical facts in inventory entries.
+- [A reverse relation is forced into a familiar label] -> Validate direction against each taxonomy signature and permit `out_of_taxonomy`.
+- [Source choices are lost] -> Copy them directly from the source snapshot into every terminal extraction record.
+- [Strong-model endpoint changes] -> Record endpoint-independent model ID and run a preflight before taxonomy work; never record API keys.
 
 ## Migration Plan
 
-1. Retain the existing bilingual-source manifest as a historical prototype and do not reuse it as input.
-2. Refactor the curation configuration and sampler to use `data/source/` and write a new raw-source manifest.
-3. Implement and test the English factual audit against the raw manifest with `qwen3.7-plus`.
-4. Analyze the completed 600-item v1 audit, revise the prompt, and run bounded v2-v4 calibration into separate checkpoints.
-5. After manual acceptance of a representative v4 calibration, create a separate full-population run and implement generation, translation, and screening as distinct resumable stages.
-
-## Open Questions
-
-- Which provider-valid model IDs will be used for perturbation generation, translation, and the screening ensemble in the first controlled run?
-- Should the 600 raw-source allocation be strictly proportional to source-pool size, or guarantee a minimum per source/subject stratum?
-- Should screening retain only candidates that fail every screen model in the target language, or use the design document's aggregate `rate_trans <= 0.5` threshold?
+1. Preserve `data/source/` and model-independent `raw_source_manifest.json` files.
+2. Remove audit-specific checkpoints, logs, supervisor code, reports, prompt, validation, runner, and tests.
+3. Introduce extraction-specific configuration, prompt, validation, CLI, records, and resume isolation.
+4. Run offline unit tests and a bounded online SenseNova extraction smoke test.
+5. Build `relation_inventory.json` from valid extracted rows.
+6. Use Codex/`qwen3.7-plus` to propose and review `relation_taxonomy_v1.json` plus `relation_mapping_v1.json`.
+7. Apply the frozen mapping to produce normalized triples and report unresolved signatures.

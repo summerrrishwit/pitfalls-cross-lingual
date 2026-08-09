@@ -1,44 +1,42 @@
-## 1. Raw-source configuration and contracts
+## 1. Retained raw-source sampling
 
-- [x] 1.1 Replace the bilingual-source configuration with separate 600-item calibration and full-population configurations for the five `data/source/` files, source/subject provenance, three target languages, weakness thresholds, and a new output root.
-- [x] 1.2 Define and validate typed schemas for raw-source manifests, raw English snapshots, factual-review records, generation records, translation records, screen checkpoints, retained-pitfall records, and summaries.
-- [x] 1.3 Define explicit configuration roles for `FACTUAL_AUDIT_MODEL=qwen3.7-plus`, perturbation generator, translator, screening model list, and answer extractor; reject missing or unsupported role configuration.
+- [x] 1.1 Load and validate the five immutable `data/source/` JSON datasets without modifying them.
+- [x] 1.2 Deduplicate normalized English questions and preserve original source path/index provenance.
+- [x] 1.3 Build deterministic stratified pilot and full-population raw manifests before model requests.
 
-## 2. Deterministic raw English sampling
+## 2. Replace the superseded factual-audit flow
 
-- [x] 2.1 Implement read-only loading and English QA schema validation for all five `data/source/` JSON files.
-- [x] 2.2 Deduplicate normalized English questions across the full raw source pool and record exclusions by source path and original index.
-- [x] 2.3 Implement seeded source/subject-stratified allocation, undersized-stratum redistribution, and deterministic selection of 600 raw candidates.
-- [x] 2.4 Write a raw-source manifest containing file fingerprints, source snapshots, allocations, selected indices, and exclusions before any model request.
-- [x] 2.5 Add and verify a no-network raw-source dry-run command that produces the manifest and reports per-source allocations.
+- [x] 2.1 Remove the tri-state factual-audit prompt, validation, runner, monitor, analysis code, and audit-specific CLI/config names.
+- [x] 2.2 Delete factual-review JSONL, audit summaries, supervisor state/log/lock files, and audit-analysis outputs while preserving `data/source/` and raw manifests.
+- [x] 2.3 Replace the OpenSpec and README contracts with atomic-triple terminology and commands.
 
-## 3. qwen3.7-plus English factual audit
+## 3. Initial atomic-triple extraction
 
-- [x] 3.1 Refactor the audit prompt to consume raw English QA snapshots only and exclude perturbations, translations, rates, and screen outputs.
-- [x] 3.2 Update the audit runner to consume only raw-manifest candidates, call `FACTUAL_AUDIT_MODEL=qwen3.7-plus`, and persist terminal structured reviews.
-- [x] 3.3 Validate tri-state factual-review outputs and allow only validated accepts to enter generation.
-- [x] 3.4 Add transient-only retry, terminal failure records, and a bounded audit-pilot command for the raw manifest.
-- [x] 3.5 Analyze all 600 v1 pilot reviews and iteratively implement prompt v2-v4 from the observed exact-answer, decision-boundary, contextual-inference, time-sensitivity, mutable-role, and mutable-location failure modes.
-- [x] 3.6 Add separately named prompt-calibration checkpoints, pilot-ID reuse, and prompt-version isolation on resume.
-- [ ] 3.7 Run a larger representative qwen3.7-plus v4 calibration and manually compare v1/v4 decisions before authorizing the full run.
+- [x] 3.1 Add the versioned option-independent triple-extraction prompt and allowed exclusion reasons.
+- [x] 3.2 Add local validation for extraction status, nullable-field consistency, canonical-answer grounding, confidence, and terminal failures.
+- [x] 3.3 Write terminal records with explicit `source_id`, `source_dataset`, `source_question`, `source_choices`, `source_answer`, triple fields, model provenance, and validation errors.
+- [x] 3.4 Add an `extract` CLI command with bounded runs, parallel workers, resume, retry-failed, prompt-version isolation, and summaries.
 
-## 4. Perturbation generation and translation
+## 4. Relation inventory and normalization contracts
 
-- [x] 4.1 Add a versioned answer-preserving perturbation prompt and validation contract using each non-canonical English option as the distraction target.
-- [x] 4.2 Implement configurable perturbation generation from factual-review accepts with checkpointed provenance and no modification of canonical choices or answers.
-- [x] 4.3 Add a versioned translation prompt and structured validation for Chinese, Japanese, and French generated candidates.
-- [x] 4.4 Implement configurable per-language translation with terminal failure records and translated question/choice/answer alignment checks.
+- [x] 4.1 Build a deterministic relation inventory keyed by relation text and subject/answer type signatures with counts and bounded examples.
+- [x] 4.2 Define versioned taxonomy and mapping JSON schemas with direction/type validation and unresolved statuses.
+- [x] 4.3 Add deterministic mapping application that writes normalized triples without changing source or extracted triple fields.
 
-## 5. Cross-lingual screening and retained dataset outputs
+## 5. Verification and first experiment
 
-- [x] 5.1 Implement configurable English and target-language model screening with separate raw-response, answer-extraction, correctness, and score records.
-- [x] 5.2 Compute configured `rate_ori`, `rate_trans`, and pitfall scores from the declared screening ensemble and retain only threshold-satisfying candidates.
-- [x] 5.3 Add resumable per-stage and per-model checkpoints plus JSONL records and summaries for generated, translated, screened, failed, and retained candidates.
+- [x] 5.1 Replace old audit tests with extraction prompt, validator, provenance, resume-isolation, inventory, and mapping tests.
+- [x] 5.2 Run the offline test suite and no-network manifest checks.
+- [x] 5.3 Preflight `sensenova-6.7-flash-lite` and `qwen3.7-plus` through their configured endpoints without exposing credentials.
+- [x] 5.4 Run a bounded online SenseNova extraction smoke test, inspect records, and build the first relation inventory.
 
-## 6. Verification and documentation
+## 6. Codex-calibrated dual-model extraction
 
-- [x] 6.1 Add unit tests for raw-source schema validation, cross-source deduplication, deterministic source/subject sampling, and manifest-before-model-call enforcement.
-- [x] 6.2 Add unit tests for English-only qwen3.7-plus audit prompts, generation integrity validation, translation alignment validation, screening threshold calculations, and transient versus permanent failures.
-- [x] 6.3 Run a no-network raw-source dry-run and inspect source fingerprints, allocations, and absence of downstream artifacts.
-- [ ] 6.4 After prompt v4 calibration is accepted, run bounded generation, translation, and screening pilots; manually inspect representative terminal records before the full-population run.
-- [x] 6.5 Replace the current curation documentation with raw-source commands, required model-role configuration, stage output locations, resume behavior, and the planned manual-review procedure.
+- [x] 6.1 Freeze binary Codex reference labels and field-level review notes for the 100-row calibration manifest.
+- [x] 6.2 Revise the extraction prompt and validator to admit single-definition facts, permit grounded answer normalization, and reject option-dependent non-unique facts.
+- [x] 6.3 Add independent SenseNova and Qwen clients, model-slug output directories, concurrent workers, prompt/model resume isolation, and retry-failed support.
+- [x] 6.4 Add calibration evaluation with a hard per-model `label_error_rate <= 0.03` expansion gate and disagreement records.
+- [x] 6.5 Run both models on the 100-row calibration set, inspect field-level errors, and satisfy the expansion gate.
+- [x] 6.6 Create a disjoint deterministic 300-row manifest and run both models to completion.
+- [x] 6.7 Produce Codex summary artifacts for agreement, disagreement, relation inventory, and final-review candidates.
+- [x] 6.8 Update tests and README, then run the full test suite and strict OpenSpec validation.

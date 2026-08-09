@@ -1,0 +1,565 @@
+{
+  "evaluation_version": "codex-dual-model-calibration-v1",
+  "threshold": 0.03,
+  "all_models_passed": true,
+  "models": [
+    {
+      "evaluation_version": "codex-calibration-evaluation-v1",
+      "reference_version": "codex-factual-triple-reference-v1",
+      "model": "sensenova-6.7-flash-lite",
+      "prompt_version": "atomic-factual-triple-v6",
+      "reference_count": 100,
+      "completed_reference_count": 100,
+      "label_disagreement_count": 0,
+      "incomplete_count": 0,
+      "label_error_count": 0,
+      "label_error_rate": 0.0,
+      "threshold": 0.03,
+      "gate_passed": true,
+      "disagreements": [],
+      "incomplete": [],
+      "unexpected_candidate_ids": [],
+      "extracted_field_mismatch_count": 10,
+      "field_mismatches": [
+        {
+          "candidate_id": "raw_sciq_000078",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "small hydrophobic molecules",
+            "subject_type": "molecule",
+            "relation_raw": "type of diffusion through lipid molecules",
+            "answer": "simple",
+            "answer_type": "category",
+            "canonical_fact": "Small hydrophobic molecules undergo simple diffusion through lipid molecules."
+          },
+          "model_triple": {
+            "subject": "small hydrophobic molecules",
+            "subject_type": "molecule",
+            "relation_raw": "kind of diffusion through lipid molecules",
+            "answer": "simple",
+            "answer_type": "category",
+            "canonical_fact": "Small hydrophobic molecules undergo simple diffusion through lipid molecules."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000258",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "group",
+            "relation_raw": "category",
+            "answer": "fungi",
+            "answer_type": "category",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          },
+          "model_triple": {
+            "subject": "yeasts, molds, and mushrooms",
+            "subject_type": "organism group",
+            "relation_raw": "classification",
+            "answer": "fungi",
+            "answer_type": "taxonomic group",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000130",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "process for assessing and demonstrating an organisation's social, economic, and environmental benefits and limitations",
+            "subject_type": "process_definition",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "process",
+            "canonical_fact": "The process is called a social audit."
+          },
+          "model_triple": {
+            "subject": "process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation",
+            "subject_type": "process",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "term",
+            "canonical_fact": "A process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation is called a social audit."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000081",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "American Kennel Club",
+            "subject_type": "organization",
+            "relation_raw": "most popular dog breed in the US as of 1999",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US as of 1999 was the Labrador retriever."
+          },
+          "model_triple": {
+            "subject": "most popular dog breed in the US as of 1999 according to the American Kennel Club",
+            "subject_type": "fact",
+            "relation_raw": "is",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular dog breed in the US as of 1999 is the Labrador retriever."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000089",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "character of the initial position in Rawls's theory",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the term \"justice as fairness\" conveys the idea that the principles of justice are agreed to in an initial position that is fair."
+          },
+          "model_triple": {
+            "subject": "justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "initial position described by Rawls as",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the term 'justice as fairness' conveys the idea that the principles of justice are agreed to in an initial position that is fair."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000616",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "one substance dissolved in another",
+            "subject_type": "chemical_mixture_definition",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "mixture",
+            "canonical_fact": "One substance dissolved in another forms a solution."
+          },
+          "model_triple": {
+            "subject": "one substance dissolving in another",
+            "subject_type": "process",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "substance",
+            "canonical_fact": "A solution forms when one substance dissolves in another."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000725",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "organisms",
+            "subject_type": "biological group",
+            "relation_raw": "least specific classification grouping",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "The least specific classification grouping for organisms is domains."
+          },
+          "model_triple": {
+            "subject": "organisms",
+            "subject_type": "biological entity",
+            "relation_raw": "least specific grouping",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "All organisms can be classified into one of three domains, the least specific grouping."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000136",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "needs in Murray and Maslow's theories",
+            "subject_type": "theoretical_concept",
+            "relation_raw": "analogous concept in operant conditioning",
+            "answer": "Reinforcers",
+            "answer_type": "theoretical_concept",
+            "canonical_fact": "Murray and Maslow's needs are analogous to reinforcers in operant conditioning theory."
+          },
+          "model_triple": {
+            "subject": "needs of Murray and Maslow",
+            "subject_type": "concept",
+            "relation_raw": "similar concept in operant conditioning theory",
+            "answer": "Reinforcers",
+            "answer_type": "concept",
+            "canonical_fact": "The needs of both Murray and Maslow can be considered similar to reinforcers from operant conditioning theory."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000920",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "skull structure covering and protecting the brain",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull structure covering and protecting the brain is the cranium."
+          },
+          "model_triple": {
+            "subject": "skull that covers the brain and protects it",
+            "subject_type": "anatomical_structure",
+            "relation_raw": "name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull that covers the brain and protects it is called the cranium."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000987",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "thin membrane across the end of the ear canal that vibrates when struck by sound waves",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "eardrum",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The membrane is the eardrum."
+          },
+          "model_triple": {
+            "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "term for definition",
+            "answer": "eardrum",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "A thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is the eardrum."
+          }
+        }
+      ],
+      "created_at": "2026-08-08T14:43:21.168151+00:00"
+    },
+    {
+      "evaluation_version": "codex-calibration-evaluation-v1",
+      "reference_version": "codex-factual-triple-reference-v1",
+      "model": "qwen3.7-plus",
+      "prompt_version": "atomic-factual-triple-v6",
+      "reference_count": 100,
+      "completed_reference_count": 100,
+      "label_disagreement_count": 1,
+      "incomplete_count": 0,
+      "label_error_count": 1,
+      "label_error_rate": 0.01,
+      "threshold": 0.03,
+      "gate_passed": true,
+      "disagreements": [
+        {
+          "candidate_id": "raw_ai2_arc_easy_001543",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 1543,
+          "source_question": "Which of the following planets has the shortest orbit around the Sun?",
+          "source_answer": "Mercury",
+          "reference_status": "extracted",
+          "model_status": "not_extractable",
+          "model_exclusion_reason": "option_dependent",
+          "model_triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      ],
+      "incomplete": [],
+      "unexpected_candidate_ids": [],
+      "extracted_field_mismatch_count": 12,
+      "field_mismatches": [
+        {
+          "candidate_id": "raw_sciq_000078",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "small hydrophobic molecules",
+            "subject_type": "molecule",
+            "relation_raw": "type of diffusion through lipid molecules",
+            "answer": "simple",
+            "answer_type": "category",
+            "canonical_fact": "Small hydrophobic molecules undergo simple diffusion through lipid molecules."
+          },
+          "model_triple": {
+            "subject": "diffusion of small hydrophobic molecules through lipid molecules",
+            "subject_type": "process",
+            "relation_raw": "kind",
+            "answer": "simple",
+            "answer_type": "concept",
+            "canonical_fact": "The diffusion of small hydrophobic molecules through lipid molecules is simple diffusion."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000258",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "group",
+            "relation_raw": "category",
+            "answer": "fungi",
+            "answer_type": "category",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          },
+          "model_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "biological organisms",
+            "relation_raw": "classification",
+            "answer": "fungi",
+            "answer_type": "biological kingdom",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000130",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "process for assessing and demonstrating an organisation's social, economic, and environmental benefits and limitations",
+            "subject_type": "process_definition",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "process",
+            "canonical_fact": "The process is called a social audit."
+          },
+          "model_triple": {
+            "subject": "process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation",
+            "subject_type": "process",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "term",
+            "canonical_fact": "The term for a process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation is social audit."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000081",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "American Kennel Club",
+            "subject_type": "organization",
+            "relation_raw": "most popular dog breed in the US as of 1999",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US as of 1999 was the Labrador retriever."
+          },
+          "model_triple": {
+            "subject": "most popular breed of dog in the US as of 1999 according to the American Kennel Club",
+            "subject_type": "dog breed",
+            "relation_raw": "is",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US as of 1999 is the Labrador retriever."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000505",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "small rocky bodies that orbit the Sun",
+            "subject_type": "astronomical_object_definition",
+            "relation_raw": "term for definition",
+            "answer": "asteroids",
+            "answer_type": "astronomical_object_class",
+            "canonical_fact": "Small rocky bodies that orbit the Sun are asteroids."
+          },
+          "model_triple": {
+            "subject": "small, rocky bodies that orbit the sun",
+            "subject_type": "astronomical object class",
+            "relation_raw": "term for definition",
+            "answer": "asteroids",
+            "answer_type": "astronomical object class",
+            "canonical_fact": "Small, rocky bodies that orbit the sun are called asteroids."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000089",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "character of the initial position in Rawls's theory",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the term \"justice as fairness\" conveys the idea that the principles of justice are agreed to in an initial position that is fair."
+          },
+          "model_triple": {
+            "subject": "initial position in Rawls's justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "characterized as",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the initial position in which the principles of justice are agreed to in 'justice as fairness' is fair."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000616",
+          "differing_fields": [
+            "subject",
+            "relation_raw",
+            "answer"
+          ],
+          "expected_triple": {
+            "subject": "one substance dissolved in another",
+            "subject_type": "chemical_mixture_definition",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "mixture",
+            "canonical_fact": "One substance dissolved in another forms a solution."
+          },
+          "model_triple": {
+            "subject": "mixture formed when one substance dissolves in another",
+            "subject_type": "concept",
+            "relation_raw": "term for definition",
+            "answer": "solution",
+            "answer_type": "concept",
+            "canonical_fact": "A solution is a mixture formed when one substance dissolves in another."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000725",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "organisms",
+            "subject_type": "biological group",
+            "relation_raw": "least specific classification grouping",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "The least specific classification grouping for organisms is domains."
+          },
+          "model_triple": {
+            "subject": "least specific grouping of organisms",
+            "subject_type": "taxonomic rank",
+            "relation_raw": "term for definition",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "The least specific grouping of organisms is domains."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000843",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "reptile skin",
+            "subject_type": "body_part",
+            "relation_raw": "covered in to prevent drying out",
+            "answer": "scales",
+            "answer_type": "body_structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          },
+          "model_triple": {
+            "subject": "reptile skin",
+            "subject_type": "anatomical structure",
+            "relation_raw": "covered in",
+            "answer": "scales",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000920",
+          "differing_fields": [
+            "subject",
+            "relation_raw",
+            "answer"
+          ],
+          "expected_triple": {
+            "subject": "skull structure covering and protecting the brain",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull structure covering and protecting the brain is the cranium."
+          },
+          "model_triple": {
+            "subject": "skull that covers the brain and protects it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "name",
+            "answer": "cranium",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "The skull that covers the brain and protects it is called the cranium."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000145",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "Yoga Sutras",
+            "subject_type": "text",
+            "relation_raw": "attributed author",
+            "answer": "Patanjali",
+            "answer_type": "person",
+            "canonical_fact": "The Yoga Sutras is attributed to Patanjali."
+          },
+          "model_triple": {
+            "subject": "Yoga Sutras",
+            "subject_type": "work",
+            "relation_raw": "attributed to",
+            "answer": "Patanjali",
+            "answer_type": "person",
+            "canonical_fact": "The Yoga Sutras are attributed to Patanjali."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000987",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "thin membrane across the end of the ear canal that vibrates when struck by sound waves",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "eardrum",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The membrane is the eardrum."
+          },
+          "model_triple": {
+            "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "term for definition",
+            "answer": "eardrum",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "The thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is called the eardrum."
+          }
+        }
+      ],
+      "created_at": "2026-08-08T14:43:21.169206+00:00"
+    }
+  ]
+}

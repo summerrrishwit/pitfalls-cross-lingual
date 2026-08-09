@@ -1,5 +1,5 @@
-import json
 import importlib.util
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -31,19 +31,46 @@ def config(paths):
         "source_datasets": paths,
         "raw_sample_size": 4,
         "seed": 11,
-        "target_languages": ["Chinese", "Japanese", "French"],
-        "supported_models": ["sensenova-6.7-flash-lite", "qwen3.7-plus", "qwen3-max", "deepseek-v3"],
+        "sampling_strategy": "balanced_sources",
+        "supported_models": ["sensenova-6.7-flash-lite", "qwen3.7-plus"],
         "roles": {
-            "factual_audit_model": "sensenova-6.7-flash-lite",
-            "perturbation_generator_model": "qwen3-max",
-            "translation_model": "qwen3.7-plus",
-            "screen_models": ["qwen3-max", "deepseek-v3"],
-            "answer_extract_model": "qwen3.7-plus",
+            "triple_label_models": ["sensenova-6.7-flash-lite", "qwen3.7-plus"],
+            "relation_normalization_model": "qwen3.7-plus",
         },
-        "weakness_thresholds": {"min_rate_ori": 0.8, "max_rate_trans": 0.5, "min_pitfall_score": 0.3},
-        "runtime": {"temperature": 0.0, "max_tokens": 4096, "timeout_seconds": 5, "max_retries": 0},
+        "runtime": {"temperature": 0.0, "max_tokens": 2048, "timeout_seconds": 5, "max_retries": 0},
         "output_root": "derived",
     }
+
+
+def candidate():
+    raw = source_record("What is the capital of France?")
+    return {
+        "candidate_id": "raw_mmlu_000000",
+        "stratum": "mmlu::geography",
+        "source_snapshot": {
+            "dataset": "mmlu",
+            "source_path": "data/source/mmlu.json",
+            "original_index": 0,
+            "record": raw,
+        },
+    }
+
+
+def extracted_response(**overrides):
+    result = {
+        "schema_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+        "extraction_status": "extracted",
+        "exclusion_reason": None,
+        "subject": "France",
+        "subject_type": "country",
+        "relation_raw": "capital city of the country",
+        "answer": "Paris",
+        "answer_type": "city",
+        "canonical_fact": "The capital of France is Paris.",
+        "extraction_confidence": 0.99,
+    }
+    result.update(overrides)
+    return result
 
 
 class RawSamplingTests(unittest.TestCase):
@@ -52,8 +79,14 @@ class RawSamplingTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.first = self.root / "first.json"
         self.second = self.root / "second.json"
-        self.first.write_text(json.dumps([source_record("Capital of France?"), source_record("Capital of Italy?", subject="history")]), encoding="utf-8")
-        self.second.write_text(json.dumps([source_record("Capital of France?", source="sciq"), source_record("Capital of Germany?", source="sciq")]), encoding="utf-8")
+        self.first.write_text(
+            json.dumps([source_record("Capital of France?"), source_record("Capital of Italy?", subject="history")]),
+            encoding="utf-8",
+        )
+        self.second.write_text(
+            json.dumps([source_record("Capital of France?", source="sciq"), source_record("Capital of Germany?", source="sciq")]),
+            encoding="utf-8",
+        )
         self.config = config({"mmlu": str(self.first), "sciq": str(self.second)})
 
     def tearDown(self):
@@ -64,237 +97,437 @@ class RawSamplingTests(unittest.TestCase):
         record["answer"] = "Not a choice"
         self.assertEqual(pipeline.raw_schema_error(record), "answer_not_in_choices")
 
-    def test_cross_source_dedup_and_manifest_contains_no_downstream_fields(self):
+    def test_cross_source_dedup_and_manifest_contains_no_llm_fields(self):
         manifest = pipeline.build_raw_manifest(self.config, self.root, "test-run")
         selected_questions = [item["source_snapshot"]["record"]["question"] for item in manifest["candidates"]]
         self.assertEqual(selected_questions.count("Capital of France?"), 1)
-        self.assertNotIn("translations", manifest)
-        self.assertNotIn("rate_ori", json.dumps(manifest))
+        serialized = json.dumps(manifest)
+        self.assertNotIn("relation_raw", serialized)
+        self.assertNotIn("prompt_en", serialized)
         self.assertEqual(manifest["source_datasets"]["allocation"]["actual_count"], 3)
 
     def test_same_seed_reproduces_raw_selection(self):
         first = pipeline.build_raw_manifest(self.config, self.root, "first")
         second = pipeline.build_raw_manifest(self.config, self.root, "second")
-        first_ids = [candidate["candidate_id"] for candidate in first["candidates"]]
-        second_ids = [candidate["candidate_id"] for candidate in second["candidates"]]
-        self.assertEqual(first_ids, second_ids)
+        self.assertEqual(
+            [item["candidate_id"] for item in first["candidates"]],
+            [item["candidate_id"] for item in second["candidates"]],
+        )
 
     def test_all_mode_selects_every_deduplicated_candidate(self):
-        all_config = {**self.config, "raw_sample_size": "all"}
-        manifest = pipeline.build_raw_manifest(all_config, self.root, "all")
+        manifest = pipeline.build_raw_manifest({**self.config, "raw_sample_size": "all"}, self.root, "all")
         allocation = manifest["source_datasets"]["allocation"]
         self.assertEqual(allocation["selection_mode"], "full_population")
-        self.assertEqual(allocation["requested_count"], "all")
         self.assertEqual(allocation["actual_count"], allocation["available_count"])
 
+    def test_balanced_source_strategy_does_not_let_large_source_dominate(self):
+        large = self.root / "large.json"
+        large.write_text(
+            json.dumps([source_record(f"Large source question {index}?", source="large") for index in range(20)]),
+            encoding="utf-8",
+        )
+        small = self.root / "small.json"
+        small.write_text(
+            json.dumps([source_record(f"Small source question {index}?", source="small") for index in range(4)]),
+            encoding="utf-8",
+        )
+        balanced = config({"large": str(large), "small": str(small)})
+        balanced["raw_sample_size"] = 8
+        manifest = pipeline.build_raw_manifest(balanced, self.root, "balanced")
+        self.assertEqual(manifest["source_datasets"]["allocation"]["dataset_allocations"], {"large": 4, "small": 4})
+        self.assertEqual(
+            [candidate["source_snapshot"]["dataset"] for candidate in manifest["candidates"][:4]],
+            ["large", "small", "large", "small"],
+        )
 
-class StageContractTests(unittest.TestCase):
+    def test_prior_manifest_candidate_ids_are_excluded(self):
+        first = pipeline.build_raw_manifest(self.config, self.root, "first")
+        excluded = {first["candidates"][0]["candidate_id"]}
+        second = pipeline.build_raw_manifest(
+            self.config, self.root, "second", excluded_candidate_ids=excluded
+        )
+        self.assertTrue(excluded.isdisjoint({item["candidate_id"] for item in second["candidates"]}))
+        self.assertEqual(second["sampling_config"]["excluded_candidate_count"], 1)
+
+
+class ExtractionContractTests(unittest.TestCase):
     def setUp(self):
-        self.raw = source_record("What is the capital of France?")
-        self.candidate = {
-            "candidate_id": "raw_mmlu_000000",
-            "stratum": "mmlu::geography",
-            "source_snapshot": {"dataset": "mmlu", "source_path": "data/source/mmlu.json", "original_index": 0, "record": self.raw},
-        }
+        self.candidate = candidate()
         self.config = config({"mmlu": "data/source/mmlu.json"})
 
-    def test_audit_prompt_excludes_downstream_fields(self):
-        prompt = pipeline.raw_audit_prompt(self.candidate)
+    def test_prompt_omits_choices_and_normalized_relation(self):
+        prompt = pipeline.triple_extraction_prompt(self.candidate)
         self.assertIn("What is the capital of France?", prompt)
-        self.assertIn("character-for-character", prompt)
-        self.assertIn("contextual inference", prompt)
-        self.assertNotIn("Chinese", prompt)
-        self.assertNotIn("rate_ori", prompt)
-        self.assertNotIn("巴黎", prompt)
+        self.assertIn("Canonical English answer: Paris", prompt)
+        self.assertNotIn("Rome", prompt)
+        self.assertNotIn("Berlin", prompt)
+        self.assertIn("Do not create relation_normalized", prompt)
+        self.assertIn("Do not generate prompt_en", prompt)
+        self.assertIn("full-sentence", prompt)
+        self.assertIn('"described by"', prompt)
+        self.assertIn("subject must not equal", prompt)
+        self.assertIn("single-definition", prompt)
+        self.assertIn("option-dependent non-unique", prompt)
 
-    def test_accepting_audit_contract_requires_factual_fields(self):
-        response = {
-            "decision": "accept", "reason_code": "direct_fact", "is_factual_recall": True, "factual_type": "geography", "answer_unique": True,
-            "has_material_ambiguity": False, "option_dependent": False, "requires_multistep_reasoning": False,
-            "requires_contextual_inference": False, "is_time_sensitive": False, "question_premise_valid": True,
-            "canonical_answer_well_formed": True,
-            "reason": "Direct fact.", "subject_en": "France", "relation_en": "capital", "answer_en": "Paris", "prompt_en": "The capital of France is",
-        }
-        self.assertEqual(pipeline.validate_audit_response(response, "Paris"), ("accept", []))
-        del response["prompt_en"]
-        decision, errors = pipeline.validate_audit_response(response, "Paris")
-        self.assertEqual(decision, "needs_review")
-        self.assertIn("invalid_prompt_en", errors)
+    def test_valid_extracted_response_allows_grounded_short_answer(self):
+        self.assertEqual(pipeline.validate_triple_extraction_response(extracted_response(), "Paris"), [])
+        self.assertEqual(
+            pipeline.validate_triple_extraction_response(
+                extracted_response(answer="George Santayana"),
+                'George Santayana wrote "Only the dead have seen the end of war"',
+            ),
+            [],
+        )
+        errors = pipeline.validate_triple_extraction_response(extracted_response(answer="London"), "Paris")
+        self.assertIn("answer_not_grounded_in_source", errors)
 
-    def test_accept_cannot_require_contextual_inference(self):
-        response = {
-            "decision": "accept", "reason_code": "direct_fact", "is_factual_recall": True, "factual_type": "other",
-            "answer_unique": True, "has_material_ambiguity": False, "option_dependent": False,
-            "requires_multistep_reasoning": False, "requires_contextual_inference": True,
-            "is_time_sensitive": False, "question_premise_valid": True,
-            "canonical_answer_well_formed": True, "reason": "Clue solving.",
-            "subject_en": "game", "relation_en": "identified as", "answer_en": "hockey game",
-            "prompt_en": "The game is",
-        }
-        decision, errors = pipeline.validate_audit_response(response, "hockey game")
-        self.assertEqual(decision, "needs_review")
-        self.assertIn("contradictory_accept_requires_contextual_inference", errors)
+    def test_extracted_subject_cannot_repeat_answer(self):
+        errors = pipeline.validate_triple_extraction_response(
+            extracted_response(subject="Paris", answer="Paris"), "Paris"
+        )
+        self.assertIn("subject_matches_answer", errors)
 
-    def test_malformed_question_must_be_sent_to_review(self):
-        response = {
-            "decision": "reject", "reason_code": "malformed_question", "is_factual_recall": True,
-            "factual_type": "science", "answer_unique": True, "has_material_ambiguity": False,
-            "option_dependent": False, "requires_multistep_reasoning": False,
-            "requires_contextual_inference": False, "is_time_sensitive": False,
-            "question_premise_valid": False, "canonical_answer_well_formed": True,
-            "reason": "The premise is scientifically incorrect.",
-        }
-        decision, errors = pipeline.validate_audit_response(response, "photosynthesis")
-        self.assertEqual(decision, "needs_review")
-        self.assertIn("invalid_premise_decision", errors)
-        self.assertIn("invalid_needs_review_reason_decision", errors)
-
-    def test_generation_and_translation_validation(self):
-        generated, errors = pipeline.validate_generation_response({"distraction": "A small detail is worth noting.", "insertion": "prefix", "answer_preserved": True})
-        self.assertTrue(generated)
-        self.assertEqual(errors, [])
-        translated, errors = pipeline.validate_translation_response({"question": "法国的首都是哪里？", "choices": ["巴黎", "罗马", "柏林"], "answer": "巴黎"}, 3)
-        self.assertTrue(translated)
+    def test_sentence_like_source_answer_can_supply_grounded_object(self):
+        answer = "A mass of sediment is deposited at the mouth of a river."
+        self.assertTrue(pipeline.source_answer_is_unsuitable(answer))
+        self.assertFalse(pipeline.source_answer_is_unsuitable("Voluntary reliance on an external power for security"))
+        errors = pipeline.validate_triple_extraction_response(
+            extracted_response(answer="sediment"), answer
+        )
         self.assertEqual(errors, [])
 
-    def test_screening_uses_ensemble_rates_and_thresholds(self):
-        generation = {"generation_id": "g1", "candidate_id": "raw_mmlu_000000", "enhanced_question": "Detail. What is the capital of France?", "choices": self.raw["choices"], "answer": "Paris"}
-        translation = {"translation_id": "g1_chinese", "target_language": "Chinese", "generation": generation, "translated": {"question": "法国的首都是哪里？", "choices": ["巴黎", "罗马", "柏林"], "answer": "巴黎"}}
-        outcomes = iter([
-            {"score": 1.0}, {"score": 1.0},  # English qwen/deepseek
-            {"score": 0.0}, {"score": 1.0},  # Chinese qwen/deepseek
-        ])
-        def fake_screen(*_args, **_kwargs):
-            result = next(outcomes)
-            return {"status": "success", "correct": result["score"] == 1.0, **result}
-        with patch("factual_pitfalls.pipeline.screen_question", side_effect=fake_screen):
-            record = pipeline.screen_translation(translation, self.config, client=None)
-        self.assertEqual(record["rate_ori"], 1.0)
-        self.assertEqual(record["rate_trans"], 0.5)
-        self.assertTrue(record["retained"])
+    def test_grounding_accepts_reordered_content_words(self):
+        self.assertTrue(
+            pipeline.answer_is_grounded_in_source("deflated cuff", "The cuff is deflated.")
+        )
 
-    def test_permanent_failure_is_not_retryable(self):
-        self.assertFalse(pipeline.transient_error(ValueError("bad configuration")))
+    def test_grounding_adjustment_repairs_near_typo_and_downgrades_explanation(self):
+        typo, typo_changes = pipeline.adjust_extraction_response_grounding(
+            extracted_response(answer="sweet glands"), "sweat glands"
+        )
+        self.assertEqual(typo["answer"], "sweat glands")
+        self.assertIn("answer_near_match_replaced_with_source_answer", typo_changes)
+        explanation, explanation_changes = pipeline.adjust_extraction_response_grounding(
+            extracted_response(answer="abbreviation for Christmas"),
+            "It means the same because it's an abbreviation",
+        )
+        self.assertEqual(explanation["extraction_status"], "not_extractable")
+        self.assertEqual(explanation["exclusion_reason"], "answer_not_suitable")
+        self.assertIn("ungrounded_sentence_answer_downgraded_to_not_extractable", explanation_changes)
 
-    def test_sensenova_audit_uses_anthropic_messages_api(self):
+    def test_not_extractable_requires_null_triple_fields(self):
+        response = {
+            "schema_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "extraction_status": "not_extractable",
+            "exclusion_reason": "scenario_classification",
+            "subject": None,
+            "subject_type": None,
+            "relation_raw": None,
+            "answer": None,
+            "answer_type": None,
+            "canonical_fact": None,
+            "extraction_confidence": 0.98,
+        }
+        self.assertEqual(pipeline.validate_triple_extraction_response(response, "Paris"), [])
+        response["subject"] = "France"
+        self.assertIn(
+            "not_extractable_has_subject",
+            pipeline.validate_triple_extraction_response(response, "Paris"),
+        )
+
+    @patch("factual_pitfalls.pipeline.call_extraction_model")
+    def test_terminal_record_copies_source_choices_programmatically(self, call):
+        call.return_value = {
+            "raw_response": json.dumps(extracted_response()),
+            "attempt_count": 1,
+            "error": None,
+        }
+        record = pipeline.extract_triple_candidate(self.candidate, self.config, client=None)
+        self.assertEqual(record["terminal_status"], "completed")
+        self.assertEqual(record["source_id"], "raw_mmlu_000000")
+        self.assertEqual(record["source_choices"], ["Paris", "Rome", "Berlin"])
+        self.assertEqual(record["source_answer"], "Paris")
+        self.assertEqual(record["answer"], "Paris")
+        self.assertNotIn("prompt_en", record)
+        self.candidate["source_snapshot"]["record"]["choices"][0] = "changed"
+        self.assertEqual(record["source_choices"][0], "Paris")
+
+    @patch("factual_pitfalls.pipeline.call_extraction_model")
+    def test_sentence_answer_is_sent_to_model_for_object_normalization(self, call):
+        item = candidate()
+        item["source_snapshot"]["record"]["answer"] = "A complete explanatory sentence ends here."
+        item["source_snapshot"]["record"]["choices"][0] = "A complete explanatory sentence ends here."
+        call.return_value = {"raw_response": json.dumps({
+            "schema_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "extraction_status": "not_extractable",
+            "exclusion_reason": "answer_not_suitable",
+            **{field: None for field in pipeline.TRIPLE_FIELDS},
+            "extraction_confidence": 0.99,
+        }), "attempt_count": 1, "error": None}
+        record = pipeline.extract_triple_candidate(item, self.config, client=None)
+        call.assert_called_once()
+        self.assertEqual(record["extraction_status"], "not_extractable")
+        self.assertEqual(record["exclusion_reason"], "answer_not_suitable")
+        self.assertEqual(record["extraction"]["attempt_count"], 1)
+
+    def test_sensenova_extraction_uses_messages_api(self):
         client = MagicMock()
         client.messages.create.return_value = SimpleNamespace(
-            content=[SimpleNamespace(type="text", text='{"decision":"reject"}')]
+            content=[SimpleNamespace(type="text", text=json.dumps(extracted_response()))]
         )
-        call = pipeline.call_audit_model(
+        call = pipeline.call_extraction_model(
             client,
-            pipeline.AUDIT_MODEL,
-            "Review this item.",
+            pipeline.TRIPLE_EXTRACTION_MODEL,
+            "Extract this item.",
             self.config["runtime"],
         )
-        self.assertEqual(call["raw_response"], '{"decision":"reject"}')
+        self.assertIsNone(call["error"])
         client.messages.create.assert_called_once_with(
             model="sensenova-6.7-flash-lite",
-            max_tokens=4096,
-            system="You are a careful dataset pipeline component. Follow the requested output format.",
-            messages=[{"role": "user", "content": "Review this item."}],
+            max_tokens=2048,
+            system="You are a careful atomic factual-triple extraction component. Follow the JSON contract exactly.",
+            messages=[{"role": "user", "content": "Extract this item."}],
             temperature=0.0,
         )
 
     @patch("factual_pitfalls.pipeline.Anthropic")
-    def test_sensenova_client_uses_bearer_auth_token(self, anthropic_client):
+    def test_sensenova_client_uses_bearer_token(self, anthropic_client):
         with patch.dict(
             "os.environ",
             {"SENSENOVA_API_KEY": "fill-me", "SENSENOVA_BASE_URL": "https://token.sensenova.cn"},
             clear=False,
         ):
-            pipeline.make_audit_client(Path("."), 30)
+            pipeline.make_extraction_client(Path("."), 30, "sensenova-6.7-flash-lite")
         anthropic_client.assert_called_once_with(
             api_key="",
             auth_token="fill-me",
             base_url="https://token.sensenova.cn",
             timeout=30,
             max_retries=0,
-            default_headers={
-                "Authorization": "Bearer fill-me",
-                "X-Api-Key": ANY,
-            },
+            default_headers={"Authorization": "Bearer fill-me", "X-Api-Key": ANY},
         )
+
+    def test_qwen_extraction_uses_openai_chat_api(self):
+        client = MagicMock()
+        client.chat.completions.create.return_value = SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps(extracted_response())))]
+        )
+        call = pipeline.call_extraction_model(
+            client,
+            "qwen3.7-plus",
+            "Extract this item.",
+            self.config["runtime"],
+        )
+        self.assertIsNone(call["error"])
+        client.chat.completions.create.assert_called_once()
+
+    @patch("factual_pitfalls.pipeline.OpenAI")
+    def test_qwen_client_uses_required_openai_endpoint(self, openai_client):
+        with patch.dict(
+            "os.environ",
+            {"OPENAI_API_KEY": "fill-me", "OPENAI_BASE_URL": pipeline.QWEN_OPENAI_BASE_URL},
+            clear=False,
+        ):
+            pipeline.make_extraction_client(Path("."), 30, "qwen3.7-plus")
+        openai_client.assert_called_once_with(
+            api_key="fill-me",
+            base_url="https://ctapi.csxdtx.com:16000/v1",
+            timeout=30,
+            max_retries=0,
+        )
+
+
+class CodexCalibrationTests(unittest.TestCase):
+    def test_reference_overrides_and_evaluation_gate(self):
+        base = [{
+            "candidate_id": "raw_1",
+            "source_id": "raw_1",
+            "source_dataset": "sciq",
+            "source_original_index": 1,
+            "source_question": "Definition?",
+            "source_choices": ["term", "other"],
+            "source_answer": "term",
+            "extraction_status": "not_extractable",
+        }]
+        policy = {
+            "reference_version": pipeline.CODEX_REFERENCE_VERSION,
+            "overrides": [{
+                "candidate_id": "raw_1",
+                "extraction_status": "extracted",
+                "codex_review": "single definition",
+                "expected_triple": {**{field: "value" for field in pipeline.TRIPLE_FIELDS}, "answer": "term"},
+            }],
+        }
+        reference = pipeline.build_codex_reference(base, policy)
+        self.assertEqual(reference[0]["extraction_status"], "extracted")
+        observed = [{
+            "candidate_id": "raw_1",
+            "terminal_status": "completed",
+            "extraction_status": "extracted",
+            **{field: "value" for field in pipeline.TRIPLE_FIELDS},
+            "answer": "term",
+        }]
+        evaluation = pipeline.evaluate_model_against_codex_reference(
+            reference, observed, "qwen3.7-plus", threshold=0.03
+        )
+        self.assertTrue(evaluation["gate_passed"])
+        self.assertEqual(evaluation["label_error_rate"], 0.0)
+
+    def test_missing_reference_record_blocks_gate(self):
+        reference = [{"candidate_id": "raw_1", "extraction_status": "not_extractable"}]
+        evaluation = pipeline.evaluate_model_against_codex_reference(
+            reference, [], "qwen3.7-plus", threshold=0.03
+        )
+        self.assertFalse(evaluation["gate_passed"])
+        self.assertEqual(evaluation["incomplete_count"], 1)
+
+    def test_dual_model_summary_routes_disagreement_to_codex(self):
+        first = [{"candidate_id": "raw_1", "terminal_status": "completed", "extraction_status": "extracted"}]
+        second = [{"candidate_id": "raw_1", "terminal_status": "completed", "extraction_status": "not_extractable"}]
+        summary = pipeline.summarize_dual_model_records({
+            "sensenova-6.7-flash-lite": first,
+            "qwen3.7-plus": second,
+        })
+        self.assertEqual(summary["agreement_counts"]["requires_codex_review"], 1)
+        self.assertEqual(len(summary["disagreements"]), 1)
+
+
+class RelationNormalizationTests(unittest.TestCase):
+    def setUp(self):
+        self.records = [
+            {
+                "terminal_status": "completed",
+                "extraction_status": "extracted",
+                "validation_errors": [],
+                "source_id": "raw_1",
+                "source_dataset": "mmlu",
+                **{key: value for key, value in extracted_response().items() if key in pipeline.TRIPLE_FIELDS},
+            },
+            {
+                "terminal_status": "completed",
+                "extraction_status": "extracted",
+                "validation_errors": [],
+                "source_id": "raw_2",
+                "source_dataset": "sciq",
+                **{key: value for key, value in extracted_response(subject="Germany", answer="Berlin", canonical_fact="The capital of Germany is Berlin.").items() if key in pipeline.TRIPLE_FIELDS},
+            },
+        ]
+
+    def test_inventory_groups_same_relation_signature(self):
+        inventory = pipeline.build_relation_inventory(self.records, max_examples=1)
+        self.assertEqual(inventory["extracted_record_count"], 2)
+        self.assertEqual(inventory["signature_count"], 1)
+        self.assertEqual(inventory["entries"][0]["count"], 2)
+        self.assertEqual(len(inventory["entries"][0]["examples"]), 1)
+
+    def test_mapping_is_type_checked_and_applied_deterministically(self):
+        inventory = pipeline.build_relation_inventory(self.records)
+        signature_id = inventory["entries"][0]["signature_id"]
+        taxonomy = {
+            "taxonomy_version": "relation-taxonomy-v1",
+            "relations": [
+                {
+                    "id": "country_capital",
+                    "definition": "capital city of a country",
+                    "subject_type": "country",
+                    "answer_type": "city",
+                    "direction": "country -> city",
+                    "examples": [["France", "Paris"]],
+                }
+            ],
+        }
+        mapping = {
+            "mapping_version": "relation-mapping-v1",
+            "inventory_version": inventory["inventory_version"],
+            "taxonomy_version": taxonomy["taxonomy_version"],
+            "mappings": [
+                {
+                    "signature_id": signature_id,
+                    "normalization_status": "mapped",
+                    "relation_normalized": "country_capital",
+                    "subject_type_normalized": "country",
+                    "answer_type_normalized": "city",
+                    "normalization_reason": "Definition, types, and direction match.",
+                    "normalization_confidence": 0.99,
+                }
+            ],
+        }
+        first = pipeline.apply_relation_mapping(self.records, inventory, taxonomy, mapping)
+        second = pipeline.apply_relation_mapping(self.records, inventory, taxonomy, mapping)
+        self.assertEqual([row["relation_normalized"] for row in first], ["country_capital"] * 2)
+        self.assertEqual(
+            [row["relation_normalized"] for row in first],
+            [row["relation_normalized"] for row in second],
+        )
+
+        mapping["mappings"][0]["answer_type_normalized"] = "country"
+        with self.assertRaisesRegex(ValueError, "normalized answer type mismatch"):
+            pipeline.apply_relation_mapping(self.records, inventory, taxonomy, mapping)
 
 
 class ResumeStageTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.output = Path(self.temp.name) / "factual_reviews.jsonl"
+        self.output = Path(self.temp.name) / "triple_extractions.jsonl"
         pipeline.write_jsonl(
             self.output,
-            [{"review_id": "raw_1", "terminal_status": "audit_failed", "created_at": "first", "audit": {"error": "Connection error"}}],
+            [
+                {
+                    "candidate_id": "raw_1",
+                    "terminal_status": "extraction_failed",
+                    "created_at": "first",
+                    "extraction": {"error": {"category": "transient_failure"}},
+                }
+            ],
         )
 
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_resume_skips_failed_but_retry_failed_replaces_it_with_history(self):
+    def test_retry_failed_replaces_record_and_keeps_history(self):
         inputs = [{"candidate_id": "raw_1"}]
         calls = []
 
         def transform(item):
             calls.append(item["candidate_id"])
-            return [{"review_id": item["candidate_id"], "terminal_status": "completed", "created_at": "second", "audit": {}}]
+            return [{"candidate_id": item["candidate_id"], "terminal_status": "completed", "created_at": "second", "extraction": {}}]
 
-        build_script.run_stage(inputs, self.output, "review_id", lambda item: [item["candidate_id"]], transform, True, False, None)
+        build_script.run_stage(inputs, self.output, "candidate_id", lambda item: [item["candidate_id"]], transform, True, False, None)
         self.assertEqual(calls, [])
-
-        records = build_script.run_stage(inputs, self.output, "review_id", lambda item: [item["candidate_id"]], transform, True, True, None)
+        records = build_script.run_stage(inputs, self.output, "candidate_id", lambda item: [item["candidate_id"]], transform, True, True, None)
         self.assertEqual(calls, ["raw_1"])
-        self.assertEqual(records[0]["terminal_status"], "completed")
-        self.assertEqual(records[0]["retry_history"][0]["terminal_status"], "audit_failed")
+        self.assertEqual(records[0]["retry_history"][0]["terminal_status"], "extraction_failed")
 
-    def test_parallel_stage_processes_each_pending_item_once(self):
-        inputs = [{"candidate_id": f"raw_{index}"} for index in range(4)]
-
-        def transform(item):
-            return [{"review_id": item["candidate_id"], "terminal_status": "completed"}]
-
-        records = build_script.run_stage(
-            inputs,
-            self.output,
-            "review_id",
-            lambda item: [item["candidate_id"]],
-            transform,
-            False,
-            False,
-            None,
-            max_workers=2,
-        )
-        self.assertEqual({record["review_id"] for record in records}, {f"raw_{index}" for index in range(4)})
-
-    def test_full_manifest_expansion_preserves_checkpoint_candidates(self):
-        candidate = {"candidate_id": "raw_1", "source_snapshot": {"original_index": 1}}
-        previous = {"candidates": [candidate]}
-        expanded = {"candidates": [candidate, {"candidate_id": "raw_2", "source_snapshot": {"original_index": 2}}]}
-        metadata = build_script.expansion_metadata(previous, expanded, self.output)
-        self.assertEqual(metadata["previous_candidate_count"], 1)
-        self.assertEqual(metadata["existing_factual_review_count"], 1)
-
-    def test_prompt_calibration_can_reuse_pilot_candidate_ids(self):
-        manifest = {"candidates": [{"candidate_id": "raw_1"}, {"candidate_id": "raw_2"}]}
-        selected = build_script.audit_inputs(manifest, self.output.parent, self.output.name)
-        self.assertEqual([item["candidate_id"] for item in selected], ["raw_1"])
-
-    def test_resume_rejects_a_different_prompt_version(self):
+    def test_resume_rejects_old_audit_prompt_version(self):
         pipeline.write_jsonl(
             self.output,
-            [{"review_id": "raw_1", "audit": {"prompt_version": "raw-english-factual-audit-v1"}}],
+            [
+                {
+                    "candidate_id": "raw_1",
+                    "extraction": {
+                        "prompt_version": "raw-english-factual-audit-v7",
+                        "model": pipeline.TRIPLE_EXTRACTION_MODEL,
+                    },
+                }
+            ],
         )
         with self.assertRaisesRegex(ValueError, "Cannot resume"):
-            build_script.validate_audit_resume_version(self.output, True)
+            build_script.validate_extraction_resume(self.output, True)
 
-    def test_resume_rejects_qwen_audit_records(self):
+    def test_resume_rejects_checkpoint_from_other_label_model(self):
         pipeline.write_jsonl(
             self.output,
             [{
-                "review_id": "raw_1",
-                "audit": {
-                    "prompt_version": pipeline.PROMPT_VERSION,
-                    "model": "qwen3.7-plus",
+                "candidate_id": "raw_1",
+                "extraction": {
+                    "prompt_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+                    "model": "sensenova-6.7-flash-lite",
                 },
             }],
         )
-        with self.assertRaisesRegex(ValueError, "existing audit models"):
-            build_script.validate_audit_resume_version(self.output, True)
+        with self.assertRaisesRegex(ValueError, "qwen3.7-plus"):
+            build_script.validate_extraction_resume(self.output, True, "qwen3.7-plus")
+
+
+if __name__ == "__main__":
+    unittest.main()

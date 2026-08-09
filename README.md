@@ -55,6 +55,7 @@ Place the .env file in the utils folder. You can selectively add API keys for th
 HTTP_PROXY=your_http_proxy
 HTTPS_PROXY=your_https_proxy
 
+OPENAI_BASE_URL=https://ctapi.csxdtx.com:16000/v1
 OPENAI_API_KEY=your_openai_api_key
 
 DEEPINFRA_BASE_URL=https://api.deepinfra.com/v1/openai
@@ -70,14 +71,11 @@ BAILIAN_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 BAILIAN_TIMEOUT_SECONDS=120
 BAILIAN_API_KEY=your_bailian_api_key
 # DASHSCOPE_API_KEY=your_dashscope_api_key
-ANSWER_EXTRACT_MODEL=qwen3.7-plus
-
 ANTHROPIC_API_KEY=your_anthropic_api_key
 
 # SenseNova Anthropic SDK base URL; the SDK appends /v1/messages
 SENSENOVA_BASE_URL=https://token.sensenova.cn
 SENSENOVA_API_KEY=
-FACTUAL_AUDIT_MODEL=sensenova-6.7-flash-lite
 ```
 
 ## Usage
@@ -138,85 +136,114 @@ python visualization.py
   --output_folder visualizations/
 ```
 
-### Cross-Lingual Factual Pitfalls curation (MVP)
+### Atomic factual-triple extraction
 
-The factual-pitfall workflow is intentionally separate from `run.py` and `eva.py`.
-It starts from the five immutable English QA datasets under `data/source/`, creates a
-raw-source manifest before any model request, audits only the raw English QA, then
-generates, translates, and screens new bilingual candidates. Existing
-`data/<language>.json` files are not inputs to this workflow.
+This workflow is intentionally separate from `run.py` and `eva.py`. It starts from
+the five immutable English QA datasets under `data/source/`, creates a raw-source
+manifest before any model request, extracts atomic `(subject, relation_raw, answer)`
+triples independently with SenseNova and Qwen, and builds per-model relation inventories. It does not generate
+factual prompts, distractors, translations, or cross-lingual scores in this phase.
 
-Create and inspect the 600-item prompt-calibration pilot without an API call:
-
-```bash
-conda run -n clp python scripts/build_raw_factual_pitfalls.py \
-  --config configs/raw_factual_pitfalls_mvp.json \
-  sample --run-id raw-mvp-v1 --dry-run
-```
-
-After inspecting `data_processed/raw_factual_pitfalls/raw-mvp-v1/raw_source_manifest.json`,
-run the `sensenova-6.7-flash-lite` factual-audit pilot. The factual audit receives only
-the raw English question, choices, answer, source, and optional subject; it never
-receives translations, perturbations, rates, or screening outputs.
+Create and inspect the deterministic 100-item pilot without an API call:
 
 ```bash
 conda run -n clp python scripts/build_raw_factual_pitfalls.py \
   --config configs/raw_factual_pitfalls_mvp.json \
-  audit \
-  --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 \
-  --output-name factual_reviews_sensenova.jsonl \
-  --limit 10
+  sample --run-id triple-pilot-v1 --dry-run
 ```
 
-The original 600 records use `raw-english-factual-audit-v1`. Analyze them before
-scaling. The calibrated prompt v7 adds exact canonical-answer copying, an explicit
-`accept`/`reject`/`needs_review` boundary, contextual-inference and time-sensitivity
-checks, question-premise validation, structured reason codes, and stricter decision
-consistency. Re-audit the
-same pilot into a separate checkpoint so v1 is preserved. The stratification flag
-round-robins prior decisions and source datasets for a representative bounded check:
+After inspecting
+`data_processed/factual_triples/triple-pilot-v1/raw_source_manifest.json`, run a
+dual-model extraction. Each LLM receives the question and canonical answer,
+but not the answer choices. `source_choices` are copied directly from the manifest
+into each output record.
 
 ```bash
 conda run -n clp python scripts/build_raw_factual_pitfalls.py \
   --config configs/raw_factual_pitfalls_mvp.json \
-  audit \
-  --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 \
-  --candidate-ids-from factual_reviews.jsonl \
-  --stratify-candidate-ids \
-  --output-name factual_reviews_sensenova_v7_calibration.jsonl \
-  --limit 100
+  extract \
+  --run-dir data_processed/factual_triples/triple-pilot-v1 \
+  --models sensenova-6.7-flash-lite qwen3.7-plus \
+  --max-workers 1 \
+  --model-parallelism 2
 ```
 
-Once the v7 calibration is manually accepted, create a separate full-population
-run. Do not seed final v7 labels from the v1 checkpoint because that would mix
-prompt protocols:
+Outputs are isolated by model under `models/<model-name>/triple_extractions.jsonl`.
+`qwen3.7-plus` uses `OPENAI_BASE_URL=https://ctapi.csxdtx.com:16000/v1`.
+
+Resume a checkpoint without repeating completed records:
 
 ```bash
 conda run -n clp python scripts/build_raw_factual_pitfalls.py \
-  --config configs/raw_factual_pitfalls_full.json \
-  sample --run-id raw-full-v1 --dry-run
+  --config configs/raw_factual_pitfalls_mvp.json \
+  extract \
+  --run-dir data_processed/factual_triples/triple-pilot-v1 \
+  --models sensenova-6.7-flash-lite qwen3.7-plus \
+  --resume \
+  --retry-failed \
+  --max-workers 2
 ```
 
-After reviewing the calibrated audit results, run each downstream stage from the
-chosen run directory. The
-configured generator, translator, screen models, and answer extractor live under
-`roles` in `configs/raw_factual_pitfalls_mvp.json` and are recorded in derived output.
+Build the global relation inventory from locally valid extracted triples:
 
 ```bash
-conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json generate --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
-conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json translate --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
-conda run -n clp python scripts/build_raw_factual_pitfalls.py --config configs/raw_factual_pitfalls_mvp.json screen --run-dir data_processed/raw_factual_pitfalls/raw-mvp-v1 --limit 10
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_mvp.json \
+  inventory \
+  --run-dir data_processed/factual_triples/triple-pilot-v1 \
+  --model qwen3.7-plus
 ```
 
-Pass `--resume` to continue from the existing checkpoint and skip every already
-terminal candidate. Resume is rejected when the existing audit checkpoint uses a
-different prompt version, preventing mixed-protocol labels. If a network recovery
-is needed, use `--resume --retry-failed`
-to retry only terminal failures while preserving a retry-history entry; successful,
-rejected, and needs-review candidates are not called again. The pipeline retries only
-transient connection, timeout, rate-limit, and 5xx failures. Review at least 10% of
-all results and 20% of records that will enter a later test split before using retained
-samples for downstream experiments.
+Evaluate both model labels against the frozen 100-row Codex reference. The 300-row
+experiment is eligible only when every required model has at most 3% label error:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py evaluate \
+  --run-dir data_processed/factual_triples/triple-pilot-v1 \
+  --reference data_processed/factual_triples/triple-pilot-v1/calibration/codex_reference_labels_v1.jsonl \
+  --models sensenova-6.7-flash-lite qwen3.7-plus \
+  --input-name triple_extractions_v6.jsonl \
+  --threshold 0.03
+```
+
+Create a disjoint balanced 300-row manifest, then run the same two model labelers:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_300.json sample \
+  --run-id triple-300-v1 \
+  --output-dir data_processed/factual_triples/triple-300-v1 \
+  --exclude-manifest data_processed/factual_triples/triple-pilot-v1/raw_source_manifest.json
+```
+
+Build the final agreement/disagreement bundle for Codex review:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_300.json summarize \
+  --run-dir data_processed/factual_triples/triple-300-v1 \
+  --models sensenova-6.7-flash-lite qwen3.7-plus
+```
+
+After Codex or `qwen3.7-plus` proposes and a reviewer freezes the taxonomy and
+explicit mapping, apply them deterministically:
+
+```bash
+conda run -n clp python scripts/build_raw_factual_pitfalls.py \
+  --config configs/raw_factual_pitfalls_mvp.json \
+  normalize \
+  --run-dir data_processed/factual_triples/triple-pilot-v1 \
+  --model qwen3.7-plus \
+  --taxonomy configs/relation_taxonomy_v1.json \
+  --mapping configs/relation_mapping_v1.json
+```
+
+Resume is rejected when the checkpoint uses another extraction prompt version or
+model. `--resume --retry-failed` retries only transport or validation failures while
+preserving retry history. `source_answer` remains exact provenance; the extracted
+`answer` may be a concise substring grounded in a sentence-like source answer. Before
+freezing triples, inspect atomicity, subject selection, relation direction, answer
+grounding, fact validity, and the Codex disagreement adjudication.
 
 ## Citation
 

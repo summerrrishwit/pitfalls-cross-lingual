@@ -1,0 +1,876 @@
+{
+  "evaluation_version": "codex-dual-model-calibration-v1",
+  "threshold": 0.03,
+  "all_models_passed": false,
+  "models": [
+    {
+      "evaluation_version": "codex-calibration-evaluation-v1",
+      "reference_version": "codex-factual-triple-reference-v1",
+      "model": "sensenova-6.7-flash-lite",
+      "prompt_version": "atomic-factual-triple-v5",
+      "reference_count": 100,
+      "completed_reference_count": 100,
+      "label_disagreement_count": 6,
+      "incomplete_count": 0,
+      "label_error_count": 6,
+      "label_error_rate": 0.06,
+      "threshold": 0.03,
+      "gate_passed": false,
+      "disagreements": [
+        {
+          "candidate_id": "raw_mmlu_000109",
+          "source_dataset": "mmlu",
+          "source_original_index": 109,
+          "source_question": "As of 2019, about what percentage of Italians say it is very important to have free media in our country without government/state censorship?",
+          "source_answer": "56%",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "Italians",
+            "subject_type": "population",
+            "relation_raw": "percentage saying it is very important to have free media without government/state censorship as of 2019",
+            "answer": "56%",
+            "answer_type": "percentage",
+            "canonical_fact": "As of 2019, about 56% of Italians say it is very important to have free media in their country without government/state censorship."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000416",
+          "source_dataset": "sciq",
+          "source_original_index": 416,
+          "source_question": "Temperature and precipitation determine the types of what that can grow in an area, in turn affecting the animals that live there?",
+          "source_answer": "plants",
+          "reference_status": "extracted",
+          "model_status": "not_extractable",
+          "model_exclusion_reason": "causal_reasoning",
+          "model_triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000437",
+          "source_dataset": "sciq",
+          "source_original_index": 437,
+          "source_question": "Most mercury compounds decompose when they are?",
+          "source_answer": "heated",
+          "reference_status": "extracted",
+          "model_status": "not_extractable",
+          "model_exclusion_reason": "causal_reasoning",
+          "model_triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000541",
+          "source_dataset": "sciq",
+          "source_original_index": 541,
+          "source_question": "The five human senses are taste, touch, vision, hearing and one more. what is it?",
+          "source_answer": "smell",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "five human senses",
+            "subject_type": "concept",
+            "relation_raw": "member not listed among taste, touch, vision, and hearing",
+            "answer": "smell",
+            "answer_type": "sense",
+            "canonical_fact": "The five human senses include smell in addition to taste, touch, vision, and hearing."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000136",
+          "source_dataset": "mmlu",
+          "source_original_index": 136,
+          "source_question": "The “needs” of both Murray and Maslow can be considered similar to ___________ from operant conditioning theory.",
+          "source_answer": "Reinforcers",
+          "reference_status": "extracted",
+          "model_status": "not_extractable",
+          "model_exclusion_reason": "ambiguous_subject",
+          "model_triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000749",
+          "source_dataset": "sciq",
+          "source_original_index": 749,
+          "source_question": "In the grand canyon, the same rock layers are visible on opposite sides of the canyon and were deposited simultaneously, which is an example of what?",
+          "source_answer": "lateral continuity",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "same rock layers visible on opposite sides of the Grand Canyon and deposited simultaneously",
+            "subject_type": "geological observation",
+            "relation_raw": "example of principle",
+            "answer": "lateral continuity",
+            "answer_type": "geological principle",
+            "canonical_fact": "The same rock layers visible on opposite sides of the Grand Canyon and deposited simultaneously are an example of lateral continuity."
+          }
+        }
+      ],
+      "incomplete": [],
+      "unexpected_candidate_ids": [],
+      "extracted_field_mismatch_count": 8,
+      "field_mismatches": [
+        {
+          "candidate_id": "raw_sciq_000258",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "group",
+            "relation_raw": "category",
+            "answer": "fungi",
+            "answer_type": "category",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          },
+          "model_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "organism_group",
+            "relation_raw": "classification",
+            "answer": "fungi",
+            "answer_type": "taxonomic_group",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000130",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "process for assessing and demonstrating an organisation's social, economic, and environmental benefits and limitations",
+            "subject_type": "process_definition",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "process",
+            "canonical_fact": "The process is called a social audit."
+          },
+          "model_triple": {
+            "subject": "process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation",
+            "subject_type": "process",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "term",
+            "canonical_fact": "The term for a process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation is social audit."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000081",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "American Kennel Club",
+            "subject_type": "organization",
+            "relation_raw": "most popular dog breed in the US as of 1999",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US as of 1999 was the Labrador retriever."
+          },
+          "model_triple": {
+            "subject": "most popular dog breed in the US as of 1999 according to the American Kennel Club",
+            "subject_type": "fact",
+            "relation_raw": "identity",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular dog breed in the US as of 1999 was the Labrador retriever."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000431",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "brain and spinal cord",
+            "subject_type": "anatomical structures",
+            "relation_raw": "part of",
+            "answer": "central nervous system",
+            "answer_type": "body system",
+            "canonical_fact": "The brain and spinal cord are part of the central nervous system."
+          },
+          "model_triple": {
+            "subject": "brain and spinal cord",
+            "subject_type": "anatomical structures",
+            "relation_raw": "system membership",
+            "answer": "central nervous system",
+            "answer_type": "body system",
+            "canonical_fact": "The brain and spinal cord are part of the central nervous system."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000616",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "one substance dissolved in another",
+            "subject_type": "chemical_mixture_definition",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "mixture",
+            "canonical_fact": "One substance dissolved in another forms a solution."
+          },
+          "model_triple": {
+            "subject": "one substance dissolving in another",
+            "subject_type": "process",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "substance",
+            "canonical_fact": "A solution forms when one substance dissolves in another."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000843",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "reptile skin",
+            "subject_type": "body_part",
+            "relation_raw": "covered in to prevent drying out",
+            "answer": "scales",
+            "answer_type": "body_structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          },
+          "model_triple": {
+            "subject": "reptile skin",
+            "subject_type": "body_part",
+            "relation_raw": "covering that protects from drying out",
+            "answer": "scales",
+            "answer_type": "body_structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000920",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "skull structure covering and protecting the brain",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull structure covering and protecting the brain is the cranium."
+          },
+          "model_triple": {
+            "subject": "skull that covers the brain and protects it",
+            "subject_type": "anatomical_structure",
+            "relation_raw": "name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull that covers the brain and protects it is the cranium."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000987",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "thin membrane across the end of the ear canal that vibrates when struck by sound waves",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "eardrum",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The membrane is the eardrum."
+          },
+          "model_triple": {
+            "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "term for definition",
+            "answer": "eardrum",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "A thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is the eardrum."
+          }
+        }
+      ],
+      "created_at": "2026-08-08T14:33:18.978215+00:00"
+    },
+    {
+      "evaluation_version": "codex-calibration-evaluation-v1",
+      "reference_version": "codex-factual-triple-reference-v1",
+      "model": "qwen3.7-plus",
+      "prompt_version": "atomic-factual-triple-v5",
+      "reference_count": 100,
+      "completed_reference_count": 100,
+      "label_disagreement_count": 11,
+      "incomplete_count": 0,
+      "label_error_count": 11,
+      "label_error_rate": 0.11,
+      "threshold": 0.03,
+      "gate_passed": false,
+      "disagreements": [
+        {
+          "candidate_id": "raw_ai2_arc_easy_000064",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 64,
+          "source_question": "In a lab investigation, students had to identify different mineral specimens. Which property is the most reliable for identifying one mineral from another?",
+          "source_answer": "hardness",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "mineral identification",
+            "subject_type": "process",
+            "relation_raw": "most reliable property",
+            "answer": "hardness",
+            "answer_type": "property",
+            "canonical_fact": "Hardness is the most reliable property for mineral identification."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000109",
+          "source_dataset": "mmlu",
+          "source_original_index": 109,
+          "source_question": "As of 2019, about what percentage of Italians say it is very important to have free media in our country without government/state censorship?",
+          "source_answer": "56%",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "Italians",
+            "subject_type": "population",
+            "relation_raw": "percentage who say it is very important to have free media without government/state censorship in 2019",
+            "answer": "56%",
+            "answer_type": "percentage",
+            "canonical_fact": "As of 2019, 56% of Italians say it is very important to have free media in our country without government/state censorship."
+          }
+        },
+        {
+          "candidate_id": "raw_ai2_arc_easy_000494",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 494,
+          "source_question": "Which of the following has a warmer average surface temperature than Earth?",
+          "source_answer": "Venus",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "Solar System planets",
+            "subject_type": "planet",
+            "relation_raw": "member with a warmer average surface temperature than Earth",
+            "answer": "Venus",
+            "answer_type": "planet",
+            "canonical_fact": "Venus has a warmer average surface temperature than Earth."
+          }
+        },
+        {
+          "candidate_id": "raw_ai2_arc_easy_000936",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 936,
+          "source_question": "Which of these atomic structures has the least amount of mass?",
+          "source_answer": "an electron",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "atomic structures",
+            "subject_type": "scientific concept",
+            "relation_raw": "member with the least amount of mass",
+            "answer": "electron",
+            "answer_type": "subatomic particle",
+            "canonical_fact": "The electron is the atomic structure with the least amount of mass."
+          }
+        },
+        {
+          "candidate_id": "raw_ai2_arc_easy_000977",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 977,
+          "source_question": "A city is experiencing heavy smog formed by motor vehicle exhaust. Which of these weather conditions contributes most to the formation of smog?",
+          "source_answer": "temperature inversion",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "formation of smog",
+            "subject_type": "process",
+            "relation_raw": "weather condition that contributes most",
+            "answer": "temperature inversion",
+            "answer_type": "weather condition",
+            "canonical_fact": "Temperature inversion is the weather condition that contributes most to the formation of smog."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000541",
+          "source_dataset": "sciq",
+          "source_original_index": 541,
+          "source_question": "The five human senses are taste, touch, vision, hearing and one more. what is it?",
+          "source_answer": "smell",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "five human senses",
+            "subject_type": "biological concept",
+            "relation_raw": "fifth sense",
+            "answer": "smell",
+            "answer_type": "biological sense",
+            "canonical_fact": "The fifth of the five human senses is smell."
+          }
+        },
+        {
+          "candidate_id": "raw_truthful_qa_000502",
+          "source_dataset": "truthful_qa",
+          "source_original_index": 502,
+          "source_question": "How long should you wait between eating a meal and going swimming?",
+          "source_answer": "You can swim immediately after eating",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "time to wait between eating a meal and going swimming",
+            "subject_type": "concept",
+            "relation_raw": "recommended wait time",
+            "answer": "immediately",
+            "answer_type": "duration",
+            "canonical_fact": "You can swim immediately after eating a meal."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000571",
+          "source_dataset": "sciq",
+          "source_original_index": 571,
+          "source_question": "Where do recent rocks point towards on earth?",
+          "source_answer": "north magnetic pole",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "recent rocks on Earth",
+            "subject_type": "geological material",
+            "relation_raw": "magnetic alignment direction",
+            "answer": "north magnetic pole",
+            "answer_type": "magnetic pole",
+            "canonical_fact": "Recent rocks on Earth point towards the north magnetic pole."
+          }
+        },
+        {
+          "candidate_id": "raw_ai2_arc_easy_001159",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 1159,
+          "source_question": "Which type of model best shows the location of underwater ocean ridges?",
+          "source_answer": "topographic map",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "underwater ocean ridges",
+            "subject_type": "geographic feature",
+            "relation_raw": "type of model best showing location",
+            "answer": "topographic map",
+            "answer_type": "map type",
+            "canonical_fact": "A topographic map is the type of model that best shows the location of underwater ocean ridges."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000749",
+          "source_dataset": "sciq",
+          "source_original_index": 749,
+          "source_question": "In the grand canyon, the same rock layers are visible on opposite sides of the canyon and were deposited simultaneously, which is an example of what?",
+          "source_answer": "lateral continuity",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "rock layers visible on opposite sides of the canyon and deposited simultaneously",
+            "subject_type": "geological phenomenon",
+            "relation_raw": "geological principle",
+            "answer": "lateral continuity",
+            "answer_type": "geological principle",
+            "canonical_fact": "Rock layers visible on opposite sides of the canyon and deposited simultaneously are an example of the geological principle of lateral continuity."
+          }
+        },
+        {
+          "candidate_id": "raw_ai2_arc_easy_001490",
+          "source_dataset": "ai2_arc_easy",
+          "source_original_index": 1490,
+          "source_question": "Paul listens to music through his radio. Which best explains the sound Paul hears?",
+          "source_answer": "Sounds are waves that travel through matter.",
+          "reference_status": "not_extractable",
+          "model_status": "extracted",
+          "model_exclusion_reason": null,
+          "model_triple": {
+            "subject": "sound",
+            "subject_type": "physical phenomenon",
+            "relation_raw": "definition",
+            "answer": "waves that travel through matter",
+            "answer_type": "physical phenomenon",
+            "canonical_fact": "Sound is defined as waves that travel through matter."
+          }
+        }
+      ],
+      "incomplete": [],
+      "unexpected_candidate_ids": [],
+      "extracted_field_mismatch_count": 15,
+      "field_mismatches": [
+        {
+          "candidate_id": "raw_sciq_000078",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "small hydrophobic molecules",
+            "subject_type": "molecule",
+            "relation_raw": "type of diffusion through lipid molecules",
+            "answer": "simple",
+            "answer_type": "category",
+            "canonical_fact": "Small hydrophobic molecules undergo simple diffusion through lipid molecules."
+          },
+          "model_triple": {
+            "subject": "diffusion of small hydrophobic molecules through lipid molecules",
+            "subject_type": "process",
+            "relation_raw": "classification",
+            "answer": "simple",
+            "answer_type": "classification",
+            "canonical_fact": "The diffusion of small hydrophobic molecules through lipid molecules is classified as simple diffusion."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000258",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "group",
+            "relation_raw": "category",
+            "answer": "fungi",
+            "answer_type": "category",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          },
+          "model_triple": {
+            "subject": "Yeasts, molds, and mushrooms",
+            "subject_type": "biological group",
+            "relation_raw": "classification",
+            "answer": "fungi",
+            "answer_type": "biological kingdom",
+            "canonical_fact": "Yeasts, molds, and mushrooms are all different kinds of fungi."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000130",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "process for assessing and demonstrating an organisation's social, economic, and environmental benefits and limitations",
+            "subject_type": "process_definition",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "process",
+            "canonical_fact": "The process is called a social audit."
+          },
+          "model_triple": {
+            "subject": "process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation",
+            "subject_type": "process",
+            "relation_raw": "term for definition",
+            "answer": "Social audit",
+            "answer_type": "term",
+            "canonical_fact": "The term for a process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation is social audit."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000416",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "temperature and precipitation",
+            "subject_type": "climate_factors",
+            "relation_raw": "determine types of organisms that can grow in an area",
+            "answer": "plants",
+            "answer_type": "organism_group",
+            "canonical_fact": "Temperature and precipitation determine the types of plants that can grow in an area."
+          },
+          "model_triple": {
+            "subject": "Temperature and precipitation",
+            "subject_type": "environmental factors",
+            "relation_raw": "determine the types of organisms that can grow in an area",
+            "answer": "plants",
+            "answer_type": "organism type",
+            "canonical_fact": "Temperature and precipitation determine the types of plants that can grow in an area."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000081",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "American Kennel Club",
+            "subject_type": "organization",
+            "relation_raw": "most popular dog breed in the US as of 1999",
+            "answer": "Labrador retriever",
+            "answer_type": "dog breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US as of 1999 was the Labrador retriever."
+          },
+          "model_triple": {
+            "subject": "dog breeds in the US in 1999",
+            "subject_type": "animal breed",
+            "relation_raw": "most popular breed according to the American Kennel Club",
+            "answer": "Labrador retriever",
+            "answer_type": "animal breed",
+            "canonical_fact": "According to the American Kennel Club, the most popular breed of dog in the US in 1999 was the Labrador retriever."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000431",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "brain and spinal cord",
+            "subject_type": "anatomical structures",
+            "relation_raw": "part of",
+            "answer": "central nervous system",
+            "answer_type": "body system",
+            "canonical_fact": "The brain and spinal cord are part of the central nervous system."
+          },
+          "model_triple": {
+            "subject": "brain and spinal cord",
+            "subject_type": "anatomical structures",
+            "relation_raw": "part of system",
+            "answer": "central nervous system",
+            "answer_type": "biological system",
+            "canonical_fact": "The brain and spinal cord are part of the central nervous system."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000505",
+          "differing_fields": [
+            "subject"
+          ],
+          "expected_triple": {
+            "subject": "small rocky bodies that orbit the Sun",
+            "subject_type": "astronomical_object_definition",
+            "relation_raw": "term for definition",
+            "answer": "asteroids",
+            "answer_type": "astronomical_object_class",
+            "canonical_fact": "Small rocky bodies that orbit the Sun are asteroids."
+          },
+          "model_triple": {
+            "subject": "small, rocky bodies that orbit the sun",
+            "subject_type": "astronomical object",
+            "relation_raw": "term for definition",
+            "answer": "asteroids",
+            "answer_type": "astronomical object",
+            "canonical_fact": "The small, rocky bodies that orbit the sun are called asteroids."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000089",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "character of the initial position in Rawls's theory",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the term \"justice as fairness\" conveys the idea that the principles of justice are agreed to in an initial position that is fair."
+          },
+          "model_triple": {
+            "subject": "initial position in Rawls's justice as fairness",
+            "subject_type": "concept",
+            "relation_raw": "characteristic",
+            "answer": "fair",
+            "answer_type": "attribute",
+            "canonical_fact": "According to Rawls, the initial position in justice as fairness is fair."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000616",
+          "differing_fields": [
+            "subject",
+            "relation_raw",
+            "answer"
+          ],
+          "expected_triple": {
+            "subject": "one substance dissolved in another",
+            "subject_type": "chemical_mixture_definition",
+            "relation_raw": "forms",
+            "answer": "a solution",
+            "answer_type": "mixture",
+            "canonical_fact": "One substance dissolved in another forms a solution."
+          },
+          "model_triple": {
+            "subject": "mixture formed when one substance dissolves in another",
+            "subject_type": "concept",
+            "relation_raw": "term for definition",
+            "answer": "solution",
+            "answer_type": "concept",
+            "canonical_fact": "A solution is formed when one substance dissolves in another."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000725",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "organisms",
+            "subject_type": "biological group",
+            "relation_raw": "least specific classification grouping",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "The least specific classification grouping for organisms is domains."
+          },
+          "model_triple": {
+            "subject": "least specific grouping of organisms",
+            "subject_type": "taxonomic rank",
+            "relation_raw": "term for definition",
+            "answer": "domains",
+            "answer_type": "taxonomic rank",
+            "canonical_fact": "The least specific grouping of organisms is called domains."
+          }
+        },
+        {
+          "candidate_id": "raw_mmlu_000136",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "needs in Murray and Maslow's theories",
+            "subject_type": "theoretical_concept",
+            "relation_raw": "analogous concept in operant conditioning",
+            "answer": "Reinforcers",
+            "answer_type": "theoretical_concept",
+            "canonical_fact": "Murray and Maslow's needs are analogous to reinforcers in operant conditioning theory."
+          },
+          "model_triple": {
+            "subject": "needs of Murray and Maslow",
+            "subject_type": "psychological concepts",
+            "relation_raw": "conceptual equivalent in operant conditioning theory",
+            "answer": "Reinforcers",
+            "answer_type": "psychological concepts",
+            "canonical_fact": "The needs of both Murray and Maslow can be considered similar to reinforcers from operant conditioning theory."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000843",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "reptile skin",
+            "subject_type": "body_part",
+            "relation_raw": "covered in to prevent drying out",
+            "answer": "scales",
+            "answer_type": "body_structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          },
+          "model_triple": {
+            "subject": "reptile skin",
+            "subject_type": "anatomical structure",
+            "relation_raw": "covered in",
+            "answer": "scales",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "Reptile skin is covered in scales to protect them from drying out."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000920",
+          "differing_fields": [
+            "subject",
+            "relation_raw",
+            "answer"
+          ],
+          "expected_triple": {
+            "subject": "skull structure covering and protecting the brain",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "the cranium",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The skull structure covering and protecting the brain is the cranium."
+          },
+          "model_triple": {
+            "subject": "skull that covers the brain and protects it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "name",
+            "answer": "cranium",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "The skull that covers the brain and protects it is called the cranium."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000926",
+          "differing_fields": [
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "development of the respiratory system in the fetus",
+            "subject_type": "biological_process",
+            "relation_raw": "begins at about",
+            "answer": "4 weeks",
+            "answer_type": "time_period",
+            "canonical_fact": "The development of the respiratory system in the fetus begins at about 4 weeks."
+          },
+          "model_triple": {
+            "subject": "development of the respiratory system in the fetus",
+            "subject_type": "biological process",
+            "relation_raw": "begins at",
+            "answer": "4 weeks",
+            "answer_type": "time duration",
+            "canonical_fact": "The development of the respiratory system in the fetus begins at about 4 weeks."
+          }
+        },
+        {
+          "candidate_id": "raw_sciq_000987",
+          "differing_fields": [
+            "subject",
+            "relation_raw"
+          ],
+          "expected_triple": {
+            "subject": "thin membrane across the end of the ear canal that vibrates when struck by sound waves",
+            "subject_type": "anatomical_structure_definition",
+            "relation_raw": "anatomical name",
+            "answer": "eardrum",
+            "answer_type": "anatomical_structure",
+            "canonical_fact": "The membrane is the eardrum."
+          },
+          "model_triple": {
+            "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+            "subject_type": "anatomical structure",
+            "relation_raw": "term for definition",
+            "answer": "eardrum",
+            "answer_type": "anatomical structure",
+            "canonical_fact": "A thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is called the eardrum."
+          }
+        }
+      ],
+      "created_at": "2026-08-08T14:33:18.979326+00:00"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-"""Raw-source construction pipeline for Cross-Lingual Factual Pitfalls."""
+"""Raw-source atomic factual-triple construction pipeline."""
 
-from .pipeline import AUDIT_MODEL, build_raw_manifest, load_config
+from .pipeline import TRIPLE_EXTRACTION_MODEL, TRIPLE_LABEL_MODELS, build_raw_manifest, load_config
 
-__all__ = ["AUDIT_MODEL", "build_raw_manifest", "load_config"]
+__all__ = ["TRIPLE_EXTRACTION_MODEL", "TRIPLE_LABEL_MODELS", "build_raw_manifest", "load_config"]

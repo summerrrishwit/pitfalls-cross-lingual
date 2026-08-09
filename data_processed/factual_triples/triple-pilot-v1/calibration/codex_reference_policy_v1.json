@@ -1,0 +1,121 @@
+{
+  "reference_version": "codex-factual-triple-reference-v1",
+  "base_checkpoint": "../triple_extractions_v4.jsonl",
+  "decision_policy": "Strict binary document-based review; definitions are atomic, option-dependent non-unique objects are rejected, and borderline survey/scenario/best-tool items are rejected.",
+  "overrides": [
+    {
+      "candidate_id": "raw_truthful_qa_000033",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "The source sentence explicitly contains the short country answer US.",
+      "expected_triple": {"subject": "Barack Obama", "subject_type": "person", "relation_raw": "country of birth", "answer": "US", "answer_type": "country", "canonical_fact": "Barack Obama was born in the US."}
+    },
+    {
+      "candidate_id": "raw_sciq_000196",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single device definition is an atomic fact, not a multi-clue riddle.",
+      "expected_triple": {"subject": "simple machine consisting of a rope and grooved wheel", "subject_type": "device_definition", "relation_raw": "term for definition", "answer": "pulley", "answer_type": "device", "canonical_fact": "A simple machine consisting of a rope and grooved wheel is a pulley."}
+    },
+    {
+      "candidate_id": "raw_mmlu_000130",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single named-process definition is atomic.",
+      "expected_triple": {"subject": "process for assessing and demonstrating an organisation's social, economic, and environmental benefits and limitations", "subject_type": "process_definition", "relation_raw": "term for definition", "answer": "Social audit", "answer_type": "process", "canonical_fact": "The process is called a social audit."}
+    },
+    {
+      "candidate_id": "raw_sciq_000416",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "The question directly states one stable ecological relation.",
+      "expected_triple": {"subject": "temperature and precipitation", "subject_type": "climate_factors", "relation_raw": "determine types of organisms that can grow in an area", "answer": "plants", "answer_type": "organism_group", "canonical_fact": "Temperature and precipitation determine the types of plants that can grow in an area."}
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000377",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "The source sentence explicitly contains the short quotation-author answer.",
+      "expected_triple": {"subject": "Only the dead have seen the end of war", "subject_type": "quotation", "relation_raw": "quotation author", "answer": "George Santayana", "answer_type": "person", "canonical_fact": "George Santayana wrote the quotation."}
+    },
+    {
+      "candidate_id": "raw_sciq_000437",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "This is a direct chemical condition fact.",
+      "expected_triple": {"subject": "most mercury compounds", "subject_type": "chemical_compound_group", "relation_raw": "decompose when", "answer": "heated", "answer_type": "condition", "canonical_fact": "Most mercury compounds decompose when heated."}
+    },
+    {
+      "candidate_id": "raw_sciq_000505",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single astronomical classification definition is atomic.",
+      "expected_triple": {"subject": "small rocky bodies that orbit the Sun", "subject_type": "astronomical_object_definition", "relation_raw": "term for definition", "answer": "asteroids", "answer_type": "astronomical_object_class", "canonical_fact": "Small rocky bodies that orbit the Sun are asteroids."}
+    },
+    {
+      "candidate_id": "raw_sciq_000616",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single chemistry definition is atomic.",
+      "expected_triple": {"subject": "one substance dissolved in another", "subject_type": "chemical_mixture_definition", "relation_raw": "forms", "answer": "a solution", "answer_type": "mixture", "canonical_fact": "One substance dissolved in another forms a solution."}
+    },
+    {
+      "candidate_id": "raw_sciq_000680",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A direct reaction classification is atomic.",
+      "expected_triple": {"subject": "reactions that absorb heat from their surroundings", "subject_type": "reaction_class_definition", "relation_raw": "classification", "answer": "endothermic", "answer_type": "reaction_type", "canonical_fact": "Reactions that absorb heat from their surroundings are endothermic."}
+    },
+    {
+      "candidate_id": "raw_mmlu_000136",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "The question states one theoretical equivalence relation.",
+      "expected_triple": {"subject": "needs in Murray and Maslow's theories", "subject_type": "theoretical_concept", "relation_raw": "analogous concept in operant conditioning", "answer": "Reinforcers", "answer_type": "theoretical_concept", "canonical_fact": "Murray and Maslow's needs are analogous to reinforcers in operant conditioning theory."}
+    },
+    {
+      "candidate_id": "raw_sciq_000920",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single anatomical definition is atomic.",
+      "expected_triple": {"subject": "skull structure covering and protecting the brain", "subject_type": "anatomical_structure_definition", "relation_raw": "anatomical name", "answer": "the cranium", "answer_type": "anatomical_structure", "canonical_fact": "The skull structure covering and protecting the brain is the cranium."}
+    },
+    {
+      "candidate_id": "raw_sciq_000987",
+      "extraction_status": "extracted",
+      "review_tier": "clear",
+      "codex_review": "A single anatomical definition is atomic.",
+      "expected_triple": {"subject": "thin membrane across the end of the ear canal that vibrates when struck by sound waves", "subject_type": "anatomical_structure_definition", "relation_raw": "anatomical name", "answer": "eardrum", "answer_type": "anatomical_structure", "canonical_fact": "The membrane is the eardrum."}
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_000723",
+      "extraction_status": "not_extractable",
+      "review_tier": "clear",
+      "codex_review": "Carbon is not unique without choices because proteins generally also contain hydrogen, oxygen, and nitrogen."
+    },
+    {
+      "candidate_id": "raw_sciq_000541",
+      "extraction_status": "not_extractable",
+      "review_tier": "clear",
+      "codex_review": "The stable includes relation has multiple correct sense members; uniqueness comes from the prompt-specific partial list."
+    },
+    {
+      "candidate_id": "raw_mmlu_000109",
+      "extraction_status": "not_extractable",
+      "review_tier": "borderline_strict_reject",
+      "codex_review": "The survey organisation and measurement frame are absent, so 56 percent is not uniquely recoverable without choices or hidden provenance."
+    }
+  ],
+  "annotations": [
+    {
+      "candidate_id": "raw_sciq_000749",
+      "review_tier": "borderline_strict_reject",
+      "codex_review": "Treat as scenario classification rather than a direct subject-relation fact."
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_001396",
+      "review_tier": "borderline_strict_reject",
+      "codex_review": "Treat best-tool selection as option-dependent procedural choice."
+    }
+  ]
+}

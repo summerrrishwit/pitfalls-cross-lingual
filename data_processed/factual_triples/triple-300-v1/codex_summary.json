@@ -1,0 +1,1067 @@
+{
+  "summary_version": "codex-dual-model-summary-v1",
+  "models": [
+    "sensenova-6.7-flash-lite",
+    "qwen3.7-plus"
+  ],
+  "prompt_version": "atomic-factual-triple-v6",
+  "candidate_count": 300,
+  "agreement_counts": {
+    "consensus_not_extractable": 164,
+    "consensus_extracted": 108,
+    "requires_codex_review": 28
+  },
+  "model_summaries": {
+    "sensenova-6.7-flash-lite": {
+      "stage": "extract",
+      "record_count": 300,
+      "terminal_status_counts": {
+        "completed": 300
+      },
+      "extraction_status_counts": {
+        "not_extractable": 183,
+        "extracted": 117
+      },
+      "exclusion_reason_counts": {
+        "non_unique_answer": 20,
+        "typical_action_or_location": 34,
+        "not_factual": 8,
+        "answer_not_suitable": 23,
+        "scenario_classification": 15,
+        "multi_step_reasoning": 2,
+        "negative_question": 7,
+        "option_dependent": 13,
+        "ambiguous_subject": 7,
+        "subjective_or_normative": 18,
+        "causal_reasoning": 15,
+        "clue_solving": 5,
+        "ambiguous_relation": 6,
+        "contextual_inference": 3,
+        "malformed_question": 3,
+        "calculation": 3,
+        "time_sensitive": 1
+      },
+      "validation_error_count": 0,
+      "model": "sensenova-6.7-flash-lite",
+      "prompt_version": "atomic-factual-triple-v6",
+      "created_at": "2026-08-08T15:09:35.757762+00:00"
+    },
+    "qwen3.7-plus": {
+      "stage": "extract",
+      "record_count": 300,
+      "terminal_status_counts": {
+        "completed": 300
+      },
+      "extraction_status_counts": {
+        "not_extractable": 173,
+        "extracted": 127
+      },
+      "exclusion_reason_counts": {
+        "calculation": 5,
+        "typical_action_or_location": 35,
+        "non_unique_answer": 25,
+        "answer_not_suitable": 29,
+        "causal_reasoning": 20,
+        "other": 1,
+        "malformed_question": 4,
+        "subjective_or_normative": 9,
+        "not_factual": 9,
+        "clue_solving": 5,
+        "multi_step_reasoning": 7,
+        "option_dependent": 9,
+        "ambiguous_relation": 1,
+        "negative_question": 6,
+        "contextual_inference": 2,
+        "scenario_classification": 5,
+        "time_sensitive": 1
+      },
+      "validation_error_count": 0,
+      "model": "qwen3.7-plus",
+      "prompt_version": "atomic-factual-triple-v6",
+      "created_at": "2026-08-08T15:09:35.757915+00:00"
+    }
+  },
+  "disagreements": [
+    {
+      "candidate_id": "raw_ai2_arc_easy_000202",
+      "source_dataset": "ai2_arc_easy",
+      "source_original_index": 202,
+      "source_question": "Three gases found in Earth's atmosphere are carbon dioxide, nitrogen, and oxygen. What is their order of abundance from greatest to least?",
+      "source_answer": "nitrogen, oxygen, carbon dioxide",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "carbon dioxide, nitrogen, and oxygen in Earth's atmosphere",
+            "subject_type": "substance_group",
+            "relation_raw": "order of abundance from greatest to least",
+            "answer": "nitrogen, oxygen, carbon dioxide",
+            "answer_type": "ordered_list",
+            "canonical_fact": "In Earth's atmosphere, carbon dioxide, nitrogen, and oxygen are ordered from greatest to least abundance as nitrogen, oxygen, carbon dioxide."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "multi_step_reasoning",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_000733",
+      "source_dataset": "ai2_arc_easy",
+      "source_original_index": 733,
+      "source_question": "Kurt drinks frozen fruit juice from a small cup. He measures the amount of fruit juice in the cup. Which property is Kurt measuring?",
+      "source_answer": "volume",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "scenario_classification",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "amount of fruit juice",
+            "subject_type": "quantity",
+            "relation_raw": "physical property",
+            "answer": "volume",
+            "answer_type": "physical property",
+            "canonical_fact": "The amount of fruit juice is a measure of volume."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_001322",
+      "source_dataset": "ai2_arc_easy",
+      "source_original_index": 1322,
+      "source_question": "Which tool should be used to measure the stem length of a plant?",
+      "source_answer": "a metric ruler",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "subjective_or_normative",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "stem length of a plant",
+            "subject_type": "measurement",
+            "relation_raw": "tool used to measure",
+            "answer": "a metric ruler",
+            "answer_type": "tool",
+            "canonical_fact": "A metric ruler is the tool used to measure the stem length of a plant."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_001619",
+      "source_dataset": "ai2_arc_easy",
+      "source_original_index": 1619,
+      "source_question": "What process in the atmosphere protects people from the ultraviolet rays in sunlight?",
+      "source_answer": "Ozone absorbs ultraviolet light.",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "atmospheric process that protects people from ultraviolet rays in sunlight",
+            "subject_type": "process",
+            "relation_raw": "term for definition",
+            "answer": "Ozone absorbs ultraviolet light",
+            "answer_type": "process",
+            "canonical_fact": "The atmospheric process that protects people from the ultraviolet rays in sunlight is ozone absorbing ultraviolet light."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_001786",
+      "source_dataset": "ai2_arc_easy",
+      "source_original_index": 1786,
+      "source_question": "Kudzu vines grow by climbing and wrapping around trees. Trees covered by kudzu can die because they are starved of sunlight. What type of relationship exists between the trees and the kudzu growing on them?",
+      "source_answer": "competition",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "scenario_classification",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "trees and kudzu",
+            "subject_type": "organisms",
+            "relation_raw": "ecological relationship",
+            "answer": "competition",
+            "answer_type": "ecological relationship",
+            "canonical_fact": "The ecological relationship between trees and kudzu is competition."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_001587",
+      "source_dataset": "commonsense_qa",
+      "source_original_index": 1587,
+      "source_question": "Where is the most famous cartoon mouse from?",
+      "source_answer": "disneyland",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_subject",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "most famous cartoon mouse",
+            "subject_type": "fictional character",
+            "relation_raw": "origin",
+            "answer": "disneyland",
+            "answer_type": "theme park",
+            "canonical_fact": "The most famous cartoon mouse is from Disneyland."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_002284",
+      "source_dataset": "commonsense_qa",
+      "source_original_index": 2284,
+      "source_question": "What can happen  to someone too sure of their learning?",
+      "source_answer": "overconfidence",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_subject",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "someone too sure of their learning",
+            "subject_type": "person",
+            "relation_raw": "can experience",
+            "answer": "overconfidence",
+            "answer_type": "condition",
+            "canonical_fact": "Someone too sure of their learning can experience overconfidence."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_007205",
+      "source_dataset": "commonsense_qa",
+      "source_original_index": 7205,
+      "source_question": "Where is a suitcase stored while a person travels by air?",
+      "source_answer": "baggage compartment",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "suitcase",
+            "subject_type": "object",
+            "relation_raw": "stored in while traveling by air",
+            "answer": "baggage compartment",
+            "answer_type": "location",
+            "canonical_fact": "A suitcase is stored in the baggage compartment while a person travels by air."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "typical_action_or_location",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_009410",
+      "source_dataset": "commonsense_qa",
+      "source_original_index": 9410,
+      "source_question": "If something you do moves you toward a predetermined goal what have you done?",
+      "source_answer": "make progress",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_relation",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "moving toward a predetermined goal",
+            "subject_type": "concept",
+            "relation_raw": "term for definition",
+            "answer": "make progress",
+            "answer_type": "action",
+            "canonical_fact": "Moving toward a predetermined goal is defined as making progress."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000151",
+      "source_dataset": "mmlu",
+      "source_original_index": 151,
+      "source_question": "Women who are planning a pregnancy are recommended to take a supplement of 400ìg folic acid/ day before and until the end of the first trimester of pregnancy. What effect does such supplementation have on methylation of the imprinted gene IGF2 in the resulting children?\n",
+      "source_answer": "Methylation of IGF2 is increased.",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "causal_reasoning",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "folic acid supplementation",
+            "subject_type": "intervention",
+            "relation_raw": "effect on methylation of the imprinted gene IGF2",
+            "answer": "increased",
+            "answer_type": "effect",
+            "canonical_fact": "Folic acid supplementation increases methylation of the imprinted gene IGF2."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000187",
+      "source_dataset": "mmlu",
+      "source_original_index": 187,
+      "source_question": "Find the number of elements in the indicated cyclic group: The cyclic subgroup of Z_30 generated by 25.",
+      "source_answer": "6",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "cyclic subgroup of Z_30 generated by 25",
+            "subject_type": "mathematical_object",
+            "relation_raw": "number of elements",
+            "answer": "6",
+            "answer_type": "quantity",
+            "canonical_fact": "The cyclic subgroup of Z_30 generated by 25 has 6 elements."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "calculation",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000188",
+      "source_dataset": "mmlu",
+      "source_original_index": 188,
+      "source_question": "If a Durbin Watson statistic takes a value close to zero, what will be the value of the first order autocorrelation coefficient?",
+      "source_answer": "Close to minus one",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "Durbin Watson statistic value close to zero",
+            "subject_type": "statistical condition",
+            "relation_raw": "corresponding first order autocorrelation coefficient",
+            "answer": "Close to minus one",
+            "answer_type": "value",
+            "canonical_fact": "When a Durbin Watson statistic takes a value close to zero, the first order autocorrelation coefficient is close to minus one."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "calculation",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000230",
+      "source_dataset": "mmlu",
+      "source_original_index": 230,
+      "source_question": "The retirement phase that occurs least frequently is the ____ phase",
+      "source_answer": "Disenchantment",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_subject",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "least frequent retirement phase",
+            "subject_type": "phase",
+            "relation_raw": "name",
+            "answer": "Disenchantment",
+            "answer_type": "phase",
+            "canonical_fact": "The least frequent retirement phase is the disenchantment phase."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000233",
+      "source_dataset": "mmlu",
+      "source_original_index": 233,
+      "source_question": "How do we know how old the Earth is?",
+      "source_answer": "From radioactive dating of rocks and meteorites.",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "age of the Earth",
+            "subject_type": "concept",
+            "relation_raw": "determined by",
+            "answer": "radioactive dating of rocks and meteorites",
+            "answer_type": "method",
+            "canonical_fact": "The age of the Earth is determined by radioactive dating of rocks and meteorites."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000234",
+      "source_dataset": "mmlu",
+      "source_original_index": 234,
+      "source_question": "As of 2017, how many people in the world have some access to electricity?",
+      "source_answer": "80%",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_relation",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "world population",
+            "subject_type": "demographic",
+            "relation_raw": "percentage with access to electricity in 2017",
+            "answer": "80%",
+            "answer_type": "percentage",
+            "canonical_fact": "As of 2017, 80% of the world population had access to electricity."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000263",
+      "source_dataset": "mmlu",
+      "source_original_index": 263,
+      "source_question": "What must you ensure before a speaking valve is used?",
+      "source_answer": "The cuff is deflated.",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "speaking valve",
+            "subject_type": "medical device",
+            "relation_raw": "prerequisite condition for use",
+            "answer": "deflated cuff",
+            "answer_type": "medical state",
+            "canonical_fact": "Before a speaking valve is used, the cuff must be deflated."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000264",
+      "source_dataset": "mmlu",
+      "source_original_index": 264,
+      "source_question": "SARS is described as a zoonotic virus - what does this mean?",
+      "source_answer": "Such viruses are confined to animals",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "zoonotic virus",
+            "subject_type": "term",
+            "relation_raw": "meaning",
+            "answer": "confined to animals",
+            "answer_type": "definition",
+            "canonical_fact": "A zoonotic virus is a virus that is confined to animals."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_mmlu_000288",
+      "source_dataset": "mmlu",
+      "source_original_index": 288,
+      "source_question": "According to Mill, to determine whether one pleasure is more valuable than another, we must _____.",
+      "source_answer": "determine which pleasure most experienced people prefer",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "Mill's method for determining whether one pleasure is more valuable than another",
+            "subject_type": "philosophical method",
+            "relation_raw": "requires",
+            "answer": "determine which pleasure most experienced people prefer",
+            "answer_type": "procedure",
+            "canonical_fact": "According to Mill, to determine whether one pleasure is more valuable than another, we must determine which pleasure most experienced people prefer."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_sciq_000034",
+      "source_dataset": "sciq",
+      "source_original_index": 34,
+      "source_question": "What are the two terms that designate how well aqueous solutions conduct electricity?",
+      "source_answer": "polar and nonpolar",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "non_unique_answer",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "terms that designate how well aqueous solutions conduct electricity",
+            "subject_type": "concept",
+            "relation_raw": "are",
+            "answer": "polar and nonpolar",
+            "answer_type": "concept",
+            "canonical_fact": "The terms that designate how well aqueous solutions conduct electricity are polar and nonpolar."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_sciq_000164",
+      "source_dataset": "sciq",
+      "source_original_index": 164,
+      "source_question": "What must be combined with a halogen to give it a positive oxidation number?",
+      "source_answer": "oxygen",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "halogen",
+            "subject_type": "element_group",
+            "relation_raw": "combined with to give a positive oxidation number",
+            "answer": "oxygen",
+            "answer_type": "element",
+            "canonical_fact": "A halogen must be combined with oxygen to give it a positive oxidation number."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "non_unique_answer",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_sciq_000183",
+      "source_dataset": "sciq",
+      "source_original_index": 183,
+      "source_question": "What happens to air density and pressure when gas molecules are warm?",
+      "source_answer": "they are lower",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "causal_reasoning",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "air density and pressure",
+            "subject_type": "physical property",
+            "relation_raw": "change when gas molecules are warm",
+            "answer": "lower",
+            "answer_type": "state",
+            "canonical_fact": "Air density and pressure are lower when gas molecules are warm."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_sciq_000395",
+      "source_dataset": "sciq",
+      "source_original_index": 395,
+      "source_question": "What causes symptoms associated with sickle-cell disease?",
+      "source_answer": "pleiotropic effects",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "causal_reasoning",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "symptoms associated with sickle-cell disease",
+            "subject_type": "biological phenomenon",
+            "relation_raw": "caused by",
+            "answer": "pleiotropic effects",
+            "answer_type": "biological concept",
+            "canonical_fact": "Pleiotropic effects cause symptoms associated with sickle-cell disease."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_sciq_000647",
+      "source_dataset": "sciq",
+      "source_original_index": 647,
+      "source_question": "The bird ancestor that lived in trees developed what feature commonly associated with birds?",
+      "source_answer": "wings",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_subject",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "bird ancestor that lived in trees",
+            "subject_type": "evolutionary ancestor",
+            "relation_raw": "developed feature commonly associated with birds",
+            "answer": "wings",
+            "answer_type": "anatomical feature",
+            "canonical_fact": "The bird ancestor that lived in trees developed wings, a feature commonly associated with birds."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000012",
+      "source_dataset": "truthful_qa",
+      "source_original_index": 12,
+      "source_question": "How many times can a cat die?",
+      "source_answer": "A cat has one life",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "not_factual",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "cat",
+            "subject_type": "animal",
+            "relation_raw": "number of lives",
+            "answer": "one",
+            "answer_type": "quantity",
+            "canonical_fact": "A cat has one life."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000504",
+      "source_dataset": "truthful_qa",
+      "source_original_index": 504,
+      "source_question": "What was Nixon referring to when he said, \"I am not a crook\"?",
+      "source_answer": "Nixon was responding to a question about his personal finances",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "I am not a crook",
+            "subject_type": "quote",
+            "relation_raw": "referring to",
+            "answer": "his personal finances",
+            "answer_type": "topic",
+            "canonical_fact": "Nixon was referring to his personal finances when he said 'I am not a crook'."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000654",
+      "source_dataset": "truthful_qa",
+      "source_original_index": 654,
+      "source_question": "In which countries in Europe is weed legal?",
+      "source_answer": "Recreational use of weed is illegal in all European countries except Georgia but is decriminalized in some",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "ambiguous_relation",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "recreational use of weed",
+            "subject_type": "concept",
+            "relation_raw": "legal in European country",
+            "answer": "Georgia",
+            "answer_type": "country",
+            "canonical_fact": "Recreational use of weed is legal in Georgia."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000747",
+      "source_dataset": "truthful_qa",
+      "source_original_index": 747,
+      "source_question": "What is the song \"Puff the Magic Dragon\" really about?",
+      "source_answer": "\"Puff the Magic Dragon\" is about a child losing his imagination as he grows up",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "Puff the Magic Dragon",
+            "subject_type": "song",
+            "relation_raw": "theme",
+            "answer": "a child losing his imagination as he grows up",
+            "answer_type": "theme",
+            "canonical_fact": "The song \"Puff the Magic Dragon\" is about a child losing his imagination as he grows up."
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000761",
+      "source_dataset": "truthful_qa",
+      "source_original_index": 761,
+      "source_question": "How did Napoleon's height compare to that of the average adult male during his time?",
+      "source_answer": "Napoleon's height was around 5 feet 6 inches",
+      "model_results": {
+        "sensenova-6.7-flash-lite": {
+          "terminal_status": "completed",
+          "extraction_status": "extracted",
+          "exclusion_reason": null,
+          "triple": {
+            "subject": "Napoleon",
+            "subject_type": "person",
+            "relation_raw": "height compared to average adult male of his time",
+            "answer": "around 5 feet 6 inches",
+            "answer_type": "measurement",
+            "canonical_fact": "Napoleon's height was around 5 feet 6 inches compared to the average adult male during his time."
+          }
+        },
+        "qwen3.7-plus": {
+          "terminal_status": "completed",
+          "extraction_status": "not_extractable",
+          "exclusion_reason": "answer_not_suitable",
+          "triple": {
+            "subject": null,
+            "subject_type": null,
+            "relation_raw": null,
+            "answer": null,
+            "answer_type": null,
+            "canonical_fact": null
+          }
+        }
+      }
+    }
+  ],
+  "created_at": "2026-08-08T15:09:35.757919+00:00"
+}

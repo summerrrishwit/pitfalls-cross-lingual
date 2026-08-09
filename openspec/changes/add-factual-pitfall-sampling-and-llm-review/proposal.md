@@ -1,33 +1,47 @@
 ## Why
 
-The current curation workflow samples from already-generated bilingual Cross-Lingual Pitfalls files. That can analyze an existing benchmark, but it cannot create a new factual-pitfall dataset with controlled source selection, generation, translation, and screening.
+The existing raw-English stage mixes two different concerns: deciding whether a multiple-choice item is suitable factual recall and freely generating `subject_en`, `relation_en`, `answer_en`, and `prompt_en`. Its tri-state review artifacts cannot serve as a reproducible atomic-triple dataset, and the free-form relation strings cannot support stable relation statistics.
 
-This change moves the pipeline upstream to the raw English QA sources in `data/source/`. It first audits a reproducible 600-item pilot, uses the observed failure modes to calibrate and version the `qwen3.7-plus` prompt, then creates a separate full-population run before generating, translating, and screening bilingual candidates.
+This revision keeps deterministic loading and sampling from the five immutable `data/source/` datasets, removes the prior factual-review flow and its derived outputs, and introduces a focused two-stage experiment:
+
+```text
+raw English QA
+  -> SenseNova and Qwen atomic factual triple extraction
+  -> per-model validated triple records with source provenance
+  -> Codex-reference calibration gate (label error <= 3%)
+  -> global relation inventory
+  -> versioned relation taxonomy and mapping
+  -> normalized triples
+```
 
 ## What Changes
 
-- Replace sampling from `data/Chinese.json`, `data/Japanese.json`, and `data/French.json` with a deterministic 600-item calibration pilot followed by a separate full-population manifest from the five `data/source/` datasets.
-- Preserve a raw-source manifest before any LLM call, including file fingerprints, original indices, source metadata, random seed, allocations, and source snapshots.
-- Retain the English-only `qwen3.7-plus` factual audit, now applied to sampled raw English QA records before any perturbation or translation is generated.
-- Add configurable perturbation-generation, translation, and screening stages. The pipeline will create candidate bilingual pairs only from English factual-audit accepts, then retain candidates that satisfy configured English-versus-target-language weakness thresholds.
-- Record the generator, translator, screening models, per-model answers, answer-extraction results, and all intermediate artifacts so retained cross-lingual weaknesses can be reproduced.
-- Supersede the existing bilingual-source sampling manifest and its implementation for this change; retain it only as a historical derived artifact and do not delete or mutate it.
+- Preserve `data/source/` and model-independent raw-source manifests.
+- Replace the `accept` / `reject` / `needs_review` factual-audit prompt with one versioned atomic-triple extraction contract run independently by `sensenova-6.7-flash-lite` and `qwen3.7-plus`.
+- Persist explicit `source_id`, `source_dataset`, `source_question`, `source_choices`, and `source_answer` fields alongside extracted `subject`, `relation_raw`, and a concise normalized `answer` grounded in the canonical source answer.
+- Store each model below a model-slug directory with independent JSONL checkpoints, summaries, retries, and prompt/model resume isolation.
+- Freeze a 100-row Codex reference set, require each model's binary extraction-label error to be at most 3%, and only then run a separate deterministic 300-row experiment.
+- Produce a deterministic Codex-review bundle containing model agreement, disagreements, candidate triples, relation inventories, and records requiring final review.
+- Do not ask the extraction model to copy choices, create `prompt_en`, or invent `relation_normalized`.
+- Build a global relation inventory containing relation text, subject/answer types, counts, and representative examples.
+- Use a strong-model-assisted, human-freezable taxonomy and explicit mapping artifact before filling `relation_normalized`.
+- Route unmapped or directionally ambiguous relations to `out_of_taxonomy` or `ambiguous` instead of forcing a label.
+- Delete the superseded factual-review checkpoints, supervisor artifacts, audit-analysis outputs, and audit-specific code.
 
 ## Capabilities
 
 ### New Capabilities
 
-- `raw-factual-source-sampling`: Deterministically sample a 600-item calibration pilot, then include every immutable eligible English QA record in a separate full run after prompt calibration.
-- `english-factual-review`: Use `qwen3.7-plus` and a structured English-only prompt to determine whether a raw English QA item is a suitable factual-recall probe.
-- `cross-lingual-pitfall-generation`: Generate perturbations, translate accepted English factual QA items, and screen bilingual candidates for configured cross-lingual weaknesses.
+- `atomic-factual-triple-extraction`: Extract validated atomic `(subject, relation_raw, answer)` records from raw English QA with complete source provenance.
+- `relation-taxonomy-normalization`: Build a global relation inventory and reproducibly apply a versioned taxonomy/mapping to extracted triples.
 
-### Modified Capabilities
+### Retained Capabilities
 
-- None.
+- `raw-factual-source-sampling`: Deterministically sample or enumerate immutable raw English source records before model calls.
 
 ## Impact
 
-- Replaces the curation input assumption; existing `data/<language>.json` files are no longer inputs to the new dataset-construction pipeline.
-- Adds separate model roles for factual review, perturbation generation, translation, screening answers, and answer extraction.
-- Requires derived manifests, candidate records, screening checkpoints, and run-level provenance under a new output root without changing raw source data.
-- The existing prototype curation script and its 600-item bilingual manifest must be refactored in a future apply phase; current `run.py` and `eva.py` behavior remains unchanged until then.
+- Removes the old `FACTUAL_AUDIT_MODEL`, tri-state decision schema, `prompt_en`, audit checkpoints, and audit supervisor.
+- Adds two configured triple-label models and records endpoint-independent model IDs plus extraction prompt version per row.
+- Keeps downstream perturbation, translation, and screening outside this experiment until normalized triples are reviewed and frozen.
+- Uses the configured OpenAI-compatible endpoint for later strong-model work; preflight confirmed `qwen3.7-plus` is callable through `https://ctapi.csxdtx.com:16000/v1`.

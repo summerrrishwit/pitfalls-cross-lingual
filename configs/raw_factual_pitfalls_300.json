@@ -1,0 +1,30 @@
+{
+  "source_datasets": {
+    "ai2_arc_easy": "data/source/ai2_arc_easy.json",
+    "commonsense_qa": "data/source/commonsense_qa.json",
+    "mmlu": "data/source/mmlu.json",
+    "sciq": "data/source/sciq.json",
+    "truthful_qa": "data/source/truthful_qa.json"
+  },
+  "raw_sample_size": 300,
+  "seed": 20260809,
+  "sampling_strategy": "balanced_sources",
+  "supported_models": [
+    "sensenova-6.7-flash-lite",
+    "qwen3.7-plus"
+  ],
+  "roles": {
+    "triple_label_models": [
+      "sensenova-6.7-flash-lite",
+      "qwen3.7-plus"
+    ],
+    "relation_normalization_model": "qwen3.7-plus"
+  },
+  "runtime": {
+    "temperature": 0.0,
+    "max_tokens": 2048,
+    "timeout_seconds": 120,
+    "max_retries": 3
+  },
+  "output_root": "data_processed/factual_triples"
+}
