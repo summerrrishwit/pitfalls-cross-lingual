@@ -325,7 +325,11 @@ class ExtractionContractTests(unittest.TestCase):
     def test_qwen_client_uses_required_openai_endpoint(self, openai_client):
         with patch.dict(
             "os.environ",
-            {"OPENAI_API_KEY": "fill-me", "OPENAI_BASE_URL": pipeline.QWEN_OPENAI_BASE_URL},
+            {
+                "QWEN_EXTRACTION_PROVIDER": "openai",
+                "OPENAI_API_KEY": "fill-me",
+                "OPENAI_BASE_URL": pipeline.QWEN_OPENAI_BASE_URL,
+            },
             clear=False,
         ):
             pipeline.make_extraction_client(Path("."), 30, "qwen3.7-plus")
@@ -334,6 +338,55 @@ class ExtractionContractTests(unittest.TestCase):
             base_url="https://ctapi.csxdtx.com:16000/v1",
             timeout=30,
             max_retries=0,
+        )
+
+    @patch("factual_pitfalls.pipeline.OpenAI")
+    def test_qwen_client_uses_bailian_by_default(self, openai_client):
+        with patch.dict(
+            "os.environ",
+            {
+                "BAILIAN_API_KEY": "fill-me",
+                "BAILIAN_BASE_URL": pipeline.BAILIAN_OPENAI_BASE_URL,
+            },
+            clear=False,
+        ):
+            pipeline.make_extraction_client(Path("."), 30, "qwen3.7-plus")
+        openai_client.assert_called_once_with(
+            api_key="fill-me",
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            timeout=30,
+            max_retries=0,
+        )
+
+    def test_qwen_bailian_uses_pinned_plus_snapshot_without_thinking(self):
+        client = MagicMock()
+        client.chat.completions.create.return_value = SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps(extracted_response())))]
+        )
+        with patch.dict(
+            "os.environ",
+            {"QWEN_EXTRACTION_PROVIDER": "bailian"},
+            clear=False,
+        ):
+            call = pipeline.call_extraction_model(
+                client,
+                "qwen3.7-plus",
+                "Extract this item.",
+                self.config["runtime"],
+            )
+        self.assertEqual(call["api_model"], "qwen3.7-plus-2026-05-26")
+        client.chat.completions.create.assert_called_once_with(
+            model="qwen3.7-plus-2026-05-26",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a careful atomic factual-triple extraction component. Follow the JSON contract exactly.",
+                },
+                {"role": "user", "content": "Extract this item."},
+            ],
+            temperature=0.0,
+            max_tokens=2048,
+            extra_body={"enable_thinking": False},
         )
 
 

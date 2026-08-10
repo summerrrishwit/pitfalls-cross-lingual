@@ -33,6 +33,8 @@ TRIPLE_EXTRACTION_MODEL = TRIPLE_LABEL_MODELS[0]
 RELATION_NORMALIZATION_MODEL = "qwen3.7-plus"
 SENSENOVA_BASE_URL = "https://token.sensenova.cn"
 QWEN_OPENAI_BASE_URL = "https://ctapi.csxdtx.com:16000/v1"
+BAILIAN_OPENAI_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+QWEN_BAILIAN_API_MODEL = "qwen3.7-plus-2026-05-26"
 TRIPLE_EXTRACTION_PROMPT_VERSION = "atomic-factual-triple-v6"
 RELATION_INVENTORY_VERSION = "relation-inventory-v1"
 CODEX_REFERENCE_VERSION = "codex-factual-triple-reference-v1"
@@ -731,12 +733,24 @@ def make_extraction_client(project_root: Path, timeout_seconds: float, model: st
             default_headers={"Authorization": f"Bearer {api_key}", "X-Api-Key": Omit()},
         )
     if model == "qwen3.7-plus":
-        api_key = os.getenv("OPENAI_API_KEY")
+        provider = (os.getenv("QWEN_EXTRACTION_PROVIDER") or "bailian").strip().lower()
+        if provider == "bailian":
+            api_key = os.getenv("BAILIAN_API_KEY") or os.getenv("DASHSCOPE_API_KEY")
+            base_url = (
+                os.getenv("BAILIAN_BASE_URL")
+                or os.getenv("DASHSCOPE_BASE_URL")
+                or BAILIAN_OPENAI_BASE_URL
+            )
+        elif provider == "openai":
+            api_key = os.getenv("OPENAI_API_KEY")
+            base_url = os.getenv("OPENAI_BASE_URL") or QWEN_OPENAI_BASE_URL
+        else:
+            raise ValueError(f"Unsupported Qwen extraction provider: {provider}")
         if not api_key:
-            raise ValueError("OPENAI_API_KEY is required for Qwen triple extraction")
+            raise ValueError(f"API key is required for Qwen extraction provider: {provider}")
         return OpenAI(
             api_key=api_key,
-            base_url=os.getenv("OPENAI_BASE_URL") or QWEN_OPENAI_BASE_URL,
+            base_url=base_url,
             timeout=timeout_seconds,
             max_retries=0,
         )
@@ -775,6 +789,8 @@ def transient_error(error: Exception) -> bool:
 
 def call_extraction_model(client: Any, model: str, prompt: str, runtime: Dict[str, Any]) -> Dict[str, Any]:
     attempts = 0
+    provider = (os.getenv("QWEN_EXTRACTION_PROVIDER") or "bailian").strip().lower()
+    api_model = QWEN_BAILIAN_API_MODEL if model == "qwen3.7-plus" and provider == "bailian" else model
     for attempts in range(1, runtime["max_retries"] + 2):
         try:
             system = "You are a careful atomic factual-triple extraction component. Follow the JSON contract exactly."
@@ -790,31 +806,36 @@ def call_extraction_model(client: Any, model: str, prompt: str, runtime: Dict[st
                     block.text for block in response.content if getattr(block, "type", None) == "text"
                 ).strip()
             elif model == "qwen3.7-plus":
-                response = client.chat.completions.create(
-                    model=model,
-                    messages=[
+                request = {
+                    "model": api_model,
+                    "messages": [
                         {"role": "system", "content": system},
                         {"role": "user", "content": prompt},
                     ],
-                    temperature=runtime["temperature"],
-                    max_tokens=runtime.get("max_tokens", 4096),
-                )
+                    "temperature": runtime["temperature"],
+                    "max_tokens": runtime.get("max_tokens", 4096),
+                }
+                if provider == "bailian":
+                    request["extra_body"] = {"enable_thinking": False}
+                response = client.chat.completions.create(**request)
                 content = (response.choices[0].message.content or "").strip()
             else:
                 raise ValueError(f"Unsupported triple label model: {model}")
             if not content:
                 return {
+                    "api_model": api_model,
                     "raw_response": None,
                     "attempt_count": attempts,
                     "error": {"category": "empty_response", "message": "empty model response"},
                 }
-            return {"raw_response": content, "attempt_count": attempts, "error": None}
+            return {"api_model": api_model, "raw_response": content, "attempt_count": attempts, "error": None}
         except Exception as error:
             retryable = transient_error(error)
             if retryable and attempts <= runtime["max_retries"]:
                 time.sleep(min(2 ** (attempts - 1), 4))
                 continue
             return {
+                "api_model": api_model,
                 "raw_response": None,
                 "attempt_count": attempts,
                 "error": {
@@ -823,6 +844,7 @@ def call_extraction_model(client: Any, model: str, prompt: str, runtime: Dict[st
                 },
             }
     return {
+        "api_model": api_model,
         "raw_response": None,
         "attempt_count": attempts,
         "error": {"category": "unknown_failure", "message": "no call attempt"},
