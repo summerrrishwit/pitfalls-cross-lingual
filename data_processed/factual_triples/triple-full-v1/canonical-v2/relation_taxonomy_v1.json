@@ -1,0 +1,1148 @@
+{
+  "taxonomy_version": "relation-taxonomy-v1",
+  "source_inventory": "relation_inventory.json",
+  "created_by": "codex-global-relation-review-v1",
+  "relations": [
+    {
+      "id": "description_named_term",
+      "definition": "the conventional term satisfying a description",
+      "subject_type": "description",
+      "answer_type": "term",
+      "direction": "description -> term",
+      "examples": [
+        [
+          "smallest particle of an element that still exhibits all the properties of that element",
+          "an atom"
+        ],
+        [
+          "group of specialized cells that all perform the same function",
+          "tissue"
+        ],
+        [
+          "the passage of genetic instructions from one generation to the next",
+          "heredity"
+        ],
+        [
+          "smallest unit of a chemical compound that still has the properties of that compound",
+          "molecule"
+        ],
+        [
+          "body of water similar to a stream",
+          "brook"
+        ]
+      ],
+      "prompt_template_en": "The conventional term for {subject} is"
+    },
+    {
+      "id": "term_definition",
+      "definition": "the definition or meaning of a named term or expression",
+      "subject_type": "term",
+      "answer_type": "definition",
+      "direction": "term -> definition",
+      "examples": [
+        [
+          "climate",
+          "long-term average of a region's weather"
+        ],
+        [
+          "group norms",
+          "Modes of behaviour that are acceptable to and shared by group members"
+        ],
+        [
+          "objective",
+          "A clearly defined and measurable outcome to be achieved over a specified timeframe"
+        ],
+        [
+          "scenario in scenario planning",
+          "An imagined sequence of future events"
+        ],
+        [
+          "adaptation",
+          "favorable trait"
+        ]
+      ],
+      "prompt_template_en": "The definition of {subject} is"
+    },
+    {
+      "id": "description_named_entity",
+      "definition": "the entity satisfying an identifying description",
+      "subject_type": "description",
+      "answer_type": "entity",
+      "direction": "description -> entity",
+      "examples": [
+        [
+          "state north of Kansas where cows outnumber people 4 to 1",
+          "Nebraska"
+        ],
+        [
+          "smallest of the fifty US states",
+          "Rhode Island"
+        ],
+        [
+          "Dr Evil's diminutive clone in Austin Powers: The Spy Who Shagged Me",
+          "Mini-Me"
+        ],
+        [
+          "villainous Gremlin",
+          "Stripe"
+        ],
+        [
+          "mitten-shaped state",
+          "Michigan"
+        ]
+      ],
+      "prompt_template_en": "The entity matching the description {subject} is"
+    },
+    {
+      "id": "entity_alias",
+      "definition": "an alternative, common, or informal name for an entity",
+      "subject_type": "entity",
+      "answer_type": "name",
+      "direction": "entity -> name",
+      "examples": [
+        [
+          "eatery",
+          "restaurant"
+        ],
+        [
+          "drink",
+          "refreshment"
+        ],
+        [
+          "study of life",
+          "biology"
+        ],
+        [
+          "people who fly in an airplane",
+          "passenger"
+        ],
+        [
+          "going for a run",
+          "working out"
+        ]
+      ],
+      "prompt_template_en": "An alternative name for {subject} is"
+    },
+    {
+      "id": "abbreviation_expansion",
+      "definition": "the expansion represented by an abbreviation or initial",
+      "subject_type": "abbreviation",
+      "answer_type": "expansion",
+      "direction": "abbreviation -> expansion",
+      "examples": [
+        [
+          "PEST",
+          "Political, economic, social, technological"
+        ],
+        [
+          "codon",
+          "amino acid"
+        ],
+        [
+          "ISP",
+          "Internet Service Provider"
+        ],
+        [
+          "population of all species",
+          "abundant resources"
+        ]
+      ],
+      "prompt_template_en": "The expansion of {subject} is"
+    },
+    {
+      "id": "entity_antonym",
+      "definition": "an entity or concept with the opposite meaning or state",
+      "subject_type": "entity",
+      "answer_type": "opposite_entity",
+      "direction": "entity -> opposite_entity",
+      "examples": [
+        [
+          "ordinary",
+          "exceptional"
+        ],
+        [
+          "ambiguous",
+          "clear"
+        ],
+        [
+          "little",
+          "big"
+        ],
+        [
+          "progressive",
+          "regressive"
+        ],
+        [
+          "remembering",
+          "forgetting"
+        ]
+      ],
+      "prompt_template_en": "The opposite of {subject} is"
+    },
+    {
+      "id": "entity_classification",
+      "definition": "the class, type, or category of an entity",
+      "subject_type": "entity",
+      "answer_type": "class",
+      "direction": "entity -> class",
+      "examples": [
+        [
+          "magnesium oxide",
+          "a compound"
+        ],
+        [
+          "sodium chloride",
+          "compound"
+        ],
+        [
+          "Sodium chloride",
+          "a compound"
+        ],
+        [
+          "hydrogen chloride",
+          "a compound"
+        ],
+        [
+          "iron oxide",
+          "compound"
+        ]
+      ],
+      "prompt_template_en": "The class or type of {subject} is"
+    },
+    {
+      "id": "entity_location",
+      "definition": "the location containing or associated with an entity",
+      "subject_type": "entity",
+      "answer_type": "location",
+      "direction": "entity -> location",
+      "examples": [
+        [
+          "Hoboken",
+          "new jersey"
+        ],
+        [
+          "Texas",
+          "United States"
+        ],
+        [
+          "St. Paul",
+          "minnesota"
+        ],
+        [
+          "Ann Arbor",
+          "Michigan"
+        ],
+        [
+          "Yooperland",
+          "michigan"
+        ]
+      ],
+      "prompt_template_en": "The location associated with {subject} is"
+    },
+    {
+      "id": "organism_habitat",
+      "definition": "the habitat or native range of an organism",
+      "subject_type": "organism",
+      "answer_type": "location",
+      "direction": "organism -> location",
+      "examples": [
+        [
+          "European red fox",
+          "northern hemisphere"
+        ],
+        [
+          "jellyfish",
+          "salt water"
+        ],
+        [
+          "marmoset habitat",
+          "south and central america"
+        ],
+        [
+          "anemone",
+          "sea water"
+        ],
+        [
+          "marmots",
+          "northern hemisphere"
+        ]
+      ],
+      "prompt_template_en": "The natural habitat or range of {subject} is"
+    },
+    {
+      "id": "entity_origin",
+      "definition": "the geographic, historical, or etymological origin of an entity",
+      "subject_type": "entity",
+      "answer_type": "origin",
+      "direction": "entity -> origin",
+      "examples": [
+        [
+          "elephants",
+          "Africa"
+        ],
+        [
+          "420",
+          "students at a school in California meeting at 4.20pm"
+        ],
+        [
+          "wop",
+          "corruption of dialectal Italian guappo"
+        ],
+        [
+          "outer membrane of the chloroplast",
+          "the cell membrane of an eukaryotic host cell"
+        ],
+        [
+          "crap",
+          "Latin"
+        ]
+      ],
+      "prompt_template_en": "The origin of {subject} is"
+    },
+    {
+      "id": "part_of",
+      "definition": "the whole or system containing a named part",
+      "subject_type": "part",
+      "answer_type": "whole",
+      "direction": "part -> whole",
+      "examples": [
+        [
+          "world",
+          "solar system"
+        ],
+        [
+          "world",
+          "universe"
+        ],
+        [
+          "space, planets, moons and everything we can observe",
+          "universe"
+        ],
+        [
+          "rosebush, squirrel, and other plants and animals",
+          "nature"
+        ],
+        [
+          "food web",
+          "food chain"
+        ]
+      ],
+      "prompt_template_en": "The larger whole containing {subject} is"
+    },
+    {
+      "id": "has_part",
+      "definition": "a component or member contained by a whole",
+      "subject_type": "whole",
+      "answer_type": "part",
+      "direction": "whole -> part",
+      "examples": [
+        [
+          "long air passages in the lungs",
+          "alveoli"
+        ],
+        [
+          "bilaterians",
+          "protostomes"
+        ],
+        [
+          "the world",
+          "countries"
+        ],
+        [
+          "Silver",
+          "element"
+        ],
+        [
+          "Earth",
+          "Crust"
+        ]
+      ],
+      "prompt_template_en": "A component of {subject} is"
+    },
+    {
+      "id": "made_of",
+      "definition": "the material or constituent from which an entity is made",
+      "subject_type": "entity",
+      "answer_type": "material",
+      "direction": "entity -> material",
+      "examples": [
+        [
+          "trails left in the sky by aircraft",
+          "ice crystals"
+        ],
+        [
+          "dense outer layer of bones",
+          "compact bone"
+        ],
+        [
+          "volcano",
+          "lava"
+        ],
+        [
+          "square",
+          "four sides"
+        ],
+        [
+          "atom",
+          "protons and neutrons"
+        ]
+      ],
+      "prompt_template_en": "The material or main constituent of {subject} is"
+    },
+    {
+      "id": "entity_function",
+      "definition": "the characteristic function or intended purpose of an entity",
+      "subject_type": "entity",
+      "answer_type": "function",
+      "direction": "entity -> function",
+      "examples": [
+        [
+          "camel's hump",
+          "store fat"
+        ],
+        [
+          "rabbit's foot",
+          "to help rabbits walk"
+        ],
+        [
+          "horny ridges on the jaws of turtles",
+          "teeth"
+        ],
+        [
+          "silica sand",
+          "glass"
+        ],
+        [
+          "bird flashy displays",
+          "to attract mates"
+        ]
+      ],
+      "prompt_template_en": "The characteristic function of {subject} is"
+    },
+    {
+      "id": "activity_goal",
+      "definition": "the intended goal or objective of an activity",
+      "subject_type": "activity",
+      "answer_type": "goal",
+      "direction": "activity -> goal",
+      "examples": [
+        [
+          "basketball",
+          "score points"
+        ],
+        [
+          "understanding how and why things happen",
+          "science"
+        ],
+        [
+          "someone planning to kill",
+          "take life"
+        ],
+        [
+          "NASA's Apollo program",
+          "to send a human to land on the Moon"
+        ]
+      ],
+      "prompt_template_en": "The intended goal of {subject} is"
+    },
+    {
+      "id": "activity_requirement",
+      "definition": "a prerequisite or resource required by an activity or process",
+      "subject_type": "activity",
+      "answer_type": "prerequisite",
+      "direction": "activity -> prerequisite",
+      "examples": [
+        [
+          "human welfare",
+          "seed plants"
+        ],
+        [
+          "water",
+          "high specific heat"
+        ],
+        [
+          "meiosis",
+          "fertilization"
+        ],
+        [
+          "speed and velocity of a vehicle in motion",
+          "the direction of the motion"
+        ],
+        [
+          "shadow",
+          "bright light"
+        ]
+      ],
+      "prompt_template_en": "A prerequisite for {subject} is"
+    },
+    {
+      "id": "cause_effect",
+      "definition": "the effect caused or enabled by a cause",
+      "subject_type": "cause",
+      "answer_type": "effect",
+      "direction": "cause -> effect",
+      "examples": [
+        [
+          "Meningitis",
+          "brain"
+        ],
+        [
+          "oncogenes",
+          "cancer"
+        ],
+        [
+          "uncontrolled cell division",
+          "cancers"
+        ],
+        [
+          "Earth's gravitational force",
+          "orbit the earth"
+        ],
+        [
+          "becoming inebriated",
+          "drunkenness"
+        ]
+      ],
+      "prompt_template_en": "An effect caused by {subject} is"
+    },
+    {
+      "id": "effect_cause",
+      "definition": "the cause or agent responsible for an effect",
+      "subject_type": "effect",
+      "answer_type": "cause",
+      "direction": "effect -> cause",
+      "examples": [
+        [
+          "change in the appearance of the Moon as seen from Earth",
+          "the Moon revolving around Earth"
+        ],
+        [
+          "surface ocean currents",
+          "the wind"
+        ],
+        [
+          "Yoga Sutras",
+          "Patanjali"
+        ],
+        [
+          "Earth",
+          "gravitational force"
+        ],
+        [
+          "weight of an object",
+          "gravitational"
+        ]
+      ],
+      "prompt_template_en": "The cause of {subject} is"
+    },
+    {
+      "id": "producer_product",
+      "definition": "the entity, substance, or outcome produced by a producer or process",
+      "subject_type": "producer",
+      "answer_type": "product",
+      "direction": "producer -> product",
+      "examples": [
+        [
+          "plant breaking down sugar to release energy",
+          "carbon dioxide and water"
+        ],
+        [
+          "water used by plants to move materials up from the roots",
+          "food"
+        ],
+        [
+          "voice",
+          "sound"
+        ],
+        [
+          "photosynthesis",
+          "oxygen"
+        ],
+        [
+          "nitrogen and sulfur oxides in air dissolving in rain",
+          "acid rain"
+        ]
+      ],
+      "prompt_template_en": "A product produced by {subject} is"
+    },
+    {
+      "id": "entity_formation_agent",
+      "definition": "the agent or process that forms an entity",
+      "subject_type": "entity",
+      "answer_type": "formation_agent",
+      "direction": "entity -> formation_agent",
+      "examples": [],
+      "prompt_template_en": "The agent or process that forms {subject} is"
+    },
+    {
+      "id": "entity_attribute",
+      "definition": "a characteristic, state, or qualitative property of an entity",
+      "subject_type": "entity",
+      "answer_type": "attribute",
+      "direction": "entity -> attribute",
+      "examples": [
+        [
+          "baseball cap color that absorbs the most light on a sunny day",
+          "black"
+        ],
+        [
+          "Beethoven",
+          "Fidelio"
+        ],
+        [
+          "Lindbergh kidnapping",
+          "solved"
+        ],
+        [
+          "Greek and Roman statues at the time of their creation",
+          "living color"
+        ],
+        [
+          "rose flowers",
+          "red"
+        ]
+      ],
+      "prompt_template_en": "A characteristic property of {subject} is"
+    },
+    {
+      "id": "entity_measurement",
+      "definition": "a quantitative measurement or value associated with an entity",
+      "subject_type": "entity",
+      "answer_type": "measurement",
+      "direction": "entity -> measurement",
+      "examples": [
+        [
+          "most hydrogen atoms",
+          "one"
+        ],
+        [
+          "force",
+          "Acceleration"
+        ],
+        [
+          "$\\hat{u}^t \\hat{u}$",
+          "1 x 1"
+        ],
+        [
+          "sodium carbonate (Na2CO3)",
+          "3"
+        ],
+        [
+          "most humans",
+          "two feet"
+        ]
+      ],
+      "prompt_template_en": "The measured value associated with {subject} is"
+    },
+    {
+      "id": "measurement_target",
+      "definition": "the quantity or attribute measured by an instrument or unit",
+      "subject_type": "measuring_entity",
+      "answer_type": "quantity",
+      "direction": "measuring_entity -> quantity",
+      "examples": [
+        [
+          "kpa, atm, and mmhg",
+          "pressure"
+        ],
+        [
+          "Fahrenheit, Celsius, and Kelvin",
+          "temperature"
+        ],
+        [
+          "efficiency of a machine",
+          "friction"
+        ],
+        [
+          "thermometer",
+          "temperature"
+        ],
+        [
+          "instrument that records decibel levels",
+          "noise levels"
+        ]
+      ],
+      "prompt_template_en": "The quantity measured by {subject} is"
+    },
+    {
+      "id": "quantity_unit",
+      "definition": "the unit used to express a physical or abstract quantity",
+      "subject_type": "quantity",
+      "answer_type": "unit",
+      "direction": "quantity -> unit",
+      "examples": [
+        [
+          "density",
+          "kg/m^3"
+        ],
+        [
+          "weight",
+          "newton (N)"
+        ],
+        [
+          "mass of an object",
+          "gram"
+        ],
+        [
+          "mass of an apple",
+          "gram"
+        ],
+        [
+          "distance between two stars in the Milky Way",
+          "light-year"
+        ]
+      ],
+      "prompt_template_en": "The unit used to measure {subject} is"
+    },
+    {
+      "id": "entity_time",
+      "definition": "a date, duration, period, or other temporal value associated with an entity",
+      "subject_type": "entity",
+      "answer_type": "time",
+      "direction": "entity -> time",
+      "examples": [
+        [
+          "stone arch",
+          "ancient rome"
+        ],
+        [
+          "Christmas in Argentina",
+          "summer"
+        ],
+        [
+          "Ancestral Puebloan culture florescence",
+          "just after A.D. 1000"
+        ],
+        [
+          "Northern Hemisphere",
+          "winter"
+        ],
+        [
+          "strategic plans",
+          "Long-term"
+        ]
+      ],
+      "prompt_template_en": "The time associated with {subject} is"
+    },
+    {
+      "id": "work_creator",
+      "definition": "the person or organization that created, authored, developed, or invented an entity",
+      "subject_type": "created_entity",
+      "answer_type": "creator",
+      "direction": "created_entity -> creator",
+      "examples": [
+        [
+          "You cannot find peace by avoiding life",
+          "Michael Cunningham"
+        ],
+        [
+          "Only the dead have seen the end of war",
+          "George Santayana"
+        ],
+        [
+          "Our deepest fear is that we are powerful beyond measure",
+          "Marianne Williamson"
+        ],
+        [
+          "process to remove carbon and dust particles in smoke",
+          "Frederick Cottrell"
+        ],
+        [
+          "peanut butter",
+          "John Harvey Kellogg"
+        ]
+      ],
+      "prompt_template_en": "The creator of {subject} is"
+    },
+    {
+      "id": "description_example",
+      "definition": "an entity that is an example satisfying a description or class",
+      "subject_type": "description",
+      "answer_type": "example",
+      "direction": "description -> example",
+      "examples": [
+        [
+          "substance that has a definite volume but takes the shape of the container at room temperature",
+          "water"
+        ],
+        [
+          "liquid containing naturally occurring salt",
+          "ocean water"
+        ],
+        [
+          "buffer overflow attack",
+          "Morris Worm"
+        ],
+        [
+          "radiation, chemicals, and infectious agents",
+          "mutagens"
+        ],
+        [
+          "Type 1 diabetes and gigantism",
+          "endocrine diseases"
+        ]
+      ],
+      "prompt_template_en": "An example matching {subject} is"
+    },
+    {
+      "id": "symbol_meaning",
+      "definition": "the meaning or entity represented by a symbol",
+      "subject_type": "symbol",
+      "answer_type": "meaning",
+      "direction": "symbol -> meaning",
+      "examples": [
+        [
+          "vector",
+          "direction"
+        ],
+        [
+          "bubbles forming in a liquid that is being heated",
+          "the boiling point has been reached"
+        ],
+        [
+          "index fossils",
+          "the age of the rock"
+        ],
+        [
+          "substance with a pH value greater than 7",
+          "base"
+        ],
+        [
+          "January",
+          "garnet"
+        ]
+      ],
+      "prompt_template_en": "The meaning represented by {subject} is"
+    },
+    {
+      "id": "entity_controller",
+      "definition": "the controller, regulator, or determinant of an entity or process",
+      "subject_type": "entity",
+      "answer_type": "controller",
+      "direction": "entity -> controller",
+      "examples": [
+        [
+          "time of flowering in many species",
+          "photoperiodism"
+        ],
+        [
+          "air flow in lungs",
+          "smooth"
+        ],
+        [
+          "five senses",
+          "nervous system"
+        ],
+        [
+          "predation on moose",
+          "population"
+        ],
+        [
+          "Passage of oxygen into and out of the capillaries",
+          "diffusion of material"
+        ]
+      ],
+      "prompt_template_en": "The controller or regulator of {subject} is"
+    },
+    {
+      "id": "entity_protection",
+      "definition": "the material, structure, or agent protecting an entity",
+      "subject_type": "entity",
+      "answer_type": "protector",
+      "direction": "entity -> protector",
+      "examples": [
+        [
+          "bones in a human body",
+          "flesh"
+        ],
+        [
+          "pollen of seed plants and spores of seedless plants",
+          "sporopollenin"
+        ],
+        [
+          "bears",
+          "thick fur"
+        ],
+        [
+          "main shaft of the penis",
+          "skin"
+        ],
+        [
+          "globe",
+          "ocean"
+        ]
+      ],
+      "prompt_template_en": "The material, structure, or agent protecting {subject} is"
+    },
+    {
+      "id": "entity_transformation",
+      "definition": "the state, form, or entity resulting from a transformation",
+      "subject_type": "entity",
+      "answer_type": "transformed_entity",
+      "direction": "entity -> transformed_entity",
+      "examples": [
+        [
+          "acidic hydrogen atoms",
+          "a base"
+        ],
+        [
+          "energy in an ecosystem",
+          "heat"
+        ],
+        [
+          "turning turbine in a hydroelectric plant",
+          "kinetic energy into electric energy"
+        ],
+        [
+          "embryo after implantation",
+          "fetus"
+        ],
+        [
+          "solar energy collected by solar cell panels",
+          "electrical"
+        ]
+      ],
+      "prompt_template_en": "The result of transforming {subject} is"
+    },
+    {
+      "id": "sequence_successor",
+      "definition": "the entity or stage that follows another in an ordered sequence",
+      "subject_type": "entity",
+      "answer_type": "successor",
+      "direction": "entity -> successor",
+      "examples": [
+        [
+          "middle of a trip",
+          "beginning"
+        ],
+        [
+          "evening",
+          "daytime"
+        ],
+        [
+          "complete metamorphosis",
+          "egg, larva, pupa, adult"
+        ],
+        [
+          "Woody",
+          "Coach"
+        ]
+      ],
+      "prompt_template_en": "The stage or entity following {subject} is"
+    },
+    {
+      "id": "entity_capability",
+      "definition": "an action or behavior an entity is capable of performing",
+      "subject_type": "entity",
+      "answer_type": "capability",
+      "direction": "entity -> capability",
+      "examples": [
+        [
+          "heterotrophs",
+          "food"
+        ],
+        [
+          "about one percent of plants",
+          "photosynthesis"
+        ],
+        [
+          "someone committing perjury",
+          "lies"
+        ],
+        [
+          "solutions of nonelectrolytes such as ethanol",
+          "electricity"
+        ],
+        [
+          "obligate intracellular parasite bacteria",
+          "host cell"
+        ]
+      ],
+      "prompt_template_en": "A capability of {subject} is"
+    },
+    {
+      "id": "entity_energy_form",
+      "definition": "the form or type of energy associated with an entity or process",
+      "subject_type": "entity",
+      "answer_type": "energy_form",
+      "direction": "entity -> energy_form",
+      "examples": [
+        [
+          "firewood",
+          "potential"
+        ],
+        [
+          "heat sink",
+          "thermal"
+        ],
+        [
+          "food web",
+          "heat energy"
+        ],
+        [
+          "all moving objects",
+          "Kinetic energy"
+        ],
+        [
+          "photosynthesis",
+          "light"
+        ]
+      ],
+      "prompt_template_en": "The form of energy associated with {subject} is"
+    },
+    {
+      "id": "entity_instrument",
+      "definition": "an instrument or tool used to observe, measure, or act on an entity",
+      "subject_type": "entity",
+      "answer_type": "instrument",
+      "direction": "entity -> instrument",
+      "examples": [
+        [
+          "small organisms not visible to the eye",
+          "microscope"
+        ],
+        [
+          "cells",
+          "microscope"
+        ],
+        [
+          "cell wall of a leaf",
+          "microscope"
+        ],
+        [
+          "simple mendelian inheritance",
+          "pedigree"
+        ],
+        [
+          "master carpenter",
+          "drill"
+        ]
+      ],
+      "prompt_template_en": "The instrument used in relation to {subject} is"
+    },
+    {
+      "id": "entity_determinant",
+      "definition": "a factor that determines or controls an entity property",
+      "subject_type": "entity_property",
+      "answer_type": "determining_factor",
+      "direction": "entity_property -> determining_factor",
+      "examples": [
+        [
+          "shape of a baby duck's foot",
+          "the shape of the parent ducks' feet"
+        ],
+        [
+          "star type",
+          "mass"
+        ],
+        [
+          "age of the Earth",
+          "radioactive dating of rocks and meteorites"
+        ],
+        [
+          "element's atomic number",
+          "protons"
+        ],
+        [
+          "location of an electron around the nucleus of an atom",
+          "energy and the attraction of the nucleus"
+        ]
+      ],
+      "prompt_template_en": "The factor that determines {subject} is"
+    },
+    {
+      "id": "entity_language",
+      "definition": "a language associated with a place, group, person, or work",
+      "subject_type": "entity",
+      "answer_type": "language",
+      "direction": "entity -> language",
+      "examples": [
+        [
+          "Scotland",
+          "English"
+        ],
+        [
+          "Austria",
+          "German"
+        ],
+        [
+          "Australia",
+          "English"
+        ]
+      ],
+      "prompt_template_en": "The language associated with {subject} is"
+    },
+    {
+      "id": "element_symbol",
+      "definition": "the chemical symbol of an element",
+      "subject_type": "element",
+      "answer_type": "symbol",
+      "direction": "element -> symbol",
+      "examples": [
+        [
+          "copper",
+          "Cu"
+        ]
+      ],
+      "prompt_template_en": "The chemical symbol of {subject} is"
+    },
+    {
+      "id": "person_spouse",
+      "definition": "the spouse of a person",
+      "subject_type": "person",
+      "answer_type": "person",
+      "direction": "person -> person",
+      "examples": [
+        [
+          "Pocahontas",
+          "John Rolfe"
+        ]
+      ],
+      "prompt_template_en": "The spouse of {subject} is"
+    },
+    {
+      "id": "work_genre",
+      "definition": "the genre or artistic category of a creative work",
+      "subject_type": "creative_work",
+      "answer_type": "genre",
+      "direction": "creative_work -> genre",
+      "examples": [
+        [
+          "Shark Tank",
+          "television show"
+        ]
+      ],
+      "prompt_template_en": "The genre of {subject} is"
+    },
+    {
+      "id": "process_location",
+      "definition": "the location where a process occurs",
+      "subject_type": "process",
+      "answer_type": "location",
+      "direction": "process -> location",
+      "examples": [
+        [
+          "growing leaf cell",
+          "sugar production"
+        ],
+        [
+          "Earth's weather",
+          "the troposphere"
+        ],
+        [
+          "chemical digestion in the body",
+          "small intestine"
+        ],
+        [
+          "movement of tectonic plates forming isolated volcanic islands such as Hawaii",
+          "hot spot"
+        ],
+        [
+          "biochemical reaction converting pyruvate into carbon dioxide and water",
+          "mitochondria"
+        ]
+      ],
+      "prompt_template_en": "The location where {subject} occurs is"
+    }
+  ]
+}

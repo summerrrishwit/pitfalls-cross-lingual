@@ -290,6 +290,26 @@ class ExtractionContractTests(unittest.TestCase):
             temperature=0.0,
         )
 
+    @patch.object(pipeline.SENSENOVA_REQUEST_START_LIMITER, "wait")
+    def test_sensenova_extraction_applies_global_request_spacing(self, wait):
+        client = MagicMock()
+        client.messages.create.return_value = SimpleNamespace(
+            content=[SimpleNamespace(type="text", text=json.dumps(extracted_response()))]
+        )
+        with patch.dict(
+            "os.environ",
+            {"SENSENOVA_MIN_REQUEST_INTERVAL_SECONDS": "1.1"},
+            clear=False,
+        ):
+            call = pipeline.call_extraction_model(
+                client,
+                pipeline.TRIPLE_EXTRACTION_MODEL,
+                "Extract this item.",
+                self.config["runtime"],
+            )
+        self.assertIsNone(call["error"])
+        wait.assert_called_once_with(1.1)
+
     @patch("factual_pitfalls.pipeline.Anthropic")
     def test_sensenova_client_uses_bearer_token(self, anthropic_client):
         with patch.dict(
@@ -388,6 +408,95 @@ class ExtractionContractTests(unittest.TestCase):
             max_tokens=2048,
             extra_body={"enable_thinking": False},
         )
+
+
+class LocalAdjudicationTests(unittest.TestCase):
+    def test_reviewed_override_preserves_raw_response_and_clears_validation_failure(self):
+        record = {
+            "source_id": "raw_1",
+            "source_answer": "amino",
+            "terminal_status": "validation_failed",
+            "extraction_status": "extracted",
+            "validation_errors": ["answer_not_grounded_in_source"],
+            "extraction_confidence": 0.9,
+            "extraction": {"raw_response": "original", "program_adjustments": []},
+            **extracted_response(answer="amino acids"),
+        }
+        fields = {field: record[field] for field in pipeline.TRIPLE_FIELDS}
+        fields["answer"] = "amino"
+        policy = {
+            "adjudication_version": "local-extraction-adjudication-v1",
+            "model": pipeline.TRIPLE_EXTRACTION_MODEL,
+            "prompt_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "reviewer": "codex",
+            "decisions": [{
+                "source_id": "raw_1",
+                "action": "override_extracted",
+                "fields": fields,
+                "rationale": "Use the exact source answer.",
+            }],
+        }
+        result = pipeline.apply_extraction_adjudications(
+            [record], policy, pipeline.TRIPLE_EXTRACTION_MODEL
+        )[0]
+        self.assertEqual(result["terminal_status"], "completed")
+        self.assertEqual(result["answer"], "amino")
+        self.assertEqual(result["extraction"]["raw_response"], "original")
+        self.assertEqual(result["validation_errors"], [])
+        self.assertIn("prior", result["local_adjudication"])
+
+    def test_reviewed_not_extractable_nulls_triple(self):
+        record = {
+            "source_id": "raw_1",
+            "source_answer": "north pole",
+            "terminal_status": "validation_failed",
+            "extraction_status": "extracted",
+            "validation_errors": ["subject_matches_answer"],
+            "extraction_confidence": 0.9,
+            "extraction": {"raw_response": "original", "program_adjustments": []},
+            **extracted_response(subject="north pole", answer="north pole"),
+        }
+        policy = {
+            "adjudication_version": "local-extraction-adjudication-v1",
+            "model": pipeline.TRIPLE_EXTRACTION_MODEL,
+            "prompt_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "decisions": [{
+                "source_id": "raw_1",
+                "action": "mark_not_extractable",
+                "exclusion_reason": "non_unique_answer",
+                "rationale": "The answer is not uniquely determined.",
+            }],
+        }
+        result = pipeline.apply_extraction_adjudications(
+            [record], policy, pipeline.TRIPLE_EXTRACTION_MODEL
+        )[0]
+        self.assertEqual(result["terminal_status"], "completed")
+        self.assertEqual(result["extraction_status"], "not_extractable")
+        self.assertTrue(all(result[field] is None for field in pipeline.TRIPLE_FIELDS))
+
+    def test_reapplying_same_policy_is_idempotent(self):
+        record = {
+            "source_id": "raw_1",
+            "source_answer": "north pole",
+            "terminal_status": "completed",
+            "local_adjudication": {
+                "adjudication_version": "local-extraction-adjudication-v1"
+            },
+        }
+        policy = {
+            "adjudication_version": "local-extraction-adjudication-v1",
+            "model": pipeline.TRIPLE_EXTRACTION_MODEL,
+            "prompt_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "decisions": [{
+                "source_id": "raw_1",
+                "action": "mark_not_extractable",
+                "exclusion_reason": "non_unique_answer",
+            }],
+        }
+        result = pipeline.apply_extraction_adjudications(
+            [record], policy, pipeline.TRIPLE_EXTRACTION_MODEL
+        )[0]
+        self.assertEqual(result, record)
 
 
 class CodexCalibrationTests(unittest.TestCase):

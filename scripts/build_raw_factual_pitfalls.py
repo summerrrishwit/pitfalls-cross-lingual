@@ -19,6 +19,7 @@ from factual_pitfalls.pipeline import (  # noqa: E402
     TRIPLE_LABEL_MODELS,
     TRIPLE_EXTRACTION_MODEL,
     TRIPLE_EXTRACTION_PROMPT_VERSION,
+    apply_extraction_adjudications,
     apply_relation_mapping,
     build_codex_reference,
     build_raw_manifest,
@@ -100,6 +101,12 @@ def parser() -> argparse.ArgumentParser:
     summarize.add_argument("--models", nargs=2, choices=TRIPLE_LABEL_MODELS, default=list(TRIPLE_LABEL_MODELS))
     summarize.add_argument("--input-name", default="triple_extractions.jsonl")
     summarize.add_argument("--output", default="codex_summary.json")
+
+    adjudicate = commands.add_parser("adjudicate", help="Apply reviewed local decisions to validation failures.")
+    adjudicate.add_argument("--run-dir", required=True)
+    adjudicate.add_argument("--model", choices=TRIPLE_LABEL_MODELS, required=True)
+    adjudicate.add_argument("--policy", required=True)
+    adjudicate.add_argument("--input-name", default="triple_extractions.jsonl")
     return result
 
 
@@ -258,6 +265,20 @@ def main() -> int:
         return 0
 
     run_dir = resolve_path(args.run_dir)
+    if args.command == "adjudicate":
+        output_dir = model_output_dir(run_dir, args.model)
+        input_path = safe_basename(output_dir, args.input_name, ".jsonl")
+        records = apply_extraction_adjudications(
+            read_jsonl(input_path), load_json(resolve_path(args.policy)), args.model
+        )
+        write_jsonl(input_path, records)
+        write_json(
+            input_path.with_name(f"{input_path.stem}_summary.json"),
+            extraction_summary(records, args.model),
+        )
+        print(f"Applied local adjudications to {input_path}")
+        return 0
+
     if args.command == "extract":
         manifest = load_manifest(run_dir)
         models = args.models or config["roles"]["triple_label_models"]

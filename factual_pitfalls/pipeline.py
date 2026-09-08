@@ -9,6 +9,7 @@ import json
 import os
 import random
 import re
+import threading
 import time
 import unicodedata
 from collections import Counter, defaultdict
@@ -39,6 +40,28 @@ TRIPLE_EXTRACTION_PROMPT_VERSION = "atomic-factual-triple-v6"
 RELATION_INVENTORY_VERSION = "relation-inventory-v1"
 CODEX_REFERENCE_VERSION = "codex-factual-triple-reference-v1"
 CALIBRATION_ERROR_THRESHOLD = 0.03
+
+
+class RequestStartLimiter:
+    """Space request starts across worker threads without serializing responses."""
+
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self._next_request_at = 0.0
+
+    def wait(self, minimum_interval_seconds: float) -> None:
+        if minimum_interval_seconds <= 0:
+            return
+        with self._lock:
+            now = time.monotonic()
+            request_at = max(now, self._next_request_at)
+            self._next_request_at = request_at + minimum_interval_seconds
+        delay = request_at - now
+        if delay > 0:
+            time.sleep(delay)
+
+
+SENSENOVA_REQUEST_START_LIMITER = RequestStartLimiter()
 
 EXCLUSION_REASONS = {
     "not_factual",
@@ -795,6 +818,18 @@ def call_extraction_model(client: Any, model: str, prompt: str, runtime: Dict[st
         try:
             system = "You are a careful atomic factual-triple extraction component. Follow the JSON contract exactly."
             if model == "sensenova-6.7-flash-lite":
+                interval_text = os.getenv("SENSENOVA_MIN_REQUEST_INTERVAL_SECONDS", "0").strip()
+                try:
+                    minimum_interval = float(interval_text)
+                except ValueError as error:
+                    raise ValueError(
+                        "SENSENOVA_MIN_REQUEST_INTERVAL_SECONDS must be numeric"
+                    ) from error
+                if minimum_interval < 0:
+                    raise ValueError(
+                        "SENSENOVA_MIN_REQUEST_INTERVAL_SECONDS must be non-negative"
+                    )
+                SENSENOVA_REQUEST_START_LIMITER.wait(minimum_interval)
                 response = client.messages.create(
                     model=model,
                     max_tokens=runtime.get("max_tokens", 4096),
@@ -1124,6 +1159,98 @@ def extraction_summary(records: Iterable[Dict[str, Any]], model: str = TRIPLE_EX
         "prompt_version": TRIPLE_EXTRACTION_PROMPT_VERSION,
         "created_at": utc_now(),
     }
+
+
+def apply_extraction_adjudications(
+    records: Iterable[Dict[str, Any]], policy: Dict[str, Any], model: str
+) -> List[Dict[str, Any]]:
+    """Apply explicit reviewed decisions to validation-failed extraction rows."""
+    if policy.get("adjudication_version") != "local-extraction-adjudication-v1":
+        raise ValueError("invalid extraction adjudication version")
+    if policy.get("model") != model:
+        raise ValueError("extraction adjudication model mismatch")
+    if policy.get("prompt_version") != TRIPLE_EXTRACTION_PROMPT_VERSION:
+        raise ValueError("extraction adjudication prompt version mismatch")
+    items = policy.get("decisions", [])
+    decisions = {item["source_id"]: item for item in items}
+    if len(decisions) != len(items):
+        raise ValueError("duplicate source_id in extraction adjudication policy")
+
+    result = []
+    seen = set()
+    for original in records:
+        record = copy.deepcopy(original)
+        source_id = record.get("source_id")
+        decision = decisions.get(source_id)
+        if decision is None:
+            result.append(record)
+            continue
+        seen.add(source_id)
+        existing_adjudication = record.get("local_adjudication", {})
+        if (
+            record.get("terminal_status") == "completed"
+            and existing_adjudication.get("adjudication_version") == policy["adjudication_version"]
+        ):
+            result.append(record)
+            continue
+        if record.get("terminal_status") != "validation_failed":
+            raise ValueError(f"adjudication target is not validation_failed: {source_id}")
+        prior = {
+            "terminal_status": record.get("terminal_status"),
+            "extraction_status": record.get("extraction_status"),
+            "validation_errors": copy.deepcopy(record.get("validation_errors", [])),
+            "triple": {field: record.get(field) for field in TRIPLE_FIELDS},
+        }
+        action = decision.get("action")
+        if action == "override_extracted":
+            fields = decision.get("fields")
+            if not isinstance(fields, dict) or set(fields) != set(TRIPLE_FIELDS):
+                raise ValueError(f"override must contain exactly TRIPLE_FIELDS: {source_id}")
+            parsed = {
+                "schema_version": TRIPLE_EXTRACTION_PROMPT_VERSION,
+                "extraction_status": "extracted",
+                "exclusion_reason": None,
+                **copy.deepcopy(fields),
+                "extraction_confidence": record.get("extraction_confidence", 1.0),
+            }
+        elif action == "mark_not_extractable":
+            parsed = {
+                "schema_version": TRIPLE_EXTRACTION_PROMPT_VERSION,
+                "extraction_status": "not_extractable",
+                "exclusion_reason": decision.get("exclusion_reason"),
+                **{field: None for field in TRIPLE_FIELDS},
+                "extraction_confidence": record.get("extraction_confidence", 1.0),
+            }
+        else:
+            raise ValueError(f"invalid extraction adjudication action: {source_id}")
+        errors = validate_triple_extraction_response(parsed, record["source_answer"])
+        if errors:
+            raise ValueError(f"invalid adjudicated extraction for {source_id}: {errors}")
+        record.update(
+            {
+                "terminal_status": "completed",
+                "extraction_status": parsed["extraction_status"],
+                "exclusion_reason": parsed["exclusion_reason"],
+                **{field: parsed[field] for field in TRIPLE_FIELDS},
+                "extraction_confidence": parsed["extraction_confidence"],
+                "parsed_response": parsed,
+                "validation_errors": [],
+                "local_adjudication": {
+                    "adjudication_version": policy["adjudication_version"],
+                    "reviewer": policy.get("reviewer"),
+                    "rationale": decision.get("rationale"),
+                    "prior": prior,
+                },
+            }
+        )
+        record.setdefault("extraction", {}).setdefault("program_adjustments", []).append(
+            "applied_reviewed_local_adjudication"
+        )
+        result.append(record)
+    unknown = sorted(set(decisions) - seen)
+    if unknown:
+        raise ValueError(f"extraction adjudication contains unknown source IDs: {unknown}")
+    return result
 
 
 def build_codex_reference(

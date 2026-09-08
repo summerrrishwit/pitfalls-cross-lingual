@@ -1,0 +1,122 @@
+{
+  "adjudication_version": "local-extraction-adjudication-v1",
+  "model": "sensenova-6.7-flash-lite",
+  "prompt_version": "atomic-factual-triple-v6",
+  "reviewer": "codex",
+  "decisions": [
+    {
+      "source_id": "raw_sciq_000203",
+      "action": "override_extracted",
+      "rationale": "Keep the object exactly grounded in source_answer; the question supplies the omitted head noun acids.",
+      "fields": {"subject": "proteins", "subject_type": "biomolecule", "relation_raw": "polymer acid type", "answer": "amino", "answer_type": "acid type", "canonical_fact": "Proteins are polymers of amino acids."}
+    },
+    {
+      "source_id": "raw_mmlu_000175",
+      "action": "override_extracted",
+      "rationale": "The relation carries the unit months; the object remains the exact source answer.",
+      "fields": {"subject": "stranger anxiety in most children", "subject_type": "developmental phenomenon", "relation_raw": "typical onset age in months", "answer": "8 to 10", "answer_type": "age range", "canonical_fact": "For most children, stranger anxiety begins at about 8 to 10 months of age."}
+    },
+    {
+      "source_id": "raw_sciq_000414",
+      "action": "override_extracted",
+      "rationale": "Do not append point to the canonical source answer.",
+      "fields": {"subject": "temperature at which a substance melts", "subject_type": "concept", "relation_raw": "point name", "answer": "melting", "answer_type": "term", "canonical_fact": "The temperature at which a substance melts is called its melting point."}
+    },
+    {
+      "source_id": "raw_sciq_000455",
+      "action": "override_extracted",
+      "rationale": "The question supplies poles; the object remains the exact source answer.",
+      "fields": {"subject": "Earth's axis", "subject_type": "astronomical axis", "relation_raw": "poles passed through", "answer": "north and south", "answer_type": "pole pair", "canonical_fact": "Earth's axis is an imaginary line passing through the north and south poles."}
+    },
+    {
+      "source_id": "raw_sciq_000466",
+      "action": "override_extracted",
+      "rationale": "The question supplies numbers; the object remains the exact source answer.",
+      "fields": {"subject": "coefficients in a correctly balanced equation", "subject_type": "equation coefficients", "relation_raw": "number kind", "answer": "whole", "answer_type": "number property", "canonical_fact": "In a correctly balanced equation, all coefficients must be whole numbers."}
+    },
+    {
+      "source_id": "raw_sciq_000599",
+      "action": "override_extracted",
+      "rationale": "The question supplies pathways; the object remains the exact source answer.",
+      "fields": {"subject": "second messengers", "subject_type": "molecule or ion", "relation_raw": "pathway type involved in", "answer": "signaling", "answer_type": "pathway type", "canonical_fact": "Second messengers often play a role in signaling pathways."}
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000635",
+      "action": "override_extracted",
+      "rationale": "Restore the QA direction so source_answer is the triple object.",
+      "fields": {"subject": "event that takes about one year to complete", "subject_type": "event description", "relation_raw": "is", "answer": "Earth revolving completely around the Sun", "answer_type": "astronomical event", "canonical_fact": "Earth revolving completely around the Sun takes about one year to complete."}
+    },
+    {
+      "source_id": "raw_sciq_000686",
+      "action": "override_extracted",
+      "rationale": "Restore the QA direction so source_answer is the triple object.",
+      "fields": {"subject": "things classified by climatic factors and types of primary producers", "subject_type": "biological category description", "relation_raw": "are", "answer": "terrestrial biomes", "answer_type": "biome category", "canonical_fact": "Terrestrial biomes are classified by climatic factors and types of primary producers."}
+    },
+    {
+      "source_id": "raw_sciq_000710",
+      "action": "override_extracted",
+      "rationale": "Restore the QA direction so source_answer is the triple object.",
+      "fields": {"subject": "things defined by their sequence of nucleotides", "subject_type": "biomolecule description", "relation_raw": "are", "answer": "nucleic acids", "answer_type": "biomolecule", "canonical_fact": "Nucleic acids are defined by their sequence of nucleotides."}
+    },
+    {
+      "source_id": "raw_sciq_000897",
+      "action": "override_extracted",
+      "rationale": "The question supplies waves; the object remains the exact source answer.",
+      "fields": {"subject": "waves Hertz proved travel at the speed of light", "subject_type": "wave description", "relation_raw": "type", "answer": "electromagnetic", "answer_type": "wave type", "canonical_fact": "Hertz proved that electromagnetic waves travel at the speed of light."}
+    },
+    {
+      "source_id": "raw_sciq_000975",
+      "action": "override_extracted",
+      "rationale": "The question supplies female; the object remains the exact source answer.",
+      "fields": {"subject": "female spores inside female cones", "subject_type": "biological entity", "relation_raw": "develop into female", "answer": "gametophytes", "answer_type": "biological structure", "canonical_fact": "Inside female cones, female spores develop into female gametophytes."}
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001106",
+      "action": "override_extracted",
+      "rationale": "Restore the QA direction so source_answer is the triple object.",
+      "fields": {"subject": "example of a tissue in the human body", "subject_type": "category description", "relation_raw": "is", "answer": "muscle", "answer_type": "tissue", "canonical_fact": "Muscle is an example of a tissue in the human body."}
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001760",
+      "action": "override_extracted",
+      "rationale": "Avoid subject-answer identity by retaining the interrogative description as subject.",
+      "fields": {"subject": "event occurring only twice each year", "subject_type": "event description", "relation_raw": "is", "answer": "equinox", "answer_type": "astronomical event", "canonical_fact": "An equinox occurs only twice each year."}
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001761",
+      "action": "override_extracted",
+      "rationale": "Preserve the source chemical notation exactly.",
+      "fields": {"subject": "NaHCO3 + HCl -> NaCl + CO2 + missing product", "subject_type": "chemical reaction", "relation_raw": "missing product", "answer": "H_{2}O", "answer_type": "chemical compound", "canonical_fact": "The missing product in the reaction is H_{2}O."}
+    },
+    {
+      "source_id": "raw_commonsense_qa_003163",
+      "action": "mark_not_extractable",
+      "exclusion_reason": "non_unique_answer",
+      "rationale": "Many places always have snow; the answer is option-dependent and not uniquely determined from the question."
+    },
+    {
+      "source_id": "raw_commonsense_qa_004128",
+      "action": "override_extracted",
+      "rationale": "Use the exact canonical source answer rather than expanding it to Edinburgh Castle.",
+      "fields": {"subject": "castle built upon Castle Rock in Scotland", "subject_type": "castle description", "relation_raw": "is", "answer": "edinburgh", "answer_type": "place name", "canonical_fact": "Edinburgh Castle is built upon Castle Rock in Scotland."}
+    },
+    {
+      "source_id": "raw_commonsense_qa_007886",
+      "action": "override_extracted",
+      "rationale": "Restore the QA direction so source_answer is the triple object.",
+      "fields": {"subject": "thing whose three quarters are covered by the ocean", "subject_type": "surface description", "relation_raw": "is", "answer": "surface of earth", "answer_type": "planetary surface", "canonical_fact": "Three quarters of the surface of Earth are covered by the ocean."}
+    },
+    {
+      "source_id": "raw_commonsense_qa_005850",
+      "action": "mark_not_extractable",
+      "exclusion_reason": "clue_solving",
+      "rationale": "The item asks for completion of the phrase liquid gold rather than an option-independent atomic fact."
+    },
+    {
+      "source_id": "raw_commonsense_qa_006235",
+      "action": "mark_not_extractable",
+      "exclusion_reason": "malformed_question",
+      "rationale": "The question is grammatically and semantically incomplete, so no unique relation can be recovered."
+    }
+  ]
+}

@@ -15,9 +15,13 @@ raw_source_manifest.json
   -> relation_taxonomy_v1.json
   -> relation_mapping_v1.json
   -> triples_normalized.jsonl
+  -> factual_prompts.jsonl
+  -> distractor_candidates.jsonl
 ```
 
-No factual completion prompt, distractor, translation, screening score, or retained badcase is generated in this phase.
+This phase now generates English factual prompts and unverified distractor candidates from
+original wrong options. It does not generate perturbation text, translations, screening
+scores, or retained badcases.
 
 ## Goals / Non-Goals
 
@@ -33,12 +37,15 @@ No factual completion prompt, distractor, translation, screening score, or retai
 - Aggregate relation signatures globally before defining normalized labels.
 - Freeze a versioned taxonomy and explicit mapping so normalization is reproducible.
 - Reserve `qwen3.7-plus` or Codex for global taxonomy induction, mapping review, and ambiguous cases.
+- Keep direct dual-model answer agreements and require explicit Codex adjudication before accepting or rejecting a single-model extraction or material answer conflict.
+- Generate deterministic English recall prompts only for mapped relations and preserve prompt-quality tiers.
+- Copy source wrong options into distractor candidates without prematurely claiming type or factual verification.
 
 **Non-Goals:**
 
 - Retaining or recalibrating the previous `accept` / `reject` / `needs_review` audit.
-- Generating `prompt_en` during triple extraction.
-- Selecting `distractor_answer`, generating perturbations, translating prompts, screening models, or searching cross-lingual badcases.
+- Generating `prompt_en` during per-model triple extraction.
+- Verifying or augmenting distractors with same-relation negatives, generating perturbation text, translating prompts, screening models, or searching cross-lingual badcases.
 - Modifying raw files in `data/source/`.
 - Forcing every record or every relation into the taxonomy.
 
@@ -82,6 +89,32 @@ Every model writes to `models/<model-slug>/`. Resume reads only that model's che
 
 `relation_taxonomy_v1.json` defines every relation ID, definition, subject type, answer type, direction, and examples. `relation_mapping_v1.json` maps observed relation signatures to those IDs. `triples_normalized.jsonl` is produced only from these artifacts. Unknown and ambiguous signatures remain unresolved and are never silently coerced.
 
+### Canonicalize by agreement plus explicit Codex adjudication
+
+Rows with two locally valid extractions and equivalent normalized answers enter directly;
+SenseNova supplies their canonical fields and both annotations remain attached. A row with
+exactly one valid extraction or two materially different answers is `pending_review`, not
+excluded. The downstream inventory is blocked until a versioned Codex decision covers every
+queued row. An accepted decision selects one of the eligible model annotations without editing
+its fields; a rejected decision records an item-specific reason. Source provenance and choices
+remain unchanged in either case.
+
+### Separate prompt precision from relation statistics
+
+`relation_normalized` supports grouping and statistics, but broad taxonomy templates can lose
+the precise raw relation. Prompt generation therefore first removes a sentence-final answer
+from `canonical_fact`, yielding a strict completion stem. When the answer does not occur at the
+end, the system emits an option-free `Factual question: ... / Answer:` fallback and labels it as
+`open_answer_fallback`. Unresolved relations receive no prompt.
+
+### Treat source wrong options as candidates, not verified negatives
+
+For every prompt-ready triple, the pipeline copies all original choices except the canonical
+source answer and normalized answer. It ranks them deterministically by answer-text similarity
+and selects the top candidate for convenience, but records `distractor_verified=false` and
+does not claim that type compatibility or `(subject, relation, distractor)` falsity has been
+independently verified.
+
 ### Version and isolate extraction outputs
 
 The extraction prompt version, model ID, raw response, validation errors, retry history, and timestamps are retained. Resume rejects a checkpoint created by another prompt version or extraction model.
@@ -105,3 +138,4 @@ The extraction prompt version, model ID, raw response, validation errors, retry 
 5. Build `relation_inventory.json` from valid extracted rows.
 6. Use Codex/`qwen3.7-plus` to propose and review `relation_taxonomy_v1.json` plus `relation_mapping_v1.json`.
 7. Apply the frozen mapping to produce normalized triples and report unresolved signatures.
+8. Generate factual prompts for mapped triples and construct traceable source-option distractor candidates.

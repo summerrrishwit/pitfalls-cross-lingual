@@ -141,8 +141,12 @@ python visualization.py
 This workflow is intentionally separate from `run.py` and `eva.py`. It starts from
 the five immutable English QA datasets under `data/source/`, creates a raw-source
 manifest before any model request, extracts atomic `(subject, relation_raw, answer)`
-triples independently with SenseNova and Qwen, and builds per-model relation inventories. It does not generate
-factual prompts, distractors, translations, or cross-lingual scores in this phase.
+triples independently with SenseNova and Qwen, and builds per-model relation inventories.
+After both full checkpoints finish, a separate offline postprocessor keeps direct answer
+agreements and routes single-model extractions plus material answer conflicts through a frozen
+Codex adjudication, then freezes a Codex-reviewed relation taxonomy/mapping, generates English
+factual prompts, and constructs unverified source-wrong-option distractor candidates. Translation,
+screening, and cross-lingual scores remain outside this phase.
 
 Create and inspect the deterministic 100-item pilot without an API call:
 
@@ -183,6 +187,10 @@ conda run -n clp python scripts/build_raw_factual_pitfalls.py \
   --retry-failed \
   --max-workers 2
 ```
+
+For SenseNova, high worker concurrency can be combined with a process-wide request-start
+limit. For example, `SENSENOVA_MIN_REQUEST_INTERVAL_SECONDS=1.1` spaces all worker and
+retry requests at roughly 54 starts per minute while keeping multiple responses in flight.
 
 Build the global relation inventory from locally valid extracted triples:
 
@@ -237,6 +245,38 @@ conda run -n clp python scripts/build_raw_factual_pitfalls.py \
   --taxonomy configs/relation_taxonomy_v1.json \
   --mapping configs/relation_mapping_v1.json
 ```
+
+For the completed full dual-model run, first materialize the review queue without modifying
+either model checkpoint. Exit status 2 is expected while adjudication is incomplete:
+
+```bash
+python scripts/build_canonical_factual_dataset.py \
+  --run-dir data_processed/factual_triples/triple-full-v1 \
+  --output-dir canonical-v2
+```
+
+Review `canonical_review_queue.jsonl` with
+`configs/canonical_triple_adjudication_prompt_v1.md`, save one decision per queued row, and
+then run the gated downstream pipeline:
+
+```bash
+python scripts/build_canonical_factual_dataset.py \
+  --run-dir data_processed/factual_triples/triple-full-v1 \
+  --output-dir canonical-v2 \
+  --adjudication data_processed/factual_triples/triple-full-v1/canonical-v2/canonical_adjudication_codex_v1.jsonl
+```
+
+The command writes `canonical-v2/` below the run directory. Important artifacts are
+`canonical_review_queue.jsonl`, `canonical_adjudication_codex_v1.jsonl`,
+`canonical_decisions.jsonl`, `canonical_triples.jsonl`, `relation_inventory.json`,
+`relation_taxonomy_v1.json`, `relation_mapping_v1.json`, `relation_review_queue_v1.json`,
+`triples_normalized.jsonl`, `factual_prompts.jsonl`, and `distractor_candidates.jsonl`.
+Dual-model answer agreements enter directly. A single-model extraction or material answer
+conflict can enter only after an explicit `codex_decision=accept` selects one eligible model;
+missing review remains `pending_review` and cannot reach relation normalization. Unresolved
+relation signatures retain a null `relation_normalized`; they are not forced into the taxonomy.
+Distractors are copied from original wrong choices and remain
+`distractor_verified=false` until a later factual/type verification gate.
 
 Resume is rejected when the checkpoint uses another extraction prompt version or
 model. `--resume --retry-failed` retries only transport or validation failures while

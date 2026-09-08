@@ -12,6 +12,8 @@ raw English QA
   -> global relation inventory
   -> versioned relation taxonomy and mapping
   -> normalized triples
+  -> factual completion prompts
+  -> source-wrong-option distractor candidates
 ```
 
 ## What Changes
@@ -26,6 +28,9 @@ raw English QA
 - Build a global relation inventory containing relation text, subject/answer types, counts, and representative examples.
 - Use a strong-model-assisted, human-freezable taxonomy and explicit mapping artifact before filling `relation_normalized`.
 - Route unmapped or directionally ambiguous relations to `out_of_taxonomy` or `ambiguous` instead of forcing a label.
+- Determine canonical triples from direct dual-model normalized-answer agreement plus explicit Codex adjudication of every single-model extraction and material answer conflict, while retaining both annotations and all source choices.
+- Generate strict factual-completion prompts when the canonical fact ends in the answer and an explicit open-answer fallback otherwise.
+- Preserve original wrong options as traceable, unverified distractor candidates; do not claim type/fact verification in this stage.
 - Delete the superseded factual-review checkpoints, supervisor artifacts, audit-analysis outputs, and audit-specific code.
 
 ## Capabilities
@@ -34,6 +39,7 @@ raw English QA
 
 - `atomic-factual-triple-extraction`: Extract validated atomic `(subject, relation_raw, answer)` records from raw English QA with complete source provenance.
 - `relation-taxonomy-normalization`: Build a global relation inventory and reproducibly apply a versioned taxonomy/mapping to extracted triples.
+- `canonical-triple-postprocessing`: Freeze conservative canonical triples, factual prompts, and source-option distractor candidates with stage-level provenance.
 
 ### Retained Capabilities
 
@@ -43,5 +49,5 @@ raw English QA
 
 - Removes the old `FACTUAL_AUDIT_MODEL`, tri-state decision schema, `prompt_en`, audit checkpoints, and audit supervisor.
 - Adds two configured triple-label models and records endpoint-independent model IDs plus extraction prompt version per row.
-- Keeps downstream perturbation, translation, and screening outside this experiment until normalized triples are reviewed and frozen.
+- Keeps generated perturbation text, translation, and screening outside this experiment until normalized triples, prompts, and distractor candidates are reviewed and frozen.
 - Uses the configured OpenAI-compatible endpoint for later strong-model work; preflight confirmed `qwen3.7-plus` is callable through `https://ctapi.csxdtx.com:16000/v1`.
