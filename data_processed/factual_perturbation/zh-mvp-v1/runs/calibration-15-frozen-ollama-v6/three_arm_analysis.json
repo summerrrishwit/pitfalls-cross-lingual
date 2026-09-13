@@ -1,0 +1,723 @@
+{
+  "schema_version": "factual-perturbation-three-arm-analysis-v1",
+  "generated_at": "2026-09-10T10:24:35.461829+00:00",
+  "analysis_runtime_sha256": "53564bee782fc5654a894c9be96a69b56e2e685c2055f8b6ec85e480badb6088",
+  "run_id": "calibration-15-frozen-ollama-v6",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "candidate_count": 15,
+  "complete_candidate_count": 15,
+  "paths_not_taken_candidate_count": 2,
+  "strict_signal_count_by_model": {
+    "gemma3:12b": 0,
+    "llama3.1:8b": 2
+  },
+  "model_arm_metrics": {
+    "gemma3:12b": {
+      "en_original": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.0
+      },
+      "en_neutral": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.066667
+      },
+      "en_targeted": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.133333
+      },
+      "zh_original": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.733333,
+        "distractor_hit_rate_completed": 0.2
+      },
+      "zh_neutral": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.066667
+      },
+      "zh_targeted": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.6,
+        "distractor_hit_rate_completed": 0.266667
+      }
+    },
+    "llama3.1:8b": {
+      "en_original": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.8,
+        "distractor_hit_rate_completed": 0.066667
+      },
+      "en_neutral": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.066667
+      },
+      "en_targeted": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.866667,
+        "distractor_hit_rate_completed": 0.066667
+      },
+      "zh_original": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.666667,
+        "distractor_hit_rate_completed": 0.266667
+      },
+      "zh_neutral": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.8,
+        "distractor_hit_rate_completed": 0.133333
+      },
+      "zh_targeted": {
+        "call_count": 15,
+        "completed_count": 15,
+        "accuracy_completed": 0.666667,
+        "distractor_hit_rate_completed": 0.333333
+      }
+    }
+  },
+  "physical_simulation_calls": 180,
+  "naive_unshared_call_count": 180,
+  "shared_baseline_calls_saved": 0,
+  "baseline_inconsistencies": [],
+  "neutral_control_instabilities": [
+    {
+      "source_id": "raw_mmlu_000067",
+      "distractor_id": "raw_mmlu_000067_source_wrong_2",
+      "model": "gemma3:12b",
+      "language": "zh",
+      "original_choice": "C",
+      "neutral_choice": "A"
+    },
+    {
+      "source_id": "raw_mmlu_000076",
+      "distractor_id": "raw_mmlu_000076_source_wrong_3",
+      "model": "llama3.1:8b",
+      "language": "en",
+      "original_choice": "C",
+      "neutral_choice": "B"
+    },
+    {
+      "source_id": "raw_mmlu_000076",
+      "distractor_id": "raw_mmlu_000076_source_wrong_3",
+      "model": "llama3.1:8b",
+      "language": "zh",
+      "original_choice": "A",
+      "neutral_choice": "B"
+    },
+    {
+      "source_id": "raw_sciq_000298",
+      "distractor_id": "raw_sciq_000298_source_wrong_1",
+      "model": "gemma3:12b",
+      "language": "zh",
+      "original_choice": "B",
+      "neutral_choice": "A"
+    },
+    {
+      "source_id": "raw_truthful_qa_000033",
+      "distractor_id": "raw_truthful_qa_000033_generated_wrong_1",
+      "model": "llama3.1:8b",
+      "language": "zh",
+      "original_choice": "B",
+      "neutral_choice": "C"
+    },
+    {
+      "source_id": "raw_truthful_qa_000170",
+      "distractor_id": "raw_truthful_qa_000170_generated_wrong_3",
+      "model": "gemma3:12b",
+      "language": "zh",
+      "original_choice": "B",
+      "neutral_choice": "A"
+    },
+    {
+      "source_id": "raw_truthful_qa_000499",
+      "distractor_id": "raw_truthful_qa_000499_source_wrong_2",
+      "model": "gemma3:12b",
+      "language": "en",
+      "original_choice": "C",
+      "neutral_choice": "A"
+    },
+    {
+      "source_id": "raw_truthful_qa_000499",
+      "distractor_id": "raw_truthful_qa_000499_source_wrong_2",
+      "model": "gemma3:12b",
+      "language": "zh",
+      "original_choice": "A",
+      "neutral_choice": "B"
+    },
+    {
+      "source_id": "raw_truthful_qa_000545",
+      "distractor_id": "raw_truthful_qa_000545_generated_wrong_1",
+      "model": "gemma3:12b",
+      "language": "zh",
+      "original_choice": "B",
+      "neutral_choice": "C"
+    }
+  ],
+  "candidate_results": [
+    {
+      "candidate_id": "raw_ai2_arc_easy_000078_source_wrong_1_p2",
+      "source_id": "raw_ai2_arc_easy_000078",
+      "distractor_id": "raw_ai2_arc_easy_000078_source_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_000428_source_wrong_0_p2",
+      "source_id": "raw_ai2_arc_easy_000428",
+      "distractor_id": "raw_ai2_arc_easy_000428_source_wrong_0",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 0.5,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 0.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.5,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 1.0
+      },
+      "targeted_zh_wrong_models": [
+        "gemma3:12b",
+        "llama3.1:8b"
+      ],
+      "targeted_zh_flip_models": [
+        "gemma3:12b",
+        "llama3.1:8b"
+      ],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [
+        "llama3.1:8b"
+      ],
+      "paths_not_taken_candidate": true
+    },
+    {
+      "candidate_id": "raw_ai2_arc_easy_001231_source_wrong_2_p1",
+      "source_id": "raw_ai2_arc_easy_001231",
+      "distractor_id": "raw_ai2_arc_easy_001231_source_wrong_2",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 0.5
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [
+        "gemma3:12b"
+      ],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [
+        "gemma3:12b"
+      ],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_003974_generated_wrong_1_p2",
+      "source_id": "raw_commonsense_qa_003974",
+      "distractor_id": "raw_commonsense_qa_003974_generated_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_commonsense_qa_004135_source_wrong_0_p1",
+      "source_id": "raw_commonsense_qa_004135",
+      "distractor_id": "raw_commonsense_qa_004135_source_wrong_0",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_mmlu_000016_source_wrong_0_p2",
+      "source_id": "raw_mmlu_000016",
+      "distractor_id": "raw_mmlu_000016_source_wrong_0",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_mmlu_000067_source_wrong_2_p2",
+      "source_id": "raw_mmlu_000067",
+      "distractor_id": "raw_mmlu_000067_source_wrong_2",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 0.5,
+        "zh_neutral": 1.0,
+        "zh_targeted": 0.5
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_mmlu_000076_source_wrong_3_p1",
+      "source_id": "raw_mmlu_000076",
+      "distractor_id": "raw_mmlu_000076_source_wrong_3",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 0.5,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 0.5,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.5,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_sciq_000103_source_wrong_0_p2",
+      "source_id": "raw_sciq_000103",
+      "distractor_id": "raw_sciq_000103_source_wrong_0",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 0.5,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 0.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.5,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 1.0
+      },
+      "targeted_zh_wrong_models": [
+        "gemma3:12b",
+        "llama3.1:8b"
+      ],
+      "targeted_zh_flip_models": [
+        "gemma3:12b",
+        "llama3.1:8b"
+      ],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [
+        "llama3.1:8b"
+      ],
+      "paths_not_taken_candidate": true
+    },
+    {
+      "candidate_id": "raw_sciq_000298_source_wrong_1_p2",
+      "source_id": "raw_sciq_000298",
+      "distractor_id": "raw_sciq_000298_source_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.5,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_sciq_000710_generated_wrong_1_p1",
+      "source_id": "raw_sciq_000710",
+      "distractor_id": "raw_sciq_000710_generated_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 1.0,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000033_generated_wrong_1_p2",
+      "source_id": "raw_truthful_qa_000033",
+      "distractor_id": "raw_truthful_qa_000033_generated_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 0.5,
+        "zh_neutral": 1.0,
+        "zh_targeted": 1.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.5,
+        "zh_neutral": 0.0,
+        "zh_targeted": 0.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000170_generated_wrong_3_p2",
+      "source_id": "raw_truthful_qa_000170",
+      "distractor_id": "raw_truthful_qa_000170_generated_wrong_3",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.5,
+        "zh_original": 1.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 0.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 1.0
+      },
+      "targeted_zh_wrong_models": [
+        "llama3.1:8b"
+      ],
+      "targeted_zh_flip_models": [
+        "llama3.1:8b"
+      ],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000499_source_wrong_2_p2",
+      "source_id": "raw_truthful_qa_000499",
+      "distractor_id": "raw_truthful_qa_000499_source_wrong_2",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.5,
+        "zh_original": 0.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 0.0
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.5,
+        "en_neutral": 1.0,
+        "en_targeted": 0.5,
+        "zh_original": 1.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 1.0
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    },
+    {
+      "candidate_id": "raw_truthful_qa_000545_generated_wrong_1_p2",
+      "source_id": "raw_truthful_qa_000545",
+      "distractor_id": "raw_truthful_qa_000545_generated_wrong_1",
+      "complete": true,
+      "coverage": {
+        "en_original": 2,
+        "en_neutral": 2,
+        "en_targeted": 2,
+        "zh_original": 2,
+        "zh_neutral": 2,
+        "zh_targeted": 2
+      },
+      "accuracy": {
+        "en_original": 1.0,
+        "en_neutral": 1.0,
+        "en_targeted": 1.0,
+        "zh_original": 0.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 0.5
+      },
+      "distractor_hit_rate": {
+        "en_original": 0.0,
+        "en_neutral": 0.0,
+        "en_targeted": 0.0,
+        "zh_original": 1.0,
+        "zh_neutral": 0.5,
+        "zh_targeted": 0.5
+      },
+      "targeted_zh_wrong_models": [],
+      "targeted_zh_flip_models": [],
+      "targeted_zh_nontarget_wrong_models": [],
+      "strict_targeted_zh_flip_models": [],
+      "paths_not_taken_candidate": false
+    }
+  ],
+  "conclusion": "At least one target-distractor-specific Chinese flip survived the shared-baseline, neutral-control rerun."
+}

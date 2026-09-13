@@ -1,0 +1,60 @@
+{
+  "summary_version": "path-not-token-preparation-summary-v1",
+  "scope": "offline preparation only; no PATH_not_token model experiment was run",
+  "input_files": {
+    "data/Chinese.json": "2501e429fbc063c4a795d54b9da096fac8915d69980d24a9be3a7cb6a3138ab5",
+    "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_prompts.jsonl": "3a4cf17c6d3c3164a6008dd942793d25f849cb942fe69ad437463438ecd90dc3",
+    "configs/path_not_token_chinese_v1_review.json": "cf916e5065f619264a1f4c48dcb228ad65fa30a25f8acceba95d3ab3ae5fdf56"
+  },
+  "counts": {
+    "source_row_count": 342,
+    "unique_base_question_count": 52,
+    "accepted_base_fact_count": 13,
+    "accepted_perturbation_instance_count": 91,
+    "excluded_base_question_count": 39,
+    "excluded_source_row_count": 251
+  },
+  "accepted_base_counts_by_source": {
+    "ai2_arc_easy": 2,
+    "commonsense_qa": 1,
+    "mmlu": 3,
+    "sciq": 5,
+    "truthful_qa": 2
+  },
+  "relation_normalization_status_counts": {
+    "ambiguous": 1,
+    "mapped": 2,
+    "out_of_taxonomy": 10
+  },
+  "probe_relation_status_counts": {
+    "pending_balanced_inventory_review": 13
+  },
+  "prompt_contract": {
+    "choices_embedded": false,
+    "formats": [
+      "factual_completion",
+      "open_question_with_answer_marker"
+    ],
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "independent_unit": "base_fact",
+    "perturbations_are_repeated_variants": true
+  },
+  "not_performed": [
+    "probe_relation_inventory_freeze",
+    "target_model_selection",
+    "answer_tokenization",
+    "open_prompt_baseline",
+    "hidden_state_collection",
+    "task_vector_construction",
+    "intervention"
+  ],
+  "output_files": {
+    "base_facts.jsonl": "61142e37b2a0068f6d0c0eafc3447384bb11e5c28d2753b59c32a1661f9c7359",
+    "perturbation_instances.jsonl": "0ceca18f3b122d1a88f48e879823073517e54861b5497069d81720ed26a0c5d9",
+    "relation_inventory.json": "7cc2582570d4dde05b91719d1dbaef543d186fbb29fb1df1e1b500fdaa331551",
+    "excluded_base_questions.jsonl": "de891c902a3bd0322c76bb8439fab2e66c21401ce57834756f0e9c425481ddbc"
+  }
+}

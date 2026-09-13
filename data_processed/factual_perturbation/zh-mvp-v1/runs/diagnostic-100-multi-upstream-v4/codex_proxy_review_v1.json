@@ -1,0 +1,209 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "review_version": "codex-proxy-review-diagnostic-100-multi-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "diagnostic-100-multi-upstream-v4",
+  "reviewed_at": "2026-09-09",
+  "review_blinded_to_simulation_results": true,
+  "allowed_decisions": [
+    "accept",
+    "reject",
+    "needs_adjudication"
+  ],
+  "review_scope": {
+    "input_base_triples": 100,
+    "structurally_eligible_sources": 51,
+    "reviewed_l2_candidates": 92,
+    "accepted_sources": 35,
+    "rejected_sources": 16,
+    "automatic_decision_overrides": 9,
+    "selection_policy": "At most one semantically strongest valid L2 candidate per source, selected before any Simulation call."
+  },
+  "checks_applied": {
+    "source": [
+      "canonical_fact_usable",
+      "answer_unique",
+      "three_semantically_distinct_options",
+      "same_answer_type_or_plausible_foil"
+    ],
+    "perturbation": [
+      "truth_preserved",
+      "bilingual_equivalent",
+      "target_distractor_salience",
+      "matched_neutral_has_no_answer_or_distractor_cue",
+      "l2_strength",
+      "no_prompt_duplication",
+      "natural"
+    ]
+  },
+  "accepted_source_ids": [
+    "raw_sciq_000448",
+    "raw_ai2_arc_easy_000578",
+    "raw_mmlu_000011",
+    "raw_commonsense_qa_006611",
+    "raw_ai2_arc_easy_001196",
+    "raw_mmlu_000164",
+    "raw_sciq_000792",
+    "raw_ai2_arc_easy_000063",
+    "raw_truthful_qa_000510",
+    "raw_mmlu_000203",
+    "raw_ai2_arc_easy_001475",
+    "raw_mmlu_000102",
+    "raw_sciq_000351",
+    "raw_ai2_arc_easy_000343",
+    "raw_mmlu_000034",
+    "raw_ai2_arc_easy_000436",
+    "raw_truthful_qa_000413",
+    "raw_ai2_arc_easy_001578",
+    "raw_truthful_qa_000745",
+    "raw_sciq_000559",
+    "raw_ai2_arc_easy_001515",
+    "raw_sciq_000811",
+    "raw_ai2_arc_easy_001840",
+    "raw_mmlu_000113",
+    "raw_ai2_arc_easy_001242",
+    "raw_ai2_arc_easy_001552",
+    "raw_mmlu_000141",
+    "raw_ai2_arc_easy_000579",
+    "raw_ai2_arc_easy_000632",
+    "raw_mmlu_000030",
+    "raw_sciq_000380",
+    "raw_ai2_arc_easy_000907",
+    "raw_mmlu_000201",
+    "raw_sciq_000047",
+    "raw_ai2_arc_easy_000501"
+  ],
+  "rejected_source_reviews": [
+    {
+      "source_id": "raw_mmlu_000110",
+      "decision": "reject",
+      "issues": ["The 350-microorganism canonical count is unstable against modern oral-microbiome estimates."]
+    },
+    {
+      "source_id": "raw_commonsense_qa_008149",
+      "decision": "reject",
+      "issues": ["Forest can contain the correct nest location while store is implausible, yielding a weak and potentially ambiguous option set."]
+    },
+    {
+      "source_id": "raw_mmlu_000256",
+      "decision": "reject",
+      "issues": ["The distractor names are not independently verifiable and the generated cue relies on subjective name memorability."]
+    },
+    {
+      "source_id": "raw_truthful_qa_000797",
+      "decision": "reject",
+      "issues": ["The colorless and original-white-marble foils are semantically redundant."]
+    },
+    {
+      "source_id": "raw_truthful_qa_000596",
+      "decision": "reject",
+      "issues": ["Never solved and famous cold case are duplicate propositions, and the meaning of solved is contestable."]
+    },
+    {
+      "source_id": "raw_commonsense_qa_005030",
+      "decision": "reject",
+      "issues": ["A jar is itself a valid container and can also complete the underspecified prompt."]
+    },
+    {
+      "source_id": "raw_sciq_000202",
+      "decision": "reject",
+      "issues": ["Simple and fluid are not established alternative digestive-system categories and are not plausible foils."]
+    },
+    {
+      "source_id": "raw_truthful_qa_000055",
+      "decision": "reject",
+      "issues": ["Both distractors express the same claim that some mammals are not vertebrates."]
+    },
+    {
+      "source_id": "raw_mmlu_000091",
+      "decision": "reject",
+      "issues": ["The proposed depression mechanisms are not cleanly mutually exclusive under the underspecified theoretical framing."]
+    },
+    {
+      "source_id": "raw_truthful_qa_000619",
+      "decision": "reject",
+      "issues": ["The etymology is disputed and cannot support an evidence-clean diagnostic item without external adjudication."]
+    },
+    {
+      "source_id": "raw_commonsense_qa_009326",
+      "decision": "reject",
+      "issues": ["Aggressive is also a valid trait description for someone purposefully harming others."]
+    },
+    {
+      "source_id": "raw_truthful_qa_000190",
+      "decision": "reject",
+      "issues": ["Seeing only black and white and being unable to see color are semantically duplicate foils."]
+    },
+    {
+      "source_id": "raw_sciq_000991",
+      "decision": "reject",
+      "issues": ["The only generated target, sauropod, is an implausible answer-type foil for an invertebrate-group question."]
+    },
+    {
+      "source_id": "raw_commonsense_qa_003036",
+      "decision": "reject",
+      "issues": ["No more air is partly entailed by suffocation and is grammatically incompatible with the prompt stem."]
+    },
+    {
+      "source_id": "raw_commonsense_qa_006644",
+      "decision": "reject",
+      "issues": ["Dawn and early morning are semantically overlapping foils."]
+    },
+    {
+      "source_id": "raw_mmlu_000298",
+      "decision": "reject",
+      "issues": ["The displayed equation alone does not distinguish entity fixed effects from a random-effects interpretation of the unit term."]
+    }
+  ],
+  "perturbation_reviews": [
+    {"item_id": "raw_sciq_000448_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000578_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000011_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_commonsense_qa_006611_source_wrong_4_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001196_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000164_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000792_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000063_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_truthful_qa_000510_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000203_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001475_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000102_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000351_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000343_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000034_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000436_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_truthful_qa_000413_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001578_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_truthful_qa_000745_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000559_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001515_source_wrong_3_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000811_source_wrong_1_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001840_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000113_source_wrong_1_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001242_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_001552_source_wrong_1_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000141_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000579_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000632_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000030_source_wrong_1_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000380_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000907_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_mmlu_000201_source_wrong_0_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_sciq_000047_source_wrong_2_p2", "decision": "accept", "issues": []},
+    {"item_id": "raw_ai2_arc_easy_000501_source_wrong_0_p2", "decision": "accept", "issues": []}
+  ],
+  "evidence": {
+    "local_only": true,
+    "authoritative_external_fact_check_performed": false,
+    "files": [
+      "run_manifest.json",
+      "translations.jsonl",
+      "translation_reviews.jsonl",
+      "verified_distractors.jsonl",
+      "perturbation_generations.jsonl",
+      "perturbations.jsonl",
+      "preholdout_summary.json"
+    ]
+  }
+}

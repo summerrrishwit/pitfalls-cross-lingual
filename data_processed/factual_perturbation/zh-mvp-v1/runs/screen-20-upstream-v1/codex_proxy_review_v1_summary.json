@@ -1,0 +1,38 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-summary-v1",
+  "review_version": "codex-proxy-review-screen20-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "screen-20-upstream-v1",
+  "coverage": {
+    "translations": 20,
+    "distractors": 30,
+    "perturbations": 54
+  },
+  "decisions": {
+    "translations": {"accept": 15, "reject": 5, "needs_adjudication": 0},
+    "distractors": {"accept": 20, "reject": 5, "needs_adjudication": 5},
+    "perturbations": {"accept": 36, "reject": 10, "needs_adjudication": 8}
+  },
+  "eligible_candidate_count": 36,
+  "eligible_independent_base_triple_count": 12,
+  "eligible_distractor_count": 18,
+  "projected_four_model_three_arm_physical_calls": 576,
+  "automated_vs_codex_perturbation_review": {
+    "automated_accept": 13,
+    "codex_accept": 36,
+    "intersection": 11,
+    "automated_only": 2,
+    "codex_only": 25,
+    "interpretation": "The automated judge often treated intended distractor priming as a failure, so its prompt semantics require re-probing before a larger run."
+  },
+  "simulation_started": false,
+  "gate_passed": false,
+  "gate_reasons": [
+    "codex_proxy_review_completed_but_simulation_not_authorized",
+    "automated_perturbation_judge_semantics_need_reprobe",
+    "projected_576_calls_require_cost_and_scope_decision",
+    "currency_cost_not_auditable"
+  ],
+  "next_action": "Choose a bounded Simulation subset or approve all 576 projected calls after resolving the price-table and automated-judge policy."
+}

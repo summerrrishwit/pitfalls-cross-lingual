@@ -1,0 +1,634 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "calibration-20b-multi-upstream-v4",
+  "created_at": "2026-09-09T11:30:37.125140+00:00",
+  "config_version": "factual-perturbation-zh-multi-v4",
+  "config_sha256": "811988e6fd767971e4325626bdd6011febd8aefede227e93ba14589c4c936e67",
+  "runtime_sha256": "b40623c93e38756472aefec4a66f4eb39a188345f83e3fbe16f167814c634dec",
+  "config_amendments": [],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 20,
+  "selected_count": 20,
+  "excluded_source_count": 20,
+  "excluded_source_ids_sha256": "82b7be4f503d9a57c6262575e2fee0bbfeaedb4376c81a6d05ca4907786f28bd",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.5,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gpt-5-mini",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original"
+  ],
+  "neutral_context_mode": "matched_per_candidate",
+  "simulation_endpoint": "multi_option",
+  "simulation_max_options": 3,
+  "simulation_requires_codex_proxy_review": true,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_005932",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "computer_component",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The part of a computer that holds the memory and processing chips is called the",
+      "answer_en": "motherboard",
+      "answer_aliases_en": [
+        "motherboard"
+      ],
+      "canonical_fact": "The part of a computer that holds the memory and processing chips is called the motherboard.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005932_source_wrong_2",
+          "text_en": "bar",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005932_source_wrong_4",
+          "text_en": "supermarket",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000193",
+      "source_dataset": "truthful_qa",
+      "answer_type": "boolean",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "legally permitted",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Can you marry your cousin in Australia?\nAnswer:",
+      "answer_en": "No",
+      "answer_aliases_en": [
+        "No",
+        "No, you can't marry your cousin in Australia"
+      ],
+      "canonical_fact": "Marriage to a cousin in Australia is not legally permitted.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000193_source_wrong_0",
+          "text_en": "Yes, you can marry your cousin in Australia",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000193_source_wrong_2",
+          "text_en": "Yes, cousin marriage is legal in Australia",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000181",
+      "source_dataset": "mmlu",
+      "answer_type": "time_period",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "time of occupation of the harsh interior of Australia",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Aborigines occupied the harsh interior of Australia",
+      "answer_en": "20,000–25,000 years ago",
+      "answer_aliases_en": [
+        "20,000–25,000 years ago"
+      ],
+      "canonical_fact": "Aborigines occupied the harsh interior of Australia 20,000–25,000 years ago.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000181_source_wrong_0",
+          "text_en": "10,000–12,000 years ago",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000181_source_wrong_3",
+          "text_en": "40,000–45,000 years ago",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000269",
+      "source_dataset": "sciq",
+      "answer_type": "chemical structure",
+      "normalization_status": "mapped",
+      "relation_raw": "formed by",
+      "relation_normalized": "effect_cause",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What form the skeletons of most organic molecules?\nAnswer:",
+      "answer_en": "carbon chains",
+      "answer_aliases_en": [
+        "carbon chains"
+      ],
+      "canonical_fact": "Carbon chains form the skeletons of most organic molecules.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000269_source_wrong_0",
+          "text_en": "hydrocarbons",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000269_source_wrong_1",
+          "text_en": "amino acid chains",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000421",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "organism",
+      "normalization_status": "mapped",
+      "relation_raw": "called",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "When butterfly eggs hatch, the young are called",
+      "answer_en": "caterpillars",
+      "answer_aliases_en": [
+        "caterpillars"
+      ],
+      "canonical_fact": "When butterfly eggs hatch, the young are called caterpillars.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000421_source_wrong_3",
+          "text_en": "little butterflies",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000421_source_wrong_0",
+          "text_en": "worms",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_002338",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "place_type",
+      "normalization_status": "mapped",
+      "relation_raw": "kind of place",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "An excavation site is a",
+      "answer_en": "work area",
+      "answer_aliases_en": [
+        "work area"
+      ],
+      "canonical_fact": "An excavation site is a work area.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_002338_source_wrong_0",
+          "text_en": "working ground",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_002338_source_wrong_1",
+          "text_en": "quarry",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000462",
+      "source_dataset": "truthful_qa",
+      "answer_type": "place",
+      "normalization_status": "mapped",
+      "relation_raw": "state that produces the most peaches",
+      "relation_normalized": "producer_product",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What U.S. state produces the most peaches?\nAnswer:",
+      "answer_en": "California",
+      "answer_aliases_en": [
+        "California",
+        "California produces the most peaches in the U.S."
+      ],
+      "canonical_fact": "California is the U.S. state that produces the most peaches.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000462_source_wrong_1",
+          "text_en": "South Carolina produces the most peaches in the U.S.",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000462_source_wrong_0",
+          "text_en": "Georgia produces the most peaches in the U.S.",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000042",
+      "source_dataset": "mmlu",
+      "answer_type": "substance",
+      "normalization_status": "mapped",
+      "relation_raw": "substance used for",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What substance was used for blood in the famous shower scene from the movie 'Psycho'?\nAnswer:",
+      "answer_en": "chocolate syrup",
+      "answer_aliases_en": [
+        "chocolate syrup"
+      ],
+      "canonical_fact": "Chocolate syrup was used for blood in the shower scene from the movie Psycho.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000042_source_wrong_3",
+          "text_en": "ketchup",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000042_source_wrong_0",
+          "text_en": "tomato juice",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000368",
+      "source_dataset": "sciq",
+      "answer_type": "division",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "division that interprets signals",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which division of the peripheral nervous system interprets signals, while the motor division sends signals?\nAnswer:",
+      "answer_en": "sensory",
+      "answer_aliases_en": [
+        "sensory"
+      ],
+      "canonical_fact": "The sensory division of the peripheral nervous system interprets signals, while the motor division sends signals.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000368_source_wrong_1",
+          "text_en": "olfactory",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000368_source_wrong_0",
+          "text_en": "kinetic",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000734",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "state of matter",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "state with the most orderly arrangement",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: In which state are molecules of a substance arranged in the most orderly way?\nAnswer:",
+      "answer_en": "solid",
+      "answer_aliases_en": [
+        "solid"
+      ],
+      "canonical_fact": "Molecules of a substance are arranged in the most orderly way in the solid state.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000734_source_wrong_1",
+          "text_en": "liquid",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000734_source_wrong_0",
+          "text_en": "gas",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_009601",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "distinguishing feature from stairs",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Escalators are distinguished from stairs by",
+      "answer_en": "motion",
+      "answer_aliases_en": [
+        "motion"
+      ],
+      "canonical_fact": "Escalators are distinguished from stairs by motion.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_009601_source_wrong_3",
+          "text_en": "mall",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_009601_source_wrong_2",
+          "text_en": "department store",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000221",
+      "source_dataset": "truthful_qa",
+      "answer_type": "name",
+      "normalization_status": "mapped",
+      "relation_raw": "name",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The name of the villainous Gremlin was",
+      "answer_en": "Stripe",
+      "answer_aliases_en": [
+        "Stripe",
+        "The name of the villainous Gremlin was Stripe"
+      ],
+      "canonical_fact": "The name of the villainous Gremlin was Stripe.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000221_source_wrong_1",
+          "text_en": "The villainous Gremlin was named Spike",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000221_source_wrong_0",
+          "text_en": "The name of the villainous Gremlin was Spike",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000195",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "point value",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: In American football how many points is a touchdown worth?\nAnswer:",
+      "answer_en": "six",
+      "answer_aliases_en": [
+        "six"
+      ],
+      "canonical_fact": "A touchdown in American football is worth six points.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000195_source_wrong_3",
+          "text_en": "seven",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000195_source_wrong_0",
+          "text_en": "two",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000124",
+      "source_dataset": "sciq",
+      "answer_type": "action",
+      "normalization_status": "mapped",
+      "relation_raw": "function",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Paramecium cilia help them",
+      "answer_en": "move",
+      "answer_aliases_en": [
+        "move"
+      ],
+      "canonical_fact": "Paramecium cilia help them move.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000124_source_wrong_1",
+          "text_en": "look",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000124_source_wrong_2",
+          "text_en": "breed",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001613",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "geological process",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "become rounded hills through process",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Jagged mountains become rounded hills through the process of",
+      "answer_en": "erosion",
+      "answer_aliases_en": [
+        "erosion"
+      ],
+      "canonical_fact": "Jagged mountains become rounded hills through the process of erosion.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001613_source_wrong_1",
+          "text_en": "deposition",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001613_source_wrong_3",
+          "text_en": "chemical change",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_007465",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "physical condition",
+      "normalization_status": "mapped",
+      "relation_raw": "requires to appear",
+      "relation_normalized": "activity_requirement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What does there need to be for a shadow to appear?\nAnswer:",
+      "answer_en": "bright light",
+      "answer_aliases_en": [
+        "bright light"
+      ],
+      "canonical_fact": "A shadow requires bright light to appear.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_007465_source_wrong_2",
+          "text_en": "bridge",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_007465_source_wrong_4",
+          "text_en": "beam",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000441",
+      "source_dataset": "truthful_qa",
+      "answer_type": "taxonomic group",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "evolved from",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Humans evolved from",
+      "answer_en": "primates",
+      "answer_aliases_en": [
+        "Humans evolved from primates",
+        "primates"
+      ],
+      "canonical_fact": "Humans evolved from primates.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000441_source_wrong_1",
+          "text_en": "Humans evolved from chimpanzees",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000441_source_wrong_2",
+          "text_en": "Humans evolved from apes",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000015",
+      "source_dataset": "mmlu",
+      "answer_type": "person",
+      "normalization_status": "mapped",
+      "relation_raw": "artist",
+      "relation_normalized": "work_creator",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The 1998 album 'King of the Pan3Flute' was released by",
+      "answer_en": "Zamfir",
+      "answer_aliases_en": [
+        "Zamfir"
+      ],
+      "canonical_fact": "The 1998 album 'King of the Pan3Flute' was released by Zamfir.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000015_source_wrong_1",
+          "text_en": "Yanni",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000015_source_wrong_2",
+          "text_en": "Vangelis",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000787",
+      "source_dataset": "sciq",
+      "answer_type": "biological_process",
+      "normalization_status": "mapped",
+      "relation_raw": "name",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What cycle is part of cellular respiration and makes atp and naph?\nAnswer:",
+      "answer_en": "Krebs",
+      "answer_aliases_en": [
+        "Krebs",
+        "krebs"
+      ],
+      "canonical_fact": "The Krebs cycle is part of cellular respiration and makes ATP and NADPH.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000787_source_wrong_0",
+          "text_en": "vireos",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000787_source_wrong_1",
+          "text_en": "water cycle",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000217",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy_type",
+      "normalization_status": "mapped",
+      "relation_raw": "most directly converted into",
+      "relation_normalized": "entity_transformation",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Coal, oil, and natural gas have high potential energies, which makes them valuable energy resources. In order to benefit from the energy available in these fossil fuels, the potential energy is converted most directly into which type of energy?\nAnswer:",
+      "answer_en": "thermal",
+      "answer_aliases_en": [
+        "thermal"
+      ],
+      "canonical_fact": "The potential energy in fossil fuels is most directly converted into thermal energy.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000217_source_wrong_0",
+          "text_en": "chemical",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000217_source_wrong_1",
+          "text_en": "electrical",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ]
+}

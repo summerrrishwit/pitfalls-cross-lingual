@@ -1,0 +1,35 @@
+{
+  "adjudication_version": "local-extraction-adjudication-v1",
+  "model": "qwen3.7-plus",
+  "prompt_version": "atomic-factual-triple-v6",
+  "reviewer": "codex",
+  "decisions": [
+    {
+      "source_id": "raw_mkqa_003461",
+      "action": "override_extracted",
+      "extraction_confidence": 1.0,
+      "rationale": "The source question and answer directly support this fact; the provider repeatedly rejected the otherwise ordinary input as a content-filter false positive. Preserve the provider failure in the original extraction trace and apply this explicit reviewed override.",
+      "fields": {
+        "subject": "Winnie the Pooh",
+        "subject_type": "fictional character",
+        "relation_raw": "voiced by",
+        "answer": "Jim Cummings",
+        "answer_type": "person",
+        "canonical_fact": "Winnie the Pooh is voiced by Jim Cummings."
+      }
+    },
+    {
+      "source_id": "raw_global_mmlu_006276",
+      "action": "override_extracted",
+      "rationale": "Use the exact canonical source answer instead of the model's ungrounded morphological paraphrase from consistent to consistency.",
+      "fields": {
+        "subject": "reliability",
+        "subject_type": "measurement property",
+        "relation_raw": "refers to",
+        "answer": "Whether our measure is consistent in the information it provides",
+        "answer_type": "definition",
+        "canonical_fact": "Reliability refers to whether a measure is consistent in the information it provides."
+      }
+    }
+  ]
+}

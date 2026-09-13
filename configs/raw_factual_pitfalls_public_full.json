@@ -1,0 +1,36 @@
+{
+  "source_datasets": {
+    "global_mmlu": "data/source/public-benchmarks-v1-full/global_mmlu.json",
+    "mkqa": "data/source/public-benchmarks-v1-full/mkqa.json",
+    "msqa_en": "data/source/public-benchmarks-v1-full/msqa_en.json",
+    "openbookqa": "data/source/public-benchmarks-v1-full/openbookqa.json"
+  },
+  "deduplicate_against": {
+    "existing_ai2_arc_easy": "data/source/ai2_arc_easy.json",
+    "existing_commonsense_qa": "data/source/commonsense_qa.json",
+    "existing_mmlu": "data/source/mmlu.json",
+    "existing_sciq": "data/source/sciq.json",
+    "existing_truthful_qa": "data/source/truthful_qa.json"
+  },
+  "raw_sample_size": "all",
+  "seed": 20260909,
+  "sampling_strategy": "balanced_sources",
+  "supported_models": [
+    "sensenova-6.7-flash-lite",
+    "qwen3.7-plus"
+  ],
+  "roles": {
+    "triple_label_models": [
+      "sensenova-6.7-flash-lite",
+      "qwen3.7-plus"
+    ],
+    "relation_normalization_model": "qwen3.7-plus"
+  },
+  "runtime": {
+    "temperature": 0.0,
+    "max_tokens": 2048,
+    "timeout_seconds": 120,
+    "max_retries": 3
+  },
+  "output_root": "data_processed/factual_triples"
+}

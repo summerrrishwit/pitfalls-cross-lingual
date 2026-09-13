@@ -1,0 +1,55 @@
+{
+  "extends": "configs/factual_perturbation_zh_multi_v4.json",
+  "config_version": "factual-perturbation-zh-streamlined-v5",
+  "model_roles": {
+    "translation": {
+      "repair_rejected": true,
+      "repair_rounds": 1
+    },
+    "distractor_generation": {
+      "enabled": true,
+      "target_accepted_per_source": 2,
+      "backup_candidates": 1,
+      "primary": {
+        "model": "gpt-5.5",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 1024
+      }
+    },
+    "perturbation_generation": {
+      "candidates_per_distractor": 2,
+      "primary": {
+        "model": "gpt-5.6-sol",
+        "provider_profile": "openai",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 2048
+      },
+      "strength_levels": [
+        "l2_lexical",
+        "l2_relational"
+      ],
+      "matched_neutral": true,
+      "target_distractors_per_source": 2,
+      "fallback": {
+        "model": "gpt-5.5",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 2048
+      }
+    },
+    "perturbation_validation": {
+      "hard_gate": false
+    }
+  },
+  "preflight": {
+    "minimum_translation_acceptance": 0.9,
+    "streamlined_calibration": {
+      "base_triple_limit": 20,
+      "minimum_two_distractor_source_rate": 0.8,
+      "minimum_generation_completion_rate": 0.98,
+      "minimum_final_candidate_source_rate": 0.5,
+      "maximum_neutral_instability_rate": 0.02
+    }
+  }
+}

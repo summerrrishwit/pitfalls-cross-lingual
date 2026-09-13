@@ -1,0 +1,29 @@
+{
+  "source_datasets": {
+    "global_mmlu": "data/source/public-benchmarks-v1/global_mmlu.json",
+    "mkqa": "data/source/public-benchmarks-v1/mkqa.json",
+    "msqa_en": "data/source/public-benchmarks-v1/msqa_en.json",
+    "openbookqa": "data/source/public-benchmarks-v1/openbookqa.json"
+  },
+  "raw_sample_size": 40,
+  "seed": 20260909,
+  "sampling_strategy": "balanced_sources",
+  "supported_models": [
+    "sensenova-6.7-flash-lite",
+    "qwen3.7-plus"
+  ],
+  "roles": {
+    "triple_label_models": [
+      "sensenova-6.7-flash-lite",
+      "qwen3.7-plus"
+    ],
+    "relation_normalization_model": "qwen3.7-plus"
+  },
+  "runtime": {
+    "temperature": 0.0,
+    "max_tokens": 2048,
+    "timeout_seconds": 120,
+    "max_retries": 3
+  },
+  "output_root": "data_processed/factual_triples"
+}

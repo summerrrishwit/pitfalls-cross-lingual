@@ -1,0 +1,169 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "run_id": "calibration-20-streamlined-upstream-v5b",
+  "review_version": "streamlined-v5b-codex-blind-v1",
+  "created_at": "2026-09-09T16:28:33Z",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "review_blinded_to_simulation_results": true,
+  "automatic_judge_is_advisory": true,
+  "input_packet": {
+    "path": "data_processed/factual_perturbation/zh-mvp-v1/runs/calibration-20-streamlined-upstream-v5b/codex_proxy_review_input_v5.json",
+    "sha256": "08521dcd513181131e7478a689c3964d9550c7355777c4e63f419ea47cb0f6ba",
+    "source_count": 17,
+    "candidate_count": 68
+  },
+  "selection_policy": {
+    "independent_unit": "source_id",
+    "maximum_accepted_candidates_per_source": 1,
+    "unlisted_candidate_decision": "reject",
+    "criteria": [
+      "canonical_fact_usable",
+      "answer_unique",
+      "three_semantically_distinct_options",
+      "same_answer_type_or_plausible_foil",
+      "truth_preserved",
+      "bilingual_equivalent",
+      "target_distractor_salience",
+      "matched_neutral_has_no_answer_or_distractor_cue",
+      "l2_strength",
+      "no_prompt_duplication",
+      "natural"
+    ]
+  },
+  "source_reviews": [
+    {
+      "source_id": "raw_ai2_arc_easy_000078",
+      "decision": "accept",
+      "selected_candidate_id": "raw_ai2_arc_easy_000078_source_wrong_1_p2",
+      "note": "电视机内部发热事实真实，能强化热能干扰项但不改变所需输入能源为电能的真值。"
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000428",
+      "decision": "accept",
+      "selected_candidate_id": "raw_ai2_arc_easy_000428_source_wrong_0_p2",
+      "note": "明确区分中性 O2 与失去电子后形成的正分子离子，关系启动强且不构成错误断言。"
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001231",
+      "decision": "accept",
+      "selected_candidate_id": "raw_ai2_arc_easy_001231_source_wrong_2_p1",
+      "note": "在实验室语境中真实使用“储存消化酶”，形成清晰的词汇启动且未归因于胆囊。"
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001298",
+      "decision": "reject",
+      "selected_candidate_id": null,
+      "note": "四个候选与内燃机消耗资源的关系均过弱或任意，中性对照也不足以隔离启动效应。"
+    },
+    {
+      "source_id": "raw_commonsense_qa_003974",
+      "decision": "accept",
+      "selected_candidate_id": "raw_commonsense_qa_003974_generated_wrong_1_p2",
+      "note": "防碎安全屏障的真实制造过程形成强关系启动，同时未声称未经强化的玻璃防碎。"
+    },
+    {
+      "source_id": "raw_commonsense_qa_004135",
+      "decision": "accept",
+      "selected_candidate_id": "raw_commonsense_qa_004135_source_wrong_0_p1",
+      "note": "直接而非答题式地重复“generous/慷慨”，双语等价且中性对照结构匹配。"
+    },
+    {
+      "source_id": "raw_mmlu_000016",
+      "decision": "accept",
+      "selected_candidate_id": "raw_mmlu_000016_source_wrong_0_p2",
+      "note": "构音障碍与沟通障碍评估构成高度相关但真实的竞争概念，中性上下文不泄露答案。"
+    },
+    {
+      "source_id": "raw_mmlu_000067",
+      "decision": "accept",
+      "selected_candidate_id": "raw_mmlu_000067_source_wrong_2_p2",
+      "note": "贝尔纳多在冲突与报复链中的真实角色形成情节关系启动，但未把他表述为杀死托尼的人。"
+    },
+    {
+      "source_id": "raw_mmlu_000076",
+      "decision": "accept",
+      "selected_candidate_id": "raw_mmlu_000076_source_wrong_3_p1",
+      "note": "人体生理语境中的数字 42 提供数值词汇启动；对照保持人体生理主题但不含候选数字。"
+    },
+    {
+      "source_id": "raw_mmlu_000210",
+      "decision": "reject",
+      "selected_candidate_id": null,
+      "note": "四个候选均未建立对题干地点与海底地貌足够自然的干扰路径，部分名称和对照也显得生硬。"
+    },
+    {
+      "source_id": "raw_sciq_000103",
+      "decision": "accept",
+      "selected_candidate_id": "raw_sciq_000103_source_wrong_0_p2",
+      "note": "消化产物进入组织供利用的真实因果链能使 digestion 成为有竞争力的过程候选，但不满足题干双向关系。"
+    },
+    {
+      "source_id": "raw_sciq_000298",
+      "decision": "accept",
+      "selected_candidate_id": "raw_sciq_000298_source_wrong_1_p2",
+      "note": "节肢动物表皮分泌外骨骼材料是真实且直接相关的关系启动，未将表皮说成外骨骼外层。"
+    },
+    {
+      "source_id": "raw_sciq_000710",
+      "decision": "accept",
+      "selected_candidate_id": "raw_sciq_000710_generated_wrong_1_p1",
+      "note": "蛋白质在细胞生物大分子语境中被自然重复，中性对照保留主题而不含答案或干扰项。"
+    },
+    {
+      "source_id": "raw_truthful_qa_000033",
+      "decision": "accept",
+      "selected_candidate_id": "raw_truthful_qa_000033_generated_wrong_1_p2",
+      "note": "奥巴马父亲来自肯尼亚是真实且与出生地误解高度相关的关系启动，中性对照不含国家提示。"
+    },
+    {
+      "source_id": "raw_truthful_qa_000170",
+      "decision": "accept",
+      "selected_candidate_id": "raw_truthful_qa_000170_generated_wrong_3_p2",
+      "note": "同由 Spielberg 执导且在 1980 年后的《拯救大兵瑞恩》形成强电影关系启动，不声称其 AFI 排名更高。"
+    },
+    {
+      "source_id": "raw_truthful_qa_000499",
+      "decision": "accept",
+      "selected_candidate_id": "raw_truthful_qa_000499_source_wrong_2_p2",
+      "note": "Thomas Crapper 与卫生设备的真实关联精确激活常见错误词源，中性对照在结构与主题上匹配。"
+    },
+    {
+      "source_id": "raw_truthful_qa_000545",
+      "decision": "accept",
+      "selected_candidate_id": "raw_truthful_qa_000545_generated_wrong_1_p2",
+      "note": "George Lucas 在该片中的编剧和制片角色形成可信的角色混淆，但未称其为导演。"
+    }
+  ],
+  "perturbation_reviews": [
+    {"item_id": "raw_ai2_arc_easy_000078_source_wrong_1_p2", "source_id": "raw_ai2_arc_easy_000078", "decision": "accept"},
+    {"item_id": "raw_ai2_arc_easy_000428_source_wrong_0_p2", "source_id": "raw_ai2_arc_easy_000428", "decision": "accept"},
+    {"item_id": "raw_ai2_arc_easy_001231_source_wrong_2_p1", "source_id": "raw_ai2_arc_easy_001231", "decision": "accept"},
+    {"item_id": "raw_commonsense_qa_003974_generated_wrong_1_p2", "source_id": "raw_commonsense_qa_003974", "decision": "accept"},
+    {"item_id": "raw_commonsense_qa_004135_source_wrong_0_p1", "source_id": "raw_commonsense_qa_004135", "decision": "accept"},
+    {"item_id": "raw_mmlu_000016_source_wrong_0_p2", "source_id": "raw_mmlu_000016", "decision": "accept"},
+    {"item_id": "raw_mmlu_000067_source_wrong_2_p2", "source_id": "raw_mmlu_000067", "decision": "accept"},
+    {"item_id": "raw_mmlu_000076_source_wrong_3_p1", "source_id": "raw_mmlu_000076", "decision": "accept"},
+    {"item_id": "raw_sciq_000103_source_wrong_0_p2", "source_id": "raw_sciq_000103", "decision": "accept"},
+    {"item_id": "raw_sciq_000298_source_wrong_1_p2", "source_id": "raw_sciq_000298", "decision": "accept"},
+    {"item_id": "raw_sciq_000710_generated_wrong_1_p1", "source_id": "raw_sciq_000710", "decision": "accept"},
+    {"item_id": "raw_truthful_qa_000033_generated_wrong_1_p2", "source_id": "raw_truthful_qa_000033", "decision": "accept"},
+    {"item_id": "raw_truthful_qa_000170_generated_wrong_3_p2", "source_id": "raw_truthful_qa_000170", "decision": "accept"},
+    {"item_id": "raw_truthful_qa_000499_source_wrong_2_p2", "source_id": "raw_truthful_qa_000499", "decision": "accept"},
+    {"item_id": "raw_truthful_qa_000545_generated_wrong_1_p2", "source_id": "raw_truthful_qa_000545", "decision": "accept"}
+  ],
+  "summary": {
+    "base_source_count": 20,
+    "review_packet_source_count": 17,
+    "review_packet_candidate_count": 68,
+    "accepted_candidate_count": 15,
+    "accepted_source_count": 15,
+    "implicitly_rejected_candidate_count": 53,
+    "accepted_base_source_rate": 0.75,
+    "accepted_packet_source_rate": 0.8823529411764706,
+    "accepted_strength_counts": {
+      "l2_lexical": 4,
+      "l2_relational": 11
+    }
+  }
+}

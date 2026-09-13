@@ -65,6 +65,7 @@ def parser() -> argparse.ArgumentParser:
     extract.add_argument("--retry-failed", action="store_true")
     extract.add_argument("--max-workers", type=int, default=1)
     extract.add_argument("--model-parallelism", type=int, default=2)
+    extract.add_argument("--checkpoint-every", type=int, default=1)
     extract.add_argument("--output-name", default="triple_extractions.jsonl")
 
     inventory = commands.add_parser("inventory", help="Build a global relation inventory from valid triples.")
@@ -143,10 +144,14 @@ def resume_records(path: Path, key: str, resume: bool) -> Dict[str, Dict[str, An
     return {record[key]: record for record in read_jsonl(path) if key in record}
 
 
+def checkpoint_journal_path(output_path: Path) -> Path:
+    return output_path.with_suffix(f"{output_path.suffix}.journal")
+
+
 def validate_extraction_resume(output_path: Path, resume: bool, model: str = TRIPLE_EXTRACTION_MODEL) -> None:
     if not resume:
         return
-    records = read_jsonl(output_path)
+    records = read_jsonl(output_path) + read_jsonl(checkpoint_journal_path(output_path))
     versions = {
         record.get("extraction", {}).get("prompt_version")
         for record in records
@@ -183,8 +188,16 @@ def run_stage(
     retry_failed: bool,
     limit: Optional[int],
     max_workers: int = 1,
+    checkpoint_every: int = 1,
 ) -> List[Dict[str, Any]]:
     completed = resume_records(output_path, key, resume)
+    journal_path = checkpoint_journal_path(output_path)
+    if resume:
+        completed.update(
+            {record[key]: record for record in read_jsonl(journal_path) if key in record}
+        )
+    elif journal_path.exists():
+        raise ValueError(f"stale checkpoint journal exists; use --resume or remove it: {journal_path}")
     pending = []
     for item in inputs:
         expected = expected_keys(item)
@@ -202,8 +215,16 @@ def run_stage(
             break
     if max_workers <= 0:
         raise ValueError("max_workers must be a positive integer")
+    if checkpoint_every <= 0:
+        raise ValueError("checkpoint_every must be a positive integer")
+
+    dirty_count = 0
+    processed_count = 0
+    journal_path.parent.mkdir(parents=True, exist_ok=True)
+    journal = journal_path.open("a", encoding="utf-8")
 
     def store(produced: Iterable[Dict[str, Any]]) -> None:
+        nonlocal dirty_count, processed_count
         for record in produced:
             previous = completed.get(record[key])
             if previous is not None:
@@ -216,17 +237,37 @@ def run_stage(
                     }
                 ]
             completed[record[key]] = record
-        write_jsonl(output_path, completed.values())
+            journal.write(json.dumps(record, ensure_ascii=False))
+            journal.write("\n")
+            dirty_count += 1
+            processed_count += 1
+        journal.flush()
+        if dirty_count >= checkpoint_every:
+            write_jsonl(output_path, completed.values())
+            journal.seek(0)
+            journal.truncate()
+            journal.flush()
+            dirty_count = 0
+            print(
+                f"Checkpoint: processed {processed_count} / {len(pending)} this run; "
+                f"stored {len(completed)} total records.",
+                flush=True,
+            )
 
-    if max_workers == 1:
-        for item in pending:
-            store(transform(item))
-    else:
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = [executor.submit(lambda value=item: list(transform(value))) for item in pending]
-            for future in as_completed(futures):
-                store(future.result())
-    write_jsonl(output_path, completed.values())
+    try:
+        if max_workers == 1:
+            for item in pending:
+                store(transform(item))
+        else:
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = [executor.submit(lambda value=item: list(transform(value))) for item in pending]
+                for future in as_completed(futures):
+                    store(future.result())
+    finally:
+        journal.flush()
+        journal.close()
+        write_jsonl(output_path, completed.values())
+        journal_path.unlink(missing_ok=True)
     return list(completed.values())
 
 
@@ -300,6 +341,7 @@ def main() -> int:
                 args.retry_failed,
                 args.limit,
                 args.max_workers,
+                args.checkpoint_every,
             )
             summary_path = output_dir / f"{output.stem}_summary.json"
             summary = extraction_summary(records, model=model)

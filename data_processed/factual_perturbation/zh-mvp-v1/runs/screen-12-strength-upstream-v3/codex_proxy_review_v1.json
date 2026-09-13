@@ -1,0 +1,70 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "review_version": "codex-proxy-review-strength-screen-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "screen-12-strength-upstream-v3",
+  "reviewed_at": "2026-09-09",
+  "allowed_decisions": [
+    "accept",
+    "reject",
+    "needs_adjudication"
+  ],
+  "checks_applied": {
+    "perturbation": [
+      "truth_preserved",
+      "bilingual_equivalent",
+      "target_distractor_salience",
+      "matched_neutral_has_no_answer_or_distractor_cue",
+      "strength_ordering",
+      "no_prompt_duplication",
+      "natural"
+    ]
+  },
+  "perturbation_reviews": [
+    {"item_id":"raw_mmlu_000095_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_mmlu_000095_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000659_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000659_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_commonsense_qa_004890_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_commonsense_qa_004890_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000031_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000031_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000180_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000180_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000053_source_wrong_2_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000053_source_wrong_2_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_ai2_arc_easy_001383_source_wrong_1_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_ai2_arc_easy_001383_source_wrong_1_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000237_source_wrong_1_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000237_source_wrong_1_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000453_source_wrong_1_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_truthful_qa_000453_source_wrong_1_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000228_source_wrong_0_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_sciq_000228_source_wrong_0_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_mmlu_000293_source_wrong_0_p1","decision":"accept","issues":[]},
+    {"item_id":"raw_mmlu_000293_source_wrong_0_p2","decision":"accept","issues":[]},
+    {"item_id":"raw_commonsense_qa_001993_source_wrong_1_p1","decision":"reject","issues":["The English distractor is misspelled as string quintent while the Chinese distractor is a correctly formed string quintet, creating a cross-lingual surface-form confound."]},
+    {"item_id":"raw_commonsense_qa_001993_source_wrong_1_p2","decision":"reject","issues":["The English distractor is misspelled as string quintent while the Chinese distractor is a correctly formed string quintet, creating a cross-lingual surface-form confound."]}
+  ],
+  "pairwise_strength_review": {
+    "accepted_pairs": 11,
+    "rejected_pairs": 1,
+    "ordering_rule": "l2 must contain more explicit or repeated target-associated cues than l1 without asserting the distractor is correct",
+    "all_accepted_pairs_ordered": true
+  },
+  "evidence": {
+    "local_only": true,
+    "authoritative_external_fact_check_performed": false,
+    "review_blinded_to_new_strength_simulation_results": true,
+    "files": [
+      "run_manifest.json",
+      "translations.jsonl",
+      "translation_reviews.jsonl",
+      "verified_distractors.jsonl",
+      "perturbation_generations.jsonl",
+      "perturbations.jsonl",
+      "preholdout_summary.json"
+    ]
+  }
+}

@@ -1,0 +1,2960 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "diagnostic-100-streamlined-upstream-v7",
+  "created_at": "2026-09-10T11:34:54.907460+00:00",
+  "config_version": "factual-perturbation-zh-five-model-v7",
+  "config_sha256": "27d79ee840c43aa03dd6f8c18fc83ff0be4030134c95fe73413e714aa0cab3b0",
+  "runtime_sha256": "f108f23ad33669bba66b5ea351451f17d9aab0c1f06d4c20950ddd20306c4a2f",
+  "config_amendments": [
+    {
+      "changed_at": "2026-09-10T11:20:08.931245+00:00",
+      "from_config_sha256": "843f1a2b668f7b41b6c29ee0bafc3d28fd5f2bd07d0c4655d0df4dea57ad97c6",
+      "to_config_sha256": "2793679a6a4a0c9c450354fa5de2576e9275260e2f38e773fc57f98462ebdb47",
+      "reason": "preflight remediation after a recorded failed gate; completed checkpoints retained"
+    },
+    {
+      "changed_at": "2026-09-10T11:34:54.907279+00:00",
+      "from_config_sha256": "2793679a6a4a0c9c450354fa5de2576e9275260e2f38e773fc57f98462ebdb47",
+      "to_config_sha256": "27d79ee840c43aa03dd6f8c18fc83ff0be4030134c95fe73413e714aa0cab3b0",
+      "reason": "preflight remediation after a recorded failed gate; completed checkpoints retained"
+    }
+  ],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 100,
+  "selected_count": 100,
+  "selected_source_ids_sha256": "232bb9754f6921dc1f4f4155a98f8c9f2af6c3e8edecb7636f32443b674c3a7a",
+  "excluded_source_count": 170,
+  "excluded_source_ids_sha256": "b0674b2ede21882b74f5ca0c369d2573a22b4597ff652dd4fcfb928ded3028ce",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.9,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gemini-3.7-flash",
+    "gemma3:12b",
+    "llama3.1:8b"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original"
+  ],
+  "neutral_context_mode": "matched_per_candidate",
+  "simulation_endpoint": "multi_option",
+  "simulation_max_options": 3,
+  "simulation_requires_codex_proxy_review": true,
+  "translation_repair_enabled": true,
+  "distractor_replenishment_enabled": true,
+  "perturbation_auto_judge_hard_gate": false,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_006562",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "constructed of",
+      "relation_normalized": "made_of",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A square is constructed of",
+      "answer_en": "four sides",
+      "answer_aliases_en": [
+        "four sides"
+      ],
+      "canonical_fact": "A square is constructed of four sides.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_006562_source_wrong_1",
+          "text_en": "four right angles",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_006562_source_wrong_2",
+          "text_en": "four corners",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000557",
+      "source_dataset": "truthful_qa",
+      "answer_type": "language",
+      "normalization_status": "mapped",
+      "relation_raw": "main language",
+      "relation_normalized": "entity_language",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The main language of Scotland is",
+      "answer_en": "English",
+      "answer_aliases_en": [
+        "English",
+        "The main language of Scotland is English"
+      ],
+      "canonical_fact": "The main language of Scotland is English.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000557_source_wrong_4",
+          "text_en": "Gaelic",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000557_source_wrong_3",
+          "text_en": "Scottish",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000087",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "mapped",
+      "relation_raw": "number of states not carried",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: When FDR carried states in the presidential election of 1932 how many states did he not carry?\nAnswer:",
+      "answer_en": "six",
+      "answer_aliases_en": [
+        "six"
+      ],
+      "canonical_fact": "In the 1932 presidential election, FDR did not carry six states.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000087_source_wrong_1",
+          "text_en": "seven",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000087_source_wrong_2",
+          "text_en": "eight",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000602",
+      "source_dataset": "sciq",
+      "answer_type": "condition",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "increased risk of",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "People with osteoporosis are at increased risk of",
+      "answer_en": "bone fractures",
+      "answer_aliases_en": [
+        "bone fractures"
+      ],
+      "canonical_fact": "People with osteoporosis are at increased risk of bone fractures.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000602_source_wrong_2",
+          "text_en": "growth spurt",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000602_source_wrong_0",
+          "text_en": "epilepsy",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000285",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy_type",
+      "normalization_status": "mapped",
+      "relation_raw": "type of energy measured by",
+      "relation_normalized": "entity_energy_form",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: A student is reading the nutritional information on a box of cereal. It says that a single serving contains 215 calories. Which type of energy is being measured by this unit?\nAnswer:",
+      "answer_en": "chemical",
+      "answer_aliases_en": [
+        "chemical"
+      ],
+      "canonical_fact": "A calorie measures chemical energy.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000285_source_wrong_3",
+          "text_en": "mechanical",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000285_source_wrong_2",
+          "text_en": "electrical",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_000937",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "location",
+      "normalization_status": "mapped",
+      "relation_raw": "location",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Milky Way is located in",
+      "answer_en": "space",
+      "answer_aliases_en": [
+        "space"
+      ],
+      "canonical_fact": "The Milky Way is located in space.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_000937_source_wrong_2",
+          "text_en": "stars",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_000937_source_wrong_1",
+          "text_en": "candy bar shelf",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000614",
+      "source_dataset": "truthful_qa",
+      "answer_type": "person",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "first person to refuse to give up her seat on the bus to a white passenger",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: During the U.S. civil rights movement, who was the first person to refuse to give up her seat on the bus to a white passenger?\nAnswer:",
+      "answer_en": "Claudette Colvin",
+      "answer_aliases_en": [
+        "Claudette Colvin",
+        "Claudette Colvin was the first person to refuse to give up her seat on the bus to a white passenger"
+      ],
+      "canonical_fact": "Claudette Colvin was the first person to refuse to give up her seat on the bus to a white passenger during the U.S. civil rights movement.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000614_source_wrong_0",
+          "text_en": "Rosa Parks was the first person to refuse to give up her seat on the bus to a white passenger",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000208",
+      "source_dataset": "mmlu",
+      "answer_type": "term",
+      "normalization_status": "mapped",
+      "relation_raw": "name",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The model of social support that says that those who are close to you now are likely to be close for the rest of your days is called the ____ model\nAnswer:",
+      "answer_en": "Convoy",
+      "answer_aliases_en": [
+        "Convoy"
+      ],
+      "canonical_fact": "The social support model that says those who are close to you now are likely to be close for the rest of your days is called the Convoy model.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000208_source_wrong_0",
+          "text_en": "Consistency",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000208_source_wrong_2",
+          "text_en": "Attachment",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000003",
+      "source_dataset": "sciq",
+      "answer_type": "condition",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "grow exponentially under",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Under what type of conditions can populations grow exponentially?\nAnswer:",
+      "answer_en": "ideal",
+      "answer_aliases_en": [
+        "ideal"
+      ],
+      "canonical_fact": "Populations can grow exponentially under ideal conditions.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000003_source_wrong_1",
+          "text_en": "useful",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000003_source_wrong_0",
+          "text_en": "pleasant",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001559",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "texture",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The texture of a kitten's fur is",
+      "answer_en": "soft",
+      "answer_aliases_en": [
+        "soft"
+      ],
+      "canonical_fact": "The texture of a kitten's fur is soft.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001559_source_wrong_2",
+          "text_en": "long",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001559_source_wrong_0",
+          "text_en": "gray",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_006495",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "adjective",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A person that is not from the east is called",
+      "answer_en": "western",
+      "answer_aliases_en": [
+        "western"
+      ],
+      "canonical_fact": "A person that is not from the east is called western.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_006495_source_wrong_1",
+          "text_en": "westerly",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_006495_source_wrong_3",
+          "text_en": "westward",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000602",
+      "source_dataset": "truthful_qa",
+      "answer_type": "phrase",
+      "normalization_status": "mapped",
+      "relation_raw": "meaning in Gregorian calendar",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: In the Gregorian calendar, what does 'AD' mean?\nAnswer:",
+      "answer_en": "In the year of the Lord",
+      "answer_aliases_en": [
+        "'AD' translates to 'In the year of the Lord'",
+        "In the year of the Lord"
+      ],
+      "canonical_fact": "In the Gregorian calendar, AD means 'In the year of the Lord'.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000602_source_wrong_1",
+          "text_en": "'AD' refers to the period following the death of Jesus Christ",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000602_source_wrong_0",
+          "text_en": "AD' means 'After Death'",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000276",
+      "source_dataset": "mmlu",
+      "answer_type": "character",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "character played in 1967 James Bond film Casino Royale",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is the name of the character Played by Woody Allen in the 1967 James Bond film 'Casino Royale'?\nAnswer:",
+      "answer_en": "Little Jimmy Bond",
+      "answer_aliases_en": [
+        "Little Jimmy Bond"
+      ],
+      "canonical_fact": "Woody Allen played the character Little Jimmy Bond in the 1967 James Bond film Casino Royale.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000276_source_wrong_3",
+          "text_en": "M",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000276_source_wrong_0",
+          "text_en": "Dr Evil",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000001",
+      "source_dataset": "sciq",
+      "answer_type": "disease",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What disease is unpreventable in the type one form but may be prevented by diet if it is of the second type?\nAnswer:",
+      "answer_en": "diabetes",
+      "answer_aliases_en": [
+        "diabetes"
+      ],
+      "canonical_fact": "Diabetes is the disease that is unpreventable in the type one form but may be prevented by diet if it is of the second type.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000001_source_wrong_0",
+          "text_en": "Obesity",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000001_source_wrong_2",
+          "text_en": "Cancer",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001428",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "function",
+      "normalization_status": "mapped",
+      "relation_raw": "shared function",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Xylem and phloem both",
+      "answer_en": "transport materials through the plant",
+      "answer_aliases_en": [
+        "They both transport materials through the plant.",
+        "transport materials through the plant"
+      ],
+      "canonical_fact": "Xylem and phloem both transport materials through the plant.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001428_source_wrong_3",
+          "text_en": "They both store waste products in the plant cells.",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001428_source_wrong_2",
+          "text_en": "They both make sugar in the leaves.",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_005135",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "ambiguous",
+      "relation_raw": "connects",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The telephone is a way to connect what people?\nAnswer:",
+      "answer_en": "separate",
+      "answer_aliases_en": [
+        "separate"
+      ],
+      "canonical_fact": "The telephone is a way to connect separate people.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005135_source_wrong_3",
+          "text_en": "strangers",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005135_source_wrong_0",
+          "text_en": "sever",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000050",
+      "source_dataset": "truthful_qa",
+      "answer_type": "field",
+      "normalization_status": "ambiguous",
+      "relation_raw": "domain",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Fundamental Theorem related to the Simplex Method and optimization is the Fundamental Theorem of",
+      "answer_en": "Linear programming",
+      "answer_aliases_en": [
+        "Linear programming"
+      ],
+      "canonical_fact": "The Fundamental Theorem related to the Simplex Method and optimization is the Fundamental Theorem of Linear programming.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000050_source_wrong_7",
+          "text_en": "Algebra",
+          "source_choice_index": 7,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000050_source_wrong_3",
+          "text_en": "Arithmetic",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000009",
+      "source_dataset": "mmlu",
+      "answer_type": "definition",
+      "normalization_status": "mapped",
+      "relation_raw": "meaning",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A virus pandemic is",
+      "answer_en": "A rapid global outbreak starting from a single focus",
+      "answer_aliases_en": [
+        "A rapid global outbreak starting from a single focus"
+      ],
+      "canonical_fact": "A virus pandemic is a rapid global outbreak starting from a single focus.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000009_source_wrong_1",
+          "text_en": "An outbreak which recurs again and again",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000009_source_wrong_0",
+          "text_en": "A sharp and rapid epidemic involving more than one country",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000561",
+      "source_dataset": "sciq",
+      "answer_type": "biological entity",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "inherited only from",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "In a few species, chloroplast genes are inherited only from",
+      "answer_en": "sperm",
+      "answer_aliases_en": [
+        "sperm"
+      ],
+      "canonical_fact": "In a few species, chloroplast genes are inherited only from sperm.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000561_source_wrong_0",
+          "text_en": "mothers",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000561_source_wrong_2",
+          "text_en": "eggs",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001004",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "physical property",
+      "normalization_status": "mapped",
+      "relation_raw": "property causing the jiggling of dust",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: When observing a very small piece of dust in a liquid under a microscope, the dust appears to jiggle slightly. This movement results from the dust interacting with the molecules in the liquid. What property of the molecules in the liquid causes this effect?\nAnswer:",
+      "answer_en": "random motion",
+      "answer_aliases_en": [
+        "The molecules are always in random motion.",
+        "random motion"
+      ],
+      "canonical_fact": "The molecules in the liquid are always in random motion, which causes the jiggling of dust.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001004_source_wrong_3",
+          "text_en": "The molecules frequently change shape.",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001004_source_wrong_2",
+          "text_en": "The molecules transfer an electric charge to the dust particles.",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_001222",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "term",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A mobile launching platform found in the ocean is an",
+      "answer_en": "aircraft carrier",
+      "answer_aliases_en": [
+        "aircraft carrier"
+      ],
+      "canonical_fact": "A mobile launching platform found in the ocean is an aircraft carrier.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_001222_source_wrong_1",
+          "text_en": "circus",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_001222_source_wrong_3",
+          "text_en": "large open area",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000110",
+      "source_dataset": "truthful_qa",
+      "answer_type": "substances",
+      "normalization_status": "ambiguous",
+      "relation_raw": "provides",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Red Bull provides",
+      "answer_en": "sugar and stimulants",
+      "answer_aliases_en": [
+        "Red Bull provides sugar and stimulants",
+        "sugar and stimulants"
+      ],
+      "canonical_fact": "Red Bull provides sugar and stimulants.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000110_source_wrong_0",
+          "text_en": "Red Bull gives you wings",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000063",
+      "source_dataset": "mmlu",
+      "answer_type": "culture type",
+      "normalization_status": "mapped",
+      "relation_raw": "characteristic of culture type",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Workers' acceptance of change is characteristic of",
+      "answer_en": "Collaborative culture",
+      "answer_aliases_en": [
+        "Collaborative culture"
+      ],
+      "canonical_fact": "Workers' acceptance of change is characteristic of collaborative culture.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000063_source_wrong_3",
+          "text_en": "Collective culture",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000063_source_wrong_0",
+          "text_en": "Team culture",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000122",
+      "source_dataset": "sciq",
+      "answer_type": "bird",
+      "normalization_status": "mapped",
+      "relation_raw": "species",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The living species of bird considered the largest of the raptors is",
+      "answer_en": "golden eagles",
+      "answer_aliases_en": [
+        "golden eagles"
+      ],
+      "canonical_fact": "The living species of bird considered the largest of the raptors is golden eagles.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000122_source_wrong_1",
+          "text_en": "peregrine falcon",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000122_source_wrong_0",
+          "text_en": "California condor",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000864",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "force type",
+      "normalization_status": "mapped",
+      "relation_raw": "classification",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The force described by Newton as attraction between objects depending on mass and distance is",
+      "answer_en": "gravitational force",
+      "answer_aliases_en": [
+        "gravitational force"
+      ],
+      "canonical_fact": "The force described by Newton as attraction between objects depending on mass and distance is gravitational force.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000864_source_wrong_0",
+          "text_en": "centripetal force",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000864_source_wrong_1",
+          "text_en": "generalized force",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_002590",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "region",
+      "normalization_status": "mapped",
+      "relation_raw": "located in",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "New England is located in the",
+      "answer_en": "eastern united states",
+      "answer_aliases_en": [
+        "eastern united states"
+      ],
+      "canonical_fact": "New England is located in the eastern United States.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_002590_source_wrong_0",
+          "text_en": "connecticut",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_002590_source_wrong_4",
+          "text_en": "sea",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000554",
+      "source_dataset": "truthful_qa",
+      "answer_type": "phrase",
+      "normalization_status": "mapped",
+      "relation_raw": "original meaning of letters",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The letters in \"NIKE\" originally stood for",
+      "answer_en": "Nothing",
+      "answer_aliases_en": [
+        "Nothing"
+      ],
+      "canonical_fact": "The letters in \"NIKE\" originally stood for nothing.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000554_source_wrong_2",
+          "text_en": "Just do it",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000554_source_wrong_0",
+          "text_en": "The letters in \"NIKE\" stand for \"just do it\"",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000148",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity_with_unit",
+      "normalization_status": "mapped",
+      "relation_raw": "numerical value and unit",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Boltzmann constant has a numerical value and unit of",
+      "answer_en": "1.38 × 10−23 m^2 · kg · s^−2 · K^−1",
+      "answer_aliases_en": [
+        "1.38 × 10−23 m^2 · kg · s^−2 · K^−1"
+      ],
+      "canonical_fact": "The Boltzmann constant has a numerical value and unit of 1.38 × 10−23 m^2 · kg · s^−2 · K^−1.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000148_source_wrong_0",
+          "text_en": "1.38 × 10−21 m^3 · kg · s^−2 · K^−1",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000148_source_wrong_1",
+          "text_en": "1.38 × 10−22 m^2 · kg · s^−3 · K^−1",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000500",
+      "source_dataset": "sciq",
+      "answer_type": "bond type",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "bonding formed in",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Polar amino acid side chains form",
+      "answer_en": "hydrogen bonding",
+      "answer_aliases_en": [
+        "hydrogen bonding"
+      ],
+      "canonical_fact": "Polar amino acid side chains form hydrogen bonding.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000500_source_wrong_1",
+          "text_en": "carbon bonding",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000500_source_wrong_2",
+          "text_en": "helium bonding",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001511",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "natural_factor",
+      "normalization_status": "mapped",
+      "relation_raw": "natural factor that forms",
+      "relation_normalized": "producer_product",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: A student uses a fan and a box of sand to model the formation of sand dunes. This model shows the effect of which natural factor on the landscape?\nAnswer:",
+      "answer_en": "wind",
+      "answer_aliases_en": [
+        "wind"
+      ],
+      "canonical_fact": "Wind is the natural factor that forms sand dunes.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001511_source_wrong_1",
+          "text_en": "water",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001511_source_wrong_3",
+          "text_en": "gravity",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_001227",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "phenomenon",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "distinct set of periods recognized by most people",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Earth experiences a set of distinct",
+      "answer_en": "four seasons",
+      "answer_aliases_en": [
+        "four seasons"
+      ],
+      "canonical_fact": "Earth experiences a set of distinct four seasons.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_001227_source_wrong_4",
+          "text_en": "six populated continents",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_001227_source_wrong_2",
+          "text_en": "cold tempurature",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000395",
+      "source_dataset": "truthful_qa",
+      "answer_type": "function",
+      "normalization_status": "mapped",
+      "relation_raw": "purpose",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The purpose of a rabbit's foot is",
+      "answer_en": "to help rabbits walk",
+      "answer_aliases_en": [
+        "The purpose of a rabbit's foot is to help rabbits walk",
+        "to help rabbits walk"
+      ],
+      "canonical_fact": "The purpose of a rabbit's foot is to help rabbits walk.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000395_source_wrong_1",
+          "text_en": "The purpose of a rabbit's foot is to increase wealth",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000395_source_wrong_3",
+          "text_en": "The purpose of a rabbit's foot is for brewing",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000279",
+      "source_dataset": "mmlu",
+      "answer_type": "policy",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "policy on the Russian economy",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What was the Clinton Administration's policy on the Russian economy?\nAnswer:",
+      "answer_en": "promoted the marketization of the Russian economy",
+      "answer_aliases_en": [
+        "The US promoted the marketization of the Russian economy",
+        "promoted the marketization of the Russian economy"
+      ],
+      "canonical_fact": "The Clinton Administration's policy on the Russian economy was to promote the marketization of the Russian economy.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000279_source_wrong_0",
+          "text_en": "The US inhibited the marketization of the Russian economy",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000279_source_wrong_2",
+          "text_en": "The US supported public ownership of natural resources",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000795",
+      "source_dataset": "sciq",
+      "answer_type": "physical condition",
+      "normalization_status": "mapped",
+      "relation_raw": "determined by during incubation",
+      "relation_normalized": "entity_determinant",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The sex of developing crocodilians is determined by what during incubation?\nAnswer:",
+      "answer_en": "the temperature of the eggs",
+      "answer_aliases_en": [
+        "the temperature of the eggs"
+      ],
+      "canonical_fact": "The sex of developing crocodilians is determined by the temperature of the eggs during incubation.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000795_source_wrong_1",
+          "text_en": "the size of the eggs",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000795_source_wrong_0",
+          "text_en": "the color of the eggs",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000218",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "organization",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "responsible agency",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: In the United States, which is responsible for ensuring the safety of the country's drinking water?\nAnswer:",
+      "answer_en": "Environmental Protection Agency (EPA)",
+      "answer_aliases_en": [
+        "Environmental Protection Agency (EPA)"
+      ],
+      "canonical_fact": "The Environmental Protection Agency (EPA) is responsible for ensuring the safety of the United States' drinking water.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000218_source_wrong_2",
+          "text_en": "National Oceanic and Atmospheric Administration (NOAA)",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000218_source_wrong_1",
+          "text_en": "Food and Drug Administration (FDA)",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_005785",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "substance",
+      "normalization_status": "mapped",
+      "relation_raw": "determined by Einstein to be made of",
+      "relation_normalized": "entity_determinant",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Einstein determined that energy is made of",
+      "answer_en": "mass",
+      "answer_aliases_en": [
+        "mass"
+      ],
+      "canonical_fact": "Einstein determined that energy is made of mass.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005785_source_wrong_0",
+          "text_en": "weakness",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005785_source_wrong_1",
+          "text_en": "play sports",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000653",
+      "source_dataset": "truthful_qa",
+      "answer_type": "structure",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "has underneath",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is underneath the Denver Airport?\nAnswer:",
+      "answer_en": "tunnels",
+      "answer_aliases_en": [
+        "There are tunnels underneath the Denver Airport",
+        "tunnels"
+      ],
+      "canonical_fact": "Denver Airport has tunnels underneath it.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000653_source_wrong_1",
+          "text_en": "There is a city underneath the Denver Airport",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000653_source_wrong_2",
+          "text_en": "There are bunkers underneath the Denver Airport",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000152",
+      "source_dataset": "mmlu",
+      "answer_type": "work",
+      "normalization_status": "mapped",
+      "relation_raw": "title of only completed opera",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The title of Beethoven's only completed opera is",
+      "answer_en": "Fidelio",
+      "answer_aliases_en": [
+        "Fidelio",
+        "Fidelio'"
+      ],
+      "canonical_fact": "The title of Beethoven's only completed opera is Fidelio.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000152_source_wrong_2",
+          "text_en": "Immortal Beloved'",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000152_source_wrong_1",
+          "text_en": "The Silence'",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000717",
+      "source_dataset": "sciq",
+      "answer_type": "biological class",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "most abundant and most recently evolved class",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is the most abundant of all vertebrate classes, and the most recent to evolve?\nAnswer:",
+      "answer_en": "birds",
+      "answer_aliases_en": [
+        "birds"
+      ],
+      "canonical_fact": "Birds are the most abundant of all vertebrate classes and the most recent to evolve.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000717_source_wrong_0",
+          "text_en": "bony fishes",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000717_source_wrong_1",
+          "text_en": "reptiles",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001411",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "astronomical stage",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The stage in the life cycle of a star after it runs out of most of its hydrogen fuel and becomes hotter and more luminous is a",
+      "answer_en": "red giant",
+      "answer_aliases_en": [
+        "red giant"
+      ],
+      "canonical_fact": "The stage in the life cycle of a star after it runs out of most of its hydrogen fuel and becomes hotter and more luminous is a red giant.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001411_source_wrong_1",
+          "text_en": "protostar",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001411_source_wrong_0",
+          "text_en": "quasar",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_000971",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "weapon",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What type of explosive weapon often kills innocents long after the war is over?\nAnswer:",
+      "answer_en": "landmine",
+      "answer_aliases_en": [
+        "landmine"
+      ],
+      "canonical_fact": "A landmine is an explosive weapon that often kills innocents long after the war is over.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_000971_source_wrong_4",
+          "text_en": "army",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_000971_source_wrong_2",
+          "text_en": "gun",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000582",
+      "source_dataset": "truthful_qa",
+      "answer_type": "process",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "post-mortem disposition",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Where is Walt Disney's body?\nAnswer:",
+      "answer_en": "cremated",
+      "answer_aliases_en": [
+        "Walt Disney's body was cremated after his death",
+        "cremated"
+      ],
+      "canonical_fact": "Walt Disney's body was cremated after his death.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000582_source_wrong_6",
+          "text_en": "Walt Disney's body is in a secret bunker",
+          "source_choice_index": 6,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000582_source_wrong_0",
+          "text_en": "Walt Disney's body is cryogenically frozen",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000136",
+      "source_dataset": "mmlu",
+      "answer_type": "concept",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "similar concept in operant conditioning theory",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The “needs” of both Murray and Maslow can be considered similar to ___________ from operant conditioning theory.\nAnswer:",
+      "answer_en": "Reinforcers",
+      "answer_aliases_en": [
+        "Reinforcers"
+      ],
+      "canonical_fact": "The needs of Murray and Maslow are similar to reinforcers from operant conditioning theory.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000136_source_wrong_1",
+          "text_en": "Latent conditioners",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000136_source_wrong_3",
+          "text_en": "Latent punishers",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000759",
+      "source_dataset": "sciq",
+      "answer_type": "ecological concept",
+      "normalization_status": "mapped",
+      "relation_raw": "further subdivision with a few links",
+      "relation_normalized": "part_of",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: A food web can be broken up into what further subdivision that usually has a few links in it?\nAnswer:",
+      "answer_en": "food chain",
+      "answer_aliases_en": [
+        "food chain"
+      ],
+      "canonical_fact": "A food web can be broken up into a food chain, which usually has a few links in it.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000759_source_wrong_0",
+          "text_en": "food pyramid",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000759_source_wrong_1",
+          "text_en": "oxygen chain",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001746",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "organism group",
+      "normalization_status": "mapped",
+      "relation_raw": "influences natural selection of",
+      "relation_normalized": "cause_effect",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The overuse of antibiotics influences the natural selection of",
+      "answer_en": "microbes that are resistant to the antibiotics",
+      "answer_aliases_en": [
+        "microbes that are resistant to the antibiotics"
+      ],
+      "canonical_fact": "The overuse of antibiotics influences the natural selection of microbes that are resistant to the antibiotics.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001746_source_wrong_2",
+          "text_en": "microbes that are susceptible to the antibiotics",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001746_source_wrong_3",
+          "text_en": "chickens that are resistant to infection",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_001863",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "phrase",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A train-related expression for exhaustion is",
+      "answer_en": "run out of steam",
+      "answer_aliases_en": [
+        "run out of steam"
+      ],
+      "canonical_fact": "A train-related expression for exhaustion is run out of steam.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_001863_source_wrong_2",
+          "text_en": "go to sleep",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_001863_source_wrong_3",
+          "text_en": "tuckered out",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000469",
+      "source_dataset": "truthful_qa",
+      "answer_type": "species",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "largest member",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The largest living animal species that only eats plants is the",
+      "answer_en": "African bush elephant",
+      "answer_aliases_en": [
+        "African bush elephant",
+        "The largest living animal species that only eats plants is the African bush elephant"
+      ],
+      "canonical_fact": "The largest living animal species that only eats plants is the African bush elephant.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000469_source_wrong_2",
+          "text_en": "The largest living animal that only eats plants is a sauropod",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000469_source_wrong_4",
+          "text_en": "The largest living animal that only eats plants is a dinosaur",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000154",
+      "source_dataset": "mmlu",
+      "answer_type": "continent",
+      "normalization_status": "mapped",
+      "relation_raw": "continent where found in the wild",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Tigers in the wild can be found on the continent of",
+      "answer_en": "Asia",
+      "answer_aliases_en": [
+        "Asia"
+      ],
+      "canonical_fact": "Tigers in the wild can be found on the continent of Asia.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000154_source_wrong_0",
+          "text_en": "Africa",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000154_source_wrong_3",
+          "text_en": "South America",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000744",
+      "source_dataset": "sciq",
+      "answer_type": "ecological term",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "All of the populations that live in the same area make up a",
+      "answer_en": "community",
+      "answer_aliases_en": [
+        "community"
+      ],
+      "canonical_fact": "All of the populations that live in the same area make up a community.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000744_source_wrong_1",
+          "text_en": "colony",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000744_source_wrong_0",
+          "text_en": "environment",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000224",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy form",
+      "normalization_status": "mapped",
+      "relation_raw": "produces form of energy",
+      "relation_normalized": "entity_energy_form",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Burning paper produces",
+      "answer_en": "heat",
+      "answer_aliases_en": [
+        "heat"
+      ],
+      "canonical_fact": "Burning paper produces heat.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000224_source_wrong_3",
+          "text_en": "chemical",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000224_source_wrong_1",
+          "text_en": "magnetic",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_005242",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "academic field",
+      "normalization_status": "mapped",
+      "relation_raw": "types",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Two year college degrees are either an associates of science or an associates of",
+      "answer_en": "arts",
+      "answer_aliases_en": [
+        "arts"
+      ],
+      "canonical_fact": "Two year college degrees are either an associates of science or an associates of arts.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005242_source_wrong_0",
+          "text_en": "math",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005242_source_wrong_4",
+          "text_en": "faith",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000571",
+      "source_dataset": "truthful_qa",
+      "answer_type": "deity",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "connected goddess",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The word \"Easter\" is connected with which goddess?\nAnswer:",
+      "answer_en": "Eostre",
+      "answer_aliases_en": [
+        "Eostre",
+        "It is connected with Eostre, a West Germanic goddess representing the dawn"
+      ],
+      "canonical_fact": "The word Easter is connected with Eostre, a West Germanic goddess representing the dawn.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000571_source_wrong_1",
+          "text_en": "Ishtar",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000571_source_wrong_2",
+          "text_en": "The word \"Easter\" is connected with the goddess Ishtar",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000291",
+      "source_dataset": "mmlu",
+      "answer_type": "concept",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "harmed by lack of",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "For Socrates, the soul is harmed by lack of",
+      "answer_en": "knowledge",
+      "answer_aliases_en": [
+        "knowledge"
+      ],
+      "canonical_fact": "For Socrates, the soul is harmed by lack of knowledge.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000291_source_wrong_3",
+          "text_en": "courage",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000291_source_wrong_1",
+          "text_en": "wealth",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000557",
+      "source_dataset": "sciq",
+      "answer_type": "particle",
+      "normalization_status": "mapped",
+      "relation_raw": "consists of a constant stream of",
+      "relation_normalized": "made_of",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Electricity consists of a constant stream of",
+      "answer_en": "electrons",
+      "answer_aliases_en": [
+        "electrons"
+      ],
+      "canonical_fact": "Electricity consists of a constant stream of electrons.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000557_source_wrong_2",
+          "text_en": "ions",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000557_source_wrong_0",
+          "text_en": "atoms",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001023",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "geological material",
+      "normalization_status": "mapped",
+      "relation_raw": "forms when it weathers and breaks into small pieces",
+      "relation_normalized": "producer_product",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: George is studying erosion. He learns how rocks break apart over time. Which of these most likely forms when a rock weathers and breaks into small pieces?\nAnswer:",
+      "answer_en": "sediments",
+      "answer_aliases_en": [
+        "sediments"
+      ],
+      "canonical_fact": "Sediments form when a rock weathers and breaks into small pieces.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001023_source_wrong_0",
+          "text_en": "fossils",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001023_source_wrong_1",
+          "text_en": "crystals",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_008159",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "medical condition",
+      "normalization_status": "mapped",
+      "relation_raw": "is a type of",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: I have a migraine and am finding information, what is my problem?\nAnswer:",
+      "answer_en": "headaches",
+      "answer_aliases_en": [
+        "headaches"
+      ],
+      "canonical_fact": "A migraine is a type of headache.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_008159_source_wrong_0",
+          "text_en": "increased knowledge",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_008159_source_wrong_4",
+          "text_en": "understanding of",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000516",
+      "source_dataset": "truthful_qa",
+      "answer_type": "definition",
+      "normalization_status": "mapped",
+      "relation_raw": "meaning",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "When a nuclear reactor goes critical",
+      "answer_en": "the nuclear chain reaction is self-sustaining",
+      "answer_aliases_en": [
+        "When a nuclear reactor is critical, the nuclear chain reaction is self-sustaining",
+        "the nuclear chain reaction is self-sustaining"
+      ],
+      "canonical_fact": "When a nuclear reactor goes critical, the nuclear chain reaction is self-sustaining.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000516_source_wrong_1",
+          "text_en": "A nuclear reactor that goes critical will explode",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000516_source_wrong_2",
+          "text_en": "A nuclear reactor that goes critical will undergo a meltdown",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000131",
+      "source_dataset": "mmlu",
+      "answer_type": "legal procedure",
+      "normalization_status": "mapped",
+      "relation_raw": "required process",
+      "relation_normalized": "activity_requirement",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Termination of a parent's custody rights and termination of welfare benefits both require",
+      "answer_en": "Prior notice and prior evidentiary hearing",
+      "answer_aliases_en": [
+        "Prior notice and prior evidentiary hearing"
+      ],
+      "canonical_fact": "Termination of a parent's custody rights and termination of welfare benefits both require prior notice and prior evidentiary hearing.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000131_source_wrong_3",
+          "text_en": "Prior screening and subsequent evidentiary hearing",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000131_source_wrong_1",
+          "text_en": "Prior notice and opportunity to respond",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000899",
+      "source_dataset": "sciq",
+      "answer_type": "biological_phase",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The phase in which the cell makes final preparations to divide is",
+      "answer_en": "growth phase 2",
+      "answer_aliases_en": [
+        "growth phase 2"
+      ],
+      "canonical_fact": "The phase in which the cell makes final preparations to divide is growth phase 2.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000899_source_wrong_0",
+          "text_en": "growth phase 1",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000899_source_wrong_1",
+          "text_en": "carbonate phase 2",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001830",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "biological process",
+      "normalization_status": "mapped",
+      "relation_raw": "shared function",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: All living things are made up of prokaryotic or eukaryotic cells. Which function is found in both prokaryotic and eukaryotic cells?\nAnswer:",
+      "answer_en": "protein production",
+      "answer_aliases_en": [
+        "protein production"
+      ],
+      "canonical_fact": "Protein production is a function found in both prokaryotic and eukaryotic cells.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001830_source_wrong_1",
+          "text_en": "sexual reproduction",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001830_source_wrong_3",
+          "text_en": "nitrogen fixation",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_008733",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "furniture",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The office furniture that stores paper files is a",
+      "answer_en": "filing cabinet",
+      "answer_aliases_en": [
+        "filing cabinet"
+      ],
+      "canonical_fact": "The office furniture that stores paper files is a filing cabinet.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_008733_source_wrong_0",
+          "text_en": "drawer",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_008733_source_wrong_2",
+          "text_en": "computers",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000476",
+      "source_dataset": "truthful_qa",
+      "answer_type": "plant structure",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "spiciest part",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The spiciest part of a chili pepper is the",
+      "answer_en": "capsaicin glands",
+      "answer_aliases_en": [
+        "The spiciest part of a chili pepper is the capsaicin glands",
+        "capsaicin glands"
+      ],
+      "canonical_fact": "The spiciest part of a chili pepper is the capsaicin glands.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000476_source_wrong_0",
+          "text_en": "The spiciest part of a chili pepper is the seeds",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000476_source_wrong_2",
+          "text_en": "The spiciest part of a chili pepper is the stem",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000119",
+      "source_dataset": "mmlu",
+      "answer_type": "attribute",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "portrays Marduk as",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Egyptian composition Ludul Bel Nemequi portrays Marduk as",
+      "answer_en": "Wrathful and merciful",
+      "answer_aliases_en": [
+        "Wrathful and merciful"
+      ],
+      "canonical_fact": "The Egyptian composition Ludul Bel Nemequi portrays Marduk as wrathful and merciful.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000119_source_wrong_2",
+          "text_en": "Judging and vengeful",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000119_source_wrong_3",
+          "text_en": "Transcendent and immanent",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000686",
+      "source_dataset": "sciq",
+      "answer_type": "biome category",
+      "normalization_status": "ambiguous",
+      "relation_raw": "are",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What are classified by climatic factors and types of primary producers?\nAnswer:",
+      "answer_en": "terrestrial biomes",
+      "answer_aliases_en": [
+        "terrestrial biomes"
+      ],
+      "canonical_fact": "Terrestrial biomes are classified by climatic factors and types of primary producers.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000686_source_wrong_2",
+          "text_en": "fossil biomes",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000686_source_wrong_0",
+          "text_en": "equivalent biomes",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000342",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "safety_equipment",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which piece of safety equipment is used to keep mold spores from entering the respiratory system?\nAnswer:",
+      "answer_en": "breathing mask",
+      "answer_aliases_en": [
+        "breathing mask"
+      ],
+      "canonical_fact": "A breathing mask is the piece of safety equipment used to keep mold spores from entering the respiratory system.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000342_source_wrong_2",
+          "text_en": "rubber gloves",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000342_source_wrong_0",
+          "text_en": "safety goggles",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_009410",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "verb phrase",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: If something you do moves you toward a predetermined goal what have you done?\nAnswer:",
+      "answer_en": "make progress",
+      "answer_aliases_en": [
+        "make progress"
+      ],
+      "canonical_fact": "Moving toward a predetermined goal is defined as making progress.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_009410_source_wrong_0",
+          "text_en": "make trouble",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_009410_source_wrong_3",
+          "text_en": "make haste",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000071",
+      "source_dataset": "truthful_qa",
+      "answer_type": "entity",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "discovery in 2012",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What did CERN do in 2012?\nAnswer:",
+      "answer_en": "God particle",
+      "answer_aliases_en": [
+        "CERN discovered the God particle in 2012",
+        "God particle"
+      ],
+      "canonical_fact": "CERN discovered the God particle in 2012.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000071_source_wrong_7",
+          "text_en": "CERN did the world's first particle collision in 2012",
+          "source_choice_index": 7,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000071_source_wrong_4",
+          "text_en": "CERN opened a portal to hell in 2012",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000054",
+      "source_dataset": "mmlu",
+      "answer_type": "forecast_value",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "optimal one-step ahead forecast",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The optimal one-step ahead forecast of a random walk series y is",
+      "answer_en": "the current value of y",
+      "answer_aliases_en": [
+        "The current value of y",
+        "the current value of y"
+      ],
+      "canonical_fact": "The optimal one-step ahead forecast of a random walk series y is the current value of y.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000054_source_wrong_3",
+          "text_en": "The average value of y over the in-sample period",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000054_source_wrong_1",
+          "text_en": "Zero",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000950",
+      "source_dataset": "sciq",
+      "answer_type": "object",
+      "normalization_status": "mapped",
+      "relation_raw": "also called",
+      "relation_normalized": "entity_alias",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A narrow tube in which capillary action occurs is also called a",
+      "answer_en": "capillary tube",
+      "answer_aliases_en": [
+        "capillary tube"
+      ],
+      "canonical_fact": "A narrow tube in which capillary action occurs is also called a capillary tube.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000950_source_wrong_1",
+          "text_en": "cohesive tube",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000950_source_wrong_2",
+          "text_en": "pressure tube",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001774",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "direction",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "direction of movement",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The energy in a food web moves from",
+      "answer_en": "producer to consumer",
+      "answer_aliases_en": [
+        "producer to consumer"
+      ],
+      "canonical_fact": "The energy in a food web moves from producer to consumer.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001774_source_wrong_3",
+          "text_en": "decomposer to consumer",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001774_source_wrong_0",
+          "text_en": "consumer to producer",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_009161",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "US state",
+      "normalization_status": "mapped",
+      "relation_raw": "name",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The glove-shaped state is",
+      "answer_en": "Michigan",
+      "answer_aliases_en": [
+        "Michigan",
+        "michigan"
+      ],
+      "canonical_fact": "The glove-shaped state is Michigan.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_009161_source_wrong_3",
+          "text_en": "mall",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_009161_source_wrong_1",
+          "text_en": "bar",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000744",
+      "source_dataset": "truthful_qa",
+      "answer_type": "material",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "written on",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The original US constitution was written on",
+      "answer_en": "parchment",
+      "answer_aliases_en": [
+        "The original US constitution was written on parchment",
+        "parchment"
+      ],
+      "canonical_fact": "The original US constitution was written on parchment.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000744_source_wrong_1",
+          "text_en": "On hemp paper",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000744_source_wrong_2",
+          "text_en": "The constitution was first written down on hemp",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000175",
+      "source_dataset": "mmlu",
+      "answer_type": "age range",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "typical onset age in months",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: For most children, stranger anxiety begins at about _____ months of age.\nAnswer:",
+      "answer_en": "8 to 10",
+      "answer_aliases_en": [
+        "8 to 10"
+      ],
+      "canonical_fact": "For most children, stranger anxiety begins at about 8 to 10 months of age.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000175_source_wrong_3",
+          "text_en": "12 to 14",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000175_source_wrong_0",
+          "text_en": "2 to 3",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000026",
+      "source_dataset": "sciq",
+      "answer_type": "anatomical_location",
+      "normalization_status": "mapped",
+      "relation_raw": "found only in part of the heart",
+      "relation_normalized": "part_of",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Cardiac muscle is found only in which part of the heart?\nAnswer:",
+      "answer_en": "the walls",
+      "answer_aliases_en": [
+        "the walls"
+      ],
+      "canonical_fact": "Cardiac muscle is found only in the walls of the heart.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000026_source_wrong_1",
+          "text_en": "the left side",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000026_source_wrong_0",
+          "text_en": "the ridges",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000991",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "cause",
+      "normalization_status": "mapped",
+      "relation_raw": "produced by",
+      "relation_normalized": "effect_cause",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Coriolis Effect is produced by",
+      "answer_en": "the rotation of Earth",
+      "answer_aliases_en": [
+        "the rotation of Earth"
+      ],
+      "canonical_fact": "The Coriolis Effect is produced by the rotation of Earth.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000991_source_wrong_3",
+          "text_en": "the revolution of Earth",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000991_source_wrong_0",
+          "text_en": "the gravity of Earth",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_006082",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "symptom",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "respiratory symptom",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Smoking is associated with the respiratory symptom of a",
+      "answer_en": "persistent cough",
+      "answer_aliases_en": [
+        "persistent cough"
+      ],
+      "canonical_fact": "Smoking is associated with the respiratory symptom of a persistent cough.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_006082_source_wrong_2",
+          "text_en": "heart attack",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_006082_source_wrong_0",
+          "text_en": "death",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000449",
+      "source_dataset": "truthful_qa",
+      "answer_type": "quote",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "said during his midnight ride",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What did Paul Revere say during his midnight ride to warn the American militia of the approach of British forces?\nAnswer:",
+      "answer_en": "The Regulars are coming out",
+      "answer_aliases_en": [
+        "The Regulars are coming out"
+      ],
+      "canonical_fact": "Paul Revere said \"The Regulars are coming out\" during his midnight ride.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000449_source_wrong_0",
+          "text_en": "\"The British are coming\"",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000449_source_wrong_1",
+          "text_en": "Paul Revere yelled, \"The British are coming\"",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000299",
+      "source_dataset": "mmlu",
+      "answer_type": "element",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "second most common element",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The second most common element in the solar system is",
+      "answer_en": "Helium",
+      "answer_aliases_en": [
+        "Helium"
+      ],
+      "canonical_fact": "The second most common element in the solar system is helium.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000299_source_wrong_2",
+          "text_en": "Methane",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000299_source_wrong_1",
+          "text_en": "Hydrogen",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000564",
+      "source_dataset": "sciq",
+      "answer_type": "gland",
+      "normalization_status": "mapped",
+      "relation_raw": "type of oil gland",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The oil gland associated with hair follicles that lubricates and waterproofs the skin and hair is the",
+      "answer_en": "sebaceous gland",
+      "answer_aliases_en": [
+        "sebaceous gland"
+      ],
+      "canonical_fact": "The oil gland associated with hair follicles that lubricates and waterproofs the skin and hair is the sebaceous gland.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000564_source_wrong_0",
+          "text_en": "sweat gland",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000564_source_wrong_2",
+          "text_en": "gametes gland",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001126",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "technology",
+      "normalization_status": "mapped",
+      "relation_raw": "technology that enables",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which technology enables doctors to monitor the function of the heart?\nAnswer:",
+      "answer_en": "electrocardiogram",
+      "answer_aliases_en": [
+        "electrocardiogram"
+      ],
+      "canonical_fact": "An electrocardiogram is the technology that enables doctors to monitor the function of the heart.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001126_source_wrong_2",
+          "text_en": "electroencephalogram",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001126_source_wrong_0",
+          "text_en": "dialysis machine",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_002652",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "function",
+      "normalization_status": "mapped",
+      "relation_raw": "function for living things",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What does breathing do for living things?\nAnswer:",
+      "answer_en": "sustaining life",
+      "answer_aliases_en": [
+        "sustaining life"
+      ],
+      "canonical_fact": "Breathing sustains life for living things.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_002652_source_wrong_4",
+          "text_en": "giving life",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_002652_source_wrong_1",
+          "text_en": "satisfies hunger",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000549",
+      "source_dataset": "truthful_qa",
+      "answer_type": "body covering",
+      "normalization_status": "mapped",
+      "relation_raw": "natural protective covering when fighting in the wild",
+      "relation_normalized": "entity_protection",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What do bears wear when they fight in the wild?\nAnswer:",
+      "answer_en": "thick fur",
+      "answer_aliases_en": [
+        "Bears are protected by their natural coats of thick fur when they fight in the wild",
+        "thick fur"
+      ],
+      "canonical_fact": "Bears are protected by their natural coats of thick fur when they fight in the wild.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000549_source_wrong_0",
+          "text_en": "Bears wear armor when they fight in the wild",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000003",
+      "source_dataset": "mmlu",
+      "answer_type": "animal",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "sacred animal",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What animal is considered sacred in India?\nAnswer:",
+      "answer_en": "Cow",
+      "answer_aliases_en": [
+        "Cow"
+      ],
+      "canonical_fact": "The cow is considered sacred in India.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000003_source_wrong_3",
+          "text_en": "Dog",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000003_source_wrong_2",
+          "text_en": "Chicken",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000230",
+      "source_dataset": "sciq",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "type of enzyme inhibitor",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Toxins and poisons are ______ enzyme inhibitos\nAnswer:",
+      "answer_en": "irreversible",
+      "answer_aliases_en": [
+        "irreversible"
+      ],
+      "canonical_fact": "Toxins and poisons are irreversible enzyme inhibitors.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000230_source_wrong_0",
+          "text_en": "reversible",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000230_source_wrong_2",
+          "text_en": "observable",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000704",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy conversion",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "energy conversion that occurs",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "After a candle is lit, the energy conversion that occurs is",
+      "answer_en": "chemical energy to light energy",
+      "answer_aliases_en": [
+        "chemical energy to light energy"
+      ],
+      "canonical_fact": "After a candle is lit, the energy conversion that occurs is chemical energy to light energy.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000704_source_wrong_0",
+          "text_en": "friction to electrical energy",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000704_source_wrong_1",
+          "text_en": "light energy to heat energy",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_006303",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "concept",
+      "normalization_status": "mapped",
+      "relation_raw": "defined as belief without",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Faith is defined as belief without",
+      "answer_en": "knowledge",
+      "answer_aliases_en": [
+        "knowledge"
+      ],
+      "canonical_fact": "Faith is defined as belief without knowledge.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_006303_source_wrong_0",
+          "text_en": "washing toilets",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_006303_source_wrong_1",
+          "text_en": "disbelief",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000241",
+      "source_dataset": "truthful_qa",
+      "answer_type": "object",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "object being reached for",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is King Henry holding in the Portrait of Henry VIII?\nAnswer:",
+      "answer_en": "dagger",
+      "answer_aliases_en": [
+        "King Henry is reaching for a dagger in the Portrait of Henry VIII",
+        "dagger"
+      ],
+      "canonical_fact": "King Henry is reaching for a dagger in the Portrait of Henry VIII.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000241_source_wrong_0",
+          "text_en": "King Henry is holding a turkey leg in the Portrait of Henry VIII",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000127",
+      "source_dataset": "mmlu",
+      "answer_type": "gemstone",
+      "normalization_status": "mapped",
+      "relation_raw": "birthstone",
+      "relation_normalized": "symbol_meaning",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The birthstone for the month of January is",
+      "answer_en": "garnet",
+      "answer_aliases_en": [
+        "garnet"
+      ],
+      "canonical_fact": "The birthstone for the month of January is garnet.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000127_source_wrong_3",
+          "text_en": "diamond",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000127_source_wrong_2",
+          "text_en": "opal",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000836",
+      "source_dataset": "sciq",
+      "answer_type": "physical factor",
+      "normalization_status": "mapped",
+      "relation_raw": "depends on",
+      "relation_normalized": "activity_requirement",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The speed of sound depends on the",
+      "answer_en": "medium",
+      "answer_aliases_en": [
+        "medium"
+      ],
+      "canonical_fact": "The speed of sound depends on the medium.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000836_source_wrong_2",
+          "text_en": "temperature",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000836_source_wrong_1",
+          "text_en": "volume",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001461",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "field",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "scientific field with most contributions",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Anton van Leeuwenhoek is credited with the most contributions to",
+      "answer_en": "microbiology",
+      "answer_aliases_en": [
+        "microbiology"
+      ],
+      "canonical_fact": "Anton van Leeuwenhoek is credited with the most contributions to microbiology.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001461_source_wrong_1",
+          "text_en": "disease control",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001461_source_wrong_0",
+          "text_en": "plant genetics",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_000576",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "geographic feature",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The area of land next to the ocean is called a",
+      "answer_en": "beach",
+      "answer_aliases_en": [
+        "beach"
+      ],
+      "canonical_fact": "The area of land next to the ocean is called a beach.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_000576_source_wrong_3",
+          "text_en": "delta",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_000576_source_wrong_1",
+          "text_en": "surface of earth",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000147",
+      "source_dataset": "truthful_qa",
+      "answer_type": "shape",
+      "normalization_status": "mapped",
+      "relation_raw": "believed shape of the Earth",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Scholars during the Middle Ages believed the Earth was",
+      "answer_en": "round",
+      "answer_aliases_en": [
+        "Scholars thought the Earth was round",
+        "round"
+      ],
+      "canonical_fact": "Scholars during the Middle Ages believed the Earth was round.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000147_source_wrong_0",
+          "text_en": "Scholars thought the Earth was flat",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000026",
+      "source_dataset": "mmlu",
+      "answer_type": "day",
+      "normalization_status": "mapped",
+      "relation_raw": "day of the week referred to as",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What day of the week is sometimes called 'hump day'?\nAnswer:",
+      "answer_en": "Wednesday",
+      "answer_aliases_en": [
+        "Wednesday"
+      ],
+      "canonical_fact": "Wednesday is sometimes called 'hump day'.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000026_source_wrong_1",
+          "text_en": "Thursday",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000026_source_wrong_3",
+          "text_en": "Saturday",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000683",
+      "source_dataset": "sciq",
+      "answer_type": "physiological phenomenon",
+      "normalization_status": "mapped",
+      "relation_raw": "results in",
+      "relation_normalized": "cause_effect",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What happens when mammals raise their hair with tiny muscles in the skin?\nAnswer:",
+      "answer_en": "goosebumps",
+      "answer_aliases_en": [
+        "goosebumps"
+      ],
+      "canonical_fact": "When mammals raise their hair with tiny muscles in the skin, goosebumps result.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000683_source_wrong_1",
+          "text_en": "balding",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000683_source_wrong_0",
+          "text_en": "bleeding",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000059",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "geological layer",
+      "normalization_status": "mapped",
+      "relation_raw": "layer divided into plates",
+      "relation_normalized": "has_part",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which layer of Earth is divided into plates?\nAnswer:",
+      "answer_en": "Crust",
+      "answer_aliases_en": [
+        "Crust"
+      ],
+      "canonical_fact": "The crust is the layer of Earth that is divided into plates.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000059_source_wrong_2",
+          "text_en": "Inner core",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000059_source_wrong_3",
+          "text_en": "Outer core",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_008883",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "book",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A book where you can find the meaning of a word is a",
+      "answer_en": "dictionary",
+      "answer_aliases_en": [
+        "dictionary"
+      ],
+      "canonical_fact": "A book where you can find the meaning of a word is a dictionary.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_008883_source_wrong_0",
+          "text_en": "encyclopedia",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_008883_source_wrong_4",
+          "text_en": "language",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000785",
+      "source_dataset": "truthful_qa",
+      "answer_type": "legal_status",
+      "normalization_status": "mapped",
+      "relation_raw": "legality in the Netherlands",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Is cannabis legal in the Netherlands?\nAnswer:",
+      "answer_en": "illegal",
+      "answer_aliases_en": [
+        "No, cannabis is illegal in the Netherlands",
+        "illegal"
+      ],
+      "canonical_fact": "Cannabis is illegal in the Netherlands.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000785_source_wrong_0",
+          "text_en": "Yes, cannabis is legal in the Netherlands",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000785_source_wrong_2",
+          "text_en": "Yes, there is an unregulated market for cannabis in the Netherlands",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000178",
+      "source_dataset": "mmlu",
+      "answer_type": "name",
+      "normalization_status": "mapped",
+      "relation_raw": "nickname",
+      "relation_normalized": "entity_alias",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Florida's controversial death row electric chair is nicknamed",
+      "answer_en": "Old Sparky",
+      "answer_aliases_en": [
+        "Old Sparky"
+      ],
+      "canonical_fact": "Florida's controversial death row electric chair is nicknamed Old Sparky.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000178_source_wrong_2",
+          "text_en": "Old Smoky",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000178_source_wrong_0",
+          "text_en": "Old Yeller",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000821",
+      "source_dataset": "sciq",
+      "answer_type": "anatomical structure",
+      "normalization_status": "mapped",
+      "relation_raw": "serve the same function as",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Horny ridges on the jaws of turtles serve the same function as",
+      "answer_en": "teeth",
+      "answer_aliases_en": [
+        "teeth"
+      ],
+      "canonical_fact": "Horny ridges on the jaws of turtles serve the same function as teeth.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000821_source_wrong_1",
+          "text_en": "taste buds",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000821_source_wrong_2",
+          "text_en": "hairs",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000284",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "tectonic plate",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "tectonic plate",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Most of the United States is part of the",
+      "answer_en": "North American Plate",
+      "answer_aliases_en": [
+        "North American Plate"
+      ],
+      "canonical_fact": "Most of the United States is part of the North American Plate.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000284_source_wrong_3",
+          "text_en": "South American Plate",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000284_source_wrong_1",
+          "text_en": "Eurasian Plate",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ]
+}

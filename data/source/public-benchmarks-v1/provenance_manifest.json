@@ -1,0 +1,142 @@
+{
+  "manifest_version": "public-benchmark-import-v1",
+  "created_at": "2026-09-09T16:11:37.395802+00:00",
+  "catalog_path": "configs/public_benchmark_sources_v1.json",
+  "catalog_sha256": "8b923c14c055a2975427fad276ef8326638e744de52e301fae6839b4f4557651",
+  "seed": 20260909,
+  "records_per_source": 10,
+  "total_selected_count": 40,
+  "sources": {
+    "global_mmlu": {
+      "repository": "https://huggingface.co/datasets/CohereLabs/Global-MMLU",
+      "revision": "0e619dbeb34206cd48705a1a0ea7fb21cae09993",
+      "retrieval_url": "https://datasets-server.huggingface.co/rows",
+      "license": "Apache-2.0",
+      "retrieval_kind": "huggingface_datasets_server_rows",
+      "retrieved_payload_sha256": "c839299c1d980aa4ba7ad18a4effb11bce53495d886f68c56163950f6283e0ee",
+      "selected_row_indices": [
+        157,
+        4327,
+        4597,
+        6045,
+        7297,
+        7853,
+        10070,
+        10149,
+        11144,
+        11545
+      ],
+      "eligibility_scope": "selected_rows_only",
+      "upstream_record_count": 14042,
+      "eligible_record_count": null,
+      "exclusions": {},
+      "normalization_scope": "selected_rows",
+      "normalized_records_sha256": "2c47f9ec465139a06aaf8e84085bc500009708bfaf6608a4165970b5314892ca",
+      "selected_count": 10,
+      "selected_upstream_ids": [
+        "anatomy/test/57",
+        "high_school_mathematics/test/99",
+        "high_school_microeconomics/test/99",
+        "high_school_world_history/test/193",
+        "medical_genetics/test/13",
+        "miscellaneous/test/469",
+        "prehistory/test/45",
+        "prehistory/test/124",
+        "professional_law/test/513",
+        "professional_law/test/914"
+      ],
+      "output_path": "data/source/public-benchmarks-v1/global_mmlu.json",
+      "output_sha256": "7574ddf48846cce363f715f76b59b8634b8d4663324ef849d0448334a4b35c44"
+    },
+    "mkqa": {
+      "repository": "https://github.com/apple/ml-mkqa",
+      "revision": "651b8cc85c407270b024157aff06ee6ab8c4fc6d",
+      "retrieval_url": "https://raw.githubusercontent.com/apple/ml-mkqa/651b8cc85c407270b024157aff06ee6ab8c4fc6d/dataset/mkqa.jsonl.gz",
+      "license": "CC-BY-SA-3.0",
+      "retrieval_kind": "direct_file",
+      "download_sha256": "f77ac6bf6306e98816c5c047880db71a3c67d2f1491b169896d63e9bb14ef3d3",
+      "upstream_record_count": 10000,
+      "eligible_record_count": 6620,
+      "exclusions": {
+        "answer_type:binary": 138,
+        "answer_type:long_answer": 1815,
+        "answer_type:unanswerable": 1427
+      },
+      "normalization_scope": "all_upstream_records",
+      "normalized_records_sha256": "e828b271c8809bb68dec323059999545aa1c8dac95d5d885e4857f48febced83",
+      "selected_count": 10,
+      "selected_upstream_ids": [
+        "3317714975739547118",
+        "3866472123646407950",
+        "2165727753477382226",
+        "7054066377574421508",
+        "3036072595999208897",
+        "-1185129645816876391",
+        "1529347612060466891",
+        "178875795584768999",
+        "-8340660575163494327",
+        "-8694222390417470794"
+      ],
+      "output_path": "data/source/public-benchmarks-v1/mkqa.json",
+      "output_sha256": "20597011aa487c4ca0904aff82a76717cc3058e460976c093e87582424cfcafa"
+    },
+    "msqa_en": {
+      "repository": "https://huggingface.co/datasets/m-a-p/MSQA",
+      "revision": "3e33ce30d17462fe4513d649eec714cce65053cf",
+      "retrieval_url": "https://huggingface.co/datasets/m-a-p/MSQA/resolve/3e33ce30d17462fe4513d649eec714cce65053cf/msqa.jsonl",
+      "license": "CC-BY-4.0",
+      "retrieval_kind": "direct_file",
+      "download_sha256": "9b2240d76482fe63889510778f71dc90a65d54e20b1a0eadc04147fe0524347e",
+      "upstream_record_count": 1064,
+      "eligible_record_count": 151,
+      "exclusions": {
+        "non_target_language": 913
+      },
+      "normalization_scope": "all_upstream_records",
+      "normalized_records_sha256": "be3c2314e2653946b63726b4440919b12b943de2977c1f999103b4e0338aa2aa",
+      "selected_count": 10,
+      "selected_upstream_ids": [
+        "EN-24",
+        "EN-83",
+        "EN-13",
+        "EN-43",
+        "EN-47",
+        "EN-71",
+        "EN-88",
+        "EN-16",
+        "EN-36",
+        "EN-64"
+      ],
+      "output_path": "data/source/public-benchmarks-v1/msqa_en.json",
+      "output_sha256": "ecfc1eb7c115bc12fe229fae7507209cc16c0084bf871ee2afd6715560f7ce03"
+    },
+    "openbookqa": {
+      "repository": "https://github.com/allenai/OpenBookQA",
+      "revision": "b51971646e9371a61508d9953fc706645e194a71",
+      "retrieval_url": "https://ai2-public-datasets.s3.amazonaws.com/open-book-qa/OpenBookQA-V1-Sep2018.zip",
+      "license": "Apache-2.0",
+      "retrieval_kind": "direct_file",
+      "download_sha256": "82368cf05df2e3b309c17d162e10b888b4d768fad6e171e0a041954c8553be46",
+      "upstream_record_count": 500,
+      "eligible_record_count": 500,
+      "exclusions": {},
+      "normalization_scope": "all_upstream_records",
+      "normalized_records_sha256": "3761eb38d21770023dfdce560e2fdf76e6afaa470f0cee84c326006ebe84daca",
+      "selected_count": 10,
+      "selected_upstream_ids": [
+        "676",
+        "1672",
+        "620",
+        "9-550",
+        "9-532",
+        "636",
+        "8-346",
+        "850",
+        "9-735",
+        "280"
+      ],
+      "output_path": "data/source/public-benchmarks-v1/openbookqa.json",
+      "output_sha256": "b6211d573c98fe05a35abd59a2600758797fa7bb3f6e5cce2b943fc47e4105a3"
+    }
+  }
+}

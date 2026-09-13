@@ -1,0 +1,336 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "calibration-10c-multi-upstream-v4",
+  "created_at": "2026-09-09T11:51:07.676038+00:00",
+  "config_version": "factual-perturbation-zh-multi-v4",
+  "config_sha256": "811988e6fd767971e4325626bdd6011febd8aefede227e93ba14589c4c936e67",
+  "runtime_sha256": "11701608328bd37ea670f7486a2b1649af66daf6864f69de36bc8d1643889c7c",
+  "config_amendments": [],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 10,
+  "selected_count": 10,
+  "excluded_source_count": 40,
+  "excluded_source_ids_sha256": "51436ffd7dff75fbe2ae475056be6f98748244a6a0bcab3c2dc506d380d353b2",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.5,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gpt-5-mini",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original"
+  ],
+  "neutral_context_mode": "matched_per_candidate",
+  "simulation_endpoint": "multi_option",
+  "simulation_max_options": 3,
+  "simulation_requires_codex_proxy_review": true,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_007118",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A person who knows how to read and write is",
+      "answer_en": "literate",
+      "answer_aliases_en": [
+        "literate"
+      ],
+      "canonical_fact": "A person who knows how to read and write is literate.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_007118_source_wrong_2",
+          "text_en": "have paper",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_007118_source_wrong_4",
+          "text_en": "creativity",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000429",
+      "source_dataset": "truthful_qa",
+      "answer_type": "boolean",
+      "normalization_status": "ambiguous",
+      "relation_raw": "echo",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Do duck quacks echo?\nAnswer:",
+      "answer_en": "Yes",
+      "answer_aliases_en": [
+        "Yes",
+        "Yes, although the echo may be difficult to hear"
+      ],
+      "canonical_fact": "Duck quacks echo, although the echo may be difficult to hear.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000429_source_wrong_0",
+          "text_en": "No, duck quacks don't echo",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000289",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "mapped",
+      "relation_raw": "number of sides including the bottom",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Including the bottom how many sides are on a square-based pyramid?\nAnswer:",
+      "answer_en": "five",
+      "answer_aliases_en": [
+        "five"
+      ],
+      "canonical_fact": "A square-based pyramid has five sides including the bottom.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000289_source_wrong_3",
+          "text_en": "six",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000289_source_wrong_1",
+          "text_en": "four",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000295",
+      "source_dataset": "sciq",
+      "answer_type": "biological_process",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What begins with a diploid cell and ends with four haploid cells?\nAnswer:",
+      "answer_en": "meiosis",
+      "answer_aliases_en": [
+        "meiosis"
+      ],
+      "canonical_fact": "Meiosis is the cell division process that begins with a diploid cell and ends with four haploid cells.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000295_source_wrong_1",
+          "text_en": "mitosis",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000295_source_wrong_0",
+          "text_en": "electrolysis",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000434",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy_type",
+      "normalization_status": "mapped",
+      "relation_raw": "type of energy carried through",
+      "relation_normalized": "entity_energy_form",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which type of energy is carried through a metal cable?\nAnswer:",
+      "answer_en": "electrical",
+      "answer_aliases_en": [
+        "electrical"
+      ],
+      "canonical_fact": "A metal cable carries electrical energy.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000434_source_wrong_1",
+          "text_en": "chemical",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000434_source_wrong_3",
+          "text_en": "nuclear",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_004142",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "location",
+      "normalization_status": "mapped",
+      "relation_raw": "found in province",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Bald eagles can be found in the province of",
+      "answer_en": "British Columbia",
+      "answer_aliases_en": [
+        "British Columbia",
+        "british columbia"
+      ],
+      "canonical_fact": "Bald eagles can be found in the province of British Columbia.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_004142_source_wrong_0",
+          "text_en": "utah",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_004142_source_wrong_3",
+          "text_en": "rocky mountains",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000678",
+      "source_dataset": "truthful_qa",
+      "answer_type": "language",
+      "normalization_status": "mapped",
+      "relation_raw": "etymological origin",
+      "relation_normalized": "entity_origin",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The word \"butterfly\" comes from",
+      "answer_en": "Old English",
+      "answer_aliases_en": [
+        "It comes from Old English",
+        "Old English"
+      ],
+      "canonical_fact": "The word \"butterfly\" comes from Old English.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000678_source_wrong_0",
+          "text_en": "The word \"butterfly\" comes from \"flutterby\"",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000678_source_wrong_1",
+          "text_en": "It comes from \"flutterby\" because of how they fly",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000145",
+      "source_dataset": "mmlu",
+      "answer_type": "person",
+      "normalization_status": "mapped",
+      "relation_raw": "attributed to",
+      "relation_normalized": "effect_cause",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Yoga Sutras are attributed to",
+      "answer_en": "Patanjali",
+      "answer_aliases_en": [
+        "Patanjali"
+      ],
+      "canonical_fact": "The Yoga Sutras are attributed to Patanjali.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000145_source_wrong_2",
+          "text_en": "Ramanuja",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000145_source_wrong_3",
+          "text_en": "Aryabhatta",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000809",
+      "source_dataset": "sciq",
+      "answer_type": "anatomical_structure",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "part that allows light to enter",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What part of the eye allows light to enter?\nAnswer:",
+      "answer_en": "pupil",
+      "answer_aliases_en": [
+        "pupil"
+      ],
+      "canonical_fact": "The pupil is the part of the eye that allows light to enter.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000809_source_wrong_2",
+          "text_en": "iris",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000809_source_wrong_0",
+          "text_en": "eyelid",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000402",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "information needed to differentiate",
+      "relation_normalized": "activity_requirement",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The information needed to differentiate between the speed and the velocity of a vehicle in motion is",
+      "answer_en": "the direction of the motion",
+      "answer_aliases_en": [
+        "the direction of the motion"
+      ],
+      "canonical_fact": "The information needed to differentiate between the speed and the velocity of a vehicle in motion is the direction of the motion.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000402_source_wrong_0",
+          "text_en": "the rate of the motion",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000402_source_wrong_2",
+          "text_en": "the change in the amount of motion",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ]
+}

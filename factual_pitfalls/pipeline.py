@@ -17,14 +17,27 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple, TypedDict
 
-from anthropic import (
-    APIConnectionError as AnthropicAPIConnectionError,
-    APIStatusError as AnthropicAPIStatusError,
-    APITimeoutError as AnthropicAPITimeoutError,
-    Anthropic,
-    Omit,
-    RateLimitError as AnthropicRateLimitError,
-)
+try:
+    from anthropic import (
+        APIConnectionError as AnthropicAPIConnectionError,
+        APIStatusError as AnthropicAPIStatusError,
+        APITimeoutError as AnthropicAPITimeoutError,
+        Anthropic,
+        Omit,
+        RateLimitError as AnthropicRateLimitError,
+    )
+except ImportError:  # Qwen-only runs do not require the optional Anthropic SDK.
+    class _AnthropicUnavailableError(Exception):
+        pass
+
+    AnthropicAPIConnectionError = _AnthropicUnavailableError
+    AnthropicAPIStatusError = _AnthropicUnavailableError
+    AnthropicAPITimeoutError = _AnthropicUnavailableError
+    AnthropicRateLimitError = _AnthropicUnavailableError
+    Anthropic = None
+
+    def Omit() -> None:
+        return None
 from dotenv import load_dotenv
 from openai import APIConnectionError, APIStatusError, APITimeoutError, OpenAI, RateLimitError
 
@@ -174,6 +187,15 @@ def validate_config(config: Dict[str, Any]) -> None:
     sources = config.get("source_datasets")
     if not isinstance(sources, dict) or not sources:
         raise ValueError("source_datasets must be a non-empty object")
+    deduplication_baselines = config.get("deduplicate_against", {})
+    if not isinstance(deduplication_baselines, dict) or not all(
+        isinstance(name, str)
+        and name.strip()
+        and isinstance(path, str)
+        and path.strip()
+        for name, path in deduplication_baselines.items()
+    ):
+        raise ValueError("deduplicate_against must be an object of dataset names to paths")
     raw_sample_size = config.get("raw_sample_size")
     if raw_sample_size != "all" and (not isinstance(raw_sample_size, int) or raw_sample_size <= 0):
         raise ValueError('raw_sample_size must be a positive integer or "all"')
@@ -218,6 +240,11 @@ def raw_schema_error(record: Any) -> Optional[str]:
     for field in ("question", "answer", "source"):
         if not isinstance(record.get(field), str) or not record[field].strip():
             return f"missing_or_empty_{field}"
+    if record.get("source_format") == "open_qa":
+        choices = record.get("choices")
+        if choices is not None and choices != []:
+            return "open_qa_choices_must_be_empty"
+        return None
     if not isinstance(record.get("choices"), list) or not record["choices"]:
         return "missing_or_empty_choices"
     if not all(isinstance(choice, str) and choice.strip() for choice in record["choices"]):
@@ -294,6 +321,32 @@ def build_raw_manifest(
     all_candidates: List[Dict[str, Any]] = []
     source_details: Dict[str, Any] = {}
     seen_questions: Dict[str, Tuple[str, int]] = {}
+    baseline_details: Dict[str, Any] = {}
+    for dataset, relative_path in config.get("deduplicate_against", {}).items():
+        source_path = (project_root / relative_path).resolve()
+        with source_path.open("r", encoding="utf-8") as handle:
+            records = json.load(handle)
+        if not isinstance(records, list):
+            raise ValueError(f"{source_path} must contain a JSON array")
+        valid_question_count = 0
+        duplicate_question_count = 0
+        for original_index, record in enumerate(records):
+            question = record.get("question") if isinstance(record, dict) else None
+            if not isinstance(question, str) or not question.strip():
+                continue
+            valid_question_count += 1
+            normalized = normalize_text(question)
+            if normalized in seen_questions:
+                duplicate_question_count += 1
+                continue
+            seen_questions[normalized] = (f"baseline:{dataset}", original_index)
+        baseline_details[dataset] = {
+            "source_path": str(source_path),
+            "source_fingerprint_sha256": file_fingerprint(source_path),
+            "source_record_count": len(records),
+            "valid_question_count": valid_question_count,
+            "duplicate_question_count": duplicate_question_count,
+        }
     for dataset, relative_path in config["source_datasets"].items():
         source_path = (project_root / relative_path).resolve()
         with source_path.open("r", encoding="utf-8") as handle:
@@ -405,6 +458,7 @@ def build_raw_manifest(
         "created_at": utc_now(),
         "sampling_config": {
             "source_datasets": copy.deepcopy(config["source_datasets"]),
+            "deduplicate_against": copy.deepcopy(config.get("deduplicate_against", {})),
             "raw_sample_size": config["raw_sample_size"],
             "seed": config["seed"],
             "sampling_strategy": config["sampling_strategy"],
@@ -422,6 +476,7 @@ def build_raw_manifest(
                 "strata": stratum_details,
             },
         },
+        "deduplication_baselines": baseline_details,
         "candidates": selected,
     }
 
@@ -744,6 +799,8 @@ def _load_environment(project_root: Path) -> None:
 def make_extraction_client(project_root: Path, timeout_seconds: float, model: str) -> Any:
     _load_environment(project_root)
     if model == "sensenova-6.7-flash-lite":
+        if Anthropic is None:
+            raise ImportError("anthropic is required for SenseNova triple extraction")
         api_key = os.getenv("SENSENOVA_API_KEY")
         if not api_key:
             raise ValueError("SENSENOVA_API_KEY is required for SenseNova triple extraction")
@@ -896,7 +953,7 @@ def _source_fields(candidate: Dict[str, Any]) -> Dict[str, Any]:
         "source_path": snapshot["source_path"],
         "source_original_index": snapshot["original_index"],
         "source_question": record["question"],
-        "source_choices": copy.deepcopy(record["choices"]),
+        "source_choices": copy.deepcopy(record.get("choices") or []),
         "source_answer": record["answer"],
     }
 
@@ -1164,7 +1221,7 @@ def extraction_summary(records: Iterable[Dict[str, Any]], model: str = TRIPLE_EX
 def apply_extraction_adjudications(
     records: Iterable[Dict[str, Any]], policy: Dict[str, Any], model: str
 ) -> List[Dict[str, Any]]:
-    """Apply explicit reviewed decisions to validation-failed extraction rows."""
+    """Apply explicit reviewed decisions to failed extraction rows."""
     if policy.get("adjudication_version") != "local-extraction-adjudication-v1":
         raise ValueError("invalid extraction adjudication version")
     if policy.get("model") != model:
@@ -1193,15 +1250,19 @@ def apply_extraction_adjudications(
         ):
             result.append(record)
             continue
-        if record.get("terminal_status") != "validation_failed":
-            raise ValueError(f"adjudication target is not validation_failed: {source_id}")
+        if record.get("terminal_status") not in {"extraction_failed", "validation_failed"}:
+            raise ValueError(f"adjudication target is not failed: {source_id}")
         prior = {
             "terminal_status": record.get("terminal_status"),
             "extraction_status": record.get("extraction_status"),
             "validation_errors": copy.deepcopy(record.get("validation_errors", [])),
+            "extraction_error": copy.deepcopy(record.get("extraction", {}).get("error")),
             "triple": {field: record.get(field) for field in TRIPLE_FIELDS},
         }
         action = decision.get("action")
+        confidence = decision.get("extraction_confidence", record.get("extraction_confidence"))
+        if confidence is None:
+            confidence = 1.0
         if action == "override_extracted":
             fields = decision.get("fields")
             if not isinstance(fields, dict) or set(fields) != set(TRIPLE_FIELDS):
@@ -1211,7 +1272,7 @@ def apply_extraction_adjudications(
                 "extraction_status": "extracted",
                 "exclusion_reason": None,
                 **copy.deepcopy(fields),
-                "extraction_confidence": record.get("extraction_confidence", 1.0),
+                "extraction_confidence": confidence,
             }
         elif action == "mark_not_extractable":
             parsed = {
@@ -1219,7 +1280,7 @@ def apply_extraction_adjudications(
                 "extraction_status": "not_extractable",
                 "exclusion_reason": decision.get("exclusion_reason"),
                 **{field: None for field in TRIPLE_FIELDS},
-                "extraction_confidence": record.get("extraction_confidence", 1.0),
+                "extraction_confidence": confidence,
             }
         else:
             raise ValueError(f"invalid extraction adjudication action: {source_id}")

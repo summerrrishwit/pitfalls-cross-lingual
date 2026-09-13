@@ -35,10 +35,13 @@ and MUST NOT be coerced into a broad label.
 - **THEN** the mapping records `codex_reviewed_unresolved`, a null `relation_normalized`, and an unresolved reason
 
 ### Requirement: Deterministic factual prompt generation
-The system SHALL generate prompts only for mapped canonical triples. It SHALL first attempt to
-remove a sentence-final answer from `canonical_fact` to create a strict completion stem. If this
-is impossible, it SHALL emit an option-free source-question open-answer fallback. Every prompt
-SHALL record its source, quality tier, expected answer, template ID, and version.
+The system SHALL determine prompt readiness from the accepted canonical fact and prompt
+validation, independently of relation-normalization status. Mapped, ambiguous, and
+out-of-taxonomy canonical triples SHALL all be eligible. It SHALL first attempt to remove a
+sentence-final answer from `canonical_fact` to create a strict completion stem. If this is
+impossible, it SHALL emit an option-free source-question open-answer fallback. Every prompt
+SHALL record its source, quality tier, expected answer, template ID, version, and any rejection
+reason. Relation taxonomy and mapping fields remain unchanged as an optional statistical layer.
 
 #### Scenario: Canonical fact ends in the answer
 - **WHEN** the answer is the sentence-final completion of `canonical_fact`
@@ -48,6 +51,10 @@ SHALL record its source, quality tier, expected answer, template ID, and version
 - **WHEN** the answer is not sentence-final
 - **THEN** the generated prompt uses the original question without choices and has `prompt_quality_tier=open_answer_fallback`
 
+#### Scenario: Relation normalization is unresolved
+- **WHEN** an accepted canonical triple is `ambiguous` or `out_of_taxonomy` but has valid prompt evidence
+- **THEN** the system generates the prompt and preserves the unresolved relation fields without coercion
+
 ### Requirement: Traceable source-option distractor candidates
 For every prompt-ready canonical triple, the system SHALL copy the original wrong choices in
 their original order, create one expanded distractor record per candidate, and deterministically
@@ -55,13 +62,13 @@ rank candidates. It SHALL exclude the canonical source answer and normalized ans
 record candidates as unverified until a later type and factual-falsity gate is run.
 
 #### Scenario: Source wrong options are constructed
-- **WHEN** a mapped canonical triple has an English factual prompt
+- **WHEN** a canonical triple has an explicitly generated English factual prompt
 - **THEN** every distractor candidate occurs in `source_choices`, differs from both answer forms, and records `distractor_verified=false`
 
 ### Requirement: Offline deterministic validation
 The postprocessor SHALL require no model SDK or network access, SHALL never mutate model
 checkpoints, and SHALL validate source-choice preservation, record-ID conservation, mapping
-coverage, prompt/mapping consistency, and distractor provenance before reporting success.
+coverage, prompt readiness, and distractor provenance before reporting success.
 
 #### Scenario: Same checkpoints are processed twice
 - **WHEN** the postprocessor runs twice over identical model JSONL inputs

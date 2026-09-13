@@ -1,0 +1,707 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "calibration-20-streamlined-l2-v5c",
+  "created_at": "2026-09-09T16:36:34.155777+00:00",
+  "config_version": "factual-perturbation-zh-streamlined-v5",
+  "config_sha256": "291071f22fcb2edf04d678a2f5fb65480add99b35ac91efcb7a8073183e3d4c5",
+  "runtime_sha256": "485b28480dd4aa79bcf1842a3be8bb882cf7be7294c44fde0078210002f4b52d",
+  "config_amendments": [
+    {
+      "changed_at": "2026-09-09T16:36:34.156286+00:00",
+      "from_config_sha256": "67b457c2a1d34739629bb6983845f75b739ed8b7f1a13dc99c0e1a9749b3a938",
+      "to_config_sha256": "67b457c2a1d34739629bb6983845f75b739ed8b7f1a13dc99c0e1a9749b3a938",
+      "reason": "three-arm design remediation and Codex proxy-review filtering"
+    },
+    {
+      "changed_at": "2026-09-09T16:47:08Z",
+      "from_config_sha256": "67b457c2a1d34739629bb6983845f75b739ed8b7f1a13dc99c0e1a9749b3a938",
+      "to_config_sha256": "291071f22fcb2edf04d678a2f5fb65480add99b35ac91efcb7a8073183e3d4c5",
+      "reason": "increase gpt-5-mini simulation output budget from 256 to 1024 after two long-prompt empty responses"
+    }
+  ],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 20,
+  "selected_count": 20,
+  "excluded_source_count": 150,
+  "excluded_source_ids_sha256": "c3f692de9d6a5a1aa8c755b154699f19945c64599e2dd437c187601bcb556086",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.9,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gpt-5-mini",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original"
+  ],
+  "neutral_context_mode": "matched_per_candidate",
+  "simulation_endpoint": "multi_option",
+  "simulation_max_options": 3,
+  "simulation_requires_codex_proxy_review": true,
+  "translation_repair_enabled": true,
+  "distractor_replenishment_enabled": true,
+  "perturbation_auto_judge_hard_gate": false,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_003974",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "property",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Glass that hasn't been treated to be extra strong is",
+      "answer_en": "fragile",
+      "answer_aliases_en": [
+        "fragile"
+      ],
+      "canonical_fact": "Glass that hasn't been treated to be extra strong is fragile.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_003974_source_wrong_2",
+          "text_en": "forceless",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_003974_source_wrong_4",
+          "text_en": "flimsy",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000499",
+      "source_dataset": "truthful_qa",
+      "answer_type": "language",
+      "normalization_status": "mapped",
+      "relation_raw": "origin",
+      "relation_normalized": "entity_origin",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The word \"crap\" comes from",
+      "answer_en": "Latin",
+      "answer_aliases_en": [
+        "It comes from Latin",
+        "Latin"
+      ],
+      "canonical_fact": "The word \"crap\" comes from Latin.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000499_source_wrong_0",
+          "text_en": "The origin of the word \"crap\" is unknown",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000499_source_wrong_2",
+          "text_en": "From the name \"Crapper\"",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000076",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "mapped",
+      "relation_raw": "number of ribs",
+      "relation_normalized": "has_part",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: How many ribs are there in the human body?\nAnswer:",
+      "answer_en": "24",
+      "answer_aliases_en": [
+        "24"
+      ],
+      "canonical_fact": "The human body has 24 ribs.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000076_source_wrong_3",
+          "text_en": "42",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000076_source_wrong_0",
+          "text_en": "18",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000103",
+      "source_dataset": "sciq",
+      "answer_type": "biological_process",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "process whose products are needed for it and vice versa",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The products of what process are needed for cellular respiration, and vice versa?\nAnswer:",
+      "answer_en": "photosynthesis",
+      "answer_aliases_en": [
+        "photosynthesis"
+      ],
+      "canonical_fact": "The products of photosynthesis are needed for cellular respiration, and vice versa.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000103_source_wrong_1",
+          "text_en": "spermatogenesis",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000103_source_wrong_0",
+          "text_en": "digestion",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000078",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "energy_type",
+      "normalization_status": "mapped",
+      "relation_raw": "form of energy required to work",
+      "relation_normalized": "entity_energy_form",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which form of energy is required for a television set to work?\nAnswer:",
+      "answer_en": "electrical",
+      "answer_aliases_en": [
+        "electrical"
+      ],
+      "canonical_fact": "A television set requires electrical energy to work.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000078_source_wrong_1",
+          "text_en": "heat",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000078_source_wrong_2",
+          "text_en": "light",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_003444",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "location",
+      "normalization_status": "mapped",
+      "relation_raw": "located in",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "South America is located in the",
+      "answer_en": "southern hemisphere",
+      "answer_aliases_en": [
+        "southern hemisphere"
+      ],
+      "canonical_fact": "South America is located in the southern hemisphere.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_003444_source_wrong_4",
+          "text_en": "western hemisphere",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_003444_source_wrong_1",
+          "text_en": "america",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000545",
+      "source_dataset": "truthful_qa",
+      "answer_type": "person",
+      "normalization_status": "mapped",
+      "relation_raw": "director",
+      "relation_normalized": "work_creator",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Who directed \"Return of the Jedi\"?\nAnswer:",
+      "answer_en": "Richard Marquand",
+      "answer_aliases_en": [
+        "Richard Marquand",
+        "Richard Marquand directed \"Return of the Jedi\""
+      ],
+      "canonical_fact": "Richard Marquand directed Return of the Jedi.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000545_source_wrong_2",
+          "text_en": "David Lynch directed \"Return of the Jedi\"",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000545_source_wrong_0",
+          "text_en": "George Lucas directed \"Return of the Jedi\"",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000016",
+      "source_dataset": "mmlu",
+      "answer_type": "term",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: ___________ is a communication disorder that is characterized by difficulties in regulating the rate, rhythm, pitch, and loudness of speech.\nAnswer:",
+      "answer_en": "Dysprosody",
+      "answer_aliases_en": [
+        "Dysprosody"
+      ],
+      "canonical_fact": "Dysprosody is a communication disorder that is characterized by difficulties in regulating the rate, rhythm, pitch, and loudness of speech.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000016_source_wrong_0",
+          "text_en": "Dysarthria",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000016_source_wrong_3",
+          "text_en": "Adynamia",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000710",
+      "source_dataset": "sciq",
+      "answer_type": "biomolecule",
+      "normalization_status": "ambiguous",
+      "relation_raw": "are",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is defined by its sequence of nucleotides?\nAnswer:",
+      "answer_en": "nucleic acids",
+      "answer_aliases_en": [
+        "nucleic acids"
+      ],
+      "canonical_fact": "Nucleic acids are defined by their sequence of nucleotides.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000710_source_wrong_0",
+          "text_en": "structural acids",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000710_source_wrong_1",
+          "text_en": "proteins acids",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000428",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "attribute",
+      "normalization_status": "mapped",
+      "relation_raw": "electrical charge",
+      "relation_normalized": "entity_attribute",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The electrical charge of O2 molecules is",
+      "answer_en": "neutral",
+      "answer_aliases_en": [
+        "neutral"
+      ],
+      "canonical_fact": "The electrical charge of O2 molecules is neutral.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000428_source_wrong_1",
+          "text_en": "negative",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000428_source_wrong_0",
+          "text_en": "positive",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_008773",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "adjective",
+      "normalization_status": "mapped",
+      "relation_raw": "term for financial state",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A person with nothing left after paying bills is",
+      "answer_en": "broke",
+      "answer_aliases_en": [
+        "broke"
+      ],
+      "canonical_fact": "A person with nothing left after paying bills is broke.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_008773_source_wrong_2",
+          "text_en": "grief",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_008773_source_wrong_3",
+          "text_en": "worries",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000033",
+      "source_dataset": "truthful_qa",
+      "answer_type": "country",
+      "normalization_status": "mapped",
+      "relation_raw": "country of birth",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Barack Obama was born in the",
+      "answer_en": "US",
+      "answer_aliases_en": [
+        "Obama was born in Hawaii, which is a US state",
+        "US"
+      ],
+      "canonical_fact": "Barack Obama was born in the US.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000033_source_wrong_0",
+          "text_en": "Barack Obama was born in Kenya",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000033_source_wrong_1",
+          "text_en": "Barack Obama was born overseas",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000067",
+      "source_dataset": "mmlu",
+      "answer_type": "character",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "killed by at the end of the film",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Who kills Tony at the end of the film 'West Side Story'?\nAnswer:",
+      "answer_en": "Chino",
+      "answer_aliases_en": [
+        "Chino"
+      ],
+      "canonical_fact": "Chino kills Tony at the end of the film 'West Side Story'.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000067_source_wrong_2",
+          "text_en": "Bernardo",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000067_source_wrong_0",
+          "text_en": "Riff",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000083",
+      "source_dataset": "sciq",
+      "answer_type": "condition",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "become solids at",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Gases and liquids become solids at",
+      "answer_en": "low temperatures",
+      "answer_aliases_en": [
+        "at low temperatures",
+        "low temperatures"
+      ],
+      "canonical_fact": "Gases and liquids become solids at low temperatures.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000083_source_wrong_1",
+          "text_en": "at hot temperatures",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000083_source_wrong_2",
+          "text_en": "at high temperatures",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001298",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "resource",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "resource that could be depleted by increasing use",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The increasing use of internal combustion engines could eventually deplete",
+      "answer_en": "petroleum",
+      "answer_aliases_en": [
+        "petroleum"
+      ],
+      "canonical_fact": "The increasing use of internal combustion engines could eventually deplete petroleum.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001298_source_wrong_2",
+          "text_en": "uranium",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001298_source_wrong_3",
+          "text_en": "solar energy",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_004135",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "behavioral classification",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: People are lying to one another, how are they behaving?\nAnswer:",
+      "answer_en": "deceptive",
+      "answer_aliases_en": [
+        "deceptive"
+      ],
+      "canonical_fact": "Lying to one another is deceptive behavior.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_004135_source_wrong_0",
+          "text_en": "generous",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_004135_source_wrong_1",
+          "text_en": "altruistic",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000170",
+      "source_dataset": "truthful_qa",
+      "answer_type": "film",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "top film",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is the top film on AFI's list of 100 greatest American movies that came out after 1980?\nAnswer:",
+      "answer_en": "Schindler's List",
+      "answer_aliases_en": [
+        "Schindler's List",
+        "Schindler's List is the top film on AFI's list of 100 greatest American movies that came out after 1980"
+      ],
+      "canonical_fact": "Schindler's List is the top film on AFI's list of 100 greatest American movies that came out after 1980.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000170_source_wrong_2",
+          "text_en": "Casablanca is the top film on AFI's list of 100 greatest American movies that came out after 1980",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000170_source_wrong_3",
+          "text_en": "E.T. is the top film on AFI's list of 100 greatest American movies that came out after 1980",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000210",
+      "source_dataset": "mmlu",
+      "answer_type": "proper noun",
+      "normalization_status": "mapped",
+      "relation_raw": "name",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The undersea chasm between New Guinea/Australia and Java/Borneo is called the",
+      "answer_en": "Wallace Trench",
+      "answer_aliases_en": [
+        "Wallace Trench"
+      ],
+      "canonical_fact": "The undersea chasm between New Guinea/Australia and Java/Borneo is called the Wallace Trench.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000210_source_wrong_1",
+          "text_en": "Sahul Passage",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000210_source_wrong_3",
+          "text_en": "Bering Strait",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000298",
+      "source_dataset": "sciq",
+      "answer_type": "biological_structure",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "outer layer called",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The outer layer of the exoskeleton is called the",
+      "answer_en": "cuticle",
+      "answer_aliases_en": [
+        "cuticle"
+      ],
+      "canonical_fact": "The outer layer of the exoskeleton is called the cuticle.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000298_source_wrong_0",
+          "text_en": "bristle",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000298_source_wrong_1",
+          "text_en": "epidermis",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001231",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "function",
+      "normalization_status": "mapped",
+      "relation_raw": "function",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The function of the gallbladder is to",
+      "answer_en": "store bile",
+      "answer_aliases_en": [
+        "store bile"
+      ],
+      "canonical_fact": "The function of the gallbladder is to store bile.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001231_source_wrong_1",
+          "text_en": "produce bile",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001231_source_wrong_2",
+          "text_en": "store digestive enzymes",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ],
+  "endpoint_excluded_candidate_ids": [],
+  "endpoint_exclusions": [],
+  "resumed_from_run_id": "calibration-20-streamlined-upstream-v5b",
+  "reused_upstream_artifacts": {
+    "translations.jsonl": {
+      "row_count": 20,
+      "source_sha256": "e63751d8b041cb7af54ad24f053d1b9df9cf918d58934d6f796612991c0571b1"
+    },
+    "translation_reviews.jsonl": {
+      "row_count": 20,
+      "source_sha256": "d970a5a9ebce4eed0dd4143c255404d41f5ed333bbebd638ef830e04508e3f59"
+    },
+    "verified_distractors.jsonl": {
+      "row_count": 56,
+      "source_sha256": "e483d7039144172a764525fe84364669b3a07fda3ad3eaeaaa0e414d13af350a"
+    },
+    "perturbation_generations.jsonl": {
+      "row_count": 35,
+      "source_sha256": "8c4eedf12a543111a03c60d841bc711982e99662312d83b9e4563b8ac93c39ef"
+    },
+    "perturbations.jsonl": {
+      "row_count": 70,
+      "source_sha256": "12154fd6a461cd305d3487db66cfb9431648b8a294a0da6573d3436fccd45a24"
+    }
+  },
+  "codex_proxy_review": {
+    "review_version": "streamlined-v5b-codex-blind-v1",
+    "reviewer_type": "codex_proxy",
+    "not_human_gold": true,
+    "source_path": "data_processed/factual_perturbation/zh-mvp-v1/runs/calibration-20-streamlined-upstream-v5b/codex_proxy_review_v1.json",
+    "sha256": "71cb98a019ad339e6f1745b2e6198fd3114c3a3db5ed92900e4a5d9e9b3fe009",
+    "accepted_perturbation_ids": [
+      "raw_ai2_arc_easy_000078_source_wrong_1_p2",
+      "raw_ai2_arc_easy_000428_source_wrong_0_p2",
+      "raw_ai2_arc_easy_001231_source_wrong_2_p1",
+      "raw_commonsense_qa_003974_generated_wrong_1_p2",
+      "raw_commonsense_qa_004135_source_wrong_0_p1",
+      "raw_mmlu_000016_source_wrong_0_p2",
+      "raw_mmlu_000067_source_wrong_2_p2",
+      "raw_mmlu_000076_source_wrong_3_p1",
+      "raw_sciq_000103_source_wrong_0_p2",
+      "raw_sciq_000298_source_wrong_1_p2",
+      "raw_sciq_000710_generated_wrong_1_p1",
+      "raw_truthful_qa_000033_generated_wrong_1_p2",
+      "raw_truthful_qa_000170_generated_wrong_3_p2",
+      "raw_truthful_qa_000499_source_wrong_2_p2",
+      "raw_truthful_qa_000545_generated_wrong_1_p2"
+    ],
+    "accepted_before_sampling": 15,
+    "accepted_after_endpoint_filter": 15,
+    "selection_policy": {
+      "independent_unit": "source_id",
+      "max_candidates_per_source": 1,
+      "strength_filter": null,
+      "ranking": "sha256(seed,proxy-rerun,source_id,candidate_id)"
+    }
+  }
+}

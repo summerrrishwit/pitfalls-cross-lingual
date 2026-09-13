@@ -1,0 +1,100 @@
+{
+  "catalog_version": "public-benchmark-sources-v1",
+  "as_of": "2026-09-10",
+  "pilot": {
+    "seed": 20260909,
+    "records_per_source": 10
+  },
+  "sources": {
+    "global_mmlu": {
+      "enabled_by_default": true,
+      "adapter": "global_mmlu_hf_rows",
+      "repository": "https://huggingface.co/datasets/CohereLabs/Global-MMLU",
+      "revision": "0e619dbeb34206cd48705a1a0ea7fb21cae09993",
+      "url": "https://datasets-server.huggingface.co/rows",
+      "config": "en",
+      "split": "test",
+      "expected_record_count": 14042,
+      "license": "Apache-2.0",
+      "language": "en",
+      "output_file": "global_mmlu.json"
+    },
+    "mkqa": {
+      "enabled_by_default": true,
+      "adapter": "mkqa_jsonl_gz",
+      "repository": "https://github.com/apple/ml-mkqa",
+      "revision": "651b8cc85c407270b024157aff06ee6ab8c4fc6d",
+      "url": "https://raw.githubusercontent.com/apple/ml-mkqa/651b8cc85c407270b024157aff06ee6ab8c4fc6d/dataset/mkqa.jsonl.gz",
+      "expected_sha256": "f77ac6bf6306e98816c5c047880db71a3c67d2f1491b169896d63e9bb14ef3d3",
+      "license": "CC-BY-SA-3.0",
+      "language": "en",
+      "accepted_answer_types": [
+        "entity",
+        "date",
+        "number",
+        "number_with_unit",
+        "short_phrase"
+      ],
+      "output_file": "mkqa.json"
+    },
+    "msqa_en": {
+      "enabled_by_default": true,
+      "adapter": "msqa_jsonl",
+      "repository": "https://huggingface.co/datasets/m-a-p/MSQA",
+      "revision": "3e33ce30d17462fe4513d649eec714cce65053cf",
+      "url": "https://huggingface.co/datasets/m-a-p/MSQA/resolve/3e33ce30d17462fe4513d649eec714cce65053cf/msqa.jsonl",
+      "expected_sha256": "9b2240d76482fe63889510778f71dc90a65d54e20b1a0eadc04147fe0524347e",
+      "license": "CC-BY-4.0",
+      "language": "en-EN",
+      "output_file": "msqa_en.json"
+    },
+    "openbookqa": {
+      "enabled_by_default": true,
+      "adapter": "openbookqa_zip",
+      "repository": "https://github.com/allenai/OpenBookQA",
+      "revision": "b51971646e9371a61508d9953fc706645e194a71",
+      "url": "https://ai2-public-datasets.s3.amazonaws.com/open-book-qa/OpenBookQA-V1-Sep2018.zip",
+      "expected_sha256": "82368cf05df2e3b309c17d162e10b888b4d768fad6e171e0a041954c8553be46",
+      "archive_member": "OpenBookQA-V1-Sep2018/Data/Main/test.jsonl",
+      "split": "test",
+      "license": "Apache-2.0",
+      "language": "en",
+      "output_file": "openbookqa.json"
+    },
+    "include": {
+      "enabled_by_default": false,
+      "repository": "https://huggingface.co/datasets/CohereLabs/include-base-44",
+      "revision": "d2e1f6015f67a43c02a9a68db98e2298e2d6a660",
+      "license": "Apache-2.0",
+      "disabled_reason": "No native English counterpart is present in the published language list; defer to the translation stage."
+    },
+    "simpleqa": {
+      "enabled_by_default": false,
+      "repository": "https://github.com/openai/simple-evals",
+      "revision": "652c89d0ca9df547706735883097e9537d40dc47",
+      "license": "dataset-license-review-required",
+      "disabled_reason": "The repository is MIT licensed, but the bundled dataset artifact needs a separate redistribution review."
+    },
+    "x_factr": {
+      "enabled_by_default": false,
+      "repository": "https://github.com/jzbjyb/X-FACTR",
+      "revision": "c1938ec7262ebc34ac0b39daff3f446e103e8a87",
+      "license": "unspecified",
+      "disabled_reason": "No dataset license file was found at the pinned revision."
+    },
+    "mlama": {
+      "enabled_by_default": false,
+      "repository": "https://github.com/norakassner/mlama",
+      "revision": "bc51dee1ed417a4dfab4179d5f8ec39352b8544a",
+      "license": "CC-BY-NC-4.0",
+      "disabled_reason": "Non-commercial license is incompatible with the default permissive-source intake policy."
+    },
+    "popqa": {
+      "enabled_by_default": false,
+      "repository": "https://huggingface.co/datasets/akariasai/PopQA",
+      "revision": "098765c79ea10a2cb19c828324e33281b8336ec0",
+      "license": "unspecified",
+      "disabled_reason": "The Hugging Face dataset card does not declare a license at the pinned revision."
+    }
+  }
+}

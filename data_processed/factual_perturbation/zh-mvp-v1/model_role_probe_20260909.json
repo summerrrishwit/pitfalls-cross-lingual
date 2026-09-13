@@ -1,0 +1,124 @@
+{
+  "schema_version": "model-role-api-probe-v1",
+  "generated_at": "2026-09-08T16:43:12.564703+00:00",
+  "sense_nova_excluded": true,
+  "secrets_or_endpoints_included": false,
+  "results": [
+    {
+      "case_id": "translation_qwen38max",
+      "profile": "aliyun",
+      "model": "qwen3.8-max",
+      "role": "translation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "preserves_answer_suffix",
+        "translation"
+      ],
+      "response_model": "qwen3.8-max"
+    },
+    {
+      "case_id": "translation_review_gpt55",
+      "profile": "openai",
+      "model": "gpt-5.5",
+      "role": "translation_review",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "decision",
+        "issues"
+      ],
+      "response_model": "gpt-5.5-2026-04-24"
+    },
+    {
+      "case_id": "perturbation_generation_gpt56sol",
+      "profile": "openai",
+      "model": "gpt-5.6-sol",
+      "role": "perturbation_generation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "chinese_perturbation",
+        "english_perturbation"
+      ],
+      "response_model": "gpt-5.6-sol-2026-07-09"
+    },
+    {
+      "case_id": "perturbation_validation_qwen38max",
+      "profile": "aliyun",
+      "model": "qwen3.8-max",
+      "role": "perturbation_validation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "checks",
+        "decision"
+      ],
+      "response_model": "qwen3.8-max"
+    },
+    {
+      "case_id": "simulation_qwen37plus",
+      "profile": "aliyun",
+      "model": "qwen3.7-plus",
+      "role": "simulation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "choice"
+      ],
+      "response_model": "qwen3.7-plus"
+    },
+    {
+      "case_id": "simulation_deepseek_v4_flash",
+      "profile": "deepseek",
+      "model": "bailian/deepseek-v4-flash-0731",
+      "role": "simulation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "choice"
+      ],
+      "response_model": "deepseek-v4-flash-0731"
+    },
+    {
+      "case_id": "simulation_hy4_preview",
+      "profile": "test",
+      "model": "hy4-preview",
+      "role": "simulation",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "choice"
+      ],
+      "response_model": "hy4-preview"
+    },
+    {
+      "case_id": "holdout_claude_opus5",
+      "profile": "claude",
+      "model": "claude-opus-5",
+      "role": "holdout",
+      "status": "ok",
+      "response_has_text": true,
+      "json_object": true,
+      "required_keys_present": true,
+      "returned_keys": [
+        "choice"
+      ],
+      "response_model": "anthropic/claude-opus-5"
+    }
+  ]
+}

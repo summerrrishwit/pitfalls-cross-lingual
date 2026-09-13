@@ -1,0 +1,95 @@
+{
+  "schema_version": "factual-perturbation-run-summary-v1",
+  "generated_at": "2026-09-09T11:42:56.384373+00:00",
+  "run_id": "calibration-20b-multi-upstream-v4",
+  "base_triple_count": 20,
+  "counts": {
+    "translations_completed": 20,
+    "translations_review_accepted": 14,
+    "distractors_reviewed": 28,
+    "distractors_accepted": 21,
+    "perturbation_groups_completed": 19,
+    "perturbations_reviewed": 38,
+    "perturbations_accepted": 12,
+    "simulation_calls": 0,
+    "simulation_calls_completed": 0,
+    "fully_simulated_candidates": 0,
+    "expected_simulation_outcomes_per_candidate": 24,
+    "baseline_inconsistency_count": 0,
+    "failed_terminal_calls": 2,
+    "total_attempts": 185
+  },
+  "usage": {
+    "input_tokens": 36937,
+    "output_tokens": 28759,
+    "total_tokens": 65696
+  },
+  "latency_ms": {
+    "count": 127,
+    "mean": 12557.02,
+    "max": 93298
+  },
+  "simulation_only": {
+    "physical_call_count": 0,
+    "completed_count": 0,
+    "attempt_count": 0,
+    "retry_count": 0,
+    "usage": {},
+    "latency_ms_mean": null,
+    "latency_ms_max": null
+  },
+  "cost": {
+    "estimated_usd": null,
+    "reason": "provider_price_table_not_configured; token usage retained for billing reconciliation"
+  },
+  "model_metrics": {
+    "gpt-5.5": {
+      "call_count": 20,
+      "completed_count": 20,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 9531.4,
+      "latency_ms_max": 14780,
+      "usage": {
+        "input_tokens": 8143,
+        "output_tokens": 5380,
+        "total_tokens": 13523
+      }
+    },
+    "gpt-5.6-sol": {
+      "call_count": 21,
+      "completed_count": 19,
+      "failure_rate": 0.095238,
+      "retry_count": 58,
+      "latency_ms_mean": 44477.33,
+      "latency_ms_max": 93298,
+      "usage": {
+        "input_tokens": 6124,
+        "output_tokens": 13966,
+        "total_tokens": 20090
+      }
+    },
+    "qwen3.8-max": {
+      "call_count": 86,
+      "completed_count": 86,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 5466.16,
+      "latency_ms_max": 11009,
+      "usage": {
+        "input_tokens": 22670,
+        "output_tokens": 9413,
+        "total_tokens": 32083
+      }
+    }
+  },
+  "baseline_inconsistencies": [],
+  "gate_passed": false,
+  "gate_reasons": [
+    "incomplete_four_model_simulation",
+    "codex_proxy_review_required_before_simulation",
+    "currency_cost_not_auditable"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_called": false
+}

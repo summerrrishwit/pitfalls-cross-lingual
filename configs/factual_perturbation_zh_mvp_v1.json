@@ -1,0 +1,238 @@
+{
+  "config_version": "factual-perturbation-zh-mvp-v1",
+  "scope": {
+    "target_language": "Chinese",
+    "paths_not_taken_enabled": false,
+    "legacy_multilingual_join_required": false,
+    "independent_unit": "canonical_base_triple"
+  },
+  "configuration_evidence": {
+    "source": ".env",
+    "inspected_on": "2026-09-09",
+    "status": "selected_models_minimal_and_role_probed",
+    "credential_values_copied": false,
+    "probe_artifacts": [
+      "data_processed/factual_perturbation/zh-mvp-v1/model_api_probe_20260909.json",
+      "data_processed/factual_perturbation/zh-mvp-v1/model_minimal_probe_20260909.json",
+      "data_processed/factual_perturbation/zh-mvp-v1/model_role_probe_20260909.json",
+      "data_processed/factual_perturbation/zh-mvp-v1/model_probe_claude_opus_4_8_20260909.json",
+      "data_processed/factual_perturbation/zh-mvp-v1/model_probe_gemini_3_7_flash_20260909.json"
+    ],
+    "validated_scope": "one minimal and one representative structured request per selected model",
+    "batch_stability": "not_validated",
+    "sensenova_calls_allowed": false
+  },
+  "inputs": {
+    "canonical_triples": "data_processed/factual_triples/triple-full-v1/canonical-v2/canonical_triples.jsonl",
+    "prompt_artifact_version": "canonical-fact-factual-prompt-v2",
+    "require_relation_mapping_for_prompt": false,
+    "distractor_priority": [
+      "verified_source_wrong_option",
+      "verified_same_answer_type"
+    ],
+    "same_relation_distractor_enabled": false
+  },
+  "provider_profiles": {
+    "openai": {
+      "protocol": "openai",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url_env": "OPENAI_BASE_URL",
+      "declared_default_model_env": "OPENAI_MODEL"
+    },
+    "test_gateway": {
+      "protocol": "openai_compatible",
+      "api_key_env": "TEST_API_KEY",
+      "base_url_env": "TEST_BASE_URL",
+      "declared_default_model_env": "TEST_MODEL"
+    },
+    "aliyun": {
+      "protocol": "openai_compatible",
+      "api_key_env": "AILYUN_API_KEY",
+      "base_url_env": "AILYUN_BASE_URL",
+      "chat_path_env": "AILYUN_CHAT_PATH",
+      "declared_default_model_env": "AILYUN_MODEL"
+    },
+    "deepseek": {
+      "protocol": "openai_compatible",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "base_url_env": "DEEPSEEK_BASE_URL",
+      "declared_default_model_env": "DEEPSEEK_MODEL"
+    },
+    "claude_cc": {
+      "protocol": "anthropic",
+      "api_key_env": "CC_API_KEY",
+      "base_url_env": "CC_BASE_URL",
+      "declared_default_model_env": "CC_MODEL_ID"
+    }
+  },
+  "model_roles": {
+    "translation": {
+      "primary": {
+        "model": "qwen3.8-max",
+        "provider_profile": "aliyun",
+        "temperature": 0.0,
+        "max_output_tokens": 512
+      },
+      "reviewer": {
+        "model": "gpt-5.5",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 1024
+      },
+      "review_mode": "all_in_pilot_then_failures_and_sample"
+    },
+    "distractor_validation": {
+      "primary_judge": {
+        "model": "qwen3.8-max",
+        "provider_profile": "aliyun",
+        "temperature": 0.0,
+        "max_output_tokens": 1024
+      },
+      "uncertain_or_invalid_action": "reject"
+    },
+    "perturbation_generation": {
+      "primary": {
+        "model": "gpt-5.6-sol",
+        "provider_profile": "openai",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 768
+      },
+      "candidates_per_distractor": 2
+    },
+    "perturbation_validation": {
+      "primary_judge": {
+        "model": "qwen3.8-max",
+        "provider_profile": "aliyun",
+        "temperature": 0.0,
+        "max_output_tokens": 1024
+      },
+      "uncertain_or_invalid_action": "reject",
+      "required_checks": [
+        "ground_truth_preserved",
+        "no_explicit_falsehood",
+        "relation_preserved",
+        "bilingual_equivalent",
+        "naturalness",
+        "target_distractor_salience",
+        "no_prompt_duplication"
+      ]
+    },
+    "simulation": {
+      "variants": [
+        "original",
+        "neutral",
+        "targeted"
+      ],
+      "baseline_reuse_key": [
+        "source_id",
+        "distractor_id",
+        "model",
+        "language",
+        "variant"
+      ],
+      "models": [
+        {
+          "model": "qwen3.7-plus",
+          "provider_profile": "aliyun"
+        },
+        {
+          "model": "bailian/deepseek-v4-flash-0731",
+          "provider_profile": "deepseek"
+        },
+        {
+          "model": "hy4-preview",
+          "provider_profile": "test_gateway",
+          "max_output_tokens": 1024
+        },
+        {
+          "model": "gemini-3.7-flash",
+          "provider_profile": "test_gateway"
+        }
+      ],
+      "temperature": 0.0,
+      "max_output_tokens": 256,
+      "require_all_models_completed": true,
+      "logprobs_optional": true
+    },
+    "non_simulation_holdout": {
+      "models": [
+        {
+          "model": "claude-opus-4-8",
+          "provider_profile": "claude_cc"
+        }
+      ],
+      "run_only_after_candidate_freeze": true,
+      "holdout_level": "model_and_family"
+    },
+    "excluded_from_this_run": [
+      {
+        "model_family": "SenseNova",
+        "reason": "user_requested_no_sensenova_calls"
+      }
+    ]
+  },
+  "pilot": {
+    "base_triple_limit": 100,
+    "seed": 20260908,
+    "stratify_by": [
+      "source_dataset",
+      "prompt_quality_tier",
+      "answer_type"
+    ],
+    "max_distractors_per_triple": 2,
+    "beam_width": 4,
+    "max_depth": 2,
+    "max_good_per_triple": 2
+  },
+  "scoring": {
+    "score_type": "paper",
+    "gamma": 2.0,
+    "english_perturbed_accuracy_required": 1.0,
+    "record_distractor_hit": true,
+    "record_probability_or_rank_shift_when_available": true,
+    "badcase_types": [
+      "induced",
+      "amplified"
+    ]
+  },
+  "execution": {
+    "resume": true,
+    "max_workers": 4,
+    "provider_max_concurrency": {
+      "openai": 2,
+      "aliyun": 2,
+      "deepseek": 2,
+      "test_gateway": 1,
+      "claude_cc": 1
+    },
+    "max_retries": 3,
+    "timeout_seconds": 180,
+    "store_raw_responses": true,
+    "store_prompt_and_model_versions": true,
+    "credentials_in_artifacts": false
+  },
+  "outputs": {
+    "root": "data_processed/factual_perturbation/zh-mvp-v1",
+    "translation": "translations.jsonl",
+    "verified_distractors": "verified_distractors.jsonl",
+    "perturbations": "perturbations.jsonl",
+    "simulation": "simulation_results.jsonl",
+    "holdout": "holdout_results.jsonl",
+    "manifest": "run_manifest.json"
+  },
+  "preflight": {
+    "run_id": "preflight-10-v1",
+    "base_triple_limit": 10,
+    "minimum_translation_acceptance": 0.5,
+    "require_at_least_one_verified_distractor": true,
+    "require_at_least_one_verified_perturbation": true,
+    "require_all_four_simulation_models": true,
+    "currency_cost_gate": null,
+    "currency_cost_gate_reason": "No versioned provider price table is available; retain token usage for billing reconciliation.",
+    "semantic_review": {
+      "reviewer_type": "codex_proxy",
+      "not_human_gold": true,
+      "unresolved_action": "exclude_from_pilot_and_request_adjudication"
+    }
+  }
+}

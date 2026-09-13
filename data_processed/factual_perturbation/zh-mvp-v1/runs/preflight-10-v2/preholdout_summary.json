@@ -1,0 +1,164 @@
+{
+  "schema_version": "factual-perturbation-run-summary-v1",
+  "generated_at": "2026-09-09T06:30:51.289768+00:00",
+  "run_id": "preflight-10-v2",
+  "base_triple_count": 10,
+  "counts": {
+    "translations_completed": 10,
+    "translations_review_accepted": 7,
+    "distractors_reviewed": 14,
+    "distractors_accepted": 11,
+    "perturbation_groups_completed": 11,
+    "perturbations_reviewed": 22,
+    "perturbations_accepted": 16,
+    "simulation_calls": 256,
+    "simulation_calls_completed": 254,
+    "fully_simulated_candidates": 15,
+    "expected_simulation_outcomes_per_candidate": 16,
+    "baseline_inconsistency_count": 1,
+    "failed_terminal_calls": 2,
+    "total_attempts": 435
+  },
+  "usage": {
+    "input_tokens": 37069,
+    "output_tokens": 36628,
+    "total_tokens": 73697
+  },
+  "latency_ms": {
+    "count": 323,
+    "mean": 20556.39,
+    "max": 441399
+  },
+  "cost": {
+    "estimated_usd": null,
+    "reason": "provider_price_table_not_configured; token usage retained for billing reconciliation"
+  },
+  "model_metrics": {
+    "bailian/deepseek-v4-flash-0731": {
+      "call_count": 64,
+      "completed_count": 64,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 1323.41,
+      "latency_ms_max": 1970,
+      "usage": {
+        "input_tokens": 5009,
+        "output_tokens": 320,
+        "total_tokens": 5329
+      }
+    },
+    "gemini-3.7-flash": {
+      "call_count": 64,
+      "completed_count": 64,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 23655.75,
+      "latency_ms_max": 43070,
+      "usage": {
+        "input_tokens": 5152,
+        "output_tokens": 7398,
+        "total_tokens": 12550
+      }
+    },
+    "gpt-5.5": {
+      "call_count": 10,
+      "completed_count": 10,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 9927.0,
+      "latency_ms_max": 15044,
+      "usage": {
+        "input_tokens": 4138,
+        "output_tokens": 2180,
+        "total_tokens": 6318
+      }
+    },
+    "gpt-5.6-sol": {
+      "call_count": 11,
+      "completed_count": 11,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 20382.73,
+      "latency_ms_max": 30547,
+      "usage": {
+        "input_tokens": 1915,
+        "output_tokens": 3979,
+        "total_tokens": 5894
+      }
+    },
+    "hy4-preview": {
+      "call_count": 64,
+      "completed_count": 62,
+      "failure_rate": 0.03125,
+      "retry_count": 112,
+      "latency_ms_mean": 69879.8,
+      "latency_ms_max": 441399,
+      "usage": {
+        "input_tokens": 6109,
+        "output_tokens": 19123,
+        "total_tokens": 25232
+      }
+    },
+    "qwen3.7-plus": {
+      "call_count": 64,
+      "completed_count": 64,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 1134.41,
+      "latency_ms_max": 3156,
+      "usage": {
+        "input_tokens": 5624,
+        "output_tokens": 320,
+        "total_tokens": 5944
+      }
+    },
+    "qwen3.8-max": {
+      "call_count": 46,
+      "completed_count": 46,
+      "failure_rate": 0.0,
+      "retry_count": 0,
+      "latency_ms_mean": 3753.46,
+      "latency_ms_max": 8078,
+      "usage": {
+        "input_tokens": 9122,
+        "output_tokens": 3308,
+        "total_tokens": 12430
+      }
+    }
+  },
+  "baseline_inconsistencies": [
+    {
+      "source_id": "raw_truthful_qa_000462",
+      "distractor_id": "raw_truthful_qa_000462_source_wrong_0",
+      "model": "hy4-preview",
+      "language": "zh",
+      "variant": "original",
+      "observed_outcomes": [
+        {
+          "choice": "A",
+          "correct": false
+        },
+        {
+          "choice": "B",
+          "correct": true
+        }
+      ],
+      "simulation_ids": [
+        "a2eb1b3dde3047478372b3e4",
+        "cd389411fe0022719928f2cd"
+      ],
+      "candidate_ids": [
+        "raw_truthful_qa_000462_source_wrong_0_p1",
+        "raw_truthful_qa_000462_source_wrong_0_p2"
+      ]
+    }
+  ],
+  "gate_passed": false,
+  "gate_reasons": [
+    "incomplete_four_model_simulation",
+    "baseline_response_inconsistent",
+    "currency_cost_not_auditable"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_called": false
+}

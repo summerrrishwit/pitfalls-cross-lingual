@@ -1,0 +1,689 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "screen-12-model-sensitivity-v2",
+  "created_at": "2026-09-09T09:44:34.773973+00:00",
+  "config_version": "factual-perturbation-zh-sensitivity-v2",
+  "config_sha256": "333a1feb63a853c770c9b61e1159262809d0c22dacc405744b014456de8a720d",
+  "runtime_sha256": "35e145050ce174eefce1933611b6dbeae23728e8a01728459400185857194ba5",
+  "config_amendments": [
+    {
+      "changed_at": "2026-09-09T09:44:34.774304+00:00",
+      "from_config_sha256": "8192f8e8917f74bcede8f6f1904a8c80c72bf501e399c5cb3fae72a8dcdc8cb9",
+      "to_config_sha256": "333a1feb63a853c770c9b61e1159262809d0c22dacc405744b014456de8a720d",
+      "reason": "three-arm design remediation and Codex proxy-review filtering"
+    }
+  ],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 20,
+  "selected_count": 20,
+  "excluded_source_count": 10,
+  "excluded_source_ids_sha256": "e096ff67031e2a364e2e7ff10d310c8047f18b27b824811f8bdebfed24eb1e8a",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.5,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gpt-5-mini",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original",
+    "neutral"
+  ],
+  "simulation_requires_codex_proxy_review": true,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_001993",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "musical ensemble",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "ensemble type",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A viola along with three other instruments is heard in a",
+      "answer_en": "string quartet",
+      "answer_aliases_en": [
+        "string quartet"
+      ],
+      "canonical_fact": "A viola along with three other instruments is heard in a string quartet.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_001993_source_wrong_1",
+          "text_en": "string quintent",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_001993_source_wrong_3",
+          "text_en": "orchestra",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000031",
+      "source_dataset": "truthful_qa",
+      "answer_type": "boolean",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "can be arrested for the same crime",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Can a husband and wife be arrested for the same crime in the U.S.?\nAnswer:",
+      "answer_en": "Yes",
+      "answer_aliases_en": [
+        "Yes",
+        "Yes, a husband and wife can be arrested for the same crime"
+      ],
+      "canonical_fact": "A husband and wife in the U.S. can be arrested for the same crime.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000031_source_wrong_2",
+          "text_en": "No, only the husband will be arrested",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000031_source_wrong_0",
+          "text_en": "No, a husband and wife cannot be arrested for the same crime",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000025",
+      "source_dataset": "mmlu",
+      "answer_type": "mechanism",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "strategy at virus entry",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: The paramyxovirus family employ what strategy at virus entry?\nAnswer:",
+      "answer_en": "A fusion mediated by M protein",
+      "answer_aliases_en": [
+        "A fusion mediated by M protein"
+      ],
+      "canonical_fact": "The paramyxovirus family employ a fusion mediated by M protein at virus entry.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000025_source_wrong_0",
+          "text_en": "Initiate a fusion 'from without' using virus F protein",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000025_source_wrong_1",
+          "text_en": "Has fusion from within a cytoplasmic vacuole at low pH",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000818",
+      "source_dataset": "sciq",
+      "answer_type": "constellation",
+      "normalization_status": "ambiguous",
+      "relation_raw": "constellation",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Helix Nebula is located in the constellation",
+      "answer_en": "Aquarius",
+      "answer_aliases_en": [
+        "Aquarius",
+        "aquarius"
+      ],
+      "canonical_fact": "The Helix Nebula is located in the constellation Aquarius.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000818_source_wrong_0",
+          "text_en": "prometheus",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000818_source_wrong_1",
+          "text_en": "zodiac",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001487",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "organism",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "eliminates contaminant",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "UV radiation eliminates",
+      "answer_en": "bacteria",
+      "answer_aliases_en": [
+        "bacteria"
+      ],
+      "canonical_fact": "UV radiation eliminates bacteria.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001487_source_wrong_3",
+          "text_en": "oil",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001487_source_wrong_1",
+          "text_en": "metals",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_004890",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "medium",
+      "normalization_status": "mapped",
+      "relation_raw": "refers to",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The term 'small screen' refers to",
+      "answer_en": "television",
+      "answer_aliases_en": [
+        "television"
+      ],
+      "canonical_fact": "The term 'small screen' refers to television.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_004890_source_wrong_1",
+          "text_en": "cell phone",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_004890_source_wrong_2",
+          "text_en": "movies",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000237",
+      "source_dataset": "truthful_qa",
+      "answer_type": "place",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "largest desert",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is the largest desert in the world?\nAnswer:",
+      "answer_en": "Antarctic Desert",
+      "answer_aliases_en": [
+        "Antarctic Desert",
+        "The Antarctic Desert is the largest desert in the world"
+      ],
+      "canonical_fact": "The Antarctic Desert is the largest desert in the world.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000237_source_wrong_1",
+          "text_en": "The Arctic Desert is the largest desert in the world",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000237_source_wrong_0",
+          "text_en": "The Sahara Desert is the largest desert in the world",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000293",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "mapped",
+      "relation_raw": "number of periods",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: How many periods are there in an ice hockey game?\nAnswer:",
+      "answer_en": "Three",
+      "answer_aliases_en": [
+        "Three"
+      ],
+      "canonical_fact": "An ice hockey game has three periods.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000293_source_wrong_0",
+          "text_en": "One",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000293_source_wrong_1",
+          "text_en": "Two",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000659",
+      "source_dataset": "sciq",
+      "answer_type": "action",
+      "normalization_status": "mapped",
+      "relation_raw": "causes the Moon to",
+      "relation_normalized": "cause_effect",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Earth's gravitational force causes the Moon to",
+      "answer_en": "orbit the earth",
+      "answer_aliases_en": [
+        "orbit the earth"
+      ],
+      "canonical_fact": "The Earth's gravitational force causes the Moon to orbit the Earth.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000659_source_wrong_0",
+          "text_en": "overlap the earth",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000659_source_wrong_2",
+          "text_en": "lose orbit",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001351",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "scientific quantity",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "reliable estimate value used",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Scientists are able to correlate time and the amount of difference between homologous genes when studying the divergence of two species because they have reliable estimates for the",
+      "answer_en": "rate of genetic mutations",
+      "answer_aliases_en": [
+        "rate of genetic mutations"
+      ],
+      "canonical_fact": "Scientists are able to correlate time and the amount of difference between homologous genes when studying the divergence of two species because they have reliable estimates for the rate of genetic mutations.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001351_source_wrong_2",
+          "text_en": "pressure of selection on base pairs",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001351_source_wrong_1",
+          "text_en": "survival benefit of specific genes",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_005773",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "attribute",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "said to have",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A person with nothing they have to do is said to have",
+      "answer_en": "spare time",
+      "answer_aliases_en": [
+        "spare time"
+      ],
+      "canonical_fact": "A person with nothing they have to do is said to have spare time.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005773_source_wrong_4",
+          "text_en": "make more money",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005773_source_wrong_0",
+          "text_en": "poor",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000180",
+      "source_dataset": "truthful_qa",
+      "answer_type": "drink",
+      "normalization_status": "mapped",
+      "relation_raw": "drink taken with poison during mass suicide",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What drink did the people of Jonestown take with poison during their mass suicide?\nAnswer:",
+      "answer_en": "grape Flavor-Aid",
+      "answer_aliases_en": [
+        "The people of Jonestown drank poisoned grape Flavor-Aid",
+        "grape Flavor-Aid"
+      ],
+      "canonical_fact": "The people of Jonestown drank poisoned grape Flavor-Aid during their mass suicide.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000180_source_wrong_2",
+          "text_en": "The people of Jonestown drank poisoned grape Kool-Aid",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000180_source_wrong_0",
+          "text_en": "The people of Jonestown drank Kool-Aid during their mass suicide",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000002",
+      "source_dataset": "mmlu",
+      "answer_type": "person",
+      "normalization_status": "mapped",
+      "relation_raw": "creator",
+      "relation_normalized": "work_creator",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Far Side was created by",
+      "answer_en": "Gary Larson",
+      "answer_aliases_en": [
+        "Gary Larson"
+      ],
+      "canonical_fact": "The Far Side was created by Gary Larson.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000002_source_wrong_2",
+          "text_en": "Garry Trudeau",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000002_source_wrong_3",
+          "text_en": "Charles Schulz",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000228",
+      "source_dataset": "sciq",
+      "answer_type": "biological_process",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What process, which is analogous to mitosis, is a series of events that arrange and separate chromosomes and chromatids into daughter cells?\nAnswer:",
+      "answer_en": "meiosis",
+      "answer_aliases_en": [
+        "meiosis"
+      ],
+      "canonical_fact": "Meiosis is the process analogous to mitosis that arranges and separates chromosomes and chromatids into daughter cells.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000228_source_wrong_0",
+          "text_en": "apoptosis",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000228_source_wrong_2",
+          "text_en": "digestion",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001383",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "cellular_organelle",
+      "normalization_status": "mapped",
+      "relation_raw": "cellular organelle where it occurs",
+      "relation_normalized": "process_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the",
+      "answer_en": "mitochondria",
+      "answer_aliases_en": [
+        "mitochondria"
+      ],
+      "canonical_fact": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the mitochondria.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001383_source_wrong_1",
+          "text_en": "cytoplasm",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001383_source_wrong_3",
+          "text_en": "endoplasmic reticulum",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_007198",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "garment",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The garment popular with the flappers of the 1920's that has thin shoulder straps is a",
+      "answer_en": "chemise",
+      "answer_aliases_en": [
+        "chemise"
+      ],
+      "canonical_fact": "The garment popular with the flappers of the 1920's that has thin shoulder straps is a chemise.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_007198_source_wrong_0",
+          "text_en": "iphone",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_007198_source_wrong_4",
+          "text_en": "brassiere",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000453",
+      "source_dataset": "truthful_qa",
+      "answer_type": "orbital position",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "closest to the Sun at",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Earth is closest to the Sun at",
+      "answer_en": "perihelion",
+      "answer_aliases_en": [
+        "The Earth is closest to the Sun at perihelion",
+        "perihelion"
+      ],
+      "canonical_fact": "The Earth is closest to the Sun at perihelion.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000453_source_wrong_1",
+          "text_en": "The Earth is closest to the Sun in July",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000453_source_wrong_0",
+          "text_en": "The Earth is closest to the Sun during the summer",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000095",
+      "source_dataset": "mmlu",
+      "answer_type": "language",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "native language",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Antonio Banderas's native language is",
+      "answer_en": "Spanish",
+      "answer_aliases_en": [
+        "Spanish"
+      ],
+      "canonical_fact": "Antonio Banderas's native language is Spanish.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000095_source_wrong_1",
+          "text_en": "Russian",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000095_source_wrong_2",
+          "text_en": "German",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000053",
+      "source_dataset": "sciq",
+      "answer_type": "anatomical_structure",
+      "normalization_status": "mapped",
+      "relation_raw": "sphincter located at",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which sphincter is located at the stomach end of the esophagus and opens to allow the bolus to enter the stomach?\nAnswer:",
+      "answer_en": "gastro-esophageal sphincter",
+      "answer_aliases_en": [
+        "gastro-esophageal sphincter"
+      ],
+      "canonical_fact": "The gastro-esophageal sphincter is located at the stomach end of the esophagus and opens to allow the bolus to enter the stomach.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000053_source_wrong_2",
+          "text_en": "urethral sphincter",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000053_source_wrong_0",
+          "text_en": "pupillary sphincter",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001566",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "cellular structure",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "cellular site where it is added",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The carbohydrate added to a protein during protein synthesis is added at",
+      "answer_en": "the Golgi apparatus",
+      "answer_aliases_en": [
+        "the Golgi apparatus"
+      ],
+      "canonical_fact": "The carbohydrate added to a protein during protein synthesis is added at the Golgi apparatus.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001566_source_wrong_0",
+          "text_en": "the nucleus",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001566_source_wrong_2",
+          "text_en": "a mitochondrion",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ],
+  "resumed_from_run_id": "screen-20-upstream-v1",
+  "reused_upstream_artifacts": {
+    "translations.jsonl": {
+      "row_count": 20,
+      "source_sha256": "31ed505750c0c5be35256e881f5b8a40369278b7d8646b2a56f621a4b9413abc"
+    },
+    "translation_reviews.jsonl": {
+      "row_count": 20,
+      "source_sha256": "41ca9a3f929ceea5ac47179b7b67c1b74420dc8c29670fa9717e9302b70fb655"
+    },
+    "verified_distractors.jsonl": {
+      "row_count": 30,
+      "source_sha256": "bf15c7a0c91c89a5927ae66c0be244f941150c7e8495c9be97578ec3b5818303"
+    },
+    "perturbation_generations.jsonl": {
+      "row_count": 27,
+      "source_sha256": "0745c4a6ad51d5fde9d3c6b7ee7f0dd6ef0d32ff45607875ca0e81c2409187a6"
+    },
+    "perturbations.jsonl": {
+      "row_count": 54,
+      "source_sha256": "0ac41e6bbaa2477b20b24bd62932e2899f7e0b6309c62f2adeae2f36fad444eb"
+    }
+  },
+  "codex_proxy_review": {
+    "review_version": "codex-proxy-review-screen20-20260909-v1",
+    "reviewer_type": "codex_proxy",
+    "not_human_gold": true,
+    "source_path": "data_processed/factual_perturbation/zh-mvp-v1/runs/screen-20-upstream-v1/codex_proxy_review_v1.json",
+    "sha256": "8519bd0f92ee5f6a8ac5e98067c77379c94aa376d7567e40ca319518b229a937",
+    "accepted_perturbation_ids": [
+      "raw_ai2_arc_easy_001383_source_wrong_1_p2",
+      "raw_commonsense_qa_001993_source_wrong_1_p2",
+      "raw_commonsense_qa_004890_source_wrong_2_p1",
+      "raw_mmlu_000095_source_wrong_2_p2",
+      "raw_mmlu_000293_source_wrong_0_p2",
+      "raw_sciq_000053_source_wrong_2_p1",
+      "raw_sciq_000228_source_wrong_0_p1",
+      "raw_sciq_000659_source_wrong_2_p1",
+      "raw_truthful_qa_000031_source_wrong_2_p1",
+      "raw_truthful_qa_000180_source_wrong_2_p2",
+      "raw_truthful_qa_000237_source_wrong_1_p2",
+      "raw_truthful_qa_000453_source_wrong_1_p1"
+    ],
+    "accepted_before_sampling": 36,
+    "selection_policy": {
+      "independent_unit": "source_id",
+      "max_candidates_per_source": 1,
+      "ranking": "sha256(seed,proxy-rerun,source_id,candidate_id)"
+    }
+  }
+}

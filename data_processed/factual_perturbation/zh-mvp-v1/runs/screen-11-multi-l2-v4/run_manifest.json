@@ -1,0 +1,490 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "screen-11-multi-l2-v4",
+  "created_at": "2026-09-09T11:22:53.417159+00:00",
+  "config_version": "factual-perturbation-zh-multi-v4",
+  "config_sha256": "811988e6fd767971e4325626bdd6011febd8aefede227e93ba14589c4c936e67",
+  "runtime_sha256": "7cfbde9fa658f96420f028e13472a1cb250cd31f07bdb5c87956e5ced9af26ff",
+  "config_amendments": [
+    {
+      "changed_at": "2026-09-09T09:44:34.774304+00:00",
+      "from_config_sha256": "8192f8e8917f74bcede8f6f1904a8c80c72bf501e399c5cb3fae72a8dcdc8cb9",
+      "to_config_sha256": "333a1feb63a853c770c9b61e1159262809d0c22dacc405744b014456de8a720d",
+      "reason": "three-arm design remediation and Codex proxy-review filtering"
+    },
+    {
+      "changed_at": "2026-09-09T10:24:00.059562+00:00",
+      "from_config_sha256": "333a1feb63a853c770c9b61e1159262809d0c22dacc405744b014456de8a720d",
+      "to_config_sha256": "c91c10d42b0440c1f023ef1a0c7d4a2f6d9a27d2ff4f02edb93840227a0dcb73",
+      "reason": "regenerate frozen distractors with l1/l2 targeted contexts and matched neutral controls"
+    },
+    {
+      "changed_at": "2026-09-09T10:37:07.980026+00:00",
+      "from_config_sha256": "c91c10d42b0440c1f023ef1a0c7d4a2f6d9a27d2ff4f02edb93840227a0dcb73",
+      "to_config_sha256": "5b693b7f4d35aa356a4c22d1dbca3bd2b8bf249f16a5255ee17cfaba1fb7911c",
+      "reason": "increase output budget after matched-pair structured responses were truncated"
+    },
+    {
+      "changed_at": "2026-09-09T11:22:53.417644+00:00",
+      "from_config_sha256": "5b693b7f4d35aa356a4c22d1dbca3bd2b8bf249f16a5255ee17cfaba1fb7911c",
+      "to_config_sha256": "811988e6fd767971e4325626bdd6011febd8aefede227e93ba14589c4c936e67",
+      "reason": "three-arm design remediation and Codex proxy-review filtering"
+    }
+  ],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 20,
+  "selected_count": 12,
+  "excluded_source_count": 10,
+  "excluded_source_ids_sha256": "e096ff67031e2a364e2e7ff10d310c8047f18b27b824811f8bdebfed24eb1e8a",
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.5,
+  "currency_cost_gate": null,
+  "simulation_models": [
+    "qwen3.6-27b",
+    "bailian/deepseek-v3.2",
+    "gpt-5-mini",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original"
+  ],
+  "simulation_requires_codex_proxy_review": true,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_001993",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "musical ensemble",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "ensemble type",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "A viola along with three other instruments is heard in a",
+      "answer_en": "string quartet",
+      "answer_aliases_en": [
+        "string quartet"
+      ],
+      "canonical_fact": "A viola along with three other instruments is heard in a string quartet.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_001993_source_wrong_1",
+          "text_en": "string quintent",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_001993_source_wrong_3",
+          "text_en": "orchestra",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000031",
+      "source_dataset": "truthful_qa",
+      "answer_type": "boolean",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "can be arrested for the same crime",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Can a husband and wife be arrested for the same crime in the U.S.?\nAnswer:",
+      "answer_en": "Yes",
+      "answer_aliases_en": [
+        "Yes",
+        "Yes, a husband and wife can be arrested for the same crime"
+      ],
+      "canonical_fact": "A husband and wife in the U.S. can be arrested for the same crime.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000031_source_wrong_2",
+          "text_en": "No, only the husband will be arrested",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000031_source_wrong_0",
+          "text_en": "No, a husband and wife cannot be arrested for the same crime",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_004890",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "medium",
+      "normalization_status": "mapped",
+      "relation_raw": "refers to",
+      "relation_normalized": "term_definition",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The term 'small screen' refers to",
+      "answer_en": "television",
+      "answer_aliases_en": [
+        "television"
+      ],
+      "canonical_fact": "The term 'small screen' refers to television.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_004890_source_wrong_1",
+          "text_en": "cell phone",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_004890_source_wrong_2",
+          "text_en": "movies",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000237",
+      "source_dataset": "truthful_qa",
+      "answer_type": "place",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "largest desert",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What is the largest desert in the world?\nAnswer:",
+      "answer_en": "Antarctic Desert",
+      "answer_aliases_en": [
+        "Antarctic Desert",
+        "The Antarctic Desert is the largest desert in the world"
+      ],
+      "canonical_fact": "The Antarctic Desert is the largest desert in the world.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000237_source_wrong_1",
+          "text_en": "The Arctic Desert is the largest desert in the world",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000237_source_wrong_0",
+          "text_en": "The Sahara Desert is the largest desert in the world",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000293",
+      "source_dataset": "mmlu",
+      "answer_type": "quantity",
+      "normalization_status": "mapped",
+      "relation_raw": "number of periods",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: How many periods are there in an ice hockey game?\nAnswer:",
+      "answer_en": "Three",
+      "answer_aliases_en": [
+        "Three"
+      ],
+      "canonical_fact": "An ice hockey game has three periods.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000293_source_wrong_0",
+          "text_en": "One",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000293_source_wrong_1",
+          "text_en": "Two",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000659",
+      "source_dataset": "sciq",
+      "answer_type": "action",
+      "normalization_status": "mapped",
+      "relation_raw": "causes the Moon to",
+      "relation_normalized": "cause_effect",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Earth's gravitational force causes the Moon to",
+      "answer_en": "orbit the earth",
+      "answer_aliases_en": [
+        "orbit the earth"
+      ],
+      "canonical_fact": "The Earth's gravitational force causes the Moon to orbit the Earth.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000659_source_wrong_0",
+          "text_en": "overlap the earth",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000659_source_wrong_2",
+          "text_en": "lose orbit",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000180",
+      "source_dataset": "truthful_qa",
+      "answer_type": "drink",
+      "normalization_status": "mapped",
+      "relation_raw": "drink taken with poison during mass suicide",
+      "relation_normalized": "entity_measurement",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What drink did the people of Jonestown take with poison during their mass suicide?\nAnswer:",
+      "answer_en": "grape Flavor-Aid",
+      "answer_aliases_en": [
+        "The people of Jonestown drank poisoned grape Flavor-Aid",
+        "grape Flavor-Aid"
+      ],
+      "canonical_fact": "The people of Jonestown drank poisoned grape Flavor-Aid during their mass suicide.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000180_source_wrong_2",
+          "text_en": "The people of Jonestown drank poisoned grape Kool-Aid",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000180_source_wrong_0",
+          "text_en": "The people of Jonestown drank Kool-Aid during their mass suicide",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000228",
+      "source_dataset": "sciq",
+      "answer_type": "biological_process",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What process, which is analogous to mitosis, is a series of events that arrange and separate chromosomes and chromatids into daughter cells?\nAnswer:",
+      "answer_en": "meiosis",
+      "answer_aliases_en": [
+        "meiosis"
+      ],
+      "canonical_fact": "Meiosis is the process analogous to mitosis that arranges and separates chromosomes and chromatids into daughter cells.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000228_source_wrong_0",
+          "text_en": "apoptosis",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000228_source_wrong_2",
+          "text_en": "digestion",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_001383",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "cellular_organelle",
+      "normalization_status": "mapped",
+      "relation_raw": "cellular organelle where it occurs",
+      "relation_normalized": "process_location",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the",
+      "answer_en": "mitochondria",
+      "answer_aliases_en": [
+        "mitochondria"
+      ],
+      "canonical_fact": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the mitochondria.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_001383_source_wrong_1",
+          "text_en": "cytoplasm",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_001383_source_wrong_3",
+          "text_en": "endoplasmic reticulum",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000453",
+      "source_dataset": "truthful_qa",
+      "answer_type": "orbital position",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "closest to the Sun at",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The Earth is closest to the Sun at",
+      "answer_en": "perihelion",
+      "answer_aliases_en": [
+        "The Earth is closest to the Sun at perihelion",
+        "perihelion"
+      ],
+      "canonical_fact": "The Earth is closest to the Sun at perihelion.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000453_source_wrong_1",
+          "text_en": "The Earth is closest to the Sun in July",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000453_source_wrong_0",
+          "text_en": "The Earth is closest to the Sun during the summer",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000095",
+      "source_dataset": "mmlu",
+      "answer_type": "language",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "native language",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Antonio Banderas's native language is",
+      "answer_en": "Spanish",
+      "answer_aliases_en": [
+        "Spanish"
+      ],
+      "canonical_fact": "Antonio Banderas's native language is Spanish.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000095_source_wrong_1",
+          "text_en": "Russian",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000095_source_wrong_2",
+          "text_en": "German",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000053",
+      "source_dataset": "sciq",
+      "answer_type": "anatomical_structure",
+      "normalization_status": "mapped",
+      "relation_raw": "sphincter located at",
+      "relation_normalized": "entity_location",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which sphincter is located at the stomach end of the esophagus and opens to allow the bolus to enter the stomach?\nAnswer:",
+      "answer_en": "gastro-esophageal sphincter",
+      "answer_aliases_en": [
+        "gastro-esophageal sphincter"
+      ],
+      "canonical_fact": "The gastro-esophageal sphincter is located at the stomach end of the esophagus and opens to allow the bolus to enter the stomach.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000053_source_wrong_2",
+          "text_en": "urethral sphincter",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000053_source_wrong_0",
+          "text_en": "pupillary sphincter",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ],
+  "resumed_from_run_id": "screen-12-strength-upstream-v3",
+  "reused_upstream_artifacts": {
+    "translations.jsonl": {
+      "row_count": 12,
+      "source_sha256": "3824fa7588bd54f55b85e05d30974a28e73b708f7ab64988ac9848566627e3fc"
+    },
+    "translation_reviews.jsonl": {
+      "row_count": 12,
+      "source_sha256": "66263b41e9b5f4ee8b773466677ed18d67069d84e81017e50dc1d15e25bb6da2"
+    },
+    "verified_distractors.jsonl": {
+      "row_count": 24,
+      "source_sha256": "99fd13c40ba926a9a9a2f96d378ddfe3ad18382481a2c8847b42985e7d826221"
+    },
+    "perturbation_generations.jsonl": {
+      "row_count": 23,
+      "source_sha256": "f9e674488553de501f09045b2e22be3fa9e709f6c63defdeeaa91e6d112de325"
+    },
+    "perturbations.jsonl": {
+      "row_count": 46,
+      "source_sha256": "6a2ff712b6715216f550e4e0d8a7334cf74c6d6ce0cc9c34dc69a578de390874"
+    }
+  },
+  "codex_proxy_review": {
+    "review_version": "codex-proxy-review-strength-screen-20260909-v1",
+    "reviewer_type": "codex_proxy",
+    "not_human_gold": true,
+    "source_path": "data_processed/factual_perturbation/zh-mvp-v1/runs/screen-12-strength-upstream-v3/codex_proxy_review_v1.json",
+    "sha256": "83e6a3fe0644961aaa8fccb284a2a270979c6ecba496a317fc31ff7c7c72ac6b",
+    "accepted_perturbation_ids": [
+      "raw_ai2_arc_easy_001383_source_wrong_1_p2",
+      "raw_commonsense_qa_004890_source_wrong_2_p2",
+      "raw_mmlu_000095_source_wrong_2_p2",
+      "raw_mmlu_000293_source_wrong_0_p2",
+      "raw_sciq_000053_source_wrong_2_p2",
+      "raw_sciq_000228_source_wrong_0_p2",
+      "raw_sciq_000659_source_wrong_2_p2",
+      "raw_truthful_qa_000031_source_wrong_2_p2",
+      "raw_truthful_qa_000180_source_wrong_2_p2",
+      "raw_truthful_qa_000237_source_wrong_1_p2",
+      "raw_truthful_qa_000453_source_wrong_1_p2"
+    ],
+    "accepted_before_sampling": 22,
+    "selection_policy": {
+      "independent_unit": "source_id",
+      "max_candidates_per_source": null,
+      "strength_filter": "l2",
+      "ranking": "sha256(seed,proxy-rerun,source_id,candidate_id)"
+    }
+  },
+  "neutral_context_mode": "matched_per_candidate",
+  "source_candidate_ids": [
+    "raw_ai2_arc_easy_001383_source_wrong_1_p2",
+    "raw_commonsense_qa_001993_source_wrong_1_p2",
+    "raw_commonsense_qa_004890_source_wrong_2_p1",
+    "raw_mmlu_000095_source_wrong_2_p2",
+    "raw_mmlu_000293_source_wrong_0_p2",
+    "raw_sciq_000053_source_wrong_2_p1",
+    "raw_sciq_000228_source_wrong_0_p1",
+    "raw_sciq_000659_source_wrong_2_p1",
+    "raw_truthful_qa_000031_source_wrong_2_p1",
+    "raw_truthful_qa_000180_source_wrong_2_p2",
+    "raw_truthful_qa_000237_source_wrong_1_p2",
+    "raw_truthful_qa_000453_source_wrong_1_p1"
+  ],
+  "simulation_endpoint": "multi_option",
+  "simulation_max_options": 3
+}

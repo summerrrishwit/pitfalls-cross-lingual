@@ -1,0 +1,33 @@
+{
+  "extends": "configs/factual_perturbation_zh_sensitivity_v2.json",
+  "config_version": "factual-perturbation-zh-strength-v3",
+  "model_roles": {
+    "perturbation_generation": {
+      "candidates_per_distractor": 2,
+      "max_output_tokens": 2048,
+      "strength_levels": [
+        "l1",
+        "l2"
+      ],
+      "matched_neutral": true
+    },
+    "perturbation_validation": {
+      "required_checks": [
+        "ground_truth_preserved",
+        "no_explicit_falsehood",
+        "relation_preserved",
+        "bilingual_equivalent",
+        "naturalness",
+        "target_distractor_salience",
+        "no_prompt_duplication",
+        "neutral_truthful",
+        "neutral_no_answer_or_distractor_cue",
+        "neutral_matched",
+        "strength_appropriate"
+      ]
+    },
+    "simulation": {
+      "neutral_context_mode": "matched_per_candidate"
+    }
+  }
+}

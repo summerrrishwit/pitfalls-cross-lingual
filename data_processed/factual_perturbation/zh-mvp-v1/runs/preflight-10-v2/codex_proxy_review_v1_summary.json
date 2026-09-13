@@ -1,0 +1,44 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-summary-v1",
+  "review_version": "codex-proxy-review-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "preflight-10-v2",
+  "coverage": {
+    "translations": 10,
+    "distractors": 14,
+    "perturbations": 22,
+    "provisional_outcomes": 3,
+    "failed_simulations": 2
+  },
+  "decisions": {
+    "translations": {"accept": 7, "reject": 3, "needs_adjudication": 0},
+    "distractors": {"accept": 7, "reject": 3, "needs_adjudication": 4},
+    "perturbations": {"accept": 6, "reject": 8, "needs_adjudication": 8},
+    "provisional_outcomes": {"accept": 0, "reject": 1, "needs_adjudication": 2},
+    "failed_simulations": {"accept": 0, "reject": 2, "needs_adjudication": 0}
+  },
+  "eligible_for_three_arm_rerun": [
+    "raw_ai2_arc_easy_000734_source_wrong_1_p1",
+    "raw_ai2_arc_easy_000734_source_wrong_1_p2",
+    "raw_ai2_arc_easy_000421_source_wrong_3_p1",
+    "raw_ai2_arc_easy_000421_source_wrong_3_p2",
+    "raw_mmlu_000042_source_wrong_3_p2",
+    "raw_mmlu_000042_source_wrong_0_p2"
+  ],
+  "confirmed_paths_not_taken_candidates": [],
+  "gate_passed": false,
+  "gate_reasons": [
+    "legacy_simulation_design_has_no_neutral_control",
+    "baseline_response_inconsistent",
+    "currency_cost_not_auditable",
+    "no_confirmed_paths_not_taken_candidate"
+  ],
+  "findings": [
+    "The prior model review over-accepted distractors whose source fact is disputed or time-sensitive.",
+    "Six of twenty-two perturbations satisfy the stricter semantic and target-salience criteria.",
+    "The cleanest provisional effect remains a single-model Chinese flip and requires the new three-arm rerun.",
+    "The two permanent simulation failures belong to a source sample excluded by proxy review, but hy4-preview reliability remains an engineering concern."
+  ],
+  "next_action": "Run the six accepted perturbations under original, neutral, and targeted arms with shared baselines before expanding by approximately twenty paired-control base triples."
+}

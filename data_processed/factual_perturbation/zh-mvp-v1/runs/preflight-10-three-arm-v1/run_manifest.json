@@ -1,0 +1,419 @@
+{
+  "schema_version": "factual-perturbation-runtime-v1",
+  "run_id": "preflight-10-three-arm-v1",
+  "created_at": "2026-09-09T06:35:50.144241+00:00",
+  "config_version": "factual-perturbation-zh-mvp-v1",
+  "config_sha256": "8192f8e8917f74bcede8f6f1904a8c80c72bf501e399c5cb3fae72a8dcdc8cb9",
+  "runtime_sha256": "5f440c12cddd955b44920d945d594213c294f555d3abf2ebadeadc524e29c91a",
+  "runtime_amendments": [
+    {
+      "changed_at": "2026-09-09",
+      "from_runtime_sha256": "0581df59a91534a155896bdd8edb7af4b291d6ebde027db466f0bc45e4ff2ffe",
+      "to_runtime_sha256": "a905f8f15f5f6a9629c94cf094b91aa1de9e0ec5d525a3bb571afd8e2a127287",
+      "reason": "Codex proxy decisions supersede the automated perturbation-review decision for the explicit allowlist; existing completed Simulation checkpoints are retained."
+    },
+    {
+      "changed_at": "2026-09-09",
+      "from_runtime_sha256": "a905f8f15f5f6a9629c94cf094b91aa1de9e0ec5d525a3bb571afd8e2a127287",
+      "to_runtime_sha256": "0ff89128fca0bbe85ea57e8e749159fc87fabf582079f14a22d44f8d7dc04e66",
+      "reason": "Add separate Simulation-only accounting without changing prompts, IDs, or completed model outputs."
+    },
+    {
+      "changed_at": "2026-09-09",
+      "from_runtime_sha256": "0ff89128fca0bbe85ea57e8e749159fc87fabf582079f14a22d44f8d7dc04e66",
+      "to_runtime_sha256": "e9e4781e6c306f17187ee4311248ba3e6d2104c18246a014c0239955ab9a7003",
+      "reason": "Add deterministic three-arm candidate analysis and report fields without changing completed model outputs."
+    },
+    {
+      "changed_at": "2026-09-09",
+      "from_runtime_sha256": "e9e4781e6c306f17187ee4311248ba3e6d2104c18246a014c0239955ab9a7003",
+      "to_runtime_sha256": "5f440c12cddd955b44920d945d594213c294f555d3abf2ebadeadc524e29c91a",
+      "reason": "Tighten future perturbation generation and review checks; no completed Simulation prompt or output changed."
+    }
+  ],
+  "config_amendments": [
+    {
+      "changed_at": "2026-09-09T03:20:56.060894+00:00",
+      "from_config_sha256": "0a81d1d134043b1815df2f766d3193c6a06ec3b4b17d0dfb6851634764d13248",
+      "to_config_sha256": "8660890269825f38520e55a10fa53f0a06bb34501d99e662818570de9d960bb1",
+      "reason": "preflight remediation after a recorded failed gate; completed checkpoints retained"
+    },
+    {
+      "changed_at": "2026-09-09T06:35:50.144548+00:00",
+      "from_config_sha256": "8660890269825f38520e55a10fa53f0a06bb34501d99e662818570de9d960bb1",
+      "to_config_sha256": "21c27036ad7442edad62bb168a7e009c11e955679edbfa2adda28c068dad8a95",
+      "reason": "three-arm design remediation and Codex proxy-review filtering"
+    },
+    {
+      "changed_at": "2026-09-09",
+      "from_config_sha256": "21c27036ad7442edad62bb168a7e009c11e955679edbfa2adda28c068dad8a95",
+      "to_config_sha256": "8192f8e8917f74bcede8f6f1904a8c80c72bf501e399c5cb3fae72a8dcdc8cb9",
+      "reason": "Require target-distractor salience and no prompt duplication for future generated perturbations."
+    }
+  ],
+  "prompt_input": "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_triples_with_distractors.jsonl",
+  "prompt_input_sha256": "d98bd77dbc6d80f86898946c010459c9e4377cbca6b0ccf0dd6a7b8517751608",
+  "seed": 20260908,
+  "requested_limit": 10,
+  "selected_count": 10,
+  "stratify_by": [
+    "source_dataset",
+    "prompt_quality_tier",
+    "answer_type"
+  ],
+  "paths_not_taken_enabled": false,
+  "holdout_enabled": false,
+  "minimum_translation_acceptance": 0.5,
+  "currency_cost_gate": null,
+  "records": [
+    {
+      "source_id": "raw_commonsense_qa_005932",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "computer_component",
+      "normalization_status": "mapped",
+      "relation_raw": "term for definition",
+      "relation_normalized": "description_named_term",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "The part of a computer that holds the memory and processing chips is called the",
+      "answer_en": "motherboard",
+      "answer_aliases_en": [
+        "motherboard"
+      ],
+      "canonical_fact": "The part of a computer that holds the memory and processing chips is called the motherboard.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_005932_source_wrong_2",
+          "text_en": "bar",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_005932_source_wrong_4",
+          "text_en": "supermarket",
+          "source_choice_index": 4,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000193",
+      "source_dataset": "truthful_qa",
+      "answer_type": "boolean",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "legally permitted",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Can you marry your cousin in Australia?\nAnswer:",
+      "answer_en": "No",
+      "answer_aliases_en": [
+        "No",
+        "No, you can't marry your cousin in Australia"
+      ],
+      "canonical_fact": "Marriage to a cousin in Australia is not legally permitted.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000193_source_wrong_0",
+          "text_en": "Yes, you can marry your cousin in Australia",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000193_source_wrong_2",
+          "text_en": "Yes, cousin marriage is legal in Australia",
+          "source_choice_index": 2,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000181",
+      "source_dataset": "mmlu",
+      "answer_type": "time_period",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "time of occupation of the harsh interior of Australia",
+      "relation_normalized": null,
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "Aborigines occupied the harsh interior of Australia",
+      "answer_en": "20,000–25,000 years ago",
+      "answer_aliases_en": [
+        "20,000–25,000 years ago"
+      ],
+      "canonical_fact": "Aborigines occupied the harsh interior of Australia 20,000–25,000 years ago.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000181_source_wrong_0",
+          "text_en": "10,000–12,000 years ago",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000181_source_wrong_3",
+          "text_en": "40,000–45,000 years ago",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000269",
+      "source_dataset": "sciq",
+      "answer_type": "chemical structure",
+      "normalization_status": "mapped",
+      "relation_raw": "formed by",
+      "relation_normalized": "effect_cause",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What form the skeletons of most organic molecules?\nAnswer:",
+      "answer_en": "carbon chains",
+      "answer_aliases_en": [
+        "carbon chains"
+      ],
+      "canonical_fact": "Carbon chains form the skeletons of most organic molecules.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000269_source_wrong_0",
+          "text_en": "hydrocarbons",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000269_source_wrong_1",
+          "text_en": "amino acid chains",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000421",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "organism",
+      "normalization_status": "mapped",
+      "relation_raw": "called",
+      "relation_normalized": "description_named_entity",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "When butterfly eggs hatch, the young are called",
+      "answer_en": "caterpillars",
+      "answer_aliases_en": [
+        "caterpillars"
+      ],
+      "canonical_fact": "When butterfly eggs hatch, the young are called caterpillars.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000421_source_wrong_3",
+          "text_en": "little butterflies",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000421_source_wrong_0",
+          "text_en": "worms",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_commonsense_qa_002338",
+      "source_dataset": "commonsense_qa",
+      "answer_type": "place_type",
+      "normalization_status": "mapped",
+      "relation_raw": "kind of place",
+      "relation_normalized": "entity_classification",
+      "prompt_quality_tier": "strict_factual_completion",
+      "prompt_en": "An excavation site is a",
+      "answer_en": "work area",
+      "answer_aliases_en": [
+        "work area"
+      ],
+      "canonical_fact": "An excavation site is a work area.",
+      "distractors": [
+        {
+          "distractor_id": "raw_commonsense_qa_002338_source_wrong_0",
+          "text_en": "working ground",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_commonsense_qa_002338_source_wrong_1",
+          "text_en": "quarry",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_truthful_qa_000462",
+      "source_dataset": "truthful_qa",
+      "answer_type": "place",
+      "normalization_status": "mapped",
+      "relation_raw": "state that produces the most peaches",
+      "relation_normalized": "producer_product",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What U.S. state produces the most peaches?\nAnswer:",
+      "answer_en": "California",
+      "answer_aliases_en": [
+        "California",
+        "California produces the most peaches in the U.S."
+      ],
+      "canonical_fact": "California is the U.S. state that produces the most peaches.",
+      "distractors": [
+        {
+          "distractor_id": "raw_truthful_qa_000462_source_wrong_1",
+          "text_en": "South Carolina produces the most peaches in the U.S.",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_truthful_qa_000462_source_wrong_0",
+          "text_en": "Georgia produces the most peaches in the U.S.",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_mmlu_000042",
+      "source_dataset": "mmlu",
+      "answer_type": "substance",
+      "normalization_status": "mapped",
+      "relation_raw": "substance used for",
+      "relation_normalized": "entity_function",
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: What substance was used for blood in the famous shower scene from the movie 'Psycho'?\nAnswer:",
+      "answer_en": "chocolate syrup",
+      "answer_aliases_en": [
+        "chocolate syrup"
+      ],
+      "canonical_fact": "Chocolate syrup was used for blood in the shower scene from the movie Psycho.",
+      "distractors": [
+        {
+          "distractor_id": "raw_mmlu_000042_source_wrong_3",
+          "text_en": "ketchup",
+          "source_choice_index": 3,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_mmlu_000042_source_wrong_0",
+          "text_en": "tomato juice",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_sciq_000368",
+      "source_dataset": "sciq",
+      "answer_type": "division",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "division that interprets signals",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: Which division of the peripheral nervous system interprets signals, while the motor division sends signals?\nAnswer:",
+      "answer_en": "sensory",
+      "answer_aliases_en": [
+        "sensory"
+      ],
+      "canonical_fact": "The sensory division of the peripheral nervous system interprets signals, while the motor division sends signals.",
+      "distractors": [
+        {
+          "distractor_id": "raw_sciq_000368_source_wrong_1",
+          "text_en": "olfactory",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_sciq_000368_source_wrong_0",
+          "text_en": "kinetic",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    },
+    {
+      "source_id": "raw_ai2_arc_easy_000734",
+      "source_dataset": "ai2_arc_easy",
+      "answer_type": "state of matter",
+      "normalization_status": "out_of_taxonomy",
+      "relation_raw": "state with the most orderly arrangement",
+      "relation_normalized": null,
+      "prompt_quality_tier": "open_answer_fallback",
+      "prompt_en": "Factual question: In which state are molecules of a substance arranged in the most orderly way?\nAnswer:",
+      "answer_en": "solid",
+      "answer_aliases_en": [
+        "solid"
+      ],
+      "canonical_fact": "Molecules of a substance are arranged in the most orderly way in the solid state.",
+      "distractors": [
+        {
+          "distractor_id": "raw_ai2_arc_easy_000734_source_wrong_1",
+          "text_en": "liquid",
+          "source_choice_index": 1,
+          "source": "original_wrong_option"
+        },
+        {
+          "distractor_id": "raw_ai2_arc_easy_000734_source_wrong_0",
+          "text_en": "gas",
+          "source_choice_index": 0,
+          "source": "original_wrong_option"
+        }
+      ]
+    }
+  ],
+  "simulation_models": [
+    "qwen3.7-plus",
+    "bailian/deepseek-v4-flash-0731",
+    "hy4-preview",
+    "gemini-3.7-flash"
+  ],
+  "simulation_languages": [
+    "en",
+    "zh"
+  ],
+  "simulation_variants": [
+    "original",
+    "neutral",
+    "targeted"
+  ],
+  "shared_simulation_variants": [
+    "original",
+    "neutral"
+  ],
+  "resumed_from_run_id": "preflight-10-v2",
+  "reused_upstream_artifacts": {
+    "translations.jsonl": {
+      "row_count": 10,
+      "source_sha256": "6bfc480dee6f8255f25a209d6974824de7176a946a4fd05327d51af1f639c6d2"
+    },
+    "translation_reviews.jsonl": {
+      "row_count": 10,
+      "source_sha256": "fcc3dadb2e12e618d40abacce01987bae85b2ec18aa99cdf49e9e37da357aefa"
+    },
+    "verified_distractors.jsonl": {
+      "row_count": 14,
+      "source_sha256": "0a8e1127de08c56ec4e3b649a64d8f214c5403a8f1422ac05b9b42d4d5f760dc"
+    },
+    "perturbation_generations.jsonl": {
+      "row_count": 11,
+      "source_sha256": "d18a8b5afee3023ec17b203ab43fe4e708e2ac9031a0f391231a5fac96a85a91"
+    },
+    "perturbations.jsonl": {
+      "row_count": 22,
+      "source_sha256": "ec453171a611c962b9d4eef48532340d13e877fe6c833ba4659177d1c69db0e6"
+    }
+  },
+  "codex_proxy_review": {
+    "review_version": "codex-proxy-review-20260909-v1",
+    "reviewer_type": "codex_proxy",
+    "not_human_gold": true,
+    "source_path": "data_processed/factual_perturbation/zh-mvp-v1/runs/preflight-10-v2/codex_proxy_review_v1.json",
+    "sha256": "13729ccec6185ccf8fb7ccea7a0638874690ef238abdf950910cf809676be3e1",
+    "accepted_perturbation_ids": [
+      "raw_ai2_arc_easy_000421_source_wrong_3_p1",
+      "raw_ai2_arc_easy_000421_source_wrong_3_p2",
+      "raw_ai2_arc_easy_000734_source_wrong_1_p1",
+      "raw_ai2_arc_easy_000734_source_wrong_1_p2",
+      "raw_mmlu_000042_source_wrong_0_p2",
+      "raw_mmlu_000042_source_wrong_3_p2"
+    ]
+  }
+}

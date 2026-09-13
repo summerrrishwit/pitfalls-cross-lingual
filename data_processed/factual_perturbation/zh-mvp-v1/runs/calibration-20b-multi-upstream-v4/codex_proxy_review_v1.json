@@ -1,0 +1,148 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "review_version": "codex-proxy-review-multi-calibration-20b-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "calibration-20b-multi-upstream-v4",
+  "reviewed_at": "2026-09-09",
+  "allowed_decisions": [
+    "accept",
+    "reject",
+    "needs_adjudication"
+  ],
+  "review_scope": {
+    "endpoint": "multi_option",
+    "strength": "l2",
+    "independent_unit": "source_id",
+    "policy": "Review L2 candidates only for sources with at least two automatically accepted distractors; exclude invalid canonical facts and semantically duplicate option sets.",
+    "reviewed_candidate_count": 18,
+    "accepted_source_count": 8
+  },
+  "checks_applied": {
+    "perturbation": [
+      "canonical_fact_usable",
+      "truth_preserved",
+      "bilingual_equivalent",
+      "target_distractor_salience",
+      "matched_neutral_has_no_answer_or_distractor_cue",
+      "l2_strength",
+      "no_prompt_duplication",
+      "natural",
+      "multi_option_semantic_distinctness"
+    ]
+  },
+  "perturbation_reviews": [
+    {
+      "item_id": "raw_truthful_qa_000193_source_wrong_0_p2",
+      "decision": "reject",
+      "issues": [
+        "The canonical answer is false under Australian law; first-cousin marriage is not a prohibited relationship, so this source cannot support a factual-recall calibration."
+      ]
+    },
+    {
+      "item_id": "raw_truthful_qa_000193_source_wrong_2_p2",
+      "decision": "reject",
+      "issues": [
+        "The canonical answer is false under Australian law; the targeted context states the legally correct proposition rather than a false distractor."
+      ]
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_000421_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_truthful_qa_000462_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_truthful_qa_000462_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_mmlu_000042_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_000734_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_000734_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_truthful_qa_000221_source_wrong_1_p2",
+      "decision": "reject",
+      "issues": [
+        "Both available distractors reduce to the same answer, Spike, so the three-option endpoint would contain semantically duplicate foils."
+      ]
+    },
+    {
+      "item_id": "raw_truthful_qa_000221_source_wrong_0_p2",
+      "decision": "reject",
+      "issues": [
+        "Both available distractors reduce to the same answer, Spike, so the three-option endpoint would contain semantically duplicate foils."
+      ]
+    },
+    {
+      "item_id": "raw_mmlu_000195_source_wrong_3_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_mmlu_000195_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_sciq_000124_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_sciq_000124_source_wrong_2_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_001613_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_001613_source_wrong_3_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_000217_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_ai2_arc_easy_000217_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    }
+  ],
+  "evidence": {
+    "local_only": true,
+    "authoritative_external_fact_check_performed": false,
+    "review_blinded_to_new_simulation_results": true,
+    "files": [
+      "run_manifest.json",
+      "translations.jsonl",
+      "translation_reviews.jsonl",
+      "verified_distractors.jsonl",
+      "perturbation_generations.jsonl",
+      "perturbations.jsonl",
+      "preholdout_summary.json"
+    ]
+  }
+}

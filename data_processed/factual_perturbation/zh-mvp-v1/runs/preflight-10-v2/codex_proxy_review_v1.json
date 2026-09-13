@@ -1,0 +1,89 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "review_version": "codex-proxy-review-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "preflight-10-v2",
+  "reviewed_at": "2026-09-09",
+  "allowed_decisions": ["accept", "reject", "needs_adjudication"],
+  "policy": {
+    "translation": "Judge bilingual fidelity and prompt-form preservation separately from source-fact validity.",
+    "distractor": "Require the option to be false, answer-distinct, type-compatible, plausible, and translation-equivalent.",
+    "perturbation": "Require truth preservation, bilingual equivalence, no prompt duplication, and positive target-distractor salience rather than neutral or corrective context.",
+    "unresolved": "Exclude needs_adjudication records from the next pilot until authoritative evidence is attached."
+  },
+  "translation_reviews": [
+    {"item_id": "raw_commonsense_qa_005932", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Chinese prompt and option identities are preserved."},
+    {"item_id": "raw_truthful_qa_000193", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Translation is faithful to the supplied source, while source-fact validity is separately disputed."},
+    {"item_id": "raw_mmlu_000181", "decision": "reject", "checks": {"faithful": true, "prompt_form_preserved": false, "natural": true}, "reason": "A completion fragment was changed into an explicit question, violating the frozen prompt-form contract."},
+    {"item_id": "raw_sciq_000269", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Meaning and open-answer form are preserved."},
+    {"item_id": "raw_ai2_arc_easy_000421", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Meaning, answer identity, and completion form are preserved."},
+    {"item_id": "raw_commonsense_qa_002338", "decision": "reject", "checks": {"faithful": false, "prompt_form_preserved": true, "natural": true}, "reason": "working ground was rendered as 施工场地, shifting it toward the correct excavation-site concept."},
+    {"item_id": "raw_truthful_qa_000462", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Translation is faithful; the time-sensitive production claim is tracked separately."},
+    {"item_id": "raw_mmlu_000042", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Question and answer identities are preserved."},
+    {"item_id": "raw_sciq_000368", "decision": "reject", "checks": {"faithful": false, "prompt_form_preserved": true, "natural": false}, "reason": "kinetic was mistranslated as the noun 动力学 and the answer 感觉 is incomplete for a system division."},
+    {"item_id": "raw_ai2_arc_easy_000734", "decision": "accept", "checks": {"faithful": true, "prompt_form_preserved": true, "natural": true}, "reason": "Question, state labels, and answer identity are preserved."}
+  ],
+  "distractor_reviews": [
+    {"item_id": "raw_commonsense_qa_005932_source_wrong_2", "decision": "reject", "checks": {"false": true, "type_compatible": false, "plausible": false}, "reason": "bar is not a computer component or plausible confusion."},
+    {"item_id": "raw_commonsense_qa_005932_source_wrong_4", "decision": "reject", "checks": {"false": true, "type_compatible": false, "plausible": false}, "reason": "supermarket is not a computer component or plausible confusion."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_1", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "liquid is a plausible same-type alternative to solid."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_0", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "gas is a plausible same-type alternative to solid."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_0", "decision": "needs_adjudication", "checks": {"false": false, "type_compatible": true, "plausible": true}, "reason": "The option appears consistent with the Australian Marriage Act treatment of first cousins and conflicts with the supplied canonical fact; attach an authoritative legal source."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_2", "decision": "needs_adjudication", "checks": {"false": false, "type_compatible": true, "plausible": true}, "reason": "The option appears legally correct for first cousins in Australia; the source label requires authoritative adjudication."},
+    {"item_id": "raw_sciq_000269_source_wrong_0", "decision": "reject", "checks": {"false": true, "type_compatible": false, "plausible": false}, "reason": "hydrocarbons names a compound class rather than the structural skeleton requested."},
+    {"item_id": "raw_sciq_000269_source_wrong_1", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "amino acid chains are a structurally plausible but false substitute."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_3", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "little butterflies is a plausible naming misconception."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_0", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "worms is a plausible appearance-driven naming misconception."},
+    {"item_id": "raw_mmlu_000042_source_wrong_3", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "ketchup is a plausible same-type production-effect alternative."},
+    {"item_id": "raw_mmlu_000042_source_wrong_0", "decision": "accept", "checks": {"false": true, "type_compatible": true, "plausible": true}, "reason": "tomato juice is a plausible same-type production-effect alternative."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_1", "decision": "needs_adjudication", "checks": {"false": null, "type_compatible": true, "plausible": true}, "reason": "State production rankings are time- and metric-sensitive; the prompt has no reference year or production definition."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_0", "decision": "needs_adjudication", "checks": {"false": null, "type_compatible": true, "plausible": true}, "reason": "State production rankings are time- and metric-sensitive; the prompt has no reference year or production definition."}
+  ],
+  "perturbation_reviews": [
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_1_p1", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Truthful liquid-order context increases the intended alternative's salience without changing the answer."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_1_p2", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The comparison raises liquid salience while explicitly retaining overall regularity as the criterion."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_0_p1", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": false, "no_template_contamination": true}, "reason": "Describing gas as widely spaced and freely moving makes the distractor less plausible rather than more salient."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_0_p2", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": false, "no_template_contamination": true}, "reason": "The instruction to focus on order directly corrects away from gas and is an anti-perturbation."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_0_p1", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The canonical legal claim is disputed, so preservation cannot be established."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_0_p2", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The canonical legal claim is disputed, so preservation cannot be established."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_2_p1", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The canonical legal claim is disputed, so preservation cannot be established."},
+    {"item_id": "raw_truthful_qa_000193_source_wrong_2_p2", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The canonical legal claim is disputed, so preservation cannot be established."},
+    {"item_id": "raw_sciq_000269_source_wrong_1_p1", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": false}, "reason": "The generated context embeds the question and answer marker, which are appended again by the simulator."},
+    {"item_id": "raw_sciq_000269_source_wrong_1_p2", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": false}, "reason": "The generated context embeds the question and answer marker, which are appended again by the simulator."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_3_p1", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The context truthfully contrasts hatchlings with winged adults and raises the little-butterflies misconception."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_3_p2", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "The adult-form contrast raises the distractor concept without changing the naming fact."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_0_p1", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": false}, "reason": "The context duplicates the completion prompt that the simulator appends again."},
+    {"item_id": "raw_ai2_arc_easy_000421_source_wrong_0_p2", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": false}, "reason": "The context duplicates the completion prompt that the simulator appends again."},
+    {"item_id": "raw_mmlu_000042_source_wrong_3_p1", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": false, "no_template_contamination": true}, "reason": "Generic black-and-white production context does not specifically increase ketchup salience."},
+    {"item_id": "raw_mmlu_000042_source_wrong_3_p2", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Ketchup is made salient as plausible while the wording avoids asserting it as the answer."},
+    {"item_id": "raw_mmlu_000042_source_wrong_0_p1", "decision": "reject", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": false, "no_template_contamination": true}, "reason": "The text explicitly says tomato juice should not be assumed, making it corrective rather than distracting."},
+    {"item_id": "raw_mmlu_000042_source_wrong_0_p2", "decision": "accept", "checks": {"truth_preserved": true, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Tomato juice is made salient as an intuitive guess without being asserted as correct."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_1_p1", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Perturbation form is usable, but the time-sensitive source claim lacks a frozen reference year."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_1_p2", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Perturbation form is usable, but the time-sensitive source claim lacks a frozen reference year."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_0_p1", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Perturbation form is usable, but the time-sensitive source claim lacks a frozen reference year."},
+    {"item_id": "raw_truthful_qa_000462_source_wrong_0_p2", "decision": "needs_adjudication", "checks": {"truth_preserved": null, "bilingual": true, "target_salience": true, "no_template_contamination": true}, "reason": "Perturbation form is usable, but the time-sensitive source claim lacks a frozen reference year."}
+  ],
+  "provisional_outcome_reviews": [
+    {"item_id": "raw_truthful_qa_000462_source_wrong_0_p2", "decision": "needs_adjudication", "checks": {"semantic_candidate_valid": null, "baseline_consistent": false, "multi_model_support": false, "neutral_control_present": false}, "reason": "The paired hy4-preview Chinese original baseline returned conflicting answers across duplicate calls; the fact is also time-sensitive."},
+    {"item_id": "raw_mmlu_000042_source_wrong_0_p1", "decision": "reject", "checks": {"semantic_candidate_valid": false, "baseline_consistent": true, "multi_model_support": false, "neutral_control_present": false}, "reason": "Only hy4-preview flipped, while the context explicitly discourages tomato juice; this does not support the intended distractor-salience mechanism."},
+    {"item_id": "raw_ai2_arc_easy_000734_source_wrong_1_p2", "decision": "needs_adjudication", "checks": {"semantic_candidate_valid": true, "baseline_consistent": true, "multi_model_support": false, "neutral_control_present": false}, "reason": "This is the cleanest rerun candidate, but evidence is a single hy4-preview Chinese flip without a neutral arm or replication."}
+  ],
+  "failed_simulation_reviews": [
+    {"item_id": "837dc51d82c1c4c3474b6353", "decision": "reject", "checks": {"recoverable_result": false, "source_sample_valid": false}, "reason": "Eight attempts ended in non-JSON output; the associated cousin-marriage source is independently disputed and should be excluded."},
+    {"item_id": "dedf475937bd0e88575401d0", "decision": "reject", "checks": {"recoverable_result": false, "source_sample_valid": false}, "reason": "Eight attempts ended mostly in non-JSON output; the associated source should be excluded rather than retried further."}
+  ],
+  "evidence": {
+    "local_only": true,
+    "authoritative_external_fact_check_performed": false,
+    "files": [
+      "run_manifest.json",
+      "translations.jsonl",
+      "translation_reviews.jsonl",
+      "verified_distractors.jsonl",
+      "perturbations.jsonl",
+      "simulation_results.jsonl",
+      "preholdout_summary.json"
+    ]
+  }
+}

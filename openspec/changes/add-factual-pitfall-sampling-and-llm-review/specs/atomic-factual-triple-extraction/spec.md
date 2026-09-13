@@ -31,11 +31,15 @@ The extraction response SHALL contain `extraction_status=extracted|not_extractab
 - **THEN** `extraction_status` is `not_extractable`, one allowed exclusion reason is present, and every triple field is null
 
 ### Requirement: Source provenance is explicit
-Every terminal extraction record SHALL copy `source_id`, `source_dataset`, `source_question`, `source_choices`, and `source_answer` from its raw manifest snapshot. The model response MUST NOT overwrite these fields.
+Every terminal extraction record SHALL copy `source_id`, `source_dataset`, `source_question`, `source_choices`, and `source_answer` from its raw manifest snapshot. For explicit open-QA sources, `source_choices` SHALL be an empty list. The model response MUST NOT overwrite these fields.
 
 #### Scenario: Source choices are preserved
 - **WHEN** an extraction record is written
 - **THEN** `source_choices` exactly equals the original ordered choices in the raw source snapshot
+
+#### Scenario: Open-QA provenance is preserved without fabricated distractors
+- **WHEN** an explicit `source_format="open_qa"` extraction record is written
+- **THEN** `source_choices` is empty and no answer aliases are promoted to distractor choices
 
 ### Requirement: Local validation and resumable failures
 The system SHALL locally validate response JSON, status/field consistency, answer grounding, confidence range, and allowed exclusion reasons. Transport failures SHALL produce `extraction_failed`; invalid model output SHALL produce `validation_failed`; neither SHALL be treated as an extracted triple. Resume SHALL reject mixed extraction prompt versions or model IDs.

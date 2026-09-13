@@ -29,7 +29,7 @@ CANONICAL_POLICY_VERSION = "codex-adjudicated-canonical-v2"
 CANONICAL_REVIEW_PROMPT_VERSION = "canonical-triple-adjudication-v1"
 TAXONOMY_VERSION = "relation-taxonomy-v1"
 MAPPING_VERSION = "relation-mapping-v1"
-PROMPT_VERSION = "canonical-fact-factual-prompt-v1"
+PROMPT_VERSION = "canonical-fact-factual-prompt-v2"
 DISTRACTOR_VERSION = "source-wrong-option-v1"
 PREFERRED_MODEL = "sensenova-6.7-flash-lite"
 SECONDARY_MODEL = "qwen3.7-plus"
@@ -724,31 +724,39 @@ def canonical_fact_completion(canonical_fact: str, answer: str) -> Optional[str]
 def generate_factual_prompts(
     records: Iterable[Dict[str, Any]], taxonomy: Dict[str, Any]
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-    relations = taxonomy_by_id(taxonomy)
+    # Relation normalization is an optional statistical layer. Prompt
+    # readiness is determined only by reviewed canonical evidence.
+    del taxonomy
     outputs: List[Dict[str, Any]] = []
     for record in records:
-        relation_id = record.get("relation_normalized")
-        relation = relations.get(relation_id)
-        if record.get("normalization_status") != "mapped" or relation is None:
+        answer = str(record.get("answer") or "").strip()
+        canonical_fact = str(record.get("canonical_fact") or "").strip()
+        source_question = str(record.get("source_question") or "").strip()
+        if not answer or (not canonical_fact and not source_question):
             outputs.append(
                 {
                     **record,
                     "factual_prompt_version": PROMPT_VERSION,
-                    "factual_prompt_status": "not_generated_unresolved_relation",
+                    "factual_prompt_status": "rejected_invalid_canonical_fact",
                     "prompt_en": None,
                     "prompt_template_id": None,
+                    "prompt_source": None,
+                    "prompt_quality_tier": None,
+                    "prompt_expected_answer": answer or None,
+                    "prompt_rejection_reason": (
+                        "missing_answer" if not answer else "missing_canonical_fact_and_source_question"
+                    ),
                 }
             )
             continue
-        prompt = canonical_fact_completion(record["canonical_fact"], record["answer"])
+        prompt = canonical_fact_completion(canonical_fact, answer) if canonical_fact else None
         prompt_source = "canonical_fact_answer_suffix"
-        prompt_template_id = f"{relation_id}_canonical_fact_suffix_v1"
+        prompt_template_id = "canonical_fact_answer_suffix_en_v2"
         prompt_quality_tier = "strict_factual_completion"
         if prompt is None:
-            question = record["source_question"].strip()
-            prompt = f"Factual question: {question}\nAnswer:"
+            prompt = f"Factual question: {source_question}\nAnswer:"
             prompt_source = "source_question_open_answer_fallback"
-            prompt_template_id = "source_question_open_answer_en_v1"
+            prompt_template_id = "source_question_open_answer_en_v2"
             prompt_quality_tier = "open_answer_fallback"
         outputs.append(
             {
@@ -759,7 +767,8 @@ def generate_factual_prompts(
                 "prompt_template_id": prompt_template_id,
                 "prompt_source": prompt_source,
                 "prompt_quality_tier": prompt_quality_tier,
-                "prompt_expected_answer": record["answer"],
+                "prompt_expected_answer": answer,
+                "prompt_rejection_reason": None,
             }
         )
     counts = Counter(item["factual_prompt_status"] for item in outputs)
@@ -887,10 +896,10 @@ def validate_pipeline_outputs(
             errors.append(f"normalization status/relation mismatch: {record['source_id']}")
         prompt = prompt_by_id[record["source_id"]]
         generated = prompt["factual_prompt_status"] == "generated"
-        if generated != mapped:
-            errors.append(f"prompt status does not follow mapping: {record['source_id']}")
         if generated and (not prompt.get("prompt_en") or not prompt.get("prompt_expected_answer")):
             errors.append(f"generated prompt is incomplete: {record['source_id']}")
+        if not generated and not prompt.get("prompt_rejection_reason"):
+            errors.append(f"rejected prompt has no reason: {record['source_id']}")
 
     generated_ids = {
         item["source_id"] for item in prompts if item["factual_prompt_status"] == "generated"
@@ -921,7 +930,7 @@ def validate_pipeline_outputs(
                 errors.append(f"answer leaked into distractors: {record['source_id']}")
 
     result = {
-        "validation_version": "canonical-factual-pipeline-validation-v1",
+        "validation_version": "canonical-factual-pipeline-validation-v2",
         "valid": not errors,
         "error_count": len(errors),
         "errors": errors[:100],

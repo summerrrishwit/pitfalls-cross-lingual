@@ -97,6 +97,25 @@ class RawSamplingTests(unittest.TestCase):
         record["answer"] = "Not a choice"
         self.assertEqual(pipeline.raw_schema_error(record), "answer_not_in_choices")
 
+    def test_raw_schema_allows_explicit_open_qa_without_choices(self):
+        record = {
+            "question": "Who wrote Hamlet?",
+            "answer": "William Shakespeare",
+            "source": "mkqa",
+            "source_format": "open_qa",
+        }
+        self.assertIsNone(pipeline.raw_schema_error(record))
+        record["choices"] = ["William Shakespeare"]
+        self.assertEqual(pipeline.raw_schema_error(record), "open_qa_choices_must_be_empty")
+
+    def test_raw_schema_does_not_relax_unmarked_records(self):
+        record = {
+            "question": "Who wrote Hamlet?",
+            "answer": "William Shakespeare",
+            "source": "mkqa",
+        }
+        self.assertEqual(pipeline.raw_schema_error(record), "missing_or_empty_choices")
+
     def test_cross_source_dedup_and_manifest_contains_no_llm_fields(self):
         manifest = pipeline.build_raw_manifest(self.config, self.root, "test-run")
         selected_questions = [item["source_snapshot"]["record"]["question"] for item in manifest["candidates"]]
@@ -148,6 +167,32 @@ class RawSamplingTests(unittest.TestCase):
         )
         self.assertTrue(excluded.isdisjoint({item["candidate_id"] for item in second["candidates"]}))
         self.assertEqual(second["sampling_config"]["excluded_candidate_count"], 1)
+
+    def test_deduplication_baseline_excludes_existing_question(self):
+        baseline = self.root / "baseline.json"
+        baseline.write_text(
+            json.dumps([source_record("Capital of Germany?", source="existing")]),
+            encoding="utf-8",
+        )
+        with_baseline = {
+            **self.config,
+            "deduplicate_against": {"existing": str(baseline)},
+        }
+        manifest = pipeline.build_raw_manifest(with_baseline, self.root, "deduplicated")
+        questions = [
+            item["source_snapshot"]["record"]["question"] for item in manifest["candidates"]
+        ]
+        self.assertNotIn("Capital of Germany?", questions)
+        self.assertEqual(
+            manifest["deduplication_baselines"]["existing"]["valid_question_count"], 1
+        )
+        exclusions = manifest["source_datasets"]["sciq"]["exclusions"]
+        duplicate = next(
+            item
+            for item in exclusions
+            if item["reason"] == "duplicate_english_question" and item["original_index"] == 1
+        )
+        self.assertEqual(duplicate["duplicate_of"]["dataset"], "baseline:existing")
 
 
 class ExtractionContractTests(unittest.TestCase):
@@ -251,6 +296,35 @@ class ExtractionContractTests(unittest.TestCase):
         self.assertNotIn("prompt_en", record)
         self.candidate["source_snapshot"]["record"]["choices"][0] = "changed"
         self.assertEqual(record["source_choices"][0], "Paris")
+
+    @patch("factual_pitfalls.pipeline.call_extraction_model")
+    def test_terminal_open_qa_record_has_empty_source_choices(self, call):
+        item = candidate()
+        item["source_snapshot"]["record"].update(
+            {
+                "source_format": "open_qa",
+                "question": "Who wrote Hamlet?",
+                "answer": "William Shakespeare",
+            }
+        )
+        item["source_snapshot"]["record"].pop("choices")
+        call.return_value = {
+            "raw_response": json.dumps(
+                extracted_response(
+                    subject="Hamlet",
+                    subject_type="play",
+                    relation_raw="written by",
+                    answer="William Shakespeare",
+                    answer_type="person",
+                    canonical_fact="Hamlet was written by William Shakespeare.",
+                )
+            ),
+            "attempt_count": 1,
+            "error": None,
+        }
+        record = pipeline.extract_triple_candidate(item, self.config, client=None)
+        self.assertEqual(record["terminal_status"], "completed")
+        self.assertEqual(record["source_choices"], [])
 
     @patch("factual_pitfalls.pipeline.call_extraction_model")
     def test_sentence_answer_is_sent_to_model_for_object_normalization(self, call):
@@ -444,6 +518,58 @@ class LocalAdjudicationTests(unittest.TestCase):
         self.assertEqual(result["extraction"]["raw_response"], "original")
         self.assertEqual(result["validation_errors"], [])
         self.assertIn("prior", result["local_adjudication"])
+
+    def test_reviewed_override_can_resolve_permanent_extraction_failure(self):
+        record = {
+            "source_id": "raw_1",
+            "source_answer": "Jim Cummings",
+            "terminal_status": "extraction_failed",
+            "extraction_status": None,
+            "validation_errors": ["extraction_request_failed"],
+            "extraction_confidence": None,
+            "extraction": {
+                "raw_response": None,
+                "error": {"category": "permanent_failure"},
+                "program_adjustments": [],
+            },
+            **{field: None for field in pipeline.TRIPLE_FIELDS},
+        }
+        policy = {
+            "adjudication_version": "local-extraction-adjudication-v1",
+            "model": pipeline.TRIPLE_EXTRACTION_MODEL,
+            "prompt_version": pipeline.TRIPLE_EXTRACTION_PROMPT_VERSION,
+            "reviewer": "codex",
+            "decisions": [{
+                "source_id": "raw_1",
+                "action": "override_extracted",
+                "extraction_confidence": 1.0,
+                "fields": {
+                    "subject": "Winnie the Pooh",
+                    "subject_type": "fictional character",
+                    "relation_raw": "voiced by",
+                    "answer": "Jim Cummings",
+                    "answer_type": "person",
+                    "canonical_fact": "Winnie the Pooh is voiced by Jim Cummings.",
+                },
+                "rationale": "Resolve a reviewed provider-side content-filter false positive.",
+            }],
+        }
+        result = pipeline.apply_extraction_adjudications(
+            [record], policy, pipeline.TRIPLE_EXTRACTION_MODEL
+        )[0]
+        self.assertEqual(result["terminal_status"], "completed")
+        self.assertEqual(result["answer"], "Jim Cummings")
+        self.assertEqual(result["extraction_confidence"], 1.0)
+        self.assertEqual(
+            result["local_adjudication"]["prior"]["extraction_error"],
+            {"category": "permanent_failure"},
+        )
+        self.assertEqual(result["extraction"]["error"], {"category": "permanent_failure"})
+        self.assertEqual(result["validation_errors"], [])
+        self.assertIn(
+            "applied_reviewed_local_adjudication",
+            result["extraction"]["program_adjustments"],
+        )
 
     def test_reviewed_not_extractable_nulls_triple(self):
         record = {
@@ -659,6 +785,27 @@ class ResumeStageTests(unittest.TestCase):
         records = build_script.run_stage(inputs, self.output, "candidate_id", lambda item: [item["candidate_id"]], transform, True, True, None)
         self.assertEqual(calls, ["raw_1"])
         self.assertEqual(records[0]["retry_history"][0]["terminal_status"], "extraction_failed")
+
+    @patch.object(build_script, "write_jsonl")
+    def test_checkpoint_writes_are_batched(self, write_jsonl):
+        inputs = [{"candidate_id": f"raw_{index}"} for index in range(5)]
+
+        def transform(item):
+            return [{"candidate_id": item["candidate_id"], "terminal_status": "completed"}]
+
+        records = build_script.run_stage(
+            inputs,
+            self.output,
+            "candidate_id",
+            lambda item: [item["candidate_id"]],
+            transform,
+            False,
+            False,
+            None,
+            checkpoint_every=2,
+        )
+        self.assertEqual(len(records), 5)
+        self.assertEqual(write_jsonl.call_count, 3)
 
     def test_resume_rejects_old_audit_prompt_version(self):
         pipeline.write_jsonl(

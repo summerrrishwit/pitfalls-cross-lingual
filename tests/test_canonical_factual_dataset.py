@@ -145,6 +145,30 @@ class DownstreamConstructionTests(unittest.TestCase):
         self.assertEqual(distractor_summary["candidate_count"], 3)
         self.assertFalse(any(item["distractor_verified"] for item in expanded))
 
+    def test_unmapped_canonical_triple_still_generates_prompt(self):
+        normalized = {
+            **record(canonical.PREFERRED_MODEL),
+            "normalization_status": "out_of_taxonomy",
+            "relation_normalized": None,
+        }
+        prompts, summary = canonical.generate_factual_prompts([normalized], {"relations": []})
+        self.assertEqual(summary["status_counts"], {"generated": 1})
+        self.assertEqual(prompts[0]["factual_prompt_version"], "canonical-fact-factual-prompt-v2")
+        self.assertEqual(prompts[0]["prompt_en"], "The capital of France is")
+        self.assertIsNone(prompts[0]["relation_normalized"])
+
+    def test_missing_prompt_evidence_is_rejected_with_reason(self):
+        normalized = {
+            **record(canonical.PREFERRED_MODEL),
+            "canonical_fact": "",
+            "source_question": "",
+            "normalization_status": "ambiguous",
+            "relation_normalized": None,
+        }
+        prompts, summary = canonical.generate_factual_prompts([normalized], {"relations": []})
+        self.assertEqual(summary["status_counts"], {"rejected_invalid_canonical_fact": 1})
+        self.assertEqual(prompts[0]["prompt_rejection_reason"], "missing_canonical_fact_and_source_question")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,152 @@
+{
+  "schema_version": "public-benchmark-extraction-audit-v1",
+  "run_id": "public-benchmarks-full-v1",
+  "model": "qwen3.7-plus",
+  "prompt_version": "atomic-factual-triple-v6",
+  "audited_at": "2026-09-10T10:41:45Z",
+  "execution": {
+    "max_workers": 8,
+    "model_parallelism": 1,
+    "checkpoint_every": 100,
+    "single_writer": true,
+    "retry_failed_round_limit": 3,
+    "retry_failed_rounds_executed": 3
+  },
+  "integrity": {
+    "manifest_candidate_count": 20834,
+    "result_record_count": 20834,
+    "unique_candidate_id_count": 20834,
+    "missing_from_results": 0,
+    "unexpected_in_results": 0,
+    "duplicate_candidate_ids": 0,
+    "journal_present": false
+  },
+  "terminal_status_counts": {
+    "completed": 20834,
+    "extraction_failed": 0,
+    "validation_failed": 0
+  },
+  "extraction_status_counts": {
+    "extracted": 9059,
+    "not_extractable": 11775,
+    "null_due_to_extraction_failure": 0
+  },
+  "source_results": [
+    {
+      "source_dataset": "global_mmlu",
+      "candidate_count": 13565,
+      "completed": 13565,
+      "extracted": 3838,
+      "not_extractable": 9727,
+      "extraction_failed": 0,
+      "validation_failed": 0
+    },
+    {
+      "source_dataset": "mkqa",
+      "candidate_count": 6620,
+      "completed": 6620,
+      "extracted": 4944,
+      "not_extractable": 1676,
+      "extraction_failed": 0,
+      "validation_failed": 0
+    },
+    {
+      "source_dataset": "msqa_en",
+      "candidate_count": 151,
+      "completed": 151,
+      "extracted": 138,
+      "not_extractable": 13,
+      "extraction_failed": 0,
+      "validation_failed": 0
+    },
+    {
+      "source_dataset": "openbookqa",
+      "candidate_count": 498,
+      "completed": 498,
+      "extracted": 139,
+      "not_extractable": 359,
+      "extraction_failed": 0,
+      "validation_failed": 0
+    }
+  ],
+  "retry_history": {
+    "observation_basis": "checkpoint audit after the initial pass and after each retry-failed round",
+    "initial_pass": {
+      "failed_total": 12,
+      "extraction_failed": 2,
+      "validation_failed": 10
+    },
+    "round_1": {
+      "attempted": 12,
+      "recovered": 7,
+      "remaining_failed": 5,
+      "extraction_failed": 1,
+      "validation_failed": 4
+    },
+    "round_2": {
+      "attempted": 5,
+      "recovered": 3,
+      "remaining_failed": 2,
+      "extraction_failed": 1,
+      "validation_failed": 1
+    },
+    "round_3": {
+      "attempted": 2,
+      "recovered": 0,
+      "remaining_failed": 2,
+      "extraction_failed": 1,
+      "validation_failed": 1
+    }
+  },
+  "post_retry_adjudication": {
+    "policy": "data_processed/factual_triples/public-benchmarks-full-v1/models/qwen3.7-plus/local_validation_adjudication_v1.json",
+    "decisions_applied": 2,
+    "resolved_records": [
+      {
+        "candidate_id": "raw_mkqa_003461",
+        "prior_terminal_status": "extraction_failed",
+        "resolution": "reviewed exact-source factual override after repeated provider content-filter false positives"
+      },
+      {
+        "candidate_id": "raw_global_mmlu_006276",
+        "prior_terminal_status": "validation_failed",
+        "resolution": "reviewed override using the exact canonical source answer"
+      }
+    ]
+  },
+  "unresolved_records": [],
+  "resolved_after_retry_limit": [
+    {
+      "candidate_id": "raw_mkqa_003461",
+      "source_dataset": "mkqa",
+      "source_subset": "entity",
+      "prior_terminal_status": "extraction_failed",
+      "final_terminal_status": "completed"
+    },
+    {
+      "candidate_id": "raw_global_mmlu_006276",
+      "source_dataset": "global_mmlu",
+      "source_subset": "human_aging",
+      "prior_terminal_status": "validation_failed",
+      "final_terminal_status": "completed"
+    }
+  ],
+  "artifacts": {
+    "manifest": {
+      "path": "data_processed/factual_triples/public-benchmarks-full-v1/raw_source_manifest.json",
+      "sha256": "851def54b07a6cbc87339051eb8fdde5c0dd657d98faf540e0bd298c36d4a80b"
+    },
+    "results": {
+      "path": "data_processed/factual_triples/public-benchmarks-full-v1/models/qwen3.7-plus/triple_extractions.jsonl",
+      "sha256": "6f3357ce85d2fe7fd7d769534c0208da670289670b2dd6ea36bba04011934a94"
+    },
+    "summary": {
+      "path": "data_processed/factual_triples/public-benchmarks-full-v1/models/qwen3.7-plus/triple_extractions_summary.json",
+      "sha256": "dc891876aef4a1684f74291c301e6b4280e413c1fbd80f757935d6c1b94dcd6f"
+    },
+    "local_adjudication_policy": {
+      "path": "data_processed/factual_triples/public-benchmarks-full-v1/models/qwen3.7-plus/local_validation_adjudication_v1.json",
+      "sha256": "e56df8deb85b3b293290783f32f30901c78d2c0bea08eac211528e78e1859dbd"
+    }
+  }
+}

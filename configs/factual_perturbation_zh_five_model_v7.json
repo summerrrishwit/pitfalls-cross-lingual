@@ -1,0 +1,63 @@
+{
+  "extends": "configs/factual_perturbation_zh_streamlined_v5.json",
+  "config_version": "factual-perturbation-zh-five-model-v7",
+  "provider_profiles": {
+    "ollama_local": {
+      "protocol": "openai_compatible",
+      "authentication": "none",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "json_mode": true
+    }
+  },
+  "model_roles": {
+    "perturbation_generation": {
+      "target_distractors_per_source": 1
+    },
+    "simulation": {
+      "models": [
+        {
+          "model": "qwen3.6-27b",
+          "provider_profile": "aliyun",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "bailian/deepseek-v3.2",
+          "provider_profile": "deepseek",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemini-3.7-flash",
+          "provider_profile": "test_gateway",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemma3:12b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        },
+        {
+          "model": "llama3.1:8b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        }
+      ],
+      "temperature": 0.0,
+      "max_output_tokens": 256,
+      "batch_by_model": true
+    }
+  },
+  "execution": {
+    "max_workers": 4,
+    "provider_max_concurrency": {
+      "ollama_local": 1
+    },
+    "timeout_seconds": 180
+  }
+}

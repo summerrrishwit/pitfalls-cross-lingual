@@ -274,8 +274,10 @@ The command writes `canonical-v2/` below the run directory. Important artifacts 
 Dual-model answer agreements enter directly. A single-model extraction or material answer
 conflict can enter only after an explicit `codex_decision=accept` selects one eligible model;
 missing review remains `pending_review` and cannot reach relation normalization. Unresolved
-relation signatures retain a null `relation_normalized`; they are not forced into the taxonomy.
-Distractors are copied from original wrong choices and remain
+relation signatures retain a null `relation_normalized`; they are not forced into the taxonomy
+and no longer block version-2 factual-prompt generation. Prompt readiness is based on accepted
+canonical evidence and option-free prompt validation. Distractors are copied from original wrong
+choices for every prompt-ready canonical triple and remain
 `distractor_verified=false` until a later factual/type verification gate.
 
 Resume is rejected when the checkpoint uses another extraction prompt version or
@@ -284,6 +286,34 @@ preserving retry history. `source_answer` remains exact provenance; the extracte
 `answer` may be a concise substring grounded in a sentence-like source answer. Before
 freezing triples, inspect atomicity, subject selection, relation direction, answer
 grounding, fact validity, and the Codex disagreement adjudication.
+
+### Local Ollama Simulation rerun
+
+`configs/factual_perturbation_zh_ollama_v6.json` uses the loopback Ollama
+OpenAI-compatible endpoint without an API credential and requests JSON-mode responses. Unauthenticated profiles are
+accepted only for `localhost`/loopback URLs. The configuration runs one request at a
+time and groups requests by model to avoid repeatedly swapping local model weights.
+
+Reuse an already frozen candidate set without replaying translation, generation, or
+review calls, then run only the new Simulation panel:
+
+```bash
+/usr/bin/python3 scripts/run_factual_perturbation.py \
+  --config configs/factual_perturbation_zh_ollama_v6.json \
+  --env-file /dev/null \
+  prepare-simulation-rerun \
+  --run-id calibration-15-frozen-ollama-v6 \
+  --source-run-id calibration-20-streamlined-l2-v5c
+
+/usr/bin/python3 scripts/run_factual_perturbation.py \
+  --config configs/factual_perturbation_zh_ollama_v6.json \
+  --env-file /dev/null \
+  run --run-id calibration-15-frozen-ollama-v6
+```
+
+The new run records the source manifest hash and hashes every reused checkpoint. It
+starts with no copied `simulation_results.jsonl`, so its scores contain only the two
+configured local models.
 
 ## Citation
 

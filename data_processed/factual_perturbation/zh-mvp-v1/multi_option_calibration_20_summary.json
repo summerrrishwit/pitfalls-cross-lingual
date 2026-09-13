@@ -1,0 +1,120 @@
+{
+  "schema_version": "factual-perturbation-multi-option-calibration-v1",
+  "generated_at": "2026-09-09",
+  "calibration_status": "completed_no_primary_signal",
+  "independent_unit": "canonical_base_triple",
+  "endpoint": "three_option_multiple_choice",
+  "strength": "l2",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "paths_not_taken_enabled": false,
+  "holdout_called": false,
+  "runs": [
+    {
+      "run_id": "screen-10-multi-l2-v4",
+      "candidate_count": 10,
+      "simulation_calls": 240,
+      "manifest_sha256": "f683adc0a05770f08aae631772272531c442455f830fc3a6848ec0938f68e2bd",
+      "simulation_sha256": "8526bba0ad6fa9b13a875c9b185ec1ee0bdb550d0bdc9239dd996743e4966ad0"
+    },
+    {
+      "run_id": "calibration-8b-multi-l2-v4",
+      "candidate_count": 8,
+      "simulation_calls": 192,
+      "manifest_sha256": "e39b0f467e95b622c4007c3f46e53131fcdd6a2ccfc11dcb9f43e7dce06afd22",
+      "simulation_sha256": "802a2991b2d1815de38228b179a686212eea3b2ebf3dbbc585d1440374a1a260"
+    },
+    {
+      "run_id": "calibration-2c-multi-l2-v4",
+      "candidate_count": 2,
+      "simulation_calls": 48,
+      "manifest_sha256": "8ed455917d5b44ca4d36c2d3b4520904ca6de05e2f6b1fac354db3e64d2e72ec",
+      "simulation_sha256": "0992dd8b5376f17cb48e58d5d4541247b7a987f5fa67ec02d6ed89cc2f0f5279"
+    }
+  ],
+  "counts": {
+    "upstream_base_triples_screened": 50,
+    "calibration_base_triples": 20,
+    "unique_source_ids": 20,
+    "options_per_item": 3,
+    "simulation_calls_expected": 480,
+    "simulation_calls_completed": 480,
+    "simulation_attempts": 484,
+    "simulation_retries": 4,
+    "terminal_simulation_failures": 0,
+    "target_specific_chinese_flips": 0,
+    "non_target_chinese_targeted_errors": 1,
+    "neutral_control_instabilities": 1
+  },
+  "model_coverage": {
+    "qwen3.6-27b": 120,
+    "bailian/deepseek-v3.2": 120,
+    "gpt-5-mini": 120,
+    "gemini-3.7-flash": 120
+  },
+  "accuracy": {
+    "en_original": 1.0,
+    "en_neutral": 1.0,
+    "en_targeted": 1.0,
+    "zh_original": 0.975,
+    "zh_neutral": 0.9875,
+    "zh_targeted": 0.9875
+  },
+  "target_distractor_hit_rate": {
+    "en_original": 0.0,
+    "en_neutral": 0.0,
+    "en_targeted": 0.0,
+    "zh_original": 0.0125,
+    "zh_neutral": 0.0125,
+    "zh_targeted": 0.0
+  },
+  "simulation_operations": {
+    "total_tokens": 64499,
+    "latency_ms_mean": 2636.77,
+    "latency_ms_p95": 8446.55,
+    "latency_ms_max": 14800,
+    "estimated_currency_cost": null,
+    "cost_reason": "provider_price_table_not_configured"
+  },
+  "sample_composition": {
+    "source_dataset": {
+      "mmlu": 5,
+      "sciq": 5,
+      "ai2_arc_easy": 5,
+      "truthful_qa": 4,
+      "commonsense_qa": 1
+    },
+    "normalization_status": {
+      "mapped": 12,
+      "out_of_taxonomy": 8
+    }
+  },
+  "primary_gate": {
+    "required_signal": "at least 2-3 independent repeatable target-distractor-specific Chinese flips",
+    "observed_signal": 0,
+    "passed": false
+  },
+  "next_decision": "run_100_base_triple_diagnostic_chinese_pilot",
+  "candidate_source_ids": [
+    "raw_mmlu_000095",
+    "raw_sciq_000659",
+    "raw_commonsense_qa_004890",
+    "raw_truthful_qa_000031",
+    "raw_sciq_000053",
+    "raw_ai2_arc_easy_001383",
+    "raw_truthful_qa_000237",
+    "raw_truthful_qa_000453",
+    "raw_sciq_000228",
+    "raw_mmlu_000293",
+    "raw_mmlu_000042",
+    "raw_sciq_000124",
+    "raw_ai2_arc_easy_000734",
+    "raw_truthful_qa_000462",
+    "raw_ai2_arc_easy_001613",
+    "raw_ai2_arc_easy_000217",
+    "raw_mmlu_000195",
+    "raw_ai2_arc_easy_000421",
+    "raw_sciq_000809",
+    "raw_mmlu_000289"
+  ]
+}

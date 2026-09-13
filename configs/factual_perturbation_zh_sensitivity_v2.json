@@ -1,0 +1,28 @@
+{
+  "extends": "configs/factual_perturbation_zh_mvp_v1.json",
+  "config_version": "factual-perturbation-zh-sensitivity-v2",
+  "model_roles": {
+    "simulation": {
+      "models": [
+        {
+          "model": "qwen3.6-27b",
+          "provider_profile": "aliyun"
+        },
+        {
+          "model": "bailian/deepseek-v3.2",
+          "provider_profile": "deepseek"
+        },
+      {
+        "model": "gpt-5-mini",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 1024
+      },
+        {
+          "model": "gemini-3.7-flash",
+          "provider_profile": "test_gateway"
+        }
+      ]
+    }
+  }
+}

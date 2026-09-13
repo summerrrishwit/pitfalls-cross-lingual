@@ -1,0 +1,91 @@
+{
+  "schema_version": "factual-perturbation-codex-proxy-review-v1",
+  "review_version": "codex-proxy-review-multi-calibration-10c-20260909-v1",
+  "reviewer_type": "codex_proxy",
+  "not_human_gold": true,
+  "run_id": "calibration-10c-multi-upstream-v4",
+  "reviewed_at": "2026-09-09",
+  "allowed_decisions": [
+    "accept",
+    "reject",
+    "needs_adjudication"
+  ],
+  "review_scope": {
+    "endpoint": "multi_option",
+    "strength": "l2",
+    "independent_unit": "source_id",
+    "policy": "Review L2 candidates for structurally eligible sources, retaining semantically distinct and plausible three-option sets until the 20-base-triple calibration quota is reached.",
+    "reviewed_candidate_count": 7,
+    "accepted_source_count": 2
+  },
+  "checks_applied": {
+    "perturbation": [
+      "canonical_fact_usable",
+      "truth_preserved",
+      "bilingual_equivalent",
+      "target_distractor_salience",
+      "matched_neutral_has_no_answer_or_distractor_cue",
+      "l2_strength",
+      "no_prompt_duplication",
+      "natural",
+      "multi_option_semantic_distinctness"
+    ]
+  },
+  "perturbation_reviews": [
+    {
+      "item_id": "raw_mmlu_000289_source_wrong_3_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_mmlu_000289_source_wrong_1_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_sciq_000295_source_wrong_1_p2",
+      "decision": "reject",
+      "issues": [
+        "The only available foil is electrolysis, an implausible cross-domain option that makes the three-option item artificially easy."
+      ]
+    },
+    {
+      "item_id": "raw_sciq_000295_source_wrong_0_p2",
+      "decision": "reject",
+      "issues": [
+        "The target electrolysis option is not plausibly confusable with a cell-division process."
+      ]
+    },
+    {
+      "item_id": "raw_truthful_qa_000678_source_wrong_0_p2",
+      "decision": "reject",
+      "issues": [
+        "Both available distractors reduce to the same flutterby etymology claim, so the three-option endpoint would contain semantically duplicate foils."
+      ]
+    },
+    {
+      "item_id": "raw_sciq_000809_source_wrong_2_p2",
+      "decision": "accept",
+      "issues": []
+    },
+    {
+      "item_id": "raw_sciq_000809_source_wrong_0_p2",
+      "decision": "accept",
+      "issues": []
+    }
+  ],
+  "evidence": {
+    "local_only": true,
+    "authoritative_external_fact_check_performed": false,
+    "review_blinded_to_new_simulation_results": true,
+    "files": [
+      "run_manifest.json",
+      "translations.jsonl",
+      "translation_reviews.jsonl",
+      "verified_distractors.jsonl",
+      "perturbation_generations.jsonl",
+      "perturbations.jsonl",
+      "preholdout_summary.json"
+    ]
+  }
+}

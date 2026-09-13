@@ -1,0 +1,36 @@
+{
+  "extends": "configs/factual_perturbation_zh_streamlined_v5.json",
+  "config_version": "factual-perturbation-zh-ollama-v6",
+  "provider_profiles": {
+    "ollama_local": {
+      "protocol": "openai_compatible",
+      "authentication": "none",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "json_mode": true
+    }
+  },
+  "model_roles": {
+    "simulation": {
+      "models": [
+        {
+          "model": "gemma3:12b",
+          "provider_profile": "ollama_local"
+        },
+        {
+          "model": "llama3.1:8b",
+          "provider_profile": "ollama_local"
+        }
+      ],
+      "temperature": 0.0,
+      "max_output_tokens": 64,
+      "batch_by_model": true
+    }
+  },
+  "execution": {
+    "max_workers": 1,
+    "provider_max_concurrency": {
+      "ollama_local": 1
+    },
+    "timeout_seconds": 900
+  }
+}
