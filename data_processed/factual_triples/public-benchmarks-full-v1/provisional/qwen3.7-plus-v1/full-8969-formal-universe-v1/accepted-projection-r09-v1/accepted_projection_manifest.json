@@ -1,0 +1,183 @@
+{
+  "counts": {
+    "fixed_point_removal_rounds": 1,
+    "projected_base_facts": 7950,
+    "quarantined_base_facts": 7,
+    "selected_candidate_total": 15900,
+    "selected_distractor_candidates": 7950,
+    "selected_neutral_reference_candidates": 7950,
+    "source_base_facts": 7957,
+    "source_candidate_total": 31828,
+    "source_distractor_candidates": 15914,
+    "source_leakage_components": 6748,
+    "source_neutral_reference_candidates": 15914,
+    "source_review_accept": 31710,
+    "source_review_defer": 2,
+    "source_review_reject": 116
+  },
+  "inputs": {
+    "candidate_review_adjudications": {
+      "byte_count": 50153410,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/candidate-review-r09-v3/candidate_semantic_adjudications.jsonl",
+      "record_count": 31828,
+      "schema_version": "public-benchmark-full-candidate-adjudication-v3",
+      "sha256": "8447949abb862b03746e865a3c63433812302bcc2ffe5f11f7e62761c7d55751"
+    },
+    "candidate_review_manifest": {
+      "byte_count": 14031,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/candidate-review-r09-v3/candidate_review_run_manifest.json",
+      "schema_version": "public-benchmark-full-candidate-review-run-manifest-v1",
+      "sha256": "23d3df9cfaa92127d35405c591da62dda1648593aefb6b9b23439e9d346a2374"
+    },
+    "postreview_manifest": {
+      "byte_count": 25482,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/postreview-successor-r09-v3/postreview_rebuild_manifest.json",
+      "schema_version": "public-benchmark-full-postreview-rebuild-manifest-v3",
+      "sha256": "ffcb05626e68b419b8b3deb9d28cd413427275ccbf83359d67e6e8adb2ac609b"
+    }
+  },
+  "limitations": [
+    "The selected candidates carry independent proxy-review acceptance, not human gold.",
+    "Non-accept source candidates are allowed and are omitted rather than repeatedly regenerated.",
+    "Quarantine records express candidate availability only and do not assert that a fact is false.",
+    "The split manifest and complete component artifact remain byte-identical source-cohort structural snapshots; projected target membership is defined by full_base_facts.",
+    "No exact HF checkpoint/tokenizer was bound or executed and no behavior, Validation, or Sealed data was exposed."
+  ],
+  "lineage_digests": {
+    "ordered_projected_base_fact_ids_sha256": "d4241914b3ce804e5ed331994f566cbf9006e93eae76348704709c02ae6fa24f",
+    "ordered_projected_component_assignments_sha256": "fe90706309cdd2ca329803728367ca58643dd603c91e236acfe598815a8f9acd",
+    "ordered_projected_split_assignments_sha256": "9e34b13d07dd85938c7024461fcb0e1cc73bbfe51b2e56b1307f453c74c154e8",
+    "ordered_quarantine_rounds_sha256": "094aa90063c09eb1e84ef1cf1f644964e9582cef5ed3aa680b385b904cfa156c",
+    "ordered_quarantined_base_fact_ids_sha256": "dee94cdc117fe6d2353a873160de6e2ea5fe133e6a8f5d150398668bb487d912",
+    "ordered_selected_accept_adjudication_row_hashes_sha256": "442e583fd709d655c6a6b9eb5c1bf2b19c2d4093c3f5bce43a0d9d83f9b55d20",
+    "ordered_selected_candidate_ids_sha256": "bd8ec15c62754f233fd3a56e46d8978b17ef71fc2a104455dd7c22208a8a3951",
+    "ordered_selected_candidate_row_hashes_sha256": "6cbfdefabd9e6a0e7b1db4618e61600a77354270b5589e5d43d9389a20cd9a4a",
+    "ordered_selected_distractor_ids_sha256": "749fa6eb74a792ac24dd031de4c68987d56460c89f9d009151224631361262ad",
+    "ordered_selected_neutral_candidate_ids_sha256": "63bb6603c4098c40dfda05ec14ef6d6b7c576daa40553d40392efa00b9b15b34",
+    "ordered_source_base_fact_ids_sha256": "6456a4570fd8c686d35572d17e101f4b718277c56117b1afccf76e2daba5d656"
+  },
+  "next_required_steps": [
+    "translate and review zh for the accepted projection",
+    "complete the historical-exposure contract and scope-owner attestation",
+    "freeze the exact reviewed projection and split",
+    "only then bind an exact HF checkpoint and tokenizer"
+  ],
+  "outputs": {
+    "distractor_candidates": {
+      "byte_count": 4351181,
+      "filename": "distractor_candidates.jsonl",
+      "record_count": 7950,
+      "schema_version": "public-benchmark-dual-distractor-candidate-v1",
+      "sha256": "e9f2d66fe8ce1dbcbc1b58eaabe117bc3bdec8b296f77f5974b14880b3faba49"
+    },
+    "full_base_facts": {
+      "byte_count": 38709285,
+      "filename": "full_base_facts.jsonl",
+      "record_count": 7950,
+      "schema_version": "public-benchmark-full-provisional-base-fact-v1",
+      "sha256": "f4b8bee053dfaf8dfd5926dff7942f1128cc8804b613f3ab259668f3e9e11e4c"
+    },
+    "leakage_components": {
+      "byte_count": 6564277,
+      "filename": "leakage_components.jsonl",
+      "record_count": 6748,
+      "schema_version": "public-benchmark-full-leakage-component-v1",
+      "sha256": "6e2ac01831b18a1a10a8c9ee0499d349302a96b3a081df8a3df7e4931a310b70"
+    },
+    "neutral_reference_candidates": {
+      "byte_count": 5019507,
+      "filename": "neutral_reference_candidates.jsonl",
+      "record_count": 7950,
+      "schema_version": "public-benchmark-neutral-reference-candidate-v1",
+      "sha256": "b9d9b881ea1013375b20337130e6af81abf5f969813402b78c9ce486244b8736"
+    },
+    "quarantine": {
+      "byte_count": 5981,
+      "filename": "quarantine.jsonl",
+      "record_count": 7,
+      "schema_version": "public-benchmark-full-accepted-projection-quarantine-v1",
+      "sha256": "ca2f5e87404e6bb525c5957364d696731cd67b2682e2571cc87ab3fc0dcf9475"
+    },
+    "split_manifest": {
+      "byte_count": 9398,
+      "filename": "split_manifest.json",
+      "schema_version": "public-benchmark-full-provisional-split-manifest-v1",
+      "sha256": "631d73a9892b60d012c7bdfeff02cb8cb5be4398ad12f60d598a56039a80cd5f"
+    }
+  },
+  "projection_id": "accepted_projection_615dd26a56da6c80fd7a6df3",
+  "safety_contract": {
+    "behavior_executed": false,
+    "candidate_policy_relaxed": false,
+    "candidate_rows_formally_promoted": false,
+    "canonical_freeze_emitted": false,
+    "hf_checkpoint_bound": false,
+    "hf_model_executed": false,
+    "hf_tokenizer_bound": false,
+    "hf_tokenizer_executed": false,
+    "historical_exposure_complete_for_full_pool": false,
+    "human_gold": false,
+    "output_is_provisional": true,
+    "path_not_token_authorized": false,
+    "perturbation_authorized": false,
+    "quarantine_asserts_factual_falsehood": false,
+    "review_freeze_emitted": false,
+    "sealed_exposed": false,
+    "split_freeze_emitted": false,
+    "translation_review_complete": false,
+    "validation_exposed": false
+  },
+  "schema_version": "public-benchmark-full-accepted-candidate-projection-manifest-v1",
+  "selection_contract": {
+    "accepted_candidates_only": true,
+    "candidate_ordering": [
+      "slot_ascending",
+      "candidate_id_ascending"
+    ],
+    "candidate_rows_rewritten": false,
+    "cardinality_per_target": {
+      "distractor": 1,
+      "neutral": 1
+    },
+    "components_recomputed": false,
+    "donor_must_be_in_projection_target_cohort": true,
+    "fixed_point_mode": "monotone_simultaneous_target_removal_until_stable",
+    "fixed_point_removal_round_count": 1,
+    "human_gold": false,
+    "policy_version": "accepted-only-min1-per-kind-v1",
+    "quarantine_asserts_factual_falsehood": false,
+    "selected_projection_all_accept": true,
+    "source_review_all_accept": false,
+    "source_review_full_set_complete": true,
+    "source_review_nonaccept_allowed": true,
+    "split_recomputed": false,
+    "structural_snapshot_scope": "source_r09_support_cohort",
+    "structural_snapshots_byte_identical_to_source": true
+  },
+  "source_review_contract": {
+    "behavior_blind": true,
+    "candidate_review_complete_for_full_set": true,
+    "full_candidate_count": 31828,
+    "human_gold": false,
+    "overall_decision_counts": {
+      "accept": 31710,
+      "defer": 2,
+      "reject": 116
+    },
+    "review_run_contract_sha256": "991ff89edd8bce92605fcf8470786b13b755d7a33f89ec4f2fa7b122f7b56e9d",
+    "review_schema_version": "public-benchmark-full-candidate-review-run-manifest-v1",
+    "review_status": "completed",
+    "review_tool_version": "full-public-benchmark-candidate-review-runner-v3",
+    "selected_candidate_accept_evidence_count": 15900,
+    "selected_candidate_accept_evidence_ids_sha256": "bd8ec15c62754f233fd3a56e46d8978b17ef71fc2a104455dd7c22208a8a3951",
+    "selected_projection_all_accept": true,
+    "selection_is_full_candidate_set": true,
+    "source_review_all_accept": false,
+    "source_review_nonaccept_allowed": true,
+    "terminal_status_counts": {
+      "completed": 31828
+    }
+  },
+  "status": "accepted_only_min1_per_kind_materialized_provisional_offline",
+  "tool_version": "full-public-benchmark-accepted-candidate-projection-v1"
+}

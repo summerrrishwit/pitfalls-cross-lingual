@@ -1,0 +1,185 @@
+{
+  "artifacts": {
+    "checkpoint": {
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/fact-resolution-full-b8-v3/fact_resolution_checkpoint.jsonl",
+      "record_count": 1283,
+      "schema_version": "full-public-benchmark-fact-resolution-checkpoint-v2",
+      "sha256": "7ada41fcbfc5c9bcaf1b6a46d096781aeb81c7a474a6572fee53fca2df9192ab"
+    },
+    "resolutions": {
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/fact-resolution-full-b8-v3/fact_resolutions_codex_proxy.jsonl",
+      "record_count": 1283,
+      "schema_version": "full-public-benchmark-fact-resolution-decision-v1",
+      "sha256": "5033c77f99d13dbbc9bba9eb2e09223dbae722e7594cf98d0b4196442ee8b25e",
+      "strict_apply_coverage_complete": true
+    }
+  },
+  "batch_size": 8,
+  "checkpoint_compact_every": 128,
+  "decision_template": {
+    "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/fact-resolution-template-v1/fact_resolution_decisions_template.jsonl",
+    "schema_version": "full-public-benchmark-fact-resolution-decision-v1",
+    "sha256": "f10da5aa11bac275d8534520567a035eb378c1deb7cea85b1d32ada92e1dfefb"
+  },
+  "disposition_counts": {
+    "apply_revision": 303,
+    "cohort_exclude": 980
+  },
+  "human_gold": false,
+  "max_workers": 2,
+  "model_roles": {
+    "effective_endpoint_identities_distinct": false,
+    "expected_response_model_identities_distinct": true,
+    "infrastructure_distinct": false,
+    "infrastructure_independence_claimed": false,
+    "proposer": {
+      "expected_response_model": "qwen3.8-max",
+      "json_mode": true,
+      "max_output_tokens": 16384,
+      "max_retries": 2,
+      "model": "qwen3.8-max-0902/bailian/bailian",
+      "provider_profile": "aliyun",
+      "temperature": 0.0
+    },
+    "provider_profiles_distinct": true,
+    "requested_model_identities_distinct": true,
+    "reviewer": {
+      "expected_response_model": "gpt-5.5-2026-04-24",
+      "json_mode": true,
+      "max_output_tokens": 16384,
+      "max_retries": 2,
+      "model": "gpt-5.5",
+      "provider_profile": "openai",
+      "reasoning_effort": "low",
+      "temperature": 0.0
+    }
+  },
+  "resolution_items": {
+    "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/fact-resolution-template-v1/fact_resolution_items.jsonl",
+    "schema_version": "full-public-benchmark-fact-resolution-item-v1",
+    "sha256": "b228337a657192944b74647f1f83b61f84aa307dd5d615b0b0268945346d3a93"
+  },
+  "resume_enabled": true,
+  "retry_failed_enabled": true,
+  "reviewer_type": "independent_model_proxy",
+  "run_contract": {
+    "batch_size": 8,
+    "config_sha256": "6c34f7d54ff980c1dacdc981eec647bd5560c6785f5d34376e26b69d621294b9",
+    "decision_template_sha256": "f10da5aa11bac275d8534520567a035eb378c1deb7cea85b1d32ada92e1dfefb",
+    "full_resolution_item_count": 1283,
+    "human_gold": false,
+    "prompt_contract_sha256": "13e8b2f8604e6ecd14a535360f88108e2654bde18edef77bdff016d4bf2014fa",
+    "proposer_model_spec": {
+      "expected_response_model": "qwen3.8-max",
+      "json_mode": true,
+      "max_output_tokens": 16384,
+      "max_retries": 2,
+      "model": "qwen3.8-max-0902/bailian/bailian",
+      "provider_profile": "aliyun",
+      "temperature": 0.0
+    },
+    "resolution_items_sha256": "b228337a657192944b74647f1f83b61f84aa307dd5d615b0b0268945346d3a93",
+    "resolution_methods": {
+      "exclusion_review_method": "independent_current_cohort_exclusion_resolution_v2",
+      "revision_edit_method": "dual_model_field_level_fact_resolution_proposal_v2",
+      "revision_review_method": "independent_field_level_fact_resolution_rereview_v2"
+    },
+    "response_identity_enforcement": "runner_exact_post_response_without_static_proxy_guard_v2",
+    "reviewer_model_spec": {
+      "expected_response_model": "gpt-5.5-2026-04-24",
+      "json_mode": true,
+      "max_output_tokens": 16384,
+      "max_retries": 2,
+      "model": "gpt-5.5",
+      "provider_profile": "openai",
+      "reasoning_effort": "low",
+      "temperature": 0.0
+    },
+    "route_fingerprints": {
+      "proposer": {
+        "base_url_sha256": "f965279cce41184e71d8f9d8b58b7b845de0e0eaa2abc7ad60860c58920c8064",
+        "credentials_or_endpoints_included": false,
+        "expected_response_model": "qwen3.8-max",
+        "protocol": "openai_compatible",
+        "provider_profile": "aliyun",
+        "request_route_sha256": "cf3fa07e7100b3727c0c1ddeb05172fa1afda5d8334b18d81c4652ccb74d3986",
+        "requested_model": "qwen3.8-max-0902/bailian/bailian",
+        "route_fingerprint_sha256": "1f127403c20f81549811702104aed4a9fe32fdc5ac37a5c074b7b5ae6648be99"
+      },
+      "reviewer": {
+        "base_url_sha256": "f965279cce41184e71d8f9d8b58b7b845de0e0eaa2abc7ad60860c58920c8064",
+        "credentials_or_endpoints_included": false,
+        "expected_response_model": "gpt-5.5-2026-04-24",
+        "protocol": "openai",
+        "provider_profile": "openai",
+        "request_route_sha256": "cf3fa07e7100b3727c0c1ddeb05172fa1afda5d8334b18d81c4652ccb74d3986",
+        "requested_model": "gpt-5.5",
+        "route_fingerprint_sha256": "b593b1804138d97b73db2c335e1710771b409cba7f66151a4a6c4bfc13c3558a"
+      }
+    },
+    "run_contract_version": "full-public-benchmark-fact-resolution-run-contract-v2",
+    "runtime_sources": {
+      "model_router": {
+        "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/factual_pitfalls/perturbation.py",
+        "sha256": "1ee2d718ea10e515bf2e72579c376db9beb4edba4ef85d3e0636153705c4e684"
+      },
+      "resolution_contract": {
+        "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/scripts/resolve_full_public_benchmark_fact_review.py",
+        "sha256": "71aa9dd02fc4a1ab5f8cf54877c86e2b48a71f466d9f7303f2b4a3beb4d7a3af"
+      },
+      "resolution_runner": {
+        "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/scripts/run_full_public_benchmark_fact_resolution.py",
+        "sha256": "12739b1f0e92b3c232f49728157b5a6c3d0c1d9936a24e1f8729976b5d4ab8cb"
+      }
+    },
+    "selected_base_fact_ids_sha256": "f4b6953337e0a550cbdac9f79f3352bee474592a645f14d3d26efed02928ceab",
+    "selected_count": 1283,
+    "selected_ids_artifact": null,
+    "selection_is_full_template": true,
+    "source_evidence_only": true,
+    "template_manifest_sha256": "15d242a6d37fe71d01b515d115d50d6af671c7f4f1f511e0f0ef14f08264bfb6",
+    "tool_version": "full-public-benchmark-fact-resolution-runner-v2"
+  },
+  "run_contract_sha256": "85d9069bfcf229dbb861a207bdc322757f7c1624ddf8a2b349245a6fa088328e",
+  "safety_contract": {
+    "canonical_freeze_performed": false,
+    "cohort_exclusion_asserts_factual_falsehood": false,
+    "completed_response_model_identities_distinct": true,
+    "credentials_or_endpoints_included": false,
+    "defer_and_ineligible_reject_forced_to_cohort_exclude": true,
+    "effective_routes_sha256_bound_without_endpoint_disclosure": true,
+    "eligible_reject_override_bound_to_derived_eligibility": true,
+    "expected_response_model_identities_distinct": true,
+    "hf_model_initialized": false,
+    "infrastructure_independence_claimed": false,
+    "response_model_identity_fail_closed": true,
+    "shared_gateway_allowed": true,
+    "simulation_called": false,
+    "single_writer_append_journal": true,
+    "source_evidence_projection_only": true,
+    "split_freeze_performed": false,
+    "static_proxy_response_model_identity_guard_used": false,
+    "target_behavior_consumed": false,
+    "terminal_journal_removed": true
+  },
+  "schema_version": "full-public-benchmark-fact-resolution-run-manifest-v2",
+  "selection": {
+    "full_resolution_item_count": 1283,
+    "selected_base_fact_ids_sha256": "f4b6953337e0a550cbdac9f79f3352bee474592a645f14d3d26efed02928ceab",
+    "selected_count": 1283,
+    "selected_ids_artifact": null,
+    "selection_is_full_template": true
+  },
+  "source_reviewer_identity_fallback_count": 111,
+  "status": "completed",
+  "strict_resolution_apply_ready": true,
+  "template_manifest": {
+    "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-8969-formal-universe-v1/fact-resolution-template-v1/fact_resolution_template_manifest.json",
+    "schema_version": "full-public-benchmark-fact-resolution-template-manifest-v1",
+    "sha256": "15d242a6d37fe71d01b515d115d50d6af671c7f4f1f511e0f0ef14f08264bfb6"
+  },
+  "terminal_status_counts": {
+    "completed": 1283
+  },
+  "tool_version": "full-public-benchmark-fact-resolution-runner-v2"
+}
