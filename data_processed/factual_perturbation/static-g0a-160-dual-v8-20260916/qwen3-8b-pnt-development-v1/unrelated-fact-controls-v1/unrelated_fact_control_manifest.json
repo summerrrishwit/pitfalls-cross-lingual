@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "unrelated_fact_controls": {
+      "byte_count": 26929,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/unrelated-fact-controls-v1/unrelated_fact_controls.jsonl",
+      "sha256": "d7e736031b7cdaa68b3413afd6f84adbfda87e38190c7f5e091d7ce5bd0f5002"
+    }
+  },
+  "authorization_state": {
+    "exact_tokenizer_render_authorized": true,
+    "model_execution_authorized": false,
+    "sealed_authorized": false,
+    "text_control_set_frozen": true,
+    "validation_authorized": false,
+    "vector_source_authorized": false
+  },
+  "counts": {
+    "control_facts": 13,
+    "control_inputs": 26,
+    "current_cohort_facts_used": 0,
+    "language_counts": {
+      "en": 13,
+      "zh": 13
+    },
+    "sealed_facts_used": 0,
+    "validation_facts_used": 0
+  },
+  "created_at": "2026-09-19T15:54:21.915870+00:00",
+  "evaluation_contract": {
+    "accuracy_drop_max": 0.02,
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "metric": "paired_alias_aware_accuracy_drop_from_no_intervention",
+    "small_n_policy": "Report all 13 paired fact outcomes and the exact count; with n=13, the 0.02 threshold permits zero newly harmed facts. Do not claim population-level safety."
+  },
+  "human_gold": false,
+  "inputs": {
+    "codex_unrelatedness_review": {
+      "byte_count": 3315,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/configs/qwen3_unrelated_fact_control_codex_review_v1.json",
+      "sha256": "295665fd545e83e9104b530015040327292a4cb38be085f625ca03a2fb487260"
+    },
+    "frozen_cohort": {
+      "byte_count": 3174519,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/frozen_static_bundle.jsonl",
+      "sha256": "601f23902b309cca12df3da07c6364214b408f8c91ac53808363bcafb138f224"
+    },
+    "g0b_gate": {
+      "byte_count": 2535,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-g0b-v3/g0b_gate_manifest.json",
+      "sha256": "0966370821b6c7b480c7546d934f88afbd4deb099d8d8bd47f96fd776268b601"
+    },
+    "source_facts": {
+      "byte_count": 45730,
+      "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/path_not_token/chinese-v1/base_facts.jsonl",
+      "sha256": "61142e37b2a0068f6d0c0eafc3447384bb11e5c28d2753b59c32a1661f9c7359"
+    }
+  },
+  "limitations": [
+    "This is a 13-fact bounded regression panel, not an expansion of the formal 160-fact cohort.",
+    "Its source translations and unrelatedness decisions are Codex proxy review, not human gold.",
+    "No Qwen3 behavior was used to select these controls, and no Qwen3 control baseline has been run."
+  ],
+  "reviewer_type": "codex_proxy",
+  "schema_version": "qwen3-unrelated-fact-control-manifest-v1",
+  "scope": "regression_control_only_not_cohort_or_vector_source",
+  "selection_contract": {
+    "bounded_semantic_review": "bounded_same_fact_or_semantic_paraphrase_overlap_against_the_frozen_160_fact_cohort",
+    "current_Qwen3_behavior_used": false,
+    "exact_source_prompt_answer_overlap_count": 0,
+    "legacy_behavior_metadata_used": false,
+    "repair_rule_selection_role": "retention_constraint_only",
+    "rule": "review_all_13_accepted_bilingual_facts_from_path_not_token_chinese_v1_without_using_current_Qwen3_behavior",
+    "vector_source": false
+  },
+  "status": "behavior_blind_unrelated_control_frozen_pending_exact_tokenizer_audit"
+}

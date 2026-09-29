@@ -1,0 +1,73 @@
+{
+  "artifact_sha256": {
+    "option_free_three_arm_inputs": "74d09b9f9e8fa9e82af3c6495c49753e0fa6d4d46c8a13970d4d32c7c0a31ad6",
+    "vector_source_prompt_specs": "c02a7c0dd883694842bb6bb61735bf7288c81958e08a3d6954f83ee22bca2a3a"
+  },
+  "checks": {
+    "answer_alias_groups_disjoint": "passed",
+    "behavior_blind_unrelated_fact_control_frozen": "passed",
+    "bound_input_and_artifact_sha256": "passed",
+    "development_only": "passed",
+    "five_shot_donor_relation_and_component_rules": "passed",
+    "four_fold_source_evaluation_isolation": "passed",
+    "intervention_authorization_remains_false": "passed",
+    "leakage_component_fold_atomicity": "passed",
+    "natural_semantic_deferrals_have_missing_value_policy": "passed",
+    "neutral_targeted_context_only_template": "passed",
+    "option_free_three_arm_structure": "passed",
+    "original_natural_prompt_identity": "passed",
+    "validation_and_sealed_usage_zero": "passed"
+  },
+  "claim_boundary": "This package freezes text-level prompts and estimators only. It contains no new model outputs, hidden states, vectors, interventions, Validation, or Sealed measurements.",
+  "created_at": "2026-09-19T15:55:04.491034+00:00",
+  "manifest": {
+    "path": "/Users/xiarongzhi/school task/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/g2a-option-free-preparation-v1/g2a_offline_contract_manifest.json",
+    "sha256": "6e9ee3317bc8b040e3eefb3ad784d305264cec6b2506834639367e4a2cf7af6f"
+  },
+  "option_free": {
+    "arm_counts": {
+      "en_neutral": 192,
+      "en_original": 96,
+      "en_targeted": 192,
+      "zh_neutral": 192,
+      "zh_original": 96,
+      "zh_targeted": 192
+    },
+    "fact_count": 96,
+    "neutral_targeted_pair_count": 384,
+    "original_natural_prompt_identity_count": 192,
+    "row_count": 960
+  },
+  "remaining_blockers": [
+    "render_and_tokenize_all_prompts_with_the_frozen_Qwen3_tokenizer",
+    "audit_prompt_lengths_and_answer_token_prefixes_against_max_model_length"
+  ],
+  "schema_version": "qwen3-g2a-offline-contract-audit-v1",
+  "scope": "development_only_pre_tokenization_contract",
+  "split_counts": {
+    "development": 96,
+    "sealed": 32,
+    "validation": 32
+  },
+  "status": "passed",
+  "vector_sources": {
+    "cross_fold_leakage_component_count": 0,
+    "invalid_donor_count": 0,
+    "kind_counts": {
+      "fact_recall_reference_en": 384,
+      "fact_recall_reference_zh": 384,
+      "task_icl_recall_en": 384,
+      "task_icl_recall_zh": 384,
+      "translation_en_to_zh": 384
+    },
+    "oof_source_evaluation_overlap_count": 0,
+    "partition_counts": {
+      "dev-fold-01": 360,
+      "dev-fold-02": 360,
+      "dev-fold-03": 360,
+      "dev-fold-04": 360,
+      "final-development-all": 480
+    },
+    "row_count": 1920
+  }
+}

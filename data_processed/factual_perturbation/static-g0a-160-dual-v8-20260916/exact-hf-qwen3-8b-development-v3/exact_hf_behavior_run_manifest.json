@@ -1,0 +1,86 @@
+{
+  "artifacts": {
+    "exact_hf_behavior_results": {
+      "byte_count": 1158538,
+      "path": "exact_hf_development_behavior_results.jsonl",
+      "schema_version": "factual-perturbation-exact-hf-behavior-result-v1",
+      "sha256": "85319f07bb09553419527e3ba2e8f6673a6afe13766732c5d7b54957f1b72ac5"
+    },
+    "exact_hf_labels": {
+      "byte_count": 97594,
+      "path": "exact_hf_defect_control_labels.jsonl",
+      "schema_version": "factual-perturbation-exact-hf-defect-control-label-v1",
+      "sha256": "eaa0a49a1820541b1b171563b2c22b9ba5bd5e47ee2fbbe8e5e531152dd61f4c"
+    },
+    "exact_hf_model_manifest": {
+      "byte_count": 5062,
+      "path": "exact_hf_model_manifest.json",
+      "schema_version": "factual-perturbation-exact-hf-model-manifest-v3",
+      "sha256": "3f132c2d09940184eba006c204b227bc2c87b3f8c504d86a9ac10cc8139c384f"
+    },
+    "exact_hf_render_manifest": {
+      "byte_count": 2245,
+      "path": "exact_hf_render_manifest.json",
+      "schema_version": "factual-perturbation-exact-hf-render-manifest-v3",
+      "sha256": "aa5fd5936758a6891822dea076d34bc0a7af17e2892c25da2ad0a6725bb044f7"
+    },
+    "g0b_gate_manifest": {
+      "byte_count": 2535,
+      "path": "g0b_gate_manifest.json",
+      "schema_version": "factual-perturbation-g0b-gate-v3",
+      "sha256": "0966370821b6c7b480c7546d934f88afbd4deb099d8d8bd47f96fd776268b601"
+    },
+    "hf_replay_queue": {
+      "byte_count": 333108,
+      "path": "hf_replay_queue.jsonl",
+      "schema_version": "factual-perturbation-exact-hf-replay-queue-v3",
+      "sha256": "594a28e459054f790e33f14f34315fd095e0cc3596c9b453e4bf31c7de79c9b0"
+    },
+    "matching_manifest": {
+      "byte_count": 85444,
+      "path": "matching_manifest.json",
+      "schema_version": "factual-perturbation-exact-hf-matching-manifest-v2",
+      "sha256": "060662dd705527186d54f9c036030050ab6b5ef559bbc8e5d1bb422fbf6219f5"
+    }
+  },
+  "checkpoint_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "created_at": "2026-09-19T15:01:49.588139+00:00",
+  "exact_hf_evidence": true,
+  "label_count": 192,
+  "proxy_comparison": {
+    "choice_agreement_count": 953,
+    "choice_agreement_rate": 0.992708,
+    "comparable_count": 960,
+    "proxy_labels_used_for_selection": false,
+    "purpose": "post_hoc_migration_check_only"
+  },
+  "result_count": 960,
+  "schema_version": "factual-perturbation-exact-hf-behavior-run-manifest-v2",
+  "scoring_policy": {
+    "attention_implementation": "eager",
+    "behavior_choice_policy": "argmax_complete_json_choice_sequence_log_probability_v1",
+    "candidate_completions": {
+      "A": "{\"choice\":\"A\"}",
+      "B": "{\"choice\":\"B\"}",
+      "C": "{\"choice\":\"C\"}"
+    },
+    "cublas_workspace_config": ":4096:8",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "generation_used_for_primary_choice": false,
+    "length_normalization": "none_equal_semantic_choices",
+    "scoring_batch_size": 1,
+    "temperature": 0.0,
+    "tie_break": [
+      "A",
+      "B",
+      "C"
+    ],
+    "torch_deterministic_algorithms": true
+  },
+  "sealed_called": false,
+  "status": "g1_exact_hf_behavior_frozen",
+  "unique_base_fact_count": 96,
+  "validation_called": false
+}
