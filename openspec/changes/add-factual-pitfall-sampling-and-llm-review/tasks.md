@@ -80,13 +80,57 @@
 - [x] 10.12 Add shared Original and Neutral Context controls, candidate-specific Targeted arms, stable IDs, duplicate-baseline detection, and a resumable proxy-reviewed rerun.
 - [x] 10.13 Run 20 new non-overlapping base triples, complete Codex proxy review, and evaluate one preselected perturbation for each of 12 eligible independent bases; 287/288 Simulation calls completed, with zero confirmed target effects and one control-sensitive item.
 - [x] 10.14 Replace the binary endpoint with deterministic three-option scoring, matched neutral contexts, target-distractor hit tracking, and distinct non-target error reporting; complete the 20-base calibration with 480/480 Simulation calls and zero target-specific Chinese flips.
-- [ ] 10.15 Run a preregistered 100-input-base diagnostic Chinese pilot under the frozen multi-option contract; if it remains insensitive, preregister a separate alternate-language transfer screen.
+- [x] 10.15 Run the 100-input-base diagnostic Chinese pilot under the multi-option contract as `diagnostic-100-five-model-v7b`: 73 candidates reached complete Simulation coverage and 14 model-specific strict signals were observed. Preserve `gate_passed=false`; this does not authorize candidate freeze, Claude holdout, or mechanism claims.
 
-## 11. Deferred Paths Not Taken preparation
+## 11. Offline Paths Not Taken preparation and GPU execution boundary
 
 - [ ] 11.1 Define a separate nullable `probe_relation_id` contract for narrow, direction-preserving Paths Not Taken relation families, with version, status, confidence, reason, and review provenance.
 - [ ] 11.2 Build and explicitly review the probe-relation inventory before freezing a small balanced Chinese-first main-experiment subset; retain long-tail and unresolved facts outside relation-conditioned mechanism experiments.
 - [ ] 11.3 Add Paths Not Taken eligibility checks for answer uniqueness, bilingual equivalence, prompt-form consistency, aliases, and model/language-specific answer tokenization.
 - [ ] 11.4 Verify that same-relation negatives, relation-preservation checks, relation-specific task vectors, and across-relation splits use `probe_relation_id` rather than the broad statistical taxonomy.
-- [ ] 11.5 Freeze the selected open-weight model/tokenizer revisions, hidden-state and intervention hook contract, decoding/scoring policy, layer selection, seeds, and run manifest before mechanism experiments.
-- [ ] 11.6 Run a bounded Chinese baseline and report independent base-triple counts for candidate, relation-eligible, both-correct control, recall-failure candidate, and conversion-failure candidate cohorts before approving full vector construction.
+- [ ] 11.5 Freeze the selected open-weight model/tokenizer revisions, hidden-state and intervention hook contract, decoding/scoring policy, layer selection, seeds, and run manifest before mechanism experiments. This may be drafted offline, but model-specific tokenization is not final until the exact revision is selected.
+- [ ] 11.6 When GPU execution is available, run a bounded exact-HF Chinese baseline and report independent base-triple counts for candidate, relation-eligible, both-correct control, recall-failure candidate, and conversion-failure candidate cohorts before approving hidden-state or vector construction.
+
+Items 11.1-11.4 are offline data-contract work and MUST NOT be blocked solely by GPU
+unavailability. Items 11.5-11.6 define the runtime boundary: API/Ollama behavior screening
+MUST NOT be represented as exact-HF white-box evidence.
+
+## 12. Public-benchmark single-model provisional bridge
+
+- [x] 12.1 Implement producer v2, bind the `public-benchmarks-full-v1` Qwen input, admit only completed/extracted/validation-clean rows, and label every admitted row `provisional_single_model` rather than canonical gold; the current output is 9,059 triples.
+- [x] 12.2 Deterministically cluster exact duplicate facts into 8,969 `base_fact_id` values and preserve source, raw response, retry, and local-adjudication provenance.
+- [x] 12.3 Emit separate statistical relation, nullable probe-relation, and candidate-direction fields; relation mapping MUST NOT gate factual-prompt readiness, and `term for definition` MUST remain direction-unresolved.
+- [x] 12.4 Produce the full semantic-review queue plus a 400-item coverage-oriented sample, a separate 400-item overall-random sample, and a 200-item targeted sample from the 376-fact prompt-risk frame. Record that only the overall-random sample supports conditional population estimation.
+- [x] 12.5 Emit a versioned behavior input bundle with prompt tier, aliases, explicit distractor IDs/provenance, evidence status, record hashes, and split metadata.
+- [x] 12.6 Make factual-perturbation preparation accept an explicit bundle path while retaining the legacy canonical-v2 default; require exact bundle-bound external review-freeze and split-freeze manifests for formal rows.
+- [x] 12.7 Add deterministic tests and generate the first offline provisional artifacts without invoking model endpoints or overwriting existing v7b/canonical/PATH outputs.
+- [x] 12.8 Add SHA-bound review `scope`, duplicate-member-expanded `export`, and staging-only `apply` with `accept`/`revise`/`reject`/`defer`, explicit Codex-proxy `human_gold=false`, and partial missing decisions that are not converted to reject. Do not implement automatic freeze.
+- [x] 12.9 Run a 20-item pilot inside the overall-random 400 scope and preserve 16 `accept`, 2 `defer`, 1 `reject`, 1 `revise`, and 380 `missing` as staging only.
+- [x] 12.10 Add and run lexical near-duplicate candidate audit v2; record 2,341 emitted representative pairs and 281 emitted cross-split pairs, plus the non-exhaustive-census and `semantic_review_complete=false` limitations.
+- [x] 12.11 Regenerate the PATH review-only export with 8,969 review-only facts and 0 formal facts while external freeze manifests are absent.
+- [x] 12.12 Implement immutable full-pool/review-scope cohort-universe declaration and a
+  fail-closed evidence preflight. The preflight MUST remain unable to emit a reviewed bundle or
+  either freeze manifest while the true finalizer is absent.
+- [ ] 12.13 Predeclare and separately materialize the chosen real formal cohort universe. Keep the
+  overall-random 400 as an inferential sample unless it is explicitly selected as the cohort
+  source; in that case require 400/400 final review. Freezing the full pool requires item-level
+  final review of all 8,969 facts. Resolve every included-scope `missing`, `defer`, and `revise`
+  rather than treating Codex proxy output as human gold.
+- [ ] 12.14 Apply revisions with lineage, re-review revised hashes, adjudicate emitted
+  lexical/alias candidates, handle missed-paraphrase risk, and compute duplicate/exposure closure
+  against the full provisional pool and historically exposed artifacts. Re-cluster accepted facts
+  and recompute development/validation/sealed assignments.
+- [ ] 12.15 Implement the reviewed-bundle/freeze producer. Bind review-freeze and split-freeze
+  manifests to the exact cohort universe, final decisions and counts, revision/re-review lineage,
+  duplicate/exposure adjudications, final row hashes, and recomputed split; then regenerate formal
+  behavior and PATH inputs.
+- [ ] 12.16 Freeze one exact HF checkpoint/tokenizer/runtime contract and use it unchanged for the
+  open-completion baseline, hidden states and Logit Lens, task/difference vectors, `resid_pre`
+  intervention, repair, controls, and regression evaluation.
+- [ ] 12.17 Revoke or rotate the credential exposed in the external reference checkout at
+  `demo_load_datasets_model.py:337`; ensure the new runtime loads Hugging Face credentials only
+  through an environment variable or secret manager and never persists them in artifacts.
+
+No GPU, Ollama, HF checkpoint, or external experiment/provider endpoint was run for items
+12.1-12.11. The 20 semantic decisions in 12.9 are explicitly Codex proxy judgments, not human
+gold.

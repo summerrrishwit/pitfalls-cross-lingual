@@ -1,0 +1,82 @@
+{
+  "extends": "configs/factual_perturbation_zh_mvp_v1.json",
+  "config_version": "full-public-benchmark-8969-pre-exact-hf-zh-v1",
+  "scope": {
+    "formal_universe": "full-8969",
+    "selected_target_languages": [
+      "zh"
+    ],
+    "registered_but_not_selected_target_languages_status": "pending_translation_not_required_for_zh_first_gate",
+    "english_is_source_of_record": true
+  },
+  "model_roles": {
+    "translation": {
+      "primary": {
+        "model": "qwen3.8-max-0902/bailian/bailian",
+        "expected_response_model": "qwen3.8-max",
+        "provider_profile": "aliyun",
+        "temperature": 0.0,
+        "max_output_tokens": 16384,
+        "max_retries": 2
+      },
+      "reviewer": {
+        "model": "gpt-5.5",
+        "expected_response_model": "gpt-5.5-2026-04-24",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 16384,
+        "max_retries": 2
+      },
+      "review_mode": "all_items_field_level_then_one_repair"
+    },
+    "full_pool_fact_review": {
+      "reviewer": {
+        "model": "gpt-5.5",
+        "expected_response_model": "gpt-5.5-2026-04-24",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 16384,
+        "max_retries": 2
+      }
+    },
+    "full_pool_semantic_closure_review": {
+      "reviewer": {
+        "model": "gpt-5.5",
+        "expected_response_model": "gpt-5.5-2026-04-24",
+        "provider_profile": "openai",
+        "reasoning_effort": "low",
+        "max_output_tokens": 16384,
+        "max_retries": 2
+      }
+    }
+  },
+  "execution": {
+    "resume": true,
+    "max_workers": 2,
+    "provider_max_concurrency": {
+      "openai": 2,
+      "aliyun": 2,
+      "deepseek": 2,
+      "test_gateway": 1,
+      "claude_cc": 1
+    },
+    "max_retries": 2,
+    "timeout_seconds": 300,
+    "checkpoint_every_records": 128,
+    "store_raw_responses": false,
+    "store_prompt_and_model_versions": true,
+    "credentials_in_artifacts": false
+  },
+  "pre_exact_hf_contract": {
+    "fact_review_evidence": "independent_model_proxy_not_human_gold",
+    "translation_review_evidence": "independent_model_proxy_not_human_gold",
+    "semantic_closure_scope": "frozen_deterministic_candidate_protocol_with_terminal_pair_adjudication",
+    "semantic_near_duplicate_recall_guaranteed": false,
+    "historical_exposure_authority": "predeclared_pending_scope_owner_attestation",
+    "review_and_split_freeze_required_before_hf_binding": true,
+    "hf_model_execution_authorized": false,
+    "hf_tokenizer_execution_authorized": false,
+    "validation_behavior_exposure_authorized": false,
+    "sealed_behavior_exposure_authorized": false
+  }
+}

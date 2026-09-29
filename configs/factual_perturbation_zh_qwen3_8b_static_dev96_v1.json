@@ -1,0 +1,47 @@
+{
+  "extends": "configs/factual_perturbation_zh_dual_distractor_proxy_v10.json",
+  "config_version": "factual-perturbation-zh-qwen3-8b-static-dev96-v1",
+  "provider_profiles": {
+    "qwen3_vllm": {
+      "protocol": "openai_compatible",
+      "authentication": "api_key",
+      "api_key_env": "QWEN3_VLLM_API_KEY",
+      "base_url_env": "QWEN3_VLLM_BASE_URL",
+      "json_mode": true
+    }
+  },
+  "static_single_model": {
+    "roster_version": "static-qwen3-8b-single-model-v1",
+    "expected_model_count": 1,
+    "expected_calls_per_model": 960,
+    "expected_simulation_call_count": 960,
+    "model_aggregation": "none"
+  },
+  "model_roles": {
+    "simulation": {
+      "endpoint": "multi_option",
+      "max_options": 3,
+      "neutral_context_mode": "matched_per_candidate",
+      "require_all_models_completed": true,
+      "temperature": 0.0,
+      "max_output_tokens": 64,
+      "batch_by_model": true,
+      "models": [
+        {
+          "model": "qwen3-8b",
+          "provider_profile": "qwen3_vllm",
+          "max_output_tokens": 64,
+          "timeout_seconds": 180,
+          "max_retries": 1
+        }
+      ]
+    }
+  },
+  "execution": {
+    "max_workers": 8,
+    "provider_max_concurrency": {
+      "qwen3_vllm": 8
+    },
+    "timeout_seconds": 180
+  }
+}

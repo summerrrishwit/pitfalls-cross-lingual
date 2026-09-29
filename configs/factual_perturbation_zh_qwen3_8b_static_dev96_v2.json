@@ -1,0 +1,19 @@
+{
+  "extends": "configs/factual_perturbation_zh_qwen3_8b_static_dev96_v1.json",
+  "config_version": "factual-perturbation-zh-qwen3-8b-static-dev96-v2",
+  "model_roles": {
+    "simulation": {
+      "models": [
+        {
+          "model": "qwen3-8b",
+          "provider_profile": "qwen3_vllm",
+          "max_output_tokens": 64,
+          "timeout_seconds": 180,
+          "max_retries": 1,
+          "disable_thinking": true,
+          "strict_mcq_choice_schema": true
+        }
+      ]
+    }
+  }
+}

@@ -131,17 +131,6 @@ CASES = [
         ),
     },
     {
-        "case_id": "simulation_deepseek_v32",
-        "profile": "deepseek",
-        "model": "bailian/deepseek-v3.2",
-        "role": "simulation",
-        "expected_keys": ["choice"],
-        "prompt": (
-            "Answer the multiple-choice question. What is the main religion in Thailand? "
-            "A. Buddhism B. Islam C. Christianity D. Hinduism. Return JSON only: {\"choice\":\"A|B|C|D\"}."
-        ),
-    },
-    {
         "case_id": "simulation_gpt5mini",
         "profile": "openai",
         "model": "gpt-5-mini",
@@ -185,7 +174,6 @@ MINIMAL_CASES = [
         ("test", "hy4-preview"),
         ("test", "gemini-3.7-flash"),
         ("aliyun", "qwen3.6-27b"),
-        ("deepseek", "bailian/deepseek-v3.2"),
         ("openai", "gpt-5-mini"),
         ("claude", "claude-opus-4-8"),
     )

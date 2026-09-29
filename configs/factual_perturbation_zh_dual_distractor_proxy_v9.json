@@ -1,0 +1,47 @@
+{
+  "extends": "configs/factual_perturbation_zh_dual_distractor_proxy_v8.json",
+  "config_version": "factual-perturbation-zh-dual-distractor-four-model-proxy-v9",
+  "static_proxy": {
+    "roster_version": "static-proxy-four-model-v9",
+    "expected_model_count": 4,
+    "expected_calls_per_model": 960,
+    "expected_simulation_call_count": 3840,
+    "model_aggregation": "none"
+  },
+  "model_roles": {
+    "simulation": {
+      "endpoint": "multi_option",
+      "max_options": 3,
+      "neutral_context_mode": "matched_per_candidate",
+      "require_all_models_completed": true,
+      "models": [
+        {
+          "model": "qwen3.6-27b",
+          "provider_profile": "aliyun",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemini-3.7-flash",
+          "provider_profile": "test_gateway",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemma3:12b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        },
+        {
+          "model": "llama3.1:8b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        }
+      ]
+    }
+  }
+}
