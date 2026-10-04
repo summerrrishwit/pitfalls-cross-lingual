@@ -1,0 +1,84 @@
+{
+  "schema_version": "probe-relation-review-policy-v1",
+  "policy_id": "public-benchmark-qwen-probe-relation-review-v1",
+  "source_candidate_policy_id": "public-benchmark-qwen-probe-relation-candidates-v2",
+  "status": "pre_perturbation_offline_only",
+  "human_gold": false,
+  "broad_relation_normalized_required": false,
+  "selection_seed": "public-benchmark-qwen-probe-review-frame-v1",
+  "selection_contract": {
+    "prompt_ready_required": true,
+    "prompt_risk_flags_must_be_empty": true,
+    "one_base_fact_per_split_group": true,
+    "model_outputs_must_not_be_used": true,
+    "selection_precedes_fact_review": true,
+    "shortfall_policy": "fail_closed"
+  },
+  "relations": [
+    {
+      "probe_relation_id": "song_to_performer",
+      "direction": "song -> performer",
+      "prompt_template_en": "The performer of {subject} is",
+      "review_frame_split_counts": {
+        "development": 48,
+        "validation": 16,
+        "sealed": 16
+      },
+      "target_accept_split_counts": {
+        "development": 24,
+        "validation": 8,
+        "sealed": 8
+      }
+    },
+    {
+      "probe_relation_id": "character_to_actor",
+      "direction": "character -> actor",
+      "prompt_template_en": "The actor who portrayed {subject} is",
+      "review_frame_split_counts": {
+        "development": 48,
+        "validation": 16,
+        "sealed": 16
+      },
+      "target_accept_split_counts": {
+        "development": 24,
+        "validation": 8,
+        "sealed": 8
+      }
+    },
+    {
+      "probe_relation_id": "term_to_definition",
+      "direction": "term -> definition",
+      "prompt_template_en": "The definition of {subject} is",
+      "review_frame_split_counts": {
+        "development": 48,
+        "validation": 16,
+        "sealed": 16
+      },
+      "target_accept_split_counts": {
+        "development": 24,
+        "validation": 8,
+        "sealed": 8
+      }
+    },
+    {
+      "probe_relation_id": "work_to_release_date",
+      "direction": "work -> release date",
+      "prompt_template_en": "The release date of {subject} is",
+      "review_frame_split_counts": {
+        "development": 48,
+        "validation": 16,
+        "sealed": 16
+      },
+      "target_accept_split_counts": {
+        "development": 24,
+        "validation": 8,
+        "sealed": 8
+      }
+    }
+  ],
+  "unresolved_direction_policy": {
+    "candidate_id": "definition_term_direction_unresolved",
+    "action": "separate_item_level_review_required",
+    "eligible_for_balanced_frame": false
+  }
+}

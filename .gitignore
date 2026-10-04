@@ -3,9 +3,43 @@ __pycache__/
 *.py[cod]
 utils/.env
 .env
+.env.*
+!.env.example
+!.env.template
 run.log
 token_original.txt
 .agents/
 .claude/
 .codegraph/
 .codex/
+
+# Local secrets and credentials
+credentials*.json
+*_credentials.json
+secrets*.json
+*.pem
+*.key
+
+# Local model downloads and caches
+.cache/
+.huggingface/
+hf_cache/
+models/
+checkpoints/
+**/snapshots/
+
+# Large reproducible activation tensors; publish via Git LFS or a release asset
+**/mcq_decision_resid_pre.pt
+
+# Local runtime and temporary artifacts
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+.DS_Store
+**/events.jsonl
+**/raw_events.jsonl
+**/unredacted_events.jsonl
+
+**/.writer.lock

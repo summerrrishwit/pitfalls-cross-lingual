@@ -1,0 +1,37 @@
+{
+  "extends": "configs/factual_perturbation_zh_dual_distractor_proxy_v9.json",
+  "config_version": "factual-perturbation-zh-dual-distractor-four-model-proxy-v10",
+  "model_roles": {
+    "simulation": {
+      "models": [
+        {
+          "model": "qwen3.6-27b",
+          "provider_profile": "aliyun",
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemini-3.7-flash",
+          "provider_profile": "test_gateway",
+          "max_output_tokens": 512,
+          "timeout_seconds": 30,
+          "max_retries": 1
+        },
+        {
+          "model": "gemma3:12b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        },
+        {
+          "model": "llama3.1:8b",
+          "provider_profile": "ollama_local",
+          "max_output_tokens": 64,
+          "timeout_seconds": 900,
+          "max_retries": 1
+        }
+      ]
+    }
+  }
+}

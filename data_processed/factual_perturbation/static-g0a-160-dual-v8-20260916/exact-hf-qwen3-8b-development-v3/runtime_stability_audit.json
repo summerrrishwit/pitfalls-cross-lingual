@@ -1,0 +1,89 @@
+{
+  "canonical": {
+    "directory": "exact-hf-qwen3-8b-development-v3",
+    "label_sha256": "eaa0a49a1820541b1b171563b2c22b9ba5bd5e47ee2fbbe8e5e531152dd61f4c",
+    "result_count": 960,
+    "result_sha256": "85319f07bb09553419527e3ba2e8f6673a6afe13766732c5d7b54957f1b72ac5"
+  },
+  "canonical_exact_top_score_tie_count": 8,
+  "canonical_exact_top_score_tie_stimulus_ids": [
+    "pbf_07b4aa3749b9d10c2908:zh:original",
+    "pbf_332eb7548a27a487ada9:raw_mkqa_001747_generated_wrong_2:en:neutral",
+    "pbf_46bef02419783cd43840:en:original",
+    "pbf_71140b7d185539d2eeb2:postclosure_dist_f88abd26f66ce452477a:en:targeted",
+    "pbf_a89bcf73d30e317c4071:postclosure_dist_48b4768c59e4ea104185:zh:neutral",
+    "pbf_ce756ee6fed4c88c4205:en:original",
+    "pbf_e1140c553ba66b80b61c:postclosure_dist_68ce753344072846722b:zh:neutral",
+    "pbf_f37fe51bb9d9856eef2b:zh:original"
+  ],
+  "canonical_runtime": {
+    "attention_implementation": "eager",
+    "behavior_choice_policy": "argmax_complete_json_choice_sequence_log_probability_v1",
+    "candidate_completions": {
+      "A": "{\"choice\":\"A\"}",
+      "B": "{\"choice\":\"B\"}",
+      "C": "{\"choice\":\"C\"}"
+    },
+    "cublas_workspace_config": ":4096:8",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "generation_used_for_primary_choice": false,
+    "length_normalization": "none_equal_semantic_choices",
+    "scoring_batch_size": 1,
+    "temperature": 0.0,
+    "tie_break": [
+      "A",
+      "B",
+      "C"
+    ],
+    "torch_deterministic_algorithms": true
+  },
+  "created_at": "2026-09-19T15:00:59.620351+00:00",
+  "interpretation": "Only the canonical v3 runtime is admissible downstream. Differences from earlier batch-dependent runs are sensitivity evidence and must not be mixed with v3 labels.",
+  "model_manifest_sha256": "3f132c2d09940184eba006c204b227bc2c87b3f8c504d86a9ac10cc8139c384f",
+  "same_runtime_repeat": {
+    "directory": "exact-hf-qwen3-8b-development-v3-repeat-audit",
+    "label_sha256": "eaa0a49a1820541b1b171563b2c22b9ba5bd5e47ee2fbbe8e5e531152dd61f4c",
+    "labels_byte_identical": true,
+    "result_sha256": "85319f07bb09553419527e3ba2e8f6673a6afe13766732c5d7b54957f1b72ac5",
+    "results_byte_identical": true
+  },
+  "schema_version": "qwen3-exact-hf-runtime-stability-audit-v1",
+  "status": "passed_frozen_runtime_reproduction_with_cross_runtime_sensitivity",
+  "superseded_runtime_comparisons": [
+    {
+      "choice_difference_count": 9,
+      "choice_difference_stimulus_ids": [
+        "pbf_07b4aa3749b9d10c2908:zh:original",
+        "pbf_332eb7548a27a487ada9:raw_mkqa_001747_generated_wrong_2:en:neutral",
+        "pbf_3f3e20a76d4e3b1fecf7:raw_mkqa_003521_generated_wrong_1:zh:neutral",
+        "pbf_71140b7d185539d2eeb2:postclosure_dist_f88abd26f66ce452477a:en:targeted",
+        "pbf_9406881983aeb72fd5d7:raw_global_mmlu_001545_generated_wrong_3:zh:targeted",
+        "pbf_e1140c553ba66b80b61c:postclosure_dist_68ce753344072846722b:zh:neutral",
+        "pbf_e65f70e1abcacc4ab688:postclosure_dist_abac920a45e9fbc2a80d:zh:targeted",
+        "pbf_f18dc56e1df9ddb524f8:postclosure_dist_d9b94eadcf937939f4a2:en:neutral",
+        "pbf_f37fe51bb9d9856eef2b:zh:original"
+      ],
+      "directory": "exact-hf-qwen3-8b-development-v1",
+      "result_sha256": "c59f613ae82661d63d24ac8b47168196906a39bf92d1ea0321b8160adc66dcef"
+    },
+    {
+      "choice_difference_count": 10,
+      "choice_difference_stimulus_ids": [
+        "pbf_07b4aa3749b9d10c2908:zh:original",
+        "pbf_332eb7548a27a487ada9:raw_mkqa_001747_generated_wrong_2:en:neutral",
+        "pbf_3f3e20a76d4e3b1fecf7:raw_mkqa_003521_generated_wrong_1:zh:neutral",
+        "pbf_71140b7d185539d2eeb2:postclosure_dist_f88abd26f66ce452477a:en:targeted",
+        "pbf_9406881983aeb72fd5d7:raw_global_mmlu_001545_generated_wrong_3:zh:targeted",
+        "pbf_a455da62effeb99cb71e:postclosure_dist_600dfb86b28b5ddc4ce6:zh:targeted",
+        "pbf_a89bcf73d30e317c4071:postclosure_dist_48b4768c59e4ea104185:zh:neutral",
+        "pbf_e1140c553ba66b80b61c:postclosure_dist_68ce753344072846722b:zh:neutral",
+        "pbf_e1140c553ba66b80b61c:zh:original",
+        "pbf_f18dc56e1df9ddb524f8:postclosure_dist_d9b94eadcf937939f4a2:en:neutral"
+      ],
+      "directory": "exact-hf-qwen3-8b-development-v2",
+      "result_sha256": "47bebe84a0d7248e871d8d1adf3986006b9939e9c5c998057c61feb58f613160"
+    }
+  ]
+}

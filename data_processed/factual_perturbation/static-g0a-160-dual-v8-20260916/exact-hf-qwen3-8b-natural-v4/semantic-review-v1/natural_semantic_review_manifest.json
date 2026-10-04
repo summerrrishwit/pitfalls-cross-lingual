@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "adjudications": {
+      "path": "natural_semantic_adjudications.jsonl",
+      "sha256": "8b06d9e49fabd511b7567fc30c6f080ba70d03e3a702953e2195d6c3c316618c"
+    },
+    "fact_labels": {
+      "path": "natural_semantic_fact_labels.jsonl",
+      "sha256": "40bcce1fb1348e88260e763888da7a567ad77acb1c0277e2db2f75602e400c93"
+    }
+  },
+  "created_at": "2026-09-19T15:04:30.392688+00:00",
+  "decision_counts": {
+    "accept": 64,
+    "defer": 3,
+    "reject": 125
+  },
+  "fact_label_counts": {
+    "induced_only_gap": 14,
+    "natural_en_failure": 58,
+    "natural_pnt_gap": 10,
+    "semantic_review_incomplete": 3
+  },
+  "human_gold": false,
+  "inputs": {
+    "exact_hf_labels_sha256": "eaa0a49a1820541b1b171563b2c22b9ba5bd5e47ee2fbbe8e5e531152dd61f4c",
+    "natural_results_sha256": "2b8953174713a42e55356be6bc90fd06b8d48958d98cb43a629e5d94346954ea",
+    "natural_summary_sha256": "22746e3eccb52d08f623a775954542e9ddced92db947e7592e6ccc9df631c87b",
+    "review_decisions_sha256": "dfd73fcc9d639dbeee1a906773c0c1db3401e70dc7e3162cad5dabc803759fcf"
+  },
+  "limitations": [
+    "Codex semantic adjudication is proxy review, not independent human gold.",
+    "Deferred records are excluded from binary natural-gap strata but remain available for MCQ-conditioned analysis."
+  ],
+  "reviewer_type": "codex_proxy",
+  "schema_version": "qwen3-8b-natural-semantic-review-manifest-v1",
+  "semantic_correct_counts": {
+    "en": 36,
+    "zh": 28
+  },
+  "status": "complete_with_deferrals"
+}

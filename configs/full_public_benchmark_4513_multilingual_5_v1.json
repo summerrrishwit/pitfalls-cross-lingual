@@ -1,0 +1,58 @@
+{
+  "extends": "configs/full_public_benchmark_8969_pre_exact_hf_zh_v1.json",
+  "config_version": "full-public-benchmark-4513-multilingual-5-v1",
+  "scope": {
+    "source_projection": "zh-accepted-target-projection-r09-v1",
+    "source_projection_record_count": 7663,
+    "relation_usable_target_policy": "exclude-relation-partition-status-unresolved_partition_only-v1",
+    "relation_usable_target_count": 4513,
+    "selected_target_languages": [
+      "ar",
+      "de",
+      "es",
+      "ja",
+      "sw"
+    ],
+    "english_is_source_of_record": true,
+    "zh_is_lineage_filter_only": true
+  },
+  "model_roles": {
+    "translation": {
+      "primary": {
+        "max_retries": 0
+      },
+      "reviewer": {
+        "max_retries": 0
+      }
+    }
+  },
+  "execution": {
+    "resume": true,
+    "max_workers": 2,
+    "provider_max_concurrency": {
+      "openai": 2,
+      "aliyun": 2,
+      "deepseek": 2,
+      "test_gateway": 1,
+      "claude_cc": 1
+    },
+    "max_retries": 2,
+    "timeout_seconds": 300,
+    "checkpoint_every_records": 64,
+    "store_raw_responses": false,
+    "store_prompt_and_model_versions": true,
+    "credentials_in_artifacts": false
+  },
+  "multilingual_translation_contract": {
+    "semantic_generation_stages": 1,
+    "independent_semantic_review_stages": 1,
+    "technical_retry_or_batch_split_may_repeat_model_requests": true,
+    "automatic_repairs": 0,
+    "review_granularity": "record_language_level",
+    "transport_failure_scope": "all_five_languages_for_the_source_record",
+    "rejected_or_failed_policy": "quarantine_without_iteration",
+    "human_gold": false,
+    "relation_component_or_split_recomputation": false,
+    "hf_or_behavior_execution": false
+  }
+}

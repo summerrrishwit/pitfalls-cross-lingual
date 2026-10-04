@@ -1,0 +1,72 @@
+{
+  "authorization_state": {
+    "development_mcq_attribution_complete": true,
+    "development_vector_intervention_authorized": false,
+    "sealed_authorized": false,
+    "validation_authorized": false
+  },
+  "canonical": {
+    "artifacts": {
+      "activation_index": {
+        "byte_count": 185266,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2/mcq_decision_activation_index.jsonl",
+        "sha256": "31865e4ba21bb3c2939a2733c3b37a04a6f63fa3db43305c16d4c5f86050a45a"
+      },
+      "metrics": {
+        "byte_count": 11633294,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2/mcq_decision_logit_lens.jsonl",
+        "sha256": "85b3124303080e64b2f842ae0b78d97816c9cc2574e028c79b968dbe292182b1"
+      },
+      "resid_pre": {
+        "byte_count": 283117351,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2/mcq_decision_resid_pre.pt",
+        "sha256": "8a1ebe9e1e30110d7e8264f1882d8fe3fc213ead069cecc3b4817e20102b6b9d"
+      }
+    },
+    "directory": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2",
+    "manifest_sha256": "3fb1e84c81100a369ff74e39549a2b04464c69fc9416176ab15e4afce39cfd25"
+  },
+  "comparisons": {
+    "activation_index_sha256_identical": true,
+    "input_bindings_identical": true,
+    "metrics_sha256_identical": true,
+    "resid_pre_sha256_identical": true
+  },
+  "created_at": "2026-09-19T15:23:58.801812+00:00",
+  "failures": [],
+  "repeat": {
+    "artifacts": {
+      "activation_index": {
+        "byte_count": 185266,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2-repeat/mcq_decision_activation_index.jsonl",
+        "sha256": "31865e4ba21bb3c2939a2733c3b37a04a6f63fa3db43305c16d4c5f86050a45a"
+      },
+      "metrics": {
+        "byte_count": 11633294,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2-repeat/mcq_decision_logit_lens.jsonl",
+        "sha256": "85b3124303080e64b2f842ae0b78d97816c9cc2574e028c79b968dbe292182b1"
+      },
+      "resid_pre": {
+        "byte_count": 283117351,
+        "path": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2-repeat/mcq_decision_resid_pre.pt",
+        "sha256": "8a1ebe9e1e30110d7e8264f1882d8fe3fc213ead069cecc3b4817e20102b6b9d"
+      }
+    },
+    "directory": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v2-repeat",
+    "manifest_sha256": "f2523a9d498678b9f2abc79d19f87254fe0ee2438560146d1427ae50caf30e42"
+  },
+  "schema_version": "qwen3-mcq-decision-attribution-stability-audit-v1",
+  "status": "passed_frozen_runtime_reproduction",
+  "superseded": {
+    "authoritative": false,
+    "directory": "/root/autodl-tmp/pnt-g0b-qwen3-8b-20260919/mcq-attribution-v1",
+    "forward_parity": {
+      "choice_order_mismatch_render_count": 29,
+      "exact_global_rank_mismatch_count": 62,
+      "interpretation": "Behavior scoring batches the three full choice completions, whereas attribution runs the shared pre-choice context once. BF16 kernel-shape effects can change near-tied ranks; all differences are retained for audit."
+    },
+    "manifest_sha256": "a3748cc265e3345cf4eddc4520aadea27fceb9c6ba391039a593f6d076ae3a9e",
+    "reason": "single-prefix forward shape did not exactly replay behavior scoring",
+    "schema_version": "qwen3-mcq-decision-attribution-manifest-v1"
+  }
+}

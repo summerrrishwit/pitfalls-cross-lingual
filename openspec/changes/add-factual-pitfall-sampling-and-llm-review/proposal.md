@@ -16,6 +16,11 @@ raw English QA
   -> source-wrong-option distractor candidates
 ```
 
+The later offline extension adds a single-model provisional public-benchmark bridge, an auditable
+review-staging chain, and fail-closed consumers for eventual formal behavior and PATH_not_token
+inputs. It does not yet implement the producer that turns staging decisions into a separately
+materialized reviewed/frozen cohort, and no exact-HF mechanism or repair experiment has run.
+
 ## What Changes
 
 - Preserve `data/source/` and model-independent raw-source manifests.
@@ -31,6 +36,14 @@ raw English QA
 - Determine canonical triples from direct dual-model normalized-answer agreement plus explicit Codex adjudication of every single-model extraction and material answer conflict, while retaining both annotations and all source choices.
 - Generate strict factual-completion prompts when the canonical fact ends in the answer and an explicit open-answer fallback otherwise.
 - Preserve original wrong options as traceable, unverified distractor candidates; do not claim type/fact verification in this stage.
+- Keep public Qwen extractions provisional; bind review scope/export/apply artifacts without
+  treating a statistical review sample as a frozen cohort.
+- Require a formal cohort universe to be separately materialized, fully dispositioned, and bound
+  to its decision, revision, duplicate-closure, exposure-audit, and split evidence before formal
+  behavior or PATH admission.
+- Require any exact-HF PATH_not_token experiment to use one frozen checkpoint/tokenizer across
+  baseline, hidden-state analysis, task/difference vectors, `resid_pre` intervention, repair, and
+  regression evaluation.
 - Delete the superseded factual-review checkpoints, supervisor artifacts, audit-analysis outputs, and audit-specific code.
 
 ## Capabilities
@@ -40,6 +53,12 @@ raw English QA
 - `atomic-factual-triple-extraction`: Extract validated atomic `(subject, relation_raw, answer)` records from raw English QA with complete source provenance.
 - `relation-taxonomy-normalization`: Build a global relation inventory and reproducibly apply a versioned taxonomy/mapping to extracted triples.
 - `canonical-triple-postprocessing`: Freeze conservative canonical triples, factual prompts, and source-option distractor candidates with stage-level provenance.
+- `public-provisional-review-and-freeze`: Keep single-model imports provisional, distinguish review
+  samples from a formal cohort universe, and define complete provenance-bound finalization.
+- `factual-split-leakage-control`: Resolve duplicate, near-duplicate, and historical-exposure
+  components before freezing development, validation, and sealed partitions.
+- `path-not-token-hf-mechanism-and-repair`: Run open-completion attribution and repair with one
+  exact Hugging Face checkpoint/tokenizer and leakage-safe vector/evaluation splits.
 
 ### Retained Capabilities
 
@@ -50,4 +69,11 @@ raw English QA
 - Removes the old `FACTUAL_AUDIT_MODEL`, tri-state decision schema, `prompt_en`, audit checkpoints, and audit supervisor.
 - Adds two configured triple-label models and records endpoint-independent model IDs plus extraction prompt version per row.
 - Keeps generated perturbation text, translation, and screening outside this experiment until normalized triples, prompts, and distractor candidates are reviewed and frozen.
+- Leaves current public-benchmark output at review staging: a fail-closed cohort-declaration and
+  evidence-preflight helper exists, but no real cohort or reviewed-bundle/freeze producer, exact-HF
+  baseline, attribution, intervention, or repair is claimed by this change state.
+- Treats the hard-coded Hugging Face credential at
+  `/Users/xiarongzhi/school task/paths_not_taken/demo_load_datasets_model.py:337` as an external
+  security defect: its value must not be copied, must be revoked/rotated, and future loading must
+  use environment or secret-manager injection.
 - Uses the configured OpenAI-compatible endpoint for later strong-model work; preflight confirmed `qwen3.7-plus` is callable through `https://ctapi.csxdtx.com:16000/v1`.

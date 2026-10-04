@@ -1,0 +1,342 @@
+{
+  "authorization_state": {
+    "development_folds_frozen": true,
+    "exact_hf_behavior_authorized": false,
+    "exact_hf_identity_bound": false,
+    "exact_hf_render_frozen": false,
+    "g0a_static_content_frozen": true,
+    "pnt_authorized": false,
+    "protocol_core_frozen": true,
+    "sealed_authorized": false,
+    "validation_authorized": false
+  },
+  "cohort_contract": {
+    "development_base_fact_ids_sha256": "eb96a0364ef6473539ac2797ca6454deca9dcc36835caa61d7b73d01d1a44e32",
+    "development_replay_population": "all_96_without_proxy_filtering",
+    "sealed_behavior_locked_until": "G3_VALIDATION_CONFIRMED",
+    "split_fact_counts": {
+      "development": 96,
+      "sealed": 32,
+      "validation": 32
+    },
+    "statistical_unit": "base_fact_id",
+    "validation_behavior_locked_until": "G2_REPAIR_RULE_FROZEN"
+  },
+  "created_at": "2026-09-17T08:10:05.205008+00:00",
+  "crossfit_contract": {
+    "final_vector_rebuilt_from_all_development_after_oof_selection": true,
+    "fold_assignment_sha256": "8d72900c4613c0aa42d790ca2721027920183ed7c0b963efadc3884e3c481d47",
+    "fold_count": 4,
+    "fold_manifest_sha256": "463dfac6cb786f2baf756af615e758e04d7257f7ce639d501aa0255780958c8e",
+    "held_out_fact_count_per_fold": 24,
+    "held_out_fact_may_source_its_injected_vector": false,
+    "train_fact_count_per_fold": 72,
+    "validation_or_sealed_may_source_vector": false,
+    "vector_source": "train_complement_only"
+  },
+  "exact_hf_replay_contract": {
+    "development_fact_count": 96,
+    "exact_hf_identity": null,
+    "exact_hf_identity_required": true,
+    "expected_render_count_all_splits": 1600,
+    "expected_unique_input_count": 960,
+    "mandatory_base_fact_ids_sha256": "eb96a0364ef6473539ac2797ca6454deca9dcc36835caa61d7b73d01d1a44e32",
+    "proxy_labels_role": "post_hoc_migration_comparison_only",
+    "proxy_positive_filter_allowed": false,
+    "render_all_160_before_opening_development": true
+  },
+  "exact_hf_resolution_status": "pending_g0b",
+  "generator_code": {
+    "byte_count": 52815,
+    "path": "scripts/freeze_pre_exact_hf_protocol.py",
+    "sha256": "1e212909c22432e05180a6244e66ce5e1fbf98cb5d8b6275084c345e12e09835"
+  },
+  "invalidation_policy": {
+    "exact_hf_identity_change": "new_g0b_and_downstream_run",
+    "fold_or_protocol_core_change": "new_protocol_version_no_result_mixing",
+    "rule_change_after_validation": "validation_downgrades_to_development_and_new_holdouts_required",
+    "static_content_change": "new_g0a_version_and_full_p0_rerun"
+  },
+  "label_contract": {
+    "hf_directed_candidate": {
+      "all_of": [
+        "zh_original_is_gold",
+        "zh_neutral_for_designated_distractor_is_gold",
+        "zh_targeted_is_designated_distractor"
+      ]
+    },
+    "hf_resistant_control": {
+      "all_of": [
+        "en_original_is_gold",
+        "en_neutral_for_designated_distractor_is_gold",
+        "en_targeted_is_gold",
+        "zh_original_is_gold",
+        "zh_neutral_for_designated_distractor_is_gold",
+        "zh_targeted_is_gold"
+      ]
+    },
+    "hf_zh_specific_strict": {
+      "all_of": [
+        "en_original_is_gold",
+        "en_neutral_for_designated_distractor_is_gold",
+        "en_targeted_is_gold"
+      ],
+      "requires": "hf_directed_candidate"
+    },
+    "invariants": [
+      "hf_zh_specific_strict_implies_hf_directed_candidate",
+      "neutral_unstable_is_not_hf_directed_candidate",
+      "off_target_failure_is_not_hf_directed_candidate",
+      "proxy_label_is_not_exact_hf_label"
+    ],
+    "other_states": {
+      "baseline_failure": "required_original_is_not_gold",
+      "incomplete": "any_required_arm_is_missing_or_nonterminal",
+      "neutral_unstable": "original_is_gold_and_neutral_is_not_gold",
+      "off_target_failure": "targeted_is_wrong_and_not_designated_distractor",
+      "shared_language_susceptibility": "en_targeted_is_designated_distractor",
+      "weak_continuous_signal": "no_flip_but_gold_minus_distractor_margin_declines"
+    }
+  },
+  "matching_policy": {
+    "base_fact_weighting": "equal",
+    "construction_timing": "after_exact_hf_labels_before_hidden_state_or_repair_results",
+    "control_label": "hf_resistant_control",
+    "default_control_population": "retain_all_eligible_controls",
+    "exact_distance_or_adjustment": null,
+    "exact_distance_or_adjustment_status": "pending_g0b_preregistration",
+    "hard_conditions": [
+      "same_split",
+      "same_exact_hf_identity",
+      "same_probe_relation_id",
+      "same_answer_type",
+      "different_leakage_component_id"
+    ],
+    "preferred_covariates": [
+      "answer_token_length",
+      "prompt_tier_or_template",
+      "original_gold_margin",
+      "neutral_gold_margin",
+      "prompt_length",
+      "context_length",
+      "distractor_type",
+      "distractor_length",
+      "review_quality"
+    ],
+    "unmatched_directed_records_retained_in_funnel": true,
+    "within_fact_variant_aggregation": "mean_over_two_variants"
+  },
+  "natural_baseline_contract": {
+    "labels": [
+      "natural_pnt_gap",
+      "induced_only_gap",
+      "natural_en_failure"
+    ],
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "mcq_original_is_not_a_substitute": true,
+    "required_for_all_development_facts": true,
+    "required_metrics": [
+      "alias_aware_generation_correctness",
+      "complete_answer_sequence_log_probability",
+      "answer_token_rank",
+      "gold_minus_distractor_log_probability_margin"
+    ]
+  },
+  "pending_exact_hf_bindings": [
+    "exact_hf_model_manifest",
+    "exact_hf_render_manifest",
+    "answer_tokenization_policy",
+    "exact_max_attempts",
+    "exact_matching_distance_or_adjustment",
+    "resolved_layer_ids",
+    "resolved_hidden_state_position",
+    "scale_grid",
+    "retention_thresholds",
+    "control_harm_threshold",
+    "validation_confirmation_mode",
+    "minimum_directed_event_count"
+  ],
+  "protocol_core_status": "frozen",
+  "protocol_version": "mcq-dual-distractor-pnt-pre-exact-hf-v1",
+  "proxy_output_independence": {
+    "generator_input_allowlist": [
+      "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/static_freeze_manifest.json",
+      "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/split_freeze_manifest.json",
+      "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/frozen_static_bundle.jsonl",
+      "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/pre-exact-hf-protocol-v1/development_fold_manifest.json",
+      "tasks/task_160_mcq_pnt_protocol.md"
+    ],
+    "prohibited_inputs": [
+      "runs/**/simulation_results.jsonl",
+      "runs/**/preholdout_summary.json",
+      "runs/**/three_arm_analysis.json",
+      "runs/**/experiment_report.md",
+      "runs/**/proxy_representative_probe_*"
+    ],
+    "proxy_based_selection": false,
+    "proxy_behavior_outputs_read_by_generator": false,
+    "proxy_counts_used": false,
+    "proxy_labels_used": false,
+    "proxy_negative_records_excluded": false,
+    "validation_sealed_proxy_exposed": false
+  },
+  "registration_chronology": {
+    "completed_proxy_run_id": "static-g0a-dev96-four-model-v10-20260916",
+    "completed_proxy_run_used_for_policy_selection": false,
+    "historical_timing_limitation": "This supplementary manifest was materialized after P0 and must not be described as a pre-P0 preregistration.",
+    "phase_created": "post_p0_pre_g0b",
+    "preregistered_for_completed_proxy_run": false,
+    "prospective_for_exact_hf_replay": true,
+    "prospective_for_pnt_and_repair": true
+  },
+  "reporting_contract": {
+    "independent_sample_unit": "base_fact_id",
+    "panel_or_model_union_label_emitted": false,
+    "relation_strata_default": "descriptive_when_small",
+    "report_failures_retries_missing_and_exclusions": true,
+    "report_n_over_N_and_95_percent_interval": true,
+    "report_variant_and_fact_denominators": true
+  },
+  "schema_version": "factual-perturbation-protocol-manifest-v1",
+  "selection_rule": {
+    "control_harm_threshold": null,
+    "ordered_objectives": [
+      "satisfy_all_retention_and_control_harm_constraints",
+      "maximize_zh_targeted_paired_margin_improvement_on_hf_directed",
+      "outperform_no_intervention_and_norm_matched_random",
+      "minimize_absolute_scale",
+      "use_frozen_layer_order",
+      "use_frozen_vector_type_order"
+    ],
+    "retention_thresholds": null,
+    "threshold_status": "pending_g0b_preregistration",
+    "vector_type_tie_break_order": [
+      "task_only",
+      "difference_only",
+      "combined"
+    ]
+  },
+  "static_stimulus_contract": {
+    "arms": [
+      "original",
+      "neutral",
+      "targeted"
+    ],
+    "both_variants_retained": true,
+    "designated_distractors_per_fact": 2,
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "manipulation_family": "explicit_false_assertion_v1",
+    "original_shared_across_distractor_variants": true,
+    "panel_vote_or_union_label_forbidden": true,
+    "target_variants_per_fact": 2,
+    "unique_inputs_per_fact": 10,
+    "variant_is_nested_measurement_not_independent_fact": true
+  },
+  "terminal_and_retry_policy": {
+    "exact_max_attempts": null,
+    "exact_max_attempts_status": "pending_g0b_runtime_resolution",
+    "missing_arm_imputation_allowed": false,
+    "missing_arm_label": "incomplete",
+    "policy_core_status": "frozen",
+    "prompt_or_decoding_change_during_retry": false,
+    "retry_allowed_only_for": [
+      "infrastructure_failure",
+      "transport_failure",
+      "predeclared_parser_failure"
+    ],
+    "retry_for_off_target_answer": false,
+    "retry_for_wrong_answer_or_non_flip": false,
+    "terminal_states": [
+      "completed",
+      "terminal_failure"
+    ]
+  },
+  "tool_version": "freeze-pre-exact-hf-protocol-v1",
+  "upstream_bindings": {
+    "authoritative_protocol_document": {
+      "byte_count": 44829,
+      "path": "tasks/task_160_mcq_pnt_protocol.md",
+      "sha256": "c24064851c0d35396c85bf9f9bf836caec0d493b1b98230ae93301a7e0f15715"
+    },
+    "development_fold_manifest": {
+      "assignment_sha256": "8d72900c4613c0aa42d790ca2721027920183ed7c0b963efadc3884e3c481d47",
+      "base_fact_ids_sha256": "eb96a0364ef6473539ac2797ca6454deca9dcc36835caa61d7b73d01d1a44e32",
+      "byte_count": 48463,
+      "path": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/pre-exact-hf-protocol-v1/development_fold_manifest.json",
+      "record_count": 96,
+      "schema_version": "factual-development-fold-manifest-v1",
+      "sha256": "463dfac6cb786f2baf756af615e758e04d7257f7ce639d501aa0255780958c8e"
+    },
+    "frozen_static_bundle": {
+      "base_fact_ids_sha256": "03dc9019826bfbd33b127928f8c763ab2e60c43e2d9177aec17ad997640796ca",
+      "byte_count": 3174519,
+      "path": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/frozen_static_bundle.jsonl",
+      "record_count": 160,
+      "schema_version": "factual-perturbation-input-bundle-v1",
+      "sha256": "601f23902b309cca12df3da07c6364214b408f8c91ac53808363bcafb138f224"
+    },
+    "split_freeze_manifest": {
+      "byte_count": 2620,
+      "path": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/split_freeze_manifest.json",
+      "schema_version": "factual-split-freeze-manifest-v2",
+      "sha256": "1a45fff2406e981a12e63b85e40bc6b2bfc39d484cd85aa534f2237b9d561fc3"
+    },
+    "static_freeze_manifest": {
+      "byte_count": 6033,
+      "path": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/static_freeze_manifest.json",
+      "schema_version": "static-g0a-freeze-manifest-v1",
+      "sha256": "f033c9cf2d4529b2cde03878a4d01b84a462d167ce8aaaaec13cb3e9972e8636"
+    }
+  },
+  "validation_contract": {
+    "allowed_confirmation_modes": [
+      "induced_confirmation",
+      "natural_only_confirmation"
+    ],
+    "below_minimum_action": "insufficient_evidence",
+    "minimum_directed_event_count": null,
+    "minimum_event_count_status": "pending_before_validation_open",
+    "recommended_mode": "induced_confirmation",
+    "retuning_after_validation_allowed": false,
+    "sealed_fact_count": 32,
+    "sealed_open_once": true,
+    "selected_mode": null,
+    "selection_status": "pending_before_g2_freeze",
+    "validation_fact_count": 32
+  },
+  "vector_and_intervention_contract": {
+    "comparison_conditions": [
+      "no_intervention",
+      "norm_matched_random",
+      "task_only",
+      "difference_only",
+      "combined"
+    ],
+    "hidden_state_position_status": "pending_exact_hf_tokenization",
+    "hook_family": "resid_pre",
+    "layer_resolver_status": "pending_exact_hf_architecture",
+    "primary_attribution_contrast": "[Targeted-Neutral]_hf_directed-[Targeted-Neutral]_hf_resistant",
+    "required_retention_checks": [
+      "original",
+      "neutral",
+      "english",
+      "hf_resistant_control",
+      "unrelated_facts"
+    ],
+    "resolved_hidden_state_position": null,
+    "resolved_layer_ids": null,
+    "scale_grid": null,
+    "scale_grid_status": "pending_g0b_preregistration",
+    "vector_types": [
+      "task_only",
+      "difference_only",
+      "combined"
+    ]
+  }
+}

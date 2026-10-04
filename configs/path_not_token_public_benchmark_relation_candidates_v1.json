@@ -1,0 +1,177 @@
+{
+  "schema_version": "probe-relation-candidate-policy-v1",
+  "policy_id": "public-benchmark-qwen-probe-relation-candidates-v1",
+  "status": "provisional",
+  "human_gold": false,
+  "rules": [
+    {
+      "probe_relation_candidate": "description_to_term",
+      "direction": "description -> term",
+      "relation_raw": [
+        "term for definition",
+        "term for",
+        "medical term for",
+        "sociological term for",
+        "statistical term for"
+      ],
+      "subject_types": null,
+      "answer_types": null
+    },
+    {
+      "probe_relation_candidate": "term_to_definition",
+      "direction": "term -> definition",
+      "relation_raw": [
+        "definition",
+        "meaning"
+      ],
+      "subject_types": null,
+      "answer_types": null
+    },
+    {
+      "probe_relation_candidate": "song_to_performer",
+      "direction": "song -> performer",
+      "relation_raw": [
+        "singer",
+        "sung by",
+        "performer",
+        "performed by",
+        "performing artist"
+      ],
+      "subject_types": [
+        "song"
+      ],
+      "answer_types": [
+        "person",
+        "band",
+        "musical group",
+        "musician",
+        "musical artist",
+        "music artist",
+        "music group",
+        "artist",
+        "musical duo"
+      ]
+    },
+    {
+      "probe_relation_candidate": "character_to_actor",
+      "direction": "character -> actor",
+      "relation_raw": [
+        "portrayed by",
+        "played by",
+        "actor who plays",
+        "actor who played",
+        "actor"
+      ],
+      "subject_types": [
+        "fictional character",
+        "character",
+        "film character",
+        "television character",
+        "fictional character role",
+        "character role",
+        "fictional characters"
+      ],
+      "answer_types": [
+        "person",
+        "actor"
+      ]
+    },
+    {
+      "probe_relation_candidate": "character_to_voice_actor",
+      "direction": "character -> voice actor",
+      "relation_raw": [
+        "voice actor",
+        "singing voice actor"
+      ],
+      "subject_types": [
+        "fictional character",
+        "character",
+        "film character",
+        "television character",
+        "fictional character role",
+        "character role",
+        "fictional characters"
+      ],
+      "answer_types": [
+        "person",
+        "actor",
+        "voice actor"
+      ]
+    },
+    {
+      "probe_relation_candidate": "work_to_release_date",
+      "direction": "work -> release date",
+      "relation_raw": [
+        "release date"
+      ],
+      "subject_types": null,
+      "answer_types": [
+        "date"
+      ]
+    },
+    {
+      "probe_relation_candidate": "work_to_release_year",
+      "direction": "work -> release year",
+      "relation_raw": [
+        "release year",
+        "year of release"
+      ],
+      "subject_types": null,
+      "answer_types": [
+        "year"
+      ]
+    },
+    {
+      "probe_relation_candidate": "work_to_filming_location",
+      "direction": "work -> filming location",
+      "relation_raw": [
+        "filming location",
+        "country of filming"
+      ],
+      "subject_types": null,
+      "answer_types": null
+    },
+    {
+      "probe_relation_candidate": "written_work_to_author",
+      "direction": "written work -> author",
+      "relation_raw": [
+        "author",
+        "primary author"
+      ],
+      "subject_types": [
+        "book",
+        "work",
+        "literary work",
+        "poem",
+        "document",
+        "religious text",
+        "book series",
+        "play",
+        "hymn",
+        "written work",
+        "article",
+        "novel"
+      ],
+      "answer_types": [
+        "person"
+      ]
+    },
+    {
+      "probe_relation_candidate": "series_or_season_to_episode_count",
+      "direction": "television series or season -> episode count",
+      "relation_raw": [
+        "number of episodes",
+        "total number of episodes"
+      ],
+      "subject_types": [
+        "television season",
+        "television series",
+        "tv series",
+        "work"
+      ],
+      "answer_types": [
+        "quantity"
+      ]
+    }
+  ]
+}

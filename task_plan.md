@@ -1,7 +1,12 @@
 # Task Plan: Chinese-first Factual Perturbation Before Paths Not Taken
 
 ## Goal
-Create an auditable candidate taxonomy and explicit mapping for all Qwen relation signatures, apply it deterministically, and report unresolved review work without presenting unreviewed labels as frozen gold.
+Build an auditable independent review/freeze → Development MCQ weakness mining → natural EN/ZH
+open-completion baseline and claim stratification → exact-HF attribution/intervention → independent
+confirmation loop. Use Qwen public-benchmark extractions only as provenance-preserving single-model
+provisional candidates; keep unreviewed data out of formal behavior/PATH cohorts, and stop at
+offline preparation until a GPU-accessible exact HF checkpoint and tokenizer are frozen for the
+same-model behavior, mechanism, and repair experiment.
 
 ## Phases
 - [x] Phase 1: Plan and setup
@@ -11,8 +16,13 @@ Create an auditable candidate taxonomy and explicit mapping for all Qwen relatio
 - [x] Phase 5: Review risks and deliver report
 - [x] Phase 6: Decouple factual-prompt generation from relation normalization
 - [x] Phase 7: Configure and validate the Chinese translation/perturbation/simulation stack
-- [ ] Phase 8: Run the bounded Chinese factual-perturbation pilot
-- [ ] Phase 9: Prepare Paths Not Taken only after the perturbation dataset is frozen
+- [x] Phase 8a: Run the bounded 100-input Chinese diagnostic and preserve its failed formal gate
+- [x] Phase 8b: Close the five-model pilot as diagnostic proxy evidence without candidate freeze or holdout
+- [x] Phase 9a: Build the producer-v2 public-benchmark provisional pool, review tooling, and offline Paths Not Taken review-only bridge
+- [x] Phase 9b: Complete the cohort-specific Codex-proxy review, bounded full-pool lexical closure, provisional split recomputation, and post-closure offline artifacts
+- [ ] Phase 9c: Complete translation/distractor review, historical-exposure and broader semantic closure, then explicitly freeze the offline cohort and split
+- [ ] Phase 9d: Run Development exact-HF MCQ mining, natural baseline, attribution, intervention, and repair only after data and runtime are frozen
+- [ ] Phase 9e: Open Validation for fixed confirmation and Sealed once for final evaluation only after the preceding rules are frozen and confirmed
 
 ## Key Questions
 1. Which relation expressions can be merged without losing type or direction semantics?
@@ -25,7 +35,9 @@ Create an auditable candidate taxonomy and explicit mapping for all Qwen relatio
 - Preserve `relation_raw`; only add versioned normalized fields.
 - Produce candidate v1 artifacts first. They are not final frozen gold until review gates pass.
 - Give every one of the 2,425 signatures an explicit `mapped`, `ambiguous`, or `out_of_taxonomy` decision.
-- Separate description-to-term relations from term-to-definition relations; their directions are opposite.
+- Separate description-to-term relations from term-to-definition relations; their directions are
+  opposite. Treat the raw label `term for definition` as direction-unresolved instead of
+  automatically assigning `description -> term`.
 - Use conservative deterministic rules for candidate v1. Broad or overloaded labels remain unresolved.
 - Candidate v1 maps 1,083 of 2,744 extracted records; unresolved records remain explicit review items.
 - Retain the current `relation_normalized` taxonomy as an optional statistical layer; it must not gate factual-prompt generation.
@@ -37,17 +49,89 @@ Create an auditable candidate taxonomy and explicit mapping for all Qwen relatio
 - Treat one canonical base triple as the independent unit. Chinese translations, aliases, prompt variants, distractors, and perturbation rounds must remain grouped with that base triple in one split and must not inflate the reported sample size.
 - Use a model with locally accessible hidden states, tokenizer logits, and intervention hooks. Prior API-model screening results are not substitutes for the selected mechanism model's English/Chinese baseline.
 - Defer hidden-state, Logit Lens, task-vector, and activation-intervention work until the Chinese perturbation pipeline has produced a frozen, independently evaluated badcase set.
-- Use API-catalog discovery plus live probes rather than only `.env` defaults: use `qwen3.8-max` for primary Chinese translation and strict distractor/perturbation validation, `gpt-5.5` for translation review, and `gpt-5.6-sol` for controlled perturbation generation. Reject uncertain or invalid judge outputs.
-- Keep the perturbation generator out of both self-validation and simulation scoring. Use the four-family simulation ensemble `qwen3.7-plus`, `bailian/deepseek-v4-flash-0731`, `hy4-preview`, and `gemini-3.7-flash`; reserve `claude-opus-4-8` as a frozen-candidate model-and-family holdout. Do not call any SenseNova model in this run.
+- The current 160-fact role contract is authoritative: MCQ Original/Neutral/Targeted behavior mines
+  model-specific weaknesses; natural EN/ZH open completion is the unperturbed baseline and claim
+  stratifier; PATH_not_token performs mechanism analysis and repair on the same frozen exact-HF
+  identity. Validation and Sealed neither mine defects nor tune the repair.
+- Keep four authorities separate before and during execution: deterministic source/rule validation
+  establishes lineage only; evidence-backed fact verification establishes canonical support and
+  distractor falsity; an independently identified strong semantic reviewer checks unique answer,
+  relation, translation, Neutral, and Targeted contracts on final rendered inputs; the target
+  exact-HF measures behavior only. Target outputs cannot retroactively approve or rewrite inputs.
+- The following API-model assignments describe the completed historical diagnostic pipeline only:
+  `qwen3.8-max` handled primary Chinese translation and distractor/perturbation validation,
+  `gpt-5.5` reviewed translations, and `gpt-5.6-sol` generated controlled perturbations. These
+  proxy roles do not establish formal fact truth, freeze status, or PATH eligibility.
+- The historical perturbation generator was kept out of self-validation and Simulation scoring.
+  Its four-family Simulation ensemble used `qwen3.7-plus`,
+  `bailian/deepseek-v4-flash-0731`, `hy4-preview`, and `gemini-3.7-flash`; the proposed
+  `claude-opus-4-8` holdout was not run. That panel is not the target exact-HF mechanism chain and
+  all its signals remain `pnt_eligible=false`.
 - Do not enable same-relation distractor sampling in the first pilot. Use verified source wrong options first and verified same-answer-type negatives second; add `probe_relation_id` before relation-conditioned negatives.
 - Treat Codex review as a versioned proxy audit (`reviewer_type=codex_proxy`, `not_human_gold=true`), not as human gold. Exclude unresolved facts and candidates rather than silently accepting them.
-- Use three Simulation arms: shared `original`, shared `neutral`, and candidate-specific `targeted`. Reuse each baseline by `(source_id, distractor_id, model, language, variant)` and reject evidence with inconsistent duplicate baselines.
+- Retain three MCQ behavior arms—shared `original`, matched `neutral`, and candidate-specific
+  `targeted`—for formal exact-HF Development mining. Reuse each baseline by
+  `(source_id, distractor_id, model, language, variant)` and reject evidence with inconsistent
+  duplicate baselines.
 - Do not expand directly to 100 after the 10-item engineering preflight. First run approximately 20 new paired-control base triples because the corrected three-arm rerun reproduced zero of the prior provisional effects.
-- For the sensitivity screen, use `qwen3.6-27b`, `bailian/deepseek-v3.2`, `gpt-5-mini`, and `gemini-3.7-flash`; retain the latter as a strong anchor and keep `gpt-5.6-sol` out of Simulation because it generated the perturbations.
+- The completed historical sensitivity screen used `qwen3.6-27b`,
+  `bailian/deepseek-v3.2`, `gpt-5-mini`, and `gemini-3.7-flash`, with the generator kept out of
+  Simulation. This remains a diagnostic-proxy design rather than a prescription for the 160-fact
+  exact-HF run.
 - Generate ordered L1/L2 truthful perturbations with candidate-specific, length/topic/style-matched Neutral contexts. Keep only Original shared in this design.
-- The multi-option calibration is now complete: 480/480 calls across 20 Codex-reviewed independent base triples produced zero target-distractor-specific Chinese flips. The next authorized design is a 100-input-base diagnostic Chinese pilot, not a production candidate freeze.
+- The multi-option calibration completed 480/480 calls across 20 Codex-reviewed independent base
+  triples and produced zero target-distractor-specific Chinese flips. At that historical point the
+  next authorized step was the 100-input diagnostic later completed as v7b, not a production
+  candidate freeze.
 - The earlier v4 100-input diagnostic pilot completed 840/840 Simulation outcomes on 35 retained sources and produced one strict offline candidate. A later streamlined v5 calibration on 20 new sources reduced hard filtering through translation repair, distractor replenishment, advisory perturbation judging, and Simulation-blind Codex selection.
 - Streamlined v5 retained 15/20 sources, completed 360/360 Simulation outcomes, had zero Neutral instability, and produced two strict Chinese-specific candidates. This is a calibration pass for proceeding to a new v5 100-input diagnostic pilot, not evidence sufficient for candidate freeze or holdout.
+- The later `diagnostic-100-five-model-v7b` run completed the 100-base diagnostic: 93 translations and 73 perturbation candidates were retained, all 2,190 expected Simulation calls completed, and 14 model-specific strict signals were reported. Its formal gate remains false because translation coverage was incomplete and currency cost was not auditable; 41 Neutral-control instabilities also prevent treating it as a frozen production or mechanism cohort. It did not run the current 160-fact Validation or Sealed partitions, and every signal remains `pnt_eligible=false`.
+- The audited `public-benchmarks-full-v1` Qwen extraction is a separate single-model provisional pool: 20,834/20,834 terminal records completed and 9,059 were extracted. It must be deduplicated, independently adjudicated, and versioned before any row becomes canonical or formally PATH_not_token eligible.
+- Producer v2 groups the 9,059 validation-clean triples into 8,969 provisional base facts. Its
+  400-item coverage-oriented sample is for heterogeneous failure discovery and does not support
+  population inference. A separate 400-item overall-random sample supports whole-pool estimates
+  only under its precommitted-seed, uniform-protocol, and nonresponse conditions. The 200-item
+  prompt-risk sample targets a 376-fact risk frame and does not support whole-pool inference.
+- Review `scope -> export -> apply` is a SHA-bound staging workflow. Exports include every
+  duplicate-cluster member; decisions are `accept`, request-only `revise`, `reject`, or `defer`;
+  partial-review missing items remain missing. Codex review is `reviewer_type=codex_proxy` and
+  `human_gold=false`, and the tool has no automatic freeze operation.
+- The current overall-random pilot is only staging: 20 decisions yielded 16 `accept`, 2 `defer`,
+  1 `reject`, and 1 `revise`; 380 scoped items remain missing.
+- A review sample and a frozen cohort are distinct artifacts. A formal freeze universe must be
+  separately materialized with an immutable row inventory and exact hashes. It may be a
+  predeclared subset, but every scoped item must reach final `accept` or `reject` after revisions;
+  `missing`, `defer`, and unapplied `revise` block freeze.
+- The overall-random 400 cannot automatically stand for a frozen 8,969-fact cohort. If selected as
+  the formal cohort universe, it requires 400/400 review completion plus duplicate,
+  near-duplicate, and historical-exposure closure against the full pool. Freezing the entire pool
+  instead requires item-level terminal review of all 8,969 facts.
+- Lexical near-duplicate audit v2 emitted 2,341 representative candidate pairs, including 281
+  emitted cross-split pairs. It is not an exhaustive pair census, performs no semantic
+  adjudication, and therefore blocks split freeze until reviewed.
+- Formal behavior and PATH admission now require external review-freeze and split-freeze
+  manifests bound to the exact bundle bytes; row-level status changes are insufficient. Those
+  manifests have not been produced for this pool.
+- Formal evidence validation now uses canonical evidence-tier values, requires row-level
+  `human_gold`/`evidence_tier` to match the bound review decision, binds near-duplicate decisions
+  to candidate and endpoint hashes, and rejects legacy unbound v1 evidence. PATH no longer coerces
+  non-boolean `human_gold` values. Holdout execution binds both its runtime and frozen-candidate
+  artifact before initializing a model router.
+- `scripts/finalize_public_benchmark_bundle.py` can immutably declare a chosen full-pool or
+  review-scope diagnostic universe and emit a fail-closed blocker report. Universe v2 accepts only
+  the path-independent pinned `canonical-v2` comparison content contract and predeclares the full
+  lexical near-audit policy; a later audit with different valid thresholds is rejected. It also
+  records `historical_exposure_contract_status=not_predeclared`, so a runtime registry cannot
+  authorize closure. The user has not yet supplied an authoritative historical-exposure inventory
+  contract, and no actual finalizable formal universe has been selected or declared. The tool
+  cannot apply revisions, materialize a reviewed bundle, or emit freeze manifests.
+- A temporary diagnostic preflight over the existing 400-item scope (explicitly not retained as a
+  formal declaration) reproduced 16 accept, 1 reject, 2 defer, 1 revise, and 380 missing. Of the
+  2,341 lexical candidates, 205 touch this scope, 28 of those are cross-split, and 181 distinct
+  out-of-scope base facts are linked. The review apply chain and lexical audit were independently
+  replayed from their bound inputs. The v2 report exited 2 with 12 blocker classes, including the
+  deliberately permanent historical-authority blocker, and emitted no formal or freeze artifact.
+- GPU unavailability blocks exact-HF behavior, hidden-state, Logit Lens, activation-patching, task/difference-vector, and repair claims. It does not block provisional import, fact clustering, relation inventory, bilingual review, split freezing, or an HF-ready input bundle.
 
 ## Follow-up Tasks
 - [x] 6.1 Update the prompt contract so `normalization_status` and `relation_normalized` no longer determine `factual_prompt_status`.
@@ -69,26 +153,103 @@ Create an auditable candidate taxonomy and explicit mapping for all Qwen relatio
 - [x] 7.13 Generate and Codex-review matched-neutral L1/L2 perturbations; retain 22/24 candidates across 11 valid independent source/distractor pairs.
 - [x] 7.14 Run the 11 stronger L2 candidates with the revised four-model panel: 264/264 calls completed and zero qualified Chinese targeted flips were observed.
 - [x] 7.15 Replace binary correctness with a deterministic three-option endpoint, identical English/Chinese option ordering, target-distractor hit tracking, and explicit separation of non-target wrong answers. The 20-base calibration completed 480/480 calls with zero target-specific flips.
-- [ ] 7.16 Run a preregistered 100-input-base diagnostic Chinese pilot with the multi-option endpoint; if it again yields no target-specific signal, predeclare a separate alternate-language transfer screen.
+- [x] 7.16 Run the 100-input-base multi-option diagnostic as `diagnostic-100-five-model-v7b`: 100 bases, 73 fully simulated candidates, 2,190/2,190 Simulation calls, and 14 model-specific strict signals. Preserve `gate_passed=false`; do not freeze candidates or run holdout from this diagnostic alone.
 - [x] 7.17 Run the streamlined v5 calibration on 20 new sources: translation 18/20, complete option sets 17/20, Codex-retained sources 15/20, Simulation 360/360, Neutral instability 0/120, and strict Chinese-specific candidates 2/15.
 - [x] 7.18 Add loopback-only, credential-free Ollama Simulation routing and rerun the latest 15 frozen v5c candidates with `gemma3:12b` and `llama3.1:8b`: 180/180 calls completed, with 2 model-specific strict signals from `llama3.1:8b` and 0 from `gemma3:12b`.
-- [ ] 8.1 Run the frozen 100-base-triple pilot with at most two verified distractors per triple, two generated perturbations per distractor, beam width 4, and maximum depth 2.
-- [ ] 8.2 Require all four simulation models for primary search scores; report partial model coverage separately rather than silently averaging fewer models.
-- [ ] 8.3 Freeze induced and amplified badcase candidates only after semantic checks and simulation scoring; then evaluate them once on the reserved Claude Opus 4.8 holdout.
-- [ ] 8.4 Report independent base-triple counts, candidate attrition, model-specific failure rates, English-retention rate, Chinese accuracy drop, distractor-hit rate, and non-simulation transfer without treating perturbation variants as independent samples.
-- [ ] 9.1 Define `probe_relation_id`, answer-token contracts, hidden-state hooks, and Paths Not Taken admission states only after the perturbation artifacts and model-behavior cohorts are stable.
-- [ ] 9.2 Keep the previously specified Paths Not Taken relation-specific and causal-mechanism work deferred; do not block the Chinese perturbation MVP on it.
+- [x] 8.1 Supersede the planned production 100-base API-panel pilot with the completed v7b diagnostic; do not reinterpret the diagnostic as a frozen cohort.
+- [x] 8.2 Retain complete per-model coverage as a historical diagnostic reporting rule, but retire the multi-model panel as the primary score for the 160-fact exact-HF chain.
+- [x] 8.3 Cancel the proposed Claude Opus 4.8 holdout for this diagnostic path; no candidate from the failed gate is frozen or made PATH-eligible.
+- [x] 8.4 Preserve independent base-triple counts, attrition, per-model failures, English retention,
+  Chinese change, distractor hits, and transfer as diagnostic reports without treating variants as
+  independent samples or claiming mechanism evidence.
+- [x] 9.1 Define the nullable `probe_relation_id` and offline admission schema now, while keeping model-specific tokenization and mechanism eligibility pending until an exact HF checkpoint/tokenizer revision is selected.
+- [x] 9.2 Build and Codex-proxy review a relation-balanced 160-fact provisional subset without GPU; keep exact-HF baseline, hidden-state, task/difference-vector, intervention, and causal-repair execution deferred.
+- [x] 9.3 Import `public-benchmarks-full-v1` through a dedicated single-model provisional adapter; never duplicate the Qwen checkpoint to simulate dual-model consensus.
+- [x] 9.4 Assign deterministic `base_fact_id`/duplicate clusters, preserve extraction provenance, and separate strict completions from open-answer fallbacks.
+- [x] 9.5 Emit a versioned behavior input bundle with explicit evidence tier, canonical status, aliases, distractor provenance, relation fields, record hashes, and a provisional answer-group split with a reserved sealed partition. Keep `split_status=provisional_not_frozen` until review is complete.
+- [x] 9.6 Make perturbation preparation consume an explicit bundle path while preserving the legacy canonical-v2 default and existing frozen runs.
+- [x] 9.7 Add a generic PATH bridge adapter for reviewed bundles; retain the legacy `Chinese.json` preparation unchanged.
+- [x] 9.8 Upgrade the public producer to v2, emit the coverage-oriented 400, overall-random 400,
+  and prompt-risk-targeted 200 samples, and record the 376-fact prompt-risk frame and inference
+  limits explicitly.
+- [x] 9.9 Add SHA-bound review `scope`, `export`, and staging-only `apply`; expand duplicate
+  members, support `accept`/`revise`/`reject`/`defer`, preserve missing partial decisions, and
+  require explicit non-human Codex-proxy provenance.
+- [x] 9.10 Run the 20-item overall-random Codex-proxy pilot and retain its 16/2/1/1 outcomes plus
+  380 missing entries as staging, without automatic canonical or split freeze.
+- [x] 9.11 Add and run lexical near-duplicate audit v2 as bounded candidate generation; record
+  2,341 emitted representative pairs and 281 emitted cross-split pairs without claiming an
+  exhaustive census or semantic completion.
+- [x] 9.12 Require exact bundle-bound external review-freeze and split-freeze manifests in formal
+  factual-perturbation and PATH admission.
+- [x] 9.13 Regenerate the PATH review-only bridge with 8,969 provisional facts and verify that the
+  formal output remains empty.
+- [ ] 9.14 Complete the remaining overall-random review under one protocol; resolve or explicitly
+  exclude unresolved pilot `revise`/`defer` cases, without treating nonresponse as reject or human
+  gold. This completes an inferential sample only; it does not itself define a formal cohort.
+- [x] 9.14a Consolidate the separate relation-balanced cohort review chain: 251 terminal proxy
+  outcomes produced 157 direct accepts, 13 direct rejects, 78 explicit cohort exclusions, and
+  3 retained revisions; independently re-review all retained revisions without claiming human gold.
+- [ ] 9.15 Semantically adjudicate lexical/alias candidates, regroup accepted duplicate or leakage
+  components, and recompute the split. For a subset cohort, compute closure against all 8,969 pool
+  facts and all historically exposed evaluation artifacts. Do not freeze while any relevant
+  pair/component remains unresolved.
+- [x] 9.15a Complete the bounded lexical closure against the full 8,969-fact pool for the selected
+  160-fact cohort: adjudicate all 73 reachable candidate edges, preserve original split-group
+  atomicity, retain all 160 facts, and recompute an exact 24/8/8 split for each of four relations.
+  Keep broader semantic-paraphrase closure and historical-exposure closure explicitly pending.
+- [ ] 9.16 Implement a provenance-preserving finalizer that separately materializes the exact
+  formal cohort universe, applies and re-reviews revisions, re-clusters facts, records every
+  inclusion/exclusion, and emits review-freeze and split-freeze manifests bound to the resulting
+  bundle. Then regenerate formal behavior/PATH inputs.
+- [x] 9.16a Implement immutable full-pool/review-scope diagnostic universe declaration and a
+  fail-closed evidence preflight that always blocks while the reviewed-bundle/freeze producer is
+  absent and while historical-exposure authority was not predeclared.
+- [x] 9.16b Materialize the non-frozen post-closure 160-fact bundle, regenerate 320 same-relation
+  same-final-split distractor candidates, and regenerate the PATH review-only bridge with 160 rows
+  and zero formal rows. Preserve every pending blocker and keep perturbation authorization false.
+- [ ] 9.17 Freeze the exact HF checkpoint/tokenizer, behavior/scoring contract, primary MCQ variants,
+  and Development folds; keep all 160 rows `pnt_eligible=false` until the formal review/split gates
+  and these manifests pass.
+- [ ] 9.18 Run only Development 96 through exact-HF EN/ZH Original/Neutral/Targeted MCQ; derive
+  strict induced defects and resistant controls by the frozen deterministic label rule.
+- [ ] 9.19 Run natural EN/ZH open completion as the baseline and claim stratifier, then develop
+  hidden-state/Logit-Lens attribution, task/difference vectors, and repair on Development with
+  out-of-fold evaluation. Freeze the resulting mechanism and repair rule.
+- [ ] 9.20 Open Validation 32 only for fixed confirmation. Do not replace distractors, tune labels,
+  recompute vectors, or change layer/scale from its outputs.
+- [ ] 9.21 Open Sealed 32 once only after Validation confirms the frozen protocol; report repair,
+  English retention, Original/Neutral preservation, and unrelated-fact regression.
 
 ## Immediate Execution Order
-1. Complete prompt decoupling tasks 6.1-6.4 and regenerate the versioned canonical factual-prompt artifact without requiring a mapped relation.
-2. Implement provider/model routing, structured-response validation, redacted logging, retry policy, and single-writer resumable checkpoints from `configs/factual_perturbation_zh_mvp_v1.json`.
-3. Freeze a deterministic 10-base-triple end-to-end preflight sample stratified by source dataset, prompt quality tier, and answer type.
-4. Generate Chinese prompts with `qwen3.8-max`, review them with `gpt-5.5`, and reject unresolved translations rather than silently repairing them.
-5. Verify source wrong options and same-answer-type distractors, generate perturbations with `gpt-5.6-sol`, and validate them independently with `qwen3.8-max`.
-6. Run all four simulation models on every retained preflight candidate; preserve individual failures and do not compute the primary ensemble score unless all four results are present.
-7. Audit the 10-triple preflight for semantic validity, resume correctness, latency, token usage, per-provider errors, and candidate attrition before authorizing the 100-base-triple pilot.
-8. Run the frozen 100-base-triple pilot, freeze accepted induced/amplified candidates, then call `claude-opus-4-8` exactly once per frozen candidate as the holdout.
-9. Produce the attrition, English-retention, Chinese accuracy-drop, distractor-hit, per-model failure, and holdout-transfer report. Keep Paths Not Taken disabled until this dataset and cohort definition are frozen.
+1. Use only the SHA-bound authoritative chain under `preperturbation_v1`:
+   `duplicate_closure_adjudications_v1` → `duplicate_closure_resolution_v1` →
+   `postclosure_preperturbation_v2`, followed by the PATH output
+   `public-benchmark-qwen-postclosure-provisional-v2`. Earlier v1/replay directories are
+   non-authoritative and must not be mixed into this chain.
+2. Generate and independently review EN→ZH translations for the 160 retained facts, including
+   prompt/answer aliases, while preserving the English facts as the source of record.
+3. Independently review all 320 regenerated distractors for answer disjointness, relation fit,
+   single-answer behavior, and target-language rendering; failed items require replacement and a
+   fresh bound review.
+4. Obtain the user's authoritative historical-exposure inventory contract, bind it to the exact
+   160-fact cohort, and add a declared broader semantic-paraphrase audit. The completed 73-edge
+   lexical closure is bounded candidate coverage, not an exhaustive semantic census.
+5. Decide whether Codex-proxy evidence is acceptable for the intended experiment or replace it
+   with named independent human review. Only after that decision and all preceding checks may a
+   producer emit exact-bundle review-freeze and split-freeze manifests.
+6. Re-run formal admission: only then may factual-perturbation and PATH write formal records.
+   The current PATH output deliberately contains 160 review-only and zero formal facts; all rows
+   remain `pnt_eligible=false`.
+7. Select and freeze one exact HF checkpoint/tokenizer plus prompt, scoring, retry, parsing, and
+   primary-variant manifests before any model-specific execution.
+8. Run Development 96 MCQ Original/Neutral/Targeted first to mine strict induced defects and retain
+   resistant controls. Then run natural EN/ZH open completion for the unperturbed baseline and claim
+   stratification, followed by Development-only PATH_not_token attribution and repair selection.
+9. Freeze the behavior, attribution, vector, layer, scale, trigger, and repair contracts before
+   opening Validation 32 for confirmation. Open Sealed 32 once only after Validation confirms them.
+10. Do not call GPU, Ollama, HF, or external experiment/provider endpoints during the remaining
+    offline review/freeze work; any further Codex proxy judgment must stay explicitly non-human.
 
 ## Errors Encountered
 - CodeGraph context lookup was unavailable because its service connection closed; continued with repository specifications and implementation source.
@@ -99,11 +260,39 @@ Create an auditable candidate taxonomy and explicit mapping for all Qwen relatio
 - The corrected three-arm rerun used 112 physical calls instead of 144 naive per-candidate calls, completed all calls, and found zero Paths Not Taken candidates among six Codex-accepted perturbations. One English neutral-control answer changed under `bailian/deepseek-v4-flash-0731`.
 - The first representative `gpt-5-mini` probe returned HTTP 500 and passed on isolated retry. Its first 72-call Simulation batch completed but required 11 retries and reached 444,059 ms cumulative latency; the later 66-call L2 batch completed with no GPT retries.
 - Matched L1/L2 generation initially failed 6/23 groups under a 768-token output budget. A versioned amendment raised the budget to 2,048 and resume completed all failed groups without replaying completed groups.
-- Full-suite discovery remains environment-blocked for two unrelated modules because the local Python environment lacks `anthropic`; the 25 relevant factual-perturbation/canonical tests pass.
+- The latest focused consolidation/pre-perturbation/closure/adjudication/finalizer/PATH suite
+  passes 78/78. Full-suite discovery currently runs 271 tests: 270 pass and one unrelated import
+  error remains because local Python lacks the pinned `anthropic` dependency.
+- The first post-closure PATH conversion exposed an unhandled but producer-valid
+  `relation_specific_open_completion` prompt tier. The adapter now maps that exact tier to
+  `factual_completion`; unknown tiers still fail closed.
 - The first streamlined proxy rerun exposed that frozen generated distractors were dropped when the runner reconstructed only original distractor inputs; the failed run was preserved, the frozen-checkpoint path was fixed, and the replacement run completed.
 - Two long `gpt-5-mini` Simulation prompts repeatedly exhausted a 256-token completion budget and returned no parseable JSON. The model-specific budget was raised to 1,024 with a manifest amendment; checkpoint resume retried only the failures and reached 360/360.
+- The external reference checkout `/Users/xiarongzhi/school task/paths_not_taken` contains a
+  hard-coded Hugging Face credential in `demo_load_datasets_model.py:337`. Do not copy its value;
+  revoke/rotate it and require environment-variable or secret-manager loading in any new runtime.
 
 ## Status
-**Streamlined v5 calibration completed; a new v5 100-input-base Chinese pilot is justified next** - 15/20 independent base triples survived the streamlined funnel and completed 360/360 three-option, three-arm, bilingual Simulation outcomes. Two candidates met the strict Chinese-specific offline condition, but exact paired evidence remains non-significant (`p=0.125`). Claude holdout and Paths Not Taken remain disabled.
+**The v7b 100-input diagnostic completed, but its formal gate did not pass** - 73/100 bases reached complete five-model Simulation coverage and 14 model-specific strict signals were reported. Translation incompleteness, unauditable currency cost, and 41 Neutral-control instabilities mean the run remains diagnostic proxy evidence. The proposed Claude holdout was not run; these records did not consume the current 160-fact Validation or Sealed partitions, cannot support causal Paths Not Taken claims, and remain `pnt_eligible=false`.
 
-**Local Ollama compatibility run completed on the latest frozen v5c records** - `gemma3:12b` and `llama3.1:8b` completed 180/180 Simulation calls over the same 15 candidates. Two model-specific strict signals were observed for `llama3.1:8b`; none were observed for `gemma3:12b`. Nine Original/Neutral choice changes mean this remains a compatibility/calibration result rather than a frozen mechanism cohort.
+**The selected public-pool cohort is materialized through the last safe non-frozen step before
+translation/distractor review and perturbation**
+
+- Producer v2 contains 9,059 validation-clean Qwen triples and 8,969 provisional base facts. A
+  separate relation-balanced review chain examined 251 records and materialized 160 retained
+  facts across four relations. Seven facts carry explicit revisions with independent proxy
+  re-review; all evidence remains `human_gold=false`.
+- A full-pool-seeded bounded lexical closure emitted 73 reachable edges over 40 cohort and 63
+  out-of-cohort nodes. All 73 were adjudicated (`30 same_fact`, `37 same_leakage_component`,
+  `6 distinct`, `0 exclude_cohort`). Resolution retained 160/160 facts in 159 leakage components,
+  enforced original split-group atomicity, and achieved exactly 24 development / 8 validation /
+  8 sealed facts per relation. It does not claim exhaustive semantic-paraphrase or historical-
+  exposure closure.
+- The post-closure bundle contains 160 facts and 320 regenerated unverified distractors; the PATH
+  bridge contains 160 review-only and 0 formal facts. Translation, distractor review, canonical
+  freeze, split freeze, exact HF selection/tokenization, model inference, perturbation, hidden-
+  state attribution, intervention, and repair remain unperformed. No GPU, Ollama, HF checkpoint,
+  or external experiment/provider endpoint was used in this phase. Development MCQ mining has not
+  started; Validation and Sealed have not run; all 160 rows remain `pnt_eligible=false`.
+
+**Historical local Ollama compatibility run completed on the legacy frozen v5c records** - `gemma3:12b` and `llama3.1:8b` completed 180/180 Simulation calls over the same 15 candidates. Two model-specific strict signals were observed for `llama3.1:8b`; none were observed for `gemma3:12b`. Nine Original/Neutral choice changes mean this remains a compatibility/calibration result with `pnt_eligible=false`, not the current 160-fact split or a frozen mechanism cohort.
