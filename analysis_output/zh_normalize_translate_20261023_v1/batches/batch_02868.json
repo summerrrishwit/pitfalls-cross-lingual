@@ -1,0 +1,157 @@
+{
+  "input_sha256": "4aa80054b4f18c5f524f26982995ebcdbbee2cb13d2bc4720226ba4f6e28af79",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000134",
+      "decision": "ready",
+      "subject": "disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "elephantiasis",
+      "canonical_fact": "The disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm is elephantiasis.",
+      "prompt_en": "What is the conventional term for a disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm?",
+      "evidence_quotes": [
+        "disease characterized by the extreme swelling of the limbs",
+        "elephantiasis"
+      ],
+      "reason": "The question supplies a defining description (extreme limb swelling caused by roundworm infection) and asks for the single conventional term. This is exactly the description_to_term direction (description -> term). The source answer 'elephantiasis' is a concise literal substring of source_answer. No existing relation other than description_to_term fits; term_to_definition would invert the direction. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "elephantiasis",
+        "canonical_fact": "The disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm is elephantiasis.",
+        "subject": "disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm",
+        "prompt_en": "What is the conventional term for a disease characterized by the extreme swelling of the limbs caused by infection with a type of roundworm?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "elephantiasis"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ad4b56461ab82e4e8e80da73967bebd6a274c35ffce6dae8e84601db14df54a8",
+      "input_sha256": "25e3e4c3c69de9dd3ed32e21c4f13b60ff939474291502a9ea8fdad8a325f62d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000135",
+      "decision": "ready",
+      "subject": "procedures carried out under sterile conditions in the microbiology lab",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "aseptic",
+      "canonical_fact": "The technique referring to procedures carried out under sterile conditions in the microbiology lab is aseptic.",
+      "prompt_en": "In the microbiology lab, what is the conventional term for the procedures that are carried out under sterile conditions?",
+      "evidence_quotes": [
+        "procedures that are carried out under sterile conditions",
+        "aseptic"
+      ],
+      "reason": "The question provides a defining description (procedures carried out under sterile conditions in the microbiology lab) and asks for the conventional technique term. This matches description_to_term (description -> term). The source answer 'aseptic' is a literal substring of source_answer. term_to_definition would invert the direction and does not fit. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "aseptic",
+        "canonical_fact": "The technique referring to procedures carried out under sterile conditions in the microbiology lab is aseptic.",
+        "subject": "procedures carried out under sterile conditions in the microbiology lab",
+        "prompt_en": "In the microbiology lab, what is the conventional term for the procedures that are carried out under sterile conditions?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "aseptic"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0aba0cc377c00459206e4c41df41a0cf1d42f95f876a7ac05a907ebfe1512e79",
+      "input_sha256": "6ea06141bb46fd0093cceee8a818b4b5b0bbc021d856994a6fbc0c9ec90f186c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000134",
+        "historical:raw_sciq_000135"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "80e2cce361d969ba089f75c620915450a77c18173fd5b52f8e11a7595a849c0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1622,
+      "first_chunk_seconds": 2.998,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1644,
+        "prompt_tokens": 1804,
+        "total_tokens": 3448,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1055,
+          "text_tokens": 589
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1aa6557f56265365f819399b3b88841af8caff451ff6d5c02024c9dbfaa42f20",
+      "status": "completed",
+      "latency_seconds": 58.784
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000134",
+        "historical:raw_sciq_000135"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a1c1684eaf0d39aae35ef57650dfadf95ece88975772e2ec42a8a8b29fbe2c2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.7
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000134",
+        "historical:raw_sciq_000135"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a1c1684eaf0d39aae35ef57650dfadf95ece88975772e2ec42a8a8b29fbe2c2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.378
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000134",
+        "historical:raw_sciq_000135"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a1c1684eaf0d39aae35ef57650dfadf95ece88975772e2ec42a8a8b29fbe2c2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.415
+    }
+  ],
+  "status": "failed"
+}

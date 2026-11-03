@@ -1,0 +1,246 @@
+{
+  "input_sha256": "fb4b289e0a78405f3703015e321d62c879b5772346e35c8445295f131afd31b8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003718",
+      "decision": "ready",
+      "subject": "cell membrane",
+      "relation_id": "structure_to_protected_entity",
+      "relation_definition": "The specific biological entity or structure that a named biological structure protects in its primary biological function.",
+      "direction": "biological structure -> entity it protects",
+      "answer": "cell",
+      "canonical_fact": "The cell membrane protects the cell.",
+      "prompt_en": "What does the plasma membrane protect?",
+      "evidence_quotes": [
+        "The membrane could be observed through magnification, it protected the what?",
+        "cell"
+      ],
+      "reason": "Source question explicitly asks what the membrane protects; answer 'cell' is a direct literal from source_answer. No catalog relation captures a protective-function relation from a structure to its target, so a precise new relation is proposed. Prompt uses 'plasma membrane' (synonym) to avoid leaking the answer 'cell' as a substring.",
+      "english": {
+        "direction": "biological structure -> entity it protects",
+        "relation_id": "structure_to_protected_entity",
+        "answer": "cell",
+        "canonical_fact": "The cell membrane protects the cell.",
+        "subject": "cell membrane",
+        "prompt_en": "What does the plasma membrane protect?",
+        "relation_definition": "The specific biological entity or structure that a named biological structure protects in its primary biological function.",
+        "answer_aliases_en": [
+          "cell"
+        ],
+        "relation_spec": {
+          "id": "structure_to_protected_entity",
+          "definition": "The specific biological entity or structure that a named biological structure protects in its primary biological function.",
+          "direction": "biological structure -> entity it protects"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "649ae1b969ab7caf8d0ac5a9073e83d94bd13182edc1a4a2240eee69166f9c78",
+      "input_sha256": "6f9b0aa0ea055cf8164936acd01819b41f233e467e6fbadaaf002e356d1aa8de",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003732",
+      "decision": "ready",
+      "subject": "person who finishes getting a divorce",
+      "relation_id": "person_to_spouse_status",
+      "relation_definition": "The presence or absence of a spouse for a person in a specified legal or relational state (e.g., married, divorced, widowed).",
+      "direction": "person in specified state -> spouse status",
+      "answer": "no spouse",
+      "canonical_fact": "A person who finishes getting a divorce has no spouse.",
+      "prompt_en": "What is the spouse status of a person who has just finalized a divorce?",
+      "evidence_quotes": [
+        "What always happens to someone after he or she finishes getting divorce?",
+        "no spouse"
+      ],
+      "reason": "Source question and answer directly support the fact. No catalog relation covers a person's spouse status in a defined legal state, so a precise new relation is proposed. Prompt avoids the answer substring 'no spouse'.",
+      "english": {
+        "direction": "person in specified state -> spouse status",
+        "relation_id": "person_to_spouse_status",
+        "answer": "no spouse",
+        "canonical_fact": "A person who finishes getting a divorce has no spouse.",
+        "subject": "person who finishes getting a divorce",
+        "prompt_en": "What is the spouse status of a person who has just finalized a divorce?",
+        "relation_definition": "The presence or absence of a spouse for a person in a specified legal or relational state (e.g., married, divorced, widowed).",
+        "answer_aliases_en": [
+          "no spouse"
+        ],
+        "relation_spec": {
+          "id": "person_to_spouse_status",
+          "definition": "The presence or absence of a spouse for a person in a specified legal or relational state (e.g., married, divorced, widowed).",
+          "direction": "person in specified state -> spouse status"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "58d228b4f23dda39bf016c6bd15a6a785c64ab5ebe60eedebf8ad111196377c3",
+      "input_sha256": "603a23cb025e55f3da9f11956d45b0d6885a3c1f8e49f48c4f6936b19b8d3776",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003718",
+      "input_sha256": "6f9b0aa0ea055cf8164936acd01819b41f233e467e6fbadaaf002e356d1aa8de",
+      "english": {
+        "direction": "biological structure -> entity it protects",
+        "relation_id": "structure_to_protected_entity",
+        "answer": "cell",
+        "canonical_fact": "The cell membrane protects the cell.",
+        "subject": "cell membrane",
+        "prompt_en": "What does the plasma membrane protect?",
+        "relation_definition": "The specific biological entity or structure that a named biological structure protects in its primary biological function.",
+        "answer_aliases_en": [
+          "cell"
+        ],
+        "relation_spec": {
+          "id": "structure_to_protected_entity",
+          "definition": "The specific biological entity or structure that a named biological structure protects in its primary biological function.",
+          "direction": "biological structure -> entity it protects"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "649ae1b969ab7caf8d0ac5a9073e83d94bd13182edc1a4a2240eee69166f9c78",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003718",
+        "subject_zh": "细胞膜",
+        "prompt_zh": "质膜保护什么？",
+        "canonical_fact_zh": "细胞膜保护细胞。",
+        "answer_zh": "细胞",
+        "answer_aliases_zh": [
+          "细胞"
+        ]
+      },
+      "translation_sha256": "60d607a621c79c84d1d721f3d9cec6407fafac290f0aa9efce110d462590b56e"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003732",
+      "input_sha256": "603a23cb025e55f3da9f11956d45b0d6885a3c1f8e49f48c4f6936b19b8d3776",
+      "english": {
+        "direction": "person in specified state -> spouse status",
+        "relation_id": "person_to_spouse_status",
+        "answer": "no spouse",
+        "canonical_fact": "A person who finishes getting a divorce has no spouse.",
+        "subject": "person who finishes getting a divorce",
+        "prompt_en": "What is the spouse status of a person who has just finalized a divorce?",
+        "relation_definition": "The presence or absence of a spouse for a person in a specified legal or relational state (e.g., married, divorced, widowed).",
+        "answer_aliases_en": [
+          "no spouse"
+        ],
+        "relation_spec": {
+          "id": "person_to_spouse_status",
+          "definition": "The presence or absence of a spouse for a person in a specified legal or relational state (e.g., married, divorced, widowed).",
+          "direction": "person in specified state -> spouse status"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "58d228b4f23dda39bf016c6bd15a6a785c64ab5ebe60eedebf8ad111196377c3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003732",
+        "subject_zh": "完成离婚程序的人",
+        "prompt_zh": "一个刚刚完成离婚手续的人的配偶状况是什么？",
+        "canonical_fact_zh": "完成离婚程序的人没有配偶。",
+        "answer_zh": "无配偶",
+        "answer_aliases_zh": [
+          "无配偶"
+        ]
+      },
+      "translation_sha256": "499b618041548a3159fb654f47c880602e8faefbf606c194bcf8370028c5efb9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003718",
+        "historical:raw_commonsense_qa_003732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f42b7902da2509d2bd857a4def0f4e98c0b7d310a590eaf6ca01c6fad8fb1eee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4542,
+      "first_chunk_seconds": 10.317,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4894,
+        "prompt_tokens": 1625,
+        "total_tokens": 6519,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4396,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8f5ff8af823cc0f553bf8f2c7c78a010daa52554b0c33cb39a5414e65bc98e02",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 130.404,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003718",
+        "historical:raw_commonsense_qa_003732"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0fac6b98579079933d4336ae81fa60806eb21ec6ec80c6c9ed4af154f267077d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4140,
+      "first_chunk_seconds": 35.703,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4372,
+        "prompt_tokens": 1644,
+        "total_tokens": 6016,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3876,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc8d36fa9cb8173c8b0b25373a1f1af80b39d4fd368cba0b36d7e54ac20d4244",
+      "status": "completed",
+      "latency_seconds": 148.814
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003718",
+        "historical:raw_commonsense_qa_003732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5fe51a45fa63dca322e27999d74d2e1a92e32af23142a52b979a7e7c7b28b76d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1255,
+      "first_chunk_seconds": 19.818,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1252,
+        "prompt_tokens": 845,
+        "total_tokens": 2097,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1047,
+          "text_tokens": 205
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "eec31a03ebd08e616e5365480df8fbdafb758f0b4af30ccd1a2f75639c7a77bc",
+      "status": "completed",
+      "latency_seconds": 32.788
+    }
+  ],
+  "status": "completed"
+}

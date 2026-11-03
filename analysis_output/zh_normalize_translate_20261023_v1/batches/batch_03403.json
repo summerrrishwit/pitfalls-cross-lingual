@@ -1,0 +1,99 @@
+{
+  "input_sha256": "d89f305b6fe2e706f79676bb2c50f626cd4e42ba85d07eff9db4a7c1c074558c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002417",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits 'entity -> adjective/characteristic' (the area being 'wide'). The subject 'area between oceans and continents' is also geographically vague (no specific region disambiguated), and no precise new relation is warranted for a generic fill-in adjective. Both model annotations are inconsistent (one extracted, one not-extractable for ambiguity), confirming insufficient source support for a clean factual triple.",
+      "input_sha256": "c9d3d565e6bcdab6ada97ebaf928805c07653e5482404012004537fc52e6e23d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002440",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The statement 'an advantage position in a competition is a superior position' is tautological (advantage already implies superior standing). 'Advantage position' is not a well-defined term with a standard definition; it is a casual phrase. term_to_definition requires an 'explicit term' with a 'named sense,' which this does not satisfy. No catalog or narrow new relation cleanly captures a tautological relative-position commonsense observation. Both annotations disagree (extracted vs. not-extractable), reinforcing insufficiency.",
+      "input_sha256": "e8739c8db755ba3f37184bf03db287d5c431223c356334166fe95737157a58dc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002417",
+        "historical:raw_commonsense_qa_002440"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0c9773e6817852ce9056d8d44195426fc9f568bb4cc968fc3658a2706c6e5eaa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.437
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002417",
+        "historical:raw_commonsense_qa_002440"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0c9773e6817852ce9056d8d44195426fc9f568bb4cc968fc3658a2706c6e5eaa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.771
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002417",
+        "historical:raw_commonsense_qa_002440"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0c9773e6817852ce9056d8d44195426fc9f568bb4cc968fc3658a2706c6e5eaa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1797,
+      "first_chunk_seconds": 3.415,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1941,
+        "prompt_tokens": 1597,
+        "total_tokens": 3538,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1533,
+          "text_tokens": 408
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cf323b744143ff040582676529995d5e78edcb7fa26c1d8c65403b92c4d05f8f",
+      "status": "completed",
+      "latency_seconds": 52.905
+    }
+  ],
+  "status": "completed"
+}

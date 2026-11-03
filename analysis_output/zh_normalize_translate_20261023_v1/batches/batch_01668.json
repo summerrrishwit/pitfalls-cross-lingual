@@ -1,0 +1,189 @@
+{
+  "input_sha256": "41a64fa3b70548f820d7cba9289174dcef7911c3039a59f39968f106636ecf86",
+  "normalized": [
+    {
+      "record_id": "public:pbf_bbd95e95c2f6963ce23f",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer 'CO2' is an integral element of the source question's enumerated list of four molecules being compared. Any faithful prompt_en that restates the question must list 'CO2' alongside CO32-, NO2-, and NO3-, thereby embedding the answer inside the prompt and violating the option-free / no-answer-in-prompt constraint. Cannot be normalized without restructuring the question in a way that departs from the source.",
+      "input_sha256": "2264a5ef1e0295b15ab8c5c0734ab65d12d2b65b9dac96b1a74a54afdd37e45f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_bbdd58b2adf2ebc2cbda",
+      "decision": "ready",
+      "subject": "early email",
+      "relation_id": "technology_to_development_decade",
+      "relation_definition": "The decade during which a specified technology was first developed or became available; not release year of a creative work.",
+      "direction": "technology -> development decade",
+      "answer": "1970s",
+      "canonical_fact": "Early email was developed in the 1970s.",
+      "prompt_en": "In which decade was early email developed?",
+      "evidence_quotes": [
+        "Early email was developed in which decade?",
+        "1970s"
+      ],
+      "reason": "Source question asks for the decade of early email development; source answer is '1970s'. The prompt_en is a clean interrogative that does not contain the answer string '1970s'. No existing catalog relation precisely covers 'decade a technology was developed' (work_to_release_year targets creative works/versions), so a new precise snake_case relation is proposed. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "answer": "1970s",
+        "relation_id": "technology_to_development_decade",
+        "prompt_en": "In which decade was early email developed?",
+        "direction": "technology -> development decade",
+        "subject": "early email",
+        "canonical_fact": "Early email was developed in the 1970s.",
+        "relation_definition": "The decade during which a specified technology was first developed or became available; not release year of a creative work.",
+        "answer_aliases_en": [
+          "1970s"
+        ],
+        "relation_spec": {
+          "id": "technology_to_development_decade",
+          "definition": "The decade during which a specified technology was first developed or became available; not release year of a creative work.",
+          "direction": "technology -> development decade"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6e119615bc7166fa562ded28e9daaf63948cc3630ad49add27e07c5e3936a8a6",
+      "input_sha256": "98b3d1560b07c5944e9f497876b36e866f00c2fb4b9ba6e7261b9a0af809d82e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_bbdd58b2adf2ebc2cbda",
+      "input_sha256": "98b3d1560b07c5944e9f497876b36e866f00c2fb4b9ba6e7261b9a0af809d82e",
+      "english": {
+        "answer": "1970s",
+        "relation_id": "technology_to_development_decade",
+        "prompt_en": "In which decade was early email developed?",
+        "direction": "technology -> development decade",
+        "subject": "early email",
+        "canonical_fact": "Early email was developed in the 1970s.",
+        "relation_definition": "The decade during which a specified technology was first developed or became available; not release year of a creative work.",
+        "answer_aliases_en": [
+          "1970s"
+        ],
+        "relation_spec": {
+          "id": "technology_to_development_decade",
+          "definition": "The decade during which a specified technology was first developed or became available; not release year of a creative work.",
+          "direction": "technology -> development decade"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6e119615bc7166fa562ded28e9daaf63948cc3630ad49add27e07c5e3936a8a6",
+      "translation": {
+        "record_id": "public:pbf_bbdd58b2adf2ebc2cbda",
+        "subject_zh": "早期电子邮件",
+        "prompt_zh": "早期电子邮件是在哪个年代开发的？",
+        "canonical_fact_zh": "早期电子邮件于1970年代开发。",
+        "answer_zh": "1970年代",
+        "answer_aliases_zh": [
+          "1970年代"
+        ]
+      },
+      "translation_sha256": "f6fab1fa3fb48b3b00ffac28edd99645fccd3396fd1096daae68682f9144622f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_bbd95e95c2f6963ce23f",
+        "public:pbf_bbdd58b2adf2ebc2cbda"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4dde7357e53bcd723e1cba69d030f456eb74677c0bd65deb7fc3669d16b02183",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2452,
+      "first_chunk_seconds": 11.495,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2450,
+        "prompt_tokens": 1657,
+        "total_tokens": 4107,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1862,
+          "text_tokens": 588
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "777701371f2474b79a354a8280e0feb0452059a9b0686105d04f4d2ae41e8096",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 32.532,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_bbd95e95c2f6963ce23f",
+        "public:pbf_bbdd58b2adf2ebc2cbda"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8a5d814296c094977bdd0975befa6e817902597f2a032d5837f18af215e7e192",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2183,
+      "first_chunk_seconds": 31.299,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2180,
+        "prompt_tokens": 1676,
+        "total_tokens": 3856,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1694,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c2446942f448013921556a9ab92d772711ef81ba387167388fefdfff1f4831ab",
+      "status": "completed",
+      "latency_seconds": 48.63
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_bbdd58b2adf2ebc2cbda"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79f9a3ec5e5c71aa6e6d2439c35b17d3f82aa86b5c42844a4fa05b8bbb892139",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 958,
+      "first_chunk_seconds": 36.608,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 976,
+        "prompt_tokens": 529,
+        "total_tokens": 1505,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 857,
+          "text_tokens": 119
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f5f350bff89c0801224fde13ca8ee9c20527e4ff1fc3c305eb006676c5557adf",
+      "status": "completed",
+      "latency_seconds": 45.281
+    }
+  ],
+  "status": "completed"
+}

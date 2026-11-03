@@ -1,0 +1,243 @@
+{
+  "input_sha256": "f208bb9914f379efb23b2d4be65977110eb2674f53ce0e13e82966b8dcfbdbac",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b238f82bf10f22685f97",
+      "decision": "ready",
+      "subject": "tallest mountain in the United States",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Denali",
+      "canonical_fact": "The tallest mountain in the United States is Denali.",
+      "prompt_en": "The tallest mountain in the United States is",
+      "evidence_quotes": [
+        "what's the tallest mountain in united states",
+        "Denali"
+      ],
+      "reason": "The source question asks for the tallest mountain in the US and the source answer is 'Denali'. The catalog relation description_to_entity fits: 'tallest mountain in the United States' is a uniquely qualified identifying description that resolves to the entity Denali. The direction (description -> entity) matches the subject-to-answer orientation.",
+      "english": {
+        "answer": "Denali",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The tallest mountain in the United States is",
+        "direction": "identifying description -> entity",
+        "subject": "tallest mountain in the United States",
+        "canonical_fact": "The tallest mountain in the United States is Denali.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Denali",
+          "Mount Denali",
+          "Mount McKinley"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b02f30edeac35d289b7af7e2ed6f3b8ec3542a448c4b116d4769628b45a0b040",
+      "input_sha256": "6ad9297b2daacbdd1e2b59a9e0594b972d089db158b9032ed90427eb3f651840",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b241769ef53753ad055b",
+      "decision": "ready",
+      "subject": "Anthem of the Seas",
+      "relation_id": "vessel_to_home_port",
+      "relation_definition": "The primary home port or regular departure port from which a specified vessel sails.",
+      "direction": "vessel -> home port",
+      "answer": "Southampton",
+      "canonical_fact": "Anthem of the Seas sails from Southampton.",
+      "prompt_en": "Anthem of the Seas sails from",
+      "evidence_quotes": [
+        "where does anthem of the seas sail from",
+        "Southampton"
+      ],
+      "reason": "The source question asks where Anthem of the Seas sails from; the source answer is Southampton. No existing catalog relation precisely captures a vessel's home/departure port (entity_to_containing_location is about geographic containment, not operational port of call). Proposing new relation vessel_to_home_port with direction vessel -> home port.",
+      "english": {
+        "answer": "Southampton",
+        "relation_id": "vessel_to_home_port",
+        "prompt_en": "Anthem of the Seas sails from",
+        "direction": "vessel -> home port",
+        "subject": "Anthem of the Seas",
+        "canonical_fact": "Anthem of the Seas sails from Southampton.",
+        "relation_definition": "The primary home port or regular departure port from which a specified vessel sails.",
+        "answer_aliases_en": [
+          "Southampton",
+          "Southampton, Hampshire",
+          "Soton",
+          "Southampton, UK"
+        ],
+        "relation_spec": {
+          "id": "vessel_to_home_port",
+          "definition": "The primary home port or regular departure port from which a specified vessel sails.",
+          "direction": "vessel -> home port"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "95bc3aee099b8b93c9f65034ea08a78a425d1aa705faed44ccecb03115f37f24",
+      "input_sha256": "97a1229b2853d3a5a1e5edcd47ee8a41791dd9c4ed81e377061f8e93a09ef5f7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_b238f82bf10f22685f97",
+      "input_sha256": "6ad9297b2daacbdd1e2b59a9e0594b972d089db158b9032ed90427eb3f651840",
+      "english": {
+        "answer": "Denali",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The tallest mountain in the United States is",
+        "direction": "identifying description -> entity",
+        "subject": "tallest mountain in the United States",
+        "canonical_fact": "The tallest mountain in the United States is Denali.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Denali",
+          "Mount Denali",
+          "Mount McKinley"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b02f30edeac35d289b7af7e2ed6f3b8ec3542a448c4b116d4769628b45a0b040",
+      "translation": {
+        "record_id": "public:pbf_b238f82bf10f22685f97",
+        "subject_zh": "美国最高的山",
+        "prompt_zh": "美国最高的山是",
+        "canonical_fact_zh": "美国最高的山是迪纳利峰。",
+        "answer_zh": "迪纳利峰",
+        "answer_aliases_zh": [
+          "迪纳利峰",
+          "迪纳利山",
+          "麦金莱峰"
+        ]
+      },
+      "translation_sha256": "67a637565bfa2e67fc2e5871b654830eb3e6023abeba56b6d7d3e5ae7d4c2f9d"
+    },
+    {
+      "record_id": "public:pbf_b241769ef53753ad055b",
+      "input_sha256": "97a1229b2853d3a5a1e5edcd47ee8a41791dd9c4ed81e377061f8e93a09ef5f7",
+      "english": {
+        "answer": "Southampton",
+        "relation_id": "vessel_to_home_port",
+        "prompt_en": "Anthem of the Seas sails from",
+        "direction": "vessel -> home port",
+        "subject": "Anthem of the Seas",
+        "canonical_fact": "Anthem of the Seas sails from Southampton.",
+        "relation_definition": "The primary home port or regular departure port from which a specified vessel sails.",
+        "answer_aliases_en": [
+          "Southampton",
+          "Southampton, Hampshire",
+          "Soton",
+          "Southampton, UK"
+        ],
+        "relation_spec": {
+          "id": "vessel_to_home_port",
+          "definition": "The primary home port or regular departure port from which a specified vessel sails.",
+          "direction": "vessel -> home port"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "95bc3aee099b8b93c9f65034ea08a78a425d1aa705faed44ccecb03115f37f24",
+      "translation": {
+        "record_id": "public:pbf_b241769ef53753ad055b",
+        "subject_zh": "海洋赞歌号",
+        "prompt_zh": "海洋赞歌号从",
+        "canonical_fact_zh": "海洋赞歌号从南安普顿启航。",
+        "answer_zh": "南安普顿",
+        "answer_aliases_zh": [
+          "南安普顿",
+          "南安普顿，汉普郡",
+          "索顿",
+          "南安普顿，英国"
+        ]
+      },
+      "translation_sha256": "b60da3a26b5c94c6d2c40417e29e993225fb32f2d771a5f4d6e027bd5c2a1aed"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b238f82bf10f22685f97",
+        "public:pbf_b241769ef53753ad055b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "21523625cc31a5bec162b2cebd3264bbff5a042d09c53702715ac7dd7c08ec77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2087,
+      "first_chunk_seconds": 7.661,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2134,
+        "prompt_tokens": 1578,
+        "total_tokens": 3712,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1640,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "64f81abb1b7c02f6af7877587f26b2d7ae30731bb566da363480d4bb05413af2",
+      "status": "completed",
+      "latency_seconds": 30.488
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b238f82bf10f22685f97",
+        "public:pbf_b241769ef53753ad055b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cac990cf27dceb1381fd4e9fb8e8f0d3860ecb0d13f07420991931811c8333c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 75.924
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b238f82bf10f22685f97",
+        "public:pbf_b241769ef53753ad055b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cac990cf27dceb1381fd4e9fb8e8f0d3860ecb0d13f07420991931811c8333c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1775,
+      "first_chunk_seconds": 16.448,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1779,
+        "prompt_tokens": 834,
+        "total_tokens": 2613,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1520,
+          "text_tokens": 259
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6c6bcd82d5a43e93a34a52f1affdc431159775f7ee7f4a8619cfc1f466dc3e13",
+      "status": "completed",
+      "latency_seconds": 32.432
+    }
+  ],
+  "status": "completed"
+}

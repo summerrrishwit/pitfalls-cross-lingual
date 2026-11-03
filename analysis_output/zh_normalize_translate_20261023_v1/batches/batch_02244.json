@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e2478f5b08dce8f1fd8174749aa3f427a76b62320385fa01337b5a7edcc44c0e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000848",
+      "decision": "ready",
+      "subject": "silica sand",
+      "relation_id": "material_to_product",
+      "relation_definition": "A raw material or resource from which a specified product is manufactured or produced; distinguishes the production input from the resulting output.",
+      "direction": "material/resource -> product",
+      "answer": "glass",
+      "canonical_fact": "Silica sand is used to make glass.",
+      "prompt_en": "Which product is manufactured using silica sand as a raw material?",
+      "evidence_quotes": [
+        "This resource is used to make which product?",
+        "glass"
+      ],
+      "reason": "The source explicitly states silica sand is used to make glass. No existing catalog relation captures the material-to-product production direction (entity_to_material is entity->material, the inverse). Propose material_to_product with clear production-input-to-output semantics. All fields supported by source.",
+      "english": {
+        "direction": "material/resource -> product",
+        "relation_id": "material_to_product",
+        "answer": "glass",
+        "canonical_fact": "Silica sand is used to make glass.",
+        "subject": "silica sand",
+        "prompt_en": "Which product is manufactured using silica sand as a raw material?",
+        "relation_definition": "A raw material or resource from which a specified product is manufactured or produced; distinguishes the production input from the resulting output.",
+        "answer_aliases_en": [
+          "glass"
+        ],
+        "relation_spec": {
+          "id": "material_to_product",
+          "definition": "A raw material or resource from which a specified product is manufactured or produced; distinguishes the production input from the resulting output.",
+          "direction": "material/resource -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6fb88fa54f5c59489060e27329f3f9807e80aba3f08fe4a460ab6d29388fbe2f",
+      "input_sha256": "2361e70b0f7eade71cabf2bff911dd08428d063f4a4629de8b7fd12e0a4819f4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000849",
+      "decision": "ready",
+      "subject": "plant or animal cell",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "cell membrane",
+      "canonical_fact": "Substances enter any plant or animal cell by passing through the cell membrane.",
+      "prompt_en": "Through which structure do substances enter any plant or animal cell?",
+      "evidence_quotes": [
+        "Substances enter any plant or animal cell by passing through which of the following structures?",
+        "cell membrane"
+      ],
+      "reason": "The cell membrane is a specified constituent (part) of the cell (whole). The question identifies which particular part performs the function of allowing substances to enter. whole_to_part fits: direction whole -> part, subject is the cell, answer is the membrane. The qualifier 'any plant or animal cell' is preserved in the canonical fact.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cell membrane",
+        "canonical_fact": "Substances enter any plant or animal cell by passing through the cell membrane.",
+        "subject": "plant or animal cell",
+        "prompt_en": "Through which structure do substances enter any plant or animal cell?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cell membrane"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84cf2e7afc5c039a9dad4b8d1601cf1cafbee904cb0cf32218976e7d31e22016",
+      "input_sha256": "c07c3d049fbc12c5000d585fdada75247bfa6ce53067514e2e30be60b85e7994",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000848",
+      "input_sha256": "2361e70b0f7eade71cabf2bff911dd08428d063f4a4629de8b7fd12e0a4819f4",
+      "english": {
+        "direction": "material/resource -> product",
+        "relation_id": "material_to_product",
+        "answer": "glass",
+        "canonical_fact": "Silica sand is used to make glass.",
+        "subject": "silica sand",
+        "prompt_en": "Which product is manufactured using silica sand as a raw material?",
+        "relation_definition": "A raw material or resource from which a specified product is manufactured or produced; distinguishes the production input from the resulting output.",
+        "answer_aliases_en": [
+          "glass"
+        ],
+        "relation_spec": {
+          "id": "material_to_product",
+          "definition": "A raw material or resource from which a specified product is manufactured or produced; distinguishes the production input from the resulting output.",
+          "direction": "material/resource -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6fb88fa54f5c59489060e27329f3f9807e80aba3f08fe4a460ab6d29388fbe2f",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000848",
+        "subject_zh": "石英砂",
+        "prompt_zh": "石英砂作为原材料可以生产哪种产品？",
+        "canonical_fact_zh": "石英砂用于制造玻璃。",
+        "answer_zh": "玻璃",
+        "answer_aliases_zh": [
+          "玻璃"
+        ]
+      },
+      "translation_sha256": "117882d5e7d96be12a1a1282357495d46e1ae506c50527ce5933787db00ac963"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000849",
+      "input_sha256": "c07c3d049fbc12c5000d585fdada75247bfa6ce53067514e2e30be60b85e7994",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cell membrane",
+        "canonical_fact": "Substances enter any plant or animal cell by passing through the cell membrane.",
+        "subject": "plant or animal cell",
+        "prompt_en": "Through which structure do substances enter any plant or animal cell?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cell membrane"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84cf2e7afc5c039a9dad4b8d1601cf1cafbee904cb0cf32218976e7d31e22016",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000849",
+        "subject_zh": "植物或动物细胞",
+        "prompt_zh": "物质通过哪个结构进入任何植物或动物细胞？",
+        "canonical_fact_zh": "物质通过穿过细胞膜进入任何植物或动物细胞。",
+        "answer_zh": "细胞膜",
+        "answer_aliases_zh": [
+          "细胞膜"
+        ]
+      },
+      "translation_sha256": "400b248ce78cfd9c586b1738cdea28db2f9c47142fd0934cd918d1d5493d1871"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000848",
+        "historical:raw_ai2_arc_easy_000849"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54b637a8135f973a6e71d28dfb2854969745f6f2af7b161cc806a087a9dfe809",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3159,
+      "first_chunk_seconds": 27.338,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3259,
+        "prompt_tokens": 1686,
+        "total_tokens": 4945,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2765,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "80cd6667c112e8d098736722002c74043691285e10abbb68c46463708350d88a",
+      "status": "completed",
+      "latency_seconds": 66.347
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000848",
+        "historical:raw_ai2_arc_easy_000849"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "84b6ad178e46044278186d3466ae345420ecb0ea7cd8e8459a2e885296c38a7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 709,
+      "first_chunk_seconds": 2.21,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 720,
+        "prompt_tokens": 810,
+        "total_tokens": 1530,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 572,
+          "text_tokens": 148
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f126332bebeaef26e2c675dc2d76fe21e6b1dd9a9fc19fb1deccbb5aee92571c",
+      "status": "completed",
+      "latency_seconds": 11.149
+    }
+  ],
+  "status": "completed"
+}

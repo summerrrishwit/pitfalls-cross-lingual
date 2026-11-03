@@ -1,0 +1,211 @@
+{
+  "input_sha256": "f48c5c353f41cb8bd006055e92494f8d0c9726a851caa67d2f0b56c77606f6d7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008159",
+      "decision": "ready",
+      "subject": "migraine",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "headaches",
+      "canonical_fact": "A migraine is a type of headache.",
+      "prompt_en": "Which broader medical condition category is a migraine a specific type of?",
+      "evidence_quotes": [
+        "I have a migraine",
+        "headaches"
+      ],
+      "reason": "The source frames a migraine as the specific condition and gives 'headaches' as the general problem category; entity_to_class captures the type-of (subclass) relationship with migraine as the entity and headaches as the class.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "headaches",
+        "canonical_fact": "A migraine is a type of headache.",
+        "subject": "migraine",
+        "prompt_en": "Which broader medical condition category is a migraine a specific type of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "headaches"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f7eb44c33d1148ed48921b92765a0f99e5f96675b7e5910c8b43632739c5be18",
+      "input_sha256": "9a9a97cf187c58bfb0862380e157cea6274cd587ced9cc2942530925d98c4aff",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008176",
+      "decision": "ready",
+      "subject": "process of maintaining rosebushes in a lawn",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "landscaping",
+      "canonical_fact": "The process of maintaining rosebushes in a lawn is called landscaping.",
+      "prompt_en": "What is the conventional term for the process of maintaining rosebushes in a lawn?",
+      "evidence_quotes": [
+        "the process of maintaining rosebushes in a lawn",
+        "landscaping"
+      ],
+      "reason": "The source question supplies an identifying description ('the process of maintaining rosebushes in a lawn') and the source answer provides the conventional term 'landscaping'; description_to_term fits the direction from a descriptive phrase to its named term.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "landscaping",
+        "canonical_fact": "The process of maintaining rosebushes in a lawn is called landscaping.",
+        "subject": "process of maintaining rosebushes in a lawn",
+        "prompt_en": "What is the conventional term for the process of maintaining rosebushes in a lawn?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "landscaping"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "713041cbb00ce4e052b9053b04636c8cc9db1048c3f49ed7a6deb9c533e07e6d",
+      "input_sha256": "58cd07c3ebe4aee796af121f5f9b19995b7de1c3b15c47b628efc7b0b1f5937f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008159",
+        "historical:raw_commonsense_qa_008176"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f0e39d24137862937d2d1fd8098f9a00c72c1f690d9298bb5a977b1f512aa0ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2703,
+      "first_chunk_seconds": 17.911,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2797,
+        "prompt_tokens": 1653,
+        "total_tokens": 4450,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2332,
+          "text_tokens": 465
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "17f70745dbd5fddc9d3b91a2ee88c88baa18a70565cbb8a73256a0717a12f4d5",
+      "status": "completed",
+      "latency_seconds": 52.306
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008159",
+        "historical:raw_commonsense_qa_008176"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b85133823b0e728ec073ca07b1b944f94fca7dbccfd0a55f728dcb9e2ce9a1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1278,
+      "first_chunk_seconds": 39.085,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1403,
+        "prompt_tokens": 824,
+        "total_tokens": 2227,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1250,
+          "text_tokens": 153
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a79892b389f7f87abb98db43385779a488486b408a75f9e017f7f0690e1ddea4",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 63.533,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008159",
+        "historical:raw_commonsense_qa_008176"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1b60b1b8f0dfcbe148d6f4d0824cc35a9823a030c626d7d0bc78513abf3db430",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1649,
+      "first_chunk_seconds": 13.956,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1762,
+        "prompt_tokens": 842,
+        "total_tokens": 2604,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1542,
+          "text_tokens": 220
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d654f24817d1bc4e4f10ce9143a5e6d99d631f16b7896914d5c5ad745fc74150",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 40.775,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008159",
+        "historical:raw_commonsense_qa_008176"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1b60b1b8f0dfcbe148d6f4d0824cc35a9823a030c626d7d0bc78513abf3db430",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1200,
+      "first_chunk_seconds": 55.863,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1325,
+        "prompt_tokens": 842,
+        "total_tokens": 2167,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1109,
+          "text_tokens": 216
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "65edde8a98b23a81c5365d9790fef50be83e022b16ee15fb010f66c5b14df24a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 72.764,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

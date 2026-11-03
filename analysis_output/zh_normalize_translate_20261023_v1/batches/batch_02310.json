@@ -1,0 +1,214 @@
+{
+  "input_sha256": "c0decf130fb3d344654c4c2764d142588764b467567ebbfa2c239d62b02b9e0d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001192",
+      "decision": "ready",
+      "subject": "offspring produced by sexual reproduction",
+      "relation_id": "organism_to_genetic_source",
+      "relation_definition": "The biological source(s) from which an organism or offspring derives its genetic information; mode of reproduction (sexual/asinexual) must be specified to disambiguate the expected parent(s).",
+      "direction": "organism/offspring -> genetic source (parent(s))",
+      "answer": "the mother and the father",
+      "canonical_fact": "The source of genetic information of offspring produced by sexual reproduction is the mother and the father.",
+      "prompt_en": "What is the source of genetic information of offspring produced by sexual reproduction?",
+      "evidence_quotes": [
+        "What is the source of genetic information of offspring produced by sexual reproduction?",
+        "the mother and the father"
+      ],
+      "reason": "Both annotators extracted consistently and the source answer 'the mother and the father' is unambiguous. No existing catalog relation covers 'source of genetic information'; proposing new relation organism_to_genetic_source with explicit direction offspring→parent(s).",
+      "english": {
+        "direction": "organism/offspring -> genetic source (parent(s))",
+        "relation_id": "organism_to_genetic_source",
+        "answer": "the mother and the father",
+        "canonical_fact": "The source of genetic information of offspring produced by sexual reproduction is the mother and the father.",
+        "subject": "offspring produced by sexual reproduction",
+        "prompt_en": "What is the source of genetic information of offspring produced by sexual reproduction?",
+        "relation_definition": "The biological source(s) from which an organism or offspring derives its genetic information; mode of reproduction (sexual/asinexual) must be specified to disambiguate the expected parent(s).",
+        "answer_aliases_en": [
+          "the mother and the father"
+        ],
+        "relation_spec": {
+          "id": "organism_to_genetic_source",
+          "definition": "The biological source(s) from which an organism or offspring derives its genetic information; mode of reproduction (sexual/asinexual) must be specified to disambiguate the expected parent(s).",
+          "direction": "organism/offspring -> genetic source (parent(s))"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fd1013690b6d9ec2957fb5bcd607d73517459d6fd8ca8ae00ee4104ef4c310c1",
+      "input_sha256": "736a63b14392a21fb638f56041c68c8d78233ceebf098125982e3b7a2dae9822",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001195",
+      "decision": "ready",
+      "subject": "hypothesis that the environment can affect the characteristics of a species",
+      "relation_id": "scientific_claim_to_proposer",
+      "relation_definition": "The specific scientist credited with first hypothesizing or proposing a clearly stated scientific claim; the claim must be identified precisely enough to attribute it to a unique individual.",
+      "direction": "scientific claim/hypothesis -> proposing scientist",
+      "answer": "Darwin",
+      "canonical_fact": "Darwin hypothesized that the environment can affect the characteristics of a species.",
+      "prompt_en": "Which scientist hypothesized that the environment can affect the characteristics of a species?",
+      "evidence_quotes": [
+        "Which scientist hypothesized that the environment can affect the characteristics of a species?",
+        "Darwin"
+      ],
+      "reason": "Source answer 'Darwin' is authoritative per instructions; one model flagged non_unique but the source answer is definitive. No existing catalog relation fits 'hypothesis proposed by scientist' (written_work_to_author requires a written work, not a bare hypothesis). Proposing new relation scientific_claim_to_proposer.",
+      "english": {
+        "direction": "scientific claim/hypothesis -> proposing scientist",
+        "relation_id": "scientific_claim_to_proposer",
+        "answer": "Darwin",
+        "canonical_fact": "Darwin hypothesized that the environment can affect the characteristics of a species.",
+        "subject": "hypothesis that the environment can affect the characteristics of a species",
+        "prompt_en": "Which scientist hypothesized that the environment can affect the characteristics of a species?",
+        "relation_definition": "The specific scientist credited with first hypothesizing or proposing a clearly stated scientific claim; the claim must be identified precisely enough to attribute it to a unique individual.",
+        "answer_aliases_en": [
+          "Darwin"
+        ],
+        "relation_spec": {
+          "id": "scientific_claim_to_proposer",
+          "definition": "The specific scientist credited with first hypothesizing or proposing a clearly stated scientific claim; the claim must be identified precisely enough to attribute it to a unique individual.",
+          "direction": "scientific claim/hypothesis -> proposing scientist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "aa6e0648dfcacad5c3def231d219b90b7f8e4b354dfd5458f81172b3af293989",
+      "input_sha256": "7cf9793b8383edb8eb1600ea4aa26b30767835e7e2b7f65e9ea7bbfe5d03850c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001192",
+      "input_sha256": "736a63b14392a21fb638f56041c68c8d78233ceebf098125982e3b7a2dae9822",
+      "english": {
+        "direction": "organism/offspring -> genetic source (parent(s))",
+        "relation_id": "organism_to_genetic_source",
+        "answer": "the mother and the father",
+        "canonical_fact": "The source of genetic information of offspring produced by sexual reproduction is the mother and the father.",
+        "subject": "offspring produced by sexual reproduction",
+        "prompt_en": "What is the source of genetic information of offspring produced by sexual reproduction?",
+        "relation_definition": "The biological source(s) from which an organism or offspring derives its genetic information; mode of reproduction (sexual/asinexual) must be specified to disambiguate the expected parent(s).",
+        "answer_aliases_en": [
+          "the mother and the father"
+        ],
+        "relation_spec": {
+          "id": "organism_to_genetic_source",
+          "definition": "The biological source(s) from which an organism or offspring derives its genetic information; mode of reproduction (sexual/asinexual) must be specified to disambiguate the expected parent(s).",
+          "direction": "organism/offspring -> genetic source (parent(s))"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fd1013690b6d9ec2957fb5bcd607d73517459d6fd8ca8ae00ee4104ef4c310c1",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001192",
+        "subject_zh": "通过有性生殖产生的后代",
+        "prompt_zh": "通过有性生殖产生的后代的遗传信息来源是什么？",
+        "canonical_fact_zh": "通过有性生殖产生的后代的遗传信息来源是母亲和父亲。",
+        "answer_zh": "母亲和父亲",
+        "answer_aliases_zh": [
+          "母亲和父亲"
+        ]
+      },
+      "translation_sha256": "07ce0ba4342c4f09dfed2464ee1f8a80ccc2ee3165261683d6d3641b43287b2c"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001195",
+      "input_sha256": "7cf9793b8383edb8eb1600ea4aa26b30767835e7e2b7f65e9ea7bbfe5d03850c",
+      "english": {
+        "direction": "scientific claim/hypothesis -> proposing scientist",
+        "relation_id": "scientific_claim_to_proposer",
+        "answer": "Darwin",
+        "canonical_fact": "Darwin hypothesized that the environment can affect the characteristics of a species.",
+        "subject": "hypothesis that the environment can affect the characteristics of a species",
+        "prompt_en": "Which scientist hypothesized that the environment can affect the characteristics of a species?",
+        "relation_definition": "The specific scientist credited with first hypothesizing or proposing a clearly stated scientific claim; the claim must be identified precisely enough to attribute it to a unique individual.",
+        "answer_aliases_en": [
+          "Darwin"
+        ],
+        "relation_spec": {
+          "id": "scientific_claim_to_proposer",
+          "definition": "The specific scientist credited with first hypothesizing or proposing a clearly stated scientific claim; the claim must be identified precisely enough to attribute it to a unique individual.",
+          "direction": "scientific claim/hypothesis -> proposing scientist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "aa6e0648dfcacad5c3def231d219b90b7f8e4b354dfd5458f81172b3af293989",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001195",
+        "subject_zh": "环境可以影响一个物种性状的假说",
+        "prompt_zh": "哪位科学家提出了环境可以影响一个物种性状的假说？",
+        "canonical_fact_zh": "达尔文提出了环境可以影响一个物种性状的假说。",
+        "answer_zh": "达尔文",
+        "answer_aliases_zh": [
+          "达尔文"
+        ]
+      },
+      "translation_sha256": "0d51b2ced38682172b771aa4dbb2f722e7b3f29c804475a9c6cbe4f1147cc53a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001192",
+        "historical:raw_ai2_arc_easy_001195"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3db553753f643c915cae50b09b1a6deb488690d9ae7f8487f5f0a2f9b8d4b61f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2206,
+      "first_chunk_seconds": 14.856,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2298,
+        "prompt_tokens": 1725,
+        "total_tokens": 4023,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1730,
+          "text_tokens": 568
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9011a436d5eec1731ba66468796a912c17aa6c661f48984ebb0ebf42f576bcd6",
+      "status": "completed",
+      "latency_seconds": 43.652
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001192",
+        "historical:raw_ai2_arc_easy_001195"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0c48cd9a3b648f83cead13140c264815e44a1dbb6e898e4bd68f8d03f20a0973",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1079,
+      "first_chunk_seconds": 17.956,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1083,
+        "prompt_tokens": 945,
+        "total_tokens": 2028,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 842,
+          "text_tokens": 241
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "130bdacbb6a8cbe1174d7d09b6d5f4f33ec850e93a4acf878a1c9f494d2b8b11",
+      "status": "completed",
+      "latency_seconds": 40.012
+    }
+  ],
+  "status": "completed"
+}

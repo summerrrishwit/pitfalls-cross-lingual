@@ -1,0 +1,107 @@
+{
+  "input_sha256": "ed654d65aa31c26b190390851a022d5f418a4f04001fe6c7061301c25fb515fc",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_200c8a23893887b68744",
+        "public:pbf_201426e3ca2e80aa3671"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac92b690742eb4678f633c7b07c908b97b69a90331f1db783646ea8d5486d57d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 70.939
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_200c8a23893887b68744",
+        "public:pbf_201426e3ca2e80aa3671"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ac92b690742eb4678f633c7b07c908b97b69a90331f1db783646ea8d5486d57d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 123.203
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_200c8a23893887b68744",
+        "public:pbf_201426e3ca2e80aa3671"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac92b690742eb4678f633c7b07c908b97b69a90331f1db783646ea8d5486d57d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 57.572
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_200c8a23893887b68744",
+        "public:pbf_201426e3ca2e80aa3671"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ac92b690742eb4678f633c7b07c908b97b69a90331f1db783646ea8d5486d57d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1857,
+      "first_chunk_seconds": 12.197,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1932,
+        "prompt_tokens": 1638,
+        "total_tokens": 3570,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1449,
+          "text_tokens": 483
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bcd5511f0219b81f757fe3b1e2ecf45a8e33835e7062989f84be145ec8ee96a9",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 94.155,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_200c8a23893887b68744",
+        "public:pbf_201426e3ca2e80aa3671"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e325bfca56265cabc3ecee40d12bf55b71d642a1a5dd0203b9d4da9e2ed689ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.385
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00728.json",
+      "sha256": "84923aae9ae71bc87d2684d3645381b21759f915c98a154e2cf458a518a11c70",
+      "previous_status": "failed"
+    }
+  ]
+}

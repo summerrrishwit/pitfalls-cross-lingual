@@ -1,0 +1,129 @@
+{
+  "input_sha256": "1bd2502c313a2178311c567829147beab0085fa9f73c9a11bed9ab9be583b1f8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000644",
+      "decision": "ready",
+      "subject": "different types of tissues organized into functional units",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "organs",
+      "canonical_fact": "Different types of tissues organized into functional units are called organs.",
+      "prompt_en": "What is the term for different types of tissues organized into functional units?",
+      "evidence_quotes": [
+        "different types of tissues organized into functional units",
+        "organs"
+      ],
+      "reason": "The source question supplies a defining description ('different types of tissues organized into functional units') and asks for the conventional term. The source answer is 'organs'. This maps exactly to description_to_term in the catalog. Both model annotations agree on the extraction. The prompt_en omits the answer and is option-free.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "different types of tissues organized into functional units",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the term for different types of tissues organized into functional units?",
+        "answer": "organs",
+        "canonical_fact": "Different types of tissues organized into functional units are called organs.",
+        "answer_aliases_en": [
+          "organs"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9e58290019167586c8222ecbf3cea26e20183b141527dd7192b08e13f9fb4e80",
+      "input_sha256": "e525a1b5e94fd1da4b0afec64072db5205312716c2df551a03f642bdd4c96996",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000645",
+      "decision": "ready",
+      "subject": "the amount of water vapor in the air",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "humidity",
+      "canonical_fact": "The term for the amount of water vapor in the air is humidity.",
+      "prompt_en": "What term refers to the amount of water vapor in the air?",
+      "evidence_quotes": [
+        "the amount of water vapor in the air",
+        "humidity"
+      ],
+      "reason": "The source question supplies a defining description ('the amount of water vapor in the air') and asks for the conventional term. The source answer is 'humidity'. This maps exactly to description_to_term in the catalog. Both model annotations agree on the extraction. The prompt_en omits the answer and is option-free.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "the amount of water vapor in the air",
+        "relation_id": "description_to_term",
+        "prompt_en": "What term refers to the amount of water vapor in the air?",
+        "answer": "humidity",
+        "canonical_fact": "The term for the amount of water vapor in the air is humidity.",
+        "answer_aliases_en": [
+          "humidity"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "863f754fe2c7406f4ce75cf2232c80a9db9e8e32e9aad9042345b8a31b0bcbd1",
+      "input_sha256": "51611aba828ed8e865418981a6662da3a2ccb685193df89757a813840ca1efc5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000644",
+        "historical:raw_sciq_000645"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "22d54e07f7ae63a62285e245f03c8667437a3def3a7efacab078fc28b03893b1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1232,
+      "first_chunk_seconds": 1.502,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1244,
+        "prompt_tokens": 1689,
+        "total_tokens": 2933,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 745,
+          "text_tokens": 499
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c7dfe8f6980078102f0d6388a533ccd102b8119f88dd9465590b85d187afb972",
+      "status": "completed",
+      "latency_seconds": 90.171
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000644",
+        "historical:raw_sciq_000645"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db26eb97c532fd89e5dde9229f0d0f1c99ebd5ce28f12ac3f64e4bea8f888f7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 237.969
+    }
+  ],
+  "status": "failed"
+}

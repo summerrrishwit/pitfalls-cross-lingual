@@ -1,0 +1,242 @@
+{
+  "input_sha256": "f54e07afbc7f80384389887e0cfec051491a101ee462f3bb62feb24c8bb916ab",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007240",
+      "decision": "ready",
+      "subject": "getting something for no cost",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "for free",
+      "canonical_fact": "Getting something for no cost is also known as getting it for free.",
+      "prompt_en": "What term or phrase describes receiving something at no cost?",
+      "evidence_quotes": [
+        "for free",
+        "If you get something for no cost you get that thing what?"
+      ],
+      "reason": "The source question supplies a description ('getting something for no cost') and asks for the conventional term that fits it; the answer 'for free' is that term. This matches description_to_term exactly. One model flagged ambiguity, but the question structure is unambiguous: it asks 'what [term]' for a given description, making description_to_term the precise fit.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "for free",
+        "canonical_fact": "Getting something for no cost is also known as getting it for free.",
+        "subject": "getting something for no cost",
+        "prompt_en": "What term or phrase describes receiving something at no cost?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "for free"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6196a34b1bc0f8b4444c6b1e72f45817d12bd91d4cae00318ba126d979dead69",
+      "input_sha256": "579e23a81665dc848c29c5ace8c124e03c931ca8d05ec509e15022e9da7a09e3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007244",
+      "decision": "ready",
+      "subject": "stone arch",
+      "relation_id": "structure_to_origin_civilization",
+      "relation_definition": "The civilization from which many earliest known examples of a specified architectural structure type date.",
+      "direction": "architectural structure -> civilization",
+      "answer": "ancient rome",
+      "canonical_fact": "Many examples of the stone arch date back to ancient rome.",
+      "prompt_en": "Many early examples of the stone arch date back to which civilization?",
+      "evidence_quotes": [
+        "ancient rome",
+        "Many examples of the stone arch have found that date back to what civilization?"
+      ],
+      "reason": "No existing catalog relation captures the link from an architectural structure type to the civilization of its earliest examples. entity_to_containing_location explicitly excludes origin. Proposed structure_to_origin_civilization as a precise, non-forced relation. The source question and answer provide direct support: the question asks which civilization, and the answer is 'ancient rome'.",
+      "english": {
+        "direction": "architectural structure -> civilization",
+        "relation_id": "structure_to_origin_civilization",
+        "answer": "ancient rome",
+        "canonical_fact": "Many examples of the stone arch date back to ancient rome.",
+        "subject": "stone arch",
+        "prompt_en": "Many early examples of the stone arch date back to which civilization?",
+        "relation_definition": "The civilization from which many earliest known examples of a specified architectural structure type date.",
+        "answer_aliases_en": [
+          "ancient rome"
+        ],
+        "relation_spec": {
+          "id": "structure_to_origin_civilization",
+          "definition": "The civilization from which many earliest known examples of a specified architectural structure type date.",
+          "direction": "architectural structure -> civilization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9e22137d42caa075df2d5190cc9c9352228d5fcb5d9d54d849d30be71e5490ae",
+      "input_sha256": "684b78b4f3d4594b27ead5b989577e204491107d93592c8aaefe29562ffc6202",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007240",
+      "input_sha256": "579e23a81665dc848c29c5ace8c124e03c931ca8d05ec509e15022e9da7a09e3",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "for free",
+        "canonical_fact": "Getting something for no cost is also known as getting it for free.",
+        "subject": "getting something for no cost",
+        "prompt_en": "What term or phrase describes receiving something at no cost?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "for free"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6196a34b1bc0f8b4444c6b1e72f45817d12bd91d4cae00318ba126d979dead69",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007240",
+        "subject_zh": "不花任何成本获得某物",
+        "prompt_zh": "描述不花任何成本获得某物的术语或短语是什么？",
+        "canonical_fact_zh": "不花任何成本获得某物也被称为免费获得。",
+        "answer_zh": "免费",
+        "answer_aliases_zh": [
+          "免费"
+        ]
+      },
+      "translation_sha256": "9d1429e234fafedd19f3afaa5947387df9491687f894eb9223dab05e840dd4c8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007244",
+      "input_sha256": "684b78b4f3d4594b27ead5b989577e204491107d93592c8aaefe29562ffc6202",
+      "english": {
+        "direction": "architectural structure -> civilization",
+        "relation_id": "structure_to_origin_civilization",
+        "answer": "ancient rome",
+        "canonical_fact": "Many examples of the stone arch date back to ancient rome.",
+        "subject": "stone arch",
+        "prompt_en": "Many early examples of the stone arch date back to which civilization?",
+        "relation_definition": "The civilization from which many earliest known examples of a specified architectural structure type date.",
+        "answer_aliases_en": [
+          "ancient rome"
+        ],
+        "relation_spec": {
+          "id": "structure_to_origin_civilization",
+          "definition": "The civilization from which many earliest known examples of a specified architectural structure type date.",
+          "direction": "architectural structure -> civilization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9e22137d42caa075df2d5190cc9c9352228d5fcb5d9d54d849d30be71e5490ae",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007244",
+        "subject_zh": "石拱",
+        "prompt_zh": "许多早期的石拱实例可追溯到哪个文明？",
+        "canonical_fact_zh": "许多石拱的实例可追溯到古罗马。",
+        "answer_zh": "古罗马",
+        "answer_aliases_zh": [
+          "古罗马"
+        ]
+      },
+      "translation_sha256": "a4d411f9407391f3aec8b69dfd4a58bf383581dac581b45f2224f6c5841ce159"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007240",
+        "historical:raw_commonsense_qa_007244"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "25d1c4ee7ed81a97c382cd517bb1bfa7edb8b84fb78bb83c2c102a1444fd9d05",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 68.877
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007240",
+        "historical:raw_commonsense_qa_007244"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "25d1c4ee7ed81a97c382cd517bb1bfa7edb8b84fb78bb83c2c102a1444fd9d05",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2290,
+      "first_chunk_seconds": 4.406,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2332,
+        "prompt_tokens": 1658,
+        "total_tokens": 3990,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1803,
+          "text_tokens": 529
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "16e3881da3501c1caa5d96f27a7f8035b5925437af82950d3b947aa8b35accb1",
+      "status": "completed",
+      "latency_seconds": 36.092
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007240",
+        "historical:raw_commonsense_qa_007244"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a7bfe3a7623f0e2bf983b9193a8a70dd064091f973bf166f9299705e9db3ba9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.107
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007240",
+        "historical:raw_commonsense_qa_007244"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5a7bfe3a7623f0e2bf983b9193a8a70dd064091f973bf166f9299705e9db3ba9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 903,
+      "first_chunk_seconds": 25.541,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 915,
+        "prompt_tokens": 829,
+        "total_tokens": 1744,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 691,
+          "text_tokens": 224
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "af822e0984437f4ed6ff1c3235bbbb8e8fe629be3b35fb984cdf1da6a83825ae",
+      "status": "completed",
+      "latency_seconds": 40.819
+    }
+  ],
+  "status": "completed"
+}

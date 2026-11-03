@@ -1,0 +1,215 @@
+{
+  "input_sha256": "4ec70f2b10ea427d4053c25bae4eede9de8167f8c41e4c9e0d9b7f0093e1f7e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006806",
+      "decision": "ready",
+      "subject": "Yooperland",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "michigan",
+      "canonical_fact": "Yooperland is located in Michigan.",
+      "prompt_en": "In which state is Yooperland located?",
+      "evidence_quotes": [
+        "michigan",
+        "Yooperland"
+      ],
+      "reason": "Source question asks where Yooperland is; source answer 'michigan' confirms geographic containment. Yooperland is a colloquial name for a sub-region of Michigan, so entity_to_containing_location (entity → containing location) is the exact fit.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "michigan",
+        "canonical_fact": "Yooperland is located in Michigan.",
+        "subject": "Yooperland",
+        "prompt_en": "In which state is Yooperland located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "michigan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "252f72b7e6aa9e162033fba73bcc5240d6953a99179fd5101382a4e514a0234b",
+      "input_sha256": "417449b0e725adf44639992d43c7b116a3774946c5093d0e3cbc509a534e29b7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006812",
+      "decision": "ready",
+      "subject": "Pacific Ocean",
+      "relation_id": "entity_to_relative_cardinal_direction",
+      "relation_definition": "The cardinal direction (north, south, east, or west) in which the subject entity is located relative to a specified reference location.",
+      "direction": "entity -> cardinal direction (from reference location)",
+      "answer": "west",
+      "canonical_fact": "The Pacific Ocean is to the west of Nevada.",
+      "prompt_en": "What cardinal direction is the Pacific Ocean located relative to Nevada?",
+      "evidence_quotes": [
+        "west",
+        "pacific ocean",
+        "Nevada"
+      ],
+      "reason": "Source question asks which direction the Pacific Ocean is from Nevada; source answer 'west' gives a clear relative cardinal direction. No existing catalog relation covers relative direction between two geographic entities, so a new precise relation is proposed rather than forcing entity_to_containing_location (which is about containment, not relative bearing).",
+      "english": {
+        "direction": "entity -> cardinal direction (from reference location)",
+        "relation_id": "entity_to_relative_cardinal_direction",
+        "answer": "west",
+        "canonical_fact": "The Pacific Ocean is to the west of Nevada.",
+        "subject": "Pacific Ocean",
+        "prompt_en": "What cardinal direction is the Pacific Ocean located relative to Nevada?",
+        "relation_definition": "The cardinal direction (north, south, east, or west) in which the subject entity is located relative to a specified reference location.",
+        "answer_aliases_en": [
+          "west"
+        ],
+        "relation_spec": {
+          "id": "entity_to_relative_cardinal_direction",
+          "definition": "The cardinal direction (north, south, east, or west) in which the subject entity is located relative to a specified reference location.",
+          "direction": "entity -> cardinal direction (from reference location)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2b911ab7471800709a3fb6b96902b9056d8ac9df75757027d8d082e6664142fa",
+      "input_sha256": "fea7397f10e34652b5c10faa2fcbd29a90f03c5bbd019cc93b5f6c6765aa6e4d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006806",
+      "input_sha256": "417449b0e725adf44639992d43c7b116a3774946c5093d0e3cbc509a534e29b7",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "michigan",
+        "canonical_fact": "Yooperland is located in Michigan.",
+        "subject": "Yooperland",
+        "prompt_en": "In which state is Yooperland located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "michigan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "252f72b7e6aa9e162033fba73bcc5240d6953a99179fd5101382a4e514a0234b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006806",
+        "subject_zh": "Yooperland",
+        "prompt_zh": "Yooperland位于哪个州？",
+        "canonical_fact_zh": "Yooperland位于密歇根州。",
+        "answer_zh": "密歇根州",
+        "answer_aliases_zh": [
+          "密歇根州"
+        ]
+      },
+      "translation_sha256": "ca41df0ed9ea41915eb008b2d0aa4c1d03931728588e28798abcf50c5fc09605"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006812",
+      "input_sha256": "fea7397f10e34652b5c10faa2fcbd29a90f03c5bbd019cc93b5f6c6765aa6e4d",
+      "english": {
+        "direction": "entity -> cardinal direction (from reference location)",
+        "relation_id": "entity_to_relative_cardinal_direction",
+        "answer": "west",
+        "canonical_fact": "The Pacific Ocean is to the west of Nevada.",
+        "subject": "Pacific Ocean",
+        "prompt_en": "What cardinal direction is the Pacific Ocean located relative to Nevada?",
+        "relation_definition": "The cardinal direction (north, south, east, or west) in which the subject entity is located relative to a specified reference location.",
+        "answer_aliases_en": [
+          "west"
+        ],
+        "relation_spec": {
+          "id": "entity_to_relative_cardinal_direction",
+          "definition": "The cardinal direction (north, south, east, or west) in which the subject entity is located relative to a specified reference location.",
+          "direction": "entity -> cardinal direction (from reference location)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2b911ab7471800709a3fb6b96902b9056d8ac9df75757027d8d082e6664142fa",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006812",
+        "subject_zh": "太平洋",
+        "prompt_zh": "太平洋位于内华达州的哪个方位？",
+        "canonical_fact_zh": "太平洋位于内华达州的西侧。",
+        "answer_zh": "西",
+        "answer_aliases_zh": [
+          "西"
+        ]
+      },
+      "translation_sha256": "2f12f3611b509ce20c23a4e57f2af25446f32f105a91a19fea79cabdeebf7020"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006806",
+        "historical:raw_commonsense_qa_006812"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "71d215479af1f9c1abca88897d68058306d973f8adc5d49557462896b8f12d9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2066,
+      "first_chunk_seconds": 24.233,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2141,
+        "prompt_tokens": 1640,
+        "total_tokens": 3781,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1676,
+          "text_tokens": 465
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9e50fadf76791d833f9b38b76d30d8a783a99fd6c353869e7a61ddd04e8e1166",
+      "status": "completed",
+      "latency_seconds": 78.19
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006806",
+        "historical:raw_commonsense_qa_006812"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "60aae89763c5c046910e2aa1d357e9de1f6d0d2819ddf53ae7dd2256f094f974",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 829,
+      "first_chunk_seconds": 18.095,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 892,
+        "prompt_tokens": 848,
+        "total_tokens": 1740,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 680,
+          "text_tokens": 212
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6f194b57d2517c4b1006dc00b18e488b490ba9747c5ee0a330416cb734b4571d",
+      "status": "completed",
+      "latency_seconds": 29.114
+    }
+  ],
+  "status": "completed"
+}

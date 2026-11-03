@@ -1,0 +1,225 @@
+{
+  "input_sha256": "17d9f7fd7bc2cd007ba6420476c97c448bfbd9dc9230504ac3676a1274196016",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000341",
+      "decision": "ready",
+      "subject": "autosomal dominant disorder",
+      "relation_id": "disorder_to_affection_requirement",
+      "relation_definition": "The specific genetic condition (number/type of mutated alleles) that must be present for a person to be affected by a specified disorder inheritance type.",
+      "direction": "disorder -> genetic affection requirement",
+      "answer": "one mutated allele",
+      "canonical_fact": "A person is affected by an autosomal dominant disorder when they have one mutated allele.",
+      "prompt_en": "What is needed for a person to be affected by an autosomal dominant disorder?",
+      "evidence_quotes": [
+        "autosomal dominant disorder",
+        "one mutated allele"
+      ],
+      "reason": "Source answer 'one mutated allele' directly and unambiguously states the genetic requirement. No catalog relation captures 'genetic affection condition for a disorder type' exactly; closest candidates (entity_to_class, term_to_definition) do not fit the direction or specificity. Proposed new relation 'disorder_to_affection_requirement' precisely captures the fact that a particular number of mutated alleles defines the affected state for a given inheritance pattern.",
+      "english": {
+        "direction": "disorder -> genetic affection requirement",
+        "relation_id": "disorder_to_affection_requirement",
+        "answer": "one mutated allele",
+        "canonical_fact": "A person is affected by an autosomal dominant disorder when they have one mutated allele.",
+        "subject": "autosomal dominant disorder",
+        "prompt_en": "What is needed for a person to be affected by an autosomal dominant disorder?",
+        "relation_definition": "The specific genetic condition (number/type of mutated alleles) that must be present for a person to be affected by a specified disorder inheritance type.",
+        "answer_aliases_en": [
+          "one mutated allele"
+        ],
+        "relation_spec": {
+          "id": "disorder_to_affection_requirement",
+          "definition": "The specific genetic condition (number/type of mutated alleles) that must be present for a person to be affected by a specified disorder inheritance type.",
+          "direction": "disorder -> genetic affection requirement"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f66ce41350fea830e5894ab405d435a08013a0c733f8ddafdbe304fab6bbfb22",
+      "input_sha256": "60a31322d8ee6ebd767f1491330087108d271657a78f9c11ae042f5d08b62d4c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000342",
+      "decision": "ready",
+      "subject": "photosynthesis",
+      "relation_id": "process_to_energy_source",
+      "relation_definition": "The specific energy source (e.g., light, thermal, chemical) that drives a specified chemical or biological process.",
+      "direction": "process -> energy source",
+      "answer": "light",
+      "canonical_fact": "Photosynthesis is an endothermic reaction that gets its energy from light.",
+      "prompt_en": "Photosynthesis is an endothermic reaction that gets its energy from what?",
+      "evidence_quotes": [
+        "Photosynthesis is an endothermic reaction",
+        "light"
+      ],
+      "reason": "Source answer 'light' is a concise literal substring identifying the energy source for photosynthesis. No catalog relation (entity_to_material, entity_to_class, etc.) fits 'energy source of a process.' Proposed new relation 'process_to_energy_source' precisely captures the relationship without forcing a broader category.",
+      "english": {
+        "direction": "process -> energy source",
+        "relation_id": "process_to_energy_source",
+        "answer": "light",
+        "canonical_fact": "Photosynthesis is an endothermic reaction that gets its energy from light.",
+        "subject": "photosynthesis",
+        "prompt_en": "Photosynthesis is an endothermic reaction that gets its energy from what?",
+        "relation_definition": "The specific energy source (e.g., light, thermal, chemical) that drives a specified chemical or biological process.",
+        "answer_aliases_en": [
+          "light"
+        ],
+        "relation_spec": {
+          "id": "process_to_energy_source",
+          "definition": "The specific energy source (e.g., light, thermal, chemical) that drives a specified chemical or biological process.",
+          "direction": "process -> energy source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c5ca3adfdadcc135e1623431f7f6926d0c98d6f4fc67e1f56935d427b15ea64b",
+      "input_sha256": "f6694a4f7ac344ed58118e33483e04bacbeed335dd7c6cbdff2f39e45bbab59a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000341",
+        "historical:raw_sciq_000342"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4c3c6235b21dfd75c79c5896b8e11764329c0ef77ff3dc441952ec84d569ed52",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.376
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000341",
+        "historical:raw_sciq_000342"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4c3c6235b21dfd75c79c5896b8e11764329c0ef77ff3dc441952ec84d569ed52",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1730,
+      "first_chunk_seconds": 7.114,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1793,
+        "prompt_tokens": 1703,
+        "total_tokens": 3496,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1252,
+          "text_tokens": 541
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0dcbc913fb885cc5de347632e61b665a6d7b9cbf7845e3fc3f4f29eab8ef1fab",
+      "status": "completed",
+      "latency_seconds": 35.083
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000341",
+        "historical:raw_sciq_000342"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1d7969afb428ab8a781be8359183a960d877bfacdc5d64ed055f04bf500de6ab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 552,
+      "first_chunk_seconds": 10.163,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 555,
+        "prompt_tokens": 867,
+        "total_tokens": 1422,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 387,
+          "text_tokens": 168
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "980f490ac83525caab1db201c7b1d9222a23d4e3618aacf5692f3d9abb2503c2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 64.81,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000341",
+        "historical:raw_sciq_000342"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4159c4ed72f221cfb294d4a2421a595ec86189740bcfa59dcd90eca872f9693f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 872,
+      "first_chunk_seconds": 2.5,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 928,
+        "prompt_tokens": 885,
+        "total_tokens": 1813,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 755,
+          "text_tokens": 173
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc2a104e451f54597297c29b98e8d5ca2d80e99837c2f56186940daa1f7db106",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 40.087,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000341",
+        "historical:raw_sciq_000342"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4159c4ed72f221cfb294d4a2421a595ec86189740bcfa59dcd90eca872f9693f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 823,
+      "first_chunk_seconds": 2.357,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 846,
+        "prompt_tokens": 885,
+        "total_tokens": 1731,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 674,
+          "text_tokens": 172
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1b1f049e610b5a0be2293714e82a39278915488acd1410a2300e381aa613738a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 21.145,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

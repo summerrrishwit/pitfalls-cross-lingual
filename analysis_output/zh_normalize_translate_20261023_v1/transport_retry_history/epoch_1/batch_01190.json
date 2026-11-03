@@ -1,0 +1,157 @@
+{
+  "input_sha256": "0856bfb89eb4babfe07ee191ee4fad2e45837f8b9b02d670cb575eddfa66f3f2",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6ea3f8a4eabaabf5c53c",
+      "decision": "ready",
+      "subject": "My Way",
+      "relation_id": "song_to_lyricist",
+      "relation_definition": "The person who wrote the lyrics (words) of a specified song, as distinct from the composer or performer.",
+      "direction": "song -> lyricist",
+      "answer": "Paul Anka",
+      "canonical_fact": "Paul Anka wrote the lyrics of the song 'My Way'.",
+      "prompt_en": "Who wrote the lyrics of the Frank Sinatra anthem 'My Way'?",
+      "evidence_quotes": [
+        "Who wrote the lyrics of the Frank Sinatra anthem 'My Way'?",
+        "Paul Anka"
+      ],
+      "reason": "Source explicitly identifies Paul Anka as the lyricist of 'My Way'. No existing catalog relation covers song-to-lyricist; written_work_to_author would force a broad category, so a precise new relation is proposed.",
+      "english": {
+        "answer": "Paul Anka",
+        "relation_id": "song_to_lyricist",
+        "prompt_en": "Who wrote the lyrics of the Frank Sinatra anthem 'My Way'?",
+        "direction": "song -> lyricist",
+        "subject": "My Way",
+        "canonical_fact": "Paul Anka wrote the lyrics of the song 'My Way'.",
+        "relation_definition": "The person who wrote the lyrics (words) of a specified song, as distinct from the composer or performer.",
+        "answer_aliases_en": [
+          "Paul Anka"
+        ],
+        "relation_spec": {
+          "id": "song_to_lyricist",
+          "definition": "The person who wrote the lyrics (words) of a specified song, as distinct from the composer or performer.",
+          "direction": "song -> lyricist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0563918fc8446e47d4ebdcff0176f86f9e6d7896756de978e3de6af9b443fd8",
+      "input_sha256": "845f2531f1aee2f149ddc45377cbb502e8379d053ffd116845a8581fcea06766",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6eb05eefcc964815c572",
+      "decision": "ready",
+      "subject": "malfunctioning sebaceous glands",
+      "relation_id": "physiological_anomaly_to_condition",
+      "relation_definition": "Medical condition causally attributed to a specified physiological malfunction or anomaly; does not assert exclusivity.",
+      "direction": "physiological anomaly -> medical condition",
+      "answer": "acne",
+      "canonical_fact": "Malfunctioning sebaceous glands cause the condition acne.",
+      "prompt_en": "What medical condition is caused by malfunctioning sebaceous glands?",
+      "evidence_quotes": [
+        "What condition is caused by malfunctioning sebaceous glands?",
+        "acne"
+      ],
+      "reason": "Source directly states that malfunctioning sebaceous glands cause acne. No catalog relation covers a causal physiological-to-medical-condition link; proposing a precise new relation rather than forcing entity_to_class or other broad categories.",
+      "english": {
+        "answer": "acne",
+        "relation_id": "physiological_anomaly_to_condition",
+        "prompt_en": "What medical condition is caused by malfunctioning sebaceous glands?",
+        "direction": "physiological anomaly -> medical condition",
+        "subject": "malfunctioning sebaceous glands",
+        "canonical_fact": "Malfunctioning sebaceous glands cause the condition acne.",
+        "relation_definition": "Medical condition causally attributed to a specified physiological malfunction or anomaly; does not assert exclusivity.",
+        "answer_aliases_en": [
+          "acne"
+        ],
+        "relation_spec": {
+          "id": "physiological_anomaly_to_condition",
+          "definition": "Medical condition causally attributed to a specified physiological malfunction or anomaly; does not assert exclusivity.",
+          "direction": "physiological anomaly -> medical condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "82a0154ec8afbf88eff5d2002a367f98d71ab52115f076088c5850add709fb1a",
+      "input_sha256": "21f6c7f461f55f2cf8df356308c702b23edc9c3646e32fd0fd25e46dc8cbb408",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6ea3f8a4eabaabf5c53c",
+        "public:pbf_6eb05eefcc964815c572"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7652e101edf09f6b7a7ee8380267689baafb280621d0baa59d9d201849173e53",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2430,
+      "first_chunk_seconds": 41.829,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2428,
+        "prompt_tokens": 1583,
+        "total_tokens": 4011,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1940,
+          "text_tokens": 488
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "14f7f97f60cd7a30b3169ddb01cce9d2e61d8d6ae5757b5292b60d060fe93731",
+      "status": "completed",
+      "latency_seconds": 60.941
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ea3f8a4eabaabf5c53c",
+        "public:pbf_6eb05eefcc964815c572"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "92984483808c880510219c773d668533b779ec818b9c5e95a7154f4e74a46d8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.943
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ea3f8a4eabaabf5c53c",
+        "public:pbf_6eb05eefcc964815c572"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "92984483808c880510219c773d668533b779ec818b9c5e95a7154f4e74a46d8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.947
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ea3f8a4eabaabf5c53c",
+        "public:pbf_6eb05eefcc964815c572"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "92984483808c880510219c773d668533b779ec818b9c5e95a7154f4e74a46d8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.964
+    }
+  ],
+  "status": "failed"
+}

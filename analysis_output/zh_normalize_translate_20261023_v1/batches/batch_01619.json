@@ -1,0 +1,220 @@
+{
+  "input_sha256": "0ea4c66e0ca5c57c7aecaccc949eac465b666ff0812efd1e1705e23c1047030d",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b3c00c3a1374e60164f1",
+      "decision": "ready",
+      "subject": "Arizona Cardinals stadium",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "State Farm Stadium",
+      "canonical_fact": "The name of the Arizona Cardinals stadium is State Farm Stadium.",
+      "prompt_en": "The name of the Arizona Cardinals stadium is",
+      "evidence_quotes": [
+        "what is the name of the arizona cardinals stadium",
+        "State Farm Stadium"
+      ],
+      "reason": "The source question asks for the name of the Arizona Cardinals' stadium and the source answer is 'State Farm Stadium'. The relation entity_to_alias (entity -> alias) fits because 'Arizona Cardinals stadium' is the descriptive entity identifier and 'State Farm Stadium' is its proper name/alias. Answer is a literal substring of source_answer; prompt_en is option-free and omits the answer.",
+      "english": {
+        "answer": "State Farm Stadium",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The name of the Arizona Cardinals stadium is",
+        "direction": "entity -> alias",
+        "subject": "Arizona Cardinals stadium",
+        "canonical_fact": "The name of the Arizona Cardinals stadium is State Farm Stadium.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "State Farm Stadium",
+          "Cardinals Stadium",
+          "University of Phoenix Stadium"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "345bab7b7aa1bd9f244c7bd73032c7cfed272712440ead9d6c372b8dddac159f",
+      "input_sha256": "c7fb6e363cb7a4455938f9f6cbce736f11c198650d83acd5d4f7f09a3fc858ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b3dfd12589f5173524f1",
+      "decision": "ready",
+      "subject": "law of diminishing marginal utility",
+      "relation_id": "principle_to_explained_principle",
+      "relation_definition": "A specified principle or law explicitly identified (e.g., 'most useful for explaining') as explaining another specified principle or law in a stated academic domain.",
+      "direction": "explaining principle -> explained principle",
+      "answer": "law of demand",
+      "canonical_fact": "The law of diminishing marginal utility is most useful for explaining the law of demand.",
+      "prompt_en": "The law of diminishing marginal utility is most useful for explaining the",
+      "evidence_quotes": [
+        "The law of diminishing marginal utility is most useful for explaining the",
+        "law of demand"
+      ],
+      "reason": "No existing catalog relation captures the 'principle X is most useful for explaining principle Y' relationship. Proposed new relation principle_to_explained_principle (explaining principle -> explained principle) with an explicit definition. The answer 'law of demand' is a literal substring of source_answer. Prompt_en is option-free and omits the answer. The qualifier 'most useful for explaining' is preserved in the canonical fact.",
+      "english": {
+        "answer": "law of demand",
+        "relation_id": "principle_to_explained_principle",
+        "prompt_en": "The law of diminishing marginal utility is most useful for explaining the",
+        "direction": "explaining principle -> explained principle",
+        "subject": "law of diminishing marginal utility",
+        "canonical_fact": "The law of diminishing marginal utility is most useful for explaining the law of demand.",
+        "relation_definition": "A specified principle or law explicitly identified (e.g., 'most useful for explaining') as explaining another specified principle or law in a stated academic domain.",
+        "answer_aliases_en": [
+          "law of demand"
+        ],
+        "relation_spec": {
+          "id": "principle_to_explained_principle",
+          "definition": "A specified principle or law explicitly identified (e.g., 'most useful for explaining') as explaining another specified principle or law in a stated academic domain.",
+          "direction": "explaining principle -> explained principle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2495e6031a09f6bec020ab8cad2dcb38bde1bec5fb3736cfec8ef98c4e73fb66",
+      "input_sha256": "271c5040b81833b8f13a7dac91c2e12b243e26a748e093e06692242d0e0ff5d4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_b3c00c3a1374e60164f1",
+      "input_sha256": "c7fb6e363cb7a4455938f9f6cbce736f11c198650d83acd5d4f7f09a3fc858ac",
+      "english": {
+        "answer": "State Farm Stadium",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The name of the Arizona Cardinals stadium is",
+        "direction": "entity -> alias",
+        "subject": "Arizona Cardinals stadium",
+        "canonical_fact": "The name of the Arizona Cardinals stadium is State Farm Stadium.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "State Farm Stadium",
+          "Cardinals Stadium",
+          "University of Phoenix Stadium"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "345bab7b7aa1bd9f244c7bd73032c7cfed272712440ead9d6c372b8dddac159f",
+      "translation": {
+        "record_id": "public:pbf_b3c00c3a1374e60164f1",
+        "subject_zh": "亚利桑那红雀队体育场",
+        "prompt_zh": "亚利桑那红雀队体育场的名称是",
+        "canonical_fact_zh": "亚利桑那红雀队体育场的名称是州立农场体育场。",
+        "answer_zh": "州立农场体育场",
+        "answer_aliases_zh": [
+          "州立农场体育场",
+          "红雀队体育场",
+          "凤凰大学体育场"
+        ]
+      },
+      "translation_sha256": "42ea73f60d6795d74b72fbd0f9c537c2e085a5fb8b1b1de66a74610ab076ca36"
+    },
+    {
+      "record_id": "public:pbf_b3dfd12589f5173524f1",
+      "input_sha256": "271c5040b81833b8f13a7dac91c2e12b243e26a748e093e06692242d0e0ff5d4",
+      "english": {
+        "answer": "law of demand",
+        "relation_id": "principle_to_explained_principle",
+        "prompt_en": "The law of diminishing marginal utility is most useful for explaining the",
+        "direction": "explaining principle -> explained principle",
+        "subject": "law of diminishing marginal utility",
+        "canonical_fact": "The law of diminishing marginal utility is most useful for explaining the law of demand.",
+        "relation_definition": "A specified principle or law explicitly identified (e.g., 'most useful for explaining') as explaining another specified principle or law in a stated academic domain.",
+        "answer_aliases_en": [
+          "law of demand"
+        ],
+        "relation_spec": {
+          "id": "principle_to_explained_principle",
+          "definition": "A specified principle or law explicitly identified (e.g., 'most useful for explaining') as explaining another specified principle or law in a stated academic domain.",
+          "direction": "explaining principle -> explained principle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2495e6031a09f6bec020ab8cad2dcb38bde1bec5fb3736cfec8ef98c4e73fb66",
+      "translation": {
+        "record_id": "public:pbf_b3dfd12589f5173524f1",
+        "subject_zh": "边际效用递减规律",
+        "prompt_zh": "边际效用递减规律最有助于解释",
+        "canonical_fact_zh": "边际效用递减规律最有助于解释需求定律。",
+        "answer_zh": "需求定律",
+        "answer_aliases_zh": [
+          "需求定律"
+        ]
+      },
+      "translation_sha256": "89a499b6fc55adb566b7e9496368008e646a3259f5e35b6e9178e9824c22c21a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b3c00c3a1374e60164f1",
+        "public:pbf_b3dfd12589f5173524f1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fd4cfa214807248e67b0fd85de7a194c5f5d79cccde906ca02779e52922bd1e4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2771,
+      "first_chunk_seconds": 40.571,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2769,
+        "prompt_tokens": 1593,
+        "total_tokens": 4362,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2201,
+          "text_tokens": 568
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d9e9096f79f0a8872f2dafc0577615fdd0deb48bcbf81eab67e04a1d00c78132",
+      "status": "completed",
+      "latency_seconds": 64.235
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b3c00c3a1374e60164f1",
+        "public:pbf_b3dfd12589f5173524f1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "de9f2788fb467f2c11015bf1c6d78d9dcd773347880564c2174faae66a179512",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1379,
+      "first_chunk_seconds": 33.605,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1408,
+        "prompt_tokens": 865,
+        "total_tokens": 2273,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1137,
+          "text_tokens": 271
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81b9644ec0d4ee6d3fd4dbd1da863ab1e3a0038ec4b4c726ab165b3be7b95415",
+      "status": "completed",
+      "latency_seconds": 45.451
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,212 @@
+{
+  "input_sha256": "f488864046183042f9008f00dafdff2d3e16030cb26c66f88ac54038d9d4aec9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6dca9be8112e5c7704e1",
+      "decision": "ready",
+      "subject": "Britain's Got Talent season 12 episode 18",
+      "relation_id": "episode_to_winner",
+      "relation_definition": "The contestant or act who won a specified episode of a competition show.",
+      "direction": "specified episode -> winner of that episode",
+      "answer": "Lee Ridley",
+      "canonical_fact": "Lee Ridley won Britain's Got Talent season 12 episode 18.",
+      "prompt_en": "Who won Britain's Got Talent season 12 episode 18?",
+      "evidence_quotes": [
+        "who won britain's got talent season 12 episode 18",
+        "Lee Ridley"
+      ],
+      "reason": "Source question and answer directly establish that Lee Ridley won episode 18 of BGT season 12. No catalog relation fits 'winner of a specific competition episode'; the closest catalog entries (entity_to_class, description_to_entity) do not capture the competitive-winning semantics. Proposing new relation episode_to_winner with explicit direction.",
+      "english": {
+        "answer": "Lee Ridley",
+        "relation_id": "episode_to_winner",
+        "prompt_en": "Who won Britain's Got Talent season 12 episode 18?",
+        "direction": "specified episode -> winner of that episode",
+        "subject": "Britain's Got Talent season 12 episode 18",
+        "canonical_fact": "Lee Ridley won Britain's Got Talent season 12 episode 18.",
+        "relation_definition": "The contestant or act who won a specified episode of a competition show.",
+        "answer_aliases_en": [
+          "Lee Ridley",
+          "Lost Voice Guy"
+        ],
+        "relation_spec": {
+          "id": "episode_to_winner",
+          "definition": "The contestant or act who won a specified episode of a competition show.",
+          "direction": "specified episode -> winner of that episode"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "366aff5dd26511a2ac790a6c95e073c462b2044eb334265cc37f037bd17eba6d",
+      "input_sha256": "7c12fab7a3b454bf0aca63bca66d9b178c204ab02a9e6e83a4bfce48414a37b3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6dea3e8ff8234b5051a0",
+      "decision": "ready",
+      "subject": "StarKist tuna mascot",
+      "relation_id": "entity_to_name",
+      "relation_definition": "The proper or designated name of a specified entity, character, or mascot; distinct from an alias which is an equivalent alternate name.",
+      "direction": "entity (or identifying description) -> name",
+      "answer": "Charlie",
+      "canonical_fact": "The name of the StarKist tuna mascot is Charlie.",
+      "prompt_en": "What is the name of the StarKist tuna mascot?",
+      "evidence_quotes": [
+        "What is the name of the StarKist tuna mascot?",
+        "Charlie"
+      ],
+      "reason": "Source question and answer directly state the name of the StarKist tuna mascot is Charlie. No catalog relation captures 'the proper name of an entity'—entity_to_alias covers alternate equivalent names, not the primary designated name. Proposing new relation entity_to_name with explicit definition distinguishing it from alias.",
+      "english": {
+        "answer": "Charlie",
+        "relation_id": "entity_to_name",
+        "prompt_en": "What is the name of the StarKist tuna mascot?",
+        "direction": "entity (or identifying description) -> name",
+        "subject": "StarKist tuna mascot",
+        "canonical_fact": "The name of the StarKist tuna mascot is Charlie.",
+        "relation_definition": "The proper or designated name of a specified entity, character, or mascot; distinct from an alias which is an equivalent alternate name.",
+        "answer_aliases_en": [
+          "Charlie"
+        ],
+        "relation_spec": {
+          "id": "entity_to_name",
+          "definition": "The proper or designated name of a specified entity, character, or mascot; distinct from an alias which is an equivalent alternate name.",
+          "direction": "entity (or identifying description) -> name"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "04116406a7f5b49865b7ea600314ac2728a2f10d0dd94de364129e01a2a8aba3",
+      "input_sha256": "0ee553d585ac3c876d16e9765a100d72eeebe85342338b8a1cb1e71398b64e76",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6a42e5b6e044dcf24f49e1ba1fdab702a2cab0ed567c9ddb60820c61c82328ff",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2535,
+      "first_chunk_seconds": 26.478,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2548,
+        "prompt_tokens": 1587,
+        "total_tokens": 4135,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2007,
+          "text_tokens": 541
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "d267aafcad5364e400d39e0246826bf1ecdd43ea9c7476e62a88779a946589fe",
+      "status": "completed",
+      "latency_seconds": 47.723
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.954
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.963
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.968
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 46.726
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 70.52
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6dca9be8112e5c7704e1",
+        "public:pbf_6dea3e8ff8234b5051a0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d5d9f9815fdf8ca6a1caadb352ab9b6db13fd396f94a278778b222d9e9ff7ea8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.585
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01186.json",
+      "sha256": "97d91522d0693fdda75c938c16768dbed3884449990253e4f23bd8cad91c1a0d",
+      "previous_status": "failed"
+    }
+  ]
+}

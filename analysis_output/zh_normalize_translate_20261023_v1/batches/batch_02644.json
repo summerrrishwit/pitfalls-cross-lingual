@@ -1,0 +1,214 @@
+{
+  "input_sha256": "144b75b6e3f939552768deb98ebd920cfe06ef1b47f53155e6d231222b033465",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006515",
+      "decision": "ready",
+      "subject": "US state that comes first alphabetically",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Alabama",
+      "canonical_fact": "The US state that comes first alphabetically is Alabama.",
+      "prompt_en": "Which US state comes first in alphabetical order?",
+      "evidence_quotes": [
+        "which comes first alphabetically",
+        "alabama"
+      ],
+      "reason": "The source question asks for the US state that comes first alphabetically (with fiddle-playing as contextual flavor); the source answer is 'alabama'. The relation description_to_entity fits because the identifying description 'US state that comes first alphabetically' uniquely picks out Alabama. The existing answer 'Alabama' (capitalised proper noun form of source 'alabama') is retained. Both models: Qwen-3.8-Max extracted; sensenova deferred on ambiguity, but the description_to_entity relation resolves that ambiguity cleanly.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Alabama",
+        "canonical_fact": "The US state that comes first alphabetically is Alabama.",
+        "subject": "US state that comes first alphabetically",
+        "prompt_en": "Which US state comes first in alphabetical order?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Alabama"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ead82ba28dbcbcaac47b2086bcd63d2ca2e2e5b3558bb0aa07df320eec307b4f",
+      "input_sha256": "1b63b9dfb1d87327318090619b908bfa4eaff5784e74ed3330fc6ddc9a438371",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006528",
+      "decision": "ready",
+      "subject": "birds",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "wings",
+      "canonical_fact": "Birds have wings instead of arms.",
+      "prompt_en": "What body part do birds have instead of arms?",
+      "evidence_quotes": [
+        "What do they have instead of arms?",
+        "wings"
+      ],
+      "reason": "The source question asks what birds have instead of arms; the source answer is 'wings'. Wings are a constituent body part of birds, making whole_to_part (whole -> part) the correct relation. The qualifier 'instead of arms' is preserved in the canonical fact to retain the contrastive framing. Both model annotations agree on extraction, supporting the relation choice.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "wings",
+        "canonical_fact": "Birds have wings instead of arms.",
+        "subject": "birds",
+        "prompt_en": "What body part do birds have instead of arms?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "wings"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b535d1cee0dc2b9db37f3faa98f82faf9e4f241f0c9db02f84362a658fa8bc55",
+      "input_sha256": "81c3873430ee780d2dddec506562e99ac5117708e8fd034b863979d8bb9228b5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006515",
+      "input_sha256": "1b63b9dfb1d87327318090619b908bfa4eaff5784e74ed3330fc6ddc9a438371",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Alabama",
+        "canonical_fact": "The US state that comes first alphabetically is Alabama.",
+        "subject": "US state that comes first alphabetically",
+        "prompt_en": "Which US state comes first in alphabetical order?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Alabama"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ead82ba28dbcbcaac47b2086bcd63d2ca2e2e5b3558bb0aa07df320eec307b4f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006515",
+        "subject_zh": "按字母顺序排在第一位的美国州",
+        "prompt_zh": "按字母顺序，哪个美国州排在第一位？",
+        "canonical_fact_zh": "按字母顺序排在第一位的美国州是阿拉巴马州。",
+        "answer_zh": "阿拉巴马州",
+        "answer_aliases_zh": [
+          "阿拉巴马州"
+        ]
+      },
+      "translation_sha256": "0a12bc3e12ff6aa08070f33baad6b5dee4e92f1d80de74116005c6b06e0a1699"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006528",
+      "input_sha256": "81c3873430ee780d2dddec506562e99ac5117708e8fd034b863979d8bb9228b5",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "wings",
+        "canonical_fact": "Birds have wings instead of arms.",
+        "subject": "birds",
+        "prompt_en": "What body part do birds have instead of arms?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "wings"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b535d1cee0dc2b9db37f3faa98f82faf9e4f241f0c9db02f84362a658fa8bc55",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006528",
+        "subject_zh": "鸟类",
+        "prompt_zh": "鸟类有什么身体部位代替手臂？",
+        "canonical_fact_zh": "鸟类有翅膀代替手臂。",
+        "answer_zh": "翅膀",
+        "answer_aliases_zh": [
+          "翅膀"
+        ]
+      },
+      "translation_sha256": "53b1bfe511d133b2e7dc379655db33f503a59739542ba73ae8c0ce3226e57ffd"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006515",
+        "historical:raw_commonsense_qa_006528"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9fd266525ddb994afd6cf2f0e96b5e2b2f20308eb133e0e76dad85cb17c2be00",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2229,
+      "first_chunk_seconds": 3.018,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2439,
+        "prompt_tokens": 1651,
+        "total_tokens": 4090,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1928,
+          "text_tokens": 511
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a7371b9e6692899ca24147f0db3941dbc9ba94124cecc822978f52681d6384af",
+      "status": "completed",
+      "latency_seconds": 39.789
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006515",
+        "historical:raw_commonsense_qa_006528"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9f064ebd1464c2a9563ea09974dc17c7dfd3ae03c71812b224733120b3846935",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 672,
+      "first_chunk_seconds": 30.218,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 774,
+        "prompt_tokens": 769,
+        "total_tokens": 1543,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 555,
+          "text_tokens": 219
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6dbd8da4c1d64257f726a8d519c46747c4d615acf4472427a2fffb6866050232",
+      "status": "completed",
+      "latency_seconds": 42.994
+    }
+  ],
+  "status": "completed"
+}

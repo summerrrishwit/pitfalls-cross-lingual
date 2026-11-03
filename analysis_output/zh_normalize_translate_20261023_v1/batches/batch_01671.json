@@ -1,0 +1,157 @@
+{
+  "input_sha256": "eb1e5e6b5d5e5672d8c9ee6b108260dd9407ccfd3cb3752dafba94ee1607df8a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_bc75baf0fcce2e561869",
+      "decision": "ready",
+      "subject": "star-shaped city pattern",
+      "relation_id": "pattern_to_causal_system",
+      "relation_definition": "The identified transportation or infrastructure system (or agent/mechanism) that generated or created a specified urban, spatial, or structural pattern; direction: pattern -> causal system/agent.",
+      "direction": "star-shaped city pattern -> Streetcar and trolley lines extending from the CBD",
+      "answer": "Streetcar and trolley lines extending from the CBD",
+      "canonical_fact": "Streetcar and trolley lines extending from the CBD created the star-shaped city pattern.",
+      "prompt_en": "Factual question: Which type of transportation system created the star-shaped city pattern?\nAnswer:",
+      "evidence_quotes": [
+        "Which type of transportation system created the star-shaped city pattern?",
+        "Streetcar and trolley lines extending from the CBD"
+      ],
+      "reason": "Source answer directly states the causal transportation system. No catalog relation captures a causal 'created/generates' link between a pattern and its originating system, so a new precise relation is proposed. Prompt does not contain the answer. All fields nonempty; evidence are literal substrings.",
+      "english": {
+        "answer": "Streetcar and trolley lines extending from the CBD",
+        "relation_id": "pattern_to_causal_system",
+        "prompt_en": "Factual question: Which type of transportation system created the star-shaped city pattern?\nAnswer:",
+        "direction": "star-shaped city pattern -> Streetcar and trolley lines extending from the CBD",
+        "subject": "star-shaped city pattern",
+        "canonical_fact": "Streetcar and trolley lines extending from the CBD created the star-shaped city pattern.",
+        "relation_definition": "The identified transportation or infrastructure system (or agent/mechanism) that generated or created a specified urban, spatial, or structural pattern; direction: pattern -> causal system/agent.",
+        "answer_aliases_en": [
+          "Streetcar and trolley lines extending from the CBD"
+        ],
+        "relation_spec": {
+          "id": "pattern_to_causal_system",
+          "definition": "The identified transportation or infrastructure system (or agent/mechanism) that generated or created a specified urban, spatial, or structural pattern; direction: pattern -> causal system/agent.",
+          "direction": "star-shaped city pattern -> Streetcar and trolley lines extending from the CBD"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "77ec3d28a1570102e0b053630e7930e5a9926962aeb19d70b66b87a84fa2be4b",
+      "input_sha256": "dae6704c5649af9486f040cf1b70e2033e2bfd1fc9c163dedc150151b16e7d7a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_bc784cbb3450887eefa2",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question inherently embeds the full conditional proposition whose antecedent is the answer. Any prompt that asks the user to identify the antecedent must reproduce the proposition, thereby containing the answer text verbatim. This violates the 'prompt_en does not contain its answer' constraint for a ready record. No catalog relation fits the structural 'antecedent-of-conditional' role, and the prompt self-contamination makes a reusable fact entry infeasible without altering the question.",
+      "input_sha256": "eee3ee96da52f61329b4dac937ec1acb72d15160a06cf7deb00af5d16e3f469a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_bc75baf0fcce2e561869",
+      "input_sha256": "dae6704c5649af9486f040cf1b70e2033e2bfd1fc9c163dedc150151b16e7d7a",
+      "english": {
+        "answer": "Streetcar and trolley lines extending from the CBD",
+        "relation_id": "pattern_to_causal_system",
+        "prompt_en": "Factual question: Which type of transportation system created the star-shaped city pattern?\nAnswer:",
+        "direction": "star-shaped city pattern -> Streetcar and trolley lines extending from the CBD",
+        "subject": "star-shaped city pattern",
+        "canonical_fact": "Streetcar and trolley lines extending from the CBD created the star-shaped city pattern.",
+        "relation_definition": "The identified transportation or infrastructure system (or agent/mechanism) that generated or created a specified urban, spatial, or structural pattern; direction: pattern -> causal system/agent.",
+        "answer_aliases_en": [
+          "Streetcar and trolley lines extending from the CBD"
+        ],
+        "relation_spec": {
+          "id": "pattern_to_causal_system",
+          "definition": "The identified transportation or infrastructure system (or agent/mechanism) that generated or created a specified urban, spatial, or structural pattern; direction: pattern -> causal system/agent.",
+          "direction": "star-shaped city pattern -> Streetcar and trolley lines extending from the CBD"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "77ec3d28a1570102e0b053630e7930e5a9926962aeb19d70b66b87a84fa2be4b",
+      "translation": {
+        "record_id": "public:pbf_bc75baf0fcce2e561869",
+        "subject_zh": "星形城市模式",
+        "prompt_zh": "事实性问题：哪种交通系统创建了星形城市模式？\n答案：",
+        "canonical_fact_zh": "从市中心延伸出的有轨电车和无轨电车线路创建了星形城市模式。",
+        "answer_zh": "从市中心延伸出的有轨电车和无轨电车线路",
+        "answer_aliases_zh": [
+          "从市中心延伸出的有轨电车和无轨电车线路"
+        ]
+      },
+      "translation_sha256": "716a2ed72fe27f9ac5f6593470dacee2556874fcff61f74abe47caacd061f9d0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_bc75baf0fcce2e561869",
+        "public:pbf_bc784cbb3450887eefa2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "974d04b754de9c3299413bdf9c9e122ea8f10518dfc992742993da5f8a4ff7ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2101,
+      "first_chunk_seconds": 25.416,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2137,
+        "prompt_tokens": 1807,
+        "total_tokens": 3944,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1624,
+          "text_tokens": 513
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a6cbfaba6f1fcb604e594bef06d08532b47f4651faa421952d41ef5ed1a4c964",
+      "status": "completed",
+      "latency_seconds": 45.792
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_bc75baf0fcce2e561869"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a15dedea1122dece63df429c4cd8e862d5c6366b5b771fcee6e8480807b71bb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 628,
+      "first_chunk_seconds": 79.414,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 625,
+        "prompt_tokens": 607,
+        "total_tokens": 1232,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 467,
+          "text_tokens": 158
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7666c717699dd3743c55bc253a83dd939ca5c848d3e4c1de4a56098cba736380",
+      "status": "completed",
+      "latency_seconds": 85.111
+    }
+  ],
+  "status": "completed"
+}

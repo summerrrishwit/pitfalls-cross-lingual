@@ -1,0 +1,211 @@
+{
+  "input_sha256": "8674d791f5e964e9804629031f766eebea8f26fcc4746c8db3a3ca65be8a1a80",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008956",
+      "decision": "ready",
+      "subject": "fencing",
+      "relation_id": "activity_to_equipment",
+      "relation_definition": "Standard equipment or weapon used by participants in a specified sport or physical activity; not a general attribute, class, or material composition.",
+      "direction": "sport/activity -> equipment used by participants",
+      "answer": "sword",
+      "canonical_fact": "Fencing is a sport in which participants use a sword.",
+      "prompt_en": "What equipment do participants use in the sport of fencing?",
+      "evidence_quotes": [
+        "Fencing is a sport in which participants use a",
+        "sword"
+      ],
+      "reason": "Both model annotations agree on extraction. 'sword' is a verbatim literal substring of source_answer. No existing catalog relation covers sport-to-equipment mapping; proposing precise new ID activity_to_equipment with explicit definition and direction. prompt_en is option-free and excludes the answer string.",
+      "english": {
+        "direction": "sport/activity -> equipment used by participants",
+        "relation_id": "activity_to_equipment",
+        "answer": "sword",
+        "canonical_fact": "Fencing is a sport in which participants use a sword.",
+        "subject": "fencing",
+        "prompt_en": "What equipment do participants use in the sport of fencing?",
+        "relation_definition": "Standard equipment or weapon used by participants in a specified sport or physical activity; not a general attribute, class, or material composition.",
+        "answer_aliases_en": [
+          "sword"
+        ],
+        "relation_spec": {
+          "id": "activity_to_equipment",
+          "definition": "Standard equipment or weapon used by participants in a specified sport or physical activity; not a general attribute, class, or material composition.",
+          "direction": "sport/activity -> equipment used by participants"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "315615c3f9cb9410bddda0494df7edf262b48d24dda173e259c53acffb7c88c6",
+      "input_sha256": "eec1f14c52c6e0dd314f3f64347605c6e6a5de73b437aba67f67537776a240a9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008976",
+      "decision": "ready",
+      "subject": "flea",
+      "relation_id": "organism_to_locomotion_method",
+      "relation_definition": "Primary or characteristic mode of locomotion for a specified organism or species; distinct from habitat, taxonomic class, or general behavior attributes.",
+      "direction": "organism -> locomotion method",
+      "answer": "jump",
+      "canonical_fact": "A flea locomotes by jumping.",
+      "prompt_en": "What is the primary mode of locomotion for a flea?",
+      "evidence_quotes": [
+        "How does a flea locomote?",
+        "jump"
+      ],
+      "reason": "Both model annotations agree on extraction. 'jump' is a verbatim literal substring of source_answer. No existing catalog relation covers organism-to-locomotion-method; proposing precise new ID organism_to_locomotion_method to avoid forcing into entity_to_class or organism_to_habitat. prompt_en is option-free and excludes the answer string.",
+      "english": {
+        "direction": "organism -> locomotion method",
+        "relation_id": "organism_to_locomotion_method",
+        "answer": "jump",
+        "canonical_fact": "A flea locomotes by jumping.",
+        "subject": "flea",
+        "prompt_en": "What is the primary mode of locomotion for a flea?",
+        "relation_definition": "Primary or characteristic mode of locomotion for a specified organism or species; distinct from habitat, taxonomic class, or general behavior attributes.",
+        "answer_aliases_en": [
+          "jump"
+        ],
+        "relation_spec": {
+          "id": "organism_to_locomotion_method",
+          "definition": "Primary or characteristic mode of locomotion for a specified organism or species; distinct from habitat, taxonomic class, or general behavior attributes.",
+          "direction": "organism -> locomotion method"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fb6e7fe9222dd2bdf0f5d89a854005c13441acae41dbf9fc5b0ac86f850103ae",
+      "input_sha256": "504e99408cad6cc7424deaca08cf1ca10f37e0d3c6ae073e0f87650ef2f25c78",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008956",
+        "historical:raw_commonsense_qa_008976"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "92c5fb4fa0c9817ea3ef36dfb13c05c73328efdbb0daff5db38a6d2c7c4e09c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1933,
+      "first_chunk_seconds": 72.198,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2029,
+        "prompt_tokens": 1632,
+        "total_tokens": 3661,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1526,
+          "text_tokens": 503
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d604c4a15f3654afbc0807f6baec6d82f1b216fc237628fe9310517de709a2ae",
+      "status": "completed",
+      "latency_seconds": 101.71
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008956",
+        "historical:raw_commonsense_qa_008976"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e616b26287dea1957aa1f7e4654d87ad78721e4b71f592fded8753eb48a77be7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 942,
+      "first_chunk_seconds": 28.081,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1007,
+        "prompt_tokens": 849,
+        "total_tokens": 1856,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 804,
+          "text_tokens": 203
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dd0cd16790be3b2df52fe9f8be28cef308ee9dcae2c0e46d7547916d5f90d789",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 41.145,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008956",
+        "historical:raw_commonsense_qa_008976"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a7123a6a85bd5f9db280d4cd2827e4e0a7479a9ea1241f746e0894b7c79c2c22",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1773,
+      "first_chunk_seconds": 3.138,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1820,
+        "prompt_tokens": 867,
+        "total_tokens": 2687,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1613,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9e6b023d1bd764a628f26a3c81a1d812ae32dfdffbe6a84ec0b3a7eddaec27a4",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 25.711,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008956",
+        "historical:raw_commonsense_qa_008976"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a7123a6a85bd5f9db280d4cd2827e4e0a7479a9ea1241f746e0894b7c79c2c22",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1406,
+      "first_chunk_seconds": 13.186,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1467,
+        "prompt_tokens": 867,
+        "total_tokens": 2334,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1262,
+          "text_tokens": 205
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2657ad429e562d63b1558b380e2ca4799001be3af55b513f420a06e0f2e017af",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 32.065,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

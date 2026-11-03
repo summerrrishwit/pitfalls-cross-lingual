@@ -1,0 +1,189 @@
+{
+  "input_sha256": "a7231c720b364df5517c33b9c51b02f37b1280913ce01c14f276d7675bfbab0b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000870",
+      "decision": "ready",
+      "subject": "asteroids",
+      "relation_id": "entity_to_change_mechanism",
+      "relation_definition": "The specific process or event by which a specified entity undergoes change, retaining stated constraints such as 'only way' or 'sole mechanism.' Direction: entity -> change mechanism.",
+      "direction": "entity -> change mechanism",
+      "answer": "a collision",
+      "canonical_fact": "Asteroids are not geologically active, and a collision is the only way they can change.",
+      "prompt_en": "Given that asteroids are not geologically active, what is the only way they can change?",
+      "evidence_quotes": [
+        "Asteroids are not geologically active. which is the only way they can change?",
+        "a collision"
+      ],
+      "reason": "No existing catalog relation captures 'the only mechanism by which an entity changes.' Proposed entity_to_change_mechanism. Source explicitly states the constraint ('only way') and the context ('not geologically active'), both preserved in the canonical fact. Answer 'a collision' is a verbatim substring of source_answer.",
+      "english": {
+        "prompt_en": "Given that asteroids are not geologically active, what is the only way they can change?",
+        "relation_definition": "The specific process or event by which a specified entity undergoes change, retaining stated constraints such as 'only way' or 'sole mechanism.' Direction: entity -> change mechanism.",
+        "answer": "a collision",
+        "canonical_fact": "Asteroids are not geologically active, and a collision is the only way they can change.",
+        "direction": "entity -> change mechanism",
+        "relation_id": "entity_to_change_mechanism",
+        "subject": "asteroids",
+        "answer_aliases_en": [
+          "a collision"
+        ],
+        "relation_spec": {
+          "id": "entity_to_change_mechanism",
+          "definition": "The specific process or event by which a specified entity undergoes change, retaining stated constraints such as 'only way' or 'sole mechanism.' Direction: entity -> change mechanism.",
+          "direction": "entity -> change mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7c7f4aa5cd665fcecb2762dd4248d8a172f4ecb90f2e2edd20a00fbffe2a783a",
+      "input_sha256": "d61b7c8cad37e6e4541566dcb62f8e54c289bb0d5cb9930acf0533f28f4c866d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000871",
+      "decision": "ready",
+      "subject": "cellular drinking",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "pinocytosis",
+      "canonical_fact": "Pinocytosis is another word for cellular drinking.",
+      "prompt_en": "What is another word for cellular drinking?",
+      "evidence_quotes": [
+        "another word for cellular drinking",
+        "pinocytosis"
+      ],
+      "reason": "description_to_term fits exactly: 'cellular drinking' is the supplied defining description and 'pinocytosis' is the conventional biological term that uniquely corresponds to it. Answer is a verbatim substring of source_answer. No qualifier loss; 'another word' is preserved in the canonical fact.",
+      "english": {
+        "prompt_en": "What is another word for cellular drinking?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "pinocytosis",
+        "canonical_fact": "Pinocytosis is another word for cellular drinking.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "cellular drinking",
+        "answer_aliases_en": [
+          "pinocytosis"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c78eb43591fa7cb20d173ef7704ef1413a59ba08aa74f1ae97c3371c217637db",
+      "input_sha256": "6e61f7dbaadf9e752a3ff792fb0e272a5700f2fbe51461a5ce33234883438077",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000870",
+        "historical:raw_sciq_000871"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "31d5fbbe0fe3604dac1f9ff48163215db12c8d8a093a2f88d507448c2e123552",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.326
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000870",
+        "historical:raw_sciq_000871"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "31d5fbbe0fe3604dac1f9ff48163215db12c8d8a093a2f88d507448c2e123552",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1444,
+      "first_chunk_seconds": 62.179,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1570,
+        "prompt_tokens": 1689,
+        "total_tokens": 3259,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1049,
+          "text_tokens": 521
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a76b7326fdb91a2dc7a3af2664555eb744106560495ca942ea44374b0d6355ee",
+      "status": "completed",
+      "latency_seconds": 155.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000870",
+        "historical:raw_sciq_000871"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ba7062485d0b8450788d08234da8fda51878a87eb67a781b5eff0b4dfe16723a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 650,
+      "first_chunk_seconds": 1.242,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 675,
+        "prompt_tokens": 857,
+        "total_tokens": 1532,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 525,
+          "text_tokens": 150
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9c60283b84556cac0ae84d02ef4b9933433bb61c4538f58bc9a5b490b4bb690a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 79.638,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000870",
+        "historical:raw_sciq_000871"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6dc9786b119bd3d8d040f31ed852ea907b7fda00da747956ebf8489c2ed001aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 117.008
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000870",
+        "historical:raw_sciq_000871"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6dc9786b119bd3d8d040f31ed852ea907b7fda00da747956ebf8489c2ed001aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.277
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8fd944e0d1dd8cc591b26a1b630301d0eafbe3ed9e75e31f916f9a017f1e672d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004899",
+      "decision": "ready",
+      "subject": "more than one person talking to another",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "conversation",
+      "canonical_fact": "More than one person talking to another is a conversation.",
+      "prompt_en": "What is the conventional term for a situation in which more than one person is talking to another?",
+      "evidence_quotes": [
+        "conversation",
+        "more than one person is talking to another"
+      ],
+      "reason": "The source question asks for the term that names the situation of more than one person talking to another, and the source answer is 'conversation.' This is a classic description-to-term mapping that fits the catalog relation description_to_term (direction: description -> term) exactly. Both model annotations agree on extraction; the canonical fact is retained from the source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "conversation",
+        "canonical_fact": "More than one person talking to another is a conversation.",
+        "subject": "more than one person talking to another",
+        "prompt_en": "What is the conventional term for a situation in which more than one person is talking to another?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "conversation"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9b44badf65c65a552f0e0edbbd08b1f0ccedc9c67d6c60683bf21b38013b55a1",
+      "input_sha256": "deee914fd39d3cafe3166e9f7ed770cb90156e9af6fa6f2fe0e82786de723922",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004927",
+      "decision": "ready",
+      "subject": "NASA",
+      "relation_id": "organization_to_flood_trigger_vehicle",
+      "relation_definition": "The specific vehicle whose takeoff triggers the organization's (or its facility's) flooding of the immediate area.",
+      "direction": "organization/facility -> vehicle",
+      "answer": "space shuttle",
+      "canonical_fact": "NASA floods the immediate area when the space shuttle takes off.",
+      "prompt_en": "At a NASA launch facility, what vehicle's takeoff triggers the flooding of the immediate area?",
+      "evidence_quotes": [
+        "space shuttle",
+        "Nasa floods the immediate area when what takes off"
+      ],
+      "reason": "No existing catalog relation captures this operational trigger relationship (a facility flooding its area in response to a specific vehicle's takeoff). Proposed new snake_case relation 'organization_to_flood_trigger_vehicle' with direction 'organization/facility -> vehicle' to avoid forcing a broad category. The source question and answer directly and unambiguously support the fact. One model flagged ambiguous_subject, but the source clearly names NASA as the subject performing the flooding, so the fact is supported.",
+      "english": {
+        "direction": "organization/facility -> vehicle",
+        "relation_id": "organization_to_flood_trigger_vehicle",
+        "answer": "space shuttle",
+        "canonical_fact": "NASA floods the immediate area when the space shuttle takes off.",
+        "subject": "NASA",
+        "prompt_en": "At a NASA launch facility, what vehicle's takeoff triggers the flooding of the immediate area?",
+        "relation_definition": "The specific vehicle whose takeoff triggers the organization's (or its facility's) flooding of the immediate area.",
+        "answer_aliases_en": [
+          "space shuttle"
+        ],
+        "relation_spec": {
+          "id": "organization_to_flood_trigger_vehicle",
+          "definition": "The specific vehicle whose takeoff triggers the organization's (or its facility's) flooding of the immediate area.",
+          "direction": "organization/facility -> vehicle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b1ab6864b7c42523184dec0c2393334e9597e78b7af312d462f1f1b6d489cfde",
+      "input_sha256": "79696d06edce420e13cf415c7f8e7f371ee940fe622e9f11e0a49949ce3721ee",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004899",
+      "input_sha256": "deee914fd39d3cafe3166e9f7ed770cb90156e9af6fa6f2fe0e82786de723922",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "conversation",
+        "canonical_fact": "More than one person talking to another is a conversation.",
+        "subject": "more than one person talking to another",
+        "prompt_en": "What is the conventional term for a situation in which more than one person is talking to another?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "conversation"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9b44badf65c65a552f0e0edbbd08b1f0ccedc9c67d6c60683bf21b38013b55a1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004899",
+        "subject_zh": "不止一人与另一人交谈",
+        "prompt_zh": "在不止一人与另一人交谈的情形中，惯用术语是什么？",
+        "canonical_fact_zh": "不止一人与另一人交谈即为对话。",
+        "answer_zh": "对话",
+        "answer_aliases_zh": [
+          "对话"
+        ]
+      },
+      "translation_sha256": "9ab3305217d7e488b4c8fe1ceea51d768346b84f9ab0ff771b5257feeb820096"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004927",
+      "input_sha256": "79696d06edce420e13cf415c7f8e7f371ee940fe622e9f11e0a49949ce3721ee",
+      "english": {
+        "direction": "organization/facility -> vehicle",
+        "relation_id": "organization_to_flood_trigger_vehicle",
+        "answer": "space shuttle",
+        "canonical_fact": "NASA floods the immediate area when the space shuttle takes off.",
+        "subject": "NASA",
+        "prompt_en": "At a NASA launch facility, what vehicle's takeoff triggers the flooding of the immediate area?",
+        "relation_definition": "The specific vehicle whose takeoff triggers the organization's (or its facility's) flooding of the immediate area.",
+        "answer_aliases_en": [
+          "space shuttle"
+        ],
+        "relation_spec": {
+          "id": "organization_to_flood_trigger_vehicle",
+          "definition": "The specific vehicle whose takeoff triggers the organization's (or its facility's) flooding of the immediate area.",
+          "direction": "organization/facility -> vehicle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b1ab6864b7c42523184dec0c2393334e9597e78b7af312d462f1f1b6d489cfde",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004927",
+        "subject_zh": "NASA",
+        "prompt_zh": "在NASA发射场，哪种飞行器的起飞会触发对周围区域的注水？",
+        "canonical_fact_zh": "NASA在航天飞机起飞时会对周围区域进行注水。",
+        "answer_zh": "航天飞机",
+        "answer_aliases_zh": [
+          "航天飞机"
+        ]
+      },
+      "translation_sha256": "8b76539e3a47d3d7823fa65dd3c25f78c232b4e2bda9795b5348eef1982d8305"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004899",
+        "historical:raw_commonsense_qa_004927"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "867c75fcb1d145aad964c98edf1b60415e1b354616e409dbf54adf00454d57fd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2312,
+      "first_chunk_seconds": 1.768,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2508,
+        "prompt_tokens": 1665,
+        "total_tokens": 4173,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1956,
+          "text_tokens": 552
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "28e24ae5d0e10b28e6ee5c9f7092e14e2a549e1ee2060eb8d87b806db7a2a0dd",
+      "status": "completed",
+      "latency_seconds": 227.48
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004899",
+        "historical:raw_commonsense_qa_004927"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b68746bab58eba7f042195e31d0c3c116d05286586a54fe0d2a9164d43a3963c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1009,
+      "first_chunk_seconds": 2.247,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1027,
+        "prompt_tokens": 843,
+        "total_tokens": 1870,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 795,
+          "text_tokens": 232
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "195f82f4d940c751c7c514bdd77cca7ae73c17adc15df14e061b073004436269",
+      "status": "completed",
+      "latency_seconds": 26.344
+    }
+  ],
+  "status": "completed"
+}

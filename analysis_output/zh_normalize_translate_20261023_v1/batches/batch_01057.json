@@ -1,0 +1,217 @@
+{
+  "input_sha256": "3ca2d2a4ff97761c59dc4756d90c4d49341e65b6295d381df5d9a6592e02d260",
+  "normalized": [
+    {
+      "record_id": "public:pbf_56db66bd7c18578c36e3",
+      "decision": "ready",
+      "subject": "John Goodman",
+      "relation_id": "actor_to_character",
+      "relation_definition": "Actor who portrays a specified character in a specified work and version; not a voice actor unless explicitly separated. Inverse of character_to_actor.",
+      "direction": "actor -> character in specified work/version",
+      "answer": "Walter Sobchak",
+      "canonical_fact": "John Goodman played the character Walter Sobchak in The Big Lebowski.",
+      "prompt_en": "Which character does John Goodman play in The Big Lebowski?",
+      "evidence_quotes": [
+        "john goodman's character in the big lebowski",
+        "Walter Sobchak"
+      ],
+      "reason": "Source directly states John Goodman's character in The Big Lebowski is Walter Sobchak. No existing catalog relation covers actor->character direction; character_to_actor is the inverse. Proposed actor_to_character with explicit work/version scoping.",
+      "english": {
+        "answer": "Walter Sobchak",
+        "relation_id": "actor_to_character",
+        "prompt_en": "Which character does John Goodman play in The Big Lebowski?",
+        "direction": "actor -> character in specified work/version",
+        "subject": "John Goodman",
+        "canonical_fact": "John Goodman played the character Walter Sobchak in The Big Lebowski.",
+        "relation_definition": "Actor who portrays a specified character in a specified work and version; not a voice actor unless explicitly separated. Inverse of character_to_actor.",
+        "answer_aliases_en": [
+          "Walter Sobchak"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Actor who portrays a specified character in a specified work and version; not a voice actor unless explicitly separated. Inverse of character_to_actor.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "44e74cc1eecd249e654e0db85c1eca89b74bc32b1210a70732c8a266df2d2820",
+      "input_sha256": "3718b4f9bfc4162b1dc91a3d88109f8acf3e6048782dd55212badd3f56dcccc5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_56ef22a9009e5ee3e3e3",
+      "decision": "ready",
+      "subject": "1 liter",
+      "relation_id": "unit_to_equivalent_quantity",
+      "relation_definition": "Exact numerical equivalence between a quantity in one unit and the corresponding quantity in a target unit of the same dimension; preserves stated precision and unit labels.",
+      "direction": "quantity in source unit -> equivalent quantity in target unit",
+      "answer": "1000.0 milliliters",
+      "canonical_fact": "1 liter is equal to 1000.0 milliliters.",
+      "prompt_en": "How many milliliters are in 1 liter?",
+      "evidence_quotes": [
+        "1 l is equal to how many ml",
+        "1000.0 milliliters"
+      ],
+      "reason": "Source question and answer explicitly state the liter-to-milliliter equivalence. No existing catalog relation covers unit-conversion equivalence; proposed unit_to_equivalent_quantity with direction and precision semantics. Answer kept exactly as in source.",
+      "english": {
+        "answer": "1000.0 milliliters",
+        "relation_id": "unit_to_equivalent_quantity",
+        "prompt_en": "How many milliliters are in 1 liter?",
+        "direction": "quantity in source unit -> equivalent quantity in target unit",
+        "subject": "1 liter",
+        "canonical_fact": "1 liter is equal to 1000.0 milliliters.",
+        "relation_definition": "Exact numerical equivalence between a quantity in one unit and the corresponding quantity in a target unit of the same dimension; preserves stated precision and unit labels.",
+        "answer_aliases_en": [
+          "1000.0 milliliters",
+          "1000 milliliters"
+        ],
+        "relation_spec": {
+          "id": "unit_to_equivalent_quantity",
+          "definition": "Exact numerical equivalence between a quantity in one unit and the corresponding quantity in a target unit of the same dimension; preserves stated precision and unit labels.",
+          "direction": "quantity in source unit -> equivalent quantity in target unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "81bc38327e4ff30729a81f07fad96ce4f4b31883b031943b80e9194cfa30012c",
+      "input_sha256": "b529546965c3ecbe0112588fb24b2420037ae5b685707ef97a9baeef0b2908a6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_56db66bd7c18578c36e3",
+      "input_sha256": "3718b4f9bfc4162b1dc91a3d88109f8acf3e6048782dd55212badd3f56dcccc5",
+      "english": {
+        "answer": "Walter Sobchak",
+        "relation_id": "actor_to_character",
+        "prompt_en": "Which character does John Goodman play in The Big Lebowski?",
+        "direction": "actor -> character in specified work/version",
+        "subject": "John Goodman",
+        "canonical_fact": "John Goodman played the character Walter Sobchak in The Big Lebowski.",
+        "relation_definition": "Actor who portrays a specified character in a specified work and version; not a voice actor unless explicitly separated. Inverse of character_to_actor.",
+        "answer_aliases_en": [
+          "Walter Sobchak"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Actor who portrays a specified character in a specified work and version; not a voice actor unless explicitly separated. Inverse of character_to_actor.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "44e74cc1eecd249e654e0db85c1eca89b74bc32b1210a70732c8a266df2d2820",
+      "translation": {
+        "record_id": "public:pbf_56db66bd7c18578c36e3",
+        "subject_zh": "约翰·古德曼",
+        "prompt_zh": "约翰·古德曼在《linger》中饰演了哪个角色？",
+        "canonical_fact_zh": "约翰·古德曼在《linger》中饰演了沃尔特·索伯查克。",
+        "answer_zh": "沃尔特·索伯查克",
+        "answer_aliases_zh": [
+          "沃尔特·索伯查克"
+        ]
+      },
+      "translation_sha256": "73ffabb356f0915f5ad99344685d9f4723448e9a85c3240acb65c96f503d5109"
+    },
+    {
+      "record_id": "public:pbf_56ef22a9009e5ee3e3e3",
+      "input_sha256": "b529546965c3ecbe0112588fb24b2420037ae5b685707ef97a9baeef0b2908a6",
+      "english": {
+        "answer": "1000.0 milliliters",
+        "relation_id": "unit_to_equivalent_quantity",
+        "prompt_en": "How many milliliters are in 1 liter?",
+        "direction": "quantity in source unit -> equivalent quantity in target unit",
+        "subject": "1 liter",
+        "canonical_fact": "1 liter is equal to 1000.0 milliliters.",
+        "relation_definition": "Exact numerical equivalence between a quantity in one unit and the corresponding quantity in a target unit of the same dimension; preserves stated precision and unit labels.",
+        "answer_aliases_en": [
+          "1000.0 milliliters",
+          "1000 milliliters"
+        ],
+        "relation_spec": {
+          "id": "unit_to_equivalent_quantity",
+          "definition": "Exact numerical equivalence between a quantity in one unit and the corresponding quantity in a target unit of the same dimension; preserves stated precision and unit labels.",
+          "direction": "quantity in source unit -> equivalent quantity in target unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "81bc38327e4ff30729a81f07fad96ce4f4b31883b031943b80e9194cfa30012c",
+      "translation": {
+        "record_id": "public:pbf_56ef22a9009e5ee3e3e3",
+        "subject_zh": "1升",
+        "prompt_zh": "1升等于多少毫升？",
+        "canonical_fact_zh": "1升等于1000.0毫升。",
+        "answer_zh": "1000.0毫升",
+        "answer_aliases_zh": [
+          "1000.0毫升",
+          "1000毫升"
+        ]
+      },
+      "translation_sha256": "ea77fb3f2cd007455e6ca7098d237633b12d209e104970b2d7523223a6952def"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_56db66bd7c18578c36e3",
+        "public:pbf_56ef22a9009e5ee3e3e3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e146ec1cb63d57932a3161a7b55a369694f0888c7c2c8198807141d863b7050f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1595,
+      "first_chunk_seconds": 34.192,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1755,
+        "prompt_tokens": 1636,
+        "total_tokens": 3391,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1228,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c600cc1269697471156d5c40f86887d50fb7c16ce7628f84756fc27f5c1e4bfe",
+      "status": "completed",
+      "latency_seconds": 73.679
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_56db66bd7c18578c36e3",
+        "public:pbf_56ef22a9009e5ee3e3e3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "63a1cb41d748850997f1004f64408ab95f0cce731a246babdeb2680217ed3766",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1568,
+      "first_chunk_seconds": 18.099,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1568,
+        "prompt_tokens": 924,
+        "total_tokens": 2492,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1295,
+          "text_tokens": 273
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "26d0f8fa567f68c9c723aaafe5c86f0daa368fe170d4bdced2e4687d62bea719",
+      "status": "completed",
+      "latency_seconds": 37.944
+    }
+  ],
+  "status": "completed"
+}

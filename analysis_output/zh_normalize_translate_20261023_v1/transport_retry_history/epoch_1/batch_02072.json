@@ -1,0 +1,204 @@
+{
+  "input_sha256": "bf3bfd09e37d13d55a04abdea16932ea0c7178a65976551716604cdea3f2db85",
+  "normalized": [
+    {
+      "record_id": "public:pbf_fc4bf0a7ef8b9b211ac9",
+      "decision": "ready",
+      "subject": "Phineas Gage",
+      "relation_id": "accident_to_damaged_brain_region",
+      "relation_definition": "The specific brain region or structure damaged in a named traumatic accident event.",
+      "direction": "named accident/trauma event -> damaged brain region",
+      "answer": "prefrontal cortex",
+      "canonical_fact": "The prefrontal cortex was the part of Phineas Gage's brain damaged by his accident while laying the railroad track.",
+      "prompt_en": "What part of Phineas Gage's brain was damaged by his accident while laying the railroad track?",
+      "evidence_quotes": [
+        "What part of Phineas Gage's brain was damaged by his accident while laying the railroad track?",
+        "prefrontal cortex"
+      ],
+      "reason": "Source question and answer clearly establish that the prefrontal cortex was the brain region damaged in Gage's railroad accident. No catalog relation precisely captures 'event -> damaged anatomical structure,' so a new relation 'accident_to_damaged_brain_region' is proposed. Evidence quotes are verbatim substrings of source_question and source_answer.",
+      "english": {
+        "answer": "prefrontal cortex",
+        "relation_id": "accident_to_damaged_brain_region",
+        "prompt_en": "What part of Phineas Gage's brain was damaged by his accident while laying the railroad track?",
+        "direction": "named accident/trauma event -> damaged brain region",
+        "subject": "Phineas Gage",
+        "canonical_fact": "The prefrontal cortex was the part of Phineas Gage's brain damaged by his accident while laying the railroad track.",
+        "relation_definition": "The specific brain region or structure damaged in a named traumatic accident event.",
+        "answer_aliases_en": [
+          "prefrontal cortex"
+        ],
+        "relation_spec": {
+          "id": "accident_to_damaged_brain_region",
+          "definition": "The specific brain region or structure damaged in a named traumatic accident event.",
+          "direction": "named accident/trauma event -> damaged brain region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e4c2cbaafac2bad4a0233cd473be9f4ea1ec5aadb909d754026aca1a6fd19363",
+      "input_sha256": "2cc3e71dbaf3e2e4158acec7fe62913fef3e592d97948f5b36cb83c6b7ca2f7b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_fc5cb00e9d655ead7f6b",
+      "decision": "ready",
+      "subject": "Centers for Disease Control and the World Health Organization",
+      "relation_id": "organization_to_policy",
+      "relation_definition": "A named policy position or testing protocol adopted by a specified organization, retaining temporal qualifiers such as 'current.'",
+      "direction": "organization -> policy",
+      "answer": "Opt-out",
+      "canonical_fact": "The current testing policy of the Centers for Disease Control and the World Health Organization is Opt-out.",
+      "prompt_en": "What is the current testing policy of the Centers for Disease Control and the World Health Organization?",
+      "evidence_quotes": [
+        "The current testing policy of the Centers for Disease Control and the World Health Organization is:",
+        "“Opt-out”"
+      ],
+      "reason": "Source question and answer establish the current testing policy as 'Opt-out.' The qualifier 'current' is preserved. No catalog relation captures 'organization -> adopted policy,' so a new relation 'organization_to_policy' is proposed. Evidence quotes are verbatim substrings of source_question and source_answer (including the curly quotation marks around Opt-out).",
+      "english": {
+        "answer": "Opt-out",
+        "relation_id": "organization_to_policy",
+        "prompt_en": "What is the current testing policy of the Centers for Disease Control and the World Health Organization?",
+        "direction": "organization -> policy",
+        "subject": "Centers for Disease Control and the World Health Organization",
+        "canonical_fact": "The current testing policy of the Centers for Disease Control and the World Health Organization is Opt-out.",
+        "relation_definition": "A named policy position or testing protocol adopted by a specified organization, retaining temporal qualifiers such as 'current.'",
+        "answer_aliases_en": [
+          "Opt-out",
+          "“Opt-out”"
+        ],
+        "relation_spec": {
+          "id": "organization_to_policy",
+          "definition": "A named policy position or testing protocol adopted by a specified organization, retaining temporal qualifiers such as 'current.'",
+          "direction": "organization -> policy"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "086364cbe9481649cecbde1a6578c10df66e3b720afd4727ccab1b043469ea90",
+      "input_sha256": "170b4fd2641bd991902a18354426af4897fdc0da90a47bdcd4bb6669f8432c92",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "536813759ef7ee167bc3e5cea61bcbc3366026eb91715818aedcf5fdfe12821c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3379,
+      "first_chunk_seconds": 18.924,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3541,
+        "prompt_tokens": 1674,
+        "total_tokens": 5215,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2975,
+          "text_tokens": 566
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7a68ae6bf2f46f33684c239ef05e98e2d0f562328c18d2fcd42bbd4c39a0f349",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 60.901,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "52d054a3f793059b37a30b8ac858396344111e70d913b709245b51d9875418bb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.303
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "52d054a3f793059b37a30b8ac858396344111e70d913b709245b51d9875418bb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3040,
+      "first_chunk_seconds": 16.24,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3105,
+        "prompt_tokens": 1692,
+        "total_tokens": 4797,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2508,
+          "text_tokens": 597
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e711096ad19c878f944a6b733a956a81e6507f82a779f9868cfe90fbc8dc13d3",
+      "status": "completed",
+      "latency_seconds": 53.846
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5ea0f8400019045bdeec9ab252eb4f7b4b7504ed9f201389b54529c6ba6bacce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.997
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5ea0f8400019045bdeec9ab252eb4f7b4b7504ed9f201389b54529c6ba6bacce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.787
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fc4bf0a7ef8b9b211ac9",
+        "public:pbf_fc5cb00e9d655ead7f6b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5ea0f8400019045bdeec9ab252eb4f7b4b7504ed9f201389b54529c6ba6bacce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.916
+    }
+  ],
+  "status": "failed"
+}

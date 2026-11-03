@@ -1,0 +1,215 @@
+{
+  "input_sha256": "bc92527f892ab52af4078a8606a188356d68ce30a3eba9a4406f3e2568c0e1f9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008490",
+      "decision": "ready",
+      "subject": "someone competing against",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "opponent",
+      "canonical_fact": "An opponent is someone competing against another person.",
+      "prompt_en": "What is the conventional term for a person or entity that someone competes against?",
+      "evidence_quotes": [
+        "someone competing against",
+        "opponent"
+      ],
+      "reason": "The source question asks for the term corresponding to the description 'someone competing against,' and the source answer is 'opponent.' This maps directly to the description_to_term catalog relation (a defining description yielding its conventional term). The canonical fact restates the definitional link without adding unsupported detail.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "opponent",
+        "canonical_fact": "An opponent is someone competing against another person.",
+        "subject": "someone competing against",
+        "prompt_en": "What is the conventional term for a person or entity that someone competes against?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "opponent"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "06ffacefd620dd96986edbab811f0828e485fd185d0259143677ce92ebb3ca96",
+      "input_sha256": "aeee63b445a041ff2c1ba2ad65c7416fb5bdc3276d1293f3276802a14e2071bd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008498",
+      "decision": "ready",
+      "subject": "kingdoms",
+      "relation_id": "political_entity_to_form_of_government",
+      "relation_definition": "A specified political entity or state type -> its characteristic or defining form of government.",
+      "direction": "political entity -> form of government",
+      "answer": "monarchy",
+      "canonical_fact": "Kingdoms are most associated with the form of government called monarchy.",
+      "prompt_en": "What form of government is most commonly associated with kingdoms?",
+      "evidence_quotes": [
+        "form of government",
+        "kingdoms",
+        "monarchy"
+      ],
+      "reason": "The source question asks for the form of government most associated with kingdoms, and the source answer is 'monarchy.' No existing catalog relation precisely captures 'political entity -> its form of government' (entity_to_class concerns taxonomic class membership, not a defining governmental attribute). A new precise relation ID is proposed with explicit definition and direction.",
+      "english": {
+        "direction": "political entity -> form of government",
+        "relation_id": "political_entity_to_form_of_government",
+        "answer": "monarchy",
+        "canonical_fact": "Kingdoms are most associated with the form of government called monarchy.",
+        "subject": "kingdoms",
+        "prompt_en": "What form of government is most commonly associated with kingdoms?",
+        "relation_definition": "A specified political entity or state type -> its characteristic or defining form of government.",
+        "answer_aliases_en": [
+          "monarchy"
+        ],
+        "relation_spec": {
+          "id": "political_entity_to_form_of_government",
+          "definition": "A specified political entity or state type -> its characteristic or defining form of government.",
+          "direction": "political entity -> form of government"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6ed9d12806f162a150fa7537683c30dbbdc683f4d6d49d9f7ff9ff0544a25cd6",
+      "input_sha256": "61de786449ef398b81d96bf8d4a01f5950112b9691417c38512f2ea684fc8108",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008490",
+      "input_sha256": "aeee63b445a041ff2c1ba2ad65c7416fb5bdc3276d1293f3276802a14e2071bd",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "opponent",
+        "canonical_fact": "An opponent is someone competing against another person.",
+        "subject": "someone competing against",
+        "prompt_en": "What is the conventional term for a person or entity that someone competes against?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "opponent"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "06ffacefd620dd96986edbab811f0828e485fd185d0259143677ce92ebb3ca96",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008490",
+        "subject_zh": "与他人竞争的人",
+        "prompt_zh": "某人与之竞争的人或实体，其约定俗成的术语是什么？",
+        "canonical_fact_zh": "对手是指与他人竞争的人。",
+        "answer_zh": "对手",
+        "answer_aliases_zh": [
+          "对手"
+        ]
+      },
+      "translation_sha256": "1252555ccb672f477bab3c92c059c62c53ce44922e21ac7e9bebdcdd20b27343"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008498",
+      "input_sha256": "61de786449ef398b81d96bf8d4a01f5950112b9691417c38512f2ea684fc8108",
+      "english": {
+        "direction": "political entity -> form of government",
+        "relation_id": "political_entity_to_form_of_government",
+        "answer": "monarchy",
+        "canonical_fact": "Kingdoms are most associated with the form of government called monarchy.",
+        "subject": "kingdoms",
+        "prompt_en": "What form of government is most commonly associated with kingdoms?",
+        "relation_definition": "A specified political entity or state type -> its characteristic or defining form of government.",
+        "answer_aliases_en": [
+          "monarchy"
+        ],
+        "relation_spec": {
+          "id": "political_entity_to_form_of_government",
+          "definition": "A specified political entity or state type -> its characteristic or defining form of government.",
+          "direction": "political entity -> form of government"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6ed9d12806f162a150fa7537683c30dbbdc683f4d6d49d9f7ff9ff0544a25cd6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008498",
+        "subject_zh": "王国",
+        "prompt_zh": "王国最常与哪种政体形式相关联？",
+        "canonical_fact_zh": "王国最常与被称为君主制的政体形式相关联。",
+        "answer_zh": "君主制",
+        "answer_aliases_zh": [
+          "君主制"
+        ]
+      },
+      "translation_sha256": "7c9603fa09284ddec9a06f4e428645466bd1d841633e9544ef8d52a4ac04953c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008490",
+        "historical:raw_commonsense_qa_008498"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ee286ad7352a82d50924c97eaf36a8e1454996d108535530cb4d62aebfab0685",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2609,
+      "first_chunk_seconds": 15.568,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2714,
+        "prompt_tokens": 1643,
+        "total_tokens": 4357,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2222,
+          "text_tokens": 492
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c819a0f4a285ff16929585e8c7d18a81ea51c503e54b2d75fd7de1d6a69e0487",
+      "status": "completed",
+      "latency_seconds": 59.722
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008490",
+        "historical:raw_commonsense_qa_008498"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f662a4e146c0fc941be2cd9729659a0816f153036f77679b240208b24cc4227d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 804,
+      "first_chunk_seconds": 15.799,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 805,
+        "prompt_tokens": 820,
+        "total_tokens": 1625,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 590,
+          "text_tokens": 215
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "caca60cd53633876e93fdd6279cf0900aec8f50623c0565d69d82e8bd4a06bee",
+      "status": "completed",
+      "latency_seconds": 25.194
+    }
+  ],
+  "status": "completed"
+}

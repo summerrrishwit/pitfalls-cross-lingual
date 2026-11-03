@@ -1,0 +1,214 @@
+{
+  "input_sha256": "889e73fe1ca4fc172b9106f46e85bb7c7df6533c618f4f5af8ac9dfbdd13f070",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000119",
+      "decision": "ready",
+      "subject": "wood that became fossilized",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "petrify",
+      "canonical_fact": "Wood that became fossilized is called petrify.",
+      "prompt_en": "What term do paleontologists use for wood that has become fossilized?",
+      "evidence_quotes": [
+        "what did the paleontologists call it",
+        "petrify"
+      ],
+      "reason": "Source question explicitly asks for the term paleontologists use for fossilized wood; source answer provides 'petrify'. description_to_term fits: the identifying description 'wood that became fossilized' maps to the conventional term 'petrify'. Answer kept verbatim from source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "petrify",
+        "canonical_fact": "Wood that became fossilized is called petrify.",
+        "subject": "wood that became fossilized",
+        "prompt_en": "What term do paleontologists use for wood that has become fossilized?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "petrify"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "987d768658358eeed60b7716dace182d96ec2639e374901f6092e2ce508b5133",
+      "input_sha256": "ee3366a9a7633e4d1d195867668c4c7722156aedce89a6d3a9bf5dab85ec5e94",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000127",
+      "decision": "ready",
+      "subject": "divorce",
+      "relation_id": "legal_action_to_status_terminated",
+      "relation_definition": "The specific relationship or legal status that a specified legal action formally ends or dissolves.",
+      "direction": "legal action -> status it terminates",
+      "answer": "being married",
+      "canonical_fact": "Divorce is the legal action that ends the relationship status of being married.",
+      "prompt_en": "What relationship status does a divorce formally end?",
+      "evidence_quotes": [
+        "what relationship status are you trying to end",
+        "being married"
+      ],
+      "reason": "Source question asks which relationship status a divorce ends; source answer is 'being married'. No existing catalog relation captures a legal action terminating a specific status, so a precise new relation 'legal_action_to_status_terminated' is proposed with explicit definition and direction.",
+      "english": {
+        "direction": "legal action -> status it terminates",
+        "relation_id": "legal_action_to_status_terminated",
+        "answer": "being married",
+        "canonical_fact": "Divorce is the legal action that ends the relationship status of being married.",
+        "subject": "divorce",
+        "prompt_en": "What relationship status does a divorce formally end?",
+        "relation_definition": "The specific relationship or legal status that a specified legal action formally ends or dissolves.",
+        "answer_aliases_en": [
+          "being married"
+        ],
+        "relation_spec": {
+          "id": "legal_action_to_status_terminated",
+          "definition": "The specific relationship or legal status that a specified legal action formally ends or dissolves.",
+          "direction": "legal action -> status it terminates"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ac429e2c1ddcc028c9d9c7085278f5d1366c87604757b06b7be3069098ac4b3b",
+      "input_sha256": "7a7da34678bdeda97a9bcac6073f87b167cd2416f286b3b3b5256de805be48cd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000119",
+      "input_sha256": "ee3366a9a7633e4d1d195867668c4c7722156aedce89a6d3a9bf5dab85ec5e94",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "petrify",
+        "canonical_fact": "Wood that became fossilized is called petrify.",
+        "subject": "wood that became fossilized",
+        "prompt_en": "What term do paleontologists use for wood that has become fossilized?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "petrify"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "987d768658358eeed60b7716dace182d96ec2639e374901f6092e2ce508b5133",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000119",
+        "subject_zh": "已经矿化的木材",
+        "prompt_zh": "古生物学家用来指称已经矿化的木材的术语是什么？",
+        "canonical_fact_zh": "已经矿化的木材被称为石化。",
+        "answer_zh": "石化",
+        "answer_aliases_zh": [
+          "石化"
+        ]
+      },
+      "translation_sha256": "c893f1dc3d7a6227f7be9e077ca776d6408d45cc7c97a5845cbbcd0be3dfc43c"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000127",
+      "input_sha256": "7a7da34678bdeda97a9bcac6073f87b167cd2416f286b3b3b5256de805be48cd",
+      "english": {
+        "direction": "legal action -> status it terminates",
+        "relation_id": "legal_action_to_status_terminated",
+        "answer": "being married",
+        "canonical_fact": "Divorce is the legal action that ends the relationship status of being married.",
+        "subject": "divorce",
+        "prompt_en": "What relationship status does a divorce formally end?",
+        "relation_definition": "The specific relationship or legal status that a specified legal action formally ends or dissolves.",
+        "answer_aliases_en": [
+          "being married"
+        ],
+        "relation_spec": {
+          "id": "legal_action_to_status_terminated",
+          "definition": "The specific relationship or legal status that a specified legal action formally ends or dissolves.",
+          "direction": "legal action -> status it terminates"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ac429e2c1ddcc028c9d9c7085278f5d1366c87604757b06b7be3069098ac4b3b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000127",
+        "subject_zh": "离婚",
+        "prompt_zh": "离婚正式终结哪种关系状态？",
+        "canonical_fact_zh": "离婚是终结已婚关系状态的法律行为。",
+        "answer_zh": "已婚",
+        "answer_aliases_zh": [
+          "已婚"
+        ]
+      },
+      "translation_sha256": "536abbb4090c0e4c41f66058ed64969c6979f79e0694403cec15b1b72aed645b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000119",
+        "historical:raw_commonsense_qa_000127"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79ae82030d274b9fc373bcef0eb441f7dd11a0db8a3b7a304beaec67fb26ae82",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2442,
+      "first_chunk_seconds": 14.382,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2501,
+        "prompt_tokens": 1700,
+        "total_tokens": 4201,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2022,
+          "text_tokens": 479
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c0c0637273f65a5ba8fbfc327cdef96c7f5252161dd696efa74d2e6aed45770e",
+      "status": "completed",
+      "latency_seconds": 48.772
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000119",
+        "historical:raw_commonsense_qa_000127"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0cdfe256f039c123bac1f0872cfd63954f84ee1b0fb2801a24ce5ba48e56f446",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 998,
+      "first_chunk_seconds": 5.684,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1015,
+        "prompt_tokens": 827,
+        "total_tokens": 1842,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 871,
+          "text_tokens": 144
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "64555bba8455d22997046ba861d182ba7f704bf7ca3c584ce253b1e59f86a6da",
+      "status": "completed",
+      "latency_seconds": 25.592
+    }
+  ],
+  "status": "completed"
+}

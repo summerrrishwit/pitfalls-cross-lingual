@@ -1,0 +1,214 @@
+{
+  "input_sha256": "427ec70946d2fad7c893e50096a56709464349b0842495ff741c9f2fe6a18f6a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001446",
+      "decision": "ready",
+      "subject": "throwing a rod",
+      "relation_id": "event_to_damaged_entity",
+      "relation_definition": "The specific mechanical or physical object that is damaged as a direct result of a specified event or failure mode.",
+      "direction": "event -> entity damaged by the event",
+      "answer": "engine",
+      "canonical_fact": "Throwing a rod damages an engine.",
+      "prompt_en": "What is damaged when you throw a rod?",
+      "evidence_quotes": [
+        "If you've thrown a rod you've done damage to what?",
+        "engine"
+      ],
+      "reason": "The source directly supports that throwing a rod damages an engine. No existing catalog relation covers an event-to-damaged-object relationship; the closest candidates (part_to_whole, entity_to_class, organism_to_habitat) do not fit. A new precise relation 'event_to_damaged_entity' is proposed to capture the cause-effect damage fact without forcing a broad category.",
+      "english": {
+        "direction": "event -> entity damaged by the event",
+        "relation_id": "event_to_damaged_entity",
+        "answer": "engine",
+        "canonical_fact": "Throwing a rod damages an engine.",
+        "subject": "throwing a rod",
+        "prompt_en": "What is damaged when you throw a rod?",
+        "relation_definition": "The specific mechanical or physical object that is damaged as a direct result of a specified event or failure mode.",
+        "answer_aliases_en": [
+          "engine"
+        ],
+        "relation_spec": {
+          "id": "event_to_damaged_entity",
+          "definition": "The specific mechanical or physical object that is damaged as a direct result of a specified event or failure mode.",
+          "direction": "event -> entity damaged by the event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8347a4ee5111e94a2ba16dc784465a82a58f269fd434962e5b02673f603d713",
+      "input_sha256": "2bd68238eb92a37e6128e31947828cb30bf4d59242d58e6028979bd08aa2ee31",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001461",
+      "decision": "ready",
+      "subject": "the neuroepithelium used by humans to read text",
+      "relation_id": "anatomical_tissue_to_containing_structure",
+      "relation_definition": "The specific anatomical structure or organ in which a qualified instance of a tissue type is located; retains the qualifier that distinguishes it from other occurrences of the same tissue.",
+      "direction": "qualified anatomical tissue -> containing anatomical structure",
+      "answer": "retina",
+      "canonical_fact": "The neuroepithelium used by humans to read text is in the retina.",
+      "prompt_en": "Which anatomical structure contains the neuroepithelium used by humans to read text?",
+      "evidence_quotes": [
+        "Neuroepithelium is found in a few places, you're using which one to read this text if you're human?",
+        "retina"
+      ],
+      "reason": "The source states that the neuroepithelium used to read is in the retina. No existing catalog relation fits: entity_to_containing_location is explicitly 'geographic,' organism_to_habitat is ecological, and entity_to_class is taxonomy membership. A new relation 'anatomical_tissue_to_containing_structure' is proposed to capture qualified anatomical containment without forcing an ill-fitting broad category.",
+      "english": {
+        "direction": "qualified anatomical tissue -> containing anatomical structure",
+        "relation_id": "anatomical_tissue_to_containing_structure",
+        "answer": "retina",
+        "canonical_fact": "The neuroepithelium used by humans to read text is in the retina.",
+        "subject": "the neuroepithelium used by humans to read text",
+        "prompt_en": "Which anatomical structure contains the neuroepithelium used by humans to read text?",
+        "relation_definition": "The specific anatomical structure or organ in which a qualified instance of a tissue type is located; retains the qualifier that distinguishes it from other occurrences of the same tissue.",
+        "answer_aliases_en": [
+          "retina"
+        ],
+        "relation_spec": {
+          "id": "anatomical_tissue_to_containing_structure",
+          "definition": "The specific anatomical structure or organ in which a qualified instance of a tissue type is located; retains the qualifier that distinguishes it from other occurrences of the same tissue.",
+          "direction": "qualified anatomical tissue -> containing anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f6470439d1db9858f5592636d57fd34ed46a8eb2c465854c4b52ec9093942ca7",
+      "input_sha256": "3cc140ca45d773c20f21c94ff8b9c70251568824e20e518971e25d53d89f9d92",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001446",
+      "input_sha256": "2bd68238eb92a37e6128e31947828cb30bf4d59242d58e6028979bd08aa2ee31",
+      "english": {
+        "direction": "event -> entity damaged by the event",
+        "relation_id": "event_to_damaged_entity",
+        "answer": "engine",
+        "canonical_fact": "Throwing a rod damages an engine.",
+        "subject": "throwing a rod",
+        "prompt_en": "What is damaged when you throw a rod?",
+        "relation_definition": "The specific mechanical or physical object that is damaged as a direct result of a specified event or failure mode.",
+        "answer_aliases_en": [
+          "engine"
+        ],
+        "relation_spec": {
+          "id": "event_to_damaged_entity",
+          "definition": "The specific mechanical or physical object that is damaged as a direct result of a specified event or failure mode.",
+          "direction": "event -> entity damaged by the event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8347a4ee5111e94a2ba16dc784465a82a58f269fd434962e5b02673f603d713",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001446",
+        "subject_zh": "抛连杆",
+        "prompt_zh": "抛连杆时会损坏什么？",
+        "canonical_fact_zh": "抛连杆会损坏发动机。",
+        "answer_zh": "发动机",
+        "answer_aliases_zh": [
+          "发动机"
+        ]
+      },
+      "translation_sha256": "b38f4a72f282e4f5217fbaa66d95a817702e0996fd688ac5e39791b29363e545"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001461",
+      "input_sha256": "3cc140ca45d773c20f21c94ff8b9c70251568824e20e518971e25d53d89f9d92",
+      "english": {
+        "direction": "qualified anatomical tissue -> containing anatomical structure",
+        "relation_id": "anatomical_tissue_to_containing_structure",
+        "answer": "retina",
+        "canonical_fact": "The neuroepithelium used by humans to read text is in the retina.",
+        "subject": "the neuroepithelium used by humans to read text",
+        "prompt_en": "Which anatomical structure contains the neuroepithelium used by humans to read text?",
+        "relation_definition": "The specific anatomical structure or organ in which a qualified instance of a tissue type is located; retains the qualifier that distinguishes it from other occurrences of the same tissue.",
+        "answer_aliases_en": [
+          "retina"
+        ],
+        "relation_spec": {
+          "id": "anatomical_tissue_to_containing_structure",
+          "definition": "The specific anatomical structure or organ in which a qualified instance of a tissue type is located; retains the qualifier that distinguishes it from other occurrences of the same tissue.",
+          "direction": "qualified anatomical tissue -> containing anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f6470439d1db9858f5592636d57fd34ed46a8eb2c465854c4b52ec9093942ca7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001461",
+        "subject_zh": "人类用于阅读文字的神经上皮",
+        "prompt_zh": "哪种解剖结构包含人类用于阅读文字的神经上皮？",
+        "canonical_fact_zh": "人类用于阅读文字的神经上皮位于视网膜中。",
+        "answer_zh": "视网膜",
+        "answer_aliases_zh": [
+          "视网膜"
+        ]
+      },
+      "translation_sha256": "de6ffa7e68b7b8cfe4c2a1f575da71b5ab55416660714d4732adb118ee893b8d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001446",
+        "historical:raw_commonsense_qa_001461"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eebcb39c98b0b8f10f9d0de61cf67ea86c8af449ed41e75d4e73df9288411c8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3144,
+      "first_chunk_seconds": 26.183,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3264,
+        "prompt_tokens": 1701,
+        "total_tokens": 4965,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2794,
+          "text_tokens": 470
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "322c6ec7e50af0056639b85a3b6fff23d7008fcb4675ae866e3567b272554d49",
+      "status": "completed",
+      "latency_seconds": 103.507
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001446",
+        "historical:raw_commonsense_qa_001461"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "158f725b2efbeb76ddc1d5a0be6804c1f3340b74a2868fbac195afae5ef1a448",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1026,
+      "first_chunk_seconds": 2.676,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1100,
+        "prompt_tokens": 906,
+        "total_tokens": 2006,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 890,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "129001bf646af66a28e7130eea516264d0751966c0479c4c0f79bc4226787e36",
+      "status": "completed",
+      "latency_seconds": 109.546
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,244 @@
+{
+  "input_sha256": "3a66709671596b5214199d344a1c8e3930492c91d4076bb0cdb0dc702a57b391",
+  "normalized": [
+    {
+      "record_id": "public:pbf_105fea7c944ced22fdd8",
+      "decision": "ready",
+      "subject": "Earth's early atmosphere",
+      "relation_id": "environment_to_absent_substance",
+      "relation_definition": "A substance explicitly stated to have been absent from a specified environment or historical period; the relation encodes negation rather than presence.",
+      "direction": "environment -> substance absent from it",
+      "answer": "oxygen",
+      "canonical_fact": "Oxygen, a gas important for life today, was not present in Earth's early atmosphere.",
+      "prompt_en": "What gas that is important for life today was not present in Earth's early atmosphere?",
+      "evidence_quotes": [
+        "oxygen",
+        "what gas that is important for life today was not present in the early atmosphere"
+      ],
+      "reason": "Source answer 'oxygen' directly supports the fact. No existing catalog relation captures 'substance absent from a specified environment/period,' so a new relation environment_to_absent_substance is proposed with explicit negation semantics.",
+      "english": {
+        "subject": "Earth's early atmosphere",
+        "relation_definition": "A substance explicitly stated to have been absent from a specified environment or historical period; the relation encodes negation rather than presence.",
+        "answer": "oxygen",
+        "canonical_fact": "Oxygen, a gas important for life today, was not present in Earth's early atmosphere.",
+        "direction": "environment -> substance absent from it",
+        "relation_id": "environment_to_absent_substance",
+        "prompt_en": "What gas that is important for life today was not present in Earth's early atmosphere?",
+        "answer_aliases_en": [
+          "oxygen",
+          "O",
+          "element 8",
+          "oxygen atom",
+          "atomic number 8"
+        ],
+        "relation_spec": {
+          "id": "environment_to_absent_substance",
+          "definition": "A substance explicitly stated to have been absent from a specified environment or historical period; the relation encodes negation rather than presence.",
+          "direction": "environment -> substance absent from it"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "393cb2d13158259eb8c3b948dd6c4160f4ae1e03afa508966ec94f384826fdd8",
+      "input_sha256": "3946b1e83894b5b6e3922f2911d9de026609640e7026244d0da2a30a22568c06",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_10628e79c7098c8617e9",
+      "decision": "ready",
+      "subject": "law of conservation of mass",
+      "relation_id": "law_to_discoverer",
+      "relation_definition": "The individual credited with discovering or formulating a specified scientific law; retains the named person exactly as stated in source.",
+      "direction": "scientific law -> discoverer",
+      "answer": "Antoine Laurent Lavoisier",
+      "canonical_fact": "Antoine Laurent Lavoisier discovered the law of conservation of mass.",
+      "prompt_en": "Who discovered the law of conservation of mass?",
+      "evidence_quotes": [
+        "Antoine Laurent Lavoisier",
+        "who discovered the law of conservation of mass"
+      ],
+      "reason": "Source answer names Lavoisier as the discoverer. No existing catalog relation covers 'discoverer of a scientific law' (written_work_to_author is scoped to written works, not laws); a new relation law_to_discoverer is proposed.",
+      "english": {
+        "subject": "law of conservation of mass",
+        "relation_definition": "The individual credited with discovering or formulating a specified scientific law; retains the named person exactly as stated in source.",
+        "answer": "Antoine Laurent Lavoisier",
+        "canonical_fact": "Antoine Laurent Lavoisier discovered the law of conservation of mass.",
+        "direction": "scientific law -> discoverer",
+        "relation_id": "law_to_discoverer",
+        "prompt_en": "Who discovered the law of conservation of mass?",
+        "answer_aliases_en": [
+          "Antoine Laurent Lavoisier",
+          "Lavoisier",
+          "Antoine-Laurent de Lavoisier",
+          "Antoine Lavoisier"
+        ],
+        "relation_spec": {
+          "id": "law_to_discoverer",
+          "definition": "The individual credited with discovering or formulating a specified scientific law; retains the named person exactly as stated in source.",
+          "direction": "scientific law -> discoverer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0adc6d76aadeef901c56135bfef5b0aee751d337a8b4695a239b86bbbfc3cd12",
+      "input_sha256": "e7bec9bc4cc91ae50ce3c31e9e7a07ab323d53c07aeb35add1d4be2cf586305b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3e296b514e3b0d242e4c70ee06c46d58f5d641acb4f7d9a924a33297a248c803",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2904,
+        "prompt_tokens": 1678,
+        "total_tokens": 4582,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2378,
+          "text_tokens": 526
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "373436c6afe66c91d1541915465629fc9bf1650f4bb4fb9fdadb434208ca4033",
+      "status": "completed",
+      "latency_seconds": 61.804
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.211
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.216
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 45.956,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 41.89,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_105fea7c944ced22fdd8",
+        "public:pbf_10628e79c7098c8617e9"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "57e413e03582e0e6eb2b66d2b6c91d5f83971e028de4e5d8cd5d1bb5060dd6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 21.021,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00643.json",
+      "sha256": "3af5bbbbf007d7fc07bb710666c0deb4f24b6d895fd4d998194c0383d053df55",
+      "previous_status": "failed"
+    }
+  ]
+}

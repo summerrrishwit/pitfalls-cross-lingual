@@ -1,0 +1,239 @@
+{
+  "input_sha256": "7d288d1365fbfcf5b4b05d4caf6bd90a312d58782ccd1fc0b1d20f80b0537361",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005410",
+      "decision": "ready",
+      "subject": "path of the Earth around the Sun",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "orbit",
+      "canonical_fact": "The path of the Earth around the Sun is called an orbit.",
+      "prompt_en": "What is the conventional term for the path of the Earth around the Sun?",
+      "evidence_quotes": [
+        "path of the earth around the sun",
+        "orbit"
+      ],
+      "reason": "The source question asks for the term that describes Earth's path around the Sun and the answer is 'orbit', a well-defined astronomical term. The catalog relation description_to_term (direction: description -> term) fits exactly: the defining description 'path of the Earth around the Sun' uniquely corresponds to the conventional term 'orbit'. No existing answer conflicts; both model annotations agree.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "orbit",
+        "canonical_fact": "The path of the Earth around the Sun is called an orbit.",
+        "subject": "path of the Earth around the Sun",
+        "prompt_en": "What is the conventional term for the path of the Earth around the Sun?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "orbit"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "08543db904f002d0c9c911ac125ac6e4fe6b58774c37dc4787b59c8164c674aa",
+      "input_sha256": "730197deb4422f2e0a65588267bfe6c428e9884905caa874f38ec1c7decf568d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005418",
+      "decision": "ready",
+      "subject": "ear",
+      "relation_id": "anatomical_structure_to_body_region",
+      "relation_definition": "Static anatomical position of a specified structure within the body; captures 'where it is located' at the granularity asked, not function, process, or movement.",
+      "direction": "anatomical structure -> body region",
+      "answer": "side of head",
+      "canonical_fact": "The ear is located on the side of the head.",
+      "prompt_en": "Where on the body is the ear located?",
+      "evidence_quotes": [
+        "where his ear is",
+        "side of head"
+      ],
+      "reason": "No existing catalog relation covers static anatomical positioning. entity_to_containing_location is explicitly geographic and does not apply to body-part location. A new relation anatomical_structure_to_body_region is proposed to capture the positional fact. The source supports that the ear is on the side of the head; the child's-response framing does not alter the underlying anatomical fact. One model flagged 'typical_action_or_location' but that exclusion misreads the content as an action rather than a positional fact.",
+      "english": {
+        "direction": "anatomical structure -> body region",
+        "relation_id": "anatomical_structure_to_body_region",
+        "answer": "side of head",
+        "canonical_fact": "The ear is located on the side of the head.",
+        "subject": "ear",
+        "prompt_en": "Where on the body is the ear located?",
+        "relation_definition": "Static anatomical position of a specified structure within the body; captures 'where it is located' at the granularity asked, not function, process, or movement.",
+        "answer_aliases_en": [
+          "side of head"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_body_region",
+          "definition": "Static anatomical position of a specified structure within the body; captures 'where it is located' at the granularity asked, not function, process, or movement.",
+          "direction": "anatomical structure -> body region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bc0c256b1a8e6ef95a68d509cae3ca9b41a035608c3e93d6089fc7b084f6494a",
+      "input_sha256": "e7987b08c66e06ef95f133b7de05fc670040dc305965d8e6b6521f9aed5c89e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005410",
+      "input_sha256": "730197deb4422f2e0a65588267bfe6c428e9884905caa874f38ec1c7decf568d",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "orbit",
+        "canonical_fact": "The path of the Earth around the Sun is called an orbit.",
+        "subject": "path of the Earth around the Sun",
+        "prompt_en": "What is the conventional term for the path of the Earth around the Sun?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "orbit"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "08543db904f002d0c9c911ac125ac6e4fe6b58774c37dc4787b59c8164c674aa",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005410",
+        "subject_zh": "地球绕太阳运行的路径",
+        "prompt_zh": "地球绕太阳运行的路径通常被称为什么？",
+        "canonical_fact_zh": "地球绕太阳运行的路径被称为轨道。",
+        "answer_zh": "轨道",
+        "answer_aliases_zh": [
+          "轨道"
+        ]
+      },
+      "translation_sha256": "09471e6f522667a9699ca7b488ba61a1b3cc6a6b026def5e7156e3f72548cc93"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005418",
+      "input_sha256": "e7987b08c66e06ef95f133b7de05fc670040dc305965d8e6b6521f9aed5c89e1",
+      "english": {
+        "direction": "anatomical structure -> body region",
+        "relation_id": "anatomical_structure_to_body_region",
+        "answer": "side of head",
+        "canonical_fact": "The ear is located on the side of the head.",
+        "subject": "ear",
+        "prompt_en": "Where on the body is the ear located?",
+        "relation_definition": "Static anatomical position of a specified structure within the body; captures 'where it is located' at the granularity asked, not function, process, or movement.",
+        "answer_aliases_en": [
+          "side of head"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_body_region",
+          "definition": "Static anatomical position of a specified structure within the body; captures 'where it is located' at the granularity asked, not function, process, or movement.",
+          "direction": "anatomical structure -> body region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bc0c256b1a8e6ef95a68d509cae3ca9b41a035608c3e93d6089fc7b084f6494a",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005418",
+        "subject_zh": "耳朵",
+        "prompt_zh": "耳朵位于身体的哪个部位？",
+        "canonical_fact_zh": "耳朵位于头部的侧面。",
+        "answer_zh": "头部侧面",
+        "answer_aliases_zh": [
+          "头部侧面"
+        ]
+      },
+      "translation_sha256": "9e497be81bf343cbcc048f34162e2338180b5763492773b9a0c3059e130a7c77"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005410",
+        "historical:raw_commonsense_qa_005418"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f7f6e3328fdf4abe1fcab9a76c0686bfcdd921a23cc2dc591cda6c7c89ec4059",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2812,
+      "first_chunk_seconds": 18.418,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2899,
+        "prompt_tokens": 1662,
+        "total_tokens": 4561,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2344,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "19e67aa9a52d48c68e166018b9dec40fdffe6e532e8e6ff4fa749b503fd86db7",
+      "status": "completed",
+      "latency_seconds": 53.491
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005410",
+        "historical:raw_commonsense_qa_005418"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "687bf5a1f973295b0ca9054eb411447847502770843532d9ca81a7fff486ca44",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 30.584,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005410",
+        "historical:raw_commonsense_qa_005418"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "687bf5a1f973295b0ca9054eb411447847502770843532d9ca81a7fff486ca44",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 886,
+      "first_chunk_seconds": 6.516,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 908,
+        "prompt_tokens": 861,
+        "total_tokens": 1769,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 701,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e956d27898c73495bf461e1e012fe2dce122132f220ccab6354eba5bf46074af",
+      "status": "completed",
+      "latency_seconds": 22.837
+    }
+  ],
+  "status": "completed"
+}

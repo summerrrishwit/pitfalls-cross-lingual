@@ -1,0 +1,185 @@
+{
+  "input_sha256": "e589c3c6f28afb31d622f8ebb1744e2bc6093dcf17e7d6c679fffdc150996fab",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000046",
+      "decision": "ready",
+      "subject": "cultural relativism",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "local culture should validate the existence and practice of all human rights",
+      "canonical_fact": "Cultural relativism posits that local culture should validate the existence and practice of all human rights.",
+      "prompt_en": "What does cultural relativism posit regarding the role of local culture in human rights?",
+      "evidence_quotes": [
+        "What is the meaning of cultural relativism?",
+        "local culture should validate the existence and practice of all human rights"
+      ],
+      "reason": "term_to_definition fits exactly: the source question explicitly asks for the meaning of a named term. The answer is a verbatim substring of source_answer. The qualifier 'posits' is preserved in canonical_fact rather than being flattened to 'means'.",
+      "english": {
+        "prompt_en": "What does cultural relativism posit regarding the role of local culture in human rights?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "local culture should validate the existence and practice of all human rights",
+        "canonical_fact": "Cultural relativism posits that local culture should validate the existence and practice of all human rights.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "cultural relativism",
+        "answer_aliases_en": [
+          "local culture should validate the existence and practice of all human rights"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9505e3dfa5f9a67e63343fa10296a552532427e026615e0973a210898a7067dc",
+      "input_sha256": "b560db23c6a310b9a5453edbcbd6610a6333bdef5319468dc0d350eb562d4ce6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000058",
+      "decision": "ready",
+      "subject": "global population in 1950",
+      "relation_id": "population_to_literacy_rate",
+      "relation_definition": "Literacy rate (percentage) of a specified population at a specified time point; retains approximation qualifiers from the source.",
+      "direction": "specified population at specified year -> literacy rate percentage",
+      "answer": "56%",
+      "canonical_fact": "About 56% of the global population was literate in 1950.",
+      "prompt_en": "About what percentage of the global population was literate in 1950?",
+      "evidence_quotes": [
+        "About what percentage of the global population was literate in 1950?",
+        "56%"
+      ],
+      "reason": "No existing catalog relation covers a demographic statistical value. Proposed population_to_literacy_rate as a precise, reusable relation for literacy-rate percentages of a specified population at a specified year. The 'about' qualifier from the source question is preserved in canonical_fact and prompt_en.",
+      "english": {
+        "prompt_en": "About what percentage of the global population was literate in 1950?",
+        "relation_definition": "Literacy rate (percentage) of a specified population at a specified time point; retains approximation qualifiers from the source.",
+        "answer": "56%",
+        "canonical_fact": "About 56% of the global population was literate in 1950.",
+        "direction": "specified population at specified year -> literacy rate percentage",
+        "relation_id": "population_to_literacy_rate",
+        "subject": "global population in 1950",
+        "answer_aliases_en": [
+          "56%"
+        ],
+        "relation_spec": {
+          "id": "population_to_literacy_rate",
+          "definition": "Literacy rate (percentage) of a specified population at a specified time point; retains approximation qualifiers from the source.",
+          "direction": "specified population at specified year -> literacy rate percentage"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3824ef58a6430f4f3a2ce0ff2eb95ab13bda10ad5e5a341e978441e498430f9c",
+      "input_sha256": "c5508f554fa8c9d796cd5bd15133f03800e7cc9efa20dccad76197d6e89ab4a6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ebf7ba60ea3ceafa0f41d52361e695d4987556052ad7f045482bc8c1a4715b7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 93.234
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ebf7ba60ea3ceafa0f41d52361e695d4987556052ad7f045482bc8c1a4715b7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.431
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ebf7ba60ea3ceafa0f41d52361e695d4987556052ad7f045482bc8c1a4715b7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3311,
+      "first_chunk_seconds": 15.085,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3393,
+        "prompt_tokens": 1633,
+        "total_tokens": 5026,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2857,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cbc95b8162d1ecc5194547a2a3b08048fa54971b501cc2fe2eaa259a30bfa7c6",
+      "status": "completed",
+      "latency_seconds": 69.698
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2767dec5922f7622bfbe5f213c07d5cd9cbf82588919113e22a78c3b24d3366a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 72.382
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2767dec5922f7622bfbe5f213c07d5cd9cbf82588919113e22a78c3b24d3366a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 51.249
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000046",
+        "historical:raw_mmlu_000058"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2767dec5922f7622bfbe5f213c07d5cd9cbf82588919113e22a78c3b24d3366a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 47.945
+    }
+  ],
+  "status": "failed"
+}

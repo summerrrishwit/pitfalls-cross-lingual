@@ -1,0 +1,169 @@
+{
+  "input_sha256": "e4c5a145841c794bd89fc8d04a54c08b424577eef7e3504380522190a7c2d13b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_986045c40665c2b765da",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'believed religious freedom should be extended to' is tightly bound to the specific exam-question framing and does not map to any catalog relation. A proposed new relation (e.g. group_to_belief_target) would be overly narrow, essentially encoding a single tautological answer ('Puritans only' = the Puritans themselves) that only makes sense in the context of this particular question. No stable, reusable factual edge is cleanly extractable without forcing a broad category.",
+      "input_sha256": "724ff6bd61db59878f982060f34bd5bcd58e19129cd52a9531f785e0cb02244a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9891f0c7181f2562bf9a",
+      "decision": "ready",
+      "subject": "the one-dollar bill",
+      "relation_id": "item_to_depicted_person",
+      "relation_definition": "The person whose face or likeness is officially depicted on a specified item (currency note, coin, stamp, or commemorative object). Direction: item -> depicted person.",
+      "direction": "item (currency/note) -> person depicted",
+      "answer": "George Washington",
+      "canonical_fact": "The face on the one-dollar bill is George Washington.",
+      "prompt_en": "The face on the one-dollar bill is",
+      "evidence_quotes": [
+        "who's face is on the dollar bill",
+        "George Washington"
+      ],
+      "reason": "Source question explicitly asks 'who's face is on the dollar bill' and source answer is 'George Washington.' The fact is stable, reusable, and well-supported. No catalog relation covers 'person depicted on an item,' so a new precise relation item_to_depicted_person is proposed. Subject is specified as 'the one-dollar bill' to match the source question's referent.",
+      "english": {
+        "answer": "George Washington",
+        "relation_id": "item_to_depicted_person",
+        "prompt_en": "The face on the one-dollar bill is",
+        "direction": "item (currency/note) -> person depicted",
+        "subject": "the one-dollar bill",
+        "canonical_fact": "The face on the one-dollar bill is George Washington.",
+        "relation_definition": "The person whose face or likeness is officially depicted on a specified item (currency note, coin, stamp, or commemorative object). Direction: item -> depicted person.",
+        "answer_aliases_en": [
+          "George Washington",
+          "President Washington",
+          "G. Washington",
+          "Washington",
+          "Father of the United States"
+        ],
+        "relation_spec": {
+          "id": "item_to_depicted_person",
+          "definition": "The person whose face or likeness is officially depicted on a specified item (currency note, coin, stamp, or commemorative object). Direction: item -> depicted person.",
+          "direction": "item (currency/note) -> person depicted"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35fd97c2719dc213cb96eb90abb01888fd5e4eadbf90ce255dd43be14c184c60",
+      "input_sha256": "6d8183c92713aafa06276442e61beb01e2af4c35f1a21b6589d8c773e1a1d3c6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9891f0c7181f2562bf9a",
+      "input_sha256": "6d8183c92713aafa06276442e61beb01e2af4c35f1a21b6589d8c773e1a1d3c6",
+      "english": {
+        "answer": "George Washington",
+        "relation_id": "item_to_depicted_person",
+        "prompt_en": "The face on the one-dollar bill is",
+        "direction": "item (currency/note) -> person depicted",
+        "subject": "the one-dollar bill",
+        "canonical_fact": "The face on the one-dollar bill is George Washington.",
+        "relation_definition": "The person whose face or likeness is officially depicted on a specified item (currency note, coin, stamp, or commemorative object). Direction: item -> depicted person.",
+        "answer_aliases_en": [
+          "George Washington",
+          "President Washington",
+          "G. Washington",
+          "Washington",
+          "Father of the United States"
+        ],
+        "relation_spec": {
+          "id": "item_to_depicted_person",
+          "definition": "The person whose face or likeness is officially depicted on a specified item (currency note, coin, stamp, or commemorative object). Direction: item -> depicted person.",
+          "direction": "item (currency/note) -> person depicted"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35fd97c2719dc213cb96eb90abb01888fd5e4eadbf90ce255dd43be14c184c60",
+      "translation": {
+        "record_id": "public:pbf_9891f0c7181f2562bf9a",
+        "subject_zh": "一美元纸币",
+        "prompt_zh": "一美元纸币上的人像是",
+        "canonical_fact_zh": "一美元纸币上的人像是乔治·华盛顿。",
+        "answer_zh": "乔治·华盛顿",
+        "answer_aliases_zh": [
+          "乔治·华盛顿",
+          "华盛顿总统",
+          "G·华盛顿",
+          "华盛顿",
+          "美国国父"
+        ]
+      },
+      "translation_sha256": "555588b0e72daf32d2fca057fc80ced30779eda71020ad3f6e196dac4114bef2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_986045c40665c2b765da",
+        "public:pbf_9891f0c7181f2562bf9a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e41537c809980087c66efe4c4051fdfc812d308d3703c3162593365ed035381e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2436,
+      "first_chunk_seconds": 40.989,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2434,
+        "prompt_tokens": 1804,
+        "total_tokens": 4238,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2039,
+          "text_tokens": 395
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0f2f8c5b11354c2a78fd9fb1525a53f4e3ce64cb498249f450a2817a1c0d1c6d",
+      "status": "completed",
+      "latency_seconds": 60.205
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9891f0c7181f2562bf9a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e264047077c9ece67f16ef2f7d4c714e1e70303d8d2e80dbbf9027803c6fefb8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 707,
+      "first_chunk_seconds": 19.503,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 706,
+        "prompt_tokens": 575,
+        "total_tokens": 1281,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 553,
+          "text_tokens": 153
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b690259eec3a96eafa48952a408283895a1b379a102eb4f83335379a2d572d89",
+      "status": "completed",
+      "latency_seconds": 25.394
+    }
+  ],
+  "status": "completed"
+}

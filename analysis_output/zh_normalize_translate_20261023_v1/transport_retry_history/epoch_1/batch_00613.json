@@ -1,0 +1,154 @@
+{
+  "input_sha256": "6b033b3d24370f29f97060f03d23e83bbdf550c88fe58c9cf1e3e7def28f42ff",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0b03b9703002b9b2f3cf",
+      "decision": "ready",
+      "subject": "Back to the Future",
+      "relation_id": "work_to_score_composer",
+      "relation_definition": "Composer of the musical score for a specified film or television work; distinct from song performers or general music roles.",
+      "direction": "work -> score composer",
+      "answer": "Alan Silvestri",
+      "canonical_fact": "Alan Silvestri composed the score for the film Back to the Future.",
+      "prompt_en": "Factual question: who did the score for back to the future\nAnswer:",
+      "evidence_quotes": [
+        "who did the score for back to the future",
+        "Alan Silvestri"
+      ],
+      "reason": "Existing extraction correctly identifies subject 'Back to the Future' and answer 'Alan Silvestri' matching the source answer verbatim. No catalog relation fits a film-score composer role; proposed new relation 'work_to_score_composer' with precise definition. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "subject": "Back to the Future",
+        "relation_definition": "Composer of the musical score for a specified film or television work; distinct from song performers or general music roles.",
+        "answer": "Alan Silvestri",
+        "canonical_fact": "Alan Silvestri composed the score for the film Back to the Future.",
+        "direction": "work -> score composer",
+        "relation_id": "work_to_score_composer",
+        "prompt_en": "Factual question: who did the score for back to the future\nAnswer:",
+        "answer_aliases_en": [
+          "Alan Silvestri"
+        ],
+        "relation_spec": {
+          "id": "work_to_score_composer",
+          "definition": "Composer of the musical score for a specified film or television work; distinct from song performers or general music roles.",
+          "direction": "work -> score composer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "69f407f94a6152ccfb6038df369dd3d7b5a8d330b4f8323e8d9ba8f09ded7645",
+      "input_sha256": "5069ac0472d71d58aa17a304a901bbd85b67f543bc7cfb9aa56ccc1404670703",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0b0957ffb297f8860130",
+      "decision": "ready",
+      "subject": "Saudi Arabia",
+      "relation_id": "country_to_military_spend_pct_gdp",
+      "relation_definition": "Approximate share of GDP allocated to military expenditure for a specified country in a stated year; preserves qualifiers such as 'about' or 'as of'.",
+      "direction": "country (year-qualified) -> military expenditure as percentage of GDP",
+      "answer": "10%",
+      "canonical_fact": "As of 2017, the share of GDP spent on the military by Saudi Arabia is about 10%.",
+      "prompt_en": "As of 2017, the share of GDP spent on the military by Saudi Arabia is about",
+      "evidence_quotes": [
+        "As of 2017, the share of GDP spent on the military by Saudi Arabia is about",
+        "10%"
+      ],
+      "reason": "Existing extraction correctly captures subject 'Saudi Arabia', the year qualifier '2017', the approximate qualifier 'about', and answer '10%' matching the source answer. No catalog relation covers a year-qualified economic/expenditure statistic; proposed new relation 'country_to_military_spend_pct_gdp'. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "subject": "Saudi Arabia",
+        "relation_definition": "Approximate share of GDP allocated to military expenditure for a specified country in a stated year; preserves qualifiers such as 'about' or 'as of'.",
+        "answer": "10%",
+        "canonical_fact": "As of 2017, the share of GDP spent on the military by Saudi Arabia is about 10%.",
+        "direction": "country (year-qualified) -> military expenditure as percentage of GDP",
+        "relation_id": "country_to_military_spend_pct_gdp",
+        "prompt_en": "As of 2017, the share of GDP spent on the military by Saudi Arabia is about",
+        "answer_aliases_en": [
+          "10%"
+        ],
+        "relation_spec": {
+          "id": "country_to_military_spend_pct_gdp",
+          "definition": "Approximate share of GDP allocated to military expenditure for a specified country in a stated year; preserves qualifiers such as 'about' or 'as of'.",
+          "direction": "country (year-qualified) -> military expenditure as percentage of GDP"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "31b33b7aff9f8c318533e5ae0d223954f6d613b1fce9f6b5cfbdd3f25e935912",
+      "input_sha256": "1a9680bb10028aa0bd6d51c0064654fa926a36de5601e47b21108d9684d6d72a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0b03b9703002b9b2f3cf",
+        "public:pbf_0b0957ffb297f8860130"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "32d0c9f0c5c5d0385dd990f6ada19e25f91caf03fa597ec61e60346ddaa28076",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2015,
+        "prompt_tokens": 1652,
+        "total_tokens": 3667,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1413,
+          "text_tokens": 602
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "edae89df40f236204ad0b3cc94b2bc2cb8422e2c08627eea40cb2398ba5adcb4",
+      "status": "completed",
+      "latency_seconds": 124.719
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0b03b9703002b9b2f3cf",
+        "public:pbf_0b0957ffb297f8860130"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4fde2c202b9b39a323a58d3bc316652d896cdf5ece667101477352cc0882bc94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 27.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0b03b9703002b9b2f3cf",
+        "public:pbf_0b0957ffb297f8860130"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4fde2c202b9b39a323a58d3bc316652d896cdf5ece667101477352cc0882bc94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.098
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0b03b9703002b9b2f3cf",
+        "public:pbf_0b0957ffb297f8860130"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4fde2c202b9b39a323a58d3bc316652d896cdf5ece667101477352cc0882bc94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.636
+    }
+  ],
+  "status": "failed"
+}

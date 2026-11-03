@@ -1,0 +1,157 @@
+{
+  "input_sha256": "0f4c79e4c244fbd4afb12eea89b298bdce2620103bed86775da4c7b3b49d220a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f8d95a0674224f7b1af4",
+      "decision": "ready",
+      "subject": "Preakness Stakes",
+      "relation_id": "event_to_venue",
+      "relation_definition": "The specific track, racecourse, or facility where a specified sporting event is held; state disambiguation when multiple venues exist across eras.",
+      "direction": "event -> venue",
+      "answer": "Pimlico Race Course",
+      "canonical_fact": "The track for the Preakness Stakes is Pimlico Race Course.",
+      "prompt_en": "The track for the Preakness Stakes is",
+      "evidence_quotes": [
+        "what is the name of the preakness track",
+        "Pimlico Race Course"
+      ],
+      "reason": "Source question explicitly asks for the track of the Preakness; source answer gives Pimlico Race Course. No existing catalog relation captures event-to-venue precisely (entity_to_containing_location is geographic containment, not event venue), so a new relation event_to_venue is proposed. Fact is well-supported and unambiguous.",
+      "english": {
+        "answer": "Pimlico Race Course",
+        "relation_id": "event_to_venue",
+        "prompt_en": "The track for the Preakness Stakes is",
+        "direction": "event -> venue",
+        "subject": "Preakness Stakes",
+        "canonical_fact": "The track for the Preakness Stakes is Pimlico Race Course.",
+        "relation_definition": "The specific track, racecourse, or facility where a specified sporting event is held; state disambiguation when multiple venues exist across eras.",
+        "answer_aliases_en": [
+          "Pimlico Race Course"
+        ],
+        "relation_spec": {
+          "id": "event_to_venue",
+          "definition": "The specific track, racecourse, or facility where a specified sporting event is held; state disambiguation when multiple venues exist across eras.",
+          "direction": "event -> venue"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6ffbb90e50a062d9ac9d2801a6b0843f742f72de3ea5cd9f5c0210cf541d3cfe",
+      "input_sha256": "3158ca038b54a51ebd5265a3c667d6d8b355634d79eeb61c4841bd9c2b8af3f0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f8e13b94bc430877a3ce",
+      "decision": "ready",
+      "subject": "4 times as many cans as Tom collected",
+      "relation_id": "word_phrase_to_algebraic_expression",
+      "relation_definition": "The algebraic expression mathematically equivalent to a specified word phrase, where the variable's referent is derivable from the phrase context (e.g., t = number of cans Tom collected).",
+      "direction": "word phrase -> algebraic expression",
+      "answer": "4t",
+      "canonical_fact": "The algebraic expression for the word phrase '4 times as many cans as Tom collected' is 4t.",
+      "prompt_en": "The algebraic expression for the word phrase '4 times as many cans as Tom collected' is",
+      "evidence_quotes": [
+        "4 times as many cans as Tom collected",
+        "4t"
+      ],
+      "reason": "Source question asks to identify the algebraic expression matching the given word phrase; source answer is 4t. No existing catalog relation covers phrase-to-expression translation (term_to_definition is for definitions, not algebraic equivalence), so a new relation word_phrase_to_algebraic_expression is proposed. Fact is directly supported by source.",
+      "english": {
+        "answer": "4t",
+        "relation_id": "word_phrase_to_algebraic_expression",
+        "prompt_en": "The algebraic expression for the word phrase '4 times as many cans as Tom collected' is",
+        "direction": "word phrase -> algebraic expression",
+        "subject": "4 times as many cans as Tom collected",
+        "canonical_fact": "The algebraic expression for the word phrase '4 times as many cans as Tom collected' is 4t.",
+        "relation_definition": "The algebraic expression mathematically equivalent to a specified word phrase, where the variable's referent is derivable from the phrase context (e.g., t = number of cans Tom collected).",
+        "answer_aliases_en": [
+          "4t"
+        ],
+        "relation_spec": {
+          "id": "word_phrase_to_algebraic_expression",
+          "definition": "The algebraic expression mathematically equivalent to a specified word phrase, where the variable's referent is derivable from the phrase context (e.g., t = number of cans Tom collected).",
+          "direction": "word phrase -> algebraic expression"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35ef7e633a8b8815fd3e105e9950e7688fb90418b6a2e78f84ce5c3125525ed0",
+      "input_sha256": "745a31eee339bbc0ba96f7e0f14fd3ee789335dc75c687304141456493594ada",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8d95a0674224f7b1af4",
+        "public:pbf_f8e13b94bc430877a3ce"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6fa9a17838f060b202c7f463c4bd83da863348d1b0643b8b20ca11c3c5500a9d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2270,
+      "first_chunk_seconds": 38.498,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2519,
+        "prompt_tokens": 1639,
+        "total_tokens": 4158,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1934,
+          "text_tokens": 585
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9de1131f90a1337ca4bda237b21a1ee8cbc588db29b9b46b4c27bbb81604940e",
+      "status": "completed",
+      "latency_seconds": 79.121
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8d95a0674224f7b1af4",
+        "public:pbf_f8e13b94bc430877a3ce"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1a40764be955afe2573d80a6ea0334c6f77310d42622a0699a5f0c8b7308ffdb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.169
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8d95a0674224f7b1af4",
+        "public:pbf_f8e13b94bc430877a3ce"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1a40764be955afe2573d80a6ea0334c6f77310d42622a0699a5f0c8b7308ffdb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.331
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8d95a0674224f7b1af4",
+        "public:pbf_f8e13b94bc430877a3ce"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1a40764be955afe2573d80a6ea0334c6f77310d42622a0699a5f0c8b7308ffdb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.448
+    }
+  ],
+  "status": "failed"
+}

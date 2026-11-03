@@ -1,0 +1,157 @@
+{
+  "input_sha256": "7469f6e11715d7778535fbd04b598230b6bf93d8162f62f7b56fab45ebbe1649",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000946",
+      "decision": "ready",
+      "subject": "bay",
+      "relation_id": "geographic_feature_to_boundary",
+      "relation_definition": "The physical boundary or edge feature that separates a specified geographic feature from an adjacent body of water or land mass.",
+      "direction": "geographic feature -> separating boundary feature",
+      "answer": "shoreline",
+      "canonical_fact": "A bay is separated from the water by a shoreline.",
+      "prompt_en": "What separates a bay from the open water?",
+      "evidence_quotes": [
+        "What separates a bay from the water?",
+        "shoreline"
+      ],
+      "reason": "The source question explicitly asks for the separating feature of a bay relative to water, and the source answer is 'shoreline.' No catalog relation captures 'separating boundary of a geographic feature,' so a new precise relation is proposed. The answer is a single literal substring from the source. The prompt omits the answer and is option-free.",
+      "english": {
+        "direction": "geographic feature -> separating boundary feature",
+        "relation_id": "geographic_feature_to_boundary",
+        "answer": "shoreline",
+        "canonical_fact": "A bay is separated from the water by a shoreline.",
+        "subject": "bay",
+        "prompt_en": "What separates a bay from the open water?",
+        "relation_definition": "The physical boundary or edge feature that separates a specified geographic feature from an adjacent body of water or land mass.",
+        "answer_aliases_en": [
+          "shoreline"
+        ],
+        "relation_spec": {
+          "id": "geographic_feature_to_boundary",
+          "definition": "The physical boundary or edge feature that separates a specified geographic feature from an adjacent body of water or land mass.",
+          "direction": "geographic feature -> separating boundary feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9696137ab580a0a681158a39e6b32b83e4d0c11a5492e925d751aaa820c3022f",
+      "input_sha256": "d0b08de912605e26bf4e5b71a214f3d7cdf0600ab73ed2f13100816400408413",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000956",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question 'What do people who are composers do?' asks about a typical/professional activity rather than a stable factual relation. No catalog relation (entity_to_class, term_to_definition, etc.) captures 'occupation -> typical activity.' This is a generalization about what a profession does, not a discrete factual link with a clear subject-predicate-object structure that maps to an existing or precisely definable relation. Deferring to avoid forcing a broad or imprecise category.",
+      "input_sha256": "0739a60a4bd15a783e73cd9d752cd5dd2e8b3649c18a7c5d64e16d8278ff7408",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000946",
+      "input_sha256": "d0b08de912605e26bf4e5b71a214f3d7cdf0600ab73ed2f13100816400408413",
+      "english": {
+        "direction": "geographic feature -> separating boundary feature",
+        "relation_id": "geographic_feature_to_boundary",
+        "answer": "shoreline",
+        "canonical_fact": "A bay is separated from the water by a shoreline.",
+        "subject": "bay",
+        "prompt_en": "What separates a bay from the open water?",
+        "relation_definition": "The physical boundary or edge feature that separates a specified geographic feature from an adjacent body of water or land mass.",
+        "answer_aliases_en": [
+          "shoreline"
+        ],
+        "relation_spec": {
+          "id": "geographic_feature_to_boundary",
+          "definition": "The physical boundary or edge feature that separates a specified geographic feature from an adjacent body of water or land mass.",
+          "direction": "geographic feature -> separating boundary feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9696137ab580a0a681158a39e6b32b83e4d0c11a5492e925d751aaa820c3022f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000946",
+        "subject_zh": "海湾",
+        "prompt_zh": "什么将海湾与开阔水域隔开？",
+        "canonical_fact_zh": "海湾通过岸线与水域隔开。",
+        "answer_zh": "岸线",
+        "answer_aliases_zh": [
+          "岸线"
+        ]
+      },
+      "translation_sha256": "c42aa6d186487b280e58cc9d2bd81c7ffc7a475d278097bd01ec5359fdab06ca"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000946",
+        "historical:raw_commonsense_qa_000956"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "70992ef0ae354512e52665e85e853f8dffd1da3996badf12f956d413b6a4b584",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1835,
+      "first_chunk_seconds": 16.622,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1863,
+        "prompt_tokens": 1624,
+        "total_tokens": 3487,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1404,
+          "text_tokens": 459
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "35980f1a3e74ed1fa23d1f44b99f214ea8082a67276d3d3813fbc55fca281ff6",
+      "status": "completed",
+      "latency_seconds": 43.236
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000946"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac10c4c8942f71445f0220053a04c76fff716d21445dd14bb8ce7fa5e3bc0922",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 486,
+      "first_chunk_seconds": 20.63,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 515,
+        "prompt_tokens": 528,
+        "total_tokens": 1043,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 444,
+          "text_tokens": 71
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9c39390aa0d3e9d2da38a3d643cea25d657a76ee374161022f10c86fb25d5220",
+      "status": "completed",
+      "latency_seconds": 25.255
+    }
+  ],
+  "status": "completed"
+}

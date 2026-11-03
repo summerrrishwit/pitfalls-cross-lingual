@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4e710a0a57a886355ae6f912f7441fb057315fbf5f8056498d252ee32c111697",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b1d9bcd99a7860a25e04",
+      "decision": "ready",
+      "subject": "Sit Down (Comic Relief)",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "James",
+      "canonical_fact": "James sang 'Sit Down' with Peter Kay for Comic Relief.",
+      "prompt_en": "Which performer sang 'Sit Down' for Comic Relief alongside Peter Kay?",
+      "evidence_quotes": [
+        "who sang sit down with peter kay for comic relief",
+        "James"
+      ],
+      "reason": "The source question asks who sang 'Sit Down' with Peter Kay for Comic Relief and the source answer is 'James'. The catalog relation song_to_performer (song -> performer) fits: the specified song is 'Sit Down' in the Comic Relief context, and James is a co-performer. The answer is kept as the literal source substring 'James' without inventing a surname or additional detail. Peter Kay is noted in the canonical fact as context from the source question but the answer value is 'James' per source.",
+      "english": {
+        "answer": "James",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Which performer sang 'Sit Down' for Comic Relief alongside Peter Kay?",
+        "direction": "song -> performer",
+        "subject": "Sit Down (Comic Relief)",
+        "canonical_fact": "James sang 'Sit Down' with Peter Kay for Comic Relief.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "James"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "da243a45660ba4c48cc38df15461c4b57510e15a9b4dc1e9f5e160730e8f1b6c",
+      "input_sha256": "6c1ffe8c2a1c3b8508b5a8fbd6ae6b04ff17888a4cead12e851501dd02aa3446",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b1ddfaad20b9db2ad055",
+      "decision": "ready",
+      "subject": "the three countries with the most drug injectors",
+      "relation_id": "ranking_to_top_entities",
+      "relation_definition": "The specified set of entities that occupy the top-N positions according to a stated ranking metric or criterion.",
+      "direction": "ranking description -> top entities",
+      "answer": "China, the U.S. and Russia",
+      "canonical_fact": "The three countries with the most drug injectors are China, the U.S. and Russia.",
+      "prompt_en": "What are the three countries with the most drug injectors?",
+      "evidence_quotes": [
+        "The three countries with the most drug injectors are:",
+        "China, the U.S. and Russia"
+      ],
+      "reason": "No existing catalog relation captures a top-N ranking/superlative fact. A new relation 'ranking_to_top_entities' is proposed (direction: ranking description -> top entities) to precisely model the fact without forcing a broad category. The answer is copied verbatim from the source answer. The qualifier 'three countries' and the metric 'most drug injectors' are preserved to keep the fact scoped.",
+      "english": {
+        "answer": "China, the U.S. and Russia",
+        "relation_id": "ranking_to_top_entities",
+        "prompt_en": "What are the three countries with the most drug injectors?",
+        "direction": "ranking description -> top entities",
+        "subject": "the three countries with the most drug injectors",
+        "canonical_fact": "The three countries with the most drug injectors are China, the U.S. and Russia.",
+        "relation_definition": "The specified set of entities that occupy the top-N positions according to a stated ranking metric or criterion.",
+        "answer_aliases_en": [
+          "China, the U.S. and Russia"
+        ],
+        "relation_spec": {
+          "id": "ranking_to_top_entities",
+          "definition": "The specified set of entities that occupy the top-N positions according to a stated ranking metric or criterion.",
+          "direction": "ranking description -> top entities"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "daadd19a7490ccfb0bd6ded6516522c5556b80ea1b36e5e69f9674fbc8813204",
+      "input_sha256": "b1373fb110c84227a63d742429dab6f75f13a2aea81193d5c729ad2766fafa15",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_b1d9bcd99a7860a25e04",
+      "input_sha256": "6c1ffe8c2a1c3b8508b5a8fbd6ae6b04ff17888a4cead12e851501dd02aa3446",
+      "english": {
+        "answer": "James",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Which performer sang 'Sit Down' for Comic Relief alongside Peter Kay?",
+        "direction": "song -> performer",
+        "subject": "Sit Down (Comic Relief)",
+        "canonical_fact": "James sang 'Sit Down' with Peter Kay for Comic Relief.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "James"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "da243a45660ba4c48cc38df15461c4b57510e15a9b4dc1e9f5e160730e8f1b6c",
+      "translation": {
+        "record_id": "public:pbf_b1d9bcd99a7860a25e04",
+        "subject_zh": "《Sit Down》（Comic Relief）",
+        "prompt_zh": "哪位居演者与Peter Kay一起为Comic Relief演唱了《Sit Down》？",
+        "canonical_fact_zh": "James与Peter Kay为Comic Relief演唱了《Sit Down》。",
+        "answer_zh": "James",
+        "answer_aliases_zh": [
+          "James"
+        ]
+      },
+      "translation_sha256": "d4d1d1d0d7d304f460475e3183799c82de4b77e542bcbb61f7691a3229254a6d"
+    },
+    {
+      "record_id": "public:pbf_b1ddfaad20b9db2ad055",
+      "input_sha256": "b1373fb110c84227a63d742429dab6f75f13a2aea81193d5c729ad2766fafa15",
+      "english": {
+        "answer": "China, the U.S. and Russia",
+        "relation_id": "ranking_to_top_entities",
+        "prompt_en": "What are the three countries with the most drug injectors?",
+        "direction": "ranking description -> top entities",
+        "subject": "the three countries with the most drug injectors",
+        "canonical_fact": "The three countries with the most drug injectors are China, the U.S. and Russia.",
+        "relation_definition": "The specified set of entities that occupy the top-N positions according to a stated ranking metric or criterion.",
+        "answer_aliases_en": [
+          "China, the U.S. and Russia"
+        ],
+        "relation_spec": {
+          "id": "ranking_to_top_entities",
+          "definition": "The specified set of entities that occupy the top-N positions according to a stated ranking metric or criterion.",
+          "direction": "ranking description -> top entities"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "daadd19a7490ccfb0bd6ded6516522c5556b80ea1b36e5e69f9674fbc8813204",
+      "translation": {
+        "record_id": "public:pbf_b1ddfaad20b9db2ad055",
+        "subject_zh": "注射药物使用者数量最多的三个国家",
+        "prompt_zh": "注射药物使用者数量最多的三个国家是哪三个？",
+        "canonical_fact_zh": "注射药物使用者数量最多的三个国家是中国、美国和俄罗斯。",
+        "answer_zh": "中国、美国和俄罗斯",
+        "answer_aliases_zh": [
+          "中国、美国和俄罗斯"
+        ]
+      },
+      "translation_sha256": "ffa34ee0491448edf8d6014f49e6c13a7e4644cff4a99b093ed0dd52793b005b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b1d9bcd99a7860a25e04",
+        "public:pbf_b1ddfaad20b9db2ad055"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6271cdcd9359317eb3521c2c5bdfb87676f12c2a9b463bafd15f7631b5276cd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3534,
+      "first_chunk_seconds": 77.829,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3533,
+        "prompt_tokens": 1609,
+        "total_tokens": 5142,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2936,
+          "text_tokens": 597
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "806a46198ade6c4fd6b9c2bc1f40da322688090fdbaf51c6c97cc044d12dbe44",
+      "status": "completed",
+      "latency_seconds": 109.585
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b1d9bcd99a7860a25e04",
+        "public:pbf_b1ddfaad20b9db2ad055"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d4698cd83825a7f0945432dea76dd62aff17f1f385f268aab05df3e51d39cac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 658,
+      "first_chunk_seconds": 24.961,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 677,
+        "prompt_tokens": 861,
+        "total_tokens": 1538,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 491,
+          "text_tokens": 186
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "08310ff51aa28207e84f4d0d6a57460aa1523ebbe09abdab1e96f074a0fdf791",
+      "status": "completed",
+      "latency_seconds": 30.839
+    }
+  ],
+  "status": "completed"
+}

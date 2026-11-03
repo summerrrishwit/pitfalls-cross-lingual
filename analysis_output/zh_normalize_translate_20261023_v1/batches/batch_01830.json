@@ -1,0 +1,220 @@
+{
+  "input_sha256": "760780b5ee67d50664d5e0cf649dcaf74bdd09a620cfe82be46aba74719a0571",
+  "normalized": [
+    {
+      "record_id": "public:pbf_d6b9c58f27902e4b2a7a",
+      "decision": "ready",
+      "subject": "Tour de France",
+      "relation_id": "event_to_ending_location",
+      "relation_definition": "The terminal geographic location at which a specified event or competition concludes; retains any temporal qualifiers from the source (e.g. 'always', 'traditionally').",
+      "direction": "event -> ending location",
+      "answer": "Paris",
+      "canonical_fact": "The Tour de France always ends in Paris.",
+      "prompt_en": "Where does the Tour de France always end?",
+      "evidence_quotes": [
+        "where does le tour de france always end",
+        "Paris"
+      ],
+      "reason": "Source question explicitly asks the ending location with the qualifier 'always'; source answer is 'Paris'. No catalog relation captures an event's terminal location, so a new relation event_to_ending_location is proposed. The qualifier 'always' is preserved from the source question.",
+      "english": {
+        "answer": "Paris",
+        "relation_id": "event_to_ending_location",
+        "prompt_en": "Where does the Tour de France always end?",
+        "direction": "event -> ending location",
+        "subject": "Tour de France",
+        "canonical_fact": "The Tour de France always ends in Paris.",
+        "relation_definition": "The terminal geographic location at which a specified event or competition concludes; retains any temporal qualifiers from the source (e.g. 'always', 'traditionally').",
+        "answer_aliases_en": [
+          "Paris",
+          "City of Light",
+          "Paris, France"
+        ],
+        "relation_spec": {
+          "id": "event_to_ending_location",
+          "definition": "The terminal geographic location at which a specified event or competition concludes; retains any temporal qualifiers from the source (e.g. 'always', 'traditionally').",
+          "direction": "event -> ending location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4840f754c3c6b734eb1a76ddd66f2da4c6ad153bcb95971dafa7e7aa769948d1",
+      "input_sha256": "20dda190a09329c386ba34fd54e282892ca6e872dab506d1e0fad8389b35cd4c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d6c1043ce450b88f4ec7",
+      "decision": "ready",
+      "subject": "U.S. Supreme Court case requiring states to use the exclusionary rule",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Mapp v. Ohio",
+      "canonical_fact": "Mapp v. Ohio is the U.S. Supreme Court case that required states to use the exclusionary rule.",
+      "prompt_en": "Which U.S. Supreme Court case required states to use the exclusionary rule?",
+      "evidence_quotes": [
+        "which u.s. supreme court case required states to use the exclusionary rule",
+        "Mapp v. Ohio"
+      ],
+      "reason": "Source question supplies a uniquely identifying legal description and the source answer names the single case 'Mapp v. Ohio'. Fits description_to_entity exactly: the subject is the description, the answer is the entity it identifies. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "Mapp v. Ohio",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which U.S. Supreme Court case required states to use the exclusionary rule?",
+        "direction": "identifying description -> entity",
+        "subject": "U.S. Supreme Court case requiring states to use the exclusionary rule",
+        "canonical_fact": "Mapp v. Ohio is the U.S. Supreme Court case that required states to use the exclusionary rule.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Mapp v. Ohio"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "66664dc6abd1accacbe517796f2b9f27a605464b633b17be09a0a66669e75df1",
+      "input_sha256": "fb6dc35b6bbbbb78b4eb2bce95f35b8b9c77f90ed23e9fcf735157aeab22bbb5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_d6b9c58f27902e4b2a7a",
+      "input_sha256": "20dda190a09329c386ba34fd54e282892ca6e872dab506d1e0fad8389b35cd4c",
+      "english": {
+        "answer": "Paris",
+        "relation_id": "event_to_ending_location",
+        "prompt_en": "Where does the Tour de France always end?",
+        "direction": "event -> ending location",
+        "subject": "Tour de France",
+        "canonical_fact": "The Tour de France always ends in Paris.",
+        "relation_definition": "The terminal geographic location at which a specified event or competition concludes; retains any temporal qualifiers from the source (e.g. 'always', 'traditionally').",
+        "answer_aliases_en": [
+          "Paris",
+          "City of Light",
+          "Paris, France"
+        ],
+        "relation_spec": {
+          "id": "event_to_ending_location",
+          "definition": "The terminal geographic location at which a specified event or competition concludes; retains any temporal qualifiers from the source (e.g. 'always', 'traditionally').",
+          "direction": "event -> ending location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4840f754c3c6b734eb1a76ddd66f2da4c6ad153bcb95971dafa7e7aa769948d1",
+      "translation": {
+        "record_id": "public:pbf_d6b9c58f27902e4b2a7a",
+        "subject_zh": "环法自行车赛",
+        "prompt_zh": "环法自行车赛总是在哪里结束？",
+        "canonical_fact_zh": "环法自行车赛总是在巴黎结束。",
+        "answer_zh": "巴黎",
+        "answer_aliases_zh": [
+          "巴黎",
+          "光之城",
+          "法国巴黎"
+        ]
+      },
+      "translation_sha256": "45720a1125b1ab46fa7c34c9518772bea11a50104984ace9286764e9319fc804"
+    },
+    {
+      "record_id": "public:pbf_d6c1043ce450b88f4ec7",
+      "input_sha256": "fb6dc35b6bbbbb78b4eb2bce95f35b8b9c77f90ed23e9fcf735157aeab22bbb5",
+      "english": {
+        "answer": "Mapp v. Ohio",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which U.S. Supreme Court case required states to use the exclusionary rule?",
+        "direction": "identifying description -> entity",
+        "subject": "U.S. Supreme Court case requiring states to use the exclusionary rule",
+        "canonical_fact": "Mapp v. Ohio is the U.S. Supreme Court case that required states to use the exclusionary rule.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Mapp v. Ohio"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "66664dc6abd1accacbe517796f2b9f27a605464b633b17be09a0a66669e75df1",
+      "translation": {
+        "record_id": "public:pbf_d6c1043ce450b88f4ec7",
+        "subject_zh": "要求各州适用排除规则的美国最高法院案件",
+        "prompt_zh": "哪一起美国最高法院案件要求各州适用排除规则？",
+        "canonical_fact_zh": "Mapp v. Ohio 是要求州适用排除规则的美国最高法院案件。",
+        "answer_zh": "Mapp v. Ohio",
+        "answer_aliases_zh": [
+          "Mapp v. Ohio"
+        ]
+      },
+      "translation_sha256": "e545ce42c3f344cfcdffbfd85e9d89568f686892bb5314b799115622cc7f4487"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_d6b9c58f27902e4b2a7a",
+        "public:pbf_d6c1043ce450b88f4ec7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2fb44614f438e52fbb7d90cc0edee6cd8246acada4d131266964c6eb3b32a6e5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2439,
+      "first_chunk_seconds": 35.041,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2446,
+        "prompt_tokens": 1626,
+        "total_tokens": 4072,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1921,
+          "text_tokens": 525
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "095883d3594a942cb5f4415660e585679fa1eade81858b5bd425066cd871a39e",
+      "status": "completed",
+      "latency_seconds": 64.027
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_d6b9c58f27902e4b2a7a",
+        "public:pbf_d6c1043ce450b88f4ec7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "86b76323332c2e9b4bcffa8889e2f33afb60b3170aa1ba0be7b7e73df59947cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1118,
+      "first_chunk_seconds": 35.948,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1205,
+        "prompt_tokens": 869,
+        "total_tokens": 2074,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 950,
+          "text_tokens": 255
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf6dfd3cc3040a6994c573a0ca9e3790ad179501baa3e2837002664d2ed4e0b9",
+      "status": "completed",
+      "latency_seconds": 48.272
+    }
+  ],
+  "status": "completed"
+}

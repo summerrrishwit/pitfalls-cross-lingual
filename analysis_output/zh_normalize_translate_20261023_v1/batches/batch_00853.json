@@ -1,0 +1,217 @@
+{
+  "input_sha256": "f75e1e49c85549c4f40e933c96c8cb503a9f47bf886cdb93b2a1001c70589114",
+  "normalized": [
+    {
+      "record_id": "public:pbf_347b1c3fb6e7279b0aaa",
+      "decision": "ready",
+      "subject": "The Office episode where Dwight starts a fire",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Stress Relief",
+      "canonical_fact": "The Office episode where Dwight starts a fire is titled Stress Relief.",
+      "prompt_en": "What is the title of the episode of The Office where Dwight starts a fire?",
+      "evidence_quotes": [
+        "episode of the office where dwight starts fire",
+        "Stress Relief"
+      ],
+      "reason": "The source question provides a uniquely identifying description (episode of The Office where Dwight starts a fire) and the source answer names the specific episode title. The description_to_entity relation fits exactly: the description is explicitly qualified (The Office + Dwight + starts a fire) and the answer is the unique entity (episode title) satisfying it.",
+      "english": {
+        "relation_id": "description_to_entity",
+        "canonical_fact": "The Office episode where Dwight starts a fire is titled Stress Relief.",
+        "prompt_en": "What is the title of the episode of The Office where Dwight starts a fire?",
+        "answer": "Stress Relief",
+        "direction": "identifying description -> entity",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "The Office episode where Dwight starts a fire",
+        "answer_aliases_en": [
+          "Stress Relief"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7c8c5589423b3bb5f7be12dd1759c2a057d7ad9f8bacd30db0edfaa3012e3fe4",
+      "input_sha256": "c2d5ca4efcc71912b3f9ce9cde4ff2939cd4134b03a7ae483be5b20ba4bc9a45",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_347f66d41269f17fafd2",
+      "decision": "ready",
+      "subject": "Cool air flowing from a high mountain region to a region of lower elevation",
+      "relation_id": "condition_to_physical_process",
+      "relation_definition": "A specified physical condition or scenario -> the physical process that necessarily results under those conditions.",
+      "direction": "specified physical condition -> resulting physical process",
+      "answer": "adiabatic warming",
+      "canonical_fact": "Cool air flowing from a high mountain region to a region of lower elevation undergoes adiabatic warming.",
+      "prompt_en": "What process does cool air undergo when it flows from a high mountain region to a region of lower elevation?",
+      "evidence_quotes": [
+        "When cool air flows from a high mountain region to a region of lower elevation, the air will",
+        "undergo adiabatic warming"
+      ],
+      "reason": "The source question states a specific physical condition (cool air descending from high to low elevation) and the source answer names the resulting process (adiabatic warming). No existing catalog relation captures a condition-to-physical-process mapping, so a new relation condition_to_physical_process is proposed. The existing answer 'adiabatic warming' is a concise literal substring of the source answer 'undergo adiabatic warming' and is retained.",
+      "english": {
+        "relation_id": "condition_to_physical_process",
+        "canonical_fact": "Cool air flowing from a high mountain region to a region of lower elevation undergoes adiabatic warming.",
+        "prompt_en": "What process does cool air undergo when it flows from a high mountain region to a region of lower elevation?",
+        "answer": "adiabatic warming",
+        "direction": "specified physical condition -> resulting physical process",
+        "relation_definition": "A specified physical condition or scenario -> the physical process that necessarily results under those conditions.",
+        "subject": "Cool air flowing from a high mountain region to a region of lower elevation",
+        "answer_aliases_en": [
+          "adiabatic warming",
+          "undergo adiabatic warming"
+        ],
+        "relation_spec": {
+          "id": "condition_to_physical_process",
+          "definition": "A specified physical condition or scenario -> the physical process that necessarily results under those conditions.",
+          "direction": "specified physical condition -> resulting physical process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5b3c21d07dbc0e7dc528aa29ddeecb219abe7581eb274ddb0e2bcf6a3b483e0",
+      "input_sha256": "d57556588f9a67e0a11d9eba71b64e9ba0b60efc1d8e4cba46b6173e3e21be20",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_347b1c3fb6e7279b0aaa",
+      "input_sha256": "c2d5ca4efcc71912b3f9ce9cde4ff2939cd4134b03a7ae483be5b20ba4bc9a45",
+      "english": {
+        "relation_id": "description_to_entity",
+        "canonical_fact": "The Office episode where Dwight starts a fire is titled Stress Relief.",
+        "prompt_en": "What is the title of the episode of The Office where Dwight starts a fire?",
+        "answer": "Stress Relief",
+        "direction": "identifying description -> entity",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "The Office episode where Dwight starts a fire",
+        "answer_aliases_en": [
+          "Stress Relief"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7c8c5589423b3bb5f7be12dd1759c2a057d7ad9f8bacd30db0edfaa3012e3fe4",
+      "translation": {
+        "record_id": "public:pbf_347b1c3fb6e7279b0aaa",
+        "subject_zh": "《办公室》中Dwight引发火灾的那一集",
+        "prompt_zh": "《办公室》中Dwight引发火灾的那一集的标题是什么？",
+        "canonical_fact_zh": "《办公室》中Dwight引发火灾的那一集名为Stress Relief。",
+        "answer_zh": "Stress Relief",
+        "answer_aliases_zh": [
+          "Stress Relief"
+        ]
+      },
+      "translation_sha256": "8bcb0654237523c5146a36cb91f548193e0c7e2f8604717081d1298c68d85256"
+    },
+    {
+      "record_id": "public:pbf_347f66d41269f17fafd2",
+      "input_sha256": "d57556588f9a67e0a11d9eba71b64e9ba0b60efc1d8e4cba46b6173e3e21be20",
+      "english": {
+        "relation_id": "condition_to_physical_process",
+        "canonical_fact": "Cool air flowing from a high mountain region to a region of lower elevation undergoes adiabatic warming.",
+        "prompt_en": "What process does cool air undergo when it flows from a high mountain region to a region of lower elevation?",
+        "answer": "adiabatic warming",
+        "direction": "specified physical condition -> resulting physical process",
+        "relation_definition": "A specified physical condition or scenario -> the physical process that necessarily results under those conditions.",
+        "subject": "Cool air flowing from a high mountain region to a region of lower elevation",
+        "answer_aliases_en": [
+          "adiabatic warming",
+          "undergo adiabatic warming"
+        ],
+        "relation_spec": {
+          "id": "condition_to_physical_process",
+          "definition": "A specified physical condition or scenario -> the physical process that necessarily results under those conditions.",
+          "direction": "specified physical condition -> resulting physical process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5b3c21d07dbc0e7dc528aa29ddeecb219abe7581eb274ddb0e2bcf6a3b483e0",
+      "translation": {
+        "record_id": "public:pbf_347f66d41269f17fafd2",
+        "subject_zh": "从高山地区流向较低海拔地区的冷空气",
+        "prompt_zh": "冷空气从高山地区流向较低海拔地区时会经历什么物理过程？",
+        "canonical_fact_zh": "从高山地区流向较低海拔地区的冷空气会经历绝热增温。",
+        "answer_zh": "绝热增温",
+        "answer_aliases_zh": [
+          "绝热增温",
+          "经历绝热增温"
+        ]
+      },
+      "translation_sha256": "00912103e9bca254bdf641bdb78ca88b896d18411af6ac8340ff73c7f25359cc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_347b1c3fb6e7279b0aaa",
+        "public:pbf_347f66d41269f17fafd2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a3a5d9e16f653ec15f3fae77f51f8c393da18dc2d0c590c617757fde9194f9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2740,
+      "first_chunk_seconds": 12.225,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2823,
+        "prompt_tokens": 1650,
+        "total_tokens": 4473,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2239,
+          "text_tokens": 584
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "29af54f773ec1f698cc6b3edf7aaadda20fc37443202895a3b54fab98f7f1312",
+      "status": "completed",
+      "latency_seconds": 53.713
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_347b1c3fb6e7279b0aaa",
+        "public:pbf_347f66d41269f17fafd2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d90e6c07810086e70f3bedb9ef3fe7ac33e85ece693e7dfbc3938cbe29255a7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1241,
+      "first_chunk_seconds": 18.7,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1393,
+        "prompt_tokens": 860,
+        "total_tokens": 2253,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1113,
+          "text_tokens": 280
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "09f8e9e9050d7dd76ed0b3fec6dece2867fb042b71f887af306730799eb88042",
+      "status": "completed",
+      "latency_seconds": 48.513
+    }
+  ],
+  "status": "completed"
+}

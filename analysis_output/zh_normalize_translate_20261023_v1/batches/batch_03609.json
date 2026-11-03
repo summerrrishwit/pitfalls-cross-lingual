@@ -1,0 +1,257 @@
+{
+  "input_sha256": "f5898e5d420c83bccbd7f8ae5d03fe359392a1400094627ccd22036404405e08",
+  "normalized": [
+    {
+      "record_id": "public:pbf_07b15fdb45375aca2ded",
+      "decision": "ready",
+      "subject": "first session of constituent assembly",
+      "relation_id": "event_to_holding_location",
+      "relation_definition": "The specific physical location where an event or session was held; not the origin, setting, or general region.",
+      "direction": "event -> location",
+      "answer": "New Delhi",
+      "canonical_fact": "The first session of the constituent assembly was held in New Delhi.",
+      "prompt_en": "Where was the first session of the constituent assembly held?",
+      "evidence_quotes": [
+        "where was the first session of constituent assembly held",
+        "New Delhi"
+      ],
+      "reason": "Source question explicitly asks for the location of the first session; source answer 'New Delhi' is a direct literal extraction. No existing catalog relation covers event-holding-location; proposed event_to_holding_location as a precise new relation.",
+      "english": {
+        "prompt_en": "Where was the first session of the constituent assembly held?",
+        "relation_definition": "The specific physical location where an event or session was held; not the origin, setting, or general region.",
+        "answer": "New Delhi",
+        "canonical_fact": "The first session of the constituent assembly was held in New Delhi.",
+        "direction": "event -> location",
+        "relation_id": "event_to_holding_location",
+        "subject": "first session of constituent assembly",
+        "answer_aliases_en": [
+          "New Delhi",
+          "Nayi Dilli"
+        ],
+        "relation_spec": {
+          "id": "event_to_holding_location",
+          "definition": "The specific physical location where an event or session was held; not the origin, setting, or general region.",
+          "direction": "event -> location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ab64101dfd78bbe63f518f8154147fd35b937aaf64e41083c1a4c0cd42358c9d",
+      "input_sha256": "103fdd6d9f14d4ae51fb2ea7c51e3e65f28cfdc43194595fd5f5470715e82187",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d2d14ca158cbaefb4635",
+      "decision": "ready",
+      "subject": "American Idol",
+      "relation_id": "program_to_role_holder",
+      "relation_definition": "A person who held a specific on-screen role (e.g., judge, host) in a specified TV program or season; retain distinguishing qualifiers from the source.",
+      "direction": "TV program -> person",
+      "answer": "Randy Jackson",
+      "canonical_fact": "Randy Jackson was the black judge on American Idol.",
+      "prompt_en": "Who was the black judge on American Idol?",
+      "evidence_quotes": [
+        "who was the black judge on american idol",
+        "Randy Jackson"
+      ],
+      "reason": "Source question identifies a specific on-screen role (judge) on a named TV program; source answer 'Randy Jackson' is a direct extraction. No existing catalog relation covers program-role-holder; proposed program_to_role_holder as a precise new relation. Qualifier 'black' is preserved in canonical_fact and prompt.",
+      "english": {
+        "prompt_en": "Who was the black judge on American Idol?",
+        "relation_definition": "A person who held a specific on-screen role (e.g., judge, host) in a specified TV program or season; retain distinguishing qualifiers from the source.",
+        "answer": "Randy Jackson",
+        "canonical_fact": "Randy Jackson was the black judge on American Idol.",
+        "direction": "TV program -> person",
+        "relation_id": "program_to_role_holder",
+        "subject": "American Idol",
+        "answer_aliases_en": [
+          "Randy Jackson",
+          "Randall Darius Jackson"
+        ],
+        "relation_spec": {
+          "id": "program_to_role_holder",
+          "definition": "A person who held a specific on-screen role (e.g., judge, host) in a specified TV program or season; retain distinguishing qualifiers from the source.",
+          "direction": "TV program -> person"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "39282e10cd55a80f1e5e26462a649bee20a64f0b271e7857a0a3650ee7e10bcc",
+      "input_sha256": "7d3605bf8477f6d0fb60053d4d59728e7382cacd210b04713107226db775f7fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "34c117bdfb5e2b6470ccb8b25f121c44c0a820cc415aed817a7ada8ff48ab01c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 35.859,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "34c117bdfb5e2b6470ccb8b25f121c44c0a820cc415aed817a7ada8ff48ab01c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 105.766,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "34c117bdfb5e2b6470ccb8b25f121c44c0a820cc415aed817a7ada8ff48ab01c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 113.164,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "34c117bdfb5e2b6470ccb8b25f121c44c0a820cc415aed817a7ada8ff48ab01c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.776
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "34c117bdfb5e2b6470ccb8b25f121c44c0a820cc415aed817a7ada8ff48ab01c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2182,
+      "first_chunk_seconds": 1.922,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2194,
+        "prompt_tokens": 1571,
+        "total_tokens": 3765,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1694,
+          "text_tokens": 500
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3bccf5579dd35bb37da93d497ffeb2df04370720e0f06ab0e7cc76e100b1a64d",
+      "status": "completed",
+      "latency_seconds": 28.39
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "77900420a542739f2a14834aaa21d74e9679176d6b63c1777ed3aeac6c4681b5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.094
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "77900420a542739f2a14834aaa21d74e9679176d6b63c1777ed3aeac6c4681b5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.808
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_07b15fdb45375aca2ded",
+        "public:pbf_d2d14ca158cbaefb4635"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "77900420a542739f2a14834aaa21d74e9679176d6b63c1777ed3aeac6c4681b5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.095
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03609.json",
+      "sha256": "e3c16e87bf04f2e3ab98790b912cbb8a89d0224f2fe368fe32f9dc480d60de5b",
+      "previous_status": "failed"
+    }
+  ]
+}

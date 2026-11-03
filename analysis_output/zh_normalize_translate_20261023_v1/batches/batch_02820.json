@@ -1,0 +1,215 @@
+{
+  "input_sha256": "b13698743af488fb026bff356268886c496529114e75d8cd4c9aec3b44f03406",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000024",
+      "decision": "ready",
+      "subject": "water",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "solvent",
+      "canonical_fact": "Water is considered a solvent since it is a polar molecule with slightly positive and slightly negative charges, so ions and polar molecules can readily dissolve in it.",
+      "prompt_en": "What classification is water given because it is a polar molecule with slightly positive and slightly negative charges, allowing ions and polar molecules to dissolve readily in it?",
+      "evidence_quotes": [
+        "Water is considered a what",
+        "polar molecule with slightly positive and slightly negative charges",
+        "solvent"
+      ],
+      "reason": "Source explicitly states water is considered a solvent due to its polar nature enabling dissolution of ions and polar molecules. entity_to_class fits: solvent is a stable class in chemical-substance taxonomy (universal solvent), and water's membership in that class is the stated fact. No qualifier or uncertainty present in source.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "solvent",
+        "canonical_fact": "Water is considered a solvent since it is a polar molecule with slightly positive and slightly negative charges, so ions and polar molecules can readily dissolve in it.",
+        "subject": "water",
+        "prompt_en": "What classification is water given because it is a polar molecule with slightly positive and slightly negative charges, allowing ions and polar molecules to dissolve readily in it?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "solvent"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "50f9bedfca94db13664b3d6da282ddfcd8da6cb74a4e46ef935f8832fa14281e",
+      "input_sha256": "dec5f9b51a770a363ace177eadc1feafb63ad8c9de9bf7fba4b527c61caaa897",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000025",
+      "decision": "ready",
+      "subject": "Vertebrata",
+      "relation_id": "taxon_to_diagnostic_anatomical_feature",
+      "relation_definition": "Specific anatomical structure whose presence is the defining or diagnostic characteristic of a taxonomic group, distinguishing it from related groups that lack it.",
+      "direction": "taxon -> anatomical structure",
+      "answer": "backbone",
+      "canonical_fact": "Vertebrata are characterized by the presence of a backbone.",
+      "prompt_en": "What anatomical structure is Vertebrata characterized by the presence of?",
+      "evidence_quotes": [
+        "Vertebrata are characterized by the presence of what?",
+        "backbone"
+      ],
+      "reason": "Source states Vertebrata are characterized by the presence of a backbone. No existing catalog relation captures the diagnostic/characterizing role of an anatomical structure for a taxon: whole_to_part implies any constituent, not the specific structure that defines the group. Proposed taxon_to_diagnostic_anatomical_feature precisely encodes 'the structure whose presence is what makes this taxon what it is.' Both model annotations agree; no uncertainty or qualifier in source.",
+      "english": {
+        "direction": "taxon -> anatomical structure",
+        "relation_id": "taxon_to_diagnostic_anatomical_feature",
+        "answer": "backbone",
+        "canonical_fact": "Vertebrata are characterized by the presence of a backbone.",
+        "subject": "Vertebrata",
+        "prompt_en": "What anatomical structure is Vertebrata characterized by the presence of?",
+        "relation_definition": "Specific anatomical structure whose presence is the defining or diagnostic characteristic of a taxonomic group, distinguishing it from related groups that lack it.",
+        "answer_aliases_en": [
+          "backbone"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_diagnostic_anatomical_feature",
+          "definition": "Specific anatomical structure whose presence is the defining or diagnostic characteristic of a taxonomic group, distinguishing it from related groups that lack it.",
+          "direction": "taxon -> anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "80097879dd8cd83c0287b1795e1155b95d87e5882b70bfe8413f9d90a4bf4656",
+      "input_sha256": "8cb9c6e5cce26d934937488c03d89d04be85c745794096a32352cf16f637f96f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000024",
+      "input_sha256": "dec5f9b51a770a363ace177eadc1feafb63ad8c9de9bf7fba4b527c61caaa897",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "solvent",
+        "canonical_fact": "Water is considered a solvent since it is a polar molecule with slightly positive and slightly negative charges, so ions and polar molecules can readily dissolve in it.",
+        "subject": "water",
+        "prompt_en": "What classification is water given because it is a polar molecule with slightly positive and slightly negative charges, allowing ions and polar molecules to dissolve readily in it?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "solvent"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "50f9bedfca94db13664b3d6da282ddfcd8da6cb74a4e46ef935f8832fa14281e",
+      "translation": {
+        "record_id": "historical:raw_sciq_000024",
+        "subject_zh": "水",
+        "prompt_zh": "水是一种带有微弱正电荷和微弱负电荷的极性分子，离子和极性分子能够很容易地溶解其中，因此水被归为什么类别？",
+        "canonical_fact_zh": "水被视为一种溶剂，因为它是带有微弱正电荷和微弱负电荷的极性分子，离子和极性分子能够很容易地溶解其中。",
+        "answer_zh": "溶剂",
+        "answer_aliases_zh": [
+          "溶剂"
+        ]
+      },
+      "translation_sha256": "b1cf7192bf723798cdac2468dec39b5a4edb7d824a29f0aea338b614cfb4f539"
+    },
+    {
+      "record_id": "historical:raw_sciq_000025",
+      "input_sha256": "8cb9c6e5cce26d934937488c03d89d04be85c745794096a32352cf16f637f96f",
+      "english": {
+        "direction": "taxon -> anatomical structure",
+        "relation_id": "taxon_to_diagnostic_anatomical_feature",
+        "answer": "backbone",
+        "canonical_fact": "Vertebrata are characterized by the presence of a backbone.",
+        "subject": "Vertebrata",
+        "prompt_en": "What anatomical structure is Vertebrata characterized by the presence of?",
+        "relation_definition": "Specific anatomical structure whose presence is the defining or diagnostic characteristic of a taxonomic group, distinguishing it from related groups that lack it.",
+        "answer_aliases_en": [
+          "backbone"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_diagnostic_anatomical_feature",
+          "definition": "Specific anatomical structure whose presence is the defining or diagnostic characteristic of a taxonomic group, distinguishing it from related groups that lack it.",
+          "direction": "taxon -> anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "80097879dd8cd83c0287b1795e1155b95d87e5882b70bfe8413f9d90a4bf4656",
+      "translation": {
+        "record_id": "historical:raw_sciq_000025",
+        "subject_zh": "脊椎动物",
+        "prompt_zh": "脊椎动物以哪种解剖结构的存在为特征？",
+        "canonical_fact_zh": "脊椎动物以具有脊柱为特征。",
+        "answer_zh": "脊柱",
+        "answer_aliases_zh": [
+          "脊柱"
+        ]
+      },
+      "translation_sha256": "8bd975708b539845f2707800c3891e460787986641b27453be8fc756b1f186c2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000024",
+        "historical:raw_sciq_000025"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4a3cb793469e301cfbd63e9c1e133a4abee9d50222dcd083110aab554f1827a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3194,
+      "first_chunk_seconds": 16.395,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3225,
+        "prompt_tokens": 1710,
+        "total_tokens": 4935,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2649,
+          "text_tokens": 576
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "de6ac353e7b42ae58cb68630fb2bae481e4af9e92c30c8712f6dd3e913e4dbdd",
+      "status": "completed",
+      "latency_seconds": 61.817
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000024",
+        "historical:raw_sciq_000025"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "760c29f3a1b2a38fba45dc522683f41578db76386462fb85c49e536d4121b2fb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1182,
+      "first_chunk_seconds": 17.051,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1336,
+        "prompt_tokens": 869,
+        "total_tokens": 2205,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1088,
+          "text_tokens": 248
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b5461c2f72270c59c6b8c0952ac03b70130002060a5a9b803ac8012599421384",
+      "status": "completed",
+      "latency_seconds": 34.431
+    }
+  ],
+  "status": "completed"
+}

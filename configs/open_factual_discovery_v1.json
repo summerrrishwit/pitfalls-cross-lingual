@@ -1,0 +1,22 @@
+{
+  "schema_version": "open-factual-discovery-policy-v1",
+  "input_format": "option_free",
+  "mcq_admission_required": false,
+  "source_wrong_options_role": "reviewed_perturbation_material_only",
+  "canonical_answer_is_immutable": true,
+  "max_facts": 32,
+  "max_candidates_per_fact": 2,
+  "max_feedback_revisions_per_fact": 1,
+  "max_generator_strategy_versions": 2,
+  "max_model_request_attempts": 1024,
+  "max_total_tokens": 1000000,
+  "stop_after_first_reproducible_defect": true,
+  "feedback_schedule": "one_batch_summary_then_one_optional_revision",
+  "recursive_context_accumulation": false,
+  "holdout_feedback_allowed": false,
+  "success_endpoint": "reviewed_reproducible_open_generation_factual_error",
+  "manipulation_families": "unrestricted_with_explicit_labels",
+  "primary_efficiency_unit": "unique_base_fact_id",
+  "baseline_reuse": "same_model_render_scoring_hash_only",
+  "execution_status": "policy_only_no_model_execution"
+}

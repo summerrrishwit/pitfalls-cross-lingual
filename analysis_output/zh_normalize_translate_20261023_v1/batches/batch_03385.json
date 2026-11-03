@@ -1,0 +1,242 @@
+{
+  "input_sha256": "eb40ad61f7bc58690c575befab8532c3fef0d02fdf6e0a3a0ff3982859d8be20",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001703",
+      "decision": "ready",
+      "subject": "store that has jewelry and clothing",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "department store",
+      "canonical_fact": "A store that has jewelry and clothing is classified as a department store.",
+      "prompt_en": "What kind of store has jewelry and clothing?",
+      "evidence_quotes": [
+        "What kind of store has jewelry and clothing?",
+        "department store"
+      ],
+      "reason": "The source question asks for the kind/type of store, and the source answer 'department store' is a stable retail taxonomy classification. entity_to_class fits: the entity (a store carrying jewelry and clothing) maps to the class (department store). The source answer is accepted as given.",
+      "english": {
+        "prompt_en": "What kind of store has jewelry and clothing?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "department store",
+        "canonical_fact": "A store that has jewelry and clothing is classified as a department store.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "store that has jewelry and clothing",
+        "answer_aliases_en": [
+          "department store"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cfab2886db56c634c7483f7a5d5e672e190a2ac32bb2a8a062756dfc84c4f485",
+      "input_sha256": "98a657c7e20755409b19b5b3506255f4f0409d941a90e6d24db136d687d9e9bf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001738",
+      "decision": "ready",
+      "subject": "reading",
+      "relation_id": "activity_to_prerequisite",
+      "relation_definition": "A necessary material or condition that must be available before a specified activity can be performed.",
+      "direction": "activity -> prerequisite",
+      "answer": "written material",
+      "canonical_fact": "Reading requires written material before it can begin.",
+      "prompt_en": "What do you need to have before you can begin reading?",
+      "evidence_quotes": [
+        "What do you need to have before you can begin reading?",
+        "written material"
+      ],
+      "reason": "No existing catalog relation captures a prerequisite/required-material-for-activity relationship. A new relation 'activity_to_prerequisite' (activity -> prerequisite) precisely expresses that a specified activity requires a material or condition to begin. The source question and answer directly support this fact.",
+      "english": {
+        "prompt_en": "What do you need to have before you can begin reading?",
+        "relation_definition": "A necessary material or condition that must be available before a specified activity can be performed.",
+        "answer": "written material",
+        "canonical_fact": "Reading requires written material before it can begin.",
+        "direction": "activity -> prerequisite",
+        "relation_id": "activity_to_prerequisite",
+        "subject": "reading",
+        "answer_aliases_en": [
+          "written material"
+        ],
+        "relation_spec": {
+          "id": "activity_to_prerequisite",
+          "definition": "A necessary material or condition that must be available before a specified activity can be performed.",
+          "direction": "activity -> prerequisite"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0b15c2f30ac8bfbbe51ca68ba72b0758161224fc64e3d29d9166ba5017bfdaf8",
+      "input_sha256": "0744d8642239066709b378ad6af41730b59cc4501d64f1a3950c0ce1d52f9ccd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001703",
+      "input_sha256": "98a657c7e20755409b19b5b3506255f4f0409d941a90e6d24db136d687d9e9bf",
+      "english": {
+        "prompt_en": "What kind of store has jewelry and clothing?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "department store",
+        "canonical_fact": "A store that has jewelry and clothing is classified as a department store.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "store that has jewelry and clothing",
+        "answer_aliases_en": [
+          "department store"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cfab2886db56c634c7483f7a5d5e672e190a2ac32bb2a8a062756dfc84c4f485",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001703",
+        "subject_zh": "有珠宝和服装的商店",
+        "prompt_zh": "什么样的商店同时有珠宝和服装？",
+        "canonical_fact_zh": "有珠宝和服装的商店被归类为百货商店。",
+        "answer_zh": "百货商店",
+        "answer_aliases_zh": [
+          "百货商店"
+        ]
+      },
+      "translation_sha256": "b08004aa3184f68a658a8afb4faeb7a804e04eb6e87b768260d8acdc35841ad1"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001738",
+      "input_sha256": "0744d8642239066709b378ad6af41730b59cc4501d64f1a3950c0ce1d52f9ccd",
+      "english": {
+        "prompt_en": "What do you need to have before you can begin reading?",
+        "relation_definition": "A necessary material or condition that must be available before a specified activity can be performed.",
+        "answer": "written material",
+        "canonical_fact": "Reading requires written material before it can begin.",
+        "direction": "activity -> prerequisite",
+        "relation_id": "activity_to_prerequisite",
+        "subject": "reading",
+        "answer_aliases_en": [
+          "written material"
+        ],
+        "relation_spec": {
+          "id": "activity_to_prerequisite",
+          "definition": "A necessary material or condition that must be available before a specified activity can be performed.",
+          "direction": "activity -> prerequisite"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0b15c2f30ac8bfbbe51ca68ba72b0758161224fc64e3d29d9166ba5017bfdaf8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001738",
+        "subject_zh": "阅读",
+        "prompt_zh": "开始阅读之前你需要拥有什么？",
+        "canonical_fact_zh": "阅读需要书面材料才能开始。",
+        "answer_zh": "书面材料",
+        "answer_aliases_zh": [
+          "书面材料"
+        ]
+      },
+      "translation_sha256": "d12b6b1b7e62aca50c8606bec200eca628f52e2f4f0a156583fc9e21962e8de4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001703",
+        "historical:raw_commonsense_qa_001738"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "710cd230d460dd41140d732269fb782fd655bc6c69fde511c648676a828d7b78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3004,
+      "first_chunk_seconds": 2.795,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3097,
+        "prompt_tokens": 1579,
+        "total_tokens": 4676,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2627,
+          "text_tokens": 470
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "41b4237023cd0c2c6383c2dc9e59645b628ffe364db206cecfee21f43956fcd3",
+      "status": "completed",
+      "latency_seconds": 51.833
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001703",
+        "historical:raw_commonsense_qa_001738"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7a412aa0fa924e97fe2f4c6b153c0c4d282810201ed5d25749af843784fe755",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.007
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001703",
+        "historical:raw_commonsense_qa_001738"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a7a412aa0fa924e97fe2f4c6b153c0c4d282810201ed5d25749af843784fe755",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.473
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001703",
+        "historical:raw_commonsense_qa_001738"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a7a412aa0fa924e97fe2f4c6b153c0c4d282810201ed5d25749af843784fe755",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 634,
+      "first_chunk_seconds": 4.449,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 676,
+        "prompt_tokens": 808,
+        "total_tokens": 1484,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 462,
+          "text_tokens": 214
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "37b03cb580a77f12c66cfce23832c6fcd0e05d6762bbaa623d5741a9e9f23d8b",
+      "status": "completed",
+      "latency_seconds": 13.788
+    }
+  ],
+  "status": "completed"
+}

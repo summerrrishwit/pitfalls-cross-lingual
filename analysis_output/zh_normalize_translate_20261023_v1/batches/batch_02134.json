@@ -1,0 +1,208 @@
+{
+  "input_sha256": "64876aa27debfefc49465d1a0404c28ccf7ed0179d4433b477fd7b8c9c22a213",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000214",
+      "decision": "ready",
+      "subject": "subatomic particle with a negative charge",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "electron",
+      "canonical_fact": "The subatomic particle with a negative charge is the electron.",
+      "prompt_en": "Which subatomic particle has a negative charge?",
+      "evidence_quotes": [
+        "Which subatomic particle has a negative charge?",
+        "electron"
+      ],
+      "reason": "The question provides an identifying description ('subatomic particle with a negative charge') that uniquely points to the entity 'electron'. This matches description_to_entity exactly. Both model annotations agree on extraction; the answer is copied verbatim from source_answer.",
+      "english": {
+        "answer": "electron",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which subatomic particle has a negative charge?",
+        "direction": "identifying description -> entity",
+        "subject": "subatomic particle with a negative charge",
+        "canonical_fact": "The subatomic particle with a negative charge is the electron.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "electron"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5c29e189c3ccbdd575bc67b3d1ef41e752442ec595817e65e490c46ee9b829db",
+      "input_sha256": "4a6d36aeb9ac98f156fde9df3440d6430de5ef1d3fb9c17f0a32a0e01bdfeca9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000217",
+      "decision": "ready",
+      "subject": "potential energy in fossil fuels (coal, oil, natural gas)",
+      "relation_id": "energy_source_to_direct_conversion_product",
+      "relation_definition": "The type of energy most directly produced from a specified energy source through its primary conversion process; retains qualifiers such as 'most directly' and the specific source enumeration.",
+      "direction": "specified energy source/form -> most direct conversion product form",
+      "answer": "thermal",
+      "canonical_fact": "The potential energy in fossil fuels (coal, oil, natural gas) is most directly converted into thermal energy.",
+      "prompt_en": "The potential energy in fossil fuels (coal, oil, natural gas) is converted most directly into which type of energy?",
+      "evidence_quotes": [
+        "the potential energy is converted most directly into which type of energy",
+        "thermal"
+      ],
+      "reason": "No existing catalog relation captures an energy-conversion-product relationship. Proposed new relation energy_source_to_direct_conversion_product with explicit direction. The qualifier 'most directly' is preserved. Answer 'thermal' is copied verbatim from source_answer. Both model annotations agree.",
+      "english": {
+        "answer": "thermal",
+        "relation_id": "energy_source_to_direct_conversion_product",
+        "prompt_en": "The potential energy in fossil fuels (coal, oil, natural gas) is converted most directly into which type of energy?",
+        "direction": "specified energy source/form -> most direct conversion product form",
+        "subject": "potential energy in fossil fuels (coal, oil, natural gas)",
+        "canonical_fact": "The potential energy in fossil fuels (coal, oil, natural gas) is most directly converted into thermal energy.",
+        "relation_definition": "The type of energy most directly produced from a specified energy source through its primary conversion process; retains qualifiers such as 'most directly' and the specific source enumeration.",
+        "answer_aliases_en": [
+          "thermal"
+        ],
+        "relation_spec": {
+          "id": "energy_source_to_direct_conversion_product",
+          "definition": "The type of energy most directly produced from a specified energy source through its primary conversion process; retains qualifiers such as 'most directly' and the specific source enumeration.",
+          "direction": "specified energy source/form -> most direct conversion product form"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "43d175a4d218b44e93ee83c8fd7935d51d29e730950c735832e64fc9f45d9298",
+      "input_sha256": "41ed0441dff20740deaa9cfe809ab0f1f6341f97cbdf5efe97c8c82d1b3de7a9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e6a7c139f0ce6176a4bf17dbda38863cf3a123682acd046818178f781b0016fc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2265,
+      "first_chunk_seconds": 15.084,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2372,
+        "prompt_tokens": 1717,
+        "total_tokens": 4089,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1861,
+          "text_tokens": 511
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7e5c658109d7e15bdd803d328ca34e7bf3850b5e7e91be78bb84948b4684165e",
+      "status": "completed",
+      "latency_seconds": 49.839
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 45.83
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.053
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.09
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.819
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.935
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000214",
+        "historical:raw_ai2_arc_easy_000217"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "975d56dc50365be6056c410fac4cf4e2b96749600362b1ddbe7134a8bb13da54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.032
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02134.json",
+      "sha256": "8d1928a74d253269f934247e01f96ca76f867a755b7cf1dd3dd90235853b7fb8",
+      "previous_status": "failed"
+    }
+  ]
+}

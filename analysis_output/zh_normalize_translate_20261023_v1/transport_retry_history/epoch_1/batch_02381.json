@@ -1,0 +1,171 @@
+{
+  "input_sha256": "3390763ae2efc43ba8956cb088cf913b030330a12398e40a6ef5003907d24e69",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001574",
+      "decision": "ready",
+      "subject": "form of precipitation most likely to cause damage when hitting the roof of a car",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "hail",
+      "canonical_fact": "Hail is the form of precipitation most likely to cause damage when hitting the roof of a car.",
+      "prompt_en": "What form of precipitation is most likely to cause damage when it hits the roof of a car?",
+      "evidence_quotes": [
+        "form of precipitation",
+        "hail"
+      ],
+      "reason": "Source question and answer explicitly identify hail as the form of precipitation most likely to cause damage to a car roof. The description uniquely identifies the entity 'hail' among precipitation types. description_to_entity fits: the qualified description points to one specific entity.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "hail",
+        "canonical_fact": "Hail is the form of precipitation most likely to cause damage when hitting the roof of a car.",
+        "subject": "form of precipitation most likely to cause damage when hitting the roof of a car",
+        "prompt_en": "What form of precipitation is most likely to cause damage when it hits the roof of a car?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "hail"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3a81dc039cf8e1936ce30e58ee7fb60a88a4de2e97ab25c6eb627c604d8f7287",
+      "input_sha256": "8dd704bd8988ef3705296fef48fe04e4cbcb3181947de940caf848ded0fde1a7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001578",
+      "decision": "ready",
+      "subject": "metamorphic rocks",
+      "relation_id": "entity_to_necessary_formation_condition",
+      "relation_definition": "A physical or chemical condition explicitly stated as necessary (not merely sufficient) for the formation of a specified natural entity such as a rock type or mineral; retains the 'necessary' qualifier.",
+      "direction": "entity -> necessary formation condition",
+      "answer": "extreme pressure and heating",
+      "canonical_fact": "Extreme pressure and heating are necessary for metamorphic rocks to form.",
+      "prompt_en": "What condition is necessary for metamorphic rocks to form?",
+      "evidence_quotes": [
+        "necessary for metamorphic rocks to form",
+        "extreme pressure and heating"
+      ],
+      "reason": "Source question explicitly asks for the necessary condition; source answer gives 'extreme pressure and heating'. No existing catalog relation captures 'necessary formation condition', so a new snake_case relation is proposed. Both model annotations agree on extraction. The qualifier 'necessary' is preserved.",
+      "english": {
+        "direction": "entity -> necessary formation condition",
+        "relation_id": "entity_to_necessary_formation_condition",
+        "answer": "extreme pressure and heating",
+        "canonical_fact": "Extreme pressure and heating are necessary for metamorphic rocks to form.",
+        "subject": "metamorphic rocks",
+        "prompt_en": "What condition is necessary for metamorphic rocks to form?",
+        "relation_definition": "A physical or chemical condition explicitly stated as necessary (not merely sufficient) for the formation of a specified natural entity such as a rock type or mineral; retains the 'necessary' qualifier.",
+        "answer_aliases_en": [
+          "extreme pressure and heating"
+        ],
+        "relation_spec": {
+          "id": "entity_to_necessary_formation_condition",
+          "definition": "A physical or chemical condition explicitly stated as necessary (not merely sufficient) for the formation of a specified natural entity such as a rock type or mineral; retains the 'necessary' qualifier.",
+          "direction": "entity -> necessary formation condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0104631df14130cacc6b85741d24ae72290720f1aadee7ba789f8ff281488cc",
+      "input_sha256": "307f5ca01af15546bc41ed4f6dc35fa1dc7aea9a53bcbe6699a41a509290c27d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001574",
+        "historical:raw_ai2_arc_easy_001578"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a39aa0716414eb17698eb0919ac4a3ffa3e1b15ca24d5245706a31565fefdb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.492
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001574",
+        "historical:raw_ai2_arc_easy_001578"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5a39aa0716414eb17698eb0919ac4a3ffa3e1b15ca24d5245706a31565fefdb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1522,
+      "first_chunk_seconds": 15.361,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1564,
+        "prompt_tokens": 1715,
+        "total_tokens": 3279,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1052,
+          "text_tokens": 512
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "682decffe6e33b83f45693e64b031e5ce7866c86dc837fe5b1dfdfe7667831fa",
+      "status": "completed",
+      "latency_seconds": 39.143
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001574",
+        "historical:raw_ai2_arc_easy_001578"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3c576070e33959e946702b781b70dd5beb15ae2254ffed1e02a0dea32fbdd192",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.17
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001574",
+        "historical:raw_ai2_arc_easy_001578"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3c576070e33959e946702b781b70dd5beb15ae2254ffed1e02a0dea32fbdd192",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.002
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001574",
+        "historical:raw_ai2_arc_easy_001578"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3c576070e33959e946702b781b70dd5beb15ae2254ffed1e02a0dea32fbdd192",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.048
+    }
+  ],
+  "status": "failed"
+}

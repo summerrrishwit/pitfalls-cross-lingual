@@ -1,0 +1,226 @@
+{
+  "input_sha256": "b4aa25820ffe3aaec17530c9b96c10b03e8e2f87d2e4df20821112dcbb83a437",
+  "normalized": [
+    {
+      "record_id": "public:pbf_4ea196dc813faa301410",
+      "decision": "ready",
+      "subject": "Las Vegas shooting",
+      "relation_id": "event_to_occurrence_site",
+      "relation_definition": "Specific building, facility, or venue at which a named event took place; not a general region, origin, or process location.",
+      "direction": "event -> occurrence site",
+      "answer": "Mandalay Bay",
+      "canonical_fact": "The Las Vegas shooting occurred at the Mandalay Bay hotel.",
+      "prompt_en": "At which hotel did the Las Vegas shooting occur?",
+      "evidence_quotes": [
+        "Mandalay Bay",
+        "what hotel was the las vegas shooting at"
+      ],
+      "reason": "The source clearly states the hotel as Mandalay Bay. No catalog relation fits an event-to-venue relationship exactly (entity_to_containing_location is geographic containment, not a specific facility where an event took place), so a new precise relation event_to_occurrence_site is proposed. The answer is a literal substring of source_answer.",
+      "english": {
+        "answer": "Mandalay Bay",
+        "relation_id": "event_to_occurrence_site",
+        "prompt_en": "At which hotel did the Las Vegas shooting occur?",
+        "direction": "event -> occurrence site",
+        "subject": "Las Vegas shooting",
+        "canonical_fact": "The Las Vegas shooting occurred at the Mandalay Bay hotel.",
+        "relation_definition": "Specific building, facility, or venue at which a named event took place; not a general region, origin, or process location.",
+        "answer_aliases_en": [
+          "Mandalay Bay",
+          "Mandaly Bay Resort",
+          "Mandalay Bay Casino",
+          "Mandalay Bay Resort and Casino",
+          "Mandalay Bay Hotel"
+        ],
+        "relation_spec": {
+          "id": "event_to_occurrence_site",
+          "definition": "Specific building, facility, or venue at which a named event took place; not a general region, origin, or process location.",
+          "direction": "event -> occurrence site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3cd9dd805d21f679083e4fe24c202f789bd59082c51b1ece354464a10b65d6da",
+      "input_sha256": "42886345c3f583796f2963b90f08f0422a80b5958ae8c892bb20295c730bc654",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_4ea26083dcfd7f133eda",
+      "decision": "ready",
+      "subject": "binge eating episode",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time",
+      "canonical_fact": "To characterize a binge eating episode one must investigate the presence of a subjective component of lack of control and an objective component of large consumption of food in a discrete period of time.",
+      "prompt_en": "What components must be investigated to characterize a binge eating episode?",
+      "evidence_quotes": [
+        "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time",
+        "To characterize a binge eating episode one must investigate the presence of"
+      ],
+      "reason": "The source answer provides the characterization components that define a binge eating episode, fitting the term_to_definition relation (term -> its defining components). The answer is a verbatim substring of source_answer. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time",
+        "relation_id": "term_to_definition",
+        "prompt_en": "What components must be investigated to characterize a binge eating episode?",
+        "direction": "term -> definition",
+        "subject": "binge eating episode",
+        "canonical_fact": "To characterize a binge eating episode one must investigate the presence of a subjective component of lack of control and an objective component of large consumption of food in a discrete period of time.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a251ecd957e58520c531365806d2069c56b8f760267f1b87159b51827e33279",
+      "input_sha256": "d124df6de3f261ea822e1041a1fd978a1bd9deba1593509e2968d2255a46c917",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_4ea196dc813faa301410",
+      "input_sha256": "42886345c3f583796f2963b90f08f0422a80b5958ae8c892bb20295c730bc654",
+      "english": {
+        "answer": "Mandalay Bay",
+        "relation_id": "event_to_occurrence_site",
+        "prompt_en": "At which hotel did the Las Vegas shooting occur?",
+        "direction": "event -> occurrence site",
+        "subject": "Las Vegas shooting",
+        "canonical_fact": "The Las Vegas shooting occurred at the Mandalay Bay hotel.",
+        "relation_definition": "Specific building, facility, or venue at which a named event took place; not a general region, origin, or process location.",
+        "answer_aliases_en": [
+          "Mandalay Bay",
+          "Mandaly Bay Resort",
+          "Mandalay Bay Casino",
+          "Mandalay Bay Resort and Casino",
+          "Mandalay Bay Hotel"
+        ],
+        "relation_spec": {
+          "id": "event_to_occurrence_site",
+          "definition": "Specific building, facility, or venue at which a named event took place; not a general region, origin, or process location.",
+          "direction": "event -> occurrence site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3cd9dd805d21f679083e4fe24c202f789bd59082c51b1ece354464a10b65d6da",
+      "translation": {
+        "record_id": "public:pbf_4ea196dc813faa301410",
+        "subject_zh": "拉斯维加斯枪击事件",
+        "prompt_zh": "拉斯维加斯枪击事件发生在哪家酒店？",
+        "canonical_fact_zh": "拉斯维加斯枪击事件发生在曼德勒贝酒店。",
+        "answer_zh": "曼德勒贝",
+        "answer_aliases_zh": [
+          "曼德勒贝",
+          "曼德利贝度假村",
+          "曼德勒贝赌场",
+          "曼德勒贝度假村及赌场",
+          "曼德勒贝酒店"
+        ]
+      },
+      "translation_sha256": "fa105103d1dec327087291d1c9929753d8c8abfbedff76f2a9a8cb4a9dc6d9bd"
+    },
+    {
+      "record_id": "public:pbf_4ea26083dcfd7f133eda",
+      "input_sha256": "d124df6de3f261ea822e1041a1fd978a1bd9deba1593509e2968d2255a46c917",
+      "english": {
+        "answer": "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time",
+        "relation_id": "term_to_definition",
+        "prompt_en": "What components must be investigated to characterize a binge eating episode?",
+        "direction": "term -> definition",
+        "subject": "binge eating episode",
+        "canonical_fact": "To characterize a binge eating episode one must investigate the presence of a subjective component of lack of control and an objective component of large consumption of food in a discrete period of time.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "A subjective component of lack of control and an objective component of large consumption of food in a discrete period of time"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a251ecd957e58520c531365806d2069c56b8f760267f1b87159b51827e33279",
+      "translation": {
+        "record_id": "public:pbf_4ea26083dcfd7f133eda",
+        "subject_zh": "暴食发作",
+        "prompt_zh": "要界定暴食发作，需要考察哪些组成部分？",
+        "canonical_fact_zh": "要界定暴食发作，需要考察是否存在主观上的失控感和客观上在某一离散时间段内大量进食的组成部分。",
+        "answer_zh": "主观上的失控感和客观上在某一离散时间段内大量进食的组成部分",
+        "answer_aliases_zh": [
+          "主观上的失控感和客观上在某一离散时间段内大量进食的组成部分"
+        ]
+      },
+      "translation_sha256": "98b80f9a9027a5a5eb5bab9690ce70392113e9377c70f35c4482b7d02f19b2ca"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4ea196dc813faa301410",
+        "public:pbf_4ea26083dcfd7f133eda"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b93cbb33e9ccbb57f0f2ded63fd7323ddb254ee16f449dd4ac1f1333655d49d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1821,
+      "first_chunk_seconds": 2.621,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1897,
+        "prompt_tokens": 1732,
+        "total_tokens": 3629,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1407,
+          "text_tokens": 490
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f3bb94b0b897c4017c1d569bd75919884024f0b4f9b6597d83ad8187cd4c8ae1",
+      "status": "completed",
+      "latency_seconds": 32.097
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4ea196dc813faa301410",
+        "public:pbf_4ea26083dcfd7f133eda"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c705eb5df1165105b5ab7a6285636ed3180655ae8b373828487e6eb25cfecfc0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1376,
+      "first_chunk_seconds": 9.714,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1440,
+        "prompt_tokens": 948,
+        "total_tokens": 2388,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1119,
+          "text_tokens": 321
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "039dec513092f957707abccede7b6bbf800c9f809e3428222f62285db78d602b",
+      "status": "completed",
+      "latency_seconds": 40.788
+    }
+  ],
+  "status": "completed"
+}

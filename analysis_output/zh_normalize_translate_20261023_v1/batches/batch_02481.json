@@ -1,0 +1,158 @@
+{
+  "input_sha256": "fdf809446512a51d849b7c6fde4163bb84a242b5b969b5d2701938a16b2cc0a3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001360",
+      "decision": "ready",
+      "subject": "bald eagle",
+      "relation_id": "symbol_to_meaning",
+      "relation_definition": "Meaning of a symbol in its explicit domain/context.",
+      "direction": "symbol -> meaning",
+      "answer": "united states of america",
+      "canonical_fact": "The bald eagle symbolizes the United States of America.",
+      "prompt_en": "What does the bald eagle symbolize?",
+      "evidence_quotes": [
+        "bald eagle",
+        "what it has come to symbolize",
+        "united states of america"
+      ],
+      "reason": "The source question explicitly asks what the bald eagle 'has come to symbolize' and the answer is 'united states of america'. This maps directly to the catalog relation symbol_to_meaning (symbol -> meaning): the bald eagle is the symbol and the United States of America is its established national meaning. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "symbol -> meaning",
+        "relation_id": "symbol_to_meaning",
+        "answer": "united states of america",
+        "canonical_fact": "The bald eagle symbolizes the United States of America.",
+        "subject": "bald eagle",
+        "prompt_en": "What does the bald eagle symbolize?",
+        "relation_definition": "Meaning of a symbol in its explicit domain/context.",
+        "answer_aliases_en": [
+          "united states of america"
+        ],
+        "relation_spec": {
+          "id": "symbol_to_meaning",
+          "direction": "symbol -> meaning",
+          "definition": "Meaning of a symbol in its explicit domain/context."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "285e065b16a1e12e8f3078afe71fa1d3748b609bb8ec4b00da3b31cda2f39759",
+      "input_sha256": "0fa01a68e36fc96b4bcb4e7c2a665354298a478dff4344b606cbdc8ea4307918",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001368",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits 'state after being launched' for a physical object. The fact is event-conditional and near-tautological (a projectile is by definition in motion after launch). Proposing a narrow new relation such as object_to_post_event_state would not be broadly reusable; one model annotation also flagged the relation as ambiguous. Deferred without forcing a category.",
+      "input_sha256": "f07a9eb871681a1ecdb01e476a8cbb86f07c414513da547403853d232fedba0a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001360",
+      "input_sha256": "0fa01a68e36fc96b4bcb4e7c2a665354298a478dff4344b606cbdc8ea4307918",
+      "english": {
+        "direction": "symbol -> meaning",
+        "relation_id": "symbol_to_meaning",
+        "answer": "united states of america",
+        "canonical_fact": "The bald eagle symbolizes the United States of America.",
+        "subject": "bald eagle",
+        "prompt_en": "What does the bald eagle symbolize?",
+        "relation_definition": "Meaning of a symbol in its explicit domain/context.",
+        "answer_aliases_en": [
+          "united states of america"
+        ],
+        "relation_spec": {
+          "id": "symbol_to_meaning",
+          "direction": "symbol -> meaning",
+          "definition": "Meaning of a symbol in its explicit domain/context."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "285e065b16a1e12e8f3078afe71fa1d3748b609bb8ec4b00da3b31cda2f39759",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001360",
+        "subject_zh": "白头海雕",
+        "prompt_zh": "白头海雕象征什么？",
+        "canonical_fact_zh": "白头海雕象征着美利坚合众国。",
+        "answer_zh": "美利坚合众国",
+        "answer_aliases_zh": [
+          "美利坚合众国"
+        ]
+      },
+      "translation_sha256": "32799ed7e91ffaeb6612e139fb901c25f3f31da9e6e11cb82b1bd7441dfb7f97"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001360",
+        "historical:raw_commonsense_qa_001368"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6d1fc553a92be1d2d2bf7468a24162f04419218104f77303638f909ae15ea6bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2036,
+      "first_chunk_seconds": 5.608,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2125,
+        "prompt_tokens": 1649,
+        "total_tokens": 3774,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1692,
+          "text_tokens": 433
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ddcd54ed052d435feb0adbf356dae31b5c318b0d17bd8fb47e25fa587de1b728",
+      "status": "completed",
+      "latency_seconds": 33.382
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001360"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9b5b8e9ab94a781b5d6ae2d6e9d8080acd9b15868146b1cd4e590b4d6ee59b99",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 496,
+      "first_chunk_seconds": 25.545,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 526,
+        "prompt_tokens": 498,
+        "total_tokens": 1024,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 405,
+          "text_tokens": 121
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c1609d5183bbe301fa94286de323d68f59faaf90cd0a16b73ca1de4867d00a0c",
+      "status": "completed",
+      "latency_seconds": 32.965
+    }
+  ],
+  "status": "completed"
+}

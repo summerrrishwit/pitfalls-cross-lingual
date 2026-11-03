@@ -1,0 +1,171 @@
+{
+  "input_sha256": "71b5b8dc9f5712a760153436e63e2dff4fe63c1452887b49a4283f07ccb71a13",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000809",
+      "decision": "ready",
+      "subject": "eye",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "pupil",
+      "canonical_fact": "The pupil is the part of the eye that allows light to enter.",
+      "prompt_en": "What part of the eye allows light to enter?",
+      "evidence_quotes": [
+        "What part of the eye allows light to enter?",
+        "pupil"
+      ],
+      "reason": "The source question identifies a specific part (pupil) of a whole (eye) by its function (allows light to enter). This maps directly to the whole_to_part relation in the catalog. Both model annotations agree on the extraction, and the source answer 'pupil' is a concise literal copy.",
+      "english": {
+        "prompt_en": "What part of the eye allows light to enter?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "pupil",
+        "canonical_fact": "The pupil is the part of the eye that allows light to enter.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "eye",
+        "answer_aliases_en": [
+          "pupil"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "16ee076bca9da69655ea736792b778d8f1bed6251a08114881ccbb2b404f4af8",
+      "input_sha256": "a144ef0018d151a7a38b5c4f7a9067a313c4e3d7f321b6f5c072959aebbd08f8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000810",
+      "decision": "ready",
+      "subject": "cell growth, repair of cuts and replacement of worn out cells",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "cell division",
+      "canonical_fact": "Cell division is the process used for cell growth, repair of cuts and replacement of worn out cells.",
+      "prompt_en": "What process is used for cell growth, repair of cuts and replacement of worn out cells?",
+      "evidence_quotes": [
+        "What process is used for cell growth, repair of cuts and replacement of worn out cells?",
+        "cell division"
+      ],
+      "reason": "The source question supplies a functional description (cell growth, repair of cuts, replacement of worn out cells) that uniquely identifies the conventional term 'cell division.' This maps to description_to_term. Both model annotations agree on the extraction; the source answer 'cell division' is copied verbatim.",
+      "english": {
+        "prompt_en": "What process is used for cell growth, repair of cuts and replacement of worn out cells?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "cell division",
+        "canonical_fact": "Cell division is the process used for cell growth, repair of cuts and replacement of worn out cells.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "cell growth, repair of cuts and replacement of worn out cells",
+        "answer_aliases_en": [
+          "cell division"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b4495681fe78a2c2d3bc43ad3bcd42f6e70783e7857786a31b42d793ebafcdab",
+      "input_sha256": "25eddc92adef2633e4453598ccea3d0d3917ada10e30799b43bafba28e5dd5e8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000809",
+        "historical:raw_sciq_000810"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7363a1ec2e63592a1b8be6a96994ef1bef6b77c8f6a6be4b609ae6940e7fd8d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 54.113
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000809",
+        "historical:raw_sciq_000810"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7363a1ec2e63592a1b8be6a96994ef1bef6b77c8f6a6be4b609ae6940e7fd8d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2371,
+      "first_chunk_seconds": 62.918,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2496,
+        "prompt_tokens": 1735,
+        "total_tokens": 4231,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2110,
+          "text_tokens": 386
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5c28007bf7f55836cc9d139b9c789311df8abd440538f9ab8a158c07ca26ba1d",
+      "status": "completed",
+      "latency_seconds": 107.781
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000809",
+        "historical:raw_sciq_000810"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8c22233cacd1de5db38e048cb003e06e912fd0121fb395710b83ea552bd5c48a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 53.547
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000809",
+        "historical:raw_sciq_000810"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8c22233cacd1de5db38e048cb003e06e912fd0121fb395710b83ea552bd5c48a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 62.86
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000809",
+        "historical:raw_sciq_000810"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8c22233cacd1de5db38e048cb003e06e912fd0121fb395710b83ea552bd5c48a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.616
+    }
+  ],
+  "status": "failed"
+}

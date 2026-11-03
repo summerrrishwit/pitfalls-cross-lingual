@@ -1,0 +1,130 @@
+{
+  "input_sha256": "849276deb062dbf17b75e4aeb1a302d6c08b0a0f02c8c4c87455a9ff16d91e47",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f84825efde9c9308c5568f11eef4dcbb9964bfbb1b9724395545cba5571207a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2542,
+      "first_chunk_seconds": 25.581,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2658,
+        "prompt_tokens": 1713,
+        "total_tokens": 4371,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2012,
+          "text_tokens": 646
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22667c3950150c1868a471b6528eccc19d5ce1c5347394b7be25231052563758",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 66.252,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5d8c64fd63d558723a5962bb7c5c682496e64d37b570c88d77bfd09d84470a42",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 0.877,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5d8c64fd63d558723a5962bb7c5c682496e64d37b570c88d77bfd09d84470a42",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.905
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f84825efde9c9308c5568f11eef4dcbb9964bfbb1b9724395545cba5571207a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.799
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f84825efde9c9308c5568f11eef4dcbb9964bfbb1b9724395545cba5571207a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 4.853
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001440",
+        "historical:raw_ai2_arc_easy_001444"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f84825efde9c9308c5568f11eef4dcbb9964bfbb1b9724395545cba5571207a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.704
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02351.json",
+      "sha256": "ee68b46e6e9150f2c7cec4840834a3006773fdb5dca00af5ec30ff86feded98a",
+      "previous_status": "failed"
+    }
+  ]
+}

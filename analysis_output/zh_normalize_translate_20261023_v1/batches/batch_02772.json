@@ -1,0 +1,157 @@
+{
+  "input_sha256": "171b8f6ee5cae0a04055ae4cc3630abc49544b3ab5101355b9cc5951e47e0a2c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000127",
+      "decision": "ready",
+      "subject": "January",
+      "relation_id": "month_to_birthstone",
+      "relation_definition": "The traditional gemstone designated as the birthstone for a specific month in the standard Western birthstone calendar.",
+      "direction": "month -> birthstone",
+      "answer": "garnet",
+      "canonical_fact": "The birthstone for the month of January is garnet.",
+      "prompt_en": "What is the traditional birthstone associated with the month of January?",
+      "evidence_quotes": [
+        "birthstone for the month of January",
+        "garnet"
+      ],
+      "reason": "Source explicitly states garnet as the birthstone for January. No catalog relation captures a traditional month-to-gemstone association, so a precise new relation month_to_birthstone is proposed. Answer is a literal copy of source_answer; all fields are well-supported.",
+      "english": {
+        "direction": "month -> birthstone",
+        "relation_id": "month_to_birthstone",
+        "answer": "garnet",
+        "canonical_fact": "The birthstone for the month of January is garnet.",
+        "subject": "January",
+        "prompt_en": "What is the traditional birthstone associated with the month of January?",
+        "relation_definition": "The traditional gemstone designated as the birthstone for a specific month in the standard Western birthstone calendar.",
+        "answer_aliases_en": [
+          "garnet"
+        ],
+        "relation_spec": {
+          "id": "month_to_birthstone",
+          "definition": "The traditional gemstone designated as the birthstone for a specific month in the standard Western birthstone calendar.",
+          "direction": "month -> birthstone"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed314b7451a00d17136ec1af2a725ab775b7d4c0110107ab47743a99b23dc262",
+      "input_sha256": "a5437e082a51e3894ba0688f4b0450644a57c9eef3109c27f832155fff40943c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000128",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'least' is a single-word fill-in for a specific quoted passage (Macedo/Rawls) and only gains meaning within that exact quote. No catalog relation fits the 'quote-to-missing-modifier' pattern, and proposing a new relation would be too narrow to be reusable. The subject ('Stephen Macedo's argument in accordance with John Rawls's theory of justice') is also not a clean entity for a knowledge graph. Defer pending a clearer relational framing.",
+      "input_sha256": "8227a045d92b180782a1ae8081ff914ba316f3c3c90c7b9dc8befaa565e256eb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000127",
+      "input_sha256": "a5437e082a51e3894ba0688f4b0450644a57c9eef3109c27f832155fff40943c",
+      "english": {
+        "direction": "month -> birthstone",
+        "relation_id": "month_to_birthstone",
+        "answer": "garnet",
+        "canonical_fact": "The birthstone for the month of January is garnet.",
+        "subject": "January",
+        "prompt_en": "What is the traditional birthstone associated with the month of January?",
+        "relation_definition": "The traditional gemstone designated as the birthstone for a specific month in the standard Western birthstone calendar.",
+        "answer_aliases_en": [
+          "garnet"
+        ],
+        "relation_spec": {
+          "id": "month_to_birthstone",
+          "definition": "The traditional gemstone designated as the birthstone for a specific month in the standard Western birthstone calendar.",
+          "direction": "month -> birthstone"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed314b7451a00d17136ec1af2a725ab775b7d4c0110107ab47743a99b23dc262",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000127",
+        "subject_zh": "一月",
+        "prompt_zh": "一月对应的传统生辰宝石是什么？",
+        "canonical_fact_zh": "一月的生辰宝石是石榴石。",
+        "answer_zh": "石榴石",
+        "answer_aliases_zh": [
+          "石榴石"
+        ]
+      },
+      "translation_sha256": "b269115ea3efdf228240de64f61a2ebed46868535af259c408251973a715e57f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000127",
+        "historical:raw_mmlu_000128"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c78206eeb7b7facd03589251eb85beb1fd12e0020dfd43cb1b4d7f75630c446a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2677,
+      "first_chunk_seconds": 16.543,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2876,
+        "prompt_tokens": 1810,
+        "total_tokens": 4686,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2535,
+          "text_tokens": 341
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f6f00fccb9982f49d96cc4a2f3f074be5d259c6ed6bb84cbff9d6f653ae2b291",
+      "status": "completed",
+      "latency_seconds": 62.412
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000127"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7ce4610d1a0ea1fd351ab98b66b7ffbf30026216fa616c4c59c5bc33fd564713",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 641,
+      "first_chunk_seconds": 2.515,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 692,
+        "prompt_tokens": 523,
+        "total_tokens": 1215,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 622,
+          "text_tokens": 70
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "16d7656d876c2d1cd0445b16f8b6417255243491f089703b1ce4d4ec7ba776a0",
+      "status": "completed",
+      "latency_seconds": 20.628
+    }
+  ],
+  "status": "completed"
+}

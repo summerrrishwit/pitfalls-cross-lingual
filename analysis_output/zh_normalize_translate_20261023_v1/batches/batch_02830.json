@@ -1,0 +1,211 @@
+{
+  "input_sha256": "92b88bd24c6e9e5d8bc2c7bde9d4980a4226d0821a20ee54f3c1beee6f711829",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000046",
+      "decision": "ready",
+      "subject": "aqueous solution",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "water",
+      "canonical_fact": "In an aqueous solution, the solvent is water.",
+      "prompt_en": "What is the solvent in an aqueous solution?",
+      "evidence_quotes": [
+        "what is the solvent",
+        "water"
+      ],
+      "reason": "Source directly states that the solvent in an aqueous solution is water. whole_to_part fits: water is the specified constituent (solvent) of the whole (aqueous solution). Both model annotations agree on extraction. No conflict with source.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "water",
+        "canonical_fact": "In an aqueous solution, the solvent is water.",
+        "subject": "aqueous solution",
+        "prompt_en": "What is the solvent in an aqueous solution?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9dff72860385f47b37e55ba6f1a7fb728a9105385a4327d536fa8d104888bdf6",
+      "input_sha256": "bdb3dd5e7e547c8125ab1215f24ca0fcad179b2cea4f228e1d4fa105a7863cdb",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000047",
+      "decision": "ready",
+      "subject": "breathing",
+      "relation_id": "process_to_involved_quantity",
+      "relation_definition": "The specific physical quantity in which differences characterize or drive a stated physiological or physical process.",
+      "direction": "process -> physical quantity",
+      "answer": "pressure",
+      "canonical_fact": "Breathing involves differences in pressure, measured in torr, between the inside of the lungs and the air outside.",
+      "prompt_en": "What physical quantity, measured in torr, shows differences between the inside of the lungs and the air outside during breathing?",
+      "evidence_quotes": [
+        "differences in what, measured in torr",
+        "pressure"
+      ],
+      "reason": "Source directly identifies pressure as the quantity whose differences (measured in torr) are involved in breathing. No catalog relation captures a process-to-physical-quantity link; proposing process_to_involved_quantity. Both model annotations agree; sensenova version retains the 'measured in torr' qualifier which is preserved in canonical_fact.",
+      "english": {
+        "direction": "process -> physical quantity",
+        "relation_id": "process_to_involved_quantity",
+        "answer": "pressure",
+        "canonical_fact": "Breathing involves differences in pressure, measured in torr, between the inside of the lungs and the air outside.",
+        "subject": "breathing",
+        "prompt_en": "What physical quantity, measured in torr, shows differences between the inside of the lungs and the air outside during breathing?",
+        "relation_definition": "The specific physical quantity in which differences characterize or drive a stated physiological or physical process.",
+        "answer_aliases_en": [
+          "pressure"
+        ],
+        "relation_spec": {
+          "id": "process_to_involved_quantity",
+          "definition": "The specific physical quantity in which differences characterize or drive a stated physiological or physical process.",
+          "direction": "process -> physical quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9ba0bb706bc416952d78f6977a726da2e5196d3d1c80842d7b32281a0b212c3a",
+      "input_sha256": "e78059276e56be5a3a186d1af7a7e02d2d84100b5640cd1eac837c9163213879",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000046",
+        "historical:raw_sciq_000047"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "86ac0769c25c39fad9eeb5389b137b1d9e15d911130429c13c8c96ae8e2d9c6e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2404,
+      "first_chunk_seconds": 23.824,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2468,
+        "prompt_tokens": 1688,
+        "total_tokens": 4156,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1988,
+          "text_tokens": 480
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8b14112395e24f6d289016873c19d36dd7fd4e9d69593d9887d8cc74a3347d0a",
+      "status": "completed",
+      "latency_seconds": 63.466
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000046",
+        "historical:raw_sciq_000047"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "188c854cf8162e1843de09b1c976a64f073922304e092fd81a740e96390a5ee8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1415,
+      "first_chunk_seconds": 18.15,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1482,
+        "prompt_tokens": 820,
+        "total_tokens": 2302,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1256,
+          "text_tokens": 226
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1b177298e832a78418249fe60582acd826bd7d58e9dcea5a17df4d287bc1e6c6",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 36.411,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000046",
+        "historical:raw_sciq_000047"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "891bd22e35b1ce8c4b159d06e81d530e497249d6aad7806127101804268ca331",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1157,
+      "first_chunk_seconds": 39.932,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1246,
+        "prompt_tokens": 838,
+        "total_tokens": 2084,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1019,
+          "text_tokens": 227
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "eda1e20bf579da1f09938f57c3474f2706e0ebee8d569d0e141b272f460e8912",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 61.02,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000046",
+        "historical:raw_sciq_000047"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "891bd22e35b1ce8c4b159d06e81d530e497249d6aad7806127101804268ca331",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1319,
+      "first_chunk_seconds": 21.631,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1366,
+        "prompt_tokens": 838,
+        "total_tokens": 2204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1208,
+          "text_tokens": 158
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f1a9cc56faad9c0805cd4bf41dddac28d357819d0d9369324f7d2ff248ff31dd",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 51.31,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

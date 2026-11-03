@@ -1,0 +1,246 @@
+{
+  "input_sha256": "83e7ec38c11be689c7e5e3468be978618b728ea9601038779449fdf5122b7eeb",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001392",
+      "decision": "ready",
+      "subject": "hearing aid",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "the microphone",
+      "canonical_fact": "The part of a hearing aid that functions to detect sounds in the user's environment is the microphone.",
+      "prompt_en": "Which component of a hearing aid is responsible for detecting sounds in the user's environment?",
+      "evidence_quotes": [
+        "Which part of a hearing aid functions to detect sounds in the user's environment?",
+        "the microphone"
+      ],
+      "reason": "Source question explicitly asks which part of a hearing aid detects sounds; source answer is 'the microphone.' Both model annotations agree. whole_to_part (whole -> part) fits exactly: hearing aid is the whole, microphone is the specified constituent part qualified by its sound-detecting function. No conflict with existing extractions.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "the microphone",
+        "canonical_fact": "The part of a hearing aid that functions to detect sounds in the user's environment is the microphone.",
+        "subject": "hearing aid",
+        "prompt_en": "Which component of a hearing aid is responsible for detecting sounds in the user's environment?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "the microphone"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "958ac605f6782e8257bd91281fa78dd788d18f111515383b6ed153d905abfebf",
+      "input_sha256": "19092fc59f70f73a03c36db90d92e008d77d3949f07aa995a1c0cd88f3ebeb4a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001393",
+      "decision": "ready",
+      "subject": "highest temperatures",
+      "relation_id": "phenomenon_to_peak_timing",
+      "relation_definition": "The time period during which a specified natural phenomenon most commonly reaches its peak value; retain frequency qualifiers such as 'most often.'",
+      "direction": "specified natural phenomenon -> time period",
+      "answer": "afternoon",
+      "canonical_fact": "The highest temperatures are most often recorded in the afternoon.",
+      "prompt_en": "During which time of day are the highest temperatures most often recorded?",
+      "evidence_quotes": [
+        "During which time of day are the highest temperatures most often recorded?",
+        "afternoon"
+      ],
+      "reason": "Source question asks for the time of day when highest temperatures are most often recorded; source answer is 'afternoon.' No catalog relation covers a phenomenon-to-timing mapping; proposing phenomenon_to_peak_timing (specified natural phenomenon -> time period) to precisely capture the peak-time association while preserving the 'most often' qualifier. Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "specified natural phenomenon -> time period",
+        "relation_id": "phenomenon_to_peak_timing",
+        "answer": "afternoon",
+        "canonical_fact": "The highest temperatures are most often recorded in the afternoon.",
+        "subject": "highest temperatures",
+        "prompt_en": "During which time of day are the highest temperatures most often recorded?",
+        "relation_definition": "The time period during which a specified natural phenomenon most commonly reaches its peak value; retain frequency qualifiers such as 'most often.'",
+        "answer_aliases_en": [
+          "afternoon"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_peak_timing",
+          "definition": "The time period during which a specified natural phenomenon most commonly reaches its peak value; retain frequency qualifiers such as 'most often.'",
+          "direction": "specified natural phenomenon -> time period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0efedf7cfa32548c936de6c400b7d5c8abaaf966363407aa56f8c15415cb4b04",
+      "input_sha256": "51d2c2ff4c0ebf3cfb20b99407c700bd5b1acd66474df9ffb6aded7f2a7db672",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001392",
+      "input_sha256": "19092fc59f70f73a03c36db90d92e008d77d3949f07aa995a1c0cd88f3ebeb4a",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "the microphone",
+        "canonical_fact": "The part of a hearing aid that functions to detect sounds in the user's environment is the microphone.",
+        "subject": "hearing aid",
+        "prompt_en": "Which component of a hearing aid is responsible for detecting sounds in the user's environment?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "the microphone"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "958ac605f6782e8257bd91281fa78dd788d18f111515383b6ed153d905abfebf",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001392",
+        "subject_zh": "助听器",
+        "prompt_zh": "助听器的哪个部件负责检测用户环境中的声音？",
+        "canonical_fact_zh": "助听器中负责检测用户环境中声音的部件是麦克风。",
+        "answer_zh": "麦克风",
+        "answer_aliases_zh": [
+          "麦克风"
+        ]
+      },
+      "translation_sha256": "50f407de68f151b604bf63cd7572546016a1fd92ae1f9a7264f51c956707ed72"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001393",
+      "input_sha256": "51d2c2ff4c0ebf3cfb20b99407c700bd5b1acd66474df9ffb6aded7f2a7db672",
+      "english": {
+        "direction": "specified natural phenomenon -> time period",
+        "relation_id": "phenomenon_to_peak_timing",
+        "answer": "afternoon",
+        "canonical_fact": "The highest temperatures are most often recorded in the afternoon.",
+        "subject": "highest temperatures",
+        "prompt_en": "During which time of day are the highest temperatures most often recorded?",
+        "relation_definition": "The time period during which a specified natural phenomenon most commonly reaches its peak value; retain frequency qualifiers such as 'most often.'",
+        "answer_aliases_en": [
+          "afternoon"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_peak_timing",
+          "definition": "The time period during which a specified natural phenomenon most commonly reaches its peak value; retain frequency qualifiers such as 'most often.'",
+          "direction": "specified natural phenomenon -> time period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0efedf7cfa32548c936de6c400b7d5c8abaaf966363407aa56f8c15415cb4b04",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001393",
+        "subject_zh": "最高温度",
+        "prompt_zh": "一天中哪个时段最常记录到最高温度？",
+        "canonical_fact_zh": "最高温度最常记录于下午。",
+        "answer_zh": "下午",
+        "answer_aliases_zh": [
+          "下午"
+        ]
+      },
+      "translation_sha256": "0ef6e12280fc36f8afa9ddfd2ba257adc3627e45889e7feb8f789db6045a2ce0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001392",
+        "historical:raw_ai2_arc_easy_001393"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "38304c8444dc385608e234ce6a2f032f379f4cac739be2976cfee6e300e31a00",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2344,
+      "first_chunk_seconds": 34.046,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2554,
+        "prompt_tokens": 1732,
+        "total_tokens": 4286,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1954,
+          "text_tokens": 600
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4893ba20ea69109b762efa16d1991db60932d730cbf694d40fffdefe7fb7dace",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 67.771,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001392",
+        "historical:raw_ai2_arc_easy_001393"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ff882fe5b51d756482b7acf68cbbfe4a814b3de5cfcd3067d78bc5c9beeb255c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3647,
+      "first_chunk_seconds": 29.112,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3776,
+        "prompt_tokens": 1751,
+        "total_tokens": 5527,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3246,
+          "text_tokens": 530
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "eaab91237975a91cc4d9c15595594309416412540003dd8aa748c699b6954507",
+      "status": "completed",
+      "latency_seconds": 88.009
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001392",
+        "historical:raw_ai2_arc_easy_001393"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "85f8853342a31541fb6f497337290845f6272e2e0236511a475000ec1a97987e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1021,
+      "first_chunk_seconds": 30.667,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1053,
+        "prompt_tokens": 835,
+        "total_tokens": 1888,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 838,
+          "text_tokens": 215
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8dd4053c2d3ef12b06349d04e97efdcc1e2f00da2f8145433dddd1809b4d08c8",
+      "status": "completed",
+      "latency_seconds": 45.003
+    }
+  ],
+  "status": "completed"
+}

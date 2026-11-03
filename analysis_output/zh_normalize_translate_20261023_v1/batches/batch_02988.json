@@ -1,0 +1,215 @@
+{
+  "input_sha256": "3d0000553901a29e8696b254eef87ea5a0e1f0f3b2d168cdb1c656fc2bb5110e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000405",
+      "decision": "ready",
+      "subject": "a fiber that is found only in mammals",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "hair",
+      "canonical_fact": "Hair is a fiber that is found only in mammals.",
+      "prompt_en": "What is a fiber that is found only in mammals?",
+      "evidence_quotes": [
+        "a fiber that is found only in mammals",
+        "hair"
+      ],
+      "reason": "The source question supplies a defining description ('a fiber that is found only in mammals') and the source answer is the conventional term 'hair'. This maps exactly to description_to_term. Both model annotations agree on extraction. No conflict detected.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "hair",
+        "canonical_fact": "Hair is a fiber that is found only in mammals.",
+        "subject": "a fiber that is found only in mammals",
+        "prompt_en": "What is a fiber that is found only in mammals?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "hair"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3385379f3fcf51698b12d8a4aa5cbaffdb1257d2e541167e0edcea6cfa738af3",
+      "input_sha256": "6025b84d6d766112ddbd98406992ea5827f32e0d6d656ada6a41cb6a6b44f61f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000406",
+      "decision": "ready",
+      "subject": "bird's heart",
+      "relation_id": "organ_to_chamber_count",
+      "relation_definition": "Number of chambers in a specified organ, retaining the organism/species qualifier; distinguishes 2-chamber vs 4-chamber hearts.",
+      "direction": "organ -> chamber count",
+      "answer": "4",
+      "canonical_fact": "A bird's heart has 4 chambers.",
+      "prompt_en": "How many chambers are there in a bird's heart?",
+      "evidence_quotes": [
+        "chambers",
+        "bird's heart",
+        "4"
+      ],
+      "reason": "No existing catalog relation captures a quantitative structural component count of an organ. Proposed new relation organ_to_chamber_count with explicit direction organ->chamber count. Source question and answer are consistent; both model annotations agree. The answer '4' is a literal substring of source_answer.",
+      "english": {
+        "direction": "organ -> chamber count",
+        "relation_id": "organ_to_chamber_count",
+        "answer": "4",
+        "canonical_fact": "A bird's heart has 4 chambers.",
+        "subject": "bird's heart",
+        "prompt_en": "How many chambers are there in a bird's heart?",
+        "relation_definition": "Number of chambers in a specified organ, retaining the organism/species qualifier; distinguishes 2-chamber vs 4-chamber hearts.",
+        "answer_aliases_en": [
+          "4"
+        ],
+        "relation_spec": {
+          "id": "organ_to_chamber_count",
+          "definition": "Number of chambers in a specified organ, retaining the organism/species qualifier; distinguishes 2-chamber vs 4-chamber hearts.",
+          "direction": "organ -> chamber count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7b2669553b9558975fcd312ba9d4032524489d3720590025932e880798de94ed",
+      "input_sha256": "56758a028ad5b660d69651bbe93d5fe2f64ac16f1503ba29ee1ee50e5d7031de",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000405",
+      "input_sha256": "6025b84d6d766112ddbd98406992ea5827f32e0d6d656ada6a41cb6a6b44f61f",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "hair",
+        "canonical_fact": "Hair is a fiber that is found only in mammals.",
+        "subject": "a fiber that is found only in mammals",
+        "prompt_en": "What is a fiber that is found only in mammals?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "hair"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3385379f3fcf51698b12d8a4aa5cbaffdb1257d2e541167e0edcea6cfa738af3",
+      "translation": {
+        "record_id": "historical:raw_sciq_000405",
+        "subject_zh": "一种仅存在于哺乳动物身上的纤维",
+        "prompt_zh": "什么纤维仅存在于哺乳动物身上？",
+        "canonical_fact_zh": "毛发是一种仅存在于哺乳动物身上的纤维。",
+        "answer_zh": "毛发",
+        "answer_aliases_zh": [
+          "毛发"
+        ]
+      },
+      "translation_sha256": "3afea29aab4fdbbfc0f4371b6a581ac6921e47a6485f1b224dc6141eb5619a3c"
+    },
+    {
+      "record_id": "historical:raw_sciq_000406",
+      "input_sha256": "56758a028ad5b660d69651bbe93d5fe2f64ac16f1503ba29ee1ee50e5d7031de",
+      "english": {
+        "direction": "organ -> chamber count",
+        "relation_id": "organ_to_chamber_count",
+        "answer": "4",
+        "canonical_fact": "A bird's heart has 4 chambers.",
+        "subject": "bird's heart",
+        "prompt_en": "How many chambers are there in a bird's heart?",
+        "relation_definition": "Number of chambers in a specified organ, retaining the organism/species qualifier; distinguishes 2-chamber vs 4-chamber hearts.",
+        "answer_aliases_en": [
+          "4"
+        ],
+        "relation_spec": {
+          "id": "organ_to_chamber_count",
+          "definition": "Number of chambers in a specified organ, retaining the organism/species qualifier; distinguishes 2-chamber vs 4-chamber hearts.",
+          "direction": "organ -> chamber count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7b2669553b9558975fcd312ba9d4032524489d3720590025932e880798de94ed",
+      "translation": {
+        "record_id": "historical:raw_sciq_000406",
+        "subject_zh": "鸟类的心脏",
+        "prompt_zh": "鸟类的心脏有几个腔室？",
+        "canonical_fact_zh": "鸟类的心脏有4个腔室。",
+        "answer_zh": "4",
+        "answer_aliases_zh": [
+          "4"
+        ]
+      },
+      "translation_sha256": "d32b81c9c416f8e47b3524ae8bfb9a1d11bc68cb3cd66d964d01607415fd19fb"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000405",
+        "historical:raw_sciq_000406"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a66160a38072a4494f8224c11e4ea9dab07556fcfd84849b4739bbb70377f322",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1903,
+      "first_chunk_seconds": 4.854,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2043,
+        "prompt_tokens": 1648,
+        "total_tokens": 3691,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1569,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ce5257780299f6aa8189eebed93e7a6919fb81e71e39e3c588d202d8f70bd968",
+      "status": "completed",
+      "latency_seconds": 33.519
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000405",
+        "historical:raw_sciq_000406"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c63b63ac4f56433a4fc58787704b2c5d836436590befe59dc25dc1537ba22b21",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 860,
+      "first_chunk_seconds": 1.838,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 928,
+        "prompt_tokens": 830,
+        "total_tokens": 1758,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 721,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "933b597fceab05ce5ba6fa39e08ef7295ea7bba5b47d49f1363a2874084f86c7",
+      "status": "completed",
+      "latency_seconds": 186.333
+    }
+  ],
+  "status": "completed"
+}

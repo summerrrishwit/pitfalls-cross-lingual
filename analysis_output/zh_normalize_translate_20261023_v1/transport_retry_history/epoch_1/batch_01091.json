@@ -1,0 +1,157 @@
+{
+  "input_sha256": "13d5397238abeb3fd95a97dd22d220301a1ba6fa0d558981edc2ef0950ae861e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5d912cc2f7474370c723",
+      "decision": "ready",
+      "subject": "Gestalt therapy",
+      "relation_id": "therapy_to_integration_target",
+      "relation_definition": "Specific psychological or experiential components that a specified therapy is designed to integrate or unify.",
+      "direction": "therapy -> components it aims to integrate",
+      "answer": "thought, feeling, and action",
+      "canonical_fact": "Gestalt therapy is designed to achieve integration of thought, feeling, and action.",
+      "prompt_en": "Gestalt therapy is designed to achieve integration of",
+      "evidence_quotes": [
+        "Gestalt therapy is designed to achieve integration of",
+        "thought, feeling, and action"
+      ],
+      "reason": "No catalog relation captures the 'designed-to-integrate' aim of a therapy. The existing term_to_definition does not fit because the answer is a target/aim, not a definition of the subject. A new precise relation therapy_to_integration_target is proposed. The source question and answer provide a clean, unambiguous factual pair; the prompt_en is option-free and excludes the answer.",
+      "english": {
+        "answer": "thought, feeling, and action",
+        "relation_id": "therapy_to_integration_target",
+        "prompt_en": "Gestalt therapy is designed to achieve integration of",
+        "direction": "therapy -> components it aims to integrate",
+        "subject": "Gestalt therapy",
+        "canonical_fact": "Gestalt therapy is designed to achieve integration of thought, feeling, and action.",
+        "relation_definition": "Specific psychological or experiential components that a specified therapy is designed to integrate or unify.",
+        "answer_aliases_en": [
+          "thought, feeling, and action"
+        ],
+        "relation_spec": {
+          "id": "therapy_to_integration_target",
+          "definition": "Specific psychological or experiential components that a specified therapy is designed to integrate or unify.",
+          "direction": "therapy -> components it aims to integrate"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7cc1030d030b9503d3d1f299aec78ea1ec4835f266ce9111031fbcbd0e4a156",
+      "input_sha256": "54b1f8cd0644570ff57c636d8ccdce97faeae8de0535c59d436bfff8f284ae52",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5d9f9c2f2b73ff0e36fd",
+      "decision": "ready",
+      "subject": "cognitive psychologists",
+      "relation_id": "group_to_supported_theory",
+      "relation_definition": "The specific named theory most associated with or supported by a specified group of professionals or scholars.",
+      "direction": "group of professionals -> theory they most likely support",
+      "answer": "two-factor theory",
+      "canonical_fact": "Cognitive psychologists are most likely to support the two-factor theory of emotion.",
+      "prompt_en": "Which theory of emotion are cognitive psychologists most likely to support?",
+      "evidence_quotes": [
+        "Which theory of emotion are cognitive psychologists most likely to support?",
+        "two-factor theory"
+      ],
+      "reason": "No catalog relation captures the 'group supports/aligns with a named theory' relation. The answer 'two-factor theory' is a specific named theory, not a definition, class, or alias of 'cognitive psychologists.' A new precise relation group_to_supported_theory is proposed. The source provides a clear factual pairing; prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "two-factor theory",
+        "relation_id": "group_to_supported_theory",
+        "prompt_en": "Which theory of emotion are cognitive psychologists most likely to support?",
+        "direction": "group of professionals -> theory they most likely support",
+        "subject": "cognitive psychologists",
+        "canonical_fact": "Cognitive psychologists are most likely to support the two-factor theory of emotion.",
+        "relation_definition": "The specific named theory most associated with or supported by a specified group of professionals or scholars.",
+        "answer_aliases_en": [
+          "two-factor theory"
+        ],
+        "relation_spec": {
+          "id": "group_to_supported_theory",
+          "definition": "The specific named theory most associated with or supported by a specified group of professionals or scholars.",
+          "direction": "group of professionals -> theory they most likely support"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a3c8807567af9e830f030536f26af634d2c88b1bc26890e69b63a9946997ba7",
+      "input_sha256": "014cd7e541fab3e3dd79f8cec69d4d895353262265f1c2e4873bc8f3b03c1f7a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5d912cc2f7474370c723",
+        "public:pbf_5d9f9c2f2b73ff0e36fd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0912a46f6ca75fd8e3700ce1aaede6061e9b6631fbc13bbdfe15dafd1f0806ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2083,
+      "first_chunk_seconds": 37.922,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2164,
+        "prompt_tokens": 1624,
+        "total_tokens": 3788,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1596,
+          "text_tokens": 568
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f413c4968c9c425f1bdb23ffdf5a88243a0371cb62d82468b5b39c04a055a0ce",
+      "status": "completed",
+      "latency_seconds": 65.458
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5d912cc2f7474370c723",
+        "public:pbf_5d9f9c2f2b73ff0e36fd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7e6feadacc3146ba66f0bf4f46a13c8de0e2e8911989d5344bdd554e995b8733",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.349
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5d912cc2f7474370c723",
+        "public:pbf_5d9f9c2f2b73ff0e36fd"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7e6feadacc3146ba66f0bf4f46a13c8de0e2e8911989d5344bdd554e995b8733",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.372
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5d912cc2f7474370c723",
+        "public:pbf_5d9f9c2f2b73ff0e36fd"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7e6feadacc3146ba66f0bf4f46a13c8de0e2e8911989d5344bdd554e995b8733",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 150.828
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,79 @@
+{
+  "input_sha256": "84f2727a0c9cfdf31b8db9d4a6959f3b1dfa778c9e231b771cb381f58ad40e49",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_770ab770f579f462f277",
+        "public:pbf_7b795b187a33b0234418"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4aae0688ddd87fdf172ca0b4952165469927d5dd8ae5c43cce637835975c60dc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1539,
+      "first_chunk_seconds": 51.738,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1550,
+        "prompt_tokens": 1651,
+        "total_tokens": 3201,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1008,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fc528a169accea10be8b9cf7979022b442506dce654ea449e23f8d32428c5779",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 63.042,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_770ab770f579f462f277",
+        "public:pbf_7b795b187a33b0234418"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2b968a47e7db6337032b1fd09b56198299af9eef0a79e4243b7499dfa92ff9d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.642
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_770ab770f579f462f277",
+        "public:pbf_7b795b187a33b0234418"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2b968a47e7db6337032b1fd09b56198299af9eef0a79e4243b7499dfa92ff9d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 2.058,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

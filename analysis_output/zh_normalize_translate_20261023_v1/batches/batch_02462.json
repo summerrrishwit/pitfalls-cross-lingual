@@ -1,0 +1,71 @@
+{
+  "input_sha256": "33acee145da34f59240d9064ef2d66f72b3289606a7f6f294d1e5b97eeab60c3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000803",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer 'weird' is a non-unique descriptive synonym; multiple adjectives (strange, odd, eccentric, bizarre) equally satisfy 'how might people acting quirky and abnormal be described.' No catalog relation captures a loose descriptive-synonym link. The Qwen-3.8-Max annotation also flagged non_unique_answer. Insufficient for a reusable factual candidate.",
+      "input_sha256": "aa58890e7dafa1873cf80da227d89676431f46481dbb20d59f2f078cf7804a68",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000807",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question contains the uncertainty qualifier 'likely' ('What does someone committing perjury likely doing?'), making the link probabilistic rather than a strict entailment. No catalog relation fits 'role -> typical action.' The sensenova annotation flagged typical_action_or_location. Without a matching or cleanly proposed relation and with the source qualifier weakening the fact, deferring is appropriate.",
+      "input_sha256": "19a257bc1e642a6c7cf21fb72fe0d3dd034fa429da9535b5a5f788cfcc2def24",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000803",
+        "historical:raw_commonsense_qa_000807"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "81cd6de6ce595fc7c1e3a7d751ebe089f2f4a7f24456b4f94b07034c2407b3d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1937,
+      "first_chunk_seconds": 29.609,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2000,
+        "prompt_tokens": 1614,
+        "total_tokens": 3614,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1630,
+          "text_tokens": 370
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3775caf2c46748b839ba2387786d77c2abd806715c303e1bd2c67affbda72e82",
+      "status": "completed",
+      "latency_seconds": 58.655
+    }
+  ],
+  "status": "completed"
+}

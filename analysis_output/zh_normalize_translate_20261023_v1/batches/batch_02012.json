@@ -1,0 +1,160 @@
+{
+  "input_sha256": "31cb6d3546900b739444319b356cbee9731101c3a5a345ef1da11334c10357ca",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f18be9e33557397c9589",
+      "decision": "ready",
+      "subject": "Gabrielle Union",
+      "relation_id": "person_to_high_school_location",
+      "relation_definition": "The city or geographic area where a specified person attended high school; the answer is a place name, not an institution name.",
+      "direction": "person -> high school attendance location",
+      "answer": "Pleasanton",
+      "canonical_fact": "Gabrielle Union went to high school in Pleasanton.",
+      "prompt_en": "Where did Gabrielle Union go to high school?",
+      "evidence_quotes": [
+        "gabrielle union go to high school",
+        "Pleasanton"
+      ],
+      "reason": "Source answer 'Pleasanton' is a location directly extracted from source. No catalog relation covers person-to-high-school-attendance-location, so a new precise relation is proposed. Prompt does not contain the answer string 'Pleasanton' and has no multiple-choice options.",
+      "english": {
+        "answer": "Pleasanton",
+        "relation_id": "person_to_high_school_location",
+        "prompt_en": "Where did Gabrielle Union go to high school?",
+        "direction": "person -> high school attendance location",
+        "subject": "Gabrielle Union",
+        "canonical_fact": "Gabrielle Union went to high school in Pleasanton.",
+        "relation_definition": "The city or geographic area where a specified person attended high school; the answer is a place name, not an institution name.",
+        "answer_aliases_en": [
+          "Pleasanton",
+          "Pleasanton, California"
+        ],
+        "relation_spec": {
+          "id": "person_to_high_school_location",
+          "definition": "The city or geographic area where a specified person attended high school; the answer is a place name, not an institution name.",
+          "direction": "person -> high school attendance location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "956dce2925de18b2152203a7a54543c6a02517c176c383e4dd72abbcdcfe9c19",
+      "input_sha256": "2058e6a32de38b37cba27bdb5402f827b388dac82f90b6bb25e378f38354b076",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f18beeb4a7ded3b7801b",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The antecedent 'The university raises tuition' is a literal clause embedded in the stated conditional proposition within the prompt text, so any prompt_en for this question necessarily contains its answer. This violates the requirement that prompt_en does not contain its answer. Additionally, no catalog relation fits 'proposition -> antecedent'; proposing one would require a new logical-structure relation, but the prompt constraint blocks readiness.",
+      "input_sha256": "d368aefe38e437ebb48dd11196c957f02e0b8879911b7a1bb84d163edf900457",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f18be9e33557397c9589",
+      "input_sha256": "2058e6a32de38b37cba27bdb5402f827b388dac82f90b6bb25e378f38354b076",
+      "english": {
+        "answer": "Pleasanton",
+        "relation_id": "person_to_high_school_location",
+        "prompt_en": "Where did Gabrielle Union go to high school?",
+        "direction": "person -> high school attendance location",
+        "subject": "Gabrielle Union",
+        "canonical_fact": "Gabrielle Union went to high school in Pleasanton.",
+        "relation_definition": "The city or geographic area where a specified person attended high school; the answer is a place name, not an institution name.",
+        "answer_aliases_en": [
+          "Pleasanton",
+          "Pleasanton, California"
+        ],
+        "relation_spec": {
+          "id": "person_to_high_school_location",
+          "definition": "The city or geographic area where a specified person attended high school; the answer is a place name, not an institution name.",
+          "direction": "person -> high school attendance location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "956dce2925de18b2152203a7a54543c6a02517c176c383e4dd72abbcdcfe9c19",
+      "translation": {
+        "record_id": "public:pbf_f18be9e33557397c9589",
+        "subject_zh": "加布里埃尔·尤尼恩",
+        "prompt_zh": "加布里埃尔·尤尼恩在哪里上的高中？",
+        "canonical_fact_zh": "加布里埃尔·尤尼恩在普莱森顿上高中。",
+        "answer_zh": "普莱森顿",
+        "answer_aliases_zh": [
+          "普莱森顿",
+          "加利福尼亚州普莱森顿"
+        ]
+      },
+      "translation_sha256": "53a1da731e5d7758bce705dd281f2388626c55d2b8730561b4193d6762fb1fe4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f18be9e33557397c9589",
+        "public:pbf_f18beeb4a7ded3b7801b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3807e7c0b08a7314c7d3f6fedda987cb5ea5ef2f980999c0c7a93c0f9f66e45e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3361,
+      "first_chunk_seconds": 49.37,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3399,
+        "prompt_tokens": 1747,
+        "total_tokens": 5146,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2945,
+          "text_tokens": 454
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "450bf1497855e5f2fd6eb9460d265c703803f9e7b89d057a6bbd7a91ce642ccd",
+      "status": "completed",
+      "latency_seconds": 85.54
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f18be9e33557397c9589"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1fc055c7428f1bcca9044e1945ab590b7fa9edf956f84ce87a669650d9b1499a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 498,
+      "first_chunk_seconds": 23.082,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 536,
+        "prompt_tokens": 549,
+        "total_tokens": 1085,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 429,
+          "text_tokens": 107
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5cb8607cbdc9a7d7b14b04026e32404d2165908de141c97d3e399d9172e64673",
+      "status": "completed",
+      "latency_seconds": 30.04
+    }
+  ],
+  "status": "completed"
+}

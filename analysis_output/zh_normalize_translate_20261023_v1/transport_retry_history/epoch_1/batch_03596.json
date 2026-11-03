@@ -1,0 +1,247 @@
+{
+  "input_sha256": "67db2dfac5f4a00fec84636c36d2250da9953ca2424813ac0933514be4484437",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000349",
+      "decision": "ready",
+      "subject": "f-word",
+      "relation_id": "term_to_etymological_source",
+      "relation_definition": "The specific word or phrase a placeholder or euphemistic term originally stood for or was derived from; 'none' if the term has no specific etymological source word.",
+      "direction": "term -> etymological source",
+      "answer": "Nothing",
+      "canonical_fact": "The f-word did not originally stand for any specific word.",
+      "prompt_en": "What did the f-word originally stand for?",
+      "evidence_quotes": [
+        "What did the f-word originally stand for?",
+        "Nothing"
+      ],
+      "reason": "Source answer 'Nothing' is a concise, valid factual response indicating no etymological source word. No existing catalog relation fits exactly (f-word is a euphemistic placeholder, not an abbreviation in the technical sense, nor a defined term). Proposing precise new relation term_to_etymological_source for placeholder-term etymology rather than forcing abbreviation_to_expansion or term_to_definition.",
+      "english": {
+        "prompt_en": "What did the f-word originally stand for?",
+        "relation_definition": "The specific word or phrase a placeholder or euphemistic term originally stood for or was derived from; 'none' if the term has no specific etymological source word.",
+        "answer": "Nothing",
+        "canonical_fact": "The f-word did not originally stand for any specific word.",
+        "direction": "term -> etymological source",
+        "relation_id": "term_to_etymological_source",
+        "subject": "f-word",
+        "answer_aliases_en": [
+          "Nothing"
+        ],
+        "relation_spec": {
+          "id": "term_to_etymological_source",
+          "definition": "The specific word or phrase a placeholder or euphemistic term originally stood for or was derived from; 'none' if the term has no specific etymological source word.",
+          "direction": "term -> etymological source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d3973b2bd65d91a422b7797cce8bb4fac9a062c673dae604b26a38fce6b5d035",
+      "input_sha256": "d1dd0308dbe68a7c34111b8fca27d0838836dbaf6ab68ceaa2278a31bf7ac198",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000445",
+      "decision": "ready",
+      "subject": "largest city in the U.S. that is not located on navigable water",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Indianapolis",
+      "canonical_fact": "The largest city in the U.S. not located on navigable water is Indianapolis.",
+      "prompt_en": "What is the largest city in the U.S. that is not located on navigable water?",
+      "evidence_quotes": [
+        "What is the largest city in the U.S. that's not located on navigable water?",
+        "The largest city in the U.S. that's not located on navigable water is Indianapolis"
+      ],
+      "reason": "The source answer explicitly names Indianapolis as the unique entity satisfying the fully qualified description (largest, U.S., not on navigable water). This maps directly to description_to_entity: an identifying description yielding a single named entity. The answer 'Indianapolis' is a literal substring of the source answer.",
+      "english": {
+        "prompt_en": "What is the largest city in the U.S. that is not located on navigable water?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Indianapolis",
+        "canonical_fact": "The largest city in the U.S. not located on navigable water is Indianapolis.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "largest city in the U.S. that is not located on navigable water",
+        "answer_aliases_en": [
+          "Indianapolis"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0641a7d32cdcbef8dab0565fc35ead0f31db6c0e31a5deccc01b1e85c32f7d69",
+      "input_sha256": "e52a687a751f9fb36d3395beff8d1555846556cd1c0d5f16d7e7e7a46e57dd08",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e069e98687b7bbacce26687990dc875924a34454d3a75b7a939b0808ff9b51d3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 30.783,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e069e98687b7bbacce26687990dc875924a34454d3a75b7a939b0808ff9b51d3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2237,
+      "first_chunk_seconds": 80.793,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2278,
+        "prompt_tokens": 1611,
+        "total_tokens": 3889,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1901,
+          "text_tokens": 377
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "622536c578d481619d9cd6ea4c65a22f10cfda8dcf430f256086fb4f0c930a81",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 116.734,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "32be56de6e1e3d67361c5b07710daa43c892758bee109c0a932bf69b56051fad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3977,
+      "first_chunk_seconds": 25.353,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4195,
+        "prompt_tokens": 1630,
+        "total_tokens": 5825,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3634,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "89289a28145c3ea95236be5df515f67f43ae2491842a941cbc549e2896172f21",
+      "status": "completed",
+      "latency_seconds": 90.848
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "543fc8c7f61bdc9b70f1a23767da935efcfff97a9e89883c9ce7a70a18ac7e7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 66.034,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "543fc8c7f61bdc9b70f1a23767da935efcfff97a9e89883c9ce7a70a18ac7e7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 104.445,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000349",
+        "historical:raw_truthful_qa_000445"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "543fc8c7f61bdc9b70f1a23767da935efcfff97a9e89883c9ce7a70a18ac7e7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 68.044,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

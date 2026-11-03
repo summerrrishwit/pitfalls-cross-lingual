@@ -1,0 +1,214 @@
+{
+  "input_sha256": "cba00cb575744af243898555c05f0f847c94229b2d95292cf43a277e64aa9e40",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000545",
+      "decision": "ready",
+      "subject": "Return of the Jedi",
+      "relation_id": "work_to_director",
+      "relation_definition": "Named director of a specified film or TV work; disambiguate when multiple directors or versions exist.",
+      "direction": "work -> director",
+      "answer": "Richard Marquand",
+      "canonical_fact": "Richard Marquand directed Return of the Jedi.",
+      "prompt_en": "Who directed the film Return of the Jedi?",
+      "evidence_quotes": [
+        "Who directed \"Return of the Jedi\"?",
+        "Richard Marquand directed \"Return of the Jedi\""
+      ],
+      "reason": "Both models agree on extraction. Source answer explicitly names Richard Marquand as director. No existing catalog relation covers film/TV director, so a new precise relation work_to_director is proposed. All fields nonempty; prompt is option-free and omits the answer.",
+      "english": {
+        "prompt_en": "Who directed the film Return of the Jedi?",
+        "relation_definition": "Named director of a specified film or TV work; disambiguate when multiple directors or versions exist.",
+        "answer": "Richard Marquand",
+        "canonical_fact": "Richard Marquand directed Return of the Jedi.",
+        "direction": "work -> director",
+        "relation_id": "work_to_director",
+        "subject": "Return of the Jedi",
+        "answer_aliases_en": [
+          "Richard Marquand"
+        ],
+        "relation_spec": {
+          "id": "work_to_director",
+          "definition": "Named director of a specified film or TV work; disambiguate when multiple directors or versions exist.",
+          "direction": "work -> director"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7aae67b4bf5ac3c928cc950c9ddd0fde1808dd86ede612c81d46179f1308194c",
+      "input_sha256": "861180d4e1acb4bfae216b4e22b1ebad94baf7ee28bf94ee0ba69f4e74e3d6c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000549",
+      "decision": "ready",
+      "subject": "bears",
+      "relation_id": "organism_to_body_covering",
+      "relation_definition": "Natural external body covering of a specified organism type; retain the specific covering and any stated context (e.g., protective role, situation).",
+      "direction": "organism -> body covering",
+      "answer": "thick fur",
+      "canonical_fact": "Bears are protected by their natural coats of thick fur when they fight in the wild.",
+      "prompt_en": "What natural body covering protects bears when they fight in the wild?",
+      "evidence_quotes": [
+        "What do bears wear when they fight in the wild?",
+        "Bears are protected by their natural coats of thick fur when they fight in the wild"
+      ],
+      "reason": "Source answer clearly states bears' natural protective covering. 'thick fur' is a literal substring retained from the old extraction and does not conflict with source. No existing catalog relation precisely captures organism-to-natural-body-covering; a new relation organism_to_body_covering is proposed. One model flagged as not extractable, but the fact is well-supported by the source and the other model agreed; the relation is sufficiently specific and reusable.",
+      "english": {
+        "prompt_en": "What natural body covering protects bears when they fight in the wild?",
+        "relation_definition": "Natural external body covering of a specified organism type; retain the specific covering and any stated context (e.g., protective role, situation).",
+        "answer": "thick fur",
+        "canonical_fact": "Bears are protected by their natural coats of thick fur when they fight in the wild.",
+        "direction": "organism -> body covering",
+        "relation_id": "organism_to_body_covering",
+        "subject": "bears",
+        "answer_aliases_en": [
+          "thick fur"
+        ],
+        "relation_spec": {
+          "id": "organism_to_body_covering",
+          "definition": "Natural external body covering of a specified organism type; retain the specific covering and any stated context (e.g., protective role, situation).",
+          "direction": "organism -> body covering"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a7a5eeac38106c0f0827a298e2849d398863ee4601f6418e20b5d8c0024f0099",
+      "input_sha256": "e7488ccafe7dc23ad1279c21a16cc86b3d040e80c43bde1cc1e5ce1b92d68437",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_truthful_qa_000545",
+      "input_sha256": "861180d4e1acb4bfae216b4e22b1ebad94baf7ee28bf94ee0ba69f4e74e3d6c5",
+      "english": {
+        "prompt_en": "Who directed the film Return of the Jedi?",
+        "relation_definition": "Named director of a specified film or TV work; disambiguate when multiple directors or versions exist.",
+        "answer": "Richard Marquand",
+        "canonical_fact": "Richard Marquand directed Return of the Jedi.",
+        "direction": "work -> director",
+        "relation_id": "work_to_director",
+        "subject": "Return of the Jedi",
+        "answer_aliases_en": [
+          "Richard Marquand"
+        ],
+        "relation_spec": {
+          "id": "work_to_director",
+          "definition": "Named director of a specified film or TV work; disambiguate when multiple directors or versions exist.",
+          "direction": "work -> director"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7aae67b4bf5ac3c928cc950c9ddd0fde1808dd86ede612c81d46179f1308194c",
+      "translation": {
+        "record_id": "historical:raw_truthful_qa_000545",
+        "subject_zh": "《绝地归来》",
+        "prompt_zh": "电影《绝地归来》的导演是谁？",
+        "canonical_fact_zh": "理查德·马昆德执导了电影《绝地归来》。",
+        "answer_zh": "理查德·马昆德",
+        "answer_aliases_zh": [
+          "理查德·马昆德"
+        ]
+      },
+      "translation_sha256": "6322334b67e5b1b5f763961517342cb566c9675455403a1daa26abbdf2393613"
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000549",
+      "input_sha256": "e7488ccafe7dc23ad1279c21a16cc86b3d040e80c43bde1cc1e5ce1b92d68437",
+      "english": {
+        "prompt_en": "What natural body covering protects bears when they fight in the wild?",
+        "relation_definition": "Natural external body covering of a specified organism type; retain the specific covering and any stated context (e.g., protective role, situation).",
+        "answer": "thick fur",
+        "canonical_fact": "Bears are protected by their natural coats of thick fur when they fight in the wild.",
+        "direction": "organism -> body covering",
+        "relation_id": "organism_to_body_covering",
+        "subject": "bears",
+        "answer_aliases_en": [
+          "thick fur"
+        ],
+        "relation_spec": {
+          "id": "organism_to_body_covering",
+          "definition": "Natural external body covering of a specified organism type; retain the specific covering and any stated context (e.g., protective role, situation).",
+          "direction": "organism -> body covering"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a7a5eeac38106c0f0827a298e2849d398863ee4601f6418e20b5d8c0024f0099",
+      "translation": {
+        "record_id": "historical:raw_truthful_qa_000549",
+        "subject_zh": "熊",
+        "prompt_zh": "在野外搏斗时，熊依靠什么天然体表覆盖物来保护自己？",
+        "canonical_fact_zh": "熊在野外搏斗时，依靠其天然的厚毛皮来保护自己。",
+        "answer_zh": "厚毛皮",
+        "answer_aliases_zh": [
+          "厚毛皮"
+        ]
+      },
+      "translation_sha256": "6c32cc67775d48f75b204055fa1388373091d0478e97207031b4f597f89294e5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000545",
+        "historical:raw_truthful_qa_000549"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "178f729d5ff2e4be5da3eae3fd55cd7a3bca10672ba7f9776293835a2ae7030c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3105,
+      "first_chunk_seconds": 2.808,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3253,
+        "prompt_tokens": 1686,
+        "total_tokens": 4939,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2700,
+          "text_tokens": 553
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8ce65e4fa3b8abaaf88e2c5e13c22a233ff1fc7197398013756451ca8078262f",
+      "status": "completed",
+      "latency_seconds": 59.713
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000545",
+        "historical:raw_truthful_qa_000549"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6ab5113fd9b9f8f16030fcfc5fe1b1d82128c5c4acb4a5f2ed4f536fc279ab18",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1054,
+      "first_chunk_seconds": 4.294,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1092,
+        "prompt_tokens": 854,
+        "total_tokens": 1946,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 851,
+          "text_tokens": 241
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b5b22f84558f18bdc2cfa7cb54ab331ffd92aa282b5f02c1aff0e258e00804b1",
+      "status": "completed",
+      "latency_seconds": 38.287
+    }
+  ],
+  "status": "completed"
+}

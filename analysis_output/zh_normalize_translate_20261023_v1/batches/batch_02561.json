@@ -1,0 +1,157 @@
+{
+  "input_sha256": "2482699d3895949d2169e572bd08348140a7eb868fa54f5836391cf9dbbda337",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003867",
+      "decision": "ready",
+      "subject": "computer terminal",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "electrical device",
+      "canonical_fact": "A computer terminal is an electrical device.",
+      "prompt_en": "What is a computer terminal?",
+      "evidence_quotes": [
+        "What is a computer terminal?",
+        "electrical device"
+      ],
+      "reason": "The source question asks for the category of a computer terminal and the source answer is 'electrical device', a class-level classification. entity_to_class fits the 'is a' / class-membership relation with the stated taxonomy level (device class). No conflicting old extraction; both model annotations agree.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "electrical device",
+        "canonical_fact": "A computer terminal is an electrical device.",
+        "subject": "computer terminal",
+        "prompt_en": "What is a computer terminal?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "electrical device"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "22aed407626ec4280dce2086dddeebe49f4bf42970ce761f91fbbf3bb8963d63",
+      "input_sha256": "8785fdbd8763183e3429326e5e0303c91358e58732a3cc32cbd1a03062c613d3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003869",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'key factor in' (breathing as a key factor in living) has no matching entry in the catalog; no listed relation captures a contributory/causal-factor-to-biological-state mapping. The answer 'living' is a vague state rather than a precise entity, class, or definition. Defer rather than force an ill-fitting relation.",
+      "input_sha256": "0b44fccf60ea0f25f1653f57a1023a0179075d356bced0fbcc7e307cbf229041",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003867",
+      "input_sha256": "8785fdbd8763183e3429326e5e0303c91358e58732a3cc32cbd1a03062c613d3",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "electrical device",
+        "canonical_fact": "A computer terminal is an electrical device.",
+        "subject": "computer terminal",
+        "prompt_en": "What is a computer terminal?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "electrical device"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "22aed407626ec4280dce2086dddeebe49f4bf42970ce761f91fbbf3bb8963d63",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003867",
+        "subject_zh": "计算机终端",
+        "prompt_zh": "什么是计算机终端？",
+        "canonical_fact_zh": "计算机终端是一种电气设备。",
+        "answer_zh": "电气设备",
+        "answer_aliases_zh": [
+          "电气设备"
+        ]
+      },
+      "translation_sha256": "c87b7768640f791d280b0b66afea2980df42588a7b5008f6421f1e824be21451"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003867",
+        "historical:raw_commonsense_qa_003869"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bc686ce4f293fcb4415e3266a588329e1cb40db869be4a635d9fa8c7e1bdf733",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1715,
+      "first_chunk_seconds": 6.069,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1714,
+        "prompt_tokens": 1617,
+        "total_tokens": 3331,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1411,
+          "text_tokens": 303
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1f9170d2555b4fed3ba0ce97fadad8891e997b6c2846d6dd38ba43f522b1e3bf",
+      "status": "completed",
+      "latency_seconds": 27.828
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e63c4e112807d8368fee4bfa66171205ccb8e8bd113f9053c20fd2a41e5af405",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 449,
+      "first_chunk_seconds": 15.123,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 468,
+        "prompt_tokens": 492,
+        "total_tokens": 960,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 366,
+          "text_tokens": 102
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5e0153b605f6c5957f9fabed435b03e080bcc7ddf57e5b9978d1c7f1ce538fbc",
+      "status": "completed",
+      "latency_seconds": 24.65
+    }
+  ],
+  "status": "completed"
+}

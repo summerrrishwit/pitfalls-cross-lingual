@@ -1,0 +1,279 @@
+{
+  "input_sha256": "2d1f4822460db0f5407fee15d463145ad45819cf64c239d687c24b0aa95c3b4f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009268",
+      "decision": "ready",
+      "subject": "pretending to cry",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "acting",
+      "canonical_fact": "Pretending to cry is a form of acting.",
+      "prompt_en": "What activity is pretending to cry a form of?",
+      "evidence_quotes": [
+        "pretending to cry",
+        "acting"
+      ],
+      "reason": "The source question asks what activity 'pretending to cry' constitutes; the answer 'acting' is the broader activity class. entity_to_class (entity -> class) fits exactly: the specific act is a member of the class 'acting'. No catalog mismatch.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "acting",
+        "canonical_fact": "Pretending to cry is a form of acting.",
+        "subject": "pretending to cry",
+        "prompt_en": "What activity is pretending to cry a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "acting"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3e66df5537d71650cd4a354f525643e88f08549d3b86b018a01e1c63a55a8dcc",
+      "input_sha256": "ed5b4ed731dd2b6ca1b17454698f7e7379e60ecb50d7aec68f891c284eea1a8c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009270",
+      "decision": "ready",
+      "subject": "divorce",
+      "relation_id": "process_to_dissolved_entity",
+      "relation_definition": "The specific formal entity, institution, or bond that a named legal or social process formally dissolves or terminates.",
+      "direction": "named process -> entity it dissolves",
+      "answer": "marriage",
+      "canonical_fact": "Divorce dissolves marriage.",
+      "prompt_en": "What institution does a divorce dissolve?",
+      "evidence_quotes": [
+        "dissolve",
+        "divorce",
+        "marriage"
+      ],
+      "reason": "No existing catalog relation captures a 'process dissolves institution' link. Proposed new relation process_to_dissolved_entity with direction 'named process -> entity it dissolves'. Source explicitly states the institution being dissolved in a divorce is marriage; answer copied verbatim from source_answer.",
+      "english": {
+        "direction": "named process -> entity it dissolves",
+        "relation_id": "process_to_dissolved_entity",
+        "answer": "marriage",
+        "canonical_fact": "Divorce dissolves marriage.",
+        "subject": "divorce",
+        "prompt_en": "What institution does a divorce dissolve?",
+        "relation_definition": "The specific formal entity, institution, or bond that a named legal or social process formally dissolves or terminates.",
+        "answer_aliases_en": [
+          "marriage"
+        ],
+        "relation_spec": {
+          "id": "process_to_dissolved_entity",
+          "definition": "The specific formal entity, institution, or bond that a named legal or social process formally dissolves or terminates.",
+          "direction": "named process -> entity it dissolves"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a4413aa1320774b7f05e5118d2774ddcc9ce37528e4f61ec0bf2649b3a31bf6",
+      "input_sha256": "ab195dad65033a8881a13e920537e6ef8bab2776bb61457e905627918d8f347a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009268",
+      "input_sha256": "ed5b4ed731dd2b6ca1b17454698f7e7379e60ecb50d7aec68f891c284eea1a8c",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "acting",
+        "canonical_fact": "Pretending to cry is a form of acting.",
+        "subject": "pretending to cry",
+        "prompt_en": "What activity is pretending to cry a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "acting"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3e66df5537d71650cd4a354f525643e88f08549d3b86b018a01e1c63a55a8dcc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009268",
+        "subject_zh": "假装哭泣",
+        "prompt_zh": "假装哭泣是哪种活动的一种形式？",
+        "canonical_fact_zh": "假装哭泣是一种表演。",
+        "answer_zh": "表演",
+        "answer_aliases_zh": [
+          "表演"
+        ]
+      },
+      "translation_sha256": "ebe01826425d943ed1b303d44e7d71a00da3a8cf9a0055aa6d158aba8e9e8d18"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009270",
+      "input_sha256": "ab195dad65033a8881a13e920537e6ef8bab2776bb61457e905627918d8f347a",
+      "english": {
+        "direction": "named process -> entity it dissolves",
+        "relation_id": "process_to_dissolved_entity",
+        "answer": "marriage",
+        "canonical_fact": "Divorce dissolves marriage.",
+        "subject": "divorce",
+        "prompt_en": "What institution does a divorce dissolve?",
+        "relation_definition": "The specific formal entity, institution, or bond that a named legal or social process formally dissolves or terminates.",
+        "answer_aliases_en": [
+          "marriage"
+        ],
+        "relation_spec": {
+          "id": "process_to_dissolved_entity",
+          "definition": "The specific formal entity, institution, or bond that a named legal or social process formally dissolves or terminates.",
+          "direction": "named process -> entity it dissolves"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a4413aa1320774b7f05e5118d2774ddcc9ce37528e4f61ec0bf2649b3a31bf6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009270",
+        "subject_zh": "离婚",
+        "prompt_zh": "离婚解除的是哪种制度？",
+        "canonical_fact_zh": "离婚解除婚姻。",
+        "answer_zh": "婚姻",
+        "answer_aliases_zh": [
+          "婚姻"
+        ]
+      },
+      "translation_sha256": "d7c451a40fbe41212fae79bbfb8eaa560fe601b84fe01cca525fce2553a34c40"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009268",
+        "historical:raw_commonsense_qa_009270"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "24ea21c8cc7bdf477678d64aaf2c2dfd3245c8d791dc92b34728ad8e3f41202b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2340,
+      "first_chunk_seconds": 7.112,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2368,
+        "prompt_tokens": 1628,
+        "total_tokens": 3996,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1911,
+          "text_tokens": 457
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "94120ffd179dbe89a81bec7f11565d6cdf9106b84004fe7f4c65072bdaf95fed",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 72.749,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009268",
+        "historical:raw_commonsense_qa_009270"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "41afc2aa02ed33554387351d4901f9600e95d0b76d15ea689804630673088d77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4405,
+      "first_chunk_seconds": 62.223,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4557,
+        "prompt_tokens": 1647,
+        "total_tokens": 6204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4086,
+          "text_tokens": 471
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ed80fb02b076d916239f33062952d4dd237f4d981639431e35ccfdb4ec64f1e8",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 122.416,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009268",
+        "historical:raw_commonsense_qa_009270"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "41afc2aa02ed33554387351d4901f9600e95d0b76d15ea689804630673088d77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2318,
+      "first_chunk_seconds": 16.528,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2451,
+        "prompt_tokens": 1647,
+        "total_tokens": 4098,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1992,
+          "text_tokens": 459
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b7f60d3f14a2025db9945ed189cf8bc1eca30337c3585f6f20c5e4de7311f5c2",
+      "status": "completed",
+      "latency_seconds": 49.534
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009268",
+        "historical:raw_commonsense_qa_009270"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "68bad748b33d4b6a1ccba16e246bf476453fb9a93cd915ec0e8ece066590a5ee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1407,
+      "first_chunk_seconds": 13.198,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1476,
+        "prompt_tokens": 814,
+        "total_tokens": 2290,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1281,
+          "text_tokens": 195
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a2162a9790fc74db91be0fd3134aa1a314cb270ffeb8a017234a0c448765a31",
+      "status": "completed",
+      "latency_seconds": 31.875
+    }
+  ],
+  "status": "completed"
+}

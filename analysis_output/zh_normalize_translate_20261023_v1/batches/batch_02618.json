@@ -1,0 +1,157 @@
+{
+  "input_sha256": "3a60d265f3500f694ecf30cdd5665d3dbd5fbce97f58b2aa8c82a8a9916a5efc",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005673",
+      "decision": "ready",
+      "subject": "helm",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "motorboat",
+      "canonical_fact": "The helm is the steering control of a motorboat.",
+      "prompt_en": "What powered leisure vessel uses a helm as its steering control?",
+      "evidence_quotes": [
+        "The helm is the steering control of what powered leisure vessel?",
+        "motorboat"
+      ],
+      "reason": "The helm is a functional component (steering control) of a motorboat, fitting the part_to_whole direction (part → whole). The source question explicitly states this relationship and the answer 'motorboat' is a concise literal substring of source_answer.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "motorboat",
+        "canonical_fact": "The helm is the steering control of a motorboat.",
+        "subject": "helm",
+        "prompt_en": "What powered leisure vessel uses a helm as its steering control?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "motorboat"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "93f52cf0e60173b824e774cc3e1392f4b177cd5bb69d4546a6727699129e4884",
+      "input_sha256": "4c146a4948722d9eae52e55639da2694e8dde423d6df01ed32c393c2aac1d86d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005680",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits the conditional property 'possible sex of the other twin when one is a daughter.' The answer 'son' is context-dependent within a specific conditional framing (fraternal vs. identical twins) and does not form a clean reusable S→R→P triple under any listed relation. Forcing a broad category (e.g., entity_to_class or term_to_definition) would be inaccurate. Deferred per unknown_relation policy.",
+      "input_sha256": "87919ca352d1b277436f649a620f65e52ebad9cf6a91722e05c677af5f21ab20",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005673",
+      "input_sha256": "4c146a4948722d9eae52e55639da2694e8dde423d6df01ed32c393c2aac1d86d",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "motorboat",
+        "canonical_fact": "The helm is the steering control of a motorboat.",
+        "subject": "helm",
+        "prompt_en": "What powered leisure vessel uses a helm as its steering control?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "motorboat"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "93f52cf0e60173b824e774cc3e1392f4b177cd5bb69d4546a6727699129e4884",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005673",
+        "subject_zh": "船舵",
+        "prompt_zh": "什么机动休闲船使用船舵作为其转向控制？",
+        "canonical_fact_zh": "船舵是机动船的转向控制装置。",
+        "answer_zh": "机动船",
+        "answer_aliases_zh": [
+          "机动船"
+        ]
+      },
+      "translation_sha256": "78cd134b007a54eda64e479e9db223cb13e84042fdd8e332acde400507c183c9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005673",
+        "historical:raw_commonsense_qa_005680"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c355be72c08dd1b6c728dacbf5ff5e81a93904101cfc21499da0814cc7d98f1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2279,
+      "first_chunk_seconds": 2.832,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2431,
+        "prompt_tokens": 1653,
+        "total_tokens": 4084,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2109,
+          "text_tokens": 322
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "514bb5e00a29ed22673f4b4585c1ca982e674b287f9c8e9b912ab62b6f73ab38",
+      "status": "completed",
+      "latency_seconds": 31.513
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005673"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a27e8b356840a22639e4a52d31b1a5de10c9c4bae873db435e1b473aee47e0b6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 571,
+      "first_chunk_seconds": 25.722,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 600,
+        "prompt_tokens": 503,
+        "total_tokens": 1103,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 522,
+          "text_tokens": 78
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e653e7c5720895a9252bf76b5a6536afd8646cfe47b8f061c81870a9fb480234",
+      "status": "completed",
+      "latency_seconds": 32.713
+    }
+  ],
+  "status": "completed"
+}

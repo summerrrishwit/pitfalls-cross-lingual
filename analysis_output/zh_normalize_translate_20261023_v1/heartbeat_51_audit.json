@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-24T12:22:09.048173+00:00",
+  "operations_version": "zh-operations-v3-20261024",
+  "guard": {
+    "at": "2026-10-24T12:20:41.223127+00:00",
+    "fingerprint": "ac35b17165780a02c4a0687616661536bd4186867002e02bbfc8287734902dbb",
+    "pid": 99215,
+    "eligible_repair": false,
+    "last_activity_age_seconds": 50.44909310340881,
+    "unchanged_since": "2026-10-24T12:20:41.223127+00:00",
+    "state": "healthy_active",
+    "retryable_technical_batches": 73,
+    "policy_sha256": "b2e7635c14da86d8efd3cc901c3d80f84dc38560cc57d3b40c710730d73786bd"
+  },
+  "service_health": {
+    "at": "2026-10-24T12:22:09.048173+00:00",
+    "state": "degraded_no_success",
+    "worker_state": "alive_with_requests_and_bounded_backoff",
+    "last_success_at": "2026-10-24T11:52:44.706144+00:00",
+    "minutes_since_last_success": 29.4,
+    "window_seconds": 1200,
+    "finished_requests": 40,
+    "request_status_counts": {
+      "failed": 40
+    },
+    "http_status_counts": {
+      "504": 38,
+      "None": 1,
+      "503": 1
+    },
+    "first_user_notification_audit": "heartbeat_51_audit.json",
+    "same_degradation_should_not_notify_again": true,
+    "restart_or_route_change_performed": false
+  },
+  "new_worker_launches": 0,
+  "new_api_probe_requests": 0,
+  "new_review_assignments": 0,
+  "review_counts": {
+    "zh_translation_accepted": 1159,
+    "zh_translation_rejected": 39,
+    "zh_translation_deferred": 2
+  },
+  "reviewed_unique_records": 1200,
+  "unfinalized_packets": [],
+  "pending_sol_translation": [],
+  "summary": {
+    "at": "2026-10-24T12:21:09.419837+00:00",
+    "source_count": 7250,
+    "normalized_count": 1266,
+    "translated_count": 1212,
+    "reviewed_count": 1200,
+    "source_status_counts": {
+      "zh_translation_accepted": 1159,
+      "zh_translation_rejected": 39,
+      "normalization_defer": 8,
+      "technical_normalization_failed": 122,
+      "technical_translation_failed": 46,
+      "zh_translation_deferred": 2,
+      "pending_translation_review": 12,
+      "pending_normalization": 5862
+    },
+    "counts_are_not_deduplicated_facts_or_net_new160": true,
+    "new_target_behavior_calls": 0,
+    "formal_experiment_eligible": false,
+    "human_gold": false,
+    "files": {
+      "accepted_chinese_candidates.jsonl": "92b6f442a978c5f3addbbb028491c73e111041060bd2105adce41299d28a722f",
+      "source_coverage.jsonl": "dd673a9422a2fe0c490466bce45eb148b15bc02ddac31afa5b775e716db5965b",
+      "normalized_candidates.jsonl": "46925bb26588cacf05849a0ff3814ab03670486a5f12465f0ce062e5d2d30aa1"
+    }
+  },
+  "all_frozen_overlay_operations_review_dispatch_recovery_and_probe_bindings_valid": true,
+  "exposure_attempt_prefixes_valid": true,
+  "historical_snapshots_separate": [
+    {
+      "recovery": "gateway_20261024_v1",
+      "batch_snapshots": 19,
+      "source_snapshots": 38
+    },
+    {
+      "recovery": "transport_continue_20261024_v1",
+      "batch_snapshots": 23,
+      "source_snapshots": 46
+    }
+  ],
+  "tail_retry_archive_count": 0,
+  "formal_experiment_eligible": false,
+  "human_gold": false,
+  "notification": "NOTIFY",
+  "notification_reason": "new prolonged upstream5xx degradation,not just ordinary backoff"
+}

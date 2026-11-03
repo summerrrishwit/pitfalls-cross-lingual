@@ -1,0 +1,293 @@
+{
+  "input_sha256": "8c4ad9a037ce6ef7829e0662ca2919bd4da12de786e5473ce20a13f94bb9e12d",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ff610f2ea134b27ca223",
+      "decision": "ready",
+      "subject": "Nile River",
+      "relation_id": "water_body_to_source",
+      "relation_definition": "The originating water body from which a specified river or stream draws its water; not the downstream mouth or confluence.",
+      "direction": "water body (river/stream) -> source water body (lake/river/spring)",
+      "answer": "Lake Victoria",
+      "canonical_fact": "The source of the Nile River is Lake Victoria.",
+      "prompt_en": "Where does the water of the Nile River come from?",
+      "evidence_quotes": [
+        "where does the water from the nile come from",
+        "Lake Victoria"
+      ],
+      "reason": "Source question and answer directly support the fact that the Nile's water originates from Lake Victoria. No existing catalog relation precisely captures 'river source'—entity_to_containing_location explicitly excludes origin, and organism_to_habitat is inapplicable—so a new relation water_body_to_source is proposed with an explicit hydrological definition.",
+      "english": {
+        "answer": "Lake Victoria",
+        "relation_id": "water_body_to_source",
+        "prompt_en": "Where does the water of the Nile River come from?",
+        "direction": "water body (river/stream) -> source water body (lake/river/spring)",
+        "subject": "Nile River",
+        "canonical_fact": "The source of the Nile River is Lake Victoria.",
+        "relation_definition": "The originating water body from which a specified river or stream draws its water; not the downstream mouth or confluence.",
+        "answer_aliases_en": [
+          "Lake Victoria"
+        ],
+        "relation_spec": {
+          "id": "water_body_to_source",
+          "definition": "The originating water body from which a specified river or stream draws its water; not the downstream mouth or confluence.",
+          "direction": "water body (river/stream) -> source water body (lake/river/spring)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d182f6a4392da0ba03728cd59f5f7e26c8d67264f9ae21af89f2f4f7121face5",
+      "input_sha256": "05050b735527703c10959c0524809e134be34982a786c5c8ecdf7e66f38e8faa",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ff72240f68fb6fcd2d30",
+      "decision": "ready",
+      "subject": "Dark Horse and Other Plays",
+      "relation_id": "work_to_publisher",
+      "relation_definition": "Named publisher of a specified work; distinct from author or printer.",
+      "direction": "work -> publisher",
+      "answer": "Gowri Ramnarayan",
+      "canonical_fact": "Gowri Ramnarayan published the work Dark Horse and Other Plays.",
+      "prompt_en": "Who published the work Dark Horse and Other Plays?",
+      "evidence_quotes": [
+        "who published the work dark horse and other plays",
+        "Gowri Ramnarayan"
+      ],
+      "reason": "Source question explicitly asks 'who published' and the answer is Gowri Ramnarayan. The catalog relation written_work_to_author is defined for authorship, not publication, so it does not fit exactly. A new relation work_to_publisher is proposed to avoid conflating the publisher role with the author role. The input canonical_fact used 'authored' which conflicts with the source's 'published'; the canonical_fact is corrected to match the source.",
+      "english": {
+        "answer": "Gowri Ramnarayan",
+        "relation_id": "work_to_publisher",
+        "prompt_en": "Who published the work Dark Horse and Other Plays?",
+        "direction": "work -> publisher",
+        "subject": "Dark Horse and Other Plays",
+        "canonical_fact": "Gowri Ramnarayan published the work Dark Horse and Other Plays.",
+        "relation_definition": "Named publisher of a specified work; distinct from author or printer.",
+        "answer_aliases_en": [
+          "Gowri Ramnarayan"
+        ],
+        "relation_spec": {
+          "id": "work_to_publisher",
+          "definition": "Named publisher of a specified work; distinct from author or printer.",
+          "direction": "work -> publisher"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e402ab1ada56da83160562edd720bf1d228ac0689545974ec4ad0b9472d75692",
+      "input_sha256": "fd0cd72cbedddc5863238eae6690c8b4a8e81e5ab8ca7c3327b8343a104f97fd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ff610f2ea134b27ca223",
+      "input_sha256": "05050b735527703c10959c0524809e134be34982a786c5c8ecdf7e66f38e8faa",
+      "english": {
+        "answer": "Lake Victoria",
+        "relation_id": "water_body_to_source",
+        "prompt_en": "Where does the water of the Nile River come from?",
+        "direction": "water body (river/stream) -> source water body (lake/river/spring)",
+        "subject": "Nile River",
+        "canonical_fact": "The source of the Nile River is Lake Victoria.",
+        "relation_definition": "The originating water body from which a specified river or stream draws its water; not the downstream mouth or confluence.",
+        "answer_aliases_en": [
+          "Lake Victoria"
+        ],
+        "relation_spec": {
+          "id": "water_body_to_source",
+          "definition": "The originating water body from which a specified river or stream draws its water; not the downstream mouth or confluence.",
+          "direction": "water body (river/stream) -> source water body (lake/river/spring)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d182f6a4392da0ba03728cd59f5f7e26c8d67264f9ae21af89f2f4f7121face5",
+      "translation": {
+        "record_id": "public:pbf_ff610f2ea134b27ca223",
+        "subject_zh": "尼罗河",
+        "prompt_zh": "尼罗河的水从哪里来？",
+        "canonical_fact_zh": "尼罗河的源头是维多利亚湖。",
+        "answer_zh": "维多利亚湖",
+        "answer_aliases_zh": [
+          "维多利亚湖"
+        ]
+      },
+      "translation_sha256": "38264a4e5f1700c3988f373f61a175d5afa3fb10486e43f8c5ff7507a707540e"
+    },
+    {
+      "record_id": "public:pbf_ff72240f68fb6fcd2d30",
+      "input_sha256": "fd0cd72cbedddc5863238eae6690c8b4a8e81e5ab8ca7c3327b8343a104f97fd",
+      "english": {
+        "answer": "Gowri Ramnarayan",
+        "relation_id": "work_to_publisher",
+        "prompt_en": "Who published the work Dark Horse and Other Plays?",
+        "direction": "work -> publisher",
+        "subject": "Dark Horse and Other Plays",
+        "canonical_fact": "Gowri Ramnarayan published the work Dark Horse and Other Plays.",
+        "relation_definition": "Named publisher of a specified work; distinct from author or printer.",
+        "answer_aliases_en": [
+          "Gowri Ramnarayan"
+        ],
+        "relation_spec": {
+          "id": "work_to_publisher",
+          "definition": "Named publisher of a specified work; distinct from author or printer.",
+          "direction": "work -> publisher"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e402ab1ada56da83160562edd720bf1d228ac0689545974ec4ad0b9472d75692",
+      "translation": {
+        "record_id": "public:pbf_ff72240f68fb6fcd2d30",
+        "subject_zh": "《黑马及其他戏剧》",
+        "prompt_zh": "谁出版了作品《黑马及其他戏剧》？",
+        "canonical_fact_zh": "戈维里·拉姆纳兰出版了作品《黑马及其他戏剧》。",
+        "answer_zh": "戈维里·拉姆纳兰",
+        "answer_aliases_zh": [
+          "戈维里·拉姆纳兰"
+        ]
+      },
+      "translation_sha256": "7ab60ddce5fe081a5e93275208aa9a70385a99f1b09d16303aa8f14ceaf2fce0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9095b5aa67277a1c23509d4afb802e9b2691d9841ba6bbf2f675a8ede1e5ff7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.135
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9095b5aa67277a1c23509d4afb802e9b2691d9841ba6bbf2f675a8ede1e5ff7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3222,
+      "first_chunk_seconds": 48.726,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3261,
+        "prompt_tokens": 1571,
+        "total_tokens": 4832,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2708,
+          "text_tokens": 553
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "664aedb06e6e85c02169d2cd1fb4da5a9bcb99e88b21ccabcc0ba5f3c8517780",
+      "status": "completed",
+      "latency_seconds": 93.847
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2a05b460624c94460a7e277611ba03873112b816627b5f58d4501ce3a2d5de58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 80.24
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2a05b460624c94460a7e277611ba03873112b816627b5f58d4501ce3a2d5de58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.01
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2a05b460624c94460a7e277611ba03873112b816627b5f58d4501ce3a2d5de58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.269
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2a05b460624c94460a7e277611ba03873112b816627b5f58d4501ce3a2d5de58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.467
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ff610f2ea134b27ca223",
+        "public:pbf_ff72240f68fb6fcd2d30"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2a05b460624c94460a7e277611ba03873112b816627b5f58d4501ce3a2d5de58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 906,
+      "first_chunk_seconds": 1.832,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 937,
+        "prompt_tokens": 856,
+        "total_tokens": 1793,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 692,
+          "text_tokens": 245
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ac1acfd29eedf696c22906fcd7260165c44f9abdcbcdf1b49e5e9342c3e58ef6",
+      "status": "completed",
+      "latency_seconds": 90.852
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02095.json",
+      "sha256": "93b28dce980925ad76a10968520d5e10c9e2f801392fa0db9cd6780bcce04b06",
+      "previous_status": "failed"
+    }
+  ]
+}

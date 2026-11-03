@@ -1,0 +1,219 @@
+{
+  "input_sha256": "c13f3e4447449604a5121d2aa7060e5f0724129c862157df08f4c94f6a5c9d29",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001466",
+      "decision": "ready",
+      "subject": "plants",
+      "relation_id": "organism_to_photosynthetic_substance",
+      "relation_definition": "The specific airborne substance an organism takes in during light-dependent food production (photosynthesis); direction is organism -> substance.",
+      "direction": "organism -> substance",
+      "answer": "carbon dioxide",
+      "canonical_fact": "Plants take carbon dioxide from the air in the presence of sunlight to make their own food.",
+      "prompt_en": "What substance do plants take from the air in the presence of sunlight to make their own food?",
+      "evidence_quotes": [
+        "What does a plant take from the air in the presence of sunlight?",
+        "carbon dioxide"
+      ],
+      "reason": "No existing catalog relation covers 'substance taken from air for photosynthesis.' The source question and answer directly support this fact. Proposed a precise new relation rather than forcing entity_to_material (composition) or organism_to_habitat (location). Both model annotations agree on extraction; the fuller qualification 'in the presence of sunlight' is retained from the source.",
+      "english": {
+        "direction": "organism -> substance",
+        "relation_id": "organism_to_photosynthetic_substance",
+        "answer": "carbon dioxide",
+        "canonical_fact": "Plants take carbon dioxide from the air in the presence of sunlight to make their own food.",
+        "subject": "plants",
+        "prompt_en": "What substance do plants take from the air in the presence of sunlight to make their own food?",
+        "relation_definition": "The specific airborne substance an organism takes in during light-dependent food production (photosynthesis); direction is organism -> substance.",
+        "answer_aliases_en": [
+          "carbon dioxide"
+        ],
+        "relation_spec": {
+          "id": "organism_to_photosynthetic_substance",
+          "definition": "The specific airborne substance an organism takes in during light-dependent food production (photosynthesis); direction is organism -> substance.",
+          "direction": "organism -> substance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "36a77f0dbd99566480fe6cd24babb8d57eca279ea4f5587de5f867f49da9d5f3",
+      "input_sha256": "f77449a6ed7b1a8e905f817e4f7b8d7ad1365aca18a7d6e6dbfe165340ca795a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001467",
+      "decision": "ready",
+      "subject": "change in the appearance of the Moon as seen from Earth",
+      "relation_id": "phenomenon_to_cause",
+      "relation_definition": "The identified causal mechanism or orbital/rotational process that produces a specified observable natural phenomenon or periodic change; direction is phenomenon -> cause.",
+      "direction": "phenomenon -> cause",
+      "answer": "the Moon revolving around Earth",
+      "canonical_fact": "The change in the appearance of the Moon as seen from Earth is caused by the Moon revolving around Earth.",
+      "prompt_en": "What causes the appearance of the Moon to change as seen from Earth throughout the month?",
+      "evidence_quotes": [
+        "What causes the appearance of the Moon to change?",
+        "the Moon revolving around Earth"
+      ],
+      "reason": "No existing catalog relation covers a causal 'caused by' link between a phenomenon and its mechanism. Proposed a precise new relation. One model flagged causal_reasoning as not extractable, but the source answer is a literal, verifiable physical mechanism (orbital revolution), not a multi-step inference chain. The fact is directly stated in the QA pair, so it is supported by the source. No dates, markets, or versions are invented.",
+      "english": {
+        "direction": "phenomenon -> cause",
+        "relation_id": "phenomenon_to_cause",
+        "answer": "the Moon revolving around Earth",
+        "canonical_fact": "The change in the appearance of the Moon as seen from Earth is caused by the Moon revolving around Earth.",
+        "subject": "change in the appearance of the Moon as seen from Earth",
+        "prompt_en": "What causes the appearance of the Moon to change as seen from Earth throughout the month?",
+        "relation_definition": "The identified causal mechanism or orbital/rotational process that produces a specified observable natural phenomenon or periodic change; direction is phenomenon -> cause.",
+        "answer_aliases_en": [
+          "the Moon revolving around Earth"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_cause",
+          "definition": "The identified causal mechanism or orbital/rotational process that produces a specified observable natural phenomenon or periodic change; direction is phenomenon -> cause.",
+          "direction": "phenomenon -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "36a8fa80876f4f9d27dbaf49b6cfe17970117b30c6085225399d546a65af3d27",
+      "input_sha256": "deff246b455909f28026a3ddebd60bd6b483302c9f7ded516274f38633be2709",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a617c9d7f7cd5211b8b402102ca31ba34780bec6be909ead8a64bc4ce4e11b4c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1745,
+      "first_chunk_seconds": 29.9,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1860,
+        "prompt_tokens": 1760,
+        "total_tokens": 3620,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1266,
+          "text_tokens": 594
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0e91451e556fed3dca2aa96beee14501080aae85cc9336802a217819535e1659",
+      "status": "completed",
+      "latency_seconds": 54.711
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.446
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 16.351,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.979
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.805
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.755
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001466",
+        "historical:raw_ai2_arc_easy_001467"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "539b63e7858ebf24ed6469df0f6144a4112810d606b6cde62dc68e03874ac51f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.504
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02356.json",
+      "sha256": "25eb26b9859e3fc0a0f78db387f1f4c5e635f47bf127d11799ef9c561db3e7c3",
+      "previous_status": "failed"
+    }
+  ]
+}

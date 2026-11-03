@@ -1,0 +1,179 @@
+{
+  "input_sha256": "52314bb6e2effac5ef7924fa85bbb6ed238e76c94f3cf7931087507143119d99",
+  "normalized": [
+    {
+      "record_id": "public:pbf_dfc6708170676e26e4b0",
+      "decision": "ready",
+      "subject": "element ejecting an alpha particle (nuclear process)",
+      "relation_id": "process_to_property_change",
+      "relation_definition": "The specific quantified change in a named physical property that results from a specified physical, nuclear, or chemical process; states magnitude and direction of change.",
+      "direction": "specified physical/nuclear/chemical process -> quantified property change",
+      "answer": "reduces by 2",
+      "canonical_fact": "When an element ejects an alpha particle, the atomic number of the resulting element reduces by 2.",
+      "prompt_en": "When an element ejects an alpha particle, the atomic number of the resulting element",
+      "evidence_quotes": [
+        "When an element ejects an alpha particle",
+        "reduces by 2"
+      ],
+      "reason": "No catalog relation captures a quantified physical-property change caused by a specified process. Proposed process_to_property_change with explicit direction (process -> property change). Answer 'reduces by 2' is a literal substring of source_answer. Prompt is option-free and excludes the answer.",
+      "english": {
+        "prompt_en": "When an element ejects an alpha particle, the atomic number of the resulting element",
+        "relation_definition": "The specific quantified change in a named physical property that results from a specified physical, nuclear, or chemical process; states magnitude and direction of change.",
+        "answer": "reduces by 2",
+        "canonical_fact": "When an element ejects an alpha particle, the atomic number of the resulting element reduces by 2.",
+        "direction": "specified physical/nuclear/chemical process -> quantified property change",
+        "relation_id": "process_to_property_change",
+        "subject": "element ejecting an alpha particle (nuclear process)",
+        "answer_aliases_en": [
+          "reduces by 2"
+        ],
+        "relation_spec": {
+          "id": "process_to_property_change",
+          "definition": "The specific quantified change in a named physical property that results from a specified physical, nuclear, or chemical process; states magnitude and direction of change.",
+          "direction": "specified physical/nuclear/chemical process -> quantified property change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "750edf84788371552dd49a624ab44b081c3604cbd1f7a6a583b45219c359ebd9",
+      "input_sha256": "96ead3882cdbd354e156fd56994e168e14773642a3d4e5d52eb2d937acd3d9d6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5a73fabf5aa28db1d127",
+      "decision": "ready",
+      "subject": "Men (demographic group)",
+      "relation_id": "demographic_group_to_death_cause",
+      "relation_definition": "A stated cause of death associated with a specified demographic group, retaining any comparative likelihood qualifier relative to a reference group; not a generic risk factor.",
+      "direction": "demographic group -> cause of death with comparative qualifier",
+      "answer": "Suicide",
+      "canonical_fact": "Men are more likely than women to die from suicide.",
+      "prompt_en": "Men are more likely than women to die from",
+      "evidence_quotes": [
+        "Men are more likely than women to die from",
+        "Suicide"
+      ],
+      "reason": "No catalog relation covers a demographic group's comparative likelihood of a specific cause of death. Proposed demographic_group_to_death_cause with explicit direction (group -> cause of death + qualifier). Answer 'Suicide' is a literal substring of source_answer. Prompt is option-free and excludes the answer.",
+      "english": {
+        "prompt_en": "Men are more likely than women to die from",
+        "relation_definition": "A stated cause of death associated with a specified demographic group, retaining any comparative likelihood qualifier relative to a reference group; not a generic risk factor.",
+        "answer": "Suicide",
+        "canonical_fact": "Men are more likely than women to die from suicide.",
+        "direction": "demographic group -> cause of death with comparative qualifier",
+        "relation_id": "demographic_group_to_death_cause",
+        "subject": "Men (demographic group)",
+        "answer_aliases_en": [
+          "Suicide"
+        ],
+        "relation_spec": {
+          "id": "demographic_group_to_death_cause",
+          "definition": "A stated cause of death associated with a specified demographic group, retaining any comparative likelihood qualifier relative to a reference group; not a generic risk factor.",
+          "direction": "demographic group -> cause of death with comparative qualifier"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "47ab0cccd10a14d3f636edc4f6ce4393ac4923b814664edaf83964b930b2cace",
+      "input_sha256": "920f5fa515807d708b70e70fc0d85f4b062a2155c9682e065f75072c8985a2f6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_dfc6708170676e26e4b0",
+        "public:pbf_5a73fabf5aa28db1d127"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b88c9721293e4327e7a67cd19f2bf7457b89073317976c721ee39a708331cc9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2021,
+      "first_chunk_seconds": 61.864,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2171,
+        "prompt_tokens": 1627,
+        "total_tokens": 3798,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1609,
+          "text_tokens": 562
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4cc0e88709296b8f42784f882c83dd995cbed4718a6b400b77df24d7c27f5a44",
+      "status": "completed",
+      "latency_seconds": 104.223
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dfc6708170676e26e4b0",
+        "public:pbf_5a73fabf5aa28db1d127"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "df8f88888f1dc36c3f0556220a3e9bb1e9c4bfce36948489376fc94d7d489105",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 96.608,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dfc6708170676e26e4b0",
+        "public:pbf_5a73fabf5aa28db1d127"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "df8f88888f1dc36c3f0556220a3e9bb1e9c4bfce36948489376fc94d7d489105",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 61.681,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dfc6708170676e26e4b0",
+        "public:pbf_5a73fabf5aa28db1d127"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "df8f88888f1dc36c3f0556220a3e9bb1e9c4bfce36948489376fc94d7d489105",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 17.412
+    }
+  ],
+  "status": "failed"
+}

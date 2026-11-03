@@ -1,0 +1,214 @@
+{
+  "input_sha256": "53a804e262bec8f98f9aeca2cab81e9a5633aabcd641411e19c9a996e2f27240",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006544",
+      "decision": "ready",
+      "subject": "bald eagle",
+      "relation_id": "symbol_to_associated_country",
+      "relation_definition": "The country in which a specified symbol carries its conventional patriotic or cultural meaning.",
+      "direction": "symbol -> country",
+      "answer": "u.s",
+      "canonical_fact": "The bald eagle elicits a feeling of patriotism in the U.S.",
+      "prompt_en": "In which country does the bald eagle elicit a feeling of patriotism?",
+      "evidence_quotes": [
+        "it elicits feeling of patriotism where",
+        "u.s"
+      ],
+      "reason": "Source explicitly ties the bald eagle's patriotic symbolism to the U.S. No existing catalog relation precisely captures 'symbol -> country of patriotic association' (symbol_to_meaning expects the meaning itself, not the country); proposing a precise new relation. One model annotation excluded it as 'typical_action_or_location', but the source answer is a clear, verifiable cultural-fact mapping.",
+      "english": {
+        "direction": "symbol -> country",
+        "relation_id": "symbol_to_associated_country",
+        "answer": "u.s",
+        "canonical_fact": "The bald eagle elicits a feeling of patriotism in the U.S.",
+        "subject": "bald eagle",
+        "prompt_en": "In which country does the bald eagle elicit a feeling of patriotism?",
+        "relation_definition": "The country in which a specified symbol carries its conventional patriotic or cultural meaning.",
+        "answer_aliases_en": [
+          "u.s"
+        ],
+        "relation_spec": {
+          "id": "symbol_to_associated_country",
+          "definition": "The country in which a specified symbol carries its conventional patriotic or cultural meaning.",
+          "direction": "symbol -> country"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "28b6e3309e287f20404f30db405d7a7174dc0c3b2b1dbd683c0d5e94cfda92dc",
+      "input_sha256": "ebf1bf75775ba19eaa56fdf9941564ddd7ffa3b4155995f303a46ed30e556630",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006562",
+      "decision": "ready",
+      "subject": "square",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "four sides",
+      "canonical_fact": "A square is constructed of four sides.",
+      "prompt_en": "What is a square constructed of?",
+      "evidence_quotes": [
+        "What is a square constructed of?",
+        "four sides"
+      ],
+      "reason": "Both model annotations agree on extraction. The source question asks for the defining constituent of the geometric term 'square' and the answer 'four sides' is a literal descriptive property, fitting term_to_definition (term -> definition/descriptive property). entity_to_material was considered but rejected because it targets physical material composition, not geometric constituent parts.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "four sides",
+        "canonical_fact": "A square is constructed of four sides.",
+        "subject": "square",
+        "prompt_en": "What is a square constructed of?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "four sides"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5214eb79affbc2abbeade26c71f8bfa89959b90f3c1385e13e80d8e8af4c6108",
+      "input_sha256": "676abb40cf43e0cfa3aaf874df0331f9fe8c3f05cfd5f675ebbe95e8756e7099",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006544",
+      "input_sha256": "ebf1bf75775ba19eaa56fdf9941564ddd7ffa3b4155995f303a46ed30e556630",
+      "english": {
+        "direction": "symbol -> country",
+        "relation_id": "symbol_to_associated_country",
+        "answer": "u.s",
+        "canonical_fact": "The bald eagle elicits a feeling of patriotism in the U.S.",
+        "subject": "bald eagle",
+        "prompt_en": "In which country does the bald eagle elicit a feeling of patriotism?",
+        "relation_definition": "The country in which a specified symbol carries its conventional patriotic or cultural meaning.",
+        "answer_aliases_en": [
+          "u.s"
+        ],
+        "relation_spec": {
+          "id": "symbol_to_associated_country",
+          "definition": "The country in which a specified symbol carries its conventional patriotic or cultural meaning.",
+          "direction": "symbol -> country"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "28b6e3309e287f20404f30db405d7a7174dc0c3b2b1dbd683c0d5e94cfda92dc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006544",
+        "subject_zh": "白头鹰",
+        "prompt_zh": "白头鹰在哪个国家会唤起爱国情怀？",
+        "canonical_fact_zh": "白头鹰在美国唤起爱国情怀。",
+        "answer_zh": "美国",
+        "answer_aliases_zh": [
+          "美国"
+        ]
+      },
+      "translation_sha256": "964c0477b7497153c5fbef582a60ed4c0a7fbcf3afe5dfe1be741a38f8836f61"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006562",
+      "input_sha256": "676abb40cf43e0cfa3aaf874df0331f9fe8c3f05cfd5f675ebbe95e8756e7099",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "four sides",
+        "canonical_fact": "A square is constructed of four sides.",
+        "subject": "square",
+        "prompt_en": "What is a square constructed of?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "four sides"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5214eb79affbc2abbeade26c71f8bfa89959b90f3c1385e13e80d8e8af4c6108",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006562",
+        "subject_zh": "正方形",
+        "prompt_zh": "正方形由什么构成？",
+        "canonical_fact_zh": "正方形由四条边构成。",
+        "answer_zh": "四条边",
+        "answer_aliases_zh": [
+          "四条边"
+        ]
+      },
+      "translation_sha256": "42e79e4433b05ba0a74bee82d6b989cc8edf7383a9cdfb4f10508ed1a5e4a005"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006544",
+        "historical:raw_commonsense_qa_006562"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c14b498b5c5749a3fe185e14c197c671a611ec0f9649144bea4fefd55d8e70bb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3305,
+      "first_chunk_seconds": 11.377,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3570,
+        "prompt_tokens": 1634,
+        "total_tokens": 5204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3076,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aac69982caa5801c578216062372400c0e5f4aff0ece3892b0c61a00f7bcadd2",
+      "status": "completed",
+      "latency_seconds": 64.891
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006544",
+        "historical:raw_commonsense_qa_006562"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f9ab41c6f9a2a1ffc40119fe19c3b760678c9a0c8dcb0b958776e287db5733ec",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 872,
+      "first_chunk_seconds": 12.89,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 927,
+        "prompt_tokens": 792,
+        "total_tokens": 1719,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 725,
+          "text_tokens": 202
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d3a3f4a974c054ee8916e372b2c76065c94030acee9fb3feaf1a2f9b4c082e03",
+      "status": "completed",
+      "latency_seconds": 26.053
+    }
+  ],
+  "status": "completed"
+}

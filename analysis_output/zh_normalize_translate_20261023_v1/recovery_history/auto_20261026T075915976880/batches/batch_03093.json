@@ -1,0 +1,153 @@
+{
+  "input_sha256": "c128bb03e09599adb021669669d8166ad602069a1155c759980a2e88eaecd418",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000640",
+      "decision": "ready",
+      "subject": "conversion of a solid to a gas",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "sublimation",
+      "canonical_fact": "The conversion of a solid to a gas is called sublimation.",
+      "prompt_en": "What is the conversion of a solid to a gas called?",
+      "evidence_quotes": [
+        "What is the conversion of a solid to a gas called?",
+        "sublimation"
+      ],
+      "reason": "Source question asks for the term that names a specific process description; source answer 'sublimation' is the conventional term. description_to_term relation fits exactly: the defining description maps to the conventional term. Old extractions agree on answer and canonical fact.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "conversion of a solid to a gas",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the conversion of a solid to a gas called?",
+        "answer": "sublimation",
+        "canonical_fact": "The conversion of a solid to a gas is called sublimation.",
+        "answer_aliases_en": [
+          "sublimation"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a5df8efb6c2139d86d9aa03b84e415a3f40ed7f1f162bbd22baa0b1a32935bd2",
+      "input_sha256": "5efc91238884aa854c103fc9ccf07fa64adfe27b81702d930978b55f324c0a21",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000641",
+      "decision": "ready",
+      "subject": "two plates sliding past each other in opposite directions",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "transform plate boundary",
+      "canonical_fact": "When two plates sliding past each other in opposite directions, it is called a transform plate boundary.",
+      "prompt_en": "What is it called when two plates slide past each other in opposite directions?",
+      "evidence_quotes": [
+        "What is it called when two plates slide past each other in opposite directions?",
+        "transform plate boundary"
+      ],
+      "reason": "Source question asks for the term naming a geological description; source answer 'transform plate boundary' is the conventional term. description_to_term fits: the identifying description of plate motion maps to the standard geological term. Old extractions agree on answer and canonical fact.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "two plates sliding past each other in opposite directions",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is it called when two plates slide past each other in opposite directions?",
+        "answer": "transform plate boundary",
+        "canonical_fact": "When two plates sliding past each other in opposite directions, it is called a transform plate boundary.",
+        "answer_aliases_en": [
+          "transform plate boundary"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e63e38e7fce2cb6ec92dc76053cb94a546bb2b578fd726dbcb4ced336d8b95a4",
+      "input_sha256": "4fdaffdd9e0bb25a7bf75a45d1109c0b088292bde941565d13e926cf475d9191",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000640",
+        "historical:raw_sciq_000641"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e4a79752c0319cec3ce5dc694e9054f9935c635b24a6ffb4a2a230bd66f768f2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1280,
+      "first_chunk_seconds": 1.437,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1312,
+        "prompt_tokens": 1736,
+        "total_tokens": 3048,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 814,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "03db304ca2ecedd9fcb861421b9c095fb1559b417d10234a0f05bdb5d484f802",
+      "status": "completed",
+      "latency_seconds": 93.237
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000640",
+        "historical:raw_sciq_000641"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f03be08713de95d7ff9f33ab4e94c074a9bb45d4971743ef34d6f98f5519d4f8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 251.813
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000640",
+        "historical:raw_sciq_000641"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f03be08713de95d7ff9f33ab4e94c074a9bb45d4971743ef34d6f98f5519d4f8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "PermissionDeniedError",
+      "http_status": 403,
+      "latency_seconds": 1.458,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json"
+      }
+    }
+  ],
+  "status": "failed"
+}

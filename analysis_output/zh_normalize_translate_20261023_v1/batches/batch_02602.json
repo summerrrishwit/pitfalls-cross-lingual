@@ -1,0 +1,214 @@
+{
+  "input_sha256": "fa1932afeab90fdd9439aa94aa3e0be08926462949f54cede151e297878fdfb8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005127",
+      "decision": "ready",
+      "subject": "marmoset",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "latin america",
+      "canonical_fact": "Marmosets are native to Latin America.",
+      "prompt_en": "In which geographic region are marmosets typically found?",
+      "evidence_quotes": [
+        "marmoset",
+        "latin america"
+      ],
+      "reason": "Source question asks where marmosets are found; source answer 'latin america' states their native range. organism_to_habitat fits with its 'scope and range' qualifier, covering geographic distribution rather than ecological niche. No contradiction with existing extraction; both models independently identified the same subject/answer.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "latin america",
+        "canonical_fact": "Marmosets are native to Latin America.",
+        "subject": "marmoset",
+        "prompt_en": "In which geographic region are marmosets typically found?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "latin america"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "56041c2191721dcad7f02e4ed7c4b6e7d81349563be7363bef0b7877fb45c1a7",
+      "input_sha256": "6236c7ce1042025371065cc7cde50f7a00063e642b2a9f2266c32e0a21eaa618",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005140",
+      "decision": "ready",
+      "subject": "cooking",
+      "relation_id": "process_to_outcome",
+      "relation_definition": "The typical or expected result or product produced by completing a specified process or activity.",
+      "direction": "process -> outcome",
+      "answer": "cooked food",
+      "canonical_fact": "Cooking results in cooked food.",
+      "prompt_en": "What is the typical result of cooking?",
+      "evidence_quotes": [
+        "cooking",
+        "cooked food"
+      ],
+      "reason": "Source question asks what one ends up with after cooking; source answer 'cooked food' states the outcome. No existing catalog relation covers a generic process-to-outcome link; proposing process_to_outcome as a precise new relation. The second model marked it not extractable as 'typical_action_or_location', but the source explicitly pairs the process with its result, so the extraction is supported.",
+      "english": {
+        "direction": "process -> outcome",
+        "relation_id": "process_to_outcome",
+        "answer": "cooked food",
+        "canonical_fact": "Cooking results in cooked food.",
+        "subject": "cooking",
+        "prompt_en": "What is the typical result of cooking?",
+        "relation_definition": "The typical or expected result or product produced by completing a specified process or activity.",
+        "answer_aliases_en": [
+          "cooked food"
+        ],
+        "relation_spec": {
+          "id": "process_to_outcome",
+          "definition": "The typical or expected result or product produced by completing a specified process or activity.",
+          "direction": "process -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d3bd3d5bb17973e0f1af12b428142e7f66f15b1d82e88ede6363d7ff6b9a60f5",
+      "input_sha256": "8eaa7c4517aecfdb3922eedbee728b6f84ea18d8d2b7413ae6cc697cac2cb6a9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005127",
+      "input_sha256": "6236c7ce1042025371065cc7cde50f7a00063e642b2a9f2266c32e0a21eaa618",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "latin america",
+        "canonical_fact": "Marmosets are native to Latin America.",
+        "subject": "marmoset",
+        "prompt_en": "In which geographic region are marmosets typically found?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "latin america"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "56041c2191721dcad7f02e4ed7c4b6e7d81349563be7363bef0b7877fb45c1a7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005127",
+        "subject_zh": "狨猴",
+        "prompt_zh": "狨猴通常分布在哪个地理区域？",
+        "canonical_fact_zh": "狨猴原产于拉丁美洲。",
+        "answer_zh": "拉丁美洲",
+        "answer_aliases_zh": [
+          "拉丁美洲"
+        ]
+      },
+      "translation_sha256": "bb06f7011f9f42b5b247e990383c7da7358a3b77d3616ccd89763f0e94f0d26d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005140",
+      "input_sha256": "8eaa7c4517aecfdb3922eedbee728b6f84ea18d8d2b7413ae6cc697cac2cb6a9",
+      "english": {
+        "direction": "process -> outcome",
+        "relation_id": "process_to_outcome",
+        "answer": "cooked food",
+        "canonical_fact": "Cooking results in cooked food.",
+        "subject": "cooking",
+        "prompt_en": "What is the typical result of cooking?",
+        "relation_definition": "The typical or expected result or product produced by completing a specified process or activity.",
+        "answer_aliases_en": [
+          "cooked food"
+        ],
+        "relation_spec": {
+          "id": "process_to_outcome",
+          "definition": "The typical or expected result or product produced by completing a specified process or activity.",
+          "direction": "process -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d3bd3d5bb17973e0f1af12b428142e7f66f15b1d82e88ede6363d7ff6b9a60f5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005140",
+        "subject_zh": "烹饪",
+        "prompt_zh": "烹饪的典型结果是什么？",
+        "canonical_fact_zh": "烹饪的结果是熟食。",
+        "answer_zh": "熟食",
+        "answer_aliases_zh": [
+          "熟食"
+        ]
+      },
+      "translation_sha256": "976f0090484a0f9d046fb47602f8f60d36f4d9acdca069b7da4767e8483e3fee"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005127",
+        "historical:raw_commonsense_qa_005140"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2f8b7a86f322fdab24c3e48c799f406bc787108012fa69611b1f9148539f362a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2262,
+      "first_chunk_seconds": 26.338,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2368,
+        "prompt_tokens": 1617,
+        "total_tokens": 3985,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1886,
+          "text_tokens": 482
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1fd8e7ec02352cc6c17f98b9b9256f7f63a4f130ccd70f681446710506e71945",
+      "status": "completed",
+      "latency_seconds": 53.908
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005127",
+        "historical:raw_commonsense_qa_005140"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e3776d1831d8305751c935e6346dd52c5fb2ce50657d9135ffb7b1adb16ad7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 871,
+      "first_chunk_seconds": 2.13,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 991,
+        "prompt_tokens": 800,
+        "total_tokens": 1791,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 856,
+          "text_tokens": 135
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "374e8e2a5a66513a7a2dc07f4a632af6b2e9329c0dcde66a2c6321931f959fdf",
+      "status": "completed",
+      "latency_seconds": 21.55
+    }
+  ],
+  "status": "completed"
+}

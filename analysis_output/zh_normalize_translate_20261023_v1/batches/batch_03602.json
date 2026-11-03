@@ -1,0 +1,96 @@
+{
+  "input_sha256": "d0dc65cd580bf8d0682dc161bd04099c5ee1356920ef22280f0bafa3e0216484",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000654",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Source answer is a multi-part geopolitical/legal-status claim ('illegal in all European countries except Georgia but is decriminalized in some') that resists reduction to a single clean fact. No catalog relation fits a substance-to-jurisdictional-legal-status mapping; proposing one would be overly narrow and the source's time-sensitive, multi-clause structure makes a reusable factual candidate unreliable. Second annotator also flagged ambiguous_relation.",
+      "input_sha256": "91597b4cd84e70e91a364ca70f8cbca6278cb050ee9ddd2b134b10ab7e6fbb0c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000657",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The QA is a title-completion puzzle ('Complete the title: Citizen ___?') whose source answer is the single word 'Ruth'. The extractable fact (full movie title 'Citizen Ruth', Payne-directed, American, blends politics and personal drama) is a clue-solving product rather than a straightforward factual relation. No catalog relation cleanly maps 'partial title + describing clause -> completing word'; forcing description_to_entity would misrepresent the answer as the entity name when it is a single completion token. First annotator flagged clue_solving; deferring to avoid introducing a puzzle-derived fact as a reusable relation.",
+      "input_sha256": "48cd94180dd7fe470c1bedf62942e97898c518f9de75ed82be03c32ecc5b69d4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000654",
+        "historical:raw_truthful_qa_000657"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0321ab3bce7d457eb2c4aab3f0e2ab179fd435697a3501b9b4027039310be65e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 58.125,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000654",
+        "historical:raw_truthful_qa_000657"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0321ab3bce7d457eb2c4aab3f0e2ab179fd435697a3501b9b4027039310be65e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3429,
+      "first_chunk_seconds": 23.053,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3822,
+        "prompt_tokens": 1625,
+        "total_tokens": 5447,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3484,
+          "text_tokens": 338
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4fd1ac3a07f577eca84875c5eede3b716e0456192a038313fb7371ae8bf8238b",
+      "status": "completed",
+      "latency_seconds": 89.145
+    }
+  ],
+  "status": "completed"
+}

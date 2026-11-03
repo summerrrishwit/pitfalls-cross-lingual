@@ -1,0 +1,217 @@
+{
+  "input_sha256": "834ff1a1b203a47a6ca850b18116aabb66e77cff9c043ec23cedf927cde5c813",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ba14c4001b49216c8307",
+      "decision": "ready",
+      "subject": "Grand Slam breakfast",
+      "relation_id": "menu_item_to_restaurant",
+      "relation_definition": "The specific restaurant or chain at which a named menu item is available for order; not a franchise variant unless specified.",
+      "direction": "menu item -> restaurant",
+      "answer": "Denny's",
+      "canonical_fact": "The Grand Slam breakfast is served at Denny's.",
+      "prompt_en": "At which restaurant can you order a Grand Slam breakfast?",
+      "evidence_quotes": [
+        "In what restaurant can you order a Grand Slam breakfast?",
+        "Denny's"
+      ],
+      "reason": "Source question and answer directly establish that the Grand Slam breakfast is available at Denny's. No catalog relation captures a menu-item-to-restaurant availability link, so a new precise relation 'menu_item_to_restaurant' is proposed. Answer 'Denny's' is retained verbatim from the old extraction and matches the source answer.",
+      "english": {
+        "answer": "Denny's",
+        "relation_id": "menu_item_to_restaurant",
+        "prompt_en": "At which restaurant can you order a Grand Slam breakfast?",
+        "direction": "menu item -> restaurant",
+        "subject": "Grand Slam breakfast",
+        "canonical_fact": "The Grand Slam breakfast is served at Denny's.",
+        "relation_definition": "The specific restaurant or chain at which a named menu item is available for order; not a franchise variant unless specified.",
+        "answer_aliases_en": [
+          "Denny's"
+        ],
+        "relation_spec": {
+          "id": "menu_item_to_restaurant",
+          "definition": "The specific restaurant or chain at which a named menu item is available for order; not a franchise variant unless specified.",
+          "direction": "menu item -> restaurant"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "078d3406b22439f49e269e8ffafdd2676b389681ef350e06439b95a649266b89",
+      "input_sha256": "3137d039419d1460fcc6fe062ed485b2d74d2e58ba889ad3346b542de147afdf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ba16a43c486667b1952f",
+      "decision": "ready",
+      "subject": "Hearing loss",
+      "relation_id": "condition_to_higher_prevalence_group",
+      "relation_definition": "The demographic group in which a specified medical condition occurs at a statistically higher rate; retain the comparison qualifier (e.g., 'than women').",
+      "direction": "medical condition -> demographic group with higher prevalence",
+      "answer": "Men",
+      "canonical_fact": "Hearing loss occurs more frequently for men than women.",
+      "prompt_en": "In which demographic group does hearing loss occur more frequently?",
+      "evidence_quotes": [
+        "Hearing loss occurs more frequently for",
+        "Men than women"
+      ],
+      "reason": "Source states hearing loss occurs more frequently for men than women. The qualifier 'than women' is preserved in the canonical fact. No catalog relation captures a demographic-prevalence comparison for a medical condition, so a new precise relation 'condition_to_higher_prevalence_group' is proposed. Answer 'Men' is a concise literal substring of the source answer 'Men than women' and is retained from the old extraction.",
+      "english": {
+        "answer": "Men",
+        "relation_id": "condition_to_higher_prevalence_group",
+        "prompt_en": "In which demographic group does hearing loss occur more frequently?",
+        "direction": "medical condition -> demographic group with higher prevalence",
+        "subject": "Hearing loss",
+        "canonical_fact": "Hearing loss occurs more frequently for men than women.",
+        "relation_definition": "The demographic group in which a specified medical condition occurs at a statistically higher rate; retain the comparison qualifier (e.g., 'than women').",
+        "answer_aliases_en": [
+          "Men",
+          "Men than women"
+        ],
+        "relation_spec": {
+          "id": "condition_to_higher_prevalence_group",
+          "definition": "The demographic group in which a specified medical condition occurs at a statistically higher rate; retain the comparison qualifier (e.g., 'than women').",
+          "direction": "medical condition -> demographic group with higher prevalence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fcf2dd5030c11f79f3d89dd4366f2531bab627daeb477a519c82e5190d1cc8cf",
+      "input_sha256": "80ab03d0a2d7867dc463c4cbb4f9d5caca7a1b4b13868a45a1cc30c98c22e306",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ba14c4001b49216c8307",
+      "input_sha256": "3137d039419d1460fcc6fe062ed485b2d74d2e58ba889ad3346b542de147afdf",
+      "english": {
+        "answer": "Denny's",
+        "relation_id": "menu_item_to_restaurant",
+        "prompt_en": "At which restaurant can you order a Grand Slam breakfast?",
+        "direction": "menu item -> restaurant",
+        "subject": "Grand Slam breakfast",
+        "canonical_fact": "The Grand Slam breakfast is served at Denny's.",
+        "relation_definition": "The specific restaurant or chain at which a named menu item is available for order; not a franchise variant unless specified.",
+        "answer_aliases_en": [
+          "Denny's"
+        ],
+        "relation_spec": {
+          "id": "menu_item_to_restaurant",
+          "definition": "The specific restaurant or chain at which a named menu item is available for order; not a franchise variant unless specified.",
+          "direction": "menu item -> restaurant"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "078d3406b22439f49e269e8ffafdd2676b389681ef350e06439b95a649266b89",
+      "translation": {
+        "record_id": "public:pbf_ba14c4001b49216c8307",
+        "subject_zh": "大满贯早餐",
+        "prompt_zh": "在哪家餐厅可以点大满贯早餐？",
+        "canonical_fact_zh": "大满贯早餐在Denny's供应。",
+        "answer_zh": "Denny's",
+        "answer_aliases_zh": [
+          "Denny's"
+        ]
+      },
+      "translation_sha256": "4f86fcea4a15fa7831fef173ad31fc7bda045255bf9a9a314a0b95139bbcf82d"
+    },
+    {
+      "record_id": "public:pbf_ba16a43c486667b1952f",
+      "input_sha256": "80ab03d0a2d7867dc463c4cbb4f9d5caca7a1b4b13868a45a1cc30c98c22e306",
+      "english": {
+        "answer": "Men",
+        "relation_id": "condition_to_higher_prevalence_group",
+        "prompt_en": "In which demographic group does hearing loss occur more frequently?",
+        "direction": "medical condition -> demographic group with higher prevalence",
+        "subject": "Hearing loss",
+        "canonical_fact": "Hearing loss occurs more frequently for men than women.",
+        "relation_definition": "The demographic group in which a specified medical condition occurs at a statistically higher rate; retain the comparison qualifier (e.g., 'than women').",
+        "answer_aliases_en": [
+          "Men",
+          "Men than women"
+        ],
+        "relation_spec": {
+          "id": "condition_to_higher_prevalence_group",
+          "definition": "The demographic group in which a specified medical condition occurs at a statistically higher rate; retain the comparison qualifier (e.g., 'than women').",
+          "direction": "medical condition -> demographic group with higher prevalence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fcf2dd5030c11f79f3d89dd4366f2531bab627daeb477a519c82e5190d1cc8cf",
+      "translation": {
+        "record_id": "public:pbf_ba16a43c486667b1952f",
+        "subject_zh": "听力损失",
+        "prompt_zh": "听力损失在哪个人群中更为常见？",
+        "canonical_fact_zh": "听力损失在男性中比女性更为常见。",
+        "answer_zh": "男性",
+        "answer_aliases_zh": [
+          "男性",
+          "男性比女性"
+        ]
+      },
+      "translation_sha256": "5f5b8f875ba18a0b6acfab299dcfe1abfdcabd5de66391086b58bba7eea8a7c3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ba14c4001b49216c8307",
+        "public:pbf_ba16a43c486667b1952f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c68867b9b4617becc3037da1f474da312a5b7a379b4c60ec7c07beea91aaccaf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2471,
+      "first_chunk_seconds": 36.899,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2503,
+        "prompt_tokens": 1569,
+        "total_tokens": 4072,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1946,
+          "text_tokens": 557
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f107545d842e29ad8fb433c9e4e68a54514d27c5c724463acf4efdf51767f0ea",
+      "status": "completed",
+      "latency_seconds": 58.501
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ba14c4001b49216c8307",
+        "public:pbf_ba16a43c486667b1952f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da2630fe4f66105e35fcf5527efce6528c6bf546f4857bf16a7b2b98a4b13996",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1245,
+      "first_chunk_seconds": 14.268,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1243,
+        "prompt_tokens": 887,
+        "total_tokens": 2130,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1004,
+          "text_tokens": 239
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5dee5fb080ff4a4f54ef8b076ed91c95e52fe5c5459a8a83a32a3470a46926ba",
+      "status": "completed",
+      "latency_seconds": 24.584
+    }
+  ],
+  "status": "completed"
+}

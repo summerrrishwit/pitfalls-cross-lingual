@@ -1,0 +1,157 @@
+{
+  "input_sha256": "d793f44c0228e418d2fd29b4271ac144d093d1874c0a2359de9e9fce157ed4f2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000969",
+      "decision": "ready",
+      "subject": "water vapor condensing into liquid droplets as clouds form",
+      "relation_id": "process_to_released_quantity",
+      "relation_definition": "The quantity (e.g., energy, particles) released as a direct result of a specified physical or chemical phase-change process, stated at the granularity asked.",
+      "direction": "process -> released quantity",
+      "answer": "heat",
+      "canonical_fact": "When water vapor condenses into liquid droplets as clouds form, heat is released in the atmosphere.",
+      "prompt_en": "When water vapor condenses into liquid droplets as clouds form, what is released in the atmosphere?",
+      "evidence_quotes": [
+        "If the water vapor condenses in liquid droplets as clouds form, what is released in the atmosphere?",
+        "heat"
+      ],
+      "reason": "Source question and answer explicitly state that heat is released during condensation. No existing catalog relation captures a process releasing a quantity; proposing a precise new snake_case relation 'process_to_released_quantity' with direction 'process -> released quantity'. Both model annotations agree on extraction; answer 'heat' is copied verbatim from source_answer.",
+      "english": {
+        "prompt_en": "When water vapor condenses into liquid droplets as clouds form, what is released in the atmosphere?",
+        "relation_definition": "The quantity (e.g., energy, particles) released as a direct result of a specified physical or chemical phase-change process, stated at the granularity asked.",
+        "answer": "heat",
+        "canonical_fact": "When water vapor condenses into liquid droplets as clouds form, heat is released in the atmosphere.",
+        "direction": "process -> released quantity",
+        "relation_id": "process_to_released_quantity",
+        "subject": "water vapor condensing into liquid droplets as clouds form",
+        "answer_aliases_en": [
+          "heat"
+        ],
+        "relation_spec": {
+          "id": "process_to_released_quantity",
+          "definition": "The quantity (e.g., energy, particles) released as a direct result of a specified physical or chemical phase-change process, stated at the granularity asked.",
+          "direction": "process -> released quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "977d66c0485533f754a0bcfd4aefd5d219d698df01fb7b9eb1dd6218a0e4f074",
+      "input_sha256": "02354fe7d9332eac6fdd72c246eee550f2d39f76b871baefc620c0ad0f21c6e8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000970",
+      "decision": "ready",
+      "subject": "fish with a round sucker used to suck the blood of other fish",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "lamprey",
+      "canonical_fact": "The fish with a round sucker used to suck the blood of other fish is the lamprey.",
+      "prompt_en": "Which fish has a round sucker used to suck the blood of other fish?",
+      "evidence_quotes": [
+        "Which fish has a round sucker used to suck the blood of other fish?",
+        "lamprey"
+      ],
+      "reason": "Existing catalog relation description_to_entity fits exactly: the source question supplies an identifying description ('a round sucker used to suck the blood of other fish') and the source answer names the unique entity 'lamprey'. Direction 'identifying description -> entity' matches. Answer copied verbatim from source_answer.",
+      "english": {
+        "prompt_en": "Which fish has a round sucker used to suck the blood of other fish?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "lamprey",
+        "canonical_fact": "The fish with a round sucker used to suck the blood of other fish is the lamprey.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "fish with a round sucker used to suck the blood of other fish",
+        "answer_aliases_en": [
+          "lamprey"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d57b044f3cd28255be0ec917d032725145d79f3e97d1e9830ca671b2ca91b782",
+      "input_sha256": "574b1ccd1a6fda880cc1a9135997fb2d9dd211f97b9dcaef0ec4a29093d8c03f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000969",
+        "historical:raw_sciq_000970"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cb2cff5c903b61e0734913f22fd3a3842d1ce6c88340b38bcefa418bca376df4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1983,
+      "first_chunk_seconds": 1.844,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2066,
+        "prompt_tokens": 1756,
+        "total_tokens": 3822,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1511,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "47e27b7c1f020ad31fd50b18756e295f2c7989cc5c80660babcaec3c5b3e4f8e",
+      "status": "completed",
+      "latency_seconds": 28.341
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000969",
+        "historical:raw_sciq_000970"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "64d51f2f389df09803ced96cad34e1bbfe13cd5e20365871bb3e51c6974efd46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.575
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000969",
+        "historical:raw_sciq_000970"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "64d51f2f389df09803ced96cad34e1bbfe13cd5e20365871bb3e51c6974efd46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.696
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000969",
+        "historical:raw_sciq_000970"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "64d51f2f389df09803ced96cad34e1bbfe13cd5e20365871bb3e51c6974efd46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.197
+    }
+  ],
+  "status": "failed"
+}

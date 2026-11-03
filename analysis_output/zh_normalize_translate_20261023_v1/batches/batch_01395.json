@@ -1,0 +1,157 @@
+{
+  "input_sha256": "9bc8048df4bd735dfaa2c4556a42afecf344739be111f90d86303bab596f557f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_90aaaa53580eb275b9f8",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures a general psychological claim about the temporal condition under which a demographic group's self-risk peaks. A proposed new relation (e.g., 'group_to_peak_risk_condition') would be too narrow and idiosyncratic to be a reusable pattern. The source is a single clinical observation, not a structured entity-to-entity fact, so it cannot be normalized into a reusable factual candidate without forcing an ill-fitting category.",
+      "input_sha256": "ac6c412475640c2a74317b5081815bad6b7cb349cfc56afca6fa9464510bb5ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_90b72b2e0d646c0c93ec",
+      "decision": "ready",
+      "subject": "character on the TV show 'Friends' who is a chef",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Monica",
+      "canonical_fact": "The character on the TV show 'Friends' who is a chef is Monica.",
+      "prompt_en": "The character on the TV show 'Friends' who is a chef is named",
+      "evidence_quotes": [
+        "character on the TV show 'Friends' is a chef",
+        "Monica"
+      ],
+      "reason": "The source question uniquely identifies a single character (Monica) in the TV show 'Friends' by the attribute 'chef', which maps directly to the catalog relation description_to_entity. The description is explicitly qualified (show + profession), the answer is a concise literal substring of source_answer, and prompt_en is option-free without leaking the answer.",
+      "english": {
+        "answer": "Monica",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The character on the TV show 'Friends' who is a chef is named",
+        "direction": "identifying description -> entity",
+        "subject": "character on the TV show 'Friends' who is a chef",
+        "canonical_fact": "The character on the TV show 'Friends' who is a chef is Monica.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Monica"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9310c81ba60e70cfac8939aaff0d5e4664517e2905cd4955aca5f1e138eeb804",
+      "input_sha256": "ab5c0b5895b4cbfc245f35a405fda9cd296fc897c2aef7d8a7c7e3324279788f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_90b72b2e0d646c0c93ec",
+      "input_sha256": "ab5c0b5895b4cbfc245f35a405fda9cd296fc897c2aef7d8a7c7e3324279788f",
+      "english": {
+        "answer": "Monica",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The character on the TV show 'Friends' who is a chef is named",
+        "direction": "identifying description -> entity",
+        "subject": "character on the TV show 'Friends' who is a chef",
+        "canonical_fact": "The character on the TV show 'Friends' who is a chef is Monica.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Monica"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9310c81ba60e70cfac8939aaff0d5e4664517e2905cd4955aca5f1e138eeb804",
+      "translation": {
+        "record_id": "public:pbf_90b72b2e0d646c0c93ec",
+        "subject_zh": "《老友记》电视剧中担任厨师的角色",
+        "prompt_zh": "《老友记》电视剧中担任厨师的角色名叫",
+        "canonical_fact_zh": "《老友记》电视剧中担任厨师的角色是莫妮卡。",
+        "answer_zh": "莫妮卡",
+        "answer_aliases_zh": [
+          "莫妮卡"
+        ]
+      },
+      "translation_sha256": "eafec675836b6ebb92bfcb28dbd14dfa63a280e855493bccd776b922d61194d1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_90aaaa53580eb275b9f8",
+        "public:pbf_90b72b2e0d646c0c93ec"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b3e2942b77481d3da01e2c7693800a5a1375607c686786fadde3240414dc43b2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2120,
+      "first_chunk_seconds": 8.775,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2162,
+        "prompt_tokens": 1642,
+        "total_tokens": 3804,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1688,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cfbde559b20bf0837947ee82ced19399bb6fb429932b1930bdb2c6fc3e19d794",
+      "status": "completed",
+      "latency_seconds": 27.868
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_90b72b2e0d646c0c93ec"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5e4e99eca6044d66cdaa3b15209d2c68d01952fb2d3fe829cde02385b3827802",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 473,
+      "first_chunk_seconds": 21.081,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 470,
+        "prompt_tokens": 519,
+        "total_tokens": 989,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 334,
+          "text_tokens": 136
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "806c0258676398b0f265edaf1395ee434cee0563381ff9a716c6134420b5c8f3",
+      "status": "completed",
+      "latency_seconds": 25.0
+    }
+  ],
+  "status": "completed"
+}

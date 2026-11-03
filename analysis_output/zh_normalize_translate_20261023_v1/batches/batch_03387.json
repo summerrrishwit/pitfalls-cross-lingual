@@ -1,0 +1,171 @@
+{
+  "input_sha256": "96787ae2ae3950b259cc75c232d25f69f75ad8e8b04e5789d522f06a4ff03046",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001823",
+      "decision": "ready",
+      "subject": "getting in shape",
+      "relation_id": "activity_to_purpose",
+      "relation_definition": "The stated purpose, benefit, or motivating reason for engaging in a specified activity or action.",
+      "direction": "activity -> purpose",
+      "answer": "good health",
+      "canonical_fact": "The purpose of getting in shape is good health.",
+      "prompt_en": "What is a primary purpose of getting in shape?",
+      "evidence_quotes": [
+        "getting in shape",
+        "good health"
+      ],
+      "reason": "The source question explicitly asks for the purpose of getting in shape and the source answer 'good health' is a concise literal substring. No existing catalog relation captures a purpose/benefit-of-activity link, so a new precise relation activity_to_purpose is proposed.",
+      "english": {
+        "prompt_en": "What is a primary purpose of getting in shape?",
+        "relation_definition": "The stated purpose, benefit, or motivating reason for engaging in a specified activity or action.",
+        "answer": "good health",
+        "canonical_fact": "The purpose of getting in shape is good health.",
+        "direction": "activity -> purpose",
+        "relation_id": "activity_to_purpose",
+        "subject": "getting in shape",
+        "answer_aliases_en": [
+          "good health"
+        ],
+        "relation_spec": {
+          "id": "activity_to_purpose",
+          "definition": "The stated purpose, benefit, or motivating reason for engaging in a specified activity or action.",
+          "direction": "activity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6713f45e50c9fc027339f9a446bb8cf28e8c714713a5e91c9cc632bee6ffda28",
+      "input_sha256": "2d5dd50bfc12c225be59d0c9de9439ac58634ac47b1393aa4fdcbabb9bdd6b06",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001824",
+      "decision": "ready",
+      "subject": "having fun",
+      "relation_id": "activity_to_emotional_outcome",
+      "relation_definition": "The typical emotional result or state associated with a specified activity or experience.",
+      "direction": "activity -> emotional outcome",
+      "answer": "being happy",
+      "canonical_fact": "Having fun typically results in the emotional state of being happy.",
+      "prompt_en": "What emotional state typically results from having fun?",
+      "evidence_quotes": [
+        "having fun",
+        "being happy"
+      ],
+      "reason": "The source question asks about the emotional result of having fun and the source answer 'being happy' is a concise literal substring. No existing catalog relation captures an activity-to-emotional-outcome link, so a new precise relation activity_to_emotional_outcome is proposed.",
+      "english": {
+        "prompt_en": "What emotional state typically results from having fun?",
+        "relation_definition": "The typical emotional result or state associated with a specified activity or experience.",
+        "answer": "being happy",
+        "canonical_fact": "Having fun typically results in the emotional state of being happy.",
+        "direction": "activity -> emotional outcome",
+        "relation_id": "activity_to_emotional_outcome",
+        "subject": "having fun",
+        "answer_aliases_en": [
+          "being happy"
+        ],
+        "relation_spec": {
+          "id": "activity_to_emotional_outcome",
+          "definition": "The typical emotional result or state associated with a specified activity or experience.",
+          "direction": "activity -> emotional outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9913585cade3d486c0fc48651375b60ffaf0b9108db1d98d3b676e6b3f306f57",
+      "input_sha256": "14fed240408ef91e2c3c69349b89e618886d1fc2288f9872bbd5558be2afc1be",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001823",
+        "historical:raw_commonsense_qa_001824"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c1349d23ef201c40cec14cead0c66c0595dcb45acfeda6e7627c0037d25c80d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.549
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001823",
+        "historical:raw_commonsense_qa_001824"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2c1349d23ef201c40cec14cead0c66c0595dcb45acfeda6e7627c0037d25c80d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1695,
+      "first_chunk_seconds": 4.644,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1812,
+        "prompt_tokens": 1579,
+        "total_tokens": 3391,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1484,
+          "text_tokens": 328
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "be61f879d3591c5917f41f0481a184eafac887eea6f8549c2129c04414b79463",
+      "status": "completed",
+      "latency_seconds": 32.202
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001823",
+        "historical:raw_commonsense_qa_001824"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cee5be45d22c4bb7f5df513ac6216dbd35901b550bfb544b4e572a9efc93b7fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.771
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001823",
+        "historical:raw_commonsense_qa_001824"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cee5be45d22c4bb7f5df513ac6216dbd35901b550bfb544b4e572a9efc93b7fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.469
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001823",
+        "historical:raw_commonsense_qa_001824"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cee5be45d22c4bb7f5df513ac6216dbd35901b550bfb544b4e572a9efc93b7fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.862
+    }
+  ],
+  "status": "failed"
+}

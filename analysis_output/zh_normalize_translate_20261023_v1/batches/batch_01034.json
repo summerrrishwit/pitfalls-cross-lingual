@@ -1,0 +1,220 @@
+{
+  "input_sha256": "0ed44b333eb8c472fdfc2d8edf47587c4919f5493f9389e7b8d5101e5200d2ba",
+  "normalized": [
+    {
+      "record_id": "public:pbf_52c6d56ca7176d5fae4d",
+      "decision": "ready",
+      "subject": "author with the most published works according to Guinness World Records",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "L. Ron Hubbard",
+      "canonical_fact": "According to Guinness World Records, the author with the most published works is L. Ron Hubbard.",
+      "prompt_en": "According to Guinness World Records, the author with the most published works is",
+      "evidence_quotes": [
+        "according to the guinness world records what author has the most published works",
+        "L. Ron Hubbard"
+      ],
+      "reason": "Existing extraction matches the source answer verbatim. The subject is an explicitly qualified identifying description (\"author with the most published works according to Guinness World Records\") that uniquely selects an entity, fitting description_to_entity exactly. No conflict with source.",
+      "english": {
+        "answer": "L. Ron Hubbard",
+        "relation_id": "description_to_entity",
+        "prompt_en": "According to Guinness World Records, the author with the most published works is",
+        "direction": "identifying description -> entity",
+        "subject": "author with the most published works according to Guinness World Records",
+        "canonical_fact": "According to Guinness World Records, the author with the most published works is L. Ron Hubbard.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "L. Ron Hubbard",
+          "LRH",
+          "Lafayette Ronald Hubbard"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3ce59b9c5da9391d2ee767cde1dcc64921d772ad7e49de9e34e945466c41138c",
+      "input_sha256": "c0972cbc307c4a5f5152de4b9e4cb4787b0632ffbfc8fd045c309f51bd1861fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5300b86c9fd0f0c062bb",
+      "decision": "ready",
+      "subject": "Abraham Maslow's hierarchy of needs",
+      "relation_id": "theory_to_core_tenet",
+      "relation_definition": "A specific mechanistic or normative claim that constitutes a core tenet of a named theory at the granularity asked.",
+      "direction": "named theory -> specific tenet/claim",
+      "answer": "satisfying needs from the next step in the hierarchy",
+      "canonical_fact": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by satisfying needs from the next step in the hierarchy.",
+      "prompt_en": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by",
+      "evidence_quotes": [
+        "Abraham Maslow's hierarachy of needs theorizes that each person is motivated by what?",
+        "satisfying needs from the next step in the hierarchy"
+      ],
+      "reason": "Source answer is a specific tenet (motivation mechanism) of a named theory, not a full definition, entity, or class. No existing catalog relation captures 'theory → specific claim/tenet' precisely, so proposing theory_to_core_tenet with explicit direction. The answer is copied verbatim from source_answer; source question contains a typo ('hierarachy') which is preserved in evidence_quotes but corrected in the subject/canonical_fact.",
+      "english": {
+        "answer": "satisfying needs from the next step in the hierarchy",
+        "relation_id": "theory_to_core_tenet",
+        "prompt_en": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by",
+        "direction": "named theory -> specific tenet/claim",
+        "subject": "Abraham Maslow's hierarchy of needs",
+        "canonical_fact": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by satisfying needs from the next step in the hierarchy.",
+        "relation_definition": "A specific mechanistic or normative claim that constitutes a core tenet of a named theory at the granularity asked.",
+        "answer_aliases_en": [
+          "satisfying needs from the next step in the hierarchy"
+        ],
+        "relation_spec": {
+          "id": "theory_to_core_tenet",
+          "definition": "A specific mechanistic or normative claim that constitutes a core tenet of a named theory at the granularity asked.",
+          "direction": "named theory -> specific tenet/claim"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "269a7658b86e1de6ef37959710a15ff42f0c0e968b3780f13b25f9f701120cf4",
+      "input_sha256": "83b7e743b7565ccffa508ed0489760e5f3fb62380b792a7ae2df1dd1870dd4e4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_52c6d56ca7176d5fae4d",
+      "input_sha256": "c0972cbc307c4a5f5152de4b9e4cb4787b0632ffbfc8fd045c309f51bd1861fe",
+      "english": {
+        "answer": "L. Ron Hubbard",
+        "relation_id": "description_to_entity",
+        "prompt_en": "According to Guinness World Records, the author with the most published works is",
+        "direction": "identifying description -> entity",
+        "subject": "author with the most published works according to Guinness World Records",
+        "canonical_fact": "According to Guinness World Records, the author with the most published works is L. Ron Hubbard.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "L. Ron Hubbard",
+          "LRH",
+          "Lafayette Ronald Hubbard"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3ce59b9c5da9391d2ee767cde1dcc64921d772ad7e49de9e34e945466c41138c",
+      "translation": {
+        "record_id": "public:pbf_52c6d56ca7176d5fae4d",
+        "subject_zh": "根据《吉尼斯世界纪录》出版作品最多的作者",
+        "prompt_zh": "根据《吉尼斯世界纪录》，出版作品最多的作者是",
+        "canonical_fact_zh": "根据《吉尼斯世界纪录》，出版作品最多的作者是L·罗恩·哈伯德。",
+        "answer_zh": "L·罗恩·哈伯德",
+        "answer_aliases_zh": [
+          "L·罗恩·哈伯德",
+          "LRH",
+          "拉法耶特·罗纳德·哈伯德"
+        ]
+      },
+      "translation_sha256": "d7720b8d4c3bcc809b25f695c3cbb12221eb39fc1dad3dc4d80485c12636b525"
+    },
+    {
+      "record_id": "public:pbf_5300b86c9fd0f0c062bb",
+      "input_sha256": "83b7e743b7565ccffa508ed0489760e5f3fb62380b792a7ae2df1dd1870dd4e4",
+      "english": {
+        "answer": "satisfying needs from the next step in the hierarchy",
+        "relation_id": "theory_to_core_tenet",
+        "prompt_en": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by",
+        "direction": "named theory -> specific tenet/claim",
+        "subject": "Abraham Maslow's hierarchy of needs",
+        "canonical_fact": "Abraham Maslow's hierarchy of needs theorizes that each person is motivated by satisfying needs from the next step in the hierarchy.",
+        "relation_definition": "A specific mechanistic or normative claim that constitutes a core tenet of a named theory at the granularity asked.",
+        "answer_aliases_en": [
+          "satisfying needs from the next step in the hierarchy"
+        ],
+        "relation_spec": {
+          "id": "theory_to_core_tenet",
+          "definition": "A specific mechanistic or normative claim that constitutes a core tenet of a named theory at the granularity asked.",
+          "direction": "named theory -> specific tenet/claim"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "269a7658b86e1de6ef37959710a15ff42f0c0e968b3780f13b25f9f701120cf4",
+      "translation": {
+        "record_id": "public:pbf_5300b86c9fd0f0c062bb",
+        "subject_zh": "亚伯拉罕·马斯洛的需求层次理论",
+        "prompt_zh": "亚伯拉罕·马斯洛的需求层次理论认为，每个人的动力来源于",
+        "canonical_fact_zh": "亚伯拉罕·马斯洛的需求层次理论认为，每个人的动力来源于满足层次中下一步的需求。",
+        "answer_zh": "满足层次中下一步的需求",
+        "answer_aliases_zh": [
+          "满足层次中下一步的需求"
+        ]
+      },
+      "translation_sha256": "9edc571705ac3c93605e99fb105a0293b1ceabd92635771bd1775743455deaa7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_52c6d56ca7176d5fae4d",
+        "public:pbf_5300b86c9fd0f0c062bb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "700bd9c92644c44b1c56eed3590a1893334ae821a742abc490585a1639fe7139",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2692,
+      "first_chunk_seconds": 15.739,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2805,
+        "prompt_tokens": 1714,
+        "total_tokens": 4519,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2205,
+          "text_tokens": 600
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "26692b24c1a76ad172b7a2c4f9d8899d42127b38cd190611cc9a6a7343fa5a06",
+      "status": "completed",
+      "latency_seconds": 56.326
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_52c6d56ca7176d5fae4d",
+        "public:pbf_5300b86c9fd0f0c062bb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b8396c46bd7de3d7f090d98d4a6e95f2e9803718ed6671477915295921ce7dfa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1037,
+      "first_chunk_seconds": 12.389,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1148,
+        "prompt_tokens": 907,
+        "total_tokens": 2055,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 838,
+          "text_tokens": 310
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8c483dfaf7bf734cd0e9c0b93905e20e4e8e76cd80934f00b7fe93bef95e8961",
+      "status": "completed",
+      "latency_seconds": 33.184
+    }
+  ],
+  "status": "completed"
+}

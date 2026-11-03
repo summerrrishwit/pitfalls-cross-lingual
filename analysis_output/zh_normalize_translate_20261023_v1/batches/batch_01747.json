@@ -1,0 +1,192 @@
+{
+  "input_sha256": "7e285b8000df98fb256877154836ef0d5ed22188d86f6c255d08ee3fc090587e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c93f0d4610d768c58656",
+      "decision": "ready",
+      "subject": "the episode of The Office where Jim and Pam get married",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Niagara",
+      "canonical_fact": "The episode of The Office where Jim and Pam get married is titled Niagara.",
+      "prompt_en": "The episode of The Office where Jim and Pam get married is titled",
+      "evidence_quotes": [
+        "Niagara",
+        "jim and pam get married"
+      ],
+      "reason": "The source question identifies a specific episode by plot content (Jim and Pam get married) within The Office; the source answer 'Niagara' is a literal substring of source_answer and uniquely names that episode. description_to_entity fits: an identifying description maps to the unique entity (episode title).",
+      "english": {
+        "answer": "Niagara",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The episode of The Office where Jim and Pam get married is titled",
+        "direction": "identifying description -> entity",
+        "subject": "the episode of The Office where Jim and Pam get married",
+        "canonical_fact": "The episode of The Office where Jim and Pam get married is titled Niagara.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Niagara"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "28512d02cbfeb81688988d8a0eb8a378a34e9aee64ed2e242889a29e40d4a268",
+      "input_sha256": "ed9b009ee295c2c55cdbac397d47da3f77576b126c52bc8a54585f9c48d81da4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c94426a2ac9a74dcbaf5",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The claim is a model-specific theoretical assertion within Fiedler's contingency model (high LPC leaders more effective in moderately favorable situations). No catalog relation captures a situational-effectiveness-conditional-on-theoretical-framework pattern. A new relation would be too narrow to be reusable, so deferring per 'never force a broad category' and insufficient generalizable source support for a standalone factual candidate.",
+      "input_sha256": "cf0ed16fb188dc86fff9f3a3bdaaee2f967c56f2dee5f830e8cc736ee2fbedbd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c93f0d4610d768c58656",
+      "input_sha256": "ed9b009ee295c2c55cdbac397d47da3f77576b126c52bc8a54585f9c48d81da4",
+      "english": {
+        "answer": "Niagara",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The episode of The Office where Jim and Pam get married is titled",
+        "direction": "identifying description -> entity",
+        "subject": "the episode of The Office where Jim and Pam get married",
+        "canonical_fact": "The episode of The Office where Jim and Pam get married is titled Niagara.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Niagara"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "28512d02cbfeb81688988d8a0eb8a378a34e9aee64ed2e242889a29e40d4a268",
+      "translation": {
+        "record_id": "public:pbf_c93f0d4610d768c58656",
+        "subject_zh": "《办公室》中Jim和Pam结婚的那一集",
+        "prompt_zh": "《办公室》中Jim和Pam结婚的那一集名为",
+        "canonical_fact_zh": "《办公室》中Jim和Pam结婚的那一集名为《尼亚加拉》。",
+        "answer_zh": "尼亚加拉",
+        "answer_aliases_zh": [
+          "尼亚加拉"
+        ]
+      },
+      "translation_sha256": "2927dbb66e80af5a728fe8fb49440edafe351e6a357ab20b959d76b5ff411346"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c93f0d4610d768c58656",
+        "public:pbf_c94426a2ac9a74dcbaf5"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "268d7c7fb8faf353735f0bd7fb04807f1cd0443e8ba2434b4343377d1b92b93c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2769,
+      "first_chunk_seconds": 37.696,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2769,
+        "prompt_tokens": 1667,
+        "total_tokens": 4436,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2126,
+          "text_tokens": 643
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e4b70d3c1a96fbb91b51f79184cf349e914b6119f0008f2ffffe765514746fa2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 61.315,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c93f0d4610d768c58656",
+        "public:pbf_c94426a2ac9a74dcbaf5"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "61eecbb1e89ac8bfb61e94658ac7a8cb899043f01c896811c8210b3048ee03aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2814,
+      "first_chunk_seconds": 13.491,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2865,
+        "prompt_tokens": 1685,
+        "total_tokens": 4550,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2430,
+          "text_tokens": 435
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "b84f7994c57ed06f700391c6bec0cbec752f89cb3aafee114d97272d18fdf62b",
+      "status": "completed",
+      "latency_seconds": 45.728
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c93f0d4610d768c58656"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "83fc1dc5a42cde2dcd22c06840aa070819d99ccb72da63f102dbdff58ec1043c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 761,
+      "first_chunk_seconds": 34.023,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 813,
+        "prompt_tokens": 517,
+        "total_tokens": 1330,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 669,
+          "text_tokens": 144
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fb0277785aca36de7f7eef87a1651c9a920d22814d5b242ffb091ab349feb073",
+      "status": "completed",
+      "latency_seconds": 46.669
+    }
+  ],
+  "status": "completed"
+}

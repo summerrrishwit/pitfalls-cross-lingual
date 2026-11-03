@@ -1,0 +1,157 @@
+{
+  "input_sha256": "60be57c616a723c2139b3977c8afa504ea98023355827619293031f6f953fa49",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007237",
+      "decision": "ready",
+      "subject": "Most people",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "two hands",
+      "canonical_fact": "Most people have two hands which they use to carry things.",
+      "prompt_en": "What do most people have that they use to carry things?",
+      "evidence_quotes": [
+        "two hands",
+        "use to carry things"
+      ],
+      "reason": "The source question and answer establish that the body part most people possess and use for carrying is 'two hands.' This maps to whole_to_part: 'Most people' (whole) have 'two hands' (constituent part) used for the stated function. The functional qualifier 'which they use to carry things' is preserved from the source.",
+      "english": {
+        "prompt_en": "What do most people have that they use to carry things?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "two hands",
+        "canonical_fact": "Most people have two hands which they use to carry things.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "Most people",
+        "answer_aliases_en": [
+          "two hands"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "37a2625a026187aa8c21538a492af0a5bb80230fb52dbf4dd4f3be0f8096a204",
+      "input_sha256": "083c022b1ce3f01d78045d317386abf776cc15a898183fbc85ad2fee27ca0f47",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007255",
+      "decision": "ready",
+      "subject": "Most living things",
+      "relation_id": "organism_to_postmortem_process",
+      "relation_definition": "Characteristic biological process occurring after death to a specified organism or class of organisms; may note exceptions such as preservation.",
+      "direction": "organism -> process",
+      "answer": "decomposition",
+      "canonical_fact": "Most living things undergo decomposition after death, a process that does not occur to mummies.",
+      "prompt_en": "What happens to most living things after death but not to mummies?",
+      "evidence_quotes": [
+        "decomposition",
+        "most living things after death but not to mummies"
+      ],
+      "reason": "No listed catalog relation captures a post-mortem biological process of a class of organisms. Proposed new relation 'organism_to_postmortem_process' with direction organism -> process, defined as the characteristic biological process after death for a given organism class, noting exceptions. Source answer 'decomposition' and the mummy contrast from the question are retained verbatim.",
+      "english": {
+        "prompt_en": "What happens to most living things after death but not to mummies?",
+        "relation_definition": "Characteristic biological process occurring after death to a specified organism or class of organisms; may note exceptions such as preservation.",
+        "answer": "decomposition",
+        "canonical_fact": "Most living things undergo decomposition after death, a process that does not occur to mummies.",
+        "direction": "organism -> process",
+        "relation_id": "organism_to_postmortem_process",
+        "subject": "Most living things",
+        "answer_aliases_en": [
+          "decomposition"
+        ],
+        "relation_spec": {
+          "id": "organism_to_postmortem_process",
+          "definition": "Characteristic biological process occurring after death to a specified organism or class of organisms; may note exceptions such as preservation.",
+          "direction": "organism -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9c226dfd9a928efc5a2ac55f834ba2f6c8da63432a0f07096d3b2078ba2548b7",
+      "input_sha256": "5901928df53758a35e3f19555016dcfbcd7a9987a8cc84c1d320f124a3a9596d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007237",
+        "historical:raw_commonsense_qa_007255"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3b9e6003c2c044475248796067fa7ea2bb0875cc9e531033df65f954f334c61",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3430,
+      "first_chunk_seconds": 6.309,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3516,
+        "prompt_tokens": 1589,
+        "total_tokens": 5105,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3003,
+          "text_tokens": 513
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "25f2748d133cbb98a6c9047299bdcd36f7a05d944fa074c2daa8e45cc4115d27",
+      "status": "completed",
+      "latency_seconds": 74.933
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007237",
+        "historical:raw_commonsense_qa_007255"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bcf15eacac74b377e0c8cf613404fc47cd9fc99f5572fa3495423f0e43c7952f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.999
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007237",
+        "historical:raw_commonsense_qa_007255"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bcf15eacac74b377e0c8cf613404fc47cd9fc99f5572fa3495423f0e43c7952f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 13.416
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007237",
+        "historical:raw_commonsense_qa_007255"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bcf15eacac74b377e0c8cf613404fc47cd9fc99f5572fa3495423f0e43c7952f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.151
+    }
+  ],
+  "status": "failed"
+}

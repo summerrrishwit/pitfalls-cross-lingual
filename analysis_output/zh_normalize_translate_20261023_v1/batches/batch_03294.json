@@ -1,0 +1,155 @@
+{
+  "input_sha256": "aa5a5d1f61679b31508800fba0391b5a6748ad0f82091031b39d03de3f5a3575",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000550",
+      "decision": "ready",
+      "subject": "chemical elements in the Milky Way with a double-digit atomic number",
+      "relation_id": "set_to_most_abundant_member",
+      "relation_definition": "The member of a specified qualified set that has the highest abundance or prevalence within that set.",
+      "direction": "qualified set -> most abundant member",
+      "answer": "neon",
+      "canonical_fact": "The most abundant chemical element in the Milky Way with a double-digit atomic number is neon.",
+      "prompt_en": "What is the most abundant chemical element in the Milky Way with a double-digit atomic number?",
+      "evidence_quotes": [
+        "The most abundant element in the Milky Way with a double-digit atomic number is neon"
+      ],
+      "reason": "Source explicitly states neon is the most abundant element in the Milky Way with a double-digit atomic number. No existing catalog relation captures 'most abundant member of a qualified set'; entity_to_class and whole_to_part do not fit a superlative ranking within a filtered set. Proposing set_to_most_abundant_member.",
+      "english": {
+        "prompt_en": "What is the most abundant chemical element in the Milky Way with a double-digit atomic number?",
+        "relation_definition": "The member of a specified qualified set that has the highest abundance or prevalence within that set.",
+        "answer": "neon",
+        "canonical_fact": "The most abundant chemical element in the Milky Way with a double-digit atomic number is neon.",
+        "direction": "qualified set -> most abundant member",
+        "relation_id": "set_to_most_abundant_member",
+        "subject": "chemical elements in the Milky Way with a double-digit atomic number",
+        "answer_aliases_en": [
+          "neon"
+        ],
+        "relation_spec": {
+          "id": "set_to_most_abundant_member",
+          "definition": "The member of a specified qualified set that has the highest abundance or prevalence within that set.",
+          "direction": "qualified set -> most abundant member"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1511f945a17a4332e502e8f897a0ec14716cf2f778dac64f72106dec5be4fdcb",
+      "input_sha256": "75585c29b2ad794424b8d7929ae7e5186c88256dddfe4c628c75ad477793235d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000554",
+      "decision": "ready",
+      "subject": "NIKE",
+      "relation_id": "name_to_expansion",
+      "relation_definition": "The expansion of a name or term if it functions or originally functioned as an abbreviation/acronym; the value 'nothing' indicates no expansion applies and the name is not derived from an acronym.",
+      "direction": "name/term -> expansion",
+      "answer": "Nothing",
+      "canonical_fact": "The letters in \"NIKE\" originally stood for nothing.",
+      "prompt_en": "What did the letters in NIKE originally stand for?",
+      "evidence_quotes": [
+        "Nothing"
+      ],
+      "reason": "Source answer is 'Nothing', meaning NIKE is not an acronym. abbreviation_to_expansion presupposes the subject IS an abbreviation, which is contradicted here. No existing catalog relation handles the case where a name is queried for expansion and the answer is 'nothing'. Proposing name_to_expansion to cover both positive expansions and the explicit 'nothing' case.",
+      "english": {
+        "prompt_en": "What did the letters in NIKE originally stand for?",
+        "relation_definition": "The expansion of a name or term if it functions or originally functioned as an abbreviation/acronym; the value 'nothing' indicates no expansion applies and the name is not derived from an acronym.",
+        "answer": "Nothing",
+        "canonical_fact": "The letters in \"NIKE\" originally stood for nothing.",
+        "direction": "name/term -> expansion",
+        "relation_id": "name_to_expansion",
+        "subject": "NIKE",
+        "answer_aliases_en": [
+          "Nothing"
+        ],
+        "relation_spec": {
+          "id": "name_to_expansion",
+          "definition": "The expansion of a name or term if it functions or originally functioned as an abbreviation/acronym; the value 'nothing' indicates no expansion applies and the name is not derived from an acronym.",
+          "direction": "name/term -> expansion"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3e4658a41f359823d9c395d9df589e2b96e2241c518e3a496512d7952c222e97",
+      "input_sha256": "abef7777a7054d3441cbabc88698007093295eb5053e8d6951d346078e3706ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000550",
+        "historical:raw_truthful_qa_000554"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c82a8c40d4c6090918c5289ac4a7cfa4e4cc7efc772d2c19bb9399e90e06e2e4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3512,
+      "first_chunk_seconds": 6.348,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3701,
+        "prompt_tokens": 1722,
+        "total_tokens": 5423,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3164,
+          "text_tokens": 537
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a9453b3d9c5d2e212d2e7f5cf4f30ab115d44dd9626a7a734a745dcd7cbd5f5",
+      "status": "completed",
+      "latency_seconds": 70.012
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000550",
+        "historical:raw_truthful_qa_000554"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1ae7d4391cbda7986cf418331e738aa8f32dc11e98b4a52743eae35575c9515b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 34.087
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000550",
+        "historical:raw_truthful_qa_000554"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1ae7d4391cbda7986cf418331e738aa8f32dc11e98b4a52743eae35575c9515b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 21.347
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000550",
+        "historical:raw_truthful_qa_000554"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1ae7d4391cbda7986cf418331e738aa8f32dc11e98b4a52743eae35575c9515b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.472
+    }
+  ],
+  "status": "failed"
+}

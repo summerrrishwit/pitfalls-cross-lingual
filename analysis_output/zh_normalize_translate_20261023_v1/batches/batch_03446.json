@@ -1,0 +1,185 @@
+{
+  "input_sha256": "8b0fcf009778ec3fa45793a9514ba8225879d8c649b1d02e70eb310ac8cf8329",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004841",
+      "decision": "ready",
+      "subject": "pretending",
+      "relation_id": "activity_to_necessary_condition",
+      "relation_definition": "A stated necessary condition or resource required for performing a specified activity or concept; not a sufficient or optional condition.",
+      "direction": "activity/concept -> necessary condition",
+      "answer": "imagination",
+      "canonical_fact": "Pretending requires imagination.",
+      "prompt_en": "What do you need in order to pretend?",
+      "evidence_quotes": [
+        "to pretend you need something special",
+        "have imagination"
+      ],
+      "reason": "The source QA pair states that to pretend one needs something special and the answer is 'have imagination', making 'imagination' a necessary condition for pretending. No catalog relation captures a general 'necessary condition for an activity' link, so a new precise relation 'activity_to_necessary_condition' is proposed. The answer 'imagination' is a literal substring of the source answer 'have imagination'.",
+      "english": {
+        "prompt_en": "What do you need in order to pretend?",
+        "relation_definition": "A stated necessary condition or resource required for performing a specified activity or concept; not a sufficient or optional condition.",
+        "answer": "imagination",
+        "canonical_fact": "Pretending requires imagination.",
+        "direction": "activity/concept -> necessary condition",
+        "relation_id": "activity_to_necessary_condition",
+        "subject": "pretending",
+        "answer_aliases_en": [
+          "imagination"
+        ],
+        "relation_spec": {
+          "id": "activity_to_necessary_condition",
+          "definition": "A stated necessary condition or resource required for performing a specified activity or concept; not a sufficient or optional condition.",
+          "direction": "activity/concept -> necessary condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cdb5c472d9b0494a3a91a403723c788ea3598b53e05de5741f490acd6e00ead3",
+      "input_sha256": "136a59c54d5747a5933478a5c2a8cfdf9059492e76a316379f0c04ef6ff9c77d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004853",
+      "decision": "ready",
+      "subject": "PG-13",
+      "relation_id": "rating_to_content_restriction",
+      "relation_definition": "The specific content restriction or maximum allowed depiction level for a given element under a specified film/media rating.",
+      "direction": "rating/classification -> allowed content level",
+      "answer": "partial",
+      "canonical_fact": "PG-13 allows only partial nudity.",
+      "prompt_en": "What level of nudity does the PG-13 film rating permit?",
+      "evidence_quotes": [
+        "PG-13 only allowed for what kind of nudity",
+        "partial"
+      ],
+      "reason": "The source QA establishes that the PG-13 rating permits only partial (not full) nudity. The answer 'partial' is the entire source answer. No catalog relation models a film-rating content-restriction link, so a new precise relation 'rating_to_content_restriction' is proposed. The Qwen-3.8-Max extraction aligns with the source; the sensenova 'ambiguous_relation' flag is over-cautious given the clear rating→content-level structure in the source.",
+      "english": {
+        "prompt_en": "What level of nudity does the PG-13 film rating permit?",
+        "relation_definition": "The specific content restriction or maximum allowed depiction level for a given element under a specified film/media rating.",
+        "answer": "partial",
+        "canonical_fact": "PG-13 allows only partial nudity.",
+        "direction": "rating/classification -> allowed content level",
+        "relation_id": "rating_to_content_restriction",
+        "subject": "PG-13",
+        "answer_aliases_en": [
+          "partial"
+        ],
+        "relation_spec": {
+          "id": "rating_to_content_restriction",
+          "definition": "The specific content restriction or maximum allowed depiction level for a given element under a specified film/media rating.",
+          "direction": "rating/classification -> allowed content level"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b9d00f63451e39adb0456c63b1709900ae53f3de3d1951fe2940b1c0eb6adddf",
+      "input_sha256": "c218bbc262f55ecc74e0d7a48dacf010866c00c715c0ef4fc378b6de132b5f7e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a701750c6cc7cbc4e99b23da8c46158234931fb49d1fa1c00a9cba56673da929",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 48.155
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a701750c6cc7cbc4e99b23da8c46158234931fb49d1fa1c00a9cba56673da929",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 61.923
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a701750c6cc7cbc4e99b23da8c46158234931fb49d1fa1c00a9cba56673da929",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2829,
+      "first_chunk_seconds": 2.832,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2890,
+        "prompt_tokens": 1604,
+        "total_tokens": 4494,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2347,
+          "text_tokens": 543
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0ae13ae08d04b5b076f169d36e48ab4f094a4b20cd94b5695e155a82a2d26c9d",
+      "status": "completed",
+      "latency_seconds": 191.865
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b2453637d9df87943c0b75584e6f9c47404b0de062f1b7eaf41c17bf0101fc7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 93.543
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6b2453637d9df87943c0b75584e6f9c47404b0de062f1b7eaf41c17bf0101fc7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.436
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004841",
+        "historical:raw_commonsense_qa_004853"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6b2453637d9df87943c0b75584e6f9c47404b0de062f1b7eaf41c17bf0101fc7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 56.294
+    }
+  ],
+  "status": "failed"
+}

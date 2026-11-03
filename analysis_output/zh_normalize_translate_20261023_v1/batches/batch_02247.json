@@ -1,0 +1,246 @@
+{
+  "input_sha256": "009b3cc1aa9be6d1fc9e07b6c50f52e3567acc0868a8f453459cd5a9e5bc1b84",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000861",
+      "decision": "ready",
+      "subject": "Earth",
+      "relation_id": "entity_to_associated_force",
+      "relation_definition": "The specific named physical force attributed to an entity that produces a stated effect; retain qualifying context from the source (e.g., 'non-contact', 'keeps X in orbit').",
+      "direction": "entity -> force",
+      "answer": "gravitational force",
+      "canonical_fact": "The non-contact force of Earth that keeps the Moon in orbit is gravitational force.",
+      "prompt_en": "What non-contact force of Earth keeps the Moon in orbit?",
+      "evidence_quotes": [
+        "What force of Earth keeps the Moon in orbit?",
+        "gravitational force"
+      ],
+      "reason": "No catalog relation covers 'entity -> physical force/property producing an effect.' Proposed new relation entity_to_associated_force captures the direction (Earth -> gravitational force) and the qualifying context. Answer 'gravitational force' is a verbatim substring of source_answer; prompt_en preserves the 'non-contact' qualifier from the question and does not leak the answer.",
+      "english": {
+        "direction": "entity -> force",
+        "relation_id": "entity_to_associated_force",
+        "answer": "gravitational force",
+        "canonical_fact": "The non-contact force of Earth that keeps the Moon in orbit is gravitational force.",
+        "subject": "Earth",
+        "prompt_en": "What non-contact force of Earth keeps the Moon in orbit?",
+        "relation_definition": "The specific named physical force attributed to an entity that produces a stated effect; retain qualifying context from the source (e.g., 'non-contact', 'keeps X in orbit').",
+        "answer_aliases_en": [
+          "gravitational force"
+        ],
+        "relation_spec": {
+          "id": "entity_to_associated_force",
+          "definition": "The specific named physical force attributed to an entity that produces a stated effect; retain qualifying context from the source (e.g., 'non-contact', 'keeps X in orbit').",
+          "direction": "entity -> force"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85d11beef81519dccd3c73ad9453654db725baba0d66c7543b281ac66e91c2d0",
+      "input_sha256": "fa5d0bc40337ac421c0d964f7e321fc524fe16f69b837126370cc335bebf5898",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000862",
+      "decision": "ready",
+      "subject": "first four moons of Jupiter",
+      "relation_id": "object_to_discoverer",
+      "relation_definition": "The person credited with the discovery or first documented observation of a specified object or set of objects; retain qualifying terms such as 'credited with', 'first four', and the parent body.",
+      "direction": "object -> discoverer",
+      "answer": "Galileo Galilei",
+      "canonical_fact": "Galileo Galilei is credited with discovering the first four moons of Jupiter.",
+      "prompt_en": "Which scientist is credited with discovering the first four moons of Jupiter?",
+      "evidence_quotes": [
+        "Which scientist is credited with discovering the first four moons of Jupiter?",
+        "Galileo Galilei"
+      ],
+      "reason": "No catalog relation covers 'object -> discoverer/observer.' written_work_to_author is limited to written works; description_to_entity inverts the direction. Proposed object_to_discoverer captures the precise direction (first four moons of Jupiter -> Galileo Galilei) with the qualifier 'credited with' retained from the source. Answer is a verbatim substring of source_answer; prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "direction": "object -> discoverer",
+        "relation_id": "object_to_discoverer",
+        "answer": "Galileo Galilei",
+        "canonical_fact": "Galileo Galilei is credited with discovering the first four moons of Jupiter.",
+        "subject": "first four moons of Jupiter",
+        "prompt_en": "Which scientist is credited with discovering the first four moons of Jupiter?",
+        "relation_definition": "The person credited with the discovery or first documented observation of a specified object or set of objects; retain qualifying terms such as 'credited with', 'first four', and the parent body.",
+        "answer_aliases_en": [
+          "Galileo Galilei"
+        ],
+        "relation_spec": {
+          "id": "object_to_discoverer",
+          "definition": "The person credited with the discovery or first documented observation of a specified object or set of objects; retain qualifying terms such as 'credited with', 'first four', and the parent body.",
+          "direction": "object -> discoverer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ff783de1d3e277d9711a2086206e8128a5c6199b958402477eee820e3f9a2eaf",
+      "input_sha256": "7cbba0c3df99042a1131f3a4a05cd5167b74f456f4031081933b2e9bd3eba842",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000861",
+      "input_sha256": "fa5d0bc40337ac421c0d964f7e321fc524fe16f69b837126370cc335bebf5898",
+      "english": {
+        "direction": "entity -> force",
+        "relation_id": "entity_to_associated_force",
+        "answer": "gravitational force",
+        "canonical_fact": "The non-contact force of Earth that keeps the Moon in orbit is gravitational force.",
+        "subject": "Earth",
+        "prompt_en": "What non-contact force of Earth keeps the Moon in orbit?",
+        "relation_definition": "The specific named physical force attributed to an entity that produces a stated effect; retain qualifying context from the source (e.g., 'non-contact', 'keeps X in orbit').",
+        "answer_aliases_en": [
+          "gravitational force"
+        ],
+        "relation_spec": {
+          "id": "entity_to_associated_force",
+          "definition": "The specific named physical force attributed to an entity that produces a stated effect; retain qualifying context from the source (e.g., 'non-contact', 'keeps X in orbit').",
+          "direction": "entity -> force"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85d11beef81519dccd3c73ad9453654db725baba0d66c7543b281ac66e91c2d0",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000861",
+        "subject_zh": "地球",
+        "prompt_zh": "地球使月球保持轨道运行的非接触力是什么？",
+        "canonical_fact_zh": "地球使月球保持轨道运行的非接触力是引力。",
+        "answer_zh": "引力",
+        "answer_aliases_zh": [
+          "引力"
+        ]
+      },
+      "translation_sha256": "bcf06db75eb227d11c8acc62b422b05815dad15fa82e41d46bd07f7b54263e3e"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000862",
+      "input_sha256": "7cbba0c3df99042a1131f3a4a05cd5167b74f456f4031081933b2e9bd3eba842",
+      "english": {
+        "direction": "object -> discoverer",
+        "relation_id": "object_to_discoverer",
+        "answer": "Galileo Galilei",
+        "canonical_fact": "Galileo Galilei is credited with discovering the first four moons of Jupiter.",
+        "subject": "first four moons of Jupiter",
+        "prompt_en": "Which scientist is credited with discovering the first four moons of Jupiter?",
+        "relation_definition": "The person credited with the discovery or first documented observation of a specified object or set of objects; retain qualifying terms such as 'credited with', 'first four', and the parent body.",
+        "answer_aliases_en": [
+          "Galileo Galilei"
+        ],
+        "relation_spec": {
+          "id": "object_to_discoverer",
+          "definition": "The person credited with the discovery or first documented observation of a specified object or set of objects; retain qualifying terms such as 'credited with', 'first four', and the parent body.",
+          "direction": "object -> discoverer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ff783de1d3e277d9711a2086206e8128a5c6199b958402477eee820e3f9a2eaf",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000862",
+        "subject_zh": "木星的前四颗卫星",
+        "prompt_zh": "哪位科学家被认为发现了木星的前四颗卫星？",
+        "canonical_fact_zh": "伽利略·伽利莱被认为发现了木星的前四颗卫星。",
+        "answer_zh": "伽利略·伽利莱",
+        "answer_aliases_zh": [
+          "伽利略·伽利莱"
+        ]
+      },
+      "translation_sha256": "984919ebddecfe84bef15beef3844fdedea0e899d3533c9eb8930e24dffca323"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000861",
+        "historical:raw_ai2_arc_easy_000862"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f329e224a165f4ce98060bf1a1266008cea57c7a0c467114b85dd77a495f7bed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2277,
+      "first_chunk_seconds": 15.595,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2398,
+        "prompt_tokens": 1729,
+        "total_tokens": 4127,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1872,
+          "text_tokens": 526
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3fa29f0608b0a166693756d7f831cc388ac90d45a29d7f5883358e5deb321463",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 92.634,
+      "validation_code": "invalid_normalization_schema"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000861",
+        "historical:raw_ai2_arc_easy_000862"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1a2a064bd2191a99bfaed29232394d6e2e2f0af8d8f3f164a9f70565b946224c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2294,
+      "first_chunk_seconds": 10.375,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2425,
+        "prompt_tokens": 1747,
+        "total_tokens": 4172,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1839,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "75ba0eba7d5c8f1607e778c4af31a24fcad58e9f163b29317c8f5492362e68e9",
+      "status": "completed",
+      "latency_seconds": 42.732
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000861",
+        "historical:raw_ai2_arc_easy_000862"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c5d1c03cc89c32a6eaa56d6cb01498abe1f536298a59f47aa3b7806869b9b45d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1260,
+      "first_chunk_seconds": 8.572,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1385,
+        "prompt_tokens": 914,
+        "total_tokens": 2299,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1150,
+          "text_tokens": 235
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b4935fd9cb96d8c92644e91b16e96c3fdc228e4b3668b4f9daa1e20a5be4c2e8",
+      "status": "completed",
+      "latency_seconds": 31.914
+    }
+  ],
+  "status": "completed"
+}

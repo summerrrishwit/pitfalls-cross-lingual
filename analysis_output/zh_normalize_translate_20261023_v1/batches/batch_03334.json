@@ -1,0 +1,157 @@
+{
+  "input_sha256": "89a9683e0b3fe2fe0615e37fd3550a077d65e8bae4e30d781cbd43d8c68e7198",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000922",
+      "decision": "ready",
+      "subject": "organisms in the kingdoms Eubacteria, Archaebacteria, and Protista",
+      "relation_id": "taxon_to_shared_structure",
+      "relation_definition": "A structural or cellular component shared by all members of one or more specified taxonomic groups; retain the scope (which groups) and granularity (which structure).",
+      "direction": "specified taxonomic group(s) -> shared cellular/structural feature",
+      "answer": "a cell membrane",
+      "canonical_fact": "Organisms in the kingdoms Eubacteria, Archaebacteria, and Protista share a cell membrane.",
+      "prompt_en": "Which cellular structure do organisms in the kingdoms Eubacteria, Archaebacteria, and Protista have in common?",
+      "evidence_quotes": [
+        "a cell membrane",
+        "Which cellular structure do organisms in the kingdoms Eubacteria, Archaebacteria, and Protista have in common?"
+      ],
+      "reason": "The source explicitly states that a cell membrane is the cellular structure common to organisms in Eubacteria, Archaebacteria, and Protista. No catalog relation precisely captures a shared structural feature across taxonomic groups, so a new relation 'taxon_to_shared_structure' is proposed. The answer 'a cell membrane' is copied verbatim from source_answer. The prompt is option-free and does not contain the literal answer.",
+      "english": {
+        "prompt_en": "Which cellular structure do organisms in the kingdoms Eubacteria, Archaebacteria, and Protista have in common?",
+        "relation_definition": "A structural or cellular component shared by all members of one or more specified taxonomic groups; retain the scope (which groups) and granularity (which structure).",
+        "answer": "a cell membrane",
+        "canonical_fact": "Organisms in the kingdoms Eubacteria, Archaebacteria, and Protista share a cell membrane.",
+        "direction": "specified taxonomic group(s) -> shared cellular/structural feature",
+        "relation_id": "taxon_to_shared_structure",
+        "subject": "organisms in the kingdoms Eubacteria, Archaebacteria, and Protista",
+        "answer_aliases_en": [
+          "a cell membrane"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_shared_structure",
+          "definition": "A structural or cellular component shared by all members of one or more specified taxonomic groups; retain the scope (which groups) and granularity (which structure).",
+          "direction": "specified taxonomic group(s) -> shared cellular/structural feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4c26f97afc85acd15715393a1a0df439ba9a4d8b6ebafefa535f093ca512fc34",
+      "input_sha256": "5becc5790e97b3559dbe98f5eae6e205ca7f36c5e66e17c54ecead63463b6376",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000931",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'one meter' is specific to a hypothetical scale-model setup (1 m represents 1 AU) and does not constitute a standalone reusable astronomical fact. Reframing it as 'Earth is 1 AU from the Sun' would require importing external knowledge not literally stated in the source. The answer is a derived calculation tied to the model context and is not cleanly extractable as a general reusable fact without that context.",
+      "input_sha256": "b2e020dbf91974987bc69d4cf210ecf1c7fadb3f7e8080f26c7f289fd5368094",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000922",
+        "historical:raw_ai2_arc_easy_000931"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d156f467de6237e82e5935ce4afd6ce7b973ace1797e4372098c54b92708b30d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.513
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000922",
+        "historical:raw_ai2_arc_easy_000931"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d156f467de6237e82e5935ce4afd6ce7b973ace1797e4372098c54b92708b30d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3177,
+      "first_chunk_seconds": 5.742,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3388,
+        "prompt_tokens": 1693,
+        "total_tokens": 5081,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2848,
+          "text_tokens": 540
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "53b9d09f651671b12d1e8bfce67415e0ea1a2342883c8fa83ea19347c60c3158",
+      "status": "completed",
+      "latency_seconds": 63.717
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000922"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a223a478460d5d627be146fbc40a95c1f8a391b1a6e3ee034ead82fe839444fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.558
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000922"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a223a478460d5d627be146fbc40a95c1f8a391b1a6e3ee034ead82fe839444fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 12.108,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000922"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a223a478460d5d627be146fbc40a95c1f8a391b1a6e3ee034ead82fe839444fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.245
+    }
+  ],
+  "status": "failed"
+}

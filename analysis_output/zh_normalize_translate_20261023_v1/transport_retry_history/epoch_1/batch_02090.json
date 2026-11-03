@@ -1,0 +1,158 @@
+{
+  "input_sha256": "84e322bca4ae4cfdd854c7151ef88792db5cfd6d7009acaa2c526f22356a3302",
+  "normalized": [
+    {
+      "record_id": "public:pbf_feaa1a7536470ad1d71c",
+      "decision": "ready",
+      "subject": "strike in bowling",
+      "relation_id": "game_action_to_score",
+      "relation_definition": "The points or score value awarded for a specified action or move within a named game or sport.",
+      "direction": "specific action/move in a named game or sport -> score value",
+      "answer": "10",
+      "canonical_fact": "A strike in bowling is awarded 10 points.",
+      "prompt_en": "How many points do you get for a strike in bowling?",
+      "evidence_quotes": [
+        "10.0 other unit"
+      ],
+      "reason": "Source answer '10.0 other unit' directly supports 10 points for a bowling strike; '10' is a literal substring. No existing catalog relation covers game-movement scoring, so a precise new relation 'game_action_to_score' is proposed rather than forcing a broad category.",
+      "english": {
+        "answer": "10",
+        "relation_id": "game_action_to_score",
+        "prompt_en": "How many points do you get for a strike in bowling?",
+        "direction": "specific action/move in a named game or sport -> score value",
+        "subject": "strike in bowling",
+        "canonical_fact": "A strike in bowling is awarded 10 points.",
+        "relation_definition": "The points or score value awarded for a specified action or move within a named game or sport.",
+        "answer_aliases_en": [
+          "10",
+          "10.0 other unit",
+          "10 other unit"
+        ],
+        "relation_spec": {
+          "id": "game_action_to_score",
+          "definition": "The points or score value awarded for a specified action or move within a named game or sport.",
+          "direction": "specific action/move in a named game or sport -> score value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de441375d2a444fbb09ac73d5c47e5ee5b60f5d1fc3fac67e9b5a61bd7ae9006",
+      "input_sha256": "9b59ed85ae2ba615e82000f55bf66f6469a079b44c97df1f77f1112a36818507",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_feb1d33a2ca45db00eb2",
+      "decision": "ready",
+      "subject": "elbow",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "Synovial hinge joint",
+      "canonical_fact": "The elbow is a synovial hinge joint.",
+      "prompt_en": "What type of joint is the elbow?",
+      "evidence_quotes": [
+        "Synovial hinge joint."
+      ],
+      "reason": "Source answer explicitly states the elbow's classification as a 'Synovial hinge joint'; this is a stable anatomical taxonomy membership, fitting the existing entity_to_class relation exactly. Answer 'Synovial hinge joint' is a literal substring of source answer.",
+      "english": {
+        "answer": "Synovial hinge joint",
+        "relation_id": "entity_to_class",
+        "prompt_en": "What type of joint is the elbow?",
+        "direction": "entity -> class",
+        "subject": "elbow",
+        "canonical_fact": "The elbow is a synovial hinge joint.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "Synovial hinge joint",
+          "Synovial hinge joint."
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d66a9ba05e22bc89bd6938254b51e274df253b398fed382f8db8091dbacf9f13",
+      "input_sha256": "809e2218e09653cd356ece541837958ed48206458c0f03736a9105e7ea03cf1c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_feaa1a7536470ad1d71c",
+        "public:pbf_feb1d33a2ca45db00eb2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3ec2bcf78b3f100c6a86919caf719cba0e8567c7b758e20b5c935cd3be92a07f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1767,
+      "first_chunk_seconds": 26.781,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1883,
+        "prompt_tokens": 1589,
+        "total_tokens": 3472,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1424,
+          "text_tokens": 459
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "02f3234b206656dfcebf6cc67bed903596e9a6f9d0bccf1a7b0563cc3076bc6c",
+      "status": "completed",
+      "latency_seconds": 51.118
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feaa1a7536470ad1d71c",
+        "public:pbf_feb1d33a2ca45db00eb2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ff982277f18adeb25e44c901e53eecd89920b3898e614afcc1a695cd184a41fd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.98
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feaa1a7536470ad1d71c",
+        "public:pbf_feb1d33a2ca45db00eb2"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ff982277f18adeb25e44c901e53eecd89920b3898e614afcc1a695cd184a41fd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.509
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feaa1a7536470ad1d71c",
+        "public:pbf_feb1d33a2ca45db00eb2"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ff982277f18adeb25e44c901e53eecd89920b3898e614afcc1a695cd184a41fd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.145
+    }
+  ],
+  "status": "failed"
+}

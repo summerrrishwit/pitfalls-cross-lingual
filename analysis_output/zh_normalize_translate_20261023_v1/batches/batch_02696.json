@@ -1,0 +1,214 @@
+{
+  "input_sha256": "25e5e270a0aa72d391ea69ebced976062488e288509c280598295ecdaa038cc2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008125",
+      "decision": "ready",
+      "subject": "living things",
+      "relation_id": "organism_to_reproductive_action",
+      "relation_definition": "Specific action performed by a stated organism class to continue the species; retain scope and qualifiers.",
+      "direction": "organism -> action",
+      "answer": "procreate",
+      "canonical_fact": "Living things procreate to continue the species.",
+      "prompt_en": "What do living things do to continue the species?",
+      "evidence_quotes": [
+        "what do living things do to continue the species?",
+        "procreate"
+      ],
+      "reason": "Source answer 'procreate' directly answers the question about the action living things perform to continue the species. No existing catalog relation captures organism-to-reproductive-action; proposing a precise new relation rather than forcing entity_to_class or organism_to_habitat.",
+      "english": {
+        "direction": "organism -> action",
+        "relation_id": "organism_to_reproductive_action",
+        "answer": "procreate",
+        "canonical_fact": "Living things procreate to continue the species.",
+        "subject": "living things",
+        "prompt_en": "What do living things do to continue the species?",
+        "relation_definition": "Specific action performed by a stated organism class to continue the species; retain scope and qualifiers.",
+        "answer_aliases_en": [
+          "procreate"
+        ],
+        "relation_spec": {
+          "id": "organism_to_reproductive_action",
+          "definition": "Specific action performed by a stated organism class to continue the species; retain scope and qualifiers.",
+          "direction": "organism -> action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "129f4f4e52e96120a0fb8384727d504d09f2232f4618fafa3e90c75e55f140bd",
+      "input_sha256": "c7474050cf303151af8c050d60ffde07eebedee68dd95bd687552bac254d79fa",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008137",
+      "decision": "ready",
+      "subject": "transport used underwater in the Atlantic Ocean",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "submarines",
+      "canonical_fact": "Submarines are a kind of transport used underwater in the Atlantic Ocean.",
+      "prompt_en": "What kind of transport is used underwater in the Atlantic Ocean?",
+      "evidence_quotes": [
+        "what are the kind of transport that is used underwater in the atlantic ocean?",
+        "submarines"
+      ],
+      "reason": "Source answer 'submarines' identifies the specific entity satisfying the qualifying description 'transport used underwater in the Atlantic Ocean.' The existing relation description_to_entity fits exactly: subject is an identifying description, answer is the entity that satisfies it. One model flagged ambiguity, but the source Q/A pair is unambiguous and the direction/definition align; deferring is not warranted.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "submarines",
+        "canonical_fact": "Submarines are a kind of transport used underwater in the Atlantic Ocean.",
+        "subject": "transport used underwater in the Atlantic Ocean",
+        "prompt_en": "What kind of transport is used underwater in the Atlantic Ocean?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "submarines"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "016a958937451655f70fcc398ada6c1be058ed7da2c6ddae7c1a147f319e6c90",
+      "input_sha256": "70ed5b641669df4b68b38564140c423f1a0bc0a2281d4fc5f34b4f4153975410",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008125",
+      "input_sha256": "c7474050cf303151af8c050d60ffde07eebedee68dd95bd687552bac254d79fa",
+      "english": {
+        "direction": "organism -> action",
+        "relation_id": "organism_to_reproductive_action",
+        "answer": "procreate",
+        "canonical_fact": "Living things procreate to continue the species.",
+        "subject": "living things",
+        "prompt_en": "What do living things do to continue the species?",
+        "relation_definition": "Specific action performed by a stated organism class to continue the species; retain scope and qualifiers.",
+        "answer_aliases_en": [
+          "procreate"
+        ],
+        "relation_spec": {
+          "id": "organism_to_reproductive_action",
+          "definition": "Specific action performed by a stated organism class to continue the species; retain scope and qualifiers.",
+          "direction": "organism -> action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "129f4f4e52e96120a0fb8384727d504d09f2232f4618fafa3e90c75e55f140bd",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008125",
+        "subject_zh": "生物",
+        "prompt_zh": "生物做什么来延续物种？",
+        "canonical_fact_zh": "生物通过繁殖来延续物种。",
+        "answer_zh": "繁殖",
+        "answer_aliases_zh": [
+          "繁殖"
+        ]
+      },
+      "translation_sha256": "37223a17e6069e54132a18abd56a77282b6ac8710e08f3424bfc83b7cbd0488e"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008137",
+      "input_sha256": "70ed5b641669df4b68b38564140c423f1a0bc0a2281d4fc5f34b4f4153975410",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "submarines",
+        "canonical_fact": "Submarines are a kind of transport used underwater in the Atlantic Ocean.",
+        "subject": "transport used underwater in the Atlantic Ocean",
+        "prompt_en": "What kind of transport is used underwater in the Atlantic Ocean?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "submarines"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "016a958937451655f70fcc398ada6c1be058ed7da2c6ddae7c1a147f319e6c90",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008137",
+        "subject_zh": "在大西洋水下使用的交通工具",
+        "prompt_zh": "什么类型的交通工具是在大西洋水下使用的？",
+        "canonical_fact_zh": "潜艇是在大西洋水下使用的一种交通工具。",
+        "answer_zh": "潜艇",
+        "answer_aliases_zh": [
+          "潜艇"
+        ]
+      },
+      "translation_sha256": "679bca45e2f06ebcd834779890aad1e515580e4f44de2912659c68921d9c9aee"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008125",
+        "historical:raw_commonsense_qa_008137"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "13e11b00ab1e7f3841a4a6c9de489721d17dd01575108df8912c0bb738c87bb0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2256,
+      "first_chunk_seconds": 3.924,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2350,
+        "prompt_tokens": 1655,
+        "total_tokens": 4005,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1975,
+          "text_tokens": 375
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d7f6f5e5599988963964964df3787c4d27e8443a9d2e03fbe39c414ff483b3f1",
+      "status": "completed",
+      "latency_seconds": 55.821
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008125",
+        "historical:raw_commonsense_qa_008137"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cdb1dad5ce1320071ded8111ddeab1c5b35e819d25a5f59facadcd5def275e7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 744,
+      "first_chunk_seconds": 14.096,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 797,
+        "prompt_tokens": 808,
+        "total_tokens": 1605,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 593,
+          "text_tokens": 204
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc15ea843522a711014f36d4dd5bd159946db79e746d2ee3bba313de3c3bb703",
+      "status": "completed",
+      "latency_seconds": 28.136
+    }
+  ],
+  "status": "completed"
+}

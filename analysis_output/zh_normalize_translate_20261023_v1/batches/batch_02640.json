@@ -1,0 +1,214 @@
+{
+  "input_sha256": "bf12f8a6c9284446b75208c8e494892f39027042c4a480ad2d043ea3c57d5403",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006426",
+      "decision": "ready",
+      "subject": "Florida",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "united states",
+      "canonical_fact": "Florida is located in the United States.",
+      "prompt_en": "In which country is Florida located?",
+      "evidence_quotes": [
+        "Florida are found where?",
+        "united states"
+      ],
+      "reason": "The source question asks where Florida is found and the source answer is 'united states', establishing country-level geographic containment. The catalog relation entity_to_containing_location fits exactly for this direction and granularity.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "united states",
+        "canonical_fact": "Florida is located in the United States.",
+        "subject": "Florida",
+        "prompt_en": "In which country is Florida located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e049e2edfdb8e5a99fbae364cc06b6a346f2676ea6e1cb67cabffa1e8928bf7c",
+      "input_sha256": "9667efc0d32b70c08f66d0721ddddc1fde296f1a6d7addb69e828ffe5b9a6e64",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006427",
+      "decision": "ready",
+      "subject": "file sharing with someone",
+      "relation_id": "activity_to_required_resource",
+      "relation_definition": "A specific resource, system, or infrastructure whose availability is stated as necessary to perform a specified activity.",
+      "direction": "activity -> required resource",
+      "answer": "computer network",
+      "canonical_fact": "File sharing with someone requires a connection to a computer network.",
+      "prompt_en": "What infrastructure must you be connected to in order to share files with someone?",
+      "evidence_quotes": [
+        "You can share files with someone if you have a connection to a what?",
+        "computer network"
+      ],
+      "reason": "The source states that sharing files requires a connection to a computer network. No existing catalog relation covers an activity-to-required-resource link; a precise new relation activity_to_required_resource is proposed rather than forcing a broad category.",
+      "english": {
+        "direction": "activity -> required resource",
+        "relation_id": "activity_to_required_resource",
+        "answer": "computer network",
+        "canonical_fact": "File sharing with someone requires a connection to a computer network.",
+        "subject": "file sharing with someone",
+        "prompt_en": "What infrastructure must you be connected to in order to share files with someone?",
+        "relation_definition": "A specific resource, system, or infrastructure whose availability is stated as necessary to perform a specified activity.",
+        "answer_aliases_en": [
+          "computer network"
+        ],
+        "relation_spec": {
+          "id": "activity_to_required_resource",
+          "definition": "A specific resource, system, or infrastructure whose availability is stated as necessary to perform a specified activity.",
+          "direction": "activity -> required resource"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d2f66fa1ccc5e759fd1e8301341d197fcb71e6f2afb473919592b8c657cd49d7",
+      "input_sha256": "d27d100953ac880aa83098c79351070f7b2db3e07b0b331f61f877d6251d1ff3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006426",
+      "input_sha256": "9667efc0d32b70c08f66d0721ddddc1fde296f1a6d7addb69e828ffe5b9a6e64",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "united states",
+        "canonical_fact": "Florida is located in the United States.",
+        "subject": "Florida",
+        "prompt_en": "In which country is Florida located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e049e2edfdb8e5a99fbae364cc06b6a346f2676ea6e1cb67cabffa1e8928bf7c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006426",
+        "subject_zh": "佛罗里达",
+        "prompt_zh": "佛罗里达位于哪个国家？",
+        "canonical_fact_zh": "佛罗里达位于美国。",
+        "answer_zh": "美国",
+        "answer_aliases_zh": [
+          "美国"
+        ]
+      },
+      "translation_sha256": "e9d86209f2c26a8680d035acf0ae75a57d7c26f948b78339166c7cdf6cae887a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006427",
+      "input_sha256": "d27d100953ac880aa83098c79351070f7b2db3e07b0b331f61f877d6251d1ff3",
+      "english": {
+        "direction": "activity -> required resource",
+        "relation_id": "activity_to_required_resource",
+        "answer": "computer network",
+        "canonical_fact": "File sharing with someone requires a connection to a computer network.",
+        "subject": "file sharing with someone",
+        "prompt_en": "What infrastructure must you be connected to in order to share files with someone?",
+        "relation_definition": "A specific resource, system, or infrastructure whose availability is stated as necessary to perform a specified activity.",
+        "answer_aliases_en": [
+          "computer network"
+        ],
+        "relation_spec": {
+          "id": "activity_to_required_resource",
+          "definition": "A specific resource, system, or infrastructure whose availability is stated as necessary to perform a specified activity.",
+          "direction": "activity -> required resource"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d2f66fa1ccc5e759fd1e8301341d197fcb71e6f2afb473919592b8c657cd49d7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006427",
+        "subject_zh": "与某人共享文件",
+        "prompt_zh": "为了与某人共享文件，你必须连接什么基础设施？",
+        "canonical_fact_zh": "与某人共享文件需要连接到计算机网络。",
+        "answer_zh": "计算机网络",
+        "answer_aliases_zh": [
+          "计算机网络"
+        ]
+      },
+      "translation_sha256": "2b1fb86607b7f744fb64a89c9f9da07773667baf33fa7415c64cf9453c1f0999"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006426",
+        "historical:raw_commonsense_qa_006427"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "963e11f73446aa8581c966d4386b219e19a1e02dc9fe1317b9fad7af52b25fa3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1887,
+      "first_chunk_seconds": 39.978,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2053,
+        "prompt_tokens": 1644,
+        "total_tokens": 3697,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1604,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ce6172265b959ea602b45d490a6a945852651e700f3207de1998a9bab5b1d037",
+      "status": "completed",
+      "latency_seconds": 68.031
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006426",
+        "historical:raw_commonsense_qa_006427"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cf07f4059802970d04560c37886666d3f8fc0919df0314a0a5f85c151ab71b7c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 448,
+      "first_chunk_seconds": 6.915,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 600,
+        "prompt_tokens": 815,
+        "total_tokens": 1415,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 392,
+          "text_tokens": 208
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "159c60efb242e9f1dfc3637e01b0f2d014202e03a8186bfee80d32a1b10eb780",
+      "status": "completed",
+      "latency_seconds": 13.501
+    }
+  ],
+  "status": "completed"
+}

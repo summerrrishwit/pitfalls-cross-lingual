@@ -1,0 +1,197 @@
+{
+  "input_sha256": "3e807b604a7ffe14f2fd398d6a4e4f4b107ea6d3b75f1c6ee3acec997861c2d8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000243",
+      "decision": "ready",
+      "subject": "post office",
+      "relation_id": "entity_to_structure_type",
+      "relation_definition": "The type of physical structure in which a specified entity is typically or necessarily located; e.g., a post office is housed in a building.",
+      "direction": "entity -> structure type",
+      "answer": "building",
+      "canonical_fact": "A post office is always located in a building.",
+      "prompt_en": "What kind of structure is a post office always located in?",
+      "evidence_quotes": [
+        "A post office is always located in what kind of structure?",
+        "building"
+      ],
+      "reason": "Source question explicitly asks for the kind of structure a post office is always located in; source answer is 'building'. No existing catalog relation captures structural containment (entity_to_containing_location is limited to geographic containment). Propose new relation entity_to_structure_type. Qwen-3.8-Max flagged non_unique_answer, but source answer is authoritative and unambiguous. Sensenova's extraction is consistent with source.",
+      "english": {
+        "prompt_en": "What kind of structure is a post office always located in?",
+        "relation_definition": "The type of physical structure in which a specified entity is typically or necessarily located; e.g., a post office is housed in a building.",
+        "answer": "building",
+        "canonical_fact": "A post office is always located in a building.",
+        "direction": "entity -> structure type",
+        "relation_id": "entity_to_structure_type",
+        "subject": "post office",
+        "answer_aliases_en": [
+          "building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_structure_type",
+          "definition": "The type of physical structure in which a specified entity is typically or necessarily located; e.g., a post office is housed in a building.",
+          "direction": "entity -> structure type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cfaee8f9e21e72baedb46f2473d5b8f79b5e0fb6be58251bf53533bd9c4cd9d5",
+      "input_sha256": "73f6b83796ff35ba21abf924cfc3d3a9bfbd7530432045ba0ea1eb1567418f1d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000263",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source QA pair ('A person who does good to others garners what pleasing quality in their reputation? -> admiration') encodes a normative/subjective commonsense association rather than a verifiable stable fact. No catalog relation fits (not a definition, class membership, or entity identification). The relationship 'garners a quality in reputation' is a value judgment, not a reusable factual predicate. Defer per 'Insufficient source support' for a stable factual extraction.",
+      "input_sha256": "30e912aef516cf2bc3f33e234a0969772d6cacb6387d6a85eb600fb588fd9bc2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000243",
+      "input_sha256": "73f6b83796ff35ba21abf924cfc3d3a9bfbd7530432045ba0ea1eb1567418f1d",
+      "english": {
+        "prompt_en": "What kind of structure is a post office always located in?",
+        "relation_definition": "The type of physical structure in which a specified entity is typically or necessarily located; e.g., a post office is housed in a building.",
+        "answer": "building",
+        "canonical_fact": "A post office is always located in a building.",
+        "direction": "entity -> structure type",
+        "relation_id": "entity_to_structure_type",
+        "subject": "post office",
+        "answer_aliases_en": [
+          "building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_structure_type",
+          "definition": "The type of physical structure in which a specified entity is typically or necessarily located; e.g., a post office is housed in a building.",
+          "direction": "entity -> structure type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cfaee8f9e21e72baedb46f2473d5b8f79b5e0fb6be58251bf53533bd9c4cd9d5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000243",
+        "subject_zh": "邮局",
+        "prompt_zh": "邮局总是位于什么类型的结构中？",
+        "canonical_fact_zh": "邮局总是位于建筑物内。",
+        "answer_zh": "建筑物",
+        "answer_aliases_zh": [
+          "建筑物"
+        ]
+      },
+      "translation_sha256": "8df0078c3610dbb6f7cd75fb4d38cb9d5dd08d0e607cf45155b11f50310470f5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000243",
+        "historical:raw_commonsense_qa_000263"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b670338b0036a1846e4669de5c1daed7792ad0f5e6bde9b7bb79edad8b259011",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 103.249
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000243",
+        "historical:raw_commonsense_qa_000263"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b670338b0036a1846e4669de5c1daed7792ad0f5e6bde9b7bb79edad8b259011",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2490,
+      "first_chunk_seconds": 62.024,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2562,
+        "prompt_tokens": 1596,
+        "total_tokens": 4158,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2088,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "413f09cfedb6ff048cdf78858fd1266187b3fce82b6e750299c0da30be670752",
+      "status": "completed",
+      "latency_seconds": 104.799
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000243"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6eb9f7d7a70c01fcac5f0ef5532f90c011c362392515725b49355cc1300063de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.449
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000243"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6eb9f7d7a70c01fcac5f0ef5532f90c011c362392515725b49355cc1300063de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.494
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000243"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6eb9f7d7a70c01fcac5f0ef5532f90c011c362392515725b49355cc1300063de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 776,
+      "first_chunk_seconds": 62.495,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 887,
+        "prompt_tokens": 523,
+        "total_tokens": 1410,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 782,
+          "text_tokens": 105
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "97ab99ec981b391db2133863c53a1607ccd88d58778ebbb20e827d6c82052698",
+      "status": "completed",
+      "latency_seconds": 77.476
+    }
+  ],
+  "status": "completed"
+}

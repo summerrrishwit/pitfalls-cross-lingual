@@ -1,0 +1,211 @@
+{
+  "input_sha256": "c75bddaec5edf57fb2a7b3089a67f0a7bb678ac92d9c8fa2e5c39de9fcb2b06a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001376",
+      "decision": "ready",
+      "subject": "inhaled air",
+      "relation_id": "substance_to_process_destination",
+      "relation_definition": "The organ or location where a specified substance flows to during a named physiological or physical process; retains the process context rather than asserting general containment.",
+      "direction": "substance in specified process -> destination location/organ",
+      "answer": "the lungs",
+      "canonical_fact": "Air goes into the lungs when a person breathes in.",
+      "prompt_en": "Where does air go when a person breathes in?",
+      "evidence_quotes": [
+        "Where does air go when a person breathes in?",
+        "Into the lungs"
+      ],
+      "reason": "Source Q/A directly and unambiguously states that inhaled air goes into the lungs. No catalog relation captures 'substance destination in a process' (entity_to_containing_location excludes process locations; organism_to_habitat is about habitats, not flow destinations). A precise new relation is proposed. The existing answer 'the lungs' is a concise literal substring of source_answer 'Into the lungs' and does not conflict.",
+      "english": {
+        "direction": "substance in specified process -> destination location/organ",
+        "relation_id": "substance_to_process_destination",
+        "answer": "the lungs",
+        "canonical_fact": "Air goes into the lungs when a person breathes in.",
+        "subject": "inhaled air",
+        "prompt_en": "Where does air go when a person breathes in?",
+        "relation_definition": "The organ or location where a specified substance flows to during a named physiological or physical process; retains the process context rather than asserting general containment.",
+        "answer_aliases_en": [
+          "the lungs"
+        ],
+        "relation_spec": {
+          "id": "substance_to_process_destination",
+          "definition": "The organ or location where a specified substance flows to during a named physiological or physical process; retains the process context rather than asserting general containment.",
+          "direction": "substance in specified process -> destination location/organ"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "61c1cfb231cb7f0e1b88eb1a9f3c062feaa5b56fb8fbb2ce384428df45dc2f2f",
+      "input_sha256": "094e6a96ef02c9ca63396c8b778345f6439b011d0b90078cef1a48096dc5c136",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001377",
+      "decision": "ready",
+      "subject": "thermometer",
+      "relation_id": "instrument_to_measured_quantity",
+      "relation_definition": "The physical quantity that a specified instrument or measuring device is designed to detect or record; retains the specific instrument identity rather than generalizing to a class of instruments.",
+      "direction": "instrument/measuring device -> measured physical quantity",
+      "answer": "temperature",
+      "canonical_fact": "A thermometer measures temperature.",
+      "prompt_en": "What physical quantity does a thermometer measure?",
+      "evidence_quotes": [
+        "What can a thermometer help Russell investigate?",
+        "the high temperatures each day"
+      ],
+      "reason": "Source Q/A confirms a thermometer is used to investigate temperatures (specifically high temperatures each day). The existing answer 'temperature' is a valid generalization supported by source ('the high temperatures each day' contains 'temperatures'); it does not conflict with source. No catalog relation fits 'device -> quantity it measures'; a precise new relation is proposed. Prompt is option-free and does not contain the answer word 'temperature'.",
+      "english": {
+        "direction": "instrument/measuring device -> measured physical quantity",
+        "relation_id": "instrument_to_measured_quantity",
+        "answer": "temperature",
+        "canonical_fact": "A thermometer measures temperature.",
+        "subject": "thermometer",
+        "prompt_en": "What physical quantity does a thermometer measure?",
+        "relation_definition": "The physical quantity that a specified instrument or measuring device is designed to detect or record; retains the specific instrument identity rather than generalizing to a class of instruments.",
+        "answer_aliases_en": [
+          "temperature"
+        ],
+        "relation_spec": {
+          "id": "instrument_to_measured_quantity",
+          "definition": "The physical quantity that a specified instrument or measuring device is designed to detect or record; retains the specific instrument identity rather than generalizing to a class of instruments.",
+          "direction": "instrument/measuring device -> measured physical quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0e9d6f1ea0dd89e55d8ac9819bfae646bb2750b0a616f492da5645e48667415b",
+      "input_sha256": "4ae94cb2f5c8e5c4a7002f04244adbde378ab844013a9f2a9c6e642ec30b407c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001376",
+        "historical:raw_ai2_arc_easy_001377"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "36364af1b41fd8c8526ee3d5f4f42fb87f1e497d75e60e9f4bbbfbfadeb56e18",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2633,
+      "first_chunk_seconds": 20.859,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2822,
+        "prompt_tokens": 1645,
+        "total_tokens": 4467,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2255,
+          "text_tokens": 567
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3ccbd71496d2fadd57fb7f0d698e753caaf017a8f2c0fd0564f74d848d585de3",
+      "status": "completed",
+      "latency_seconds": 58.566
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001376",
+        "historical:raw_ai2_arc_easy_001377"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eb82fbf95906737b62aedf8b53d1d1e9b5f126b0f638b73977e4608695456bdf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 743,
+      "first_chunk_seconds": 42.301,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 790,
+        "prompt_tokens": 878,
+        "total_tokens": 1668,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 589,
+          "text_tokens": 201
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fc89f25bc13832154ccecdd363e0b9e0cf5f5a36b91f4169e51662c87ec3790f",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 54.658,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001376",
+        "historical:raw_ai2_arc_easy_001377"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "946ffaf03bc838ea10bfcfe646d63815017a4777dfa94daba307c7170f988c9b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 932,
+      "first_chunk_seconds": 11.336,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1018,
+        "prompt_tokens": 896,
+        "total_tokens": 1914,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 820,
+          "text_tokens": 198
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cfef08a3aaf591098904d063476bca8dd9697b5f2021e9a6b3176499df0001de",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 23.983,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001376",
+        "historical:raw_ai2_arc_easy_001377"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "946ffaf03bc838ea10bfcfe646d63815017a4777dfa94daba307c7170f988c9b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 642,
+      "first_chunk_seconds": 35.865,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 642,
+        "prompt_tokens": 896,
+        "total_tokens": 1538,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 443,
+          "text_tokens": 199
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5a184155a7a500b1c5ccc05e8e937170303b57aa5a21e264c2c0fe2202f8d7d0",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 43.696,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,171 @@
+{
+  "input_sha256": "26be227ae74a5f9e23b9a55187362df6b4f347d8d454920cc1442699e5714dbe",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000614",
+      "decision": "ready",
+      "subject": "center of low pressure",
+      "relation_id": "entity_to_expected_condition",
+      "relation_definition": "Expected condition or phenomenon associated with a specified entity in its typical physical context; distinct from class membership, material composition, or spatial containment.",
+      "direction": "entity -> expected condition",
+      "answer": "stormy",
+      "canonical_fact": "A center of low pressure is expected to bring stormy weather.",
+      "prompt_en": "What kind of weather can you expect if a center of low pressure is moving your way?",
+      "evidence_quotes": [
+        "What kind of weather can you expect if a center of low pressure is moving your way?",
+        "stormy"
+      ],
+      "reason": "Source QA gives a clear factual association: a center of low pressure is expected to bring stormy weather. No catalog relation captures this expectation/causal-condition semantics (entity_to_class is taxonomy membership; entity_to_material is composition), so a precise new relation 'entity_to_expected_condition' is proposed. The one model that marked this as causal_reasoning is over-cautious; the source answer is a simple factual pairing suitable for extraction.",
+      "english": {
+        "prompt_en": "What kind of weather can you expect if a center of low pressure is moving your way?",
+        "relation_definition": "Expected condition or phenomenon associated with a specified entity in its typical physical context; distinct from class membership, material composition, or spatial containment.",
+        "answer": "stormy",
+        "canonical_fact": "A center of low pressure is expected to bring stormy weather.",
+        "direction": "entity -> expected condition",
+        "relation_id": "entity_to_expected_condition",
+        "subject": "center of low pressure",
+        "answer_aliases_en": [
+          "stormy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_expected_condition",
+          "definition": "Expected condition or phenomenon associated with a specified entity in its typical physical context; distinct from class membership, material composition, or spatial containment.",
+          "direction": "entity -> expected condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "911b2132ecfaf99c73355391ca69473cb9117071dbd1c3b4c59a81a4744971e0",
+      "input_sha256": "817d21235dbcd7e1a52fcf6a539140cfcd5e3e6a4ad20c4ff33b9da5e7745713",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000639",
+      "decision": "ready",
+      "subject": "most cells",
+      "relation_id": "entity_to_surrounding_medium",
+      "relation_definition": "The substance or medium that surrounds a specified entity in its typical biological or physical context; distinct from material composition, habitat, or spatial containment.",
+      "direction": "entity -> surrounding medium",
+      "answer": "water",
+      "canonical_fact": "Most cells are surrounded by water.",
+      "prompt_en": "What are most cells surrounded by?",
+      "evidence_quotes": [
+        "What are most cells surrounded by?",
+        "water"
+      ],
+      "reason": "Source QA states that most cells are surrounded by water. No catalog relation captures 'surrounded by / surrounding medium' semantics (entity_to_containing_location is geographic; entity_to_material is what the entity is made of; part_to_whole is membership), so a precise new relation 'entity_to_surrounding_medium' is proposed. The 'most' qualifier is preserved in the subject. The ambiguity flagged by one model is resolved by the source answer being a single unambiguous term.",
+      "english": {
+        "prompt_en": "What are most cells surrounded by?",
+        "relation_definition": "The substance or medium that surrounds a specified entity in its typical biological or physical context; distinct from material composition, habitat, or spatial containment.",
+        "answer": "water",
+        "canonical_fact": "Most cells are surrounded by water.",
+        "direction": "entity -> surrounding medium",
+        "relation_id": "entity_to_surrounding_medium",
+        "subject": "most cells",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "entity_to_surrounding_medium",
+          "definition": "The substance or medium that surrounds a specified entity in its typical biological or physical context; distinct from material composition, habitat, or spatial containment.",
+          "direction": "entity -> surrounding medium"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "13ae88f6f77bb292789d78883faf19b2bef293e2d0c11f44732918370bded095",
+      "input_sha256": "03bbe3674e02bede84aba291d936c80c55e64d2b2ebd1508f3e9b4a6700dcbc0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000614",
+        "historical:raw_sciq_000639"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "902e9ba56eb7084dc88ad0f190d142677a0b1a2100c248388a0d6fd7ce19990f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 54.984
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000614",
+        "historical:raw_sciq_000639"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "902e9ba56eb7084dc88ad0f190d142677a0b1a2100c248388a0d6fd7ce19990f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2319,
+      "first_chunk_seconds": 63.14,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2469,
+        "prompt_tokens": 1580,
+        "total_tokens": 4049,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1897,
+          "text_tokens": 572
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f460f8b03d581c068eaf6254854c4aa44065ee90f2a4a405d0beeec75d978be1",
+      "status": "completed",
+      "latency_seconds": 95.33
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000614",
+        "historical:raw_sciq_000639"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a952393e8d983505d4ebe3d1c21e36ac9e1fcf68d281873722fdf9cad2de20bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.311
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000614",
+        "historical:raw_sciq_000639"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a952393e8d983505d4ebe3d1c21e36ac9e1fcf68d281873722fdf9cad2de20bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.408
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000614",
+        "historical:raw_sciq_000639"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a952393e8d983505d4ebe3d1c21e36ac9e1fcf68d281873722fdf9cad2de20bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 11.522
+    }
+  ],
+  "status": "failed"
+}

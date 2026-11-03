@@ -1,0 +1,278 @@
+{
+  "input_sha256": "110696b1b3e53954cdab4309c64c12feec3be93690dcaf9bf08e69b81ec37b7c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000416",
+      "decision": "ready",
+      "subject": "drinking water",
+      "relation_id": "action_to_purpose",
+      "relation_definition": "The stated purpose, function, or intended outcome of a specified action or behavior.",
+      "direction": "action -> purpose",
+      "answer": "hydration",
+      "canonical_fact": "The purpose of drinking water is hydration.",
+      "prompt_en": "What is the purpose of drinking water?",
+      "evidence_quotes": [
+        "What is the purpose of drinking water?",
+        "hydration"
+      ],
+      "reason": "Source answer 'hydration' directly states the purpose of drinking water. No catalog relation fits 'purpose of an action'; Qwen-3.8-Max flagged ambiguous_relation but the source is unambiguous. Proposed new relation action_to_purpose with precise direction. Both source_question and source_answer provide literal evidence.",
+      "english": {
+        "direction": "action -> purpose",
+        "relation_id": "action_to_purpose",
+        "answer": "hydration",
+        "canonical_fact": "The purpose of drinking water is hydration.",
+        "subject": "drinking water",
+        "prompt_en": "What is the purpose of drinking water?",
+        "relation_definition": "The stated purpose, function, or intended outcome of a specified action or behavior.",
+        "answer_aliases_en": [
+          "hydration"
+        ],
+        "relation_spec": {
+          "id": "action_to_purpose",
+          "definition": "The stated purpose, function, or intended outcome of a specified action or behavior.",
+          "direction": "action -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dce15941f8534013add458c9409450e2df669baef9976a6e42e18c86904cfef9",
+      "input_sha256": "5820ecb26eabedd4f926f58ea4f1807a83f6f7d6e2ef9a1dd9a89d68a7cccaf8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000446",
+      "decision": "ready",
+      "subject": "sunshine and warmth",
+      "relation_id": "characteristic_to_associated_entity",
+      "relation_definition": "The entity to which a specified characteristic, quality, or feature is associatively linked, as opposed to being an exclusive defining property of that entity.",
+      "direction": "characteristic -> associated entity",
+      "answer": "summer",
+      "canonical_fact": "Sunshine and warmth are the weathers associated with summer.",
+      "prompt_en": "Sunshine and warmth are the weathers associated with what?",
+      "evidence_quotes": [
+        "Sunshine and warmth are the weathers associated with what?",
+        "summer"
+      ],
+      "reason": "Both models extracted consistently. Source answer 'summer' is a literal substring matching the existing answer. No catalog relation captures an associative characteristic-to-entity link (not class membership, not containment, not habitat). Proposed new relation characteristic_to_associated_entity with explicit definition distinguishing association from exclusivity.",
+      "english": {
+        "direction": "characteristic -> associated entity",
+        "relation_id": "characteristic_to_associated_entity",
+        "answer": "summer",
+        "canonical_fact": "Sunshine and warmth are the weathers associated with summer.",
+        "subject": "sunshine and warmth",
+        "prompt_en": "Sunshine and warmth are the weathers associated with what?",
+        "relation_definition": "The entity to which a specified characteristic, quality, or feature is associatively linked, as opposed to being an exclusive defining property of that entity.",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "characteristic_to_associated_entity",
+          "definition": "The entity to which a specified characteristic, quality, or feature is associatively linked, as opposed to being an exclusive defining property of that entity.",
+          "direction": "characteristic -> associated entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e7023676936455f3ffeee6cb5bee98748da8d85a617e8a2963964341adb2e4e7",
+      "input_sha256": "450b47b708d09fa73a584b9ee7079bf6f117f91e7720c9ec8650bb13baf73866",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000416",
+      "input_sha256": "5820ecb26eabedd4f926f58ea4f1807a83f6f7d6e2ef9a1dd9a89d68a7cccaf8",
+      "english": {
+        "direction": "action -> purpose",
+        "relation_id": "action_to_purpose",
+        "answer": "hydration",
+        "canonical_fact": "The purpose of drinking water is hydration.",
+        "subject": "drinking water",
+        "prompt_en": "What is the purpose of drinking water?",
+        "relation_definition": "The stated purpose, function, or intended outcome of a specified action or behavior.",
+        "answer_aliases_en": [
+          "hydration"
+        ],
+        "relation_spec": {
+          "id": "action_to_purpose",
+          "definition": "The stated purpose, function, or intended outcome of a specified action or behavior.",
+          "direction": "action -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dce15941f8534013add458c9409450e2df669baef9976a6e42e18c86904cfef9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000416",
+        "subject_zh": "喝水",
+        "prompt_zh": "喝水的目的是什么？",
+        "canonical_fact_zh": "喝水的目的是补充水分。",
+        "answer_zh": "补充水分",
+        "answer_aliases_zh": [
+          "补充水分"
+        ]
+      },
+      "translation_sha256": "b166a9f23a64b0f84bcc50d31f6784464059b1b78dd647e1aeff24fc1831adcf"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000446",
+      "input_sha256": "450b47b708d09fa73a584b9ee7079bf6f117f91e7720c9ec8650bb13baf73866",
+      "english": {
+        "direction": "characteristic -> associated entity",
+        "relation_id": "characteristic_to_associated_entity",
+        "answer": "summer",
+        "canonical_fact": "Sunshine and warmth are the weathers associated with summer.",
+        "subject": "sunshine and warmth",
+        "prompt_en": "Sunshine and warmth are the weathers associated with what?",
+        "relation_definition": "The entity to which a specified characteristic, quality, or feature is associatively linked, as opposed to being an exclusive defining property of that entity.",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "characteristic_to_associated_entity",
+          "definition": "The entity to which a specified characteristic, quality, or feature is associatively linked, as opposed to being an exclusive defining property of that entity.",
+          "direction": "characteristic -> associated entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e7023676936455f3ffeee6cb5bee98748da8d85a617e8a2963964341adb2e4e7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000446",
+        "subject_zh": "阳光和温暖",
+        "prompt_zh": "阳光和温暖是与什么相关的天气？",
+        "canonical_fact_zh": "阳光和温暖是与夏季相关的天气。",
+        "answer_zh": "夏季",
+        "answer_aliases_zh": [
+          "夏季"
+        ]
+      },
+      "translation_sha256": "e39b977a7404d45f452b3ef2ed98ca9baa25e6fb19d817f984fe1957f256ac8b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000416",
+        "historical:raw_commonsense_qa_000446"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "71f9a53fa85d5c79386708cb245013edd100c824a6b36c7be55242663374a9c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2356,
+      "first_chunk_seconds": 9.669,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2505,
+        "prompt_tokens": 1625,
+        "total_tokens": 4130,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2014,
+          "text_tokens": 491
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "686d9f73f2e6ec859a2685fcab5574bc84808d0aa1a36000815d7b0c5a7c5664",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 58.803,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000416",
+        "historical:raw_commonsense_qa_000446"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1e79d7d9ece4ba71ba67dd4cc7a726f18f4e6f1a9935fa13235105be5240faa2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2396,
+      "first_chunk_seconds": 16.803,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2458,
+        "prompt_tokens": 1644,
+        "total_tokens": 4102,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2009,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c046df8800d4417be017ad921430def3fc06a4d6b364d6ff409b1027dd5518b1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 45.462,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000416",
+        "historical:raw_commonsense_qa_000446"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1e79d7d9ece4ba71ba67dd4cc7a726f18f4e6f1a9935fa13235105be5240faa2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2388,
+      "first_chunk_seconds": 7.725,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2520,
+        "prompt_tokens": 1644,
+        "total_tokens": 4164,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2034,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "979b78bf221a4207348130a1aef4db101d068cd992f2f3169c559873c33632a6",
+      "status": "completed",
+      "latency_seconds": 44.997
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000416",
+        "historical:raw_commonsense_qa_000446"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f6d02bc863053809e4ed2de45a255909eab822aaaa498c7b85f4df7ac2ac6936",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 745,
+      "first_chunk_seconds": 23.5,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 853,
+        "prompt_tokens": 826,
+        "total_tokens": 1679,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 653,
+          "text_tokens": 200
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "57619ab756f3a65e70e1dfaf5e861f2a1bf3e10c7b2c544cff6acb6884f430c8",
+      "status": "completed",
+      "latency_seconds": 36.643
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "a6d0d6d2054e276dd155e15fd5c589412128d63d4f50d67faf8d26f70c77cac1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001746",
+      "decision": "ready",
+      "subject": "perjury",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "lies",
+      "canonical_fact": "Perjury is simply described as telling lies.",
+      "prompt_en": "What is perjury simply described as?",
+      "evidence_quotes": [
+        "simply telling",
+        "lies"
+      ],
+      "reason": "Both model extractions agree on the core fact. Source_answer 'lies' is a concise literal substring used as the answer. The term 'perjury' is being defined via its simple description; term_to_definition fits exactly.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "lies",
+        "canonical_fact": "Perjury is simply described as telling lies.",
+        "subject": "perjury",
+        "prompt_en": "What is perjury simply described as?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "lies"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cafc41fd0c3fb8c5103b6c037bb7ad3fb6bb47d398f49b929a0760be3f61c8e2",
+      "input_sha256": "098ec6b1c71804ad5db916cf10ad1a60b15c39bf24da2b9134a82f89d411b17b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001759",
+      "decision": "ready",
+      "subject": "post-divorce relationship status",
+      "relation_id": "event_to_resulting_status",
+      "relation_definition": "The status or state that follows a specified life event or transition (e.g., divorce -> single).",
+      "direction": "specified life event/transition -> resulting status",
+      "answer": "being single",
+      "canonical_fact": "After getting a divorce, relationship status changes to being single.",
+      "prompt_en": "After getting a divorce, what does your relationship status change to?",
+      "evidence_quotes": [
+        "After getting a divorce",
+        "being single"
+      ],
+      "reason": "No existing catalog relation captures 'event -> resulting status' without forcing a broad category. Proposed new relation event_to_resulting_status. Source_answer 'being single' is a concise literal substring. Sensenova marked this as not-extractable (typical_action_or_location) but it is a clear factual consequence, not a location or generic action.",
+      "english": {
+        "direction": "specified life event/transition -> resulting status",
+        "relation_id": "event_to_resulting_status",
+        "answer": "being single",
+        "canonical_fact": "After getting a divorce, relationship status changes to being single.",
+        "subject": "post-divorce relationship status",
+        "prompt_en": "After getting a divorce, what does your relationship status change to?",
+        "relation_definition": "The status or state that follows a specified life event or transition (e.g., divorce -> single).",
+        "answer_aliases_en": [
+          "being single"
+        ],
+        "relation_spec": {
+          "id": "event_to_resulting_status",
+          "definition": "The status or state that follows a specified life event or transition (e.g., divorce -> single).",
+          "direction": "specified life event/transition -> resulting status"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ca460a4997363ce59b0cbdc161337ff5c0682943056eac83bcce9e33fe32acbc",
+      "input_sha256": "2e11ce5f59e8b5944f1513fecb96b05dc200ac0aafa1933379f6906f8c557e51",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001746",
+      "input_sha256": "098ec6b1c71804ad5db916cf10ad1a60b15c39bf24da2b9134a82f89d411b17b",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "lies",
+        "canonical_fact": "Perjury is simply described as telling lies.",
+        "subject": "perjury",
+        "prompt_en": "What is perjury simply described as?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "lies"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cafc41fd0c3fb8c5103b6c037bb7ad3fb6bb47d398f49b929a0760be3f61c8e2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001746",
+        "subject_zh": "伪证",
+        "prompt_zh": "伪证被简单地描述为什么？",
+        "canonical_fact_zh": "伪证被简单地描述为说谎。",
+        "answer_zh": "说谎",
+        "answer_aliases_zh": [
+          "说谎"
+        ]
+      },
+      "translation_sha256": "cb8d59a1f4ce258c0ca319965f91b5b2ead4d83106ea79bfe9b69e73e392e33d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001759",
+      "input_sha256": "2e11ce5f59e8b5944f1513fecb96b05dc200ac0aafa1933379f6906f8c557e51",
+      "english": {
+        "direction": "specified life event/transition -> resulting status",
+        "relation_id": "event_to_resulting_status",
+        "answer": "being single",
+        "canonical_fact": "After getting a divorce, relationship status changes to being single.",
+        "subject": "post-divorce relationship status",
+        "prompt_en": "After getting a divorce, what does your relationship status change to?",
+        "relation_definition": "The status or state that follows a specified life event or transition (e.g., divorce -> single).",
+        "answer_aliases_en": [
+          "being single"
+        ],
+        "relation_spec": {
+          "id": "event_to_resulting_status",
+          "definition": "The status or state that follows a specified life event or transition (e.g., divorce -> single).",
+          "direction": "specified life event/transition -> resulting status"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ca460a4997363ce59b0cbdc161337ff5c0682943056eac83bcce9e33fe32acbc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001759",
+        "subject_zh": "离婚后的感情状况",
+        "prompt_zh": "离婚后，你的感情状况会变成什么？",
+        "canonical_fact_zh": "离婚后，感情状况变为单身。",
+        "answer_zh": "单身",
+        "answer_aliases_zh": [
+          "单身"
+        ]
+      },
+      "translation_sha256": "471cbc0f01c2f10fd5553290f6e67659e6665fb8fa12c62987f4e622f667f249"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001746",
+        "historical:raw_commonsense_qa_001759"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5fec6e07f862776f333c2cb7b8f2259220530f1a52abad6f281fe9a07c7f7550",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3055,
+      "first_chunk_seconds": 5.673,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3173,
+        "prompt_tokens": 1638,
+        "total_tokens": 4811,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2724,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec8559443865d80cbedc9367f15e6d119fcc06792a266c4d6d298a56590dfa56",
+      "status": "completed",
+      "latency_seconds": 46.655
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001746",
+        "historical:raw_commonsense_qa_001759"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3efa03f0c16464245d4db764c533049dee89240cffeb4e53bd38b743033fe9d2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1032,
+      "first_chunk_seconds": 16.242,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1076,
+        "prompt_tokens": 818,
+        "total_tokens": 1894,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 871,
+          "text_tokens": 205
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "892750dc80d6bb8670ddc65dece2e3ed22cc7be698eec06e8f72133f70ab83e4",
+      "status": "completed",
+      "latency_seconds": 28.118
+    }
+  ],
+  "status": "completed"
+}

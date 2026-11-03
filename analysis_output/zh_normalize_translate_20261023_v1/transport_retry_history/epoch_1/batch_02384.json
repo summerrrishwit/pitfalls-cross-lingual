@@ -1,0 +1,185 @@
+{
+  "input_sha256": "45db77aa820bfd027848a43af374d4a1c7820852673a54d3e75c6f06007fd694",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001589",
+      "decision": "ready",
+      "subject": "pond water without phosphates in an investigation of how phosphates affect oxygen levels",
+      "relation_id": "experimental_component_to_role",
+      "relation_definition": "Designated functional role or label assigned to a specific component within a specified experimental design (e.g., control group, treatment group, baseline).",
+      "direction": "component in specified experiment -> its designated role/label in that experiment",
+      "answer": "control group",
+      "canonical_fact": "In an investigation of how phosphates affect oxygen levels in pond water, pond water without phosphates serves as the control group.",
+      "prompt_en": "In an investigation testing how phosphates affect oxygen levels in pond water, what role does the pond water without phosphates serve?",
+      "evidence_quotes": [
+        "The pond water without phosphates would be what part of the investigation?",
+        "control group"
+      ],
+      "reason": "The source explicitly asks what part of the investigation the phosphate-free pond water represents and answers 'control group.' No existing catalog relation precisely captures the designated role of an experimental component within a specific experiment; 'entity_to_class' implies stable taxonomic membership rather than a functional experimental label. Proposing 'experimental_component_to_role' as a new relation.",
+      "english": {
+        "direction": "component in specified experiment -> its designated role/label in that experiment",
+        "relation_id": "experimental_component_to_role",
+        "answer": "control group",
+        "canonical_fact": "In an investigation of how phosphates affect oxygen levels in pond water, pond water without phosphates serves as the control group.",
+        "subject": "pond water without phosphates in an investigation of how phosphates affect oxygen levels",
+        "prompt_en": "In an investigation testing how phosphates affect oxygen levels in pond water, what role does the pond water without phosphates serve?",
+        "relation_definition": "Designated functional role or label assigned to a specific component within a specified experimental design (e.g., control group, treatment group, baseline).",
+        "answer_aliases_en": [
+          "control group"
+        ],
+        "relation_spec": {
+          "id": "experimental_component_to_role",
+          "definition": "Designated functional role or label assigned to a specific component within a specified experimental design (e.g., control group, treatment group, baseline).",
+          "direction": "component in specified experiment -> its designated role/label in that experiment"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b356f04537dfbd35793379b1e7c409444d0dd4c104895a646f11b8caf10f36dc",
+      "input_sha256": "ced94a2812e14598a4a04cc69f8414ab5fa93b195a14bebf776eb52b8fa497b7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001592",
+      "decision": "ready",
+      "subject": "sweat on the skin",
+      "relation_id": "entity_to_function",
+      "relation_definition": "The specific mechanism or functional effect by which a stated biological entity produces a described result on an organism or system, preserving qualifiers and scope.",
+      "direction": "biological entity -> its stated physiological function or mechanism of action",
+      "answer": "cools the body",
+      "canonical_fact": "Sweat on the skin helps the body by cooling it.",
+      "prompt_en": "How does sweat on the skin help the body?",
+      "evidence_quotes": [
+        "How does sweat on the skin help the body?",
+        "Sweat cools the body."
+      ],
+      "reason": "The source directly states the physiological function of sweat as cooling the body. No existing catalog relation captures a physiological mechanism of action; 'entity_to_class' is taxonomic, 'organism_to_habitat' is ecological. Proposing 'entity_to_function' as a new relation for stated physiological/biological functions.",
+      "english": {
+        "direction": "biological entity -> its stated physiological function or mechanism of action",
+        "relation_id": "entity_to_function",
+        "answer": "cools the body",
+        "canonical_fact": "Sweat on the skin helps the body by cooling it.",
+        "subject": "sweat on the skin",
+        "prompt_en": "How does sweat on the skin help the body?",
+        "relation_definition": "The specific mechanism or functional effect by which a stated biological entity produces a described result on an organism or system, preserving qualifiers and scope.",
+        "answer_aliases_en": [
+          "cools the body"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "The specific mechanism or functional effect by which a stated biological entity produces a described result on an organism or system, preserving qualifiers and scope.",
+          "direction": "biological entity -> its stated physiological function or mechanism of action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "47ce0b81f2b438ff4b36e1915e9b9b341623344fba8e5152c5f1ea54eae4a22b",
+      "input_sha256": "3e20893dcdbcdbf7a5433fc66b1b337c62542d7d8d6ff3315c2ea7a2cff77f5d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8813d888f77c2b4f7cc26f69b84746baa1a45564450092bc7c617999900bd87e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.154
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8813d888f77c2b4f7cc26f69b84746baa1a45564450092bc7c617999900bd87e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.936
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8813d888f77c2b4f7cc26f69b84746baa1a45564450092bc7c617999900bd87e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2910,
+      "first_chunk_seconds": 28.305,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3014,
+        "prompt_tokens": 1779,
+        "total_tokens": 4793,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2426,
+          "text_tokens": 588
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a5b2b7832b62a7809d8c24f52d7a5144ae959cd195e592628f7f9dfb7d6f4a7",
+      "status": "completed",
+      "latency_seconds": 64.231
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d7f01bad80da5aac3a7aac63a4650192fbec983efdb2f30de0801dc9b0521c0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.357
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9d7f01bad80da5aac3a7aac63a4650192fbec983efdb2f30de0801dc9b0521c0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.998
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001589",
+        "historical:raw_ai2_arc_easy_001592"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9d7f01bad80da5aac3a7aac63a4650192fbec983efdb2f30de0801dc9b0521c0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.445
+    }
+  ],
+  "status": "failed"
+}

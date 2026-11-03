@@ -1,0 +1,218 @@
+{
+  "input_sha256": "f09e7000f4e5a036edcbf06bcbaf75fcaf1cbf1072bec3f4adf28aa037d808ac",
+  "normalized": [
+    {
+      "record_id": "public:pbf_872aacc803c28f18047a",
+      "decision": "ready",
+      "subject": "gambling in Atlantic City",
+      "relation_id": "event_to_year",
+      "relation_definition": "The year in which a specified event, legal change, or policy milestone occurred or took effect.",
+      "direction": "event -> year",
+      "answer": "1978",
+      "canonical_fact": "Gambling became legal in Atlantic City in 1978.",
+      "prompt_en": "Gambling became legal in Atlantic City in",
+      "evidence_quotes": [
+        "when did gambling become legal in atlantic city",
+        "1978"
+      ],
+      "reason": "Source directly states 1978 as the year gambling became legal in Atlantic City. No catalog relation covers event-to-year; proposed event_to_year with direction event -> year to capture when a legal/policy milestone took effect.",
+      "english": {
+        "answer": "1978",
+        "relation_id": "event_to_year",
+        "prompt_en": "Gambling became legal in Atlantic City in",
+        "direction": "event -> year",
+        "subject": "gambling in Atlantic City",
+        "canonical_fact": "Gambling became legal in Atlantic City in 1978.",
+        "relation_definition": "The year in which a specified event, legal change, or policy milestone occurred or took effect.",
+        "answer_aliases_en": [
+          "1978"
+        ],
+        "relation_spec": {
+          "id": "event_to_year",
+          "definition": "The year in which a specified event, legal change, or policy milestone occurred or took effect.",
+          "direction": "event -> year"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "40847af40aedb40403effc6344ff3987e843b1b1aac730d77a7388a400157491",
+      "input_sha256": "6ec49c052040d14333c41d3450ca9da57271a1645c65755710c78c79514f42cf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8734a3c17162dd477f59",
+      "decision": "ready",
+      "subject": "The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "Either the Aardvarks or the Chipmunks do not win their first game",
+      "canonical_fact": "The antecedent of the conditional proposition 'The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game' is 'Either the Aardvarks or the Chipmunks do not win their first game'.",
+      "prompt_en": "Identify the antecedent of the following conditional proposition: The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game.",
+      "evidence_quotes": [
+        "Identify the antecedent of the following conditional proposition",
+        "Either the Aardvarks or the Chipmunks do not win their first game."
+      ],
+      "reason": "The antecedent is a syntactic/logical constituent (part) of the conditional proposition (whole). Catalog relation whole_to_part fits: subject is the whole conditional statement, answer is its specified antecedent constituent. Prompt is option-free and does not contain the answer as a literal substring.",
+      "english": {
+        "answer": "Either the Aardvarks or the Chipmunks do not win their first game",
+        "relation_id": "whole_to_part",
+        "prompt_en": "Identify the antecedent of the following conditional proposition: The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game.",
+        "direction": "whole -> part",
+        "subject": "The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game",
+        "canonical_fact": "The antecedent of the conditional proposition 'The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game' is 'Either the Aardvarks or the Chipmunks do not win their first game'.",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "Either the Aardvarks or the Chipmunks do not win their first game",
+          "Either the Aardvarks or the Chipmunks do not win their first game."
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b0861f884f82dd1b04513fd7549ab861518dc4828a8b9fb407f4e4e5b81e344b",
+      "input_sha256": "c282c2090fca6fa3ebb3a061c2edd66bb0130a87f4e69e5175f4497d01c7e5a6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_872aacc803c28f18047a",
+        "public:pbf_8734a3c17162dd477f59"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6821bba0cef0ca06d5ccb0afa24b2e3a4711da1f8d730f69871da6ab86104d42",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3553,
+      "first_chunk_seconds": 38.929,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3553,
+        "prompt_tokens": 1852,
+        "total_tokens": 5405,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2945,
+          "text_tokens": 608
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "959760ca97d9c83188d63f016ce0937f3f49b9fc3daf99d56727c3fb4765795a",
+      "status": "completed",
+      "latency_seconds": 67.573
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_872aacc803c28f18047a",
+        "public:pbf_8734a3c17162dd477f59"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d2bfb4d8f62b6f665f76ad90f1f283d56a6c91cc12d9b67c7df84a7b44b7652",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1530,
+      "first_chunk_seconds": 40.905,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1535,
+        "prompt_tokens": 972,
+        "total_tokens": 2507,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1186,
+          "text_tokens": 349
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6e3696b96c6711a2c2691966492f9be78e71b9dda3fea74db6c76918478202d3",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 54.143,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_872aacc803c28f18047a",
+        "public:pbf_8734a3c17162dd477f59"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ce6c722f641354627242078670cbbcd64a31dcca665006393f84b90a73b0ef86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2474,
+      "first_chunk_seconds": 22.955,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2473,
+        "prompt_tokens": 990,
+        "total_tokens": 3463,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2134,
+          "text_tokens": 339
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1ab4cc6f1179fa649011a6ecbbcf391a63f49c9f4eb7850474d6cabdc0cdfe95",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 42.568,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_872aacc803c28f18047a",
+        "public:pbf_8734a3c17162dd477f59"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ce6c722f641354627242078670cbbcd64a31dcca665006393f84b90a73b0ef86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1900,
+      "first_chunk_seconds": 7.937,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1901,
+        "prompt_tokens": 990,
+        "total_tokens": 2891,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1538,
+          "text_tokens": 363
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        }
+      },
+      "content_sha256": "7f523a4b7c6a57eac1396440a2fb9297b867ae0659ed5a7f85fa7b7b8c7e7c02",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 24.123,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

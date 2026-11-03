@@ -1,0 +1,258 @@
+{
+  "input_sha256": "f61b47bc4c3b2a4a9ba789e8513441a0cd748eace28f0c9d46c6330705a0cc4d",
+  "normalized": [
+    {
+      "record_id": "public:pbf_1496397768c70d3468e3",
+      "decision": "ready",
+      "subject": "respiratory system",
+      "relation_id": "system_to_transferred_substance",
+      "relation_definition": "Substance transferred by a specified biological or functional source system to a named target system; retain the target-system context.",
+      "direction": "source biological/functional system -> substance transferred to target system",
+      "answer": "O",
+      "canonical_fact": "The respiratory system transfers O to the circulatory system.",
+      "prompt_en": "What does the respiratory system transfer to the circulatory system?",
+      "evidence_quotes": [
+        "respiratory system",
+        "O"
+      ],
+      "reason": "No catalog relation captures a source-system-to-target-system substance transfer. Proposed new relation system_to_transferred_substance fits exactly. Answer 'O' is the literal source_answer and is preserved. prompt_en is option-free and does not contain the answer string 'O' as a standalone token.",
+      "english": {
+        "prompt_en": "What does the respiratory system transfer to the circulatory system?",
+        "relation_definition": "Substance transferred by a specified biological or functional source system to a named target system; retain the target-system context.",
+        "answer": "O",
+        "canonical_fact": "The respiratory system transfers O to the circulatory system.",
+        "direction": "source biological/functional system -> substance transferred to target system",
+        "relation_id": "system_to_transferred_substance",
+        "subject": "respiratory system",
+        "answer_aliases_en": [
+          "O"
+        ],
+        "relation_spec": {
+          "id": "system_to_transferred_substance",
+          "definition": "Substance transferred by a specified biological or functional source system to a named target system; retain the target-system context.",
+          "direction": "source biological/functional system -> substance transferred to target system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2f994d84162f3c8d4134f7897097533b094015f7902e447d7f1426e5203bf1c2",
+      "input_sha256": "c61e356592e310ebfb271782b5e9a08ef9440f9f0b84194351dd77891a5ae8e2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_14aaeef0b6be5900ded7",
+      "decision": "ready",
+      "subject": "The Place Beyond the Pines",
+      "relation_id": "work_to_story_setting",
+      "relation_definition": "Geographic location where the narrative of a specified work or version takes place; distinct from filming location (work_to_filming_location).",
+      "direction": "specified work -> story setting location",
+      "answer": "Schenectady",
+      "canonical_fact": "The Place Beyond the Pines is set in Schenectady.",
+      "prompt_en": "The Place Beyond the Pines is set in",
+      "evidence_quotes": [
+        "the place beyond the pines",
+        "Schenectady"
+      ],
+      "reason": "Catalog has work_to_filming_location but explicitly excludes story setting. No existing relation fits narrative setting. Proposed work_to_story_setting captures the direction and scope. Answer 'Schenectady' is the literal source_answer. prompt_en is a fill-in stem that does not contain the answer.",
+      "english": {
+        "prompt_en": "The Place Beyond the Pines is set in",
+        "relation_definition": "Geographic location where the narrative of a specified work or version takes place; distinct from filming location (work_to_filming_location).",
+        "answer": "Schenectady",
+        "canonical_fact": "The Place Beyond the Pines is set in Schenectady.",
+        "direction": "specified work -> story setting location",
+        "relation_id": "work_to_story_setting",
+        "subject": "The Place Beyond the Pines",
+        "answer_aliases_en": [
+          "Schenectady",
+          "Schenectady, New York"
+        ],
+        "relation_spec": {
+          "id": "work_to_story_setting",
+          "definition": "Geographic location where the narrative of a specified work or version takes place; distinct from filming location (work_to_filming_location).",
+          "direction": "specified work -> story setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a7972660f5f0322b2502a041781f56cbd001d7e339dab2e191d77ac0c2a8db52",
+      "input_sha256": "35715a2edb7e9ebac830fb9cb1a967e3c0048f675f84d3d402de22c4e033abc5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4aa53db40c0963a420132e1784b0f0f4a596443ee1ae8d2f4e71c4b29203fc8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 38.469
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4aa53db40c0963a420132e1784b0f0f4a596443ee1ae8d2f4e71c4b29203fc8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 37.652
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4aa53db40c0963a420132e1784b0f0f4a596443ee1ae8d2f4e71c4b29203fc8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 147.521
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4aa53db40c0963a420132e1784b0f0f4a596443ee1ae8d2f4e71c4b29203fc8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 133.653,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4aa53db40c0963a420132e1784b0f0f4a596443ee1ae8d2f4e71c4b29203fc8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1571,
+      "first_chunk_seconds": 66.649,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1685,
+        "prompt_tokens": 1596,
+        "total_tokens": 3281,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1243,
+          "text_tokens": 442
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "eba042f8337c43f2e48398b0a2e5f213334fa0e8164316d093689075bd02626e",
+      "status": "completed",
+      "latency_seconds": 105.947
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bc683bf27ed95493596a9601c570102d197da7c075102ced35fe0ae1eca9b260",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 91.666
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bc683bf27ed95493596a9601c570102d197da7c075102ced35fe0ae1eca9b260",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 35.392,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1496397768c70d3468e3",
+        "public:pbf_14aaeef0b6be5900ded7"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bc683bf27ed95493596a9601c570102d197da7c075102ced35fe0ae1eca9b260",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 127.105,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00669.json",
+      "sha256": "4317e8cd94db90299215294d1a47d0cecef1eab3557a7bad291079f454b3d6e4",
+      "previous_status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "input_sha256": "00300db91495d98179c5dbdee1358f140b02dbf56cbd25b205ede2292205c6b9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005741",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits the vague 'considered' property attribution (entity → adjective). The source qualifier 'considered' introduces subjectivity/normativity, and proposing a new 'entity_to_property' relation would be too broad to serve as a precise reusable fact. The sensenova annotation (subjective_or_normative) is consistent with this judgment.",
+      "input_sha256": "5a5adaec2f8857e1a6b6b5430767b3e2defc5a1f9fdcbf5070c11f469222cf7a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005756",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures 'typical location of a component within a structure.' entity_to_containing_location is defined for geographic containment, not for where plumbing fixtures are typically installed. The qualifier 'likely' makes the claim probabilistic rather than a hard fact. The sensenova annotation (typical_action_or_location) correctly identifies this as a commonsense judgment, not a precise reusable fact.",
+      "input_sha256": "fd3de5cbb66853310da07e0f43d9cacc407e29e3aada5237b84046c599a46dd3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005741",
+        "historical:raw_commonsense_qa_005756"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7aabad23430f5e04dbab865879567dffbda7fa2edcd714debc9693a124ec1340",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1803,
+      "first_chunk_seconds": 20.346,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1814,
+        "prompt_tokens": 1595,
+        "total_tokens": 3409,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1444,
+          "text_tokens": 370
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "64da66ef0a3044a74e95b29d9ba46eed84faa5bc54c4965e21d897a9202ef74f",
+      "status": "completed",
+      "latency_seconds": 127.856
+    }
+  ],
+  "status": "completed"
+}

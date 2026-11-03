@@ -1,0 +1,247 @@
+{
+  "input_sha256": "c3e9b6b3cd71e4b2ba26ec62391eadce21193315b9d00ad1102e0229e9e73136",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c752df50597054055f51",
+      "decision": "ready",
+      "subject": "the recent trend to uncover microaggressions",
+      "relation_id": "trend_to_encouraged_behavior",
+      "relation_definition": "The specific behavior, labeling, or outcome that a stated social trend or practice encourages or promotes, retaining qualifiers from the source.",
+      "direction": "specified trend/practice -> encouraged behavior/outcome",
+      "answer": "labeling",
+      "canonical_fact": "According to Lukianoff and Haidt, the recent trend to uncover microaggressions encourages labeling, by assigning global negative traits to persons.",
+      "prompt_en": "According to Lukianoff and Haidt, the recent trend to uncover microaggressions encourages",
+      "evidence_quotes": [
+        "the recent trend to uncover microaggressions encourages",
+        "labeling, by assigning global negative traits to persons."
+      ],
+      "reason": "Source question and answer support the extraction. Kept existing answer 'labeling' exactly per instruction. No catalog relation fits an 'encourages' link between a social trend and the behavior it promotes; proposed new relation trend_to_encouraged_behavior. Qualifier preserved in canonical_fact and evidence.",
+      "english": {
+        "answer": "labeling",
+        "relation_id": "trend_to_encouraged_behavior",
+        "prompt_en": "According to Lukianoff and Haidt, the recent trend to uncover microaggressions encourages",
+        "direction": "specified trend/practice -> encouraged behavior/outcome",
+        "subject": "the recent trend to uncover microaggressions",
+        "canonical_fact": "According to Lukianoff and Haidt, the recent trend to uncover microaggressions encourages labeling, by assigning global negative traits to persons.",
+        "relation_definition": "The specific behavior, labeling, or outcome that a stated social trend or practice encourages or promotes, retaining qualifiers from the source.",
+        "answer_aliases_en": [
+          "labeling",
+          "labeling, by assigning global negative traits to persons."
+        ],
+        "relation_spec": {
+          "id": "trend_to_encouraged_behavior",
+          "definition": "The specific behavior, labeling, or outcome that a stated social trend or practice encourages or promotes, retaining qualifiers from the source.",
+          "direction": "specified trend/practice -> encouraged behavior/outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "aabf3fdd7ee83e8ee82d889d6f1f2d511f06d8dc468423f2ec90f14c74a708bb",
+      "input_sha256": "0524b1232cddc976697434db88c49c25814eb3be9e655dee5ea2833e54b4cf07",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c777a497db6c3cd9e139",
+      "decision": "ready",
+      "subject": "\"abc\"[-1] in Python 3",
+      "relation_id": "code_expression_to_output",
+      "relation_definition": "The exact evaluated output or return value of a specified code expression in a named programming language and version.",
+      "direction": "specified code expression in stated language/version -> evaluated output",
+      "answer": "c",
+      "canonical_fact": "The output of \"abc\"[-1] in Python 3 is c.",
+      "prompt_en": "The output of \"abc\"[-1] in Python 3 is",
+      "evidence_quotes": [
+        "What is the output of \"abc\"[-1] in Python 3?",
+        "c"
+      ],
+      "reason": "Source answer 'c' matches existing answer exactly; no conflict. No catalog relation fits a language-specific code-expression evaluation result; proposed new relation code_expression_to_output. Prompt restated without the question form and without embedding the answer as a standalone token.",
+      "english": {
+        "answer": "c",
+        "relation_id": "code_expression_to_output",
+        "prompt_en": "The output of \"abc\"[-1] in Python 3 is",
+        "direction": "specified code expression in stated language/version -> evaluated output",
+        "subject": "\"abc\"[-1] in Python 3",
+        "canonical_fact": "The output of \"abc\"[-1] in Python 3 is c.",
+        "relation_definition": "The exact evaluated output or return value of a specified code expression in a named programming language and version.",
+        "answer_aliases_en": [
+          "c"
+        ],
+        "relation_spec": {
+          "id": "code_expression_to_output",
+          "definition": "The exact evaluated output or return value of a specified code expression in a named programming language and version.",
+          "direction": "specified code expression in stated language/version -> evaluated output"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5c074e3d7d31fb2187b9168b7bcc18fd5ed9c7714081a9c8bda3cb003abf72c",
+      "input_sha256": "cf2c558c22c73839aa1730c9ba87b34e9482cc80664970a1fc9d66dfae4583e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c752df50597054055f51",
+        "public:pbf_c777a497db6c3cd9e139"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "86bd742cf6dee6ce5d964fbf40dd18a863a016aed59c3e50f76dc6f812baa008",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2813,
+      "first_chunk_seconds": 11.063,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2850,
+        "prompt_tokens": 1654,
+        "total_tokens": 4504,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2259,
+          "text_tokens": 591
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c741f594f2aca1b3e36984ab78acf5d3357890b5b9c727b07839140a4f6aea66",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 38.541,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c752df50597054055f51",
+        "public:pbf_c777a497db6c3cd9e139"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "69597cd415d6844c466a81f28ee1b45c4e9c8af139966fe7f05b74431b46c8af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4238,
+      "first_chunk_seconds": 37.161,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4477,
+        "prompt_tokens": 1671,
+        "total_tokens": 6148,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3904,
+          "text_tokens": 573
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2098255234508d41020391c81295492f6a84feba8f0e05d01af6f5e3e24acb52",
+      "status": "completed",
+      "latency_seconds": 79.092
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c752df50597054055f51",
+        "public:pbf_c777a497db6c3cd9e139"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d329a257ea04577e19da09c5a013c45c0385d4b1ca14a8218026eac93b16cd0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1265,
+      "first_chunk_seconds": 39.612,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1307,
+        "prompt_tokens": 931,
+        "total_tokens": 2238,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1006,
+          "text_tokens": 301
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "591f47290d75aef5b8906320333b493a7a08019e59bc9fe67afec0d50389637c",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 54.388,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c752df50597054055f51",
+        "public:pbf_c777a497db6c3cd9e139"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "04bae5d6257e2f927bc5af14d4ccf8dbd97042b4fe17ae4adc15cc7dd4273ddb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1619,
+      "first_chunk_seconds": 29.931,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1616,
+        "prompt_tokens": 949,
+        "total_tokens": 2565,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1299,
+          "text_tokens": 317
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1840f166c47545e55a7490c24d2c0f9e325e6a10fb2565c8495a219c8a80cac9",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 44.054,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c752df50597054055f51",
+        "public:pbf_c777a497db6c3cd9e139"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "04bae5d6257e2f927bc5af14d4ccf8dbd97042b4fe17ae4adc15cc7dd4273ddb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1196,
+      "first_chunk_seconds": 1.633,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1194,
+        "prompt_tokens": 949,
+        "total_tokens": 2143,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 889,
+          "text_tokens": 305
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        }
+      },
+      "content_sha256": "3f8e884c2fd9de1c6eeeeb2eaa374fa5e0eec65990e9f6755e68d95207cbc1df",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 11.677,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

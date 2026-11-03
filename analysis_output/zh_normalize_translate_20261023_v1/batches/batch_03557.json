@@ -1,0 +1,171 @@
+{
+  "input_sha256": "31f5bd301e73737619d534157c9191ac735f066905670c83b09f7b1506b962d7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000207",
+      "decision": "ready",
+      "subject": "Projective tests",
+      "relation_id": "entity_to_comparative_attribute",
+      "relation_definition": "A comparative quality or characteristic of an entity relative to a specified reference entity, preserving the direction of comparison (more/less X than Y).",
+      "direction": "entity -> comparative attribute (with reference entity)",
+      "answer": "more visual",
+      "canonical_fact": "Projective tests are generally more visual than objective tests of personality.",
+      "prompt_en": "In what general way are projective tests different from objective tests of personality?",
+      "evidence_quotes": [
+        "Projective tests generally ___ than objective tests of personality",
+        "Are more visual"
+      ],
+      "reason": "Source clearly states projective tests are more visual than objective tests. No catalog relation covers a comparative attribute claim, so proposing entity_to_comparative_attribute with explicit definition and direction. Answer 'more visual' is a literal substring of source_answer 'Are more visual' and is consistent with the Qwen-3.8-Max extraction.",
+      "english": {
+        "prompt_en": "In what general way are projective tests different from objective tests of personality?",
+        "relation_definition": "A comparative quality or characteristic of an entity relative to a specified reference entity, preserving the direction of comparison (more/less X than Y).",
+        "answer": "more visual",
+        "canonical_fact": "Projective tests are generally more visual than objective tests of personality.",
+        "direction": "entity -> comparative attribute (with reference entity)",
+        "relation_id": "entity_to_comparative_attribute",
+        "subject": "Projective tests",
+        "answer_aliases_en": [
+          "more visual"
+        ],
+        "relation_spec": {
+          "id": "entity_to_comparative_attribute",
+          "definition": "A comparative quality or characteristic of an entity relative to a specified reference entity, preserving the direction of comparison (more/less X than Y).",
+          "direction": "entity -> comparative attribute (with reference entity)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ee543587dec912e260e2bc4345db4347920539a9c71a502f9053d6e62230b92f",
+      "input_sha256": "98a04c9533d0f596a1a55bb9801489850b4503f9fb3dcc06bedb4f4213bd6290",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000215",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source fact is a rough, time-qualified estimate ('current estimates', 'less than 50%') with no defined year or authoritative source. No catalog relation covers statistical population-proportion estimates, and the inherent imprecision and temporal dependence ('current') make this unsuitable as a clean reusable factual candidate without additional qualifying context. Deferring per insufficient-precision / no-fitting-relation guidance.",
+      "input_sha256": "f93fb9b1f0423de3ff2de199a2fed856188aefcdd0a5ee1a67344c2da4c4b930",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000207",
+      "input_sha256": "98a04c9533d0f596a1a55bb9801489850b4503f9fb3dcc06bedb4f4213bd6290",
+      "english": {
+        "prompt_en": "In what general way are projective tests different from objective tests of personality?",
+        "relation_definition": "A comparative quality or characteristic of an entity relative to a specified reference entity, preserving the direction of comparison (more/less X than Y).",
+        "answer": "more visual",
+        "canonical_fact": "Projective tests are generally more visual than objective tests of personality.",
+        "direction": "entity -> comparative attribute (with reference entity)",
+        "relation_id": "entity_to_comparative_attribute",
+        "subject": "Projective tests",
+        "answer_aliases_en": [
+          "more visual"
+        ],
+        "relation_spec": {
+          "id": "entity_to_comparative_attribute",
+          "definition": "A comparative quality or characteristic of an entity relative to a specified reference entity, preserving the direction of comparison (more/less X than Y).",
+          "direction": "entity -> comparative attribute (with reference entity)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ee543587dec912e260e2bc4345db4347920539a9c71a502f9053d6e62230b92f",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000207",
+        "subject_zh": "投射测验",
+        "prompt_zh": "投射测验与人格客观测验在一般特征上有什么不同？",
+        "canonical_fact_zh": "投射测验通常比人格客观测验更具视觉性。",
+        "answer_zh": "更具视觉性",
+        "answer_aliases_zh": [
+          "更具视觉性"
+        ]
+      },
+      "translation_sha256": "f0f89dedf86aa3ed954db6d84d47e87749a5e0f087725974fe6a0ff94715a605"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000207",
+        "historical:raw_mmlu_000215"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dca15a0856a4206d0213e9c6e0ba8854b5d706a5b9895d32f436dd5a1a178342",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 59.102
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000207",
+        "historical:raw_mmlu_000215"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dca15a0856a4206d0213e9c6e0ba8854b5d706a5b9895d32f436dd5a1a178342",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3010,
+      "first_chunk_seconds": 34.218,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3029,
+        "prompt_tokens": 1608,
+        "total_tokens": 4637,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2570,
+          "text_tokens": 459
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c4af1b301d812351b664ed3cef146ec16b20357fb04dd4e1e20ab337dfe982b1",
+      "status": "completed",
+      "latency_seconds": 139.972
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000207"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0652d2c37a0d813f51136bb3d37d1b05498e819e2826e61244f640c47c2f7ad6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 763,
+      "first_chunk_seconds": 4.202,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 773,
+        "prompt_tokens": 553,
+        "total_tokens": 1326,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 692,
+          "text_tokens": 81
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1a29f4cf5e40f32ed960b57628ab3250d9eb97a33f6c22759d5f8f7fb39f56d5",
+      "status": "completed",
+      "latency_seconds": 97.711
+    }
+  ],
+  "status": "completed"
+}

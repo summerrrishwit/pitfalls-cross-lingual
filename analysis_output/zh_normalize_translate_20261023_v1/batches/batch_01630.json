@@ -1,0 +1,217 @@
+{
+  "input_sha256": "5116fb6dfdf57f3753d330363fa63372829037f46aad04c3be3e9424ac2d1035",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b5fed76c16b74539db6a",
+      "decision": "ready",
+      "subject": "swallowing",
+      "relation_id": "process_to_structural_response",
+      "relation_definition": "Anatomical structure that undergoes a stated functional change (e.g., opens, closes) as a direct effect of the specified physiological process, at the granularity stated in the source.",
+      "direction": "physiological process -> anatomical structure",
+      "answer": "auditory tube",
+      "canonical_fact": "During swallowing, the auditory tube opens.",
+      "prompt_en": "Which anatomical structure opens during the act of swallowing?",
+      "evidence_quotes": [
+        "During swallowing the",
+        "auditory tube opens."
+      ],
+      "reason": "Source states that during swallowing the auditory tube opens. No existing catalog relation captures a physiological process producing a specific structural functional change; proposed new relation process_to_structural_response with explicit direction. Existing answer 'auditory tube' is a literal substring of source_answer and does not conflict, so it is kept verbatim.",
+      "english": {
+        "answer": "auditory tube",
+        "relation_id": "process_to_structural_response",
+        "prompt_en": "Which anatomical structure opens during the act of swallowing?",
+        "direction": "physiological process -> anatomical structure",
+        "subject": "swallowing",
+        "canonical_fact": "During swallowing, the auditory tube opens.",
+        "relation_definition": "Anatomical structure that undergoes a stated functional change (e.g., opens, closes) as a direct effect of the specified physiological process, at the granularity stated in the source.",
+        "answer_aliases_en": [
+          "auditory tube"
+        ],
+        "relation_spec": {
+          "id": "process_to_structural_response",
+          "definition": "Anatomical structure that undergoes a stated functional change (e.g., opens, closes) as a direct effect of the specified physiological process, at the granularity stated in the source.",
+          "direction": "physiological process -> anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6ed34e1eccc5c2485cc5a4bd0d9e2311404534f43da1f12b9a00d44a67473f17",
+      "input_sha256": "a0d40cd119dd157f84591716fe2f79804a9e2fb945aa7e3d251ba17cd27c052b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b621ad85ef0d26e28682",
+      "decision": "ready",
+      "subject": "resistivity of a conductor",
+      "relation_id": "property_to_determining_factor",
+      "relation_definition": "The physical or material factor on which a specified physical property depends or is determined, at the granularity stated in the source.",
+      "direction": "physical property -> determining factor",
+      "answer": "type of material",
+      "canonical_fact": "The resistivity of a conductor depends on the type of material.",
+      "prompt_en": "What does the resistivity of a conductor depend on?",
+      "evidence_quotes": [
+        "The resistivity of the conductor depends on",
+        "type of material."
+      ],
+      "reason": "Source states resistivity of a conductor depends on type of material. entity_to_material in the catalog refers to material composition of an entity, not the dependency/determinant of a physical property, so it does not fit. Proposed new relation property_to_determining_factor. Existing answer 'type of material' is a literal substring of source_answer and does not conflict, so it is kept verbatim.",
+      "english": {
+        "answer": "type of material",
+        "relation_id": "property_to_determining_factor",
+        "prompt_en": "What does the resistivity of a conductor depend on?",
+        "direction": "physical property -> determining factor",
+        "subject": "resistivity of a conductor",
+        "canonical_fact": "The resistivity of a conductor depends on the type of material.",
+        "relation_definition": "The physical or material factor on which a specified physical property depends or is determined, at the granularity stated in the source.",
+        "answer_aliases_en": [
+          "type of material",
+          "type of material."
+        ],
+        "relation_spec": {
+          "id": "property_to_determining_factor",
+          "definition": "The physical or material factor on which a specified physical property depends or is determined, at the granularity stated in the source.",
+          "direction": "physical property -> determining factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a5c29b16b2fe6eda376cdeff1eb1ecb3f88edc75736e85c8da98f67ac930fa12",
+      "input_sha256": "17d34c15d64b89f24465d635551318013608ac17381ae9afc8ff5245512b63f8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_b5fed76c16b74539db6a",
+      "input_sha256": "a0d40cd119dd157f84591716fe2f79804a9e2fb945aa7e3d251ba17cd27c052b",
+      "english": {
+        "answer": "auditory tube",
+        "relation_id": "process_to_structural_response",
+        "prompt_en": "Which anatomical structure opens during the act of swallowing?",
+        "direction": "physiological process -> anatomical structure",
+        "subject": "swallowing",
+        "canonical_fact": "During swallowing, the auditory tube opens.",
+        "relation_definition": "Anatomical structure that undergoes a stated functional change (e.g., opens, closes) as a direct effect of the specified physiological process, at the granularity stated in the source.",
+        "answer_aliases_en": [
+          "auditory tube"
+        ],
+        "relation_spec": {
+          "id": "process_to_structural_response",
+          "definition": "Anatomical structure that undergoes a stated functional change (e.g., opens, closes) as a direct effect of the specified physiological process, at the granularity stated in the source.",
+          "direction": "physiological process -> anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6ed34e1eccc5c2485cc5a4bd0d9e2311404534f43da1f12b9a00d44a67473f17",
+      "translation": {
+        "record_id": "public:pbf_b5fed76c16b74539db6a",
+        "subject_zh": "吞咽",
+        "prompt_zh": "吞咽时哪个解剖结构会张开？",
+        "canonical_fact_zh": "吞咽时，咽鼓管会张开。",
+        "answer_zh": "咽鼓管",
+        "answer_aliases_zh": [
+          "咽鼓管"
+        ]
+      },
+      "translation_sha256": "e9190aa35afb6e14658b693deed9942b82dca5399b6229f0418570d4d263a329"
+    },
+    {
+      "record_id": "public:pbf_b621ad85ef0d26e28682",
+      "input_sha256": "17d34c15d64b89f24465d635551318013608ac17381ae9afc8ff5245512b63f8",
+      "english": {
+        "answer": "type of material",
+        "relation_id": "property_to_determining_factor",
+        "prompt_en": "What does the resistivity of a conductor depend on?",
+        "direction": "physical property -> determining factor",
+        "subject": "resistivity of a conductor",
+        "canonical_fact": "The resistivity of a conductor depends on the type of material.",
+        "relation_definition": "The physical or material factor on which a specified physical property depends or is determined, at the granularity stated in the source.",
+        "answer_aliases_en": [
+          "type of material",
+          "type of material."
+        ],
+        "relation_spec": {
+          "id": "property_to_determining_factor",
+          "definition": "The physical or material factor on which a specified physical property depends or is determined, at the granularity stated in the source.",
+          "direction": "physical property -> determining factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a5c29b16b2fe6eda376cdeff1eb1ecb3f88edc75736e85c8da98f67ac930fa12",
+      "translation": {
+        "record_id": "public:pbf_b621ad85ef0d26e28682",
+        "subject_zh": "导体的电阻率",
+        "prompt_zh": "导体的电阻率取决于什么？",
+        "canonical_fact_zh": "导体的电阻率取决于材料的种类。",
+        "answer_zh": "材料种类",
+        "answer_aliases_zh": [
+          "材料种类",
+          "材料种类。"
+        ]
+      },
+      "translation_sha256": "b02b2808c1f6f446acbe24f03fe07303a45c60edfdf82dede2b4a7cdd5cc762d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b5fed76c16b74539db6a",
+        "public:pbf_b621ad85ef0d26e28682"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad4fec93708000f744a1714f9f3c1771cb492a5e0b54bb64fe6f98116a9d7c78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2691,
+      "first_chunk_seconds": 6.095,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2694,
+        "prompt_tokens": 1568,
+        "total_tokens": 4262,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2143,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aa900a426432f0f814b12ad7a656ee51aab5084d283f53ce5b7437c184fff22e",
+      "status": "completed",
+      "latency_seconds": 31.357
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b5fed76c16b74539db6a",
+        "public:pbf_b621ad85ef0d26e28682"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "23b524fd3efd6b8f71bf04eee20c108379bdeb50b3ffddd052ad86162a245ba4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 686,
+      "first_chunk_seconds": 15.191,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 683,
+        "prompt_tokens": 902,
+        "total_tokens": 1585,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 455,
+          "text_tokens": 228
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9412a91f8e4b8ecfb652c65c452e05ff12a191e0e8a4e563a77775ac21c5af17",
+      "status": "completed",
+      "latency_seconds": 24.247
+    }
+  ],
+  "status": "completed"
+}

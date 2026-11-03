@@ -1,0 +1,217 @@
+{
+  "input_sha256": "c0e2c2a52e830ab105d28b1355db9eab077ba3e7efc71c362a5fac37e9ee0b85",
+  "normalized": [
+    {
+      "record_id": "public:pbf_4c258b93d197fabfabf3",
+      "decision": "ready",
+      "subject": "urine",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "Urea",
+      "canonical_fact": "The main nitrogenous compound in urine is urea.",
+      "prompt_en": "The main nitrogenous compound in urine is",
+      "evidence_quotes": [
+        "Which of the following is the main nitrogenous compound in urine?",
+        "Urea"
+      ],
+      "reason": "The source question explicitly asks for the main nitrogenous compound in urine and the source answer is Urea. Urea is a constituent chemical compound dissolved in urine, fitting the entity_to_material relation (constituent material of a specified entity). No date, market, or version is involved; the qualifier 'main nitrogenous compound' is preserved in the canonical fact.",
+      "english": {
+        "answer": "Urea",
+        "relation_id": "entity_to_material",
+        "prompt_en": "The main nitrogenous compound in urine is",
+        "direction": "entity -> material",
+        "subject": "urine",
+        "canonical_fact": "The main nitrogenous compound in urine is urea.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "Urea"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fccb37687745ce2b4a336a1a9bb2a277b9c606332d3a645011c5ec8c93d0b40d",
+      "input_sha256": "7ae0593e0fc01e99fb619fa47489d63b8ef8ed588c91774033360f8a3180a133",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_4c3b3387d4582608b676",
+      "decision": "ready",
+      "subject": "blood glucose concentration",
+      "relation_id": "parameter_to_conditional_change",
+      "relation_definition": "The observed quantitative change in a specified physiological parameter under an explicitly stated condition, protocol, or time window, preserving frequency qualifiers and units.",
+      "direction": "physiological parameter under specified condition -> observed change",
+      "answer": "frequently rises by 1 - 3 mM",
+      "canonical_fact": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise frequently rises by 1 - 3 mM.",
+      "prompt_en": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise",
+      "evidence_quotes": [
+        "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise:",
+        "frequently rises by 1 - 3 mM."
+      ],
+      "reason": "No existing catalog relation captures a conditional physiological-parameter response under a specified exercise protocol. Proposing parameter_to_conditional_change: the source question defines the condition (80-90 min intermittent high-intensity exercise) and the source answer gives the observed change (frequently rises by 1-3 mM) with its frequency qualifier and unit. The prompt_en omits the answer and is option-free.",
+      "english": {
+        "answer": "frequently rises by 1 - 3 mM",
+        "relation_id": "parameter_to_conditional_change",
+        "prompt_en": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise",
+        "direction": "physiological parameter under specified condition -> observed change",
+        "subject": "blood glucose concentration",
+        "canonical_fact": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise frequently rises by 1 - 3 mM.",
+        "relation_definition": "The observed quantitative change in a specified physiological parameter under an explicitly stated condition, protocol, or time window, preserving frequency qualifiers and units.",
+        "answer_aliases_en": [
+          "frequently rises by 1 - 3 mM",
+          "frequently rises by 1 - 3 mM."
+        ],
+        "relation_spec": {
+          "id": "parameter_to_conditional_change",
+          "definition": "The observed quantitative change in a specified physiological parameter under an explicitly stated condition, protocol, or time window, preserving frequency qualifiers and units.",
+          "direction": "physiological parameter under specified condition -> observed change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "106b1e60f2c1efa1c7b246b70dfad97d8b49d14eed4486003c2c9084aa6d8a0d",
+      "input_sha256": "e5bcc212d2f4aa026f35d9e30b53f7f7c03d94414cf4c470b3ab9d2992c84605",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_4c258b93d197fabfabf3",
+      "input_sha256": "7ae0593e0fc01e99fb619fa47489d63b8ef8ed588c91774033360f8a3180a133",
+      "english": {
+        "answer": "Urea",
+        "relation_id": "entity_to_material",
+        "prompt_en": "The main nitrogenous compound in urine is",
+        "direction": "entity -> material",
+        "subject": "urine",
+        "canonical_fact": "The main nitrogenous compound in urine is urea.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "Urea"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fccb37687745ce2b4a336a1a9bb2a277b9c606332d3a645011c5ec8c93d0b40d",
+      "translation": {
+        "record_id": "public:pbf_4c258b93d197fabfabf3",
+        "subject_zh": "尿液",
+        "prompt_zh": "尿液中的主要含氮化合物是",
+        "canonical_fact_zh": "尿液中的主要含氮化合物是尿素。",
+        "answer_zh": "尿素",
+        "answer_aliases_zh": [
+          "尿素"
+        ]
+      },
+      "translation_sha256": "9d6db509d1b6bd7503dee5143116c5ddc633a38ebd806395e3d651a1e14dc035"
+    },
+    {
+      "record_id": "public:pbf_4c3b3387d4582608b676",
+      "input_sha256": "e5bcc212d2f4aa026f35d9e30b53f7f7c03d94414cf4c470b3ab9d2992c84605",
+      "english": {
+        "answer": "frequently rises by 1 - 3 mM",
+        "relation_id": "parameter_to_conditional_change",
+        "prompt_en": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise",
+        "direction": "physiological parameter under specified condition -> observed change",
+        "subject": "blood glucose concentration",
+        "canonical_fact": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise frequently rises by 1 - 3 mM.",
+        "relation_definition": "The observed quantitative change in a specified physiological parameter under an explicitly stated condition, protocol, or time window, preserving frequency qualifiers and units.",
+        "answer_aliases_en": [
+          "frequently rises by 1 - 3 mM",
+          "frequently rises by 1 - 3 mM."
+        ],
+        "relation_spec": {
+          "id": "parameter_to_conditional_change",
+          "definition": "The observed quantitative change in a specified physiological parameter under an explicitly stated condition, protocol, or time window, preserving frequency qualifiers and units.",
+          "direction": "physiological parameter under specified condition -> observed change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "106b1e60f2c1efa1c7b246b70dfad97d8b49d14eed4486003c2c9084aa6d8a0d",
+      "translation": {
+        "record_id": "public:pbf_4c3b3387d4582608b676",
+        "subject_zh": "血糖浓度",
+        "prompt_zh": "间歇性高强度运动80至90分钟期间，血糖浓度",
+        "canonical_fact_zh": "间歇性高强度运动80至90分钟期间，血糖浓度经常升高1 - 3 mM。",
+        "answer_zh": "经常升高1 - 3 mM",
+        "answer_aliases_zh": [
+          "经常升高1 - 3 mM",
+          "经常升高1 - 3 mM。"
+        ]
+      },
+      "translation_sha256": "ced2e26558681aaff823fad5400837b440192ecb529fa13a98bfbaaebf75634f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4c258b93d197fabfabf3",
+        "public:pbf_4c3b3387d4582608b676"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4f775297efe6fc31f6a0e7399ee871a2a9d8441bf6390e1aca99631329ebd45e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2125,
+      "first_chunk_seconds": 6.327,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2232,
+        "prompt_tokens": 1676,
+        "total_tokens": 3908,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1642,
+          "text_tokens": 590
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1a9c1186d3e85eabada814b2a6c38fb79830548f43718eaa1e93bbfcaee8aea2",
+      "status": "completed",
+      "latency_seconds": 47.199
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4c258b93d197fabfabf3",
+        "public:pbf_4c3b3387d4582608b676"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "52f2c3d875389b154b322c74e3dd481c97aab10bebe5b50b84f6b982da019b99",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1252,
+      "first_chunk_seconds": 18.592,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1337,
+        "prompt_tokens": 905,
+        "total_tokens": 2242,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1077,
+          "text_tokens": 260
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2cb3d8e0726e4433cd406d999e8f557867dc4935e16ce43de2dcedcb028908ab",
+      "status": "completed",
+      "latency_seconds": 70.837
+    }
+  ],
+  "status": "completed"
+}

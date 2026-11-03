@@ -1,0 +1,214 @@
+{
+  "input_sha256": "68e81ec6329a9273ffd2c6fa2190ae1fb6eb1f8356d9c3f1d1541e4251c449b5",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000611",
+      "decision": "ready",
+      "subject": "map feature that converts measured map distance to actual miles",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "scale",
+      "canonical_fact": "The map feature that converts measured map distance to actual miles is the scale.",
+      "prompt_en": "What map feature, when used with a measured distance in inches, gives the corresponding actual distance in miles?",
+      "evidence_quotes": [
+        "What feature of the map should he look for?",
+        "scale"
+      ],
+      "reason": "The source question supplies a defining description of a map feature (converts measured inches to actual miles) and asks for its conventional name. 'scale' is the term uniquely fitting that description. The catalog relation description_to_term (description -> term) fits exactly; no new relation is needed.",
+      "english": {
+        "answer": "scale",
+        "relation_id": "description_to_term",
+        "prompt_en": "What map feature, when used with a measured distance in inches, gives the corresponding actual distance in miles?",
+        "direction": "description -> term",
+        "subject": "map feature that converts measured map distance to actual miles",
+        "canonical_fact": "The map feature that converts measured map distance to actual miles is the scale.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "scale"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d635b3b8cdb4139a3f45c9d58d94e5e9940c75afeb76e8eb75f8772b1b19bf53",
+      "input_sha256": "832457a21f5f11eff7bcff3f46292e6f70e68dc04044e614edcd3e3acbff7417",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000612",
+      "decision": "ready",
+      "subject": "water",
+      "relation_id": "substance_to_physical_property",
+      "relation_definition": "A specified physical property of a named substance; retain the property statement and its functional context.",
+      "direction": "substance -> physical property",
+      "answer": "less dense as a solid than as a liquid",
+      "canonical_fact": "Water is less dense as a solid than as a liquid, a property that best helps aquatic life survive in lakes during the winter.",
+      "prompt_en": "What property of water best helps aquatic life survive in lakes during the winter?",
+      "evidence_quotes": [
+        "What property of water best helps aquatic life survive in lakes during the winter?",
+        "water is less dense as a solid than as a liquid"
+      ],
+      "reason": "The source asks for a specific physical property of water with a stated functional context. No existing catalog relation covers substance-to-property; a new precise relation substance_to_physical_property is proposed. The answer 'less dense as a solid than as a liquid' is a concise literal substring of the source answer; functional context is preserved in the canonical fact.",
+      "english": {
+        "answer": "less dense as a solid than as a liquid",
+        "relation_id": "substance_to_physical_property",
+        "prompt_en": "What property of water best helps aquatic life survive in lakes during the winter?",
+        "direction": "substance -> physical property",
+        "subject": "water",
+        "canonical_fact": "Water is less dense as a solid than as a liquid, a property that best helps aquatic life survive in lakes during the winter.",
+        "relation_definition": "A specified physical property of a named substance; retain the property statement and its functional context.",
+        "answer_aliases_en": [
+          "less dense as a solid than as a liquid"
+        ],
+        "relation_spec": {
+          "id": "substance_to_physical_property",
+          "definition": "A specified physical property of a named substance; retain the property statement and its functional context.",
+          "direction": "substance -> physical property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de7e4ff690c6fa8cd94fb86a9f7f9c468ac6346bddc45ede6d3ec9770f9fb806",
+      "input_sha256": "8ac7cb29672d0d7a6ed6f6742036c287a2676879cc9898c49700f305a24b4a39",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000611",
+      "input_sha256": "832457a21f5f11eff7bcff3f46292e6f70e68dc04044e614edcd3e3acbff7417",
+      "english": {
+        "answer": "scale",
+        "relation_id": "description_to_term",
+        "prompt_en": "What map feature, when used with a measured distance in inches, gives the corresponding actual distance in miles?",
+        "direction": "description -> term",
+        "subject": "map feature that converts measured map distance to actual miles",
+        "canonical_fact": "The map feature that converts measured map distance to actual miles is the scale.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "scale"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d635b3b8cdb4139a3f45c9d58d94e5e9940c75afeb76e8eb75f8772b1b19bf53",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000611",
+        "subject_zh": "将地图上测量的距离转换为实际英里的地图要素",
+        "prompt_zh": "哪种地图要素，与以英寸为单位的测量距离配合使用时，能给出对应的实际英里距离？",
+        "canonical_fact_zh": "将地图上测量的距离转换为实际英里的地图要素是比例尺。",
+        "answer_zh": "比例尺",
+        "answer_aliases_zh": [
+          "比例尺"
+        ]
+      },
+      "translation_sha256": "83527467a55026206f6723a0e8152fc523ea48e7af394fe7aa0f067ce0206dcf"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000612",
+      "input_sha256": "8ac7cb29672d0d7a6ed6f6742036c287a2676879cc9898c49700f305a24b4a39",
+      "english": {
+        "answer": "less dense as a solid than as a liquid",
+        "relation_id": "substance_to_physical_property",
+        "prompt_en": "What property of water best helps aquatic life survive in lakes during the winter?",
+        "direction": "substance -> physical property",
+        "subject": "water",
+        "canonical_fact": "Water is less dense as a solid than as a liquid, a property that best helps aquatic life survive in lakes during the winter.",
+        "relation_definition": "A specified physical property of a named substance; retain the property statement and its functional context.",
+        "answer_aliases_en": [
+          "less dense as a solid than as a liquid"
+        ],
+        "relation_spec": {
+          "id": "substance_to_physical_property",
+          "definition": "A specified physical property of a named substance; retain the property statement and its functional context.",
+          "direction": "substance -> physical property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de7e4ff690c6fa8cd94fb86a9f7f9c468ac6346bddc45ede6d3ec9770f9fb806",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000612",
+        "subject_zh": "水",
+        "prompt_zh": "水的哪种特性最有助于水生生物在冬季的湖泊中生存？",
+        "canonical_fact_zh": "水的固态密度小于液态密度，这一特性最有助于水生生物在冬季的湖泊中生存。",
+        "answer_zh": "固态密度小于液态密度",
+        "answer_aliases_zh": [
+          "固态密度小于液态密度"
+        ]
+      },
+      "translation_sha256": "4926eb0416f8480e9d6277c6a633f2375c3a7af67aa56885193d4bed34bb5e55"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000611",
+        "historical:raw_ai2_arc_easy_000612"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9617a64de8f3dd9c8d9b3321884bdb72364c5622faf7b62a605372f69420b173",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2395,
+      "first_chunk_seconds": 20.383,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2525,
+        "prompt_tokens": 1781,
+        "total_tokens": 4306,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1977,
+          "text_tokens": 548
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "71a319b0ea3c4ba199c1c82fc2fb5aabc09abca92a7eb288d9824cd25c02748b",
+      "status": "completed",
+      "latency_seconds": 78.985
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000611",
+        "historical:raw_ai2_arc_easy_000612"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "24457f572c89a35341c3d9041e92e581991cd21fc5864a70740ba4e837996fde",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 636,
+      "first_chunk_seconds": 69.473,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 720,
+        "prompt_tokens": 863,
+        "total_tokens": 1583,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 461,
+          "text_tokens": 259
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a575cd1ae3fe20cd6c979395f03625d577b4d510748a969330efa2f0cce5fdc6",
+      "status": "completed",
+      "latency_seconds": 88.109
+    }
+  ],
+  "status": "completed"
+}

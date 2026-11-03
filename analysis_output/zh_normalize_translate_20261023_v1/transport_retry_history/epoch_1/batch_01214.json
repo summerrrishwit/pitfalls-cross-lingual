@@ -1,0 +1,172 @@
+{
+  "input_sha256": "8e95b1ec79dd85eaf61119ee661e8f9a4f9c96216baa77ce2bbb2b9807d7a3ed",
+  "normalized": [
+    {
+      "record_id": "public:pbf_724d558627b820f43382",
+      "decision": "ready",
+      "subject": "Assessment centers",
+      "relation_id": "entity_to_common_purpose",
+      "relation_definition": "The stated common or primary use/function of a named entity, retaining frequency qualifiers such as 'most commonly.'",
+      "direction": "entity -> common purpose/action",
+      "answer": "hire and promote managers",
+      "canonical_fact": "Assessment centers are most commonly used to hire and promote managers.",
+      "prompt_en": "Assessment centers are most commonly used to",
+      "evidence_quotes": [
+        "Assessment centers are most commonly used to",
+        "hire and promote managers"
+      ],
+      "reason": "Source answer 'hire and promote managers.' directly states the common purpose of assessment centers. No existing catalog relation captures 'entity -> common purpose/use,' so a precise new relation is proposed. Answer is a literal substring of source_answer; prompt_en is option-free and excludes the answer.",
+      "english": {
+        "answer": "hire and promote managers",
+        "relation_id": "entity_to_common_purpose",
+        "prompt_en": "Assessment centers are most commonly used to",
+        "direction": "entity -> common purpose/action",
+        "subject": "Assessment centers",
+        "canonical_fact": "Assessment centers are most commonly used to hire and promote managers.",
+        "relation_definition": "The stated common or primary use/function of a named entity, retaining frequency qualifiers such as 'most commonly.'",
+        "answer_aliases_en": [
+          "hire and promote managers",
+          "hire and promote managers."
+        ],
+        "relation_spec": {
+          "id": "entity_to_common_purpose",
+          "definition": "The stated common or primary use/function of a named entity, retaining frequency qualifiers such as 'most commonly.'",
+          "direction": "entity -> common purpose/action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a1e719f42d5d518baa62c9a14e3b366c6edd07dfd99b2422abb4a1fe009f0b78",
+      "input_sha256": "c11375c6b2d9ccc2e6a5f58e61ab456fc156b96300335007d2d59489bc81a6bf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_726123594bdd85fd9f1b",
+      "decision": "ready",
+      "subject": "Tolly Kleckley",
+      "relation_id": "person_to_stated_claim",
+      "relation_definition": "A specific claim, observation, or statement attributed to a named person in a specified context (e.g., a publication or interview), preserving original qualifiers and hedges.",
+      "direction": "person -> stated claim",
+      "answer": "pretty much stays the same",
+      "canonical_fact": "Tolly Kleckley stated that personality pretty much stays the same.",
+      "prompt_en": "Tolly Kleckley stated that personality",
+      "evidence_quotes": [
+        "In this chapter's Senior View, Tolly Kleckley told us that personality",
+        "Pretty much stays the same"
+      ],
+      "reason": "Source attributes a specific hedge-qualified statement to Tolly Kleckley in a named chapter context. No catalog relation covers person-to-attributed-statement, so a new precise relation is proposed. The qualifier 'pretty much' is preserved. Evidence quote uses the exact casing from source_answer.",
+      "english": {
+        "answer": "pretty much stays the same",
+        "relation_id": "person_to_stated_claim",
+        "prompt_en": "Tolly Kleckley stated that personality",
+        "direction": "person -> stated claim",
+        "subject": "Tolly Kleckley",
+        "canonical_fact": "Tolly Kleckley stated that personality pretty much stays the same.",
+        "relation_definition": "A specific claim, observation, or statement attributed to a named person in a specified context (e.g., a publication or interview), preserving original qualifiers and hedges.",
+        "answer_aliases_en": [
+          "pretty much stays the same"
+        ],
+        "relation_spec": {
+          "id": "person_to_stated_claim",
+          "definition": "A specific claim, observation, or statement attributed to a named person in a specified context (e.g., a publication or interview), preserving original qualifiers and hedges.",
+          "direction": "person -> stated claim"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "961a6c1d4b8ab769460322dfae8a082f65bb34bea66d735b717503d67826cd21",
+      "input_sha256": "342da792e5b7589dfd6bfccec82fdee67c8519699fa443f671a5e51b34c54114",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_724d558627b820f43382",
+        "public:pbf_726123594bdd85fd9f1b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "adbd1be02784703508932bb94947d8dbe08ec6f4bf851bfa8fc784a71dcf3a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.996
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_724d558627b820f43382",
+        "public:pbf_726123594bdd85fd9f1b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "adbd1be02784703508932bb94947d8dbe08ec6f4bf851bfa8fc784a71dcf3a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1965,
+      "first_chunk_seconds": 47.497,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1963,
+        "prompt_tokens": 1603,
+        "total_tokens": 3566,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1427,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "71a0ed23dc97876d6ea69d652bb157b0bf7ca3c7a423f2e5ee731b87544b0036",
+      "status": "completed",
+      "latency_seconds": 62.979
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_724d558627b820f43382",
+        "public:pbf_726123594bdd85fd9f1b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "42057bf44aff6817adb39c2d00c502c6a903833eba1d0312c6e68204fd79e9af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.925
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_724d558627b820f43382",
+        "public:pbf_726123594bdd85fd9f1b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "42057bf44aff6817adb39c2d00c502c6a903833eba1d0312c6e68204fd79e9af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.007
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_724d558627b820f43382",
+        "public:pbf_726123594bdd85fd9f1b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "42057bf44aff6817adb39c2d00c502c6a903833eba1d0312c6e68204fd79e9af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.229
+    }
+  ],
+  "status": "failed"
+}

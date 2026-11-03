@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2306299b1b5bac02781f6479ac918b05082aee524ce211cc5ee366339bfa7073",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007502",
+      "decision": "ready",
+      "subject": "sound heard on the other end of a radio when communication fails",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "static",
+      "canonical_fact": "The sound heard on the other end of a radio when communication fails is static.",
+      "prompt_en": "What is the conventional term for the sound heard on the other end of a radio when communication fails?",
+      "evidence_quotes": [
+        "what did he hearing the other end",
+        "static"
+      ],
+      "reason": "The source question identifies a specific radio-communication-failure phenomenon and the source answer names it 'static'. This maps cleanly to description_to_term: the identifying description (sound heard on the other end of a radio when communication fails) uniquely fits the conventional term 'static'. No conflict with existing annotations; both models agree on extractability. No invented dates, markets, or versions.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "static",
+        "canonical_fact": "The sound heard on the other end of a radio when communication fails is static.",
+        "subject": "sound heard on the other end of a radio when communication fails",
+        "prompt_en": "What is the conventional term for the sound heard on the other end of a radio when communication fails?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "static"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f1129bfa0263409f61898d0083d2b78f1b43f28df629233de748dfd6560262c5",
+      "input_sha256": "53977f55bfceb6a1e415cbd76e3f17289c61df550c5ef4216d7caf9c318ae6aa",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007544",
+      "decision": "ready",
+      "subject": "middle of a trip",
+      "relation_id": "phase_to_preceding_phase",
+      "relation_definition": "The immediately preceding phase in a defined sequential process; the subject phase follows the answer phase in temporal order.",
+      "direction": "phase -> preceding phase",
+      "answer": "beginning",
+      "canonical_fact": "The middle of a trip comes after the beginning.",
+      "prompt_en": "In a trip, which phase does the middle come after?",
+      "evidence_quotes": [
+        "The middle of a trip comes after the what?",
+        "beginning"
+      ],
+      "reason": "The source asks for the phase that precedes 'the middle of a trip'; the answer is 'beginning'. No catalog relation captures sequential phase ordering, so a new relation 'phase_to_preceding_phase' is proposed with explicit direction (phase -> preceding phase) and definition. Both model annotations agree. No invented qualifiers; the scope is limited to a trip as stated in the source.",
+      "english": {
+        "direction": "phase -> preceding phase",
+        "relation_id": "phase_to_preceding_phase",
+        "answer": "beginning",
+        "canonical_fact": "The middle of a trip comes after the beginning.",
+        "subject": "middle of a trip",
+        "prompt_en": "In a trip, which phase does the middle come after?",
+        "relation_definition": "The immediately preceding phase in a defined sequential process; the subject phase follows the answer phase in temporal order.",
+        "answer_aliases_en": [
+          "beginning"
+        ],
+        "relation_spec": {
+          "id": "phase_to_preceding_phase",
+          "definition": "The immediately preceding phase in a defined sequential process; the subject phase follows the answer phase in temporal order.",
+          "direction": "phase -> preceding phase"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1f96817ae435383065f2984691203f50183420d26d139af336daef8acd19c056",
+      "input_sha256": "f238b5c23cfdc89f1e570fd4958944609260b242c18820584f9c653b523465b0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007502",
+      "input_sha256": "53977f55bfceb6a1e415cbd76e3f17289c61df550c5ef4216d7caf9c318ae6aa",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "static",
+        "canonical_fact": "The sound heard on the other end of a radio when communication fails is static.",
+        "subject": "sound heard on the other end of a radio when communication fails",
+        "prompt_en": "What is the conventional term for the sound heard on the other end of a radio when communication fails?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "static"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f1129bfa0263409f61898d0083d2b78f1b43f28df629233de748dfd6560262c5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007502",
+        "subject_zh": "无线电通讯失败时另一端听到的声音",
+        "prompt_zh": "无线电通讯失败时，另一端听到的声音的惯用术语是什么？",
+        "canonical_fact_zh": "无线电通讯失败时，另一端听到的声音是静电噪声。",
+        "answer_zh": "静电噪声",
+        "answer_aliases_zh": [
+          "静电噪声"
+        ]
+      },
+      "translation_sha256": "60764b89cac91e9cacb1b8557fc32ac84271ebfd83aa31e684ee6ec606976740"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007544",
+      "input_sha256": "f238b5c23cfdc89f1e570fd4958944609260b242c18820584f9c653b523465b0",
+      "english": {
+        "direction": "phase -> preceding phase",
+        "relation_id": "phase_to_preceding_phase",
+        "answer": "beginning",
+        "canonical_fact": "The middle of a trip comes after the beginning.",
+        "subject": "middle of a trip",
+        "prompt_en": "In a trip, which phase does the middle come after?",
+        "relation_definition": "The immediately preceding phase in a defined sequential process; the subject phase follows the answer phase in temporal order.",
+        "answer_aliases_en": [
+          "beginning"
+        ],
+        "relation_spec": {
+          "id": "phase_to_preceding_phase",
+          "definition": "The immediately preceding phase in a defined sequential process; the subject phase follows the answer phase in temporal order.",
+          "direction": "phase -> preceding phase"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1f96817ae435383065f2984691203f50183420d26d139af336daef8acd19c056",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007544",
+        "subject_zh": "行程的中段",
+        "prompt_zh": "在一段行程中，中段紧随哪个阶段之后？",
+        "canonical_fact_zh": "行程的中段在开始之后。",
+        "answer_zh": "开始",
+        "answer_aliases_zh": [
+          "开始"
+        ]
+      },
+      "translation_sha256": "f0cdf7a33be794677a5805b08908e966c1dc94ce35dc45cdeb52b768e84734ee"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007502",
+        "historical:raw_commonsense_qa_007544"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "385f555aff3bd539f773a67a0ed0fdc7205ab63fec6be35ccc7cab6ee81a5c49",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2033,
+      "first_chunk_seconds": 18.653,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2159,
+        "prompt_tokens": 1665,
+        "total_tokens": 3824,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1616,
+          "text_tokens": 543
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9ae467a471d075c5b91e104b885580abd8b86b9a2809cbd1481d51f499339ce5",
+      "status": "completed",
+      "latency_seconds": 48.583
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007502",
+        "historical:raw_commonsense_qa_007544"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "76af917f835467e3456c048ae9ae6c0571cab60d1fe4a8cd1754bfede59e03d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 953,
+      "first_chunk_seconds": 23.508,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 987,
+        "prompt_tokens": 848,
+        "total_tokens": 1835,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 762,
+          "text_tokens": 225
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "503f358b913e3d50ae6a2514f6fd10001f7195e4888ac12d8b87e66bfc9a1871",
+      "status": "completed",
+      "latency_seconds": 38.124
+    }
+  ],
+  "status": "completed"
+}

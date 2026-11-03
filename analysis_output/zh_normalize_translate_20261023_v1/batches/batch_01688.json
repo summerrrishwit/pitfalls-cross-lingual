@@ -1,0 +1,217 @@
+{
+  "input_sha256": "a1d69b8acbc543deb493a36bac3dfcdd8ad64991ef72e397e7a9ee90b73c2138",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c07c288791d502dc1a84",
+      "decision": "ready",
+      "subject": "Baby, Now That I've Found You",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "The Foundations",
+      "canonical_fact": "The Foundations are the performer of the song 'Baby, Now That I've Found You'.",
+      "prompt_en": "Who sang Baby, Now That I've Found You?",
+      "evidence_quotes": [
+        "who sang baby now that i've found you",
+        "The Foundations"
+      ],
+      "reason": "Source question asks for the singer/performer of the song; source answer 'The Foundations' matches the catalog relation song_to_performer (song -> performer) exactly. No specific recording or cover is disambiguated in the source, so the relation applies to the standard performance. No conflicts with existing extraction.",
+      "english": {
+        "answer": "The Foundations",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang Baby, Now That I've Found You?",
+        "direction": "song -> performer",
+        "subject": "Baby, Now That I've Found You",
+        "canonical_fact": "The Foundations are the performer of the song 'Baby, Now That I've Found You'.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "The Foundations",
+          "Foundations"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4460c51e8a3c8570a234d7ec089feded167a6f4a35356233fbddeb0d7875ce6e",
+      "input_sha256": "1fcb49aa6edc6b4c5f69ee5af83d8177daf8ad56f83d0679b3e6a893521b3311",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c08304b04ee99bf40b39",
+      "decision": "ready",
+      "subject": "Matt Murdock telling Karen he is Daredevil",
+      "relation_id": "narrative_event_to_season_episode",
+      "relation_definition": "The specific season or episode in a named series where a particular narrative event (revelation, confrontation, turning point) occurs.",
+      "direction": "narrative event in a series -> season/episode of occurrence",
+      "answer": "season 2 finale",
+      "canonical_fact": "In the Daredevil TV series, Matt Murdock tells Karen that he is Daredevil in the season 2 finale.",
+      "prompt_en": "When did Matt Murdock tell Karen that he is Daredevil?",
+      "evidence_quotes": [
+        "when did matt murdock tell karen he's daredevil",
+        "season 2 finale"
+      ],
+      "reason": "No existing catalog relation captures 'a specific narrative event and the episode/season in which it occurs.' Proposing 'narrative_event_to_season_episode' as a precise new relation with direction event -> season/episode. Source answer 'season 2 finale' is preserved verbatim. The series is identifiable from the characters Matt Murdock and Karen in the Daredevil context; no date, market, or version is invented.",
+      "english": {
+        "answer": "season 2 finale",
+        "relation_id": "narrative_event_to_season_episode",
+        "prompt_en": "When did Matt Murdock tell Karen that he is Daredevil?",
+        "direction": "narrative event in a series -> season/episode of occurrence",
+        "subject": "Matt Murdock telling Karen he is Daredevil",
+        "canonical_fact": "In the Daredevil TV series, Matt Murdock tells Karen that he is Daredevil in the season 2 finale.",
+        "relation_definition": "The specific season or episode in a named series where a particular narrative event (revelation, confrontation, turning point) occurs.",
+        "answer_aliases_en": [
+          "season 2 finale"
+        ],
+        "relation_spec": {
+          "id": "narrative_event_to_season_episode",
+          "definition": "The specific season or episode in a named series where a particular narrative event (revelation, confrontation, turning point) occurs.",
+          "direction": "narrative event in a series -> season/episode of occurrence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3d46c5e74312171e62ed72cf29925b4a3f9e40e405b59ab91fc8536e20d6e30b",
+      "input_sha256": "ac78b44f17c1ae2cbb20e81d553a26fd37ec0969962da0b8c487f647d95ab102",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c07c288791d502dc1a84",
+      "input_sha256": "1fcb49aa6edc6b4c5f69ee5af83d8177daf8ad56f83d0679b3e6a893521b3311",
+      "english": {
+        "answer": "The Foundations",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang Baby, Now That I've Found You?",
+        "direction": "song -> performer",
+        "subject": "Baby, Now That I've Found You",
+        "canonical_fact": "The Foundations are the performer of the song 'Baby, Now That I've Found You'.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "The Foundations",
+          "Foundations"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4460c51e8a3c8570a234d7ec089feded167a6f4a35356233fbddeb0d7875ce6e",
+      "translation": {
+        "record_id": "public:pbf_c07c288791d502dc1a84",
+        "subject_zh": "Baby, Now That I've Found You",
+        "prompt_zh": "谁演唱了《Baby, Now That I've Found You》？",
+        "canonical_fact_zh": "The Foundations 是歌曲《Baby, Now That I've Found You》的演唱者。",
+        "answer_zh": "The Foundations",
+        "answer_aliases_zh": [
+          "The Foundations",
+          "Foundations"
+        ]
+      },
+      "translation_sha256": "c7e2ba4ec6743bc14f9f64aece14e1f3381dd71b3e831f54151e58cbe06128cd"
+    },
+    {
+      "record_id": "public:pbf_c08304b04ee99bf40b39",
+      "input_sha256": "ac78b44f17c1ae2cbb20e81d553a26fd37ec0969962da0b8c487f647d95ab102",
+      "english": {
+        "answer": "season 2 finale",
+        "relation_id": "narrative_event_to_season_episode",
+        "prompt_en": "When did Matt Murdock tell Karen that he is Daredevil?",
+        "direction": "narrative event in a series -> season/episode of occurrence",
+        "subject": "Matt Murdock telling Karen he is Daredevil",
+        "canonical_fact": "In the Daredevil TV series, Matt Murdock tells Karen that he is Daredevil in the season 2 finale.",
+        "relation_definition": "The specific season or episode in a named series where a particular narrative event (revelation, confrontation, turning point) occurs.",
+        "answer_aliases_en": [
+          "season 2 finale"
+        ],
+        "relation_spec": {
+          "id": "narrative_event_to_season_episode",
+          "definition": "The specific season or episode in a named series where a particular narrative event (revelation, confrontation, turning point) occurs.",
+          "direction": "narrative event in a series -> season/episode of occurrence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3d46c5e74312171e62ed72cf29925b4a3f9e40e405b59ab91fc8536e20d6e30b",
+      "translation": {
+        "record_id": "public:pbf_c08304b04ee99bf40b39",
+        "subject_zh": "马特·默多克向凯伦透露他就是夜魔侠",
+        "prompt_zh": "马特·默多克是在什么时候告诉凯伦他就是夜魔侠的？",
+        "canonical_fact_zh": "在《夜魔侠》电视剧中，马特·默多克在第二季大结局中告诉凯伦他就是夜魔侠。",
+        "answer_zh": "第二季大结局",
+        "answer_aliases_zh": [
+          "第二季大结局"
+        ]
+      },
+      "translation_sha256": "4bade9275a663a5d04ddb1ca2b3b406610576da9c65326b18295bdf0d767c5f4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c07c288791d502dc1a84",
+        "public:pbf_c08304b04ee99bf40b39"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "af3c0d3bfe98714e030d5cc0c97a857d8240d3e256548af31cda561d4cb467af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3472,
+      "first_chunk_seconds": 9.691,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3511,
+        "prompt_tokens": 1623,
+        "total_tokens": 5134,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2925,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b7c2c5f293689cb2551c4f463b111623c8f4bac95afa8ab372d8e698b39b65cc",
+      "status": "completed",
+      "latency_seconds": 40.254
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c07c288791d502dc1a84",
+        "public:pbf_c08304b04ee99bf40b39"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bc1d1244c839f2e5b0e52f7c912e04a5b272d2aab3db71e85c65c2243352bcf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1228,
+      "first_chunk_seconds": 29.63,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1226,
+        "prompt_tokens": 913,
+        "total_tokens": 2139,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 934,
+          "text_tokens": 292
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b4d78fe79f72d8f21cfe0e5d7be1cbcbd5cb7dd10122459effe6122cdb2fcf4d",
+      "status": "completed",
+      "latency_seconds": 40.033
+    }
+  ],
+  "status": "completed"
+}

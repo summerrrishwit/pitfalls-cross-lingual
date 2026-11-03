@@ -1,0 +1,191 @@
+{
+  "input_sha256": "95436fc7784d1ef828e03492ed99eb2f66ed444248be5e23007d1ecc2c3080dd",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7c08c4a5ec57db695cd9",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Existing answer '564.0 miles per hour' conflicts with source_answer '564.0 miles' (adds a speed unit not present in source). Per rules, defer when existing answer conflicts with source.",
+      "input_sha256": "5ac4f686f19c8bb4f1a91543e6d24b13b809ae943e7d29c77e3829a41fc57d0a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7c1582955f5b056d67c2",
+      "decision": "ready",
+      "subject": "the wise man (according to Epicurus)",
+      "relation_id": "philosophical_concept_to_attribute",
+      "relation_definition": "A property, state, or characteristic attributed to a specified concept within a named thinker's or school's philosophical framework; retain the thinker qualifier.",
+      "direction": "concept in specified philosophical framework -> attributed property/state",
+      "answer": "death",
+      "canonical_fact": "According to Epicurus, the wise man is unconcerned with death.",
+      "prompt_en": "According to Epicurus, the wise man is unconcerned with",
+      "evidence_quotes": [
+        "According to Epicurus, the wise man:",
+        "is unconcerned with death."
+      ],
+      "reason": "Source directly states the Epicurean attribution. Existing answer 'death' is a literal substring of source_answer. No catalog relation fits a thinker-qualified concept-property attribution; proposed new relation 'philosophical_concept_to_attribute' captures this precisely.",
+      "english": {
+        "answer": "death",
+        "relation_id": "philosophical_concept_to_attribute",
+        "prompt_en": "According to Epicurus, the wise man is unconcerned with",
+        "direction": "concept in specified philosophical framework -> attributed property/state",
+        "subject": "the wise man (according to Epicurus)",
+        "canonical_fact": "According to Epicurus, the wise man is unconcerned with death.",
+        "relation_definition": "A property, state, or characteristic attributed to a specified concept within a named thinker's or school's philosophical framework; retain the thinker qualifier.",
+        "answer_aliases_en": [
+          "death",
+          "is unconcerned with death."
+        ],
+        "relation_spec": {
+          "id": "philosophical_concept_to_attribute",
+          "definition": "A property, state, or characteristic attributed to a specified concept within a named thinker's or school's philosophical framework; retain the thinker qualifier.",
+          "direction": "concept in specified philosophical framework -> attributed property/state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4bc4aa14f7daa719ea2511326ae5fca2ca8d3da2cdad66205217b247b021c128",
+      "input_sha256": "70ff1bcaffb74b4a715d4a1ae61b992a339e9001b3e48c1046bec9577a8d6e9d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_7c1582955f5b056d67c2",
+      "input_sha256": "70ff1bcaffb74b4a715d4a1ae61b992a339e9001b3e48c1046bec9577a8d6e9d",
+      "english": {
+        "answer": "death",
+        "relation_id": "philosophical_concept_to_attribute",
+        "prompt_en": "According to Epicurus, the wise man is unconcerned with",
+        "direction": "concept in specified philosophical framework -> attributed property/state",
+        "subject": "the wise man (according to Epicurus)",
+        "canonical_fact": "According to Epicurus, the wise man is unconcerned with death.",
+        "relation_definition": "A property, state, or characteristic attributed to a specified concept within a named thinker's or school's philosophical framework; retain the thinker qualifier.",
+        "answer_aliases_en": [
+          "death",
+          "is unconcerned with death."
+        ],
+        "relation_spec": {
+          "id": "philosophical_concept_to_attribute",
+          "definition": "A property, state, or characteristic attributed to a specified concept within a named thinker's or school's philosophical framework; retain the thinker qualifier.",
+          "direction": "concept in specified philosophical framework -> attributed property/state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4bc4aa14f7daa719ea2511326ae5fca2ca8d3da2cdad66205217b247b021c128",
+      "translation": {
+        "record_id": "public:pbf_7c1582955f5b056d67c2",
+        "subject_zh": "智者（依伊壁鸠鲁）",
+        "prompt_zh": "依伊壁鸠鲁所言，智者不关心____",
+        "canonical_fact_zh": "依伊壁鸠鲁所言，智者不关心死亡。",
+        "answer_zh": "死亡",
+        "answer_aliases_zh": [
+          "死亡",
+          "不关心死亡。"
+        ]
+      },
+      "translation_sha256": "3a8c6fb034b226470110a22561d863bdc4201f6f83058939da51acf5568af710"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7c08c4a5ec57db695cd9",
+        "public:pbf_7c1582955f5b056d67c2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7177dc2fa7c235c87327853e2a580b8724f131d0a26c7a833b01ba49766f123",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.934
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7c08c4a5ec57db695cd9",
+        "public:pbf_7c1582955f5b056d67c2"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b7177dc2fa7c235c87327853e2a580b8724f131d0a26c7a833b01ba49766f123",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.335
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7c08c4a5ec57db695cd9",
+        "public:pbf_7c1582955f5b056d67c2"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b7177dc2fa7c235c87327853e2a580b8724f131d0a26c7a833b01ba49766f123",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2380,
+      "first_chunk_seconds": 24.246,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2378,
+        "prompt_tokens": 1648,
+        "total_tokens": 4026,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2012,
+          "text_tokens": 366
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "d3a8f0d29bfc963dc527c823fc53f05d84fb17f3965f39153040e6e7d56aee1a",
+      "status": "completed",
+      "latency_seconds": 43.198
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7c1582955f5b056d67c2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6599af5db41c34ecbca9f3970e5ecc3047a27592251b8fadf2247bc5b92ee691",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1011,
+      "first_chunk_seconds": 34.583,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1028,
+        "prompt_tokens": 572,
+        "total_tokens": 1600,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 930,
+          "text_tokens": 98
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e05551f2ce8f3805ad24294290b4457416be686f02254bde5ad0601a87b8165c",
+      "status": "completed",
+      "latency_seconds": 44.842
+    }
+  ],
+  "status": "completed"
+}

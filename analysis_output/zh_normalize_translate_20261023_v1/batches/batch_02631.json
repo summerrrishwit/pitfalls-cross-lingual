@@ -1,0 +1,214 @@
+{
+  "input_sha256": "54e289e62aee3a477f6025fcbbb7f1d5bf21f45ff09807eb0889edb5926c5b69",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006114",
+      "decision": "ready",
+      "subject": "humans",
+      "relation_id": "organism_to_intake_substance",
+      "relation_definition": "Substance an organism takes in during a specified physiological process (e.g., breathing, feeding); not a habitat, material composition, or metabolic product.",
+      "direction": "organism -> substance taken in during specified process",
+      "answer": "oxygen",
+      "canonical_fact": "Humans take in oxygen while breathing.",
+      "prompt_en": "What do humans take in while breathing?",
+      "evidence_quotes": [
+        "oxygen",
+        "What do humans take in while breathing?"
+      ],
+      "reason": "The source question and answer directly state that humans take in oxygen while breathing. No existing catalog relation covers the organism-to-intake-substance relationship (entity_to_material concerns composition, organism_to_habitat concerns habitat). Proposing a new precise snake_case relation: organism_to_intake_substance, defined as the substance taken in during a named physiological process. Answer 'oxygen' is a literal substring of source_answer.",
+      "english": {
+        "direction": "organism -> substance taken in during specified process",
+        "relation_id": "organism_to_intake_substance",
+        "answer": "oxygen",
+        "canonical_fact": "Humans take in oxygen while breathing.",
+        "subject": "humans",
+        "prompt_en": "What do humans take in while breathing?",
+        "relation_definition": "Substance an organism takes in during a specified physiological process (e.g., breathing, feeding); not a habitat, material composition, or metabolic product.",
+        "answer_aliases_en": [
+          "oxygen"
+        ],
+        "relation_spec": {
+          "id": "organism_to_intake_substance",
+          "definition": "Substance an organism takes in during a specified physiological process (e.g., breathing, feeding); not a habitat, material composition, or metabolic product.",
+          "direction": "organism -> substance taken in during specified process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "962dbbdb194a38e4008ebfa533491e84540e1a4da86214efde4b674535441724",
+      "input_sha256": "ea17d8afe02277866bb2d1291f520ed31fa07f2eed832a397900a2f0bfd7f838",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006129",
+      "decision": "ready",
+      "subject": "Turkey",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "middle east",
+      "canonical_fact": "Turkey is a nation in the middle east.",
+      "prompt_en": "Turkey is a nation in what part of the world?",
+      "evidence_quotes": [
+        "middle east",
+        "Turkey is a nation in what part of the world?"
+      ],
+      "reason": "The source asks which part of the world Turkey belongs to and the answer is 'middle east.' This maps exactly to entity_to_containing_location (geographic containment at a specified level – here, a region). The answer 'middle east' is a literal substring of source_answer. Kept verbatim per source; no external correction applied.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "middle east",
+        "canonical_fact": "Turkey is a nation in the middle east.",
+        "subject": "Turkey",
+        "prompt_en": "Turkey is a nation in what part of the world?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "middle east"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "13721108754577908409feafa79d44cb7ea28cf158900524b9debe9d2af086df",
+      "input_sha256": "d582d54c460cc263ea3c5c95b0fb9b3a2b26c20cc67459b1c71263cd97e88e0f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006114",
+      "input_sha256": "ea17d8afe02277866bb2d1291f520ed31fa07f2eed832a397900a2f0bfd7f838",
+      "english": {
+        "direction": "organism -> substance taken in during specified process",
+        "relation_id": "organism_to_intake_substance",
+        "answer": "oxygen",
+        "canonical_fact": "Humans take in oxygen while breathing.",
+        "subject": "humans",
+        "prompt_en": "What do humans take in while breathing?",
+        "relation_definition": "Substance an organism takes in during a specified physiological process (e.g., breathing, feeding); not a habitat, material composition, or metabolic product.",
+        "answer_aliases_en": [
+          "oxygen"
+        ],
+        "relation_spec": {
+          "id": "organism_to_intake_substance",
+          "definition": "Substance an organism takes in during a specified physiological process (e.g., breathing, feeding); not a habitat, material composition, or metabolic product.",
+          "direction": "organism -> substance taken in during specified process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "962dbbdb194a38e4008ebfa533491e84540e1a4da86214efde4b674535441724",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006114",
+        "subject_zh": "人类",
+        "prompt_zh": "人类在呼吸时会吸入什么？",
+        "canonical_fact_zh": "人类在呼吸时会吸入氧气。",
+        "answer_zh": "氧气",
+        "answer_aliases_zh": [
+          "氧气"
+        ]
+      },
+      "translation_sha256": "d820b161578efc1b071b6778aef6849d2e3f2e1ea985f4c6f7a71f6aa714e5c7"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006129",
+      "input_sha256": "d582d54c460cc263ea3c5c95b0fb9b3a2b26c20cc67459b1c71263cd97e88e0f",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "middle east",
+        "canonical_fact": "Turkey is a nation in the middle east.",
+        "subject": "Turkey",
+        "prompt_en": "Turkey is a nation in what part of the world?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "middle east"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "13721108754577908409feafa79d44cb7ea28cf158900524b9debe9d2af086df",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006129",
+        "subject_zh": "土耳其",
+        "prompt_zh": "土耳其是位于世界哪个地区的国家？",
+        "canonical_fact_zh": "土耳其是中东地区的一个国家。",
+        "answer_zh": "中东",
+        "answer_aliases_zh": [
+          "中东"
+        ]
+      },
+      "translation_sha256": "8e56637f546aacd3c288acd97d199abfb7f076c5590aa593903703604e8e0c6c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006114",
+        "historical:raw_commonsense_qa_006129"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d96802516db59db292927ef96d880ad9265d56ae68801f64b8df7c8c4c19b41f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2152,
+      "first_chunk_seconds": 6.272,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2210,
+        "prompt_tokens": 1631,
+        "total_tokens": 3841,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1686,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e42ffa01e5d9e6dc57e5ff28cc0840c9a3cd0fb032487d195990148df69b5c6c",
+      "status": "completed",
+      "latency_seconds": 39.502
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006114",
+        "historical:raw_commonsense_qa_006129"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e780f96c6711107cf4cc56c049fb375a9f8f88b3ed7f3a0fe498da4b8c9cc4e5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 711,
+      "first_chunk_seconds": 34.786,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 746,
+        "prompt_tokens": 840,
+        "total_tokens": 1586,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 546,
+          "text_tokens": 200
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1378353b65a954b6ca70f24f150141648682be2c8b20f1f5fd18015c6582c2de",
+      "status": "completed",
+      "latency_seconds": 51.783
+    }
+  ],
+  "status": "completed"
+}

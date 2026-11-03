@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e87923859082bf1dc1bc3191001ab204cdedbe6f279b277e1f2844561c7ddb53",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004830",
+      "decision": "ready",
+      "subject": "bladder of a person who has to pee",
+      "relation_id": "entity_to_state_under_condition",
+      "relation_definition": "The functional or physiological state of a specified entity under an explicitly stated condition; the condition is part of the subject scope and must be retained.",
+      "direction": "entity under specified condition -> state",
+      "answer": "full",
+      "canonical_fact": "If a person has to pee, their bladder is full.",
+      "prompt_en": "If a person has to pee, what state is their bladder in?",
+      "evidence_quotes": [
+        "If a person has to pee then their bladder is what?",
+        "full"
+      ],
+      "reason": "Source directly states the bladder state as 'full' under the condition of needing to pee. No catalog relation captures a conditional physiological state of a body part; proposing new relation 'entity_to_state_under_condition' with explicit condition scope.",
+      "english": {
+        "direction": "entity under specified condition -> state",
+        "relation_id": "entity_to_state_under_condition",
+        "answer": "full",
+        "canonical_fact": "If a person has to pee, their bladder is full.",
+        "subject": "bladder of a person who has to pee",
+        "prompt_en": "If a person has to pee, what state is their bladder in?",
+        "relation_definition": "The functional or physiological state of a specified entity under an explicitly stated condition; the condition is part of the subject scope and must be retained.",
+        "answer_aliases_en": [
+          "full"
+        ],
+        "relation_spec": {
+          "id": "entity_to_state_under_condition",
+          "definition": "The functional or physiological state of a specified entity under an explicitly stated condition; the condition is part of the subject scope and must be retained.",
+          "direction": "entity under specified condition -> state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "02f765ecddea47ddc6e22ce4c048863e31d6b64615af7511166b3809b4a54c5c",
+      "input_sha256": "ccaa17bcd22e644760d77193fcd367d7d45ea200c014f2d487499b8949f5ebe6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004855",
+      "decision": "ready",
+      "subject": "humans",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "bladders",
+      "canonical_fact": "Humans store urine in bladders.",
+      "prompt_en": "All humans store urine in which organ?",
+      "evidence_quotes": [
+        "All humans store urine in what organ?",
+        "bladders"
+      ],
+      "reason": "Source states humans store urine in bladders. 'whole_to_part' fits: humans (whole) -> bladders (anatomical part), with the functional qualifier 'that store urine' retained in the canonical fact to disambiguate among multiple organs.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "bladders",
+        "canonical_fact": "Humans store urine in bladders.",
+        "subject": "humans",
+        "prompt_en": "All humans store urine in which organ?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "bladders"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f648d3103abed9d44a3d37a7cfda6a798ee7f0db8385622a8ee4bebd6f6fa73",
+      "input_sha256": "000128bdcb6de2e833539784402fa2dc3d0e68ec4d02ba883d09f647e913e649",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004830",
+      "input_sha256": "ccaa17bcd22e644760d77193fcd367d7d45ea200c014f2d487499b8949f5ebe6",
+      "english": {
+        "direction": "entity under specified condition -> state",
+        "relation_id": "entity_to_state_under_condition",
+        "answer": "full",
+        "canonical_fact": "If a person has to pee, their bladder is full.",
+        "subject": "bladder of a person who has to pee",
+        "prompt_en": "If a person has to pee, what state is their bladder in?",
+        "relation_definition": "The functional or physiological state of a specified entity under an explicitly stated condition; the condition is part of the subject scope and must be retained.",
+        "answer_aliases_en": [
+          "full"
+        ],
+        "relation_spec": {
+          "id": "entity_to_state_under_condition",
+          "definition": "The functional or physiological state of a specified entity under an explicitly stated condition; the condition is part of the subject scope and must be retained.",
+          "direction": "entity under specified condition -> state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "02f765ecddea47ddc6e22ce4c048863e31d6b64615af7511166b3809b4a54c5c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004830",
+        "subject_zh": "需要上厕所的人的膀胱",
+        "prompt_zh": "如果一个人需要上厕所，他的膀胱处于什么状态？",
+        "canonical_fact_zh": "如果一个人需要上厕所，他的膀胱是满的。",
+        "answer_zh": "满的",
+        "answer_aliases_zh": [
+          "满的"
+        ]
+      },
+      "translation_sha256": "6f4e806bf3ac84d9943adb4a5d472f18d2570a02fee76b227436d0a3329114c9"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004855",
+      "input_sha256": "000128bdcb6de2e833539784402fa2dc3d0e68ec4d02ba883d09f647e913e649",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "bladders",
+        "canonical_fact": "Humans store urine in bladders.",
+        "subject": "humans",
+        "prompt_en": "All humans store urine in which organ?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "bladders"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f648d3103abed9d44a3d37a7cfda6a798ee7f0db8385622a8ee4bebd6f6fa73",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004855",
+        "subject_zh": "人类",
+        "prompt_zh": "所有人类将尿液储存在哪个器官中？",
+        "canonical_fact_zh": "人类将尿液储存在膀胱中。",
+        "answer_zh": "膀胱",
+        "answer_aliases_zh": [
+          "膀胱"
+        ]
+      },
+      "translation_sha256": "f860cb1041042f68a8ae94f03db119e3d372fc9d1a46fe3f4a9c7538caa525a8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004830",
+        "historical:raw_commonsense_qa_004855"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4f07afa2c82473f3d612a3bec8e559332af40163cf61c766d840e9835909c2e9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2247,
+      "first_chunk_seconds": 11.493,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2322,
+        "prompt_tokens": 1653,
+        "total_tokens": 3975,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1853,
+          "text_tokens": 469
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "021dd806a9a9ce5f68951beb1ba63505ca5fdb69d4aa761eb34fb8210b933dd1",
+      "status": "completed",
+      "latency_seconds": 40.883
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004830",
+        "historical:raw_commonsense_qa_004855"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "78efc6108d9d9eae147c5acdc44635ac085c195881f03f1a71ec19aa8237583e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 625,
+      "first_chunk_seconds": 6.242,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 622,
+        "prompt_tokens": 825,
+        "total_tokens": 1447,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 405,
+          "text_tokens": 217
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "21e17034707594e59fcea71b4dc3d43663a7ba90bddafbb5e35e4e1b5184ba40",
+      "status": "completed",
+      "latency_seconds": 13.693
+    }
+  ],
+  "status": "completed"
+}

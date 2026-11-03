@@ -1,0 +1,249 @@
+{
+  "input_sha256": "990b95f79daa98d317865fe7e50e9a319e9c720793ac5b374ed019415a7630fd",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9e16f3a0f10a0a518546",
+      "decision": "ready",
+      "subject": "lorry",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "truck",
+      "canonical_fact": "A lorry is called a truck in American English.",
+      "prompt_en": "Factual question: What is called a 'lorry' in Britain?\nAnswer:",
+      "evidence_quotes": [
+        "What is called a 'lorry' in Britain?",
+        "a truck"
+      ],
+      "reason": "The source question asks for the American English equivalent of the British term 'lorry'; the source answer 'a truck' confirms 'truck' as the equivalent name. entity_to_alias fits exactly: both are names for the same vehicle in different dialects. The existing answer 'truck' is a literal substring of the source answer and does not conflict.",
+      "english": {
+        "answer": "truck",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "Factual question: What is called a 'lorry' in Britain?\nAnswer:",
+        "direction": "entity -> alias",
+        "subject": "lorry",
+        "canonical_fact": "A lorry is called a truck in American English.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "truck",
+          "a truck"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "aedb478784a3ac12b144daf4f7cfde0f017968074ac974dad563a9ebae0f9031",
+      "input_sha256": "ad09f253edc05f1de4cf2459624c39f66856d2642888bc672d4d1bec9468c711",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9e2f12525102f9573011",
+      "decision": "ready",
+      "subject": "cervix",
+      "relation_id": "anatomical_structure_to_dilation_threshold",
+      "relation_definition": "The specified numeric threshold of dilation, stated with units, that a named anatomical structure must reach before a specific biological event can occur.",
+      "direction": "anatomical structure -> required dilation threshold (numeric, with unit) for a named event",
+      "answer": "10",
+      "canonical_fact": "The cervix must dilate to 10 centimetres before a baby can be born.",
+      "prompt_en": "Factual question: How many centimetres must the cervix dilute to before a baby can be born?\nAnswer:",
+      "evidence_quotes": [
+        "How many centimetres must the cervix dilute to before a baby can be born?",
+        "10"
+      ],
+      "reason": "The source question asks for the numeric dilation threshold in centimetres the cervix must reach for birth; the source answer '10' provides that value. No existing catalog relation covers a numeric dilation threshold for an anatomical structure, so a precise new relation ID (anatomical_structure_to_dilation_threshold) is proposed rather than forcing a broad category. The existing answer '10' matches the source answer exactly.",
+      "english": {
+        "answer": "10",
+        "relation_id": "anatomical_structure_to_dilation_threshold",
+        "prompt_en": "Factual question: How many centimetres must the cervix dilute to before a baby can be born?\nAnswer:",
+        "direction": "anatomical structure -> required dilation threshold (numeric, with unit) for a named event",
+        "subject": "cervix",
+        "canonical_fact": "The cervix must dilate to 10 centimetres before a baby can be born.",
+        "relation_definition": "The specified numeric threshold of dilation, stated with units, that a named anatomical structure must reach before a specific biological event can occur.",
+        "answer_aliases_en": [
+          "10"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_dilation_threshold",
+          "definition": "The specified numeric threshold of dilation, stated with units, that a named anatomical structure must reach before a specific biological event can occur.",
+          "direction": "anatomical structure -> required dilation threshold (numeric, with unit) for a named event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3404c5f2cb4732c876f234725a5786bb79ceb2a12854ae03f570238fcfe3fa8e",
+      "input_sha256": "270eaa8260016c5d9dd07fcafacf22106428bc2b8dec539a29e67fd976329bab",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9e16f3a0f10a0a518546",
+      "input_sha256": "ad09f253edc05f1de4cf2459624c39f66856d2642888bc672d4d1bec9468c711",
+      "english": {
+        "answer": "truck",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "Factual question: What is called a 'lorry' in Britain?\nAnswer:",
+        "direction": "entity -> alias",
+        "subject": "lorry",
+        "canonical_fact": "A lorry is called a truck in American English.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "truck",
+          "a truck"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "aedb478784a3ac12b144daf4f7cfde0f017968074ac974dad563a9ebae0f9031",
+      "translation": {
+        "record_id": "public:pbf_9e16f3a0f10a0a518546",
+        "subject_zh": "货车（lorry）",
+        "prompt_zh": "事实性问题：在英国，什么被称为'lorry'（货车）？\n答案：",
+        "canonical_fact_zh": "在美国英语中，'lorry'（货车）被称为'truck'（卡车）。",
+        "answer_zh": "卡车",
+        "answer_aliases_zh": [
+          "卡车",
+          "一辆卡车"
+        ]
+      },
+      "translation_sha256": "1fd30f4cc496025277c09074f9886157a699b46620b8c650e457b10ad60f62e1"
+    },
+    {
+      "record_id": "public:pbf_9e2f12525102f9573011",
+      "input_sha256": "270eaa8260016c5d9dd07fcafacf22106428bc2b8dec539a29e67fd976329bab",
+      "english": {
+        "answer": "10",
+        "relation_id": "anatomical_structure_to_dilation_threshold",
+        "prompt_en": "Factual question: How many centimetres must the cervix dilute to before a baby can be born?\nAnswer:",
+        "direction": "anatomical structure -> required dilation threshold (numeric, with unit) for a named event",
+        "subject": "cervix",
+        "canonical_fact": "The cervix must dilate to 10 centimetres before a baby can be born.",
+        "relation_definition": "The specified numeric threshold of dilation, stated with units, that a named anatomical structure must reach before a specific biological event can occur.",
+        "answer_aliases_en": [
+          "10"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_dilation_threshold",
+          "definition": "The specified numeric threshold of dilation, stated with units, that a named anatomical structure must reach before a specific biological event can occur.",
+          "direction": "anatomical structure -> required dilation threshold (numeric, with unit) for a named event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3404c5f2cb4732c876f234725a5786bb79ceb2a12854ae03f570238fcfe3fa8e",
+      "translation": {
+        "record_id": "public:pbf_9e2f12525102f9573011",
+        "subject_zh": "宫颈",
+        "prompt_zh": "事实性问题：宫颈必须扩张到多少厘米，婴儿才能出生？\n答案：",
+        "canonical_fact_zh": "宫颈必须扩张至10厘米，婴儿才能出生。",
+        "answer_zh": "10",
+        "answer_aliases_zh": [
+          "10"
+        ]
+      },
+      "translation_sha256": "b2d61c7011867dcd1ceeb044a857070472dc9d166972a098a19e44d83aa3ae9f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9e16f3a0f10a0a518546",
+        "public:pbf_9e2f12525102f9573011"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "12ea0996aa97559b5ade6ce3ee712146929b7b261699b96d6efa477a22f579b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2005,
+      "first_chunk_seconds": 34.147,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2003,
+        "prompt_tokens": 1689,
+        "total_tokens": 3692,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1407,
+          "text_tokens": 596
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9919b284616869529b2e3ce7160bab88e8d085a53ae1f8d1c0e7fe637f36ead2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 49.978,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9e16f3a0f10a0a518546",
+        "public:pbf_9e2f12525102f9573011"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2a4e05742fff8fae7657099487ae96659fa012c73958f62b57f1147949dc3db0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3291,
+      "first_chunk_seconds": 30.946,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3290,
+        "prompt_tokens": 1708,
+        "total_tokens": 4998,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2694,
+          "text_tokens": 596
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9dc8f56ce8d37aa4bf79cbf55b3c5b45a7907fe66e2b29c462c6b4f49ea16531",
+      "status": "completed",
+      "latency_seconds": 56.953
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9e16f3a0f10a0a518546",
+        "public:pbf_9e2f12525102f9573011"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c4aa823888acf4c673bfb52a0c12c59b9f704d34af2d6e9783a2a9f15d0774ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2770,
+      "first_chunk_seconds": 33.986,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2767,
+        "prompt_tokens": 962,
+        "total_tokens": 3729,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2502,
+          "text_tokens": 265
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "382679ebe64f26193a7d91f0ef8801c10ee5d6dc6b7d1f58574d58d62534cf0b",
+      "status": "completed",
+      "latency_seconds": 55.903
+    }
+  ],
+  "status": "completed"
+}

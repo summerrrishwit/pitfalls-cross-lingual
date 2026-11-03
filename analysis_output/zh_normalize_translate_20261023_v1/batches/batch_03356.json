@@ -1,0 +1,99 @@
+{
+  "input_sha256": "bbe7ba5e290bf6b63d765539b46800f050c5e2017e7e9d8c2a7723788bbb2eb2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000264",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The QA pair states that a 'flirty person' is known for 'playfulness.' No catalog relation captures 'entity -> characteristic trait / known-for quality' precisely; 'entity_to_class' requires stable taxonomy-level membership, and 'term_to_definition' requires a definitional equivalence, neither of which fits a subjective typical-association. The subject 'flirty person' is a generic concept rather than a specific named entity, and the claim is a commonsense/subjective association rather than a verifiable stable fact. Insufficient source support for a precise, reusable factual record.",
+      "input_sha256": "7d82468335d79b5d66946a9904a22565a2ac86d55c996cee5fb90c7618fc7855",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000340",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The QA pair generalizes that 'many municipalities' had their cemetery in a 'churchyard.' While 'entity_to_containing_location' (cemetery -> churchyard) is directionally plausible, the subject 'many municipalities' is an unspecified, non-specific plural group with no temporal or geographic qualifier, making it a broad historical generalization rather than a precise, reusable factual claim. No listed relation can be applied to a vague collective subject without inventing a new one that would be too broad. Deferred due to insufficient specificity of the subject.",
+      "input_sha256": "ae7489ec138f5e469fe14f41e2c5debbd58026c28a5d706d62025c9719a0deec",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000264",
+        "historical:raw_commonsense_qa_000340"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d5b1ed6475758c9697346c0e6963d167b8672db1d714b48c9464f931e0922aca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 54.989
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000264",
+        "historical:raw_commonsense_qa_000340"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d5b1ed6475758c9697346c0e6963d167b8672db1d714b48c9464f931e0922aca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 46.516
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000264",
+        "historical:raw_commonsense_qa_000340"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d5b1ed6475758c9697346c0e6963d167b8672db1d714b48c9464f931e0922aca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2350,
+      "first_chunk_seconds": 62.766,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2525,
+        "prompt_tokens": 1580,
+        "total_tokens": 4105,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2080,
+          "text_tokens": 445
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "de9d350afb148e6d82a6ea9d869477e491100d6bb5bb7f53dd066ce90891625a",
+      "status": "completed",
+      "latency_seconds": 108.581
+    }
+  ],
+  "status": "completed"
+}

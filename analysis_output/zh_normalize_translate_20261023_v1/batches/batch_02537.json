@@ -1,0 +1,214 @@
+{
+  "input_sha256": "45405b4864bf1b49facfd14a14b9588935d483fa8b5bab7ebd63ab8228550c3a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003130",
+      "decision": "ready",
+      "subject": "newspaper",
+      "relation_id": "entity_to_stated_function",
+      "relation_definition": "entity -> stated function/action; the specific verb or action the entity performs in a stated traditional or typical context, without conflating with general class membership.",
+      "direction": "entity -> function/action",
+      "answer": "communicate",
+      "canonical_fact": "A newspaper is a traditional way of communicating events.",
+      "prompt_en": "What does a newspaper traditionally do to events?",
+      "evidence_quotes": [
+        "A newspaper is a traditional way of doing what to events?",
+        "communicate"
+      ],
+      "reason": "No catalog relation precisely captures an entity's stated functional verb in a given context. term_to_definition would require a full definitional phrase as the answer, but the source answer is the single verb 'communicate.' Proposing entity_to_stated_function to keep the granular functional claim without forcing it into a broader category.",
+      "english": {
+        "direction": "entity -> function/action",
+        "relation_id": "entity_to_stated_function",
+        "answer": "communicate",
+        "canonical_fact": "A newspaper is a traditional way of communicating events.",
+        "subject": "newspaper",
+        "prompt_en": "What does a newspaper traditionally do to events?",
+        "relation_definition": "entity -> stated function/action; the specific verb or action the entity performs in a stated traditional or typical context, without conflating with general class membership.",
+        "answer_aliases_en": [
+          "communicate"
+        ],
+        "relation_spec": {
+          "id": "entity_to_stated_function",
+          "definition": "entity -> stated function/action; the specific verb or action the entity performs in a stated traditional or typical context, without conflating with general class membership.",
+          "direction": "entity -> function/action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ee087c65c6018523c22f98ce1b6fde588a5ae1f18bca4927af63dd5c8e739a14",
+      "input_sha256": "2e02ef52be2b067f3addd6ac219bd9bfe65c2a264bcc4655068c4ca96d79f45d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003131",
+      "decision": "ready",
+      "subject": "Dogs",
+      "relation_id": "organism_to_diet",
+      "relation_definition": "organism -> food/diet component; a specific food category the organism consumes, retaining the omnivore/herbivore/carnivore scope stated in the source.",
+      "direction": "organism -> food/diet component",
+      "answer": "meat",
+      "canonical_fact": "Dogs are omnivores that consume plants and meat.",
+      "prompt_en": "What do dogs, as omnivores, consume in addition to plants?",
+      "evidence_quotes": [
+        "Dogs are omnivores which mean they consume plants and what?",
+        "eat meat"
+      ],
+      "reason": "No catalog relation covers an organism's diet or food consumption. organism_to_habitat is about habitat, not diet. Proposing organism_to_diet to capture the specific food component. Answer 'meat' is a concise literal substring of source_answer 'eat meat'; the omnivore scope is preserved in the canonical fact.",
+      "english": {
+        "direction": "organism -> food/diet component",
+        "relation_id": "organism_to_diet",
+        "answer": "meat",
+        "canonical_fact": "Dogs are omnivores that consume plants and meat.",
+        "subject": "Dogs",
+        "prompt_en": "What do dogs, as omnivores, consume in addition to plants?",
+        "relation_definition": "organism -> food/diet component; a specific food category the organism consumes, retaining the omnivore/herbivore/carnivore scope stated in the source.",
+        "answer_aliases_en": [
+          "meat"
+        ],
+        "relation_spec": {
+          "id": "organism_to_diet",
+          "definition": "organism -> food/diet component; a specific food category the organism consumes, retaining the omnivore/herbivore/carnivore scope stated in the source.",
+          "direction": "organism -> food/diet component"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "75f9b22c1b9da690fd3de1dcecb210e16edfaad348d23e94dca3c6defa79ddf3",
+      "input_sha256": "dd7fc84521c44c36ab7f36c38ed721157637fba434169eb3bf5784003a76c90c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003130",
+      "input_sha256": "2e02ef52be2b067f3addd6ac219bd9bfe65c2a264bcc4655068c4ca96d79f45d",
+      "english": {
+        "direction": "entity -> function/action",
+        "relation_id": "entity_to_stated_function",
+        "answer": "communicate",
+        "canonical_fact": "A newspaper is a traditional way of communicating events.",
+        "subject": "newspaper",
+        "prompt_en": "What does a newspaper traditionally do to events?",
+        "relation_definition": "entity -> stated function/action; the specific verb or action the entity performs in a stated traditional or typical context, without conflating with general class membership.",
+        "answer_aliases_en": [
+          "communicate"
+        ],
+        "relation_spec": {
+          "id": "entity_to_stated_function",
+          "definition": "entity -> stated function/action; the specific verb or action the entity performs in a stated traditional or typical context, without conflating with general class membership.",
+          "direction": "entity -> function/action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ee087c65c6018523c22f98ce1b6fde588a5ae1f18bca4927af63dd5c8e739a14",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003130",
+        "subject_zh": "报纸",
+        "prompt_zh": "报纸传统上对事件做什么？",
+        "canonical_fact_zh": "报纸是传播事件的传统方式。",
+        "answer_zh": "传播",
+        "answer_aliases_zh": [
+          "传播"
+        ]
+      },
+      "translation_sha256": "da042dc1fceffb0e69aa97b9393c844d25908c392e0c20f687cb191783841294"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003131",
+      "input_sha256": "dd7fc84521c44c36ab7f36c38ed721157637fba434169eb3bf5784003a76c90c",
+      "english": {
+        "direction": "organism -> food/diet component",
+        "relation_id": "organism_to_diet",
+        "answer": "meat",
+        "canonical_fact": "Dogs are omnivores that consume plants and meat.",
+        "subject": "Dogs",
+        "prompt_en": "What do dogs, as omnivores, consume in addition to plants?",
+        "relation_definition": "organism -> food/diet component; a specific food category the organism consumes, retaining the omnivore/herbivore/carnivore scope stated in the source.",
+        "answer_aliases_en": [
+          "meat"
+        ],
+        "relation_spec": {
+          "id": "organism_to_diet",
+          "definition": "organism -> food/diet component; a specific food category the organism consumes, retaining the omnivore/herbivore/carnivore scope stated in the source.",
+          "direction": "organism -> food/diet component"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "75f9b22c1b9da690fd3de1dcecb210e16edfaad348d23e94dca3c6defa79ddf3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003131",
+        "subject_zh": "狗",
+        "prompt_zh": "作为杂食动物，狗除了植物还吃什么？",
+        "canonical_fact_zh": "狗是杂食动物，食用植物和肉类。",
+        "answer_zh": "肉类",
+        "answer_aliases_zh": [
+          "肉类"
+        ]
+      },
+      "translation_sha256": "3ed1d58c4c9ab4ade7599c6310492899b56eb4247c49734cba9d60fdea1ab3d4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003130",
+        "historical:raw_commonsense_qa_003131"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "24edb405bac4256a6e7ef9abad035b0baa95d73b4f0bcdb0db9922af5be9dca0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3211,
+      "first_chunk_seconds": 18.201,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3450,
+        "prompt_tokens": 1609,
+        "total_tokens": 5059,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2914,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4d7d9901ed6f784b0a47afdccf4793b64bd9061805120a40b933eb30e7d36af6",
+      "status": "completed",
+      "latency_seconds": 63.565
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003130",
+        "historical:raw_commonsense_qa_003131"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "be9f015e5a91d8c66fccfd502016141e0809f621f55a8249dca9d5f880c42504",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 913,
+      "first_chunk_seconds": 32.778,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1003,
+        "prompt_tokens": 876,
+        "total_tokens": 1879,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 796,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "419cd8a50793b6204c41636f05271c9ae9f58e098f5583eb9f9d22d3abbf01b8",
+      "status": "completed",
+      "latency_seconds": 44.613
+    }
+  ],
+  "status": "completed"
+}

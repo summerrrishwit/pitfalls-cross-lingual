@@ -1,0 +1,269 @@
+{
+  "input_sha256": "f2d88ab8feff791a52c5d733a616dce3710e17ef96072699bb5a02998c754c20",
+  "normalized": [
+    {
+      "record_id": "public:pbf_36b0efcce74a51088885",
+      "decision": "ready",
+      "subject": "king in a deck of cards that has no mustache",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "king of hearts",
+      "canonical_fact": "The king of hearts is the king in a deck of cards that has no mustache.",
+      "prompt_en": "Which king in a deck of cards has no mustache?",
+      "evidence_quotes": [
+        "which king in a deck of cards has no mustache",
+        "king of hearts"
+      ],
+      "reason": "The question uniquely identifies a single card (king of hearts) from the set of kings by the distinguishing attribute of having no mustache, which fits description_to_entity (identifying description -> unique entity). The old extraction used a generic subject 'kings in a deck of cards' with a free-form relation_raw 'has no mustache' that does not match any catalog relation; description_to_entity is the precise catalog fit.",
+      "english": {
+        "relation_id": "description_to_entity",
+        "canonical_fact": "The king of hearts is the king in a deck of cards that has no mustache.",
+        "prompt_en": "Which king in a deck of cards has no mustache?",
+        "answer": "king of hearts",
+        "direction": "identifying description -> entity",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "king in a deck of cards that has no mustache",
+        "answer_aliases_en": [
+          "king of hearts"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "43b78b34b541df6e92db33c7d1dbf4268d1d08994d1fe573b314ca91d6963fe6",
+      "input_sha256": "c45a71dd88e0e4e3ec66a857fc5e7736879d721f92a60000f235edc43ef12fd9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_36bc5442817be8ab49d1",
+      "decision": "ready",
+      "subject": "San Andreas Fault",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "California",
+      "canonical_fact": "The San Andreas Fault runs through California.",
+      "prompt_en": "The San Andreas Fault runs through",
+      "evidence_quotes": [
+        "where does the san andreas fault run through",
+        "California"
+      ],
+      "reason": "The question asks for the geographic location (state level) through which the San Andreas Fault runs. This is geographic containment of the fault within a political region, matching entity_to_containing_location exactly. The old extraction used a free-form relation_raw 'runs through' that does not appear in the catalog; entity_to_containing_location is the precise catalog fit.",
+      "english": {
+        "relation_id": "entity_to_containing_location",
+        "canonical_fact": "The San Andreas Fault runs through California.",
+        "prompt_en": "The San Andreas Fault runs through",
+        "answer": "California",
+        "direction": "entity -> containing location",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "subject": "San Andreas Fault",
+        "answer_aliases_en": [
+          "California",
+          "State of California",
+          "CA",
+          "The Golden State"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "31822c682c0d30053a602e6a0e073990b77174768a2308cd7eaecd76cf245d6d",
+      "input_sha256": "2b277f366000ecd361397f22f4ea9243254ac929baedee9a4eae3b1729044b5a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_36b0efcce74a51088885",
+      "input_sha256": "c45a71dd88e0e4e3ec66a857fc5e7736879d721f92a60000f235edc43ef12fd9",
+      "english": {
+        "relation_id": "description_to_entity",
+        "canonical_fact": "The king of hearts is the king in a deck of cards that has no mustache.",
+        "prompt_en": "Which king in a deck of cards has no mustache?",
+        "answer": "king of hearts",
+        "direction": "identifying description -> entity",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "king in a deck of cards that has no mustache",
+        "answer_aliases_en": [
+          "king of hearts"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "43b78b34b541df6e92db33c7d1dbf4268d1d08994d1fe573b314ca91d6963fe6",
+      "translation": {
+        "record_id": "public:pbf_36b0efcce74a51088885",
+        "subject_zh": "一副扑克牌中没有胡子的国王",
+        "prompt_zh": "一副扑克牌中哪个国王没有胡子？",
+        "canonical_fact_zh": "红心K是一副扑克牌中没有胡子的国王。",
+        "answer_zh": "红心K",
+        "answer_aliases_zh": [
+          "红心K"
+        ]
+      },
+      "translation_sha256": "29c12d385ad0fe0afd52045f35962723701fc52789e582ed686e568ffb65563f"
+    },
+    {
+      "record_id": "public:pbf_36bc5442817be8ab49d1",
+      "input_sha256": "2b277f366000ecd361397f22f4ea9243254ac929baedee9a4eae3b1729044b5a",
+      "english": {
+        "relation_id": "entity_to_containing_location",
+        "canonical_fact": "The San Andreas Fault runs through California.",
+        "prompt_en": "The San Andreas Fault runs through",
+        "answer": "California",
+        "direction": "entity -> containing location",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "subject": "San Andreas Fault",
+        "answer_aliases_en": [
+          "California",
+          "State of California",
+          "CA",
+          "The Golden State"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "31822c682c0d30053a602e6a0e073990b77174768a2308cd7eaecd76cf245d6d",
+      "translation": {
+        "record_id": "public:pbf_36bc5442817be8ab49d1",
+        "subject_zh": "圣安德烈亚斯断层",
+        "prompt_zh": "圣安德烈亚斯断层贯穿",
+        "canonical_fact_zh": "圣安德烈亚斯断层贯穿加利福尼亚州。",
+        "answer_zh": "加利福尼亚",
+        "answer_aliases_zh": [
+          "加利福尼亚",
+          "加利福尼亚州",
+          "CA",
+          "金色之州"
+        ]
+      },
+      "translation_sha256": "993fce660fdc72d126fdfeb963731246509b827d4bdead694b32b10ae2dbda22"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_36b0efcce74a51088885",
+        "public:pbf_36bc5442817be8ab49d1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "80699dfc7f0087a095409ab19356b3e799caab217cb0bc871ec36fbc139f282d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1815,
+      "first_chunk_seconds": 13.49,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1956,
+        "prompt_tokens": 1590,
+        "total_tokens": 3546,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1460,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d14f57a0797f79e4d36c92c1385a38405d4b530c34036dbca8e0b1797a7c43d6",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 47.413,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_36b0efcce74a51088885",
+        "public:pbf_36bc5442817be8ab49d1"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3f5e36701d2591240474cbb0098dcf146f0372fab4fda310889a2d45967398f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1710,
+      "first_chunk_seconds": 8.757,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1834,
+        "prompt_tokens": 1609,
+        "total_tokens": 3443,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1299,
+          "text_tokens": 535
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ab3886e8865a42423119a3f87c129e1b2e30900d35111e1b9355c66cf5e8c3b2",
+      "status": "completed",
+      "latency_seconds": 38.03
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_36b0efcce74a51088885",
+        "public:pbf_36bc5442817be8ab49d1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "66649b22322c31c69fb5414535759098a5dfdcea7ff7ebc69f35a66a2adf183c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_36b0efcce74a51088885",
+        "public:pbf_36bc5442817be8ab49d1"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "66649b22322c31c69fb5414535759098a5dfdcea7ff7ebc69f35a66a2adf183c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1380,
+      "first_chunk_seconds": 5.53,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1534,
+        "prompt_tokens": 837,
+        "total_tokens": 2371,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1352,
+          "text_tokens": 182
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d85870ba7d9033fc84355f7a5a539b8d7635dcd6f60ab88154b718d913690704",
+      "status": "completed",
+      "latency_seconds": 27.802
+    }
+  ],
+  "status": "completed"
+}

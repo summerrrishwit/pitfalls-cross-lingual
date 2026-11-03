@@ -1,0 +1,158 @@
+{
+  "input_sha256": "63ce8fe60a86e79a869c0ab6007d27ede0a05906a5d4b5dd30e939e203de97fb",
+  "normalized": [
+    {
+      "record_id": "public:pbf_feb2ede1957c464fa8f3",
+      "decision": "ready",
+      "subject": "Wimbledon",
+      "relation_id": "event_to_title_record_holder",
+      "relation_definition": "The individual holding the record for the most titles or championships at a specified event or competition.",
+      "direction": "event/competition -> individual (record holder)",
+      "answer": "Martina Navratilova",
+      "canonical_fact": "Martina Navratilova has won the most number of Wimbledon titles.",
+      "prompt_en": "Who has won the most number of Wimbledon titles?",
+      "evidence_quotes": [
+        "who has won most number of wimbledon titles",
+        "Martina Navratilova"
+      ],
+      "reason": "Source question and answer directly establish that Martina Navratilova holds the record for most Wimbledon titles. No existing catalog relation captures 'record holder for most titles at an event'; proposing event_to_title_record_holder with direction event -> individual.",
+      "english": {
+        "answer": "Martina Navratilova",
+        "relation_id": "event_to_title_record_holder",
+        "prompt_en": "Who has won the most number of Wimbledon titles?",
+        "direction": "event/competition -> individual (record holder)",
+        "subject": "Wimbledon",
+        "canonical_fact": "Martina Navratilova has won the most number of Wimbledon titles.",
+        "relation_definition": "The individual holding the record for the most titles or championships at a specified event or competition.",
+        "answer_aliases_en": [
+          "Martina Navratilova",
+          "Martina Subertova"
+        ],
+        "relation_spec": {
+          "id": "event_to_title_record_holder",
+          "definition": "The individual holding the record for the most titles or championships at a specified event or competition.",
+          "direction": "event/competition -> individual (record holder)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "31e1a9c4296b1dd1693a0264d1efaeb4284da73fbfb716c7a650998a7d1b89a7",
+      "input_sha256": "05466f03829d4026aae7affea91be86f357a1ca4fe8226d910554d32c4d894b1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_feec431ba255c617302c",
+      "decision": "ready",
+      "subject": "Indus Valley civilization",
+      "relation_id": "entity_to_superlative_attribute",
+      "relation_definition": "A specific attribute or quality in which a named entity is stated to be unmatched or superior relative to a defined comparison set; retain the comparison scope and qualifier.",
+      "direction": "entity -> attribute",
+      "answer": "the degree of urban planning",
+      "canonical_fact": "The Indus Valley civilization is unmatched in comparison to other early civilizations in terms of the degree of urban planning.",
+      "prompt_en": "The Indus Valley civilization is unmatched in comparison to other early civilizations in terms of what?",
+      "evidence_quotes": [
+        "Indus Valley civilization is unmatched in comparison to other early civilizations",
+        "the degree of urban planning"
+      ],
+      "reason": "Source directly states the distinguishing attribute (degree of urban planning) relative to a comparison set (other early civilizations). No existing catalog relation captures 'superlative attribute relative to a comparison set'; proposing entity_to_superlative_attribute with direction entity -> attribute.",
+      "english": {
+        "answer": "the degree of urban planning",
+        "relation_id": "entity_to_superlative_attribute",
+        "prompt_en": "The Indus Valley civilization is unmatched in comparison to other early civilizations in terms of what?",
+        "direction": "entity -> attribute",
+        "subject": "Indus Valley civilization",
+        "canonical_fact": "The Indus Valley civilization is unmatched in comparison to other early civilizations in terms of the degree of urban planning.",
+        "relation_definition": "A specific attribute or quality in which a named entity is stated to be unmatched or superior relative to a defined comparison set; retain the comparison scope and qualifier.",
+        "answer_aliases_en": [
+          "the degree of urban planning"
+        ],
+        "relation_spec": {
+          "id": "entity_to_superlative_attribute",
+          "definition": "A specific attribute or quality in which a named entity is stated to be unmatched or superior relative to a defined comparison set; retain the comparison scope and qualifier.",
+          "direction": "entity -> attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "01c8b1afef9e8cb3baf472c5f95c7b245ecadc939ca36eed5233052c422e33d6",
+      "input_sha256": "ed64c04705ae5b45a54cda380542c0caaae962522e1af62cecf345f2c94a3dc9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_feb2ede1957c464fa8f3",
+        "public:pbf_feec431ba255c617302c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9ae8c37de276f4739aa0819b0e13ab2d94a655743dcf3236b273ec565815cf72",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2137,
+      "first_chunk_seconds": 42.895,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2220,
+        "prompt_tokens": 1652,
+        "total_tokens": 3872,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1691,
+          "text_tokens": 529
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6c669ae5bba88ba525ca41758a2f245ce75568ec80e6db2b472a1d683a4b4276",
+      "status": "completed",
+      "latency_seconds": 69.313
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feb2ede1957c464fa8f3",
+        "public:pbf_feec431ba255c617302c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e63c0171673119cbdf89c6f661c974914bf89b75863375238b7acbd1e54b9fa8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.7
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feb2ede1957c464fa8f3",
+        "public:pbf_feec431ba255c617302c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e63c0171673119cbdf89c6f661c974914bf89b75863375238b7acbd1e54b9fa8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.331
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_feb2ede1957c464fa8f3",
+        "public:pbf_feec431ba255c617302c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e63c0171673119cbdf89c6f661c974914bf89b75863375238b7acbd1e54b9fa8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.788
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "7261282cdb6c92babfe8233ad728a1f4c8a328cd93efe887b285b88d1d47428c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005159",
+      "decision": "ready",
+      "subject": "taxpayer with too much payroll tax withheld",
+      "relation_id": "condition_to_outcome",
+      "relation_definition": "A specified condition or situation -> the expected result or consequence that follows for the subject in that condition.",
+      "direction": "condition/situation -> outcome",
+      "answer": "refund",
+      "canonical_fact": "A taxpayer with too much payroll tax withheld receives a refund from the IRS.",
+      "prompt_en": "What does a taxpayer receive from the IRS when their payroll tax withholding exceeds the amount owed?",
+      "evidence_quotes": [
+        "you'll get what from the IRS",
+        "refund"
+      ],
+      "reason": "Source explicitly states the outcome of having too much payroll tax is receiving a refund from the IRS. No catalog relation fits this condition-to-outcome pattern, so a new relation ID (condition_to_outcome) is proposed with explicit definition and direction.",
+      "english": {
+        "direction": "condition/situation -> outcome",
+        "relation_id": "condition_to_outcome",
+        "answer": "refund",
+        "canonical_fact": "A taxpayer with too much payroll tax withheld receives a refund from the IRS.",
+        "subject": "taxpayer with too much payroll tax withheld",
+        "prompt_en": "What does a taxpayer receive from the IRS when their payroll tax withholding exceeds the amount owed?",
+        "relation_definition": "A specified condition or situation -> the expected result or consequence that follows for the subject in that condition.",
+        "answer_aliases_en": [
+          "refund"
+        ],
+        "relation_spec": {
+          "id": "condition_to_outcome",
+          "definition": "A specified condition or situation -> the expected result or consequence that follows for the subject in that condition.",
+          "direction": "condition/situation -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "26f2d4720c5055bc33f03e6e110ae9eae604574b0563b4d9b1d70bd42c86178e",
+      "input_sha256": "5854041394b70aa7cdf8c2f6de0618a7ff528f28cafd5290c463736a7d4ae379",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005165",
+      "decision": "ready",
+      "subject": "anemone",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "sea water",
+      "canonical_fact": "An anemone lives in sea water.",
+      "prompt_en": "What kind of fluid can an anemone be found living in?",
+      "evidence_quotes": [
+        "anemone living in what kind of fluid",
+        "sea water"
+      ],
+      "reason": "Source directly states an anemone is found living in sea water, which is its natural habitat as a fluid medium. The organism_to_habitat relation fits exactly (organism -> habitat, retaining scope without asserting exclusivity).",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "sea water",
+        "canonical_fact": "An anemone lives in sea water.",
+        "subject": "anemone",
+        "prompt_en": "What kind of fluid can an anemone be found living in?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "sea water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b9e9ac1d27e4760d9aea4ba2a8d26d16e3138fb2b05c54d76eadd51ded63bbbc",
+      "input_sha256": "35e25c6e1b5e091595fca0fc9c2264411926a656316d541e3ed65fafaccb5fc1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005159",
+      "input_sha256": "5854041394b70aa7cdf8c2f6de0618a7ff528f28cafd5290c463736a7d4ae379",
+      "english": {
+        "direction": "condition/situation -> outcome",
+        "relation_id": "condition_to_outcome",
+        "answer": "refund",
+        "canonical_fact": "A taxpayer with too much payroll tax withheld receives a refund from the IRS.",
+        "subject": "taxpayer with too much payroll tax withheld",
+        "prompt_en": "What does a taxpayer receive from the IRS when their payroll tax withholding exceeds the amount owed?",
+        "relation_definition": "A specified condition or situation -> the expected result or consequence that follows for the subject in that condition.",
+        "answer_aliases_en": [
+          "refund"
+        ],
+        "relation_spec": {
+          "id": "condition_to_outcome",
+          "definition": "A specified condition or situation -> the expected result or consequence that follows for the subject in that condition.",
+          "direction": "condition/situation -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "26f2d4720c5055bc33f03e6e110ae9eae604574b0563b4d9b1d70bd42c86178e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005159",
+        "subject_zh": "预扣工资税过多的纳税人",
+        "prompt_zh": "当纳税人的工资税预扣额超过应缴金额时，会从国税局获得什么？",
+        "canonical_fact_zh": "预扣工资税过多的纳税人会从国税局获得退税。",
+        "answer_zh": "退税",
+        "answer_aliases_zh": [
+          "退税"
+        ]
+      },
+      "translation_sha256": "9b904fa37fb75378346fd229eca212cde80078c30ee0948ebb5845ccb0cd8c4a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005165",
+      "input_sha256": "35e25c6e1b5e091595fca0fc9c2264411926a656316d541e3ed65fafaccb5fc1",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "sea water",
+        "canonical_fact": "An anemone lives in sea water.",
+        "subject": "anemone",
+        "prompt_en": "What kind of fluid can an anemone be found living in?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "sea water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b9e9ac1d27e4760d9aea4ba2a8d26d16e3138fb2b05c54d76eadd51ded63bbbc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005165",
+        "subject_zh": "海葵",
+        "prompt_zh": "海葵通常生活在哪种液体中？",
+        "canonical_fact_zh": "海葵生活在海水中。",
+        "answer_zh": "海水",
+        "answer_aliases_zh": [
+          "海水"
+        ]
+      },
+      "translation_sha256": "314eaeb211ae97d73639d6aca09eb2e6b77d8a8a000500c6dbdf9fdba329bea8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005159",
+        "historical:raw_commonsense_qa_005165"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b72b7acd91707a94ff0b4ab13eaae0b74b545619ae2c1dcb53be44fd138ed150",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2901,
+      "first_chunk_seconds": 35.887,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3045,
+        "prompt_tokens": 1681,
+        "total_tokens": 4726,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2585,
+          "text_tokens": 460
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fb75b9a522ad9d0993299b504757ea96d5e1e0b7af26c497b4910ad254ae32f3",
+      "status": "completed",
+      "latency_seconds": 90.071
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005159",
+        "historical:raw_commonsense_qa_005165"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e74fb466f2076fc987315d00bfc227d582c8355c5f288f1eef36f1c3e74ab94c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 782,
+      "first_chunk_seconds": 18.919,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 805,
+        "prompt_tokens": 835,
+        "total_tokens": 1640,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 582,
+          "text_tokens": 223
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "703bbad99d5ce2f05304e99f868e90aa1bd93734349839a5bd346ccc4015ebe5",
+      "status": "completed",
+      "latency_seconds": 27.86
+    }
+  ],
+  "status": "completed"
+}

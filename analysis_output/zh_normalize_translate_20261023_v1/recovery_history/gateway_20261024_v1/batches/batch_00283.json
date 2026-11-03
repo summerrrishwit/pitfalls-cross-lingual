@@ -1,0 +1,192 @@
+{
+  "input_sha256": "30b23c5a5b950519dd0c62c6bd950ee831e166e34c7ec88306ee4c3e08900d94",
+  "normalized": [
+    {
+      "record_id": "public:pbf_87c8c683d160c641b5a9",
+      "decision": "ready",
+      "subject": "Swifty in the movie Six Pack",
+      "relation_id": "character_to_actor",
+      "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "character in specified work/version -> actor",
+      "answer": "Robby Still",
+      "canonical_fact": "Robby Still played Swifty in the movie Six Pack.",
+      "prompt_en": "Who played the character Swifty in the movie Six Pack?",
+      "evidence_quotes": [
+        "who played swifty in the movie six pack",
+        "robby still"
+      ],
+      "reason": "Source question explicitly asks who played the character Swifty in the movie Six Pack; source answer 'robby still' is a person name. The relation character_to_actor fits exactly: a fictional character in a specified film version -> the actor who portrays them. No voice-actor ambiguity is indicated. Existing answer 'Robby Still' is consistent with the source.",
+      "english": {
+        "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+        "canonical_fact": "Robby Still played Swifty in the movie Six Pack.",
+        "direction": "character in specified work/version -> actor",
+        "relation_id": "character_to_actor",
+        "prompt_en": "Who played the character Swifty in the movie Six Pack?",
+        "subject": "Swifty in the movie Six Pack",
+        "answer": "Robby Still",
+        "answer_aliases_en": [
+          "Robby Still"
+        ],
+        "relation_spec": {
+          "id": "character_to_actor",
+          "direction": "character in specified work/version -> actor",
+          "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5ef755ab175125d3d0a43a3b324a320a8dd72def82e1d91054c9378b5b9c1640",
+      "input_sha256": "09993baea5f41a5e20b271e3dfe0af9ddacae4e8386fbd4ce4dd96a70ec8da01",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_87ec23fd2c38218c6148",
+      "decision": "ready",
+      "subject": "The Lego Ninjago Movie",
+      "relation_id": "work_to_release_date",
+      "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+      "direction": "specified work/version/market -> release date",
+      "answer": "2017-09-16",
+      "canonical_fact": "The Lego Ninjago Movie was released on 2017-09-16.",
+      "prompt_en": "What is the release date of The Lego Ninjago Movie?",
+      "evidence_quotes": [
+        "when did the lego ninjago movie come out",
+        "2017-09-16"
+      ],
+      "reason": "Source question asks for the release timing of The Lego Ninjago Movie; source answer '2017-09-16' is a full calendar date. The relation work_to_release_date fits exactly: a specified film work -> its full release date. No market qualifier is stated, so the default (original) release is assumed. No conflict with existing extraction.",
+      "english": {
+        "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+        "canonical_fact": "The Lego Ninjago Movie was released on 2017-09-16.",
+        "direction": "specified work/version/market -> release date",
+        "relation_id": "work_to_release_date",
+        "prompt_en": "What is the release date of The Lego Ninjago Movie?",
+        "subject": "The Lego Ninjago Movie",
+        "answer": "2017-09-16",
+        "answer_aliases_en": [
+          "2017-09-16",
+          "09 16 2017",
+          "16 09 2017",
+          "09/16/2017",
+          "2017 09 16",
+          "16/09/2017",
+          "09-16-2017",
+          "2017 September, 16",
+          "2017 September 16",
+          "16 September 2017",
+          "16-09-2017"
+        ],
+        "relation_spec": {
+          "id": "work_to_release_date",
+          "direction": "specified work/version/market -> release date",
+          "definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2c215d9ee5064113e27daecb930be0cf393b4a8d2d8ceec9d18dffa56cfa8b07",
+      "input_sha256": "0f1314519443edc809e181a5e15f48dd06dfbd161debc84e5772a034a8f81dc4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_87c8c683d160c641b5a9",
+        "public:pbf_87ec23fd2c38218c6148"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8e9c8328cdb67f71b3aca3a2fa3d14a6cc5ec6d1a2abffd5ed505cb9ccb197f4",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1579,
+        "prompt_tokens": 1747,
+        "total_tokens": 3326,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 994,
+          "text_tokens": 585
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9d30c49ac7aefff194e6f726c906bcf284e0553769fd6dfdb94135fb73ecb121",
+      "status": "completed",
+      "latency_seconds": 114.4
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_87c8c683d160c641b5a9",
+        "public:pbf_87ec23fd2c38218c6148"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d514ad01bcffd58ad39998de279ea568330f03f31a7926594b2cd48e4f9ee937",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 48.066
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_87c8c683d160c641b5a9",
+        "public:pbf_87ec23fd2c38218c6148"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d514ad01bcffd58ad39998de279ea568330f03f31a7926594b2cd48e4f9ee937",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_87c8c683d160c641b5a9",
+        "public:pbf_87ec23fd2c38218c6148"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d514ad01bcffd58ad39998de279ea568330f03f31a7926594b2cd48e4f9ee937",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.708
+    }
+  ],
+  "status": "failed"
+}

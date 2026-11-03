@@ -1,0 +1,130 @@
+{
+  "input_sha256": "61805d38920c8dd075ed42fca8ae65e9d488494073eea83212013e56c84176ac",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79b618580ce5976d6da08a44cbd9f39cf4d5b3142ac29c0ed9c259b271442a39",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2049,
+      "first_chunk_seconds": 17.915,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2167,
+        "prompt_tokens": 1700,
+        "total_tokens": 3867,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1548,
+          "text_tokens": 619
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f600ed2f97e222f6012f599c378e66e0ac3e9444924f015d21ecec5b939584f9",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 41.923,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d0ad7ead124df0d9a32167b1e65b7fd819d2d4ded898edf26c64776e3aa422a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.988
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d0ad7ead124df0d9a32167b1e65b7fd819d2d4ded898edf26c64776e3aa422a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.043
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79b618580ce5976d6da08a44cbd9f39cf4d5b3142ac29c0ed9c259b271442a39",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 28.547
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "79b618580ce5976d6da08a44cbd9f39cf4d5b3142ac29c0ed9c259b271442a39",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.047
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000062",
+        "historical:raw_ai2_arc_easy_000063"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "79b618580ce5976d6da08a44cbd9f39cf4d5b3142ac29c0ed9c259b271442a39",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 12.641,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02108.json",
+      "sha256": "67c2097d82250d48fcd99a025bc5f6d65c4e49ee9cc1bf457b6ef1e139064e23",
+      "previous_status": "failed"
+    }
+  ]
+}

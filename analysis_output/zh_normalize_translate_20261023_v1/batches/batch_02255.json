@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d86d3d11128a60f8099f9095201c97d83a55f76e59059d0239cf97b267f5ea39",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000909",
+      "decision": "ready",
+      "subject": "location on Earth that receives the most direct sunlight",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "the equator",
+      "canonical_fact": "The equator is the location on Earth that receives the most direct sunlight.",
+      "prompt_en": "Which location on Earth receives the most direct sunlight?",
+      "evidence_quotes": [
+        "Which location on Earth receives the most direct sunlight?",
+        "the equator"
+      ],
+      "reason": "The source question supplies an identifying description (location on Earth + receives the most direct sunlight) and the source answer is the unique entity 'the equator' that satisfies it. This maps directly to the existing relation description_to_entity (identifying description -> entity).",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "the equator",
+        "canonical_fact": "The equator is the location on Earth that receives the most direct sunlight.",
+        "subject": "location on Earth that receives the most direct sunlight",
+        "prompt_en": "Which location on Earth receives the most direct sunlight?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "the equator"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e5e8b6f8bb9f63b3a23c6285b04d30c2b3b99d341ba62775298eb0fcd3d860e9",
+      "input_sha256": "6bfc59acb80b726aa339fca15e44f6acc20c68494eda86e4636faf8fcaf381ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000911",
+      "decision": "ready",
+      "subject": "planets in orbit around the Sun",
+      "relation_id": "entity_to_causal_mechanism",
+      "relation_definition": "The specific physical mechanism, force, or principle responsible for maintaining or causing the stated entity's condition, behavior, or state.",
+      "direction": "entity/state -> causal mechanism",
+      "answer": "gravity",
+      "canonical_fact": "Gravity keeps the planets in orbit around the Sun.",
+      "prompt_en": "What force keeps the planets in orbit around the Sun?",
+      "evidence_quotes": [
+        "What keeps the planets in orbit around the Sun?",
+        "gravity"
+      ],
+      "reason": "The source question asks for the physical mechanism maintaining planetary orbits; 'gravity' is the stated answer. No existing catalog relation covers a causal physical mechanism, so a new precise relation 'entity_to_causal_mechanism' is proposed with direction entity/state -> causal mechanism.",
+      "english": {
+        "direction": "entity/state -> causal mechanism",
+        "relation_id": "entity_to_causal_mechanism",
+        "answer": "gravity",
+        "canonical_fact": "Gravity keeps the planets in orbit around the Sun.",
+        "subject": "planets in orbit around the Sun",
+        "prompt_en": "What force keeps the planets in orbit around the Sun?",
+        "relation_definition": "The specific physical mechanism, force, or principle responsible for maintaining or causing the stated entity's condition, behavior, or state.",
+        "answer_aliases_en": [
+          "gravity"
+        ],
+        "relation_spec": {
+          "id": "entity_to_causal_mechanism",
+          "definition": "The specific physical mechanism, force, or principle responsible for maintaining or causing the stated entity's condition, behavior, or state.",
+          "direction": "entity/state -> causal mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c21a34cc8de76883fdad7742761cf00b3c756db3808246012d8ac44a3aa6c9f6",
+      "input_sha256": "4d5453f3ad46774679b82b3a2a9f1305435d7c3d4ae8f1b3b17bef4e829cfbd8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000909",
+      "input_sha256": "6bfc59acb80b726aa339fca15e44f6acc20c68494eda86e4636faf8fcaf381ac",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "the equator",
+        "canonical_fact": "The equator is the location on Earth that receives the most direct sunlight.",
+        "subject": "location on Earth that receives the most direct sunlight",
+        "prompt_en": "Which location on Earth receives the most direct sunlight?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "the equator"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e5e8b6f8bb9f63b3a23c6285b04d30c2b3b99d341ba62775298eb0fcd3d860e9",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000909",
+        "subject_zh": "地球上接受阳光最直接照射的位置",
+        "prompt_zh": "地球上哪个位置接受的阳光最直接？",
+        "canonical_fact_zh": "赤道是地球上接受阳光最直接照射的位置。",
+        "answer_zh": "赤道",
+        "answer_aliases_zh": [
+          "赤道"
+        ]
+      },
+      "translation_sha256": "8a4a820f8e315f4899ebf5bfcd2bd84594a41c2c8e832e9f4a59264f166ca8f6"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000911",
+      "input_sha256": "4d5453f3ad46774679b82b3a2a9f1305435d7c3d4ae8f1b3b17bef4e829cfbd8",
+      "english": {
+        "direction": "entity/state -> causal mechanism",
+        "relation_id": "entity_to_causal_mechanism",
+        "answer": "gravity",
+        "canonical_fact": "Gravity keeps the planets in orbit around the Sun.",
+        "subject": "planets in orbit around the Sun",
+        "prompt_en": "What force keeps the planets in orbit around the Sun?",
+        "relation_definition": "The specific physical mechanism, force, or principle responsible for maintaining or causing the stated entity's condition, behavior, or state.",
+        "answer_aliases_en": [
+          "gravity"
+        ],
+        "relation_spec": {
+          "id": "entity_to_causal_mechanism",
+          "definition": "The specific physical mechanism, force, or principle responsible for maintaining or causing the stated entity's condition, behavior, or state.",
+          "direction": "entity/state -> causal mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c21a34cc8de76883fdad7742761cf00b3c756db3808246012d8ac44a3aa6c9f6",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000911",
+        "subject_zh": "围绕太阳运行的行星",
+        "prompt_zh": "什么力使行星围绕太阳运行？",
+        "canonical_fact_zh": "引力使行星围绕太阳运行。",
+        "answer_zh": "引力",
+        "answer_aliases_zh": [
+          "引力"
+        ]
+      },
+      "translation_sha256": "ad2ca3e977c00fa4ecb31bc3e60ca633a8ce7469625ec985e0a22786e34f305b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000909",
+        "historical:raw_ai2_arc_easy_000911"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5e61a4ec356c90cfe9db7560e9eb30364f42d46e35f56f51de5720ef375ee995",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2491,
+      "first_chunk_seconds": 18.413,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2626,
+        "prompt_tokens": 1683,
+        "total_tokens": 4309,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2141,
+          "text_tokens": 485
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "60e8e0536af683f05d04a7cf1df51021e13776a86ca301e15e9c09bc65bb3cca",
+      "status": "completed",
+      "latency_seconds": 50.632
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000909",
+        "historical:raw_ai2_arc_easy_000911"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a77604ba753033a1ccc8ad4640dd22828b5e19c70b9885d4d99f51c7c35b8abe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 902,
+      "first_chunk_seconds": 22.453,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1003,
+        "prompt_tokens": 829,
+        "total_tokens": 1832,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 793,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9c8c0ced18b9854e53ef57ea778153f4c7d23e2cd9c3eaf7bc6c4c0ee4527991",
+      "status": "completed",
+      "latency_seconds": 33.672
+    }
+  ],
+  "status": "completed"
+}

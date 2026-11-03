@@ -1,0 +1,85 @@
+{
+  "input_sha256": "e1920d6aad77cec5d11b51785d6d08a637543af0e1e86ce525ba507160d5bf0c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000439",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source states that nitrogen returns to soil as ammonium ions during decomposition (nitrogen cycle step). No catalog relation captures 'element/form in a specific decomposition process -> soil product form.' Proposing a new relation like 'decomposition_element_to_soil_ion_form' would be too narrow and non-reusable across other facts. No existing relation (organism_to_habitat, entity_to_material, part_to_whole, etc.) matches the direction and definition needed. Deferring rather than forcing a broad category.",
+      "input_sha256": "8e14f6f2af7cec3b5b4168ba6428287da47039dd9b60e4b373b5bf09d23bdbf1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000440",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source states that cellular repair mechanisms fix mutations in DNA. No catalog relation fits: 'entity_to_material' concerns material composition (constituent/whole/production source) not a repair target; 'whole_to_part' is about constitutive parts, not the substrate acted upon by a mechanism; 'part_to_whole' is the inverse. A new relation like 'repair_mechanism_to_target_molecule' would be too specific and non-reusable. Insufficient mapping to any defined relation; deferring.",
+      "input_sha256": "a8bca8293dc0a76026fadc02ff016c7043e2cf8b8782e44bd8c33811e0080a9d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000439",
+        "historical:raw_sciq_000440"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dae548c8c7e8790cfe6bf32e7f0eb1ed334fc13364a85c5430d952394e7edf0f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.568
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000439",
+        "historical:raw_sciq_000440"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dae548c8c7e8790cfe6bf32e7f0eb1ed334fc13364a85c5430d952394e7edf0f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2508,
+      "first_chunk_seconds": 2.22,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2602,
+        "prompt_tokens": 1704,
+        "total_tokens": 4306,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2175,
+          "text_tokens": 427
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ebe41e0f0059ee9811cf44eb7ef1e90a7f02b87cbaefb5769458a8540ff34f7c",
+      "status": "completed",
+      "latency_seconds": 81.504
+    }
+  ],
+  "status": "completed"
+}

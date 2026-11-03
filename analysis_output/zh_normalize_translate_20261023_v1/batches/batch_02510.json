@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4ba805935b68e6db6bd4d091ba73c5290526bd1461ea12f7fac197d69f18b585",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002400",
+      "decision": "ready",
+      "subject": "bank",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "financial center",
+      "canonical_fact": "A bank is a financial center.",
+      "prompt_en": "What type of building is a bank?",
+      "evidence_quotes": [
+        "What type of building is a bank?",
+        "financial center"
+      ],
+      "reason": "Source question asks for the building type/class of a bank; source answer 'financial center' is a category. entity_to_class fits exactly: bank (entity) -> financial center (class at the 'type of building' taxonomy level). Both model annotations agree on the canonical fact.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "financial center",
+        "canonical_fact": "A bank is a financial center.",
+        "subject": "bank",
+        "prompt_en": "What type of building is a bank?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "financial center"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8a8c1756877de126212e92f13e844af4e32d75fabbe18bde3cc1f23b0fe651c5",
+      "input_sha256": "d82768edf52144aed60dbae192db8322411f447e3976c6fddaaff4d6f5b7b604",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002418",
+      "decision": "ready",
+      "subject": "kitchenette",
+      "relation_id": "feature_to_typical_dwell_type",
+      "relation_definition": "A specified interior/architectural feature that is commonly found in a particular type of dwelling; retains the 'common in' qualifier rather than asserting structural necessity.",
+      "direction": "architectural/interior feature -> dwelling type",
+      "answer": "apartment",
+      "canonical_fact": "A kitchenette is commonly found in apartments, which are dwellings stacked on top of each other.",
+      "prompt_en": "What type of dwelling, stacked on top of each other, is a kitchenette commonly found in?",
+      "evidence_quotes": [
+        "A kitchenette is common in what dwellings that are stacked on top of each other?",
+        "apartment"
+      ],
+      "reason": "Source question asks where a kitchenette is common, qualified by 'stacked on top of each other'; answer is 'apartment'. No existing catalog relation captures 'commonly found in' as distinct from structural part-whole membership; part_to_whole would imply a necessary constituent, but the source uses 'common in' (typicality). Propose new relation feature_to_typical_dwell_type with explicit direction feature -> dwelling type.",
+      "english": {
+        "direction": "architectural/interior feature -> dwelling type",
+        "relation_id": "feature_to_typical_dwell_type",
+        "answer": "apartment",
+        "canonical_fact": "A kitchenette is commonly found in apartments, which are dwellings stacked on top of each other.",
+        "subject": "kitchenette",
+        "prompt_en": "What type of dwelling, stacked on top of each other, is a kitchenette commonly found in?",
+        "relation_definition": "A specified interior/architectural feature that is commonly found in a particular type of dwelling; retains the 'common in' qualifier rather than asserting structural necessity.",
+        "answer_aliases_en": [
+          "apartment"
+        ],
+        "relation_spec": {
+          "id": "feature_to_typical_dwell_type",
+          "definition": "A specified interior/architectural feature that is commonly found in a particular type of dwelling; retains the 'common in' qualifier rather than asserting structural necessity.",
+          "direction": "architectural/interior feature -> dwelling type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0dd627131986ba5867dc1dd3a04ce6b25004636b38383443dfd7be95c40617b",
+      "input_sha256": "73022b7caceb5b81532599ff57a64807127cf6e60e1711a6c211ef8f9f6649ca",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002400",
+      "input_sha256": "d82768edf52144aed60dbae192db8322411f447e3976c6fddaaff4d6f5b7b604",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "financial center",
+        "canonical_fact": "A bank is a financial center.",
+        "subject": "bank",
+        "prompt_en": "What type of building is a bank?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "financial center"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8a8c1756877de126212e92f13e844af4e32d75fabbe18bde3cc1f23b0fe651c5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002400",
+        "subject_zh": "银行",
+        "prompt_zh": "银行属于哪种类型的建筑？",
+        "canonical_fact_zh": "银行是一个金融中心。",
+        "answer_zh": "金融中心",
+        "answer_aliases_zh": [
+          "金融中心"
+        ]
+      },
+      "translation_sha256": "954fba6368a0ac444d259c01574a4abc08b9cd0a8e07b2147a530b2c377a27b6"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002418",
+      "input_sha256": "73022b7caceb5b81532599ff57a64807127cf6e60e1711a6c211ef8f9f6649ca",
+      "english": {
+        "direction": "architectural/interior feature -> dwelling type",
+        "relation_id": "feature_to_typical_dwell_type",
+        "answer": "apartment",
+        "canonical_fact": "A kitchenette is commonly found in apartments, which are dwellings stacked on top of each other.",
+        "subject": "kitchenette",
+        "prompt_en": "What type of dwelling, stacked on top of each other, is a kitchenette commonly found in?",
+        "relation_definition": "A specified interior/architectural feature that is commonly found in a particular type of dwelling; retains the 'common in' qualifier rather than asserting structural necessity.",
+        "answer_aliases_en": [
+          "apartment"
+        ],
+        "relation_spec": {
+          "id": "feature_to_typical_dwell_type",
+          "definition": "A specified interior/architectural feature that is commonly found in a particular type of dwelling; retains the 'common in' qualifier rather than asserting structural necessity.",
+          "direction": "architectural/interior feature -> dwelling type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0dd627131986ba5867dc1dd3a04ce6b25004636b38383443dfd7be95c40617b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002418",
+        "subject_zh": "小厨房",
+        "prompt_zh": "小厨房通常出现在哪种上下堆叠的住宅中？",
+        "canonical_fact_zh": "小厨房通常出现在公寓中，而公寓是上下堆叠的住宅。",
+        "answer_zh": "公寓",
+        "answer_aliases_zh": [
+          "公寓"
+        ]
+      },
+      "translation_sha256": "6124062f619df31c9babdfd60f258625893bce93d55c3370d1932ba4116282e7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002400",
+        "historical:raw_commonsense_qa_002418"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8a0d56418ad1971830080f26335c95773121db6db8bff8a85bd517531a2d8a3a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2788,
+      "first_chunk_seconds": 34.313,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2892,
+        "prompt_tokens": 1685,
+        "total_tokens": 4577,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2428,
+          "text_tokens": 464
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "14273ea8e246c19c62d5091884c7fada3e0c20a4b84d87554b9335fb64a949ab",
+      "status": "completed",
+      "latency_seconds": 74.269
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002400",
+        "historical:raw_commonsense_qa_002418"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0d16bc9431fe682983f503885335addd2b9c60b4816f65e9ab7cbee3617c503d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 923,
+      "first_chunk_seconds": 16.36,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 986,
+        "prompt_tokens": 856,
+        "total_tokens": 1842,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 776,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1bd5ebe11f88f42ddfdaeaea5af663863d9736e97d47bc64e5d81b59e826e44b",
+      "status": "completed",
+      "latency_seconds": 28.383
+    }
+  ],
+  "status": "completed"
+}

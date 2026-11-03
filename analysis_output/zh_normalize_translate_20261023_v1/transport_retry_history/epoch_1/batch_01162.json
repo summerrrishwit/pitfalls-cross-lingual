@@ -1,0 +1,181 @@
+{
+  "input_sha256": "9a2ee74a3c48f08959889ebdca194d81c1ecea9b737e17623cd1ca6e0eebf2d8",
+  "normalized": [
+    {
+      "record_id": "public:pbf_68e4134e1674b8e99efe",
+      "decision": "ready",
+      "subject": "1919 World Series",
+      "relation_id": "work_event_to_agent",
+      "relation_definition": "Agent/character credited with orchestrating or performing an event as specifically described in a named literary or narrative work; direction: event_as_described_in_work -> agent",
+      "direction": "event as described in specified work -> agent/character",
+      "answer": "Meyer Wolfsheim",
+      "canonical_fact": "According to The Great Gatsby, Meyer Wolfsheim fixed the 1919 World Series.",
+      "prompt_en": "Factual question: who fixed the world series in 1919 according to gatsby\nAnswer:",
+      "evidence_quotes": [
+        "who fixed the world series in 1919 according to gatsby",
+        "meyer wolfsheim"
+      ],
+      "reason": "The source question explicitly scopes the attribution to The Great Gatsby ('according to gatsby'), making this a work-specific narrative credit rather than a real-world causal claim. No existing catalog relation captures a work-scoped event-to-character attribution, so a new precise relation 'work_event_to_agent' is proposed. The source answer 'meyer wolfsheim' is preserved (capitalized per existing extraction) and the canonical fact retains the 'according to The Great Gatsby' qualifier.",
+      "english": {
+        "answer": "Meyer Wolfsheim",
+        "relation_id": "work_event_to_agent",
+        "prompt_en": "Factual question: who fixed the world series in 1919 according to gatsby\nAnswer:",
+        "direction": "event as described in specified work -> agent/character",
+        "subject": "1919 World Series",
+        "canonical_fact": "According to The Great Gatsby, Meyer Wolfsheim fixed the 1919 World Series.",
+        "relation_definition": "Agent/character credited with orchestrating or performing an event as specifically described in a named literary or narrative work; direction: event_as_described_in_work -> agent",
+        "answer_aliases_en": [
+          "Meyer Wolfsheim"
+        ],
+        "relation_spec": {
+          "id": "work_event_to_agent",
+          "definition": "Agent/character credited with orchestrating or performing an event as specifically described in a named literary or narrative work; direction: event_as_described_in_work -> agent",
+          "direction": "event as described in specified work -> agent/character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d34d9a734d7ce1616ca2f3d7a7bc86f3e1d79c94564c159eeb29b8096eff6d8f",
+      "input_sha256": "3115e7b7918d569476b5f32e5154163813fca54b12d9b8548296484c691d1681",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_68e714c157a327e3e8c4",
+      "decision": "ready",
+      "subject": "idea of gravity",
+      "relation_id": "concept_to_originator",
+      "relation_definition": "Person credited with first formulating or originating a specific scientific, mathematical, or philosophical concept/idea; direction: concept_or_idea -> originator",
+      "direction": "concept/idea -> originator person",
+      "answer": "Isaac Newton",
+      "canonical_fact": "Isaac Newton came up with the idea of gravity.",
+      "prompt_en": "Factual question: who came up with the idea of gravity\nAnswer:",
+      "evidence_quotes": [
+        "who came up with the idea of gravity",
+        "Isaac Newton"
+      ],
+      "reason": "The source question asks for the originator of the idea of gravity and the source answer is 'Isaac Newton.' No existing catalog relation precisely captures concept/idea origination (written_work_to_author is for authored texts, description_to_entity is for identifying descriptions of unique entities). A new relation 'concept_to_originator' is proposed to capture attribution of a scientific/philosophical idea to its originator.",
+      "english": {
+        "answer": "Isaac Newton",
+        "relation_id": "concept_to_originator",
+        "prompt_en": "Factual question: who came up with the idea of gravity\nAnswer:",
+        "direction": "concept/idea -> originator person",
+        "subject": "idea of gravity",
+        "canonical_fact": "Isaac Newton came up with the idea of gravity.",
+        "relation_definition": "Person credited with first formulating or originating a specific scientific, mathematical, or philosophical concept/idea; direction: concept_or_idea -> originator",
+        "answer_aliases_en": [
+          "Isaac Newton",
+          "I. Newtonius",
+          "I. Newton",
+          "Isaak N'iuton",
+          "Izaak Newton",
+          "Isaak. N'ûton",
+          "Isaac Neuton",
+          "Isaac Newtonius",
+          "Isaak N'juton",
+          "Ayzik Nyuton",
+          "Is. N'ûton",
+          "Izaak. N'juton",
+          "Isaaco Newton",
+          "Newton",
+          "Isaacus Neutonus",
+          "Issac Newton",
+          "Niu-tun.",
+          "Sir Isaac Newton",
+          "Isaak Newton",
+          "Izaak. Newton",
+          "Isaacus Newtonus",
+          "Niu-tun"
+        ],
+        "relation_spec": {
+          "id": "concept_to_originator",
+          "definition": "Person credited with first formulating or originating a specific scientific, mathematical, or philosophical concept/idea; direction: concept_or_idea -> originator",
+          "direction": "concept/idea -> originator person"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7b71c46c6fa53924c20c33a4639a5757ce364869a7a648b2a1f540371885b6e7",
+      "input_sha256": "997953d4df01d007ee7d5cf4bdfa06c5a03f4638137ef3b734ba787c1af4c76d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_68e4134e1674b8e99efe",
+        "public:pbf_68e714c157a327e3e8c4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "02df0acda70d43bf8e38931543a624f10625010b8906094f045918f4c2c775e1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2824,
+      "first_chunk_seconds": 42.79,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2915,
+        "prompt_tokens": 1758,
+        "total_tokens": 4673,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2281,
+          "text_tokens": 634
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "9b57f851a1460c328fd4d8751e8849e9381480e3e5c2391bec4880f6d5409745",
+      "status": "completed",
+      "latency_seconds": 71.296
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_68e4134e1674b8e99efe",
+        "public:pbf_68e714c157a327e3e8c4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "13cd0cc8b3de5d06408b6ad8aa78906457df9394b8aa3d6ebf83ce73e72fbd51",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.091
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_68e4134e1674b8e99efe",
+        "public:pbf_68e714c157a327e3e8c4"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "13cd0cc8b3de5d06408b6ad8aa78906457df9394b8aa3d6ebf83ce73e72fbd51",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.219
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_68e4134e1674b8e99efe",
+        "public:pbf_68e714c157a327e3e8c4"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "13cd0cc8b3de5d06408b6ad8aa78906457df9394b8aa3d6ebf83ce73e72fbd51",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.119
+    }
+  ],
+  "status": "failed"
+}

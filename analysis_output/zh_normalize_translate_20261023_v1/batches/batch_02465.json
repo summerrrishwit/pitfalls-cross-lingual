@@ -1,0 +1,214 @@
+{
+  "input_sha256": "372187f34077c9ab0eb5099e40cb9bf5ed1129f73512dfb31da30fa2cc32d3e1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000870",
+      "decision": "ready",
+      "subject": "oxygen",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "air",
+      "canonical_fact": "Oxygen is a constituent part of air.",
+      "prompt_en": "What mixture is oxygen a constituent part of?",
+      "evidence_quotes": [
+        "oxygen",
+        "air"
+      ],
+      "reason": "Source question asks what you get oxygen from; source answer is 'air'. Oxygen is a well-known constituent gas in air, fitting the part_to_whole relation (oxygen as part, air as whole). No catalog relation specifically captures 'source/obtained-from' for a gas in a mixture; part_to_whole is the closest precise fit.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "air",
+        "canonical_fact": "Oxygen is a constituent part of air.",
+        "subject": "oxygen",
+        "prompt_en": "What mixture is oxygen a constituent part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "97202074465c8caa2474ae8749891ce4f1ce02c206b712de23e033fcc1d69f39",
+      "input_sha256": "e96b13873ce1668cf15739b09ba82727cd44c1aeee28e7788c0f76adee9ad0c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000910",
+      "decision": "ready",
+      "subject": "clock",
+      "relation_id": "entity_to_purpose",
+      "relation_definition": "The stated intended use or function of a specified entity.",
+      "direction": "entity -> purpose",
+      "answer": "tell time",
+      "canonical_fact": "A clock is used to tell time.",
+      "prompt_en": "What is the stated purpose of a clock?",
+      "evidence_quotes": [
+        "What do you use a clock for?",
+        "tell time"
+      ],
+      "reason": "Source question asks the purpose of a clock; source answer is 'tell time'. No existing catalog relation covers 'purpose/function' of an entity. Proposed new relation entity_to_purpose (entity -> purpose) precisely captures the stated intended use without forcing into a broad category like term_to_definition.",
+      "english": {
+        "direction": "entity -> purpose",
+        "relation_id": "entity_to_purpose",
+        "answer": "tell time",
+        "canonical_fact": "A clock is used to tell time.",
+        "subject": "clock",
+        "prompt_en": "What is the stated purpose of a clock?",
+        "relation_definition": "The stated intended use or function of a specified entity.",
+        "answer_aliases_en": [
+          "tell time"
+        ],
+        "relation_spec": {
+          "id": "entity_to_purpose",
+          "definition": "The stated intended use or function of a specified entity.",
+          "direction": "entity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "12c901e695c8022eebbcabcbb17f2b2929b5f5645b0e6465ee39ee347901cbc3",
+      "input_sha256": "9b2df63f53b6c6dd377a2402df177ca4c3bc1a967f175573dfd3378ea98dd9e9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000870",
+      "input_sha256": "e96b13873ce1668cf15739b09ba82727cd44c1aeee28e7788c0f76adee9ad0c5",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "air",
+        "canonical_fact": "Oxygen is a constituent part of air.",
+        "subject": "oxygen",
+        "prompt_en": "What mixture is oxygen a constituent part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "97202074465c8caa2474ae8749891ce4f1ce02c206b712de23e033fcc1d69f39",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000870",
+        "subject_zh": "氧气",
+        "prompt_zh": "氧气是哪一种混合物的组成部分？",
+        "canonical_fact_zh": "氧气是空气的组成部分。",
+        "answer_zh": "空气",
+        "answer_aliases_zh": [
+          "空气"
+        ]
+      },
+      "translation_sha256": "fec1cd6fc86d33e5bddf8554fc1758c0ca5034683ce0f777f9a3b22d941708fa"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000910",
+      "input_sha256": "9b2df63f53b6c6dd377a2402df177ca4c3bc1a967f175573dfd3378ea98dd9e9",
+      "english": {
+        "direction": "entity -> purpose",
+        "relation_id": "entity_to_purpose",
+        "answer": "tell time",
+        "canonical_fact": "A clock is used to tell time.",
+        "subject": "clock",
+        "prompt_en": "What is the stated purpose of a clock?",
+        "relation_definition": "The stated intended use or function of a specified entity.",
+        "answer_aliases_en": [
+          "tell time"
+        ],
+        "relation_spec": {
+          "id": "entity_to_purpose",
+          "definition": "The stated intended use or function of a specified entity.",
+          "direction": "entity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "12c901e695c8022eebbcabcbb17f2b2929b5f5645b0e6465ee39ee347901cbc3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000910",
+        "subject_zh": "钟表",
+        "prompt_zh": "钟表的规定用途是什么？",
+        "canonical_fact_zh": "钟表用来报时。",
+        "answer_zh": "报时",
+        "answer_aliases_zh": [
+          "报时"
+        ]
+      },
+      "translation_sha256": "daa75e31cd7a41cf19d252b5b35833750d210799691a5ec7b3dac4d39b4579a6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000870",
+        "historical:raw_commonsense_qa_000910"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0af82f851a0884d25eace130602fa7b0eba9e9d26a0739b7281ab2136ddf41b8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2331,
+      "first_chunk_seconds": 5.571,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2397,
+        "prompt_tokens": 1600,
+        "total_tokens": 3997,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1939,
+          "text_tokens": 458
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ccb84ecf866ced6acf6674a8417cb7d6a37d96e493b19e97125c98d437d5b92",
+      "status": "completed",
+      "latency_seconds": 39.127
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000870",
+        "historical:raw_commonsense_qa_000910"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3a9af1b2259fc9cd0f7c26f18d7f6ed3672ed735e0a4ed8ecb7d22ac99041d46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1246,
+      "first_chunk_seconds": 32.937,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1274,
+        "prompt_tokens": 769,
+        "total_tokens": 2043,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1078,
+          "text_tokens": 196
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b0cb3425214c082d5c292712372e9b6e356d6a055608d8a5a380101d57dd87f0",
+      "status": "completed",
+      "latency_seconds": 49.334
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "4a412b09775c99877b100aa14122694f6c254017185ff85431c152516ab35686",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001105",
+      "decision": "ready",
+      "subject": "Growling",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "communication",
+      "canonical_fact": "Growling is an example of the animal behavior communication.",
+      "prompt_en": "Growling in a dog when a predator approaches is an example of which animal behavior?",
+      "evidence_quotes": [
+        "Growling is an example of which animal behavior?",
+        "communication"
+      ],
+      "reason": "The source question explicitly asks what animal-behavior category growling exemplifies; the source answer 'communication' is a standard taxonomy class for animal behavior. entity_to_class (entity -> class) fits exactly: growling (entity) belongs to the class communication. The existing answer 'communication' matches the source_answer, so it is retained. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Growling is an example of the animal behavior communication.",
+        "subject": "Growling",
+        "prompt_en": "Growling in a dog when a predator approaches is an example of which animal behavior?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bdf3e2b0019eb0605e952af02ffda65d74d86ea9a533413c6d4dd8a42d787b2c",
+      "input_sha256": "7524f82f445cc2340c4402bfc76f6c62ba87a94fbcc0e3782911c0e74b816d01",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001106",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'muscle' is a valid example of tissue but is not a uniquely identifying fact: many tissues (epithelial, connective, nervous) also satisfy 'a tissue in the human body.' entity_to_class requires direction entity->class (muscle -> tissue), which would force the answer to 'tissue' and conflict with the retained existing answer 'muscle.' description_to_entity requires a description that uniquely identifies one entity; 'a tissue in the human body' does not uniquely identify muscle. No catalog relation captures the class->example-instance direction without forcing a broad category. Deferring per unknown_relation guidance (defer_without_forcing).",
+      "input_sha256": "5ead63378d1e559d564fdd60da4064e3c9c10c4058d8a4f7613a8f1ff594a02c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001105",
+      "input_sha256": "7524f82f445cc2340c4402bfc76f6c62ba87a94fbcc0e3782911c0e74b816d01",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Growling is an example of the animal behavior communication.",
+        "subject": "Growling",
+        "prompt_en": "Growling in a dog when a predator approaches is an example of which animal behavior?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bdf3e2b0019eb0605e952af02ffda65d74d86ea9a533413c6d4dd8a42d787b2c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001105",
+        "subject_zh": "低吼",
+        "prompt_zh": "当捕食者靠近时，狗发出低吼声是哪种动物行为的例子？",
+        "canonical_fact_zh": "低吼是动物行为中交流的一个例子。",
+        "answer_zh": "交流",
+        "answer_aliases_zh": [
+          "交流"
+        ]
+      },
+      "translation_sha256": "31d898679c78802719fa848a37cdd04236a2565a0ea92427bf3a9120812eb61b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001105",
+        "historical:raw_ai2_arc_easy_001106"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "635dc91a32f7d8c155c95a8725f8dd252cd1903fc6186d68fbb64cbde35b8c80",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4595,
+      "first_chunk_seconds": 20.299,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4704,
+        "prompt_tokens": 1705,
+        "total_tokens": 6409,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4201,
+          "text_tokens": 503
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "945c8f54164945755d19f1056c71200e3cfd47f8e77bfac0b76de378bc477b2b",
+      "status": "completed",
+      "latency_seconds": 79.23
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001105"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7c33a845054ce5dd6dbb0509b327e2907255c89aa9b70e8e60f59e0179d5802f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 824,
+      "first_chunk_seconds": 9.687,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 855,
+        "prompt_tokens": 507,
+        "total_tokens": 1362,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 772,
+          "text_tokens": 83
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b2bde091d54a311f51758ac3326cf878eacf18a90a4fa6b71d9bccea8655c1a3",
+      "status": "completed",
+      "latency_seconds": 18.925
+    }
+  ],
+  "status": "completed"
+}

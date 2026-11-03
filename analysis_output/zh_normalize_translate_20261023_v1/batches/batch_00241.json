@@ -1,0 +1,150 @@
+{
+  "input_sha256": "b6ca49f4d064b07cabf36f73676194385b616a2f2a2ed704a00bb99d19b89af7",
+  "normalized": [
+    {
+      "record_id": "public:pbf_734acabdbc55162af738",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question only contains the lyric fragment 'good morning america how are you' and the answer 'Arlo Guthrie'. The subject 'City of New Orleans' is not present in either the source question or the source answer; it is external inference. No catalog relation cleanly maps a lyric fragment to a performer without an explicit song title in the source. Insufficient source support to confirm the subject as a named song.",
+      "input_sha256": "1e335a330ed03b4ea04bfd46c557c610f3b7d56216399b99e7ade27d77931e24",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_73980e79902d354170b9",
+      "decision": "ready",
+      "subject": "I Wish I Was a Punk Rocker",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Sandi Thom",
+      "canonical_fact": "Sandi Thom sings the song 'I Wish I Was a Punk Rocker'.",
+      "prompt_en": "Factual question: Who sings the song 'I Wish I Was a Punk Rocker'?",
+      "evidence_quotes": [
+        "who sings i wish i was a punk rocker",
+        "Sandi Thom"
+      ],
+      "reason": "The source question explicitly names the song 'I Wish I Was a Punk Rocker' and asks for the singer; the source answer is 'Sandi Thom'. The existing answer matches the source exactly. The relation song_to_performer (song -> performer) fits precisely: subject is the named song, answer is the performing artist. No conflicting information.",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "Sandi Thom sings the song 'I Wish I Was a Punk Rocker'.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Factual question: Who sings the song 'I Wish I Was a Punk Rocker'?",
+        "subject": "I Wish I Was a Punk Rocker",
+        "answer": "Sandi Thom",
+        "answer_aliases_en": [
+          "Sandi Thom",
+          "Alexandria \"Sandi\" Thom"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "095fa5aace64e59752b2011495cafaaa8bf969b64da8818619580ca40b451ae7",
+      "input_sha256": "f8bdefe9351909ab2ca021b0f176e5a40761d8f36cb0c4f245c0c54d4f3c7bbc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_73980e79902d354170b9",
+      "input_sha256": "f8bdefe9351909ab2ca021b0f176e5a40761d8f36cb0c4f245c0c54d4f3c7bbc",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "Sandi Thom sings the song 'I Wish I Was a Punk Rocker'.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Factual question: Who sings the song 'I Wish I Was a Punk Rocker'?",
+        "subject": "I Wish I Was a Punk Rocker",
+        "answer": "Sandi Thom",
+        "answer_aliases_en": [
+          "Sandi Thom",
+          "Alexandria \"Sandi\" Thom"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "095fa5aace64e59752b2011495cafaaa8bf969b64da8818619580ca40b451ae7",
+      "translation": {
+        "record_id": "public:pbf_73980e79902d354170b9",
+        "subject_zh": "I Wish I Was a Punk Rocker",
+        "prompt_zh": "事实性问题：谁演唱了歌曲《I Wish I Was a Punk Rocker》？",
+        "canonical_fact_zh": "桑迪·汤姆演唱了歌曲《I Wish I Was a Punk Rocker》。",
+        "answer_zh": "桑迪·汤姆",
+        "answer_aliases_zh": [
+          "桑迪·汤姆",
+          "亚历山德里亚\"桑迪\"汤姆"
+        ]
+      },
+      "translation_sha256": "9818a8d5ff853b9663768776711750f10601faf4ba5875159b7023ea5bcb5194"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_734acabdbc55162af738",
+        "public:pbf_73980e79902d354170b9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d44b715c686d4bdd4e18dd75872c6e4767262109e9e0203e70b9624a27c645b0",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2091,
+        "prompt_tokens": 1624,
+        "total_tokens": 3715,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1610,
+          "text_tokens": 481
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "73274b6bb8f2ebaca3b986a3de0f341e4487ff876740fc1369d0af40a506105b",
+      "status": "completed",
+      "latency_seconds": 70.451
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_73980e79902d354170b9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39d22077799e7623ce0100e668b7742860dbed38e557e4030e73754168aa623f",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1080,
+        "prompt_tokens": 549,
+        "total_tokens": 1629,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 919,
+          "text_tokens": 161
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a73ab8db30cffdd822e3027ea513ea1962483f4f369e9f3320db24e7fefd512b",
+      "status": "completed",
+      "latency_seconds": 22.459
+    }
+  ],
+  "status": "completed"
+}

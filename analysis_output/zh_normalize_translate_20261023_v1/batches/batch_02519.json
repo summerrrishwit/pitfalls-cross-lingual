@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5e1a1ca222c62a9caafc81e1e35fa916a65be1f7a54b284816761c101176e5ca",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002610",
+      "decision": "ready",
+      "subject": "cloud",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "atmosphere",
+      "canonical_fact": "Clouds are located in the atmosphere.",
+      "prompt_en": "Where are clouds typically found?",
+      "evidence_quotes": [
+        "Where could there be a cloud?",
+        "atmosphere"
+      ],
+      "reason": "The source question asks where a cloud could be and the answer is 'atmosphere.' This is a containment relationship: a cloud (entity) exists within the atmosphere (containing location at a specified level of the Earth's envelope). The catalog relation entity_to_containing_location fits exactly (entity -> containing location, geographic containment at a specified level, not habitat/origin/process). The answer 'atmosphere' is a literal substring of source_answer.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "atmosphere",
+        "canonical_fact": "Clouds are located in the atmosphere.",
+        "subject": "cloud",
+        "prompt_en": "Where are clouds typically found?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "atmosphere"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "975286628941004825ed5ef1739d4205e377fcbad88b34445b05de5a5ad12ff5",
+      "input_sha256": "4f398bf1f63f7e8663b13005a3cfc32f98c34d83d2595030816f1547fc3b530a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002652",
+      "decision": "ready",
+      "subject": "breathing",
+      "relation_id": "process_to_function",
+      "relation_definition": "The primary function or purpose of a specified biological or physical process; retains stated scope such as the beneficiary group (e.g., for living things).",
+      "direction": "process -> function",
+      "answer": "sustaining life",
+      "canonical_fact": "Breathing sustains life for living things.",
+      "prompt_en": "What is the primary function of breathing for living things?",
+      "evidence_quotes": [
+        "What does breathing do for living things?",
+        "sustaining life"
+      ],
+      "reason": "The source question asks what breathing does for living things and the answer is 'sustaining life.' No existing catalog relation captures a process-to-function relationship (term_to_definition defines what something IS, not what it DOES). A new relation 'process_to_function' (direction: process -> function) is proposed to capture the primary purpose of a specified biological process, retaining the scope qualifier 'for living things.' The answer 'sustaining life' is a literal substring of source_answer.",
+      "english": {
+        "direction": "process -> function",
+        "relation_id": "process_to_function",
+        "answer": "sustaining life",
+        "canonical_fact": "Breathing sustains life for living things.",
+        "subject": "breathing",
+        "prompt_en": "What is the primary function of breathing for living things?",
+        "relation_definition": "The primary function or purpose of a specified biological or physical process; retains stated scope such as the beneficiary group (e.g., for living things).",
+        "answer_aliases_en": [
+          "sustaining life"
+        ],
+        "relation_spec": {
+          "id": "process_to_function",
+          "definition": "The primary function or purpose of a specified biological or physical process; retains stated scope such as the beneficiary group (e.g., for living things).",
+          "direction": "process -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e3ef9baf29e44284e80b30628d2d1c9d23e7fa998ac69d10b990dc234a204039",
+      "input_sha256": "f0346e4a796eb5e5dc874a372d9566c69e59c326a46af888dc715966a3ed696b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002610",
+      "input_sha256": "4f398bf1f63f7e8663b13005a3cfc32f98c34d83d2595030816f1547fc3b530a",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "atmosphere",
+        "canonical_fact": "Clouds are located in the atmosphere.",
+        "subject": "cloud",
+        "prompt_en": "Where are clouds typically found?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "atmosphere"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "975286628941004825ed5ef1739d4205e377fcbad88b34445b05de5a5ad12ff5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002610",
+        "subject_zh": "云",
+        "prompt_zh": "云通常出现在哪里？",
+        "canonical_fact_zh": "云位于大气层中。",
+        "answer_zh": "大气层",
+        "answer_aliases_zh": [
+          "大气层"
+        ]
+      },
+      "translation_sha256": "06b28e366c725413a2b7fa8f244c1c5cb8143691343f013b1b826ded8c3c737a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002652",
+      "input_sha256": "f0346e4a796eb5e5dc874a372d9566c69e59c326a46af888dc715966a3ed696b",
+      "english": {
+        "direction": "process -> function",
+        "relation_id": "process_to_function",
+        "answer": "sustaining life",
+        "canonical_fact": "Breathing sustains life for living things.",
+        "subject": "breathing",
+        "prompt_en": "What is the primary function of breathing for living things?",
+        "relation_definition": "The primary function or purpose of a specified biological or physical process; retains stated scope such as the beneficiary group (e.g., for living things).",
+        "answer_aliases_en": [
+          "sustaining life"
+        ],
+        "relation_spec": {
+          "id": "process_to_function",
+          "definition": "The primary function or purpose of a specified biological or physical process; retains stated scope such as the beneficiary group (e.g., for living things).",
+          "direction": "process -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e3ef9baf29e44284e80b30628d2d1c9d23e7fa998ac69d10b990dc234a204039",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002652",
+        "subject_zh": "呼吸",
+        "prompt_zh": "呼吸对生物的主要功能是什么？",
+        "canonical_fact_zh": "呼吸为生物维持生命。",
+        "answer_zh": "维持生命",
+        "answer_aliases_zh": [
+          "维持生命"
+        ]
+      },
+      "translation_sha256": "6968534aee5b6407b3c1e5f0fe5a4328a2b3852f7ef537455d8645b0af62265d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002610",
+        "historical:raw_commonsense_qa_002652"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f1d214f108b428ae093405fc21ec7ac0aacbb49137215a828151d9c220e666d6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2273,
+      "first_chunk_seconds": 38.992,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2447,
+        "prompt_tokens": 1623,
+        "total_tokens": 4070,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1896,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "010f4ed5f40ad3ae7b4ef59a7411b930e94bcfc5a054e9f1642997f96dd29f8e",
+      "status": "completed",
+      "latency_seconds": 69.171
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002610",
+        "historical:raw_commonsense_qa_002652"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ed270e6945fc8e3a563ad5f827f20662db1720c888e7d73fbecaafa43be0274a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 716,
+      "first_chunk_seconds": 5.807,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 788,
+        "prompt_tokens": 838,
+        "total_tokens": 1626,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 589,
+          "text_tokens": 199
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2ff46b36eb690aedc25fbbd17f2f4a78026085f1a356759664f6cce27b82eba4",
+      "status": "completed",
+      "latency_seconds": 14.852
+    }
+  ],
+  "status": "completed"
+}

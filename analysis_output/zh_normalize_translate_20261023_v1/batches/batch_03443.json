@@ -1,0 +1,158 @@
+{
+  "input_sha256": "deeb69a4307d0ef425580b945f2d3822023386f7376bbf2085ed88adfed34ab2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004632",
+      "decision": "ready",
+      "subject": "playing fetch with a small dog",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "game",
+      "canonical_fact": "Playing fetch with a small dog is called a game.",
+      "prompt_en": "What term describes the activity of playing fetch with a small dog?",
+      "evidence_quotes": [
+        "game",
+        "playing fetch with a small dog"
+      ],
+      "reason": "Source question asks for the name/term for the described activity; source answer is 'game'. description_to_term fits: the subject is a defining description of an activity, and the answer is the conventional term that fits it. No better catalog relation applies; entity_to_class was considered but the question structure (what do you call X?) aligns more naturally with description→term.",
+      "english": {
+        "prompt_en": "What term describes the activity of playing fetch with a small dog?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "game",
+        "canonical_fact": "Playing fetch with a small dog is called a game.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "playing fetch with a small dog",
+        "answer_aliases_en": [
+          "game"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2e5dad8d28d39d108bf2f7e963a5daad2c8b3b0aa26fc41abd1d386b97e2c2a0",
+      "input_sha256": "348ffee1bca980b128030abe0f349f68fbb2211b0663f008f66fc97d0fbdf3a7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004648",
+      "decision": "ready",
+      "subject": "marmots",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "wilderness",
+      "canonical_fact": "Marmots live in the wilderness in their natural state before capture.",
+      "prompt_en": "Where do marmots live in their natural state before being captured?",
+      "evidence_quotes": [
+        "wilderness",
+        "marmot",
+        "before they are captured"
+      ],
+      "reason": "Source question asks where marmots live before capture; source answer is 'wilderness'. organism_to_habitat fits: marmots (organism) mapped to their natural habitat (wilderness). The qualifier 'before they are captured' is preserved in the canonical fact and prompt. The relation's scope note ('retaining scope and range rather than asserting exclusivity') aligns with the source's use of 'all marmot' as a general habitat statement.",
+      "english": {
+        "prompt_en": "Where do marmots live in their natural state before being captured?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer": "wilderness",
+        "canonical_fact": "Marmots live in the wilderness in their natural state before capture.",
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "subject": "marmots",
+        "answer_aliases_en": [
+          "wilderness"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8c7229070bd36e21ce914f3a65f18b5e4cd9363ec5d696c4e0fc21a277dbef21",
+      "input_sha256": "f51b294b927952cff5ebbeb9173967c936df2daf41efcd035aaa0c3f5b2b9dec",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004632",
+        "historical:raw_commonsense_qa_004648"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9308a44071f2a41ad724be16a4777f1a90cb410ca2bc2c8abbe39b145476acd4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3093,
+      "first_chunk_seconds": 4.826,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3299,
+        "prompt_tokens": 1585,
+        "total_tokens": 4884,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2757,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dc63d90d38ed7963e92e517189c629d598cbb567c78313a17ed33bd4cac00f45",
+      "status": "completed",
+      "latency_seconds": 167.806
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004632",
+        "historical:raw_commonsense_qa_004648"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "234f467d2a1c8a1663f24a6e828bb673a4e3ae31d2d32a9e8b8e4d3b6d1989f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 86.673
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004632",
+        "historical:raw_commonsense_qa_004648"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "234f467d2a1c8a1663f24a6e828bb673a4e3ae31d2d32a9e8b8e4d3b6d1989f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 79.912
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004632",
+        "historical:raw_commonsense_qa_004648"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "234f467d2a1c8a1663f24a6e828bb673a4e3ae31d2d32a9e8b8e4d3b6d1989f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 65.841
+    }
+  ],
+  "status": "failed"
+}

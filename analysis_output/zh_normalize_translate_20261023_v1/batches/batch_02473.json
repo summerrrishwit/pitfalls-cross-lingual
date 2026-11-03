@@ -1,0 +1,246 @@
+{
+  "input_sha256": "c6226aaf0e14211ae94ddadbdfe77b3aadf99d15179366a74981fdbf194fbcfb",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001015",
+      "decision": "ready",
+      "subject": "Shark Tank",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "television show",
+      "canonical_fact": "Shark Tank is a popular reality television show.",
+      "prompt_en": "What category of media is the popular reality franchise Shark Tank?",
+      "evidence_quotes": [
+        "Shark tank is a popular reality what?",
+        "television show"
+      ],
+      "reason": "The source question asks for the class/type of Shark Tank and the source answer 'television show' is a stable category membership. entity_to_class from the catalog fits exactly: the subject (Shark Tank, a work/entity) maps to its class (television show). The prior 'genre' label was not a valid catalog ID; entity_to_class is the correct catalog relation for this classification fact.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "television show",
+        "canonical_fact": "Shark Tank is a popular reality television show.",
+        "subject": "Shark Tank",
+        "prompt_en": "What category of media is the popular reality franchise Shark Tank?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "television show"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b88d97b5da1649ad5846950e34013bb9cb915881444a5b16a3b1fa0152c5c647",
+      "input_sha256": "2c34651560a5742e749360acecf687fba05bf039a2e363ad4670edeb8456e12e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001052",
+      "decision": "ready",
+      "subject": "man and mammoth",
+      "relation_id": "species_pair_to_coexistence_period",
+      "relation_definition": "Time period during which two named species or organisms are stated to have coexisted; not a habitat, origin, or single-species date.",
+      "direction": "species pair -> time period",
+      "answer": "stone age",
+      "canonical_fact": "Man and mammoth coexisted during the stone age.",
+      "prompt_en": "During which era would a human and a woolly mammoth most likely have lived at the same time?",
+      "evidence_quotes": [
+        "If man and mammoth wanted to meet, they would probably have to do it during when?",
+        "stone age"
+      ],
+      "reason": "No catalog relation covers a coexistence time period for a pair of species. The proposed new relation species_pair_to_coexistence_period precisely captures the direction (pair -> period) and definition without forcing a broad category. The source question and answer directly support that man and mammoth coexisted during the stone age; the answer 'stone age' is copied verbatim from source_answer.",
+      "english": {
+        "direction": "species pair -> time period",
+        "relation_id": "species_pair_to_coexistence_period",
+        "answer": "stone age",
+        "canonical_fact": "Man and mammoth coexisted during the stone age.",
+        "subject": "man and mammoth",
+        "prompt_en": "During which era would a human and a woolly mammoth most likely have lived at the same time?",
+        "relation_definition": "Time period during which two named species or organisms are stated to have coexisted; not a habitat, origin, or single-species date.",
+        "answer_aliases_en": [
+          "stone age"
+        ],
+        "relation_spec": {
+          "id": "species_pair_to_coexistence_period",
+          "definition": "Time period during which two named species or organisms are stated to have coexisted; not a habitat, origin, or single-species date.",
+          "direction": "species pair -> time period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8b43f9a717e35098eaee8626093e949b6f5105b4bf7e8114e2660d18fd4aef83",
+      "input_sha256": "97fd0f0549de9f76192571941e18d991e2e7ac3c8582dfc2c48bdf9aa92a08bb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001015",
+      "input_sha256": "2c34651560a5742e749360acecf687fba05bf039a2e363ad4670edeb8456e12e",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "television show",
+        "canonical_fact": "Shark Tank is a popular reality television show.",
+        "subject": "Shark Tank",
+        "prompt_en": "What category of media is the popular reality franchise Shark Tank?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "television show"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b88d97b5da1649ad5846950e34013bb9cb915881444a5b16a3b1fa0152c5c647",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001015",
+        "subject_zh": "Shark Tank",
+        "prompt_zh": "热门真人秀IP Shark Tank 属于哪一类媒体？",
+        "canonical_fact_zh": "Shark Tank 是一档热门真人秀电视节目。",
+        "answer_zh": "电视节目",
+        "answer_aliases_zh": [
+          "电视节目"
+        ]
+      },
+      "translation_sha256": "c46736e61cdb7d1058515d8fffebce81a0011895275ed8efdd72b7833b6dd8ce"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001052",
+      "input_sha256": "97fd0f0549de9f76192571941e18d991e2e7ac3c8582dfc2c48bdf9aa92a08bb",
+      "english": {
+        "direction": "species pair -> time period",
+        "relation_id": "species_pair_to_coexistence_period",
+        "answer": "stone age",
+        "canonical_fact": "Man and mammoth coexisted during the stone age.",
+        "subject": "man and mammoth",
+        "prompt_en": "During which era would a human and a woolly mammoth most likely have lived at the same time?",
+        "relation_definition": "Time period during which two named species or organisms are stated to have coexisted; not a habitat, origin, or single-species date.",
+        "answer_aliases_en": [
+          "stone age"
+        ],
+        "relation_spec": {
+          "id": "species_pair_to_coexistence_period",
+          "definition": "Time period during which two named species or organisms are stated to have coexisted; not a habitat, origin, or single-species date.",
+          "direction": "species pair -> time period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8b43f9a717e35098eaee8626093e949b6f5105b4bf7e8114e2660d18fd4aef83",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001052",
+        "subject_zh": "人类与猛犸象",
+        "prompt_zh": "人类与披毛猛犸象最有可能共同生活在哪个时代？",
+        "canonical_fact_zh": "人类与猛犸象在石器时代曾共存。",
+        "answer_zh": "石器时代",
+        "answer_aliases_zh": [
+          "石器时代"
+        ]
+      },
+      "translation_sha256": "8f9ce6f1e07cdd69b21c9f21ab835a0e8765409bc009e77ba178097e4ad4780d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001015",
+        "historical:raw_commonsense_qa_001052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e34773a5121560a3f2a113a70ccf8da2b95aa97f4766a6cf0786e6105a92f40b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2495,
+      "first_chunk_seconds": 34.203,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2656,
+        "prompt_tokens": 1652,
+        "total_tokens": 4308,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2080,
+          "text_tokens": 576
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1ba425e446718370bd5364a957c4492ecc1b15b0d6b7c961e03534c5c42905a2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 68.922,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001015",
+        "historical:raw_commonsense_qa_001052"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6303f64faa010a38836fa6e67eb34809fe4bc4a45fd6f70651a8b4ef7d02f295",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2850,
+      "first_chunk_seconds": 10.01,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2985,
+        "prompt_tokens": 1671,
+        "total_tokens": 4656,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2432,
+          "text_tokens": 553
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8656e96fbc1635b9021138a23bfbcf5e9fb032927fa1d3b4204e3469bfc66d9c",
+      "status": "completed",
+      "latency_seconds": 46.454
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001015",
+        "historical:raw_commonsense_qa_001052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7e5b4f5b67a88f34ceb8450a573ff979597542319fd472f2fa60c7bf30aa4bb5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1217,
+      "first_chunk_seconds": 2.83,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1267,
+        "prompt_tokens": 852,
+        "total_tokens": 2119,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1106,
+          "text_tokens": 161
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6ebc6a0e17ea944690fd9c184492281348f765cbf56879321673e39c9ccbae3",
+      "status": "completed",
+      "latency_seconds": 17.47
+    }
+  ],
+  "status": "completed"
+}

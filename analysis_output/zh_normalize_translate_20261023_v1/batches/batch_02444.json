@@ -1,0 +1,214 @@
+{
+  "input_sha256": "639cdc9dfb305af1427f40c2870de4a5ea0fb5d1d3dd07b071105ac39d6492e1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000129",
+      "decision": "ready",
+      "subject": "flea",
+      "relation_id": "organism_to_feeding_mechanism",
+      "relation_definition": "The specific action or mechanism by which an organism obtains food; direction: organism -> feeding mechanism.",
+      "direction": "organism -> feeding mechanism",
+      "answer": "suck blood",
+      "canonical_fact": "A flea feeds by sucking blood.",
+      "prompt_en": "How does a flea feed?",
+      "evidence_quotes": [
+        "suck blood",
+        "to feed it can do what"
+      ],
+      "reason": "Source explicitly states the flea's feeding action is 'suck blood.' No existing catalog relation captures an organism-specific feeding method (organism_to_habitat covers location, not mechanism), so a new precise relation is proposed rather than forcing a broad category.",
+      "english": {
+        "direction": "organism -> feeding mechanism",
+        "relation_id": "organism_to_feeding_mechanism",
+        "answer": "suck blood",
+        "canonical_fact": "A flea feeds by sucking blood.",
+        "subject": "flea",
+        "prompt_en": "How does a flea feed?",
+        "relation_definition": "The specific action or mechanism by which an organism obtains food; direction: organism -> feeding mechanism.",
+        "answer_aliases_en": [
+          "suck blood"
+        ],
+        "relation_spec": {
+          "id": "organism_to_feeding_mechanism",
+          "definition": "The specific action or mechanism by which an organism obtains food; direction: organism -> feeding mechanism.",
+          "direction": "organism -> feeding mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "79030d47c07a3c8c01b41ca801d8ee1647795be7d733fcfca7bc2c5f37a30839",
+      "input_sha256": "b509d2ffd75a00b92178e58f5173090a5c61eff620d9eeddb0e648dd2abd19a5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000146",
+      "decision": "ready",
+      "subject": "jellyfish",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "salt water",
+      "canonical_fact": "A jellyfish must live in salt water.",
+      "prompt_en": "Where must a jellyfish live?",
+      "evidence_quotes": [
+        "salt water",
+        "Where must a jellyfish live?"
+      ],
+      "reason": "Catalog relation organism_to_habitat fits exactly: jellyfish (organism) -> salt water (habitat). The necessity qualifier 'must' from the source is preserved in the canonical fact to retain the original scope.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "salt water",
+        "canonical_fact": "A jellyfish must live in salt water.",
+        "subject": "jellyfish",
+        "prompt_en": "Where must a jellyfish live?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "salt water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "afec3fc3a36efffa6cea8d5dc1ff8d9c93c4cc1877db140a85778d36c4a735ff",
+      "input_sha256": "b5681e49a7fc34591a8c58253af5fa3067c2b15e54e35b88cc4c6ea16e188cde",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000129",
+      "input_sha256": "b509d2ffd75a00b92178e58f5173090a5c61eff620d9eeddb0e648dd2abd19a5",
+      "english": {
+        "direction": "organism -> feeding mechanism",
+        "relation_id": "organism_to_feeding_mechanism",
+        "answer": "suck blood",
+        "canonical_fact": "A flea feeds by sucking blood.",
+        "subject": "flea",
+        "prompt_en": "How does a flea feed?",
+        "relation_definition": "The specific action or mechanism by which an organism obtains food; direction: organism -> feeding mechanism.",
+        "answer_aliases_en": [
+          "suck blood"
+        ],
+        "relation_spec": {
+          "id": "organism_to_feeding_mechanism",
+          "definition": "The specific action or mechanism by which an organism obtains food; direction: organism -> feeding mechanism.",
+          "direction": "organism -> feeding mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "79030d47c07a3c8c01b41ca801d8ee1647795be7d733fcfca7bc2c5f37a30839",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000129",
+        "subject_zh": "跳蚤",
+        "prompt_zh": "跳蚤是如何取食的？",
+        "canonical_fact_zh": "跳蚤通过吸食血液来获取食物。",
+        "answer_zh": "吸食血液",
+        "answer_aliases_zh": [
+          "吸食血液"
+        ]
+      },
+      "translation_sha256": "b3ec151519d5aa9ccea185fa63cabd39d0e7591f0a98b5c982406ea33ee0ffb1"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000146",
+      "input_sha256": "b5681e49a7fc34591a8c58253af5fa3067c2b15e54e35b88cc4c6ea16e188cde",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "salt water",
+        "canonical_fact": "A jellyfish must live in salt water.",
+        "subject": "jellyfish",
+        "prompt_en": "Where must a jellyfish live?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "salt water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "afec3fc3a36efffa6cea8d5dc1ff8d9c93c4cc1877db140a85778d36c4a735ff",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000146",
+        "subject_zh": "水母",
+        "prompt_zh": "水母必须生活在什么地方？",
+        "canonical_fact_zh": "水母必须生活在盐水中。",
+        "answer_zh": "盐水",
+        "answer_aliases_zh": [
+          "盐水"
+        ]
+      },
+      "translation_sha256": "75809b1255ff060c473c1470f6486a1b197864687b8aef68071b7c0152349fdf"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000129",
+        "historical:raw_commonsense_qa_000146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "68780794cec7aa766bb3f56eaede8f9cdba8dc6350cf483666267d8330387597",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2061,
+      "first_chunk_seconds": 73.867,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2124,
+        "prompt_tokens": 1634,
+        "total_tokens": 3758,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1693,
+          "text_tokens": 431
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2e61c1727c97c1bd44ca31f396391aa6e70cd45ffbcc883d971ca6603924345d",
+      "status": "completed",
+      "latency_seconds": 99.996
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000129",
+        "historical:raw_commonsense_qa_000146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e2dd6681acc5e9f32893074dfef686207aca840c13ec7c755411d9bf72fa1f6f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1116,
+      "first_chunk_seconds": 1.652,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1242,
+        "prompt_tokens": 808,
+        "total_tokens": 2050,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1040,
+          "text_tokens": 202
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "98aaa72c5b30615e1fd00d44d9d7ee5bc469296e4ec36ed860105b63f61e8cca",
+      "status": "completed",
+      "latency_seconds": 19.662
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,246 @@
+{
+  "input_sha256": "2e399d06a8134fda5b68de00be4b671694ff5ced1f22e8a4fa85d21b98205e7c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007720",
+      "decision": "ready",
+      "subject": "typing",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "communication",
+      "canonical_fact": "Typing is a form of communication.",
+      "prompt_en": "What is typing a form of?",
+      "evidence_quotes": [
+        "What is typing a form of?",
+        "communication"
+      ],
+      "reason": "The source states 'typing is a form of communication.' This is class membership: 'typing' (a specific activity/entity) belongs to the category 'communication.' The catalog relation entity_to_class (entity -> class) fits exactly. No other listed relation captures 'form of' as category membership without forcing a broader category.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Typing is a form of communication.",
+        "subject": "typing",
+        "prompt_en": "What is typing a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ef611d8766a22ebbb88ba3544331e060f3deeea99b39e02d3d8f981bab5b1ee9",
+      "input_sha256": "1ea3f6e3705f3dd9164a9de88a4851199dd958d6d83a2070794fbafadf62f198",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007733",
+      "decision": "ready",
+      "subject": "foolhardy",
+      "relation_id": "term_to_antonym",
+      "relation_definition": "A standard antonym (opposite in meaning) for the specified word or term in common usage.",
+      "direction": "term -> antonym",
+      "answer": "thoughtful",
+      "canonical_fact": "The opposite of foolhardy is thoughtful.",
+      "prompt_en": "What is the opposite of foolhardy?",
+      "evidence_quotes": [
+        "What is the opposite of foolhardy?",
+        "thoughtful"
+      ],
+      "reason": "No existing catalog relation captures an antonym/opposite-of relationship. Proposed new relation 'term_to_antonym' (term -> antonym) to precisely represent the 'opposite of' relation stated in the source without forcing a mismatched broad category such as entity_to_alias or symbol_to_meaning.",
+      "english": {
+        "direction": "term -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "thoughtful",
+        "canonical_fact": "The opposite of foolhardy is thoughtful.",
+        "subject": "foolhardy",
+        "prompt_en": "What is the opposite of foolhardy?",
+        "relation_definition": "A standard antonym (opposite in meaning) for the specified word or term in common usage.",
+        "answer_aliases_en": [
+          "thoughtful"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "A standard antonym (opposite in meaning) for the specified word or term in common usage.",
+          "direction": "term -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "af580cf2e5d510160bf7e90b8730adc79a8e33ca56fb630d39a5659c03affcb9",
+      "input_sha256": "5c53e03bad6b82ff22645785bbd4f4d95d599b4c16086d21415debe3174ff2ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007720",
+      "input_sha256": "1ea3f6e3705f3dd9164a9de88a4851199dd958d6d83a2070794fbafadf62f198",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Typing is a form of communication.",
+        "subject": "typing",
+        "prompt_en": "What is typing a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ef611d8766a22ebbb88ba3544331e060f3deeea99b39e02d3d8f981bab5b1ee9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007720",
+        "subject_zh": "打字",
+        "prompt_zh": "打字是哪种形式？",
+        "canonical_fact_zh": "打字是一种交流形式。",
+        "answer_zh": "交流",
+        "answer_aliases_zh": [
+          "交流"
+        ]
+      },
+      "translation_sha256": "e9f905c57cbf3e02055229f6123e7085c6cc5b22426cfce117cb1c97cffc84c2"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007733",
+      "input_sha256": "5c53e03bad6b82ff22645785bbd4f4d95d599b4c16086d21415debe3174ff2ac",
+      "english": {
+        "direction": "term -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "thoughtful",
+        "canonical_fact": "The opposite of foolhardy is thoughtful.",
+        "subject": "foolhardy",
+        "prompt_en": "What is the opposite of foolhardy?",
+        "relation_definition": "A standard antonym (opposite in meaning) for the specified word or term in common usage.",
+        "answer_aliases_en": [
+          "thoughtful"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "A standard antonym (opposite in meaning) for the specified word or term in common usage.",
+          "direction": "term -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "af580cf2e5d510160bf7e90b8730adc79a8e33ca56fb630d39a5659c03affcb9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007733",
+        "subject_zh": "鲁莽",
+        "prompt_zh": "鲁莽的反义词是什么？",
+        "canonical_fact_zh": "鲁莽的反义词是深思熟虑。",
+        "answer_zh": "深思熟虑",
+        "answer_aliases_zh": [
+          "深思熟虑"
+        ]
+      },
+      "translation_sha256": "dd0b7632cf2b0f1c1401b2a9fdf291ab71312532081b276ebcb8b668a9a11603"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007720",
+        "historical:raw_commonsense_qa_007733"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a21454d0fff8b8bdc5ffca5b5d5fe4c805f12bc4798526da2b0c17828a74eabc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1664,
+      "first_chunk_seconds": 44.631,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1695,
+        "prompt_tokens": 1609,
+        "total_tokens": 3304,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1375,
+          "text_tokens": 320
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2121ccde45c87e4611a20cad11f082fb89fcf9c82add4a3c7953ee991291aab5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 68.062,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007720",
+        "historical:raw_commonsense_qa_007733"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "82dd9ecd5fe1504fac46f48644fa81aead58eac16a729192c08d38bf0e3e1dc4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2747,
+      "first_chunk_seconds": 27.667,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2867,
+        "prompt_tokens": 1628,
+        "total_tokens": 4495,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2399,
+          "text_tokens": 468
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4adfca24be1e5fc81ebc8dc61b8609d2fa0f74e1e47d8eec554a101a42199612",
+      "status": "completed",
+      "latency_seconds": 70.844
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007720",
+        "historical:raw_commonsense_qa_007733"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9c626bd1ec4675bd5774eaf44903b9e9248b841a9060d62af9df16b9b4ac25cb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 859,
+      "first_chunk_seconds": 10.351,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1025,
+        "prompt_tokens": 789,
+        "total_tokens": 1814,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 824,
+          "text_tokens": 201
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a08920b72a52ff3ba2b8cf07481859776812972e58f1855331e0e42cabc976d",
+      "status": "completed",
+      "latency_seconds": 22.888
+    }
+  ],
+  "status": "completed"
+}

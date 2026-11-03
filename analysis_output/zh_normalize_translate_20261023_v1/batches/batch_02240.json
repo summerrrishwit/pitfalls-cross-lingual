@@ -1,0 +1,213 @@
+{
+  "input_sha256": "6800adf8acf35e22bac983d3d9b41660f809ec760518b377bf9829641191e823",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000825",
+      "decision": "ready",
+      "subject": "climate",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "long-term average of a region's weather",
+      "canonical_fact": "Climate is the long-term average of a region's weather.",
+      "prompt_en": "How is weather related to climate?",
+      "evidence_quotes": [
+        "Climate is the long-term average of a region's weather."
+      ],
+      "reason": "The source answer explicitly defines climate as the long-term average of a region's weather. This maps directly to the existing catalog relation term_to_definition (term -> definition). The answer 'long-term average of a region's weather' is a concise literal substring of the source answer. The prompt_en is the original question, is option-free, and does not contain the answer string.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "long-term average of a region's weather",
+        "canonical_fact": "Climate is the long-term average of a region's weather.",
+        "subject": "climate",
+        "prompt_en": "How is weather related to climate?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "long-term average of a region's weather"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b59c4b1b51ae9407059762cce378c2177a017b77133e2a205d7ed935a43501ec",
+      "input_sha256": "39c78ad65b74eae9249606490a84a7b0f261a84f158536518b77415637db83fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000827",
+      "decision": "ready",
+      "subject": "plants",
+      "relation_id": "organism_to_energy_storage_form",
+      "relation_definition": "The form (e.g., chemical, mechanical, thermal) in which the specified organism class stores energy derived from a stated source.",
+      "direction": "organism -> energy storage form",
+      "answer": "chemical",
+      "canonical_fact": "Plants store the energy produced from sunlight in chemical form.",
+      "prompt_en": "In what form do plants store the energy produced from sunlight?",
+      "evidence_quotes": [
+        "In what form do plants store the energy produced from sunlight?",
+        "chemical"
+      ],
+      "reason": "No existing catalog relation captures 'the form in which an organism stores energy from a stated source.' entity_to_material concerns material composition, not energy-storage form. A new precise relation organism_to_energy_storage_form is proposed. The answer 'chemical' is a literal substring of the source answer. The prompt_en is the original question, option-free, and does not contain the answer.",
+      "english": {
+        "direction": "organism -> energy storage form",
+        "relation_id": "organism_to_energy_storage_form",
+        "answer": "chemical",
+        "canonical_fact": "Plants store the energy produced from sunlight in chemical form.",
+        "subject": "plants",
+        "prompt_en": "In what form do plants store the energy produced from sunlight?",
+        "relation_definition": "The form (e.g., chemical, mechanical, thermal) in which the specified organism class stores energy derived from a stated source.",
+        "answer_aliases_en": [
+          "chemical"
+        ],
+        "relation_spec": {
+          "id": "organism_to_energy_storage_form",
+          "definition": "The form (e.g., chemical, mechanical, thermal) in which the specified organism class stores energy derived from a stated source.",
+          "direction": "organism -> energy storage form"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35533fcc7737c2fe6458a55d0bb50978db37e55723a59525df951be2f63af5eb",
+      "input_sha256": "a159243eefd185a7275c3fab7a281c67871daa1e6995db08e76d904ecda9234b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000825",
+      "input_sha256": "39c78ad65b74eae9249606490a84a7b0f261a84f158536518b77415637db83fe",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "long-term average of a region's weather",
+        "canonical_fact": "Climate is the long-term average of a region's weather.",
+        "subject": "climate",
+        "prompt_en": "How is weather related to climate?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "long-term average of a region's weather"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b59c4b1b51ae9407059762cce378c2177a017b77133e2a205d7ed935a43501ec",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000825",
+        "subject_zh": "气候",
+        "prompt_zh": "天气和气候之间有什么关系？",
+        "canonical_fact_zh": "气候是一个地区天气的长期平均。",
+        "answer_zh": "一个地区天气的长期平均",
+        "answer_aliases_zh": [
+          "一个地区天气的长期平均"
+        ]
+      },
+      "translation_sha256": "5a3ca5301a65cef7c1e7869990c3127330a3dc2cf6660dd5754d22cc0c948025"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000827",
+      "input_sha256": "a159243eefd185a7275c3fab7a281c67871daa1e6995db08e76d904ecda9234b",
+      "english": {
+        "direction": "organism -> energy storage form",
+        "relation_id": "organism_to_energy_storage_form",
+        "answer": "chemical",
+        "canonical_fact": "Plants store the energy produced from sunlight in chemical form.",
+        "subject": "plants",
+        "prompt_en": "In what form do plants store the energy produced from sunlight?",
+        "relation_definition": "The form (e.g., chemical, mechanical, thermal) in which the specified organism class stores energy derived from a stated source.",
+        "answer_aliases_en": [
+          "chemical"
+        ],
+        "relation_spec": {
+          "id": "organism_to_energy_storage_form",
+          "definition": "The form (e.g., chemical, mechanical, thermal) in which the specified organism class stores energy derived from a stated source.",
+          "direction": "organism -> energy storage form"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35533fcc7737c2fe6458a55d0bb50978db37e55723a59525df951be2f63af5eb",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000827",
+        "subject_zh": "植物",
+        "prompt_zh": "植物以什么形式储存由阳光产生的能量？",
+        "canonical_fact_zh": "植物将以化学能的形式储存由阳光产生的能量。",
+        "answer_zh": "化学能",
+        "answer_aliases_zh": [
+          "化学能"
+        ]
+      },
+      "translation_sha256": "012788a63581085062c9e471a80ea76863ef1b1975076535a854ce6bf3f2371a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000825",
+        "historical:raw_ai2_arc_easy_000827"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "727ef6232371b7f7c2047f6cb81a49240099a66677718df275e867872b0b659c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1571,
+      "first_chunk_seconds": 10.221,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1632,
+        "prompt_tokens": 1661,
+        "total_tokens": 3293,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1228,
+          "text_tokens": 404
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f0fafd4515cc4a99adef31d543314971e3fa63fb320a3c865aa1b440d008ec8f",
+      "status": "completed",
+      "latency_seconds": 41.543
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000825",
+        "historical:raw_ai2_arc_easy_000827"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fc560257e8ed9dd9bfd57afe2f763d67a7c018dd198ebff3bdc05294ff3c3e7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1282,
+      "first_chunk_seconds": 11.749,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1301,
+        "prompt_tokens": 842,
+        "total_tokens": 2143,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1083,
+          "text_tokens": 218
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "985b88c32cfb12e4763df6cc66a6e2a4de798abfd39f671f51b163f95e89f851",
+      "status": "completed",
+      "latency_seconds": 34.552
+    }
+  ],
+  "status": "completed"
+}

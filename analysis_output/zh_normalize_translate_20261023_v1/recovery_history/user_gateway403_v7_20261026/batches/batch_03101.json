@@ -1,0 +1,113 @@
+{
+  "input_sha256": "d0a06252410ec775c459d09b70d090e25484afc6b85b71eeffda9f8a801e32bf",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000656",
+      "decision": "ready",
+      "subject": "fibula",
+      "relation_id": "entity_to_function",
+      "relation_definition": "The functional role, capability, or mechanical action (including its explicit absence) attributed to a specified entity in a defined anatomical or physical context.",
+      "direction": "entity -> function",
+      "answer": "bear weight",
+      "canonical_fact": "The fibula does not bear weight.",
+      "prompt_en": "What does the fibula not do in the leg?",
+      "evidence_quotes": [
+        "bear weight"
+      ],
+      "reason": "Source question asks what the fibula 'does not do' and source_answer is 'bear weight'. No existing catalog relation captures a negative functional attribute of an anatomical structure; proposing entity_to_function with explicit negative form.",
+      "english": {
+        "canonical_fact": "The fibula does not bear weight.",
+        "answer": "bear weight",
+        "subject": "fibula",
+        "direction": "entity -> function",
+        "relation_definition": "The functional role, capability, or mechanical action (including its explicit absence) attributed to a specified entity in a defined anatomical or physical context.",
+        "relation_id": "entity_to_function",
+        "prompt_en": "What does the fibula not do in the leg?",
+        "answer_aliases_en": [
+          "bear weight"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "The functional role, capability, or mechanical action (including its explicit absence) attributed to a specified entity in a defined anatomical or physical context.",
+          "direction": "entity -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3e0a50485ed3161e410e25faed7db6222e4ac3cbb757cbc69c761fd7fe0d318c",
+      "input_sha256": "049d5946c60591828e877a25d5047a45c274a4b6e6a6b386cb15ab3d3c6bf5be",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000657",
+      "decision": "ready",
+      "subject": "embryo",
+      "relation_id": "entity_to_developmental_successor",
+      "relation_definition": "The next developmental stage or biological entity type that a specified organism stage becomes, conditioned on a stated prerequisite (e.g., after implantation).",
+      "direction": "entity (at stated condition) -> developmental successor",
+      "answer": "fetus",
+      "canonical_fact": "After implantation, an embryo develops into a fetus.",
+      "prompt_en": "After implantation, what does an embryo develop into?",
+      "evidence_quotes": [
+        "fetus"
+      ],
+      "reason": "Source states that only after implantation can an embryo develop into a fetus. No existing catalog relation captures a conditional biological developmental progression; proposing entity_to_developmental_successor. Subject kept as 'embryo' with the condition 'after implantation' carried in the canonical fact and relation definition.",
+      "english": {
+        "canonical_fact": "After implantation, an embryo develops into a fetus.",
+        "answer": "fetus",
+        "subject": "embryo",
+        "direction": "entity (at stated condition) -> developmental successor",
+        "relation_definition": "The next developmental stage or biological entity type that a specified organism stage becomes, conditioned on a stated prerequisite (e.g., after implantation).",
+        "relation_id": "entity_to_developmental_successor",
+        "prompt_en": "After implantation, what does an embryo develop into?",
+        "answer_aliases_en": [
+          "fetus"
+        ],
+        "relation_spec": {
+          "id": "entity_to_developmental_successor",
+          "definition": "The next developmental stage or biological entity type that a specified organism stage becomes, conditioned on a stated prerequisite (e.g., after implantation).",
+          "direction": "entity (at stated condition) -> developmental successor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7b8103e6cb50c5077e33b2cf8783a94d963f97c97c63ae65d1bbc7aa7180df9",
+      "input_sha256": "78f0dc8609caa15f88b4c88ff261851793d189e760fa9fce09d256fb191bcac8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000656",
+        "historical:raw_sciq_000657"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2f5f9d1521323d5ad3301e9cf7b5e06ad5bbcebb61136ced3e84786ed4422878",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2507,
+      "first_chunk_seconds": 66.266,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2530,
+        "prompt_tokens": 1675,
+        "total_tokens": 4205,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2079,
+          "text_tokens": 451
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b4ccd3eeceea4ea97df62c0554ad919b80ac334447edbd8a2cd8dcfa1c344813",
+      "status": "completed",
+      "latency_seconds": 126.89
+    }
+  ],
+  "status": "failed"
+}

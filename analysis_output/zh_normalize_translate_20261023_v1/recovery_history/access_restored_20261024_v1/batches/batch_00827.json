@@ -1,0 +1,131 @@
+{
+  "input_sha256": "6a04e1ac40d220a2386b72fda59303770a0d340b14084a65c8e7da0a94659c1e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_2f8bc4a98e0d3b497301",
+      "decision": "ready",
+      "subject": "organic acid",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "RCOOH",
+      "canonical_fact": "The functional group that represents an organic acid is written as RCOOH.",
+      "prompt_en": "The functional group that represents an organic acid is written as",
+      "evidence_quotes": [
+        "RCOOH",
+        "The functional group that represents an organic acid is written as"
+      ],
+      "reason": "RCOOH is the standard chemical-functional-group notation that defines the organic acid class; term_to_definition (term -> definition) fits because RCOOH is the definitional representation of the term 'organic acid' in chemical nomenclature.",
+      "english": {
+        "direction": "term -> definition",
+        "prompt_en": "The functional group that represents an organic acid is written as",
+        "relation_id": "term_to_definition",
+        "answer": "RCOOH",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "subject": "organic acid",
+        "canonical_fact": "The functional group that represents an organic acid is written as RCOOH.",
+        "answer_aliases_en": [
+          "RCOOH"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6bc9f69b20a98310f246263c3f78d1fdb769e8b0febb7248738392a89c374afa",
+      "input_sha256": "3a382f842095876149f66097f709d80065b9f16366764550e93e3ca172569b17",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_2f9fa0859cc1d4bdcb13",
+      "decision": "ready",
+      "subject": "government body formed to coordinate American foreign and military policy",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "National Security Council",
+      "canonical_fact": "The government body formed to coordinate American foreign and military policy is known as the National Security Council.",
+      "prompt_en": "The government body formed to coordinate American foreign and military policy is known as",
+      "evidence_quotes": [
+        "the National Security Council.",
+        "The government body formed to coordinate American foreign and military policy is known as"
+      ],
+      "reason": "The explicitly qualified identifying description 'government body formed to coordinate American foreign and military policy' uniquely points to the National Security Council, matching the description_to_entity relation (identifying description -> entity).",
+      "english": {
+        "direction": "identifying description -> entity",
+        "prompt_en": "The government body formed to coordinate American foreign and military policy is known as",
+        "relation_id": "description_to_entity",
+        "answer": "National Security Council",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "government body formed to coordinate American foreign and military policy",
+        "canonical_fact": "The government body formed to coordinate American foreign and military policy is known as the National Security Council.",
+        "answer_aliases_en": [
+          "National Security Council",
+          "the National Security Council."
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b24697245dd11321b56db5cc4cad05d899d2dc0e3f3f51c32f8d1ec7ab47f501",
+      "input_sha256": "a047b5802264ceb726b569db15664f67b2e4b3bad207048657ae482e8da2b79d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2f8bc4a98e0d3b497301",
+        "public:pbf_2f9fa0859cc1d4bdcb13"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d202976bce49a6431316855f03d0d181c8739d27142dd0f1cd6ebdaffb9d2f41",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1987,
+      "first_chunk_seconds": 1.887,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2070,
+        "prompt_tokens": 1627,
+        "total_tokens": 3697,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1583,
+          "text_tokens": 487
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2e6d84efb7b1de4b83c67e69e53304a485dcebd96aa2af3f83143ec339a6916a",
+      "status": "completed",
+      "latency_seconds": 85.026
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_2f8bc4a98e0d3b497301",
+        "public:pbf_2f9fa0859cc1d4bdcb13"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "205c9c148a93033ff48a33cdb60559d85ccb3a48dbe58394ca928cba10d6229b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "PermissionDeniedError",
+      "http_status": 403,
+      "latency_seconds": 5.379
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "4695e49e7a6a1169a0cbfbf5b52bb5bd8ac7a64d2b8f546ebdd76468a17efa0d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002118",
+      "decision": "ready",
+      "subject": "stress",
+      "relation_id": "condition_to_adverse_effect",
+      "relation_definition": "A specific adverse effect or medical consequence that a named condition or state can cause, retaining any stated conditions (e.g., 'if not treated immediately').",
+      "direction": "condition/state -> adverse effect or consequence",
+      "answer": "heart attacks",
+      "canonical_fact": "Heart attacks are an effect of stress that could cause death if not treated immediately.",
+      "prompt_en": "What effect of stress could cause death if not treated immediately?",
+      "evidence_quotes": [
+        "Which effect of stress could cause death if not treated immediately?",
+        "heart attacks"
+      ],
+      "reason": "The source QA explicitly pairs 'stress' with 'heart attacks' as the effect that could cause death if not treated immediately. No catalog relation captures a condition-to-adverse-effect link, so a new precise relation is proposed. The answer 'heart attacks' is a verbatim substring of source_answer. The sensenova non_unique_answer flag is noted but the source QA presents this as a single definitive answer, so the fact is extractable within the source's scope.",
+      "english": {
+        "prompt_en": "What effect of stress could cause death if not treated immediately?",
+        "relation_definition": "A specific adverse effect or medical consequence that a named condition or state can cause, retaining any stated conditions (e.g., 'if not treated immediately').",
+        "answer": "heart attacks",
+        "canonical_fact": "Heart attacks are an effect of stress that could cause death if not treated immediately.",
+        "direction": "condition/state -> adverse effect or consequence",
+        "relation_id": "condition_to_adverse_effect",
+        "subject": "stress",
+        "answer_aliases_en": [
+          "heart attacks"
+        ],
+        "relation_spec": {
+          "id": "condition_to_adverse_effect",
+          "definition": "A specific adverse effect or medical consequence that a named condition or state can cause, retaining any stated conditions (e.g., 'if not treated immediately').",
+          "direction": "condition/state -> adverse effect or consequence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "037eb1de0bc27bf382fb516a8a5b9fd506c564191f74e2e65fba2c8e3453f3b1",
+      "input_sha256": "fec6e835dfa37a28685edc7da5074fbf444d55798c45c87923cfe2341ba99b79",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002135",
+      "decision": "ready",
+      "subject": "the job of explaining why the defendant was guilty of obstructing justice",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "prosecution",
+      "canonical_fact": "The conventional term for the side whose job is to explain why a defendant is guilty of obstructing justice is the prosecution.",
+      "prompt_en": "What is the conventional term for the side whose job is to explain why a defendant is guilty of obstructing justice?",
+      "evidence_quotes": [
+        "explain why the defendant was guilty of obstructing justice, it was their job as the what?",
+        "prosecution"
+      ],
+      "reason": "The source QA maps the describing clause 'their job was to explain why the defendant was guilty of obstructing justice' to the term 'prosecution.' This fits the existing description_to_term relation (defining description -> unique conventional term). The answer 'prosecution' is a verbatim substring of source_answer. The qualifier 'obstructing justice' is preserved as stated in the source.",
+      "english": {
+        "prompt_en": "What is the conventional term for the side whose job is to explain why a defendant is guilty of obstructing justice?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "prosecution",
+        "canonical_fact": "The conventional term for the side whose job is to explain why a defendant is guilty of obstructing justice is the prosecution.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the job of explaining why the defendant was guilty of obstructing justice",
+        "answer_aliases_en": [
+          "prosecution"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a0521d2416b26aa919f708c0a3caf7d621dd906e4389ee889c1d5c0a62180bf5",
+      "input_sha256": "180ae3d12fecf6a6a75b29318935fbe51eaea11ea703787846a2dd43db7b874d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002118",
+        "historical:raw_commonsense_qa_002135"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "50f0e5c87dbb5e3bc0ae5fbcd6acfc8a9db7a38bf6d5d51fa002bf67485664bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3441,
+      "first_chunk_seconds": 4.398,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3514,
+        "prompt_tokens": 1622,
+        "total_tokens": 5136,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2986,
+          "text_tokens": 528
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "216b2d2cd9cb44cbca7e48173178f3917f49fd55fe9004401b3c9cfe6c43d85f",
+      "status": "completed",
+      "latency_seconds": 57.77
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002118",
+        "historical:raw_commonsense_qa_002135"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4a6c213934b33f92a9cd65a76ab55a30a0d891d061b51ee2c40f2574245acb19",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.273
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002118",
+        "historical:raw_commonsense_qa_002135"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4a6c213934b33f92a9cd65a76ab55a30a0d891d061b51ee2c40f2574245acb19",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002118",
+        "historical:raw_commonsense_qa_002135"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4a6c213934b33f92a9cd65a76ab55a30a0d891d061b51ee2c40f2574245acb19",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.352
+    }
+  ],
+  "status": "failed"
+}

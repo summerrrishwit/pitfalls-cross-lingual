@@ -1,0 +1,157 @@
+{
+  "input_sha256": "597174f7b10d7e19cc51f53118b044554ce954c1d097aeeca27aaa3d661ac4a0",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005115",
+      "decision": "ready",
+      "subject": "Earth",
+      "relation_id": "entity_to_oldest_heat_source",
+      "relation_definition": "The oldest heat source associated with a specified entity (planet, celestial body), preserving the superlative qualifier; direction is entity -> oldest heat source.",
+      "direction": "entity -> oldest heat source",
+      "answer": "solar energy",
+      "canonical_fact": "The oldest heat source on Earth is solar energy.",
+      "prompt_en": "What is the oldest heat source on Earth?",
+      "evidence_quotes": [
+        "the oldest heat source on Earth",
+        "solar energy"
+      ],
+      "reason": "Source question and answer provide a clear superlative-attribute fact. No catalog relation captures 'oldest heat source' as a property of a planet, so a new precise relation is proposed. Answer 'solar energy' is copied verbatim from source_answer.",
+      "english": {
+        "direction": "entity -> oldest heat source",
+        "relation_id": "entity_to_oldest_heat_source",
+        "answer": "solar energy",
+        "canonical_fact": "The oldest heat source on Earth is solar energy.",
+        "subject": "Earth",
+        "prompt_en": "What is the oldest heat source on Earth?",
+        "relation_definition": "The oldest heat source associated with a specified entity (planet, celestial body), preserving the superlative qualifier; direction is entity -> oldest heat source.",
+        "answer_aliases_en": [
+          "solar energy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_oldest_heat_source",
+          "definition": "The oldest heat source associated with a specified entity (planet, celestial body), preserving the superlative qualifier; direction is entity -> oldest heat source.",
+          "direction": "entity -> oldest heat source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8d8243f90c9e4727f7b2177955b2409364bf581c45ecad3ecd0f9b8f3e8fceb",
+      "input_sha256": "5e6beb737951cbfed9e2b78e815bae47677d4a4265284ff16b727050dc4cdf27",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005122",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'flesh' is a colloquial, non-standard anatomical term that lacks the precision required for a reusable factual candidate. In standard anatomy, bones are covered by the periosteum (directly) and by muscles/skin; 'flesh' is ambiguous and not a stable, citable term. The Qwen-3.8-Max annotation also flagged this as a non-unique answer. Deferring until a precise, standard anatomical layer is identified.",
+      "input_sha256": "c9f09665f7b3790e3d313826a4d90e4df38c9db80feac3161c0ae489cc2517aa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005115",
+      "input_sha256": "5e6beb737951cbfed9e2b78e815bae47677d4a4265284ff16b727050dc4cdf27",
+      "english": {
+        "direction": "entity -> oldest heat source",
+        "relation_id": "entity_to_oldest_heat_source",
+        "answer": "solar energy",
+        "canonical_fact": "The oldest heat source on Earth is solar energy.",
+        "subject": "Earth",
+        "prompt_en": "What is the oldest heat source on Earth?",
+        "relation_definition": "The oldest heat source associated with a specified entity (planet, celestial body), preserving the superlative qualifier; direction is entity -> oldest heat source.",
+        "answer_aliases_en": [
+          "solar energy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_oldest_heat_source",
+          "definition": "The oldest heat source associated with a specified entity (planet, celestial body), preserving the superlative qualifier; direction is entity -> oldest heat source.",
+          "direction": "entity -> oldest heat source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8d8243f90c9e4727f7b2177955b2409364bf581c45ecad3ecd0f9b8f3e8fceb",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005115",
+        "subject_zh": "地球",
+        "prompt_zh": "地球上最古老的热源是什么？",
+        "canonical_fact_zh": "地球上最古老的热源是太阳能。",
+        "answer_zh": "太阳能",
+        "answer_aliases_zh": [
+          "太阳能"
+        ]
+      },
+      "translation_sha256": "a12d4f2a33609b27b84dcb9198a23f912c0f23d797527e4cf1236ffcedefae07"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005115",
+        "historical:raw_commonsense_qa_005122"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6bb8fa32e7465c35ddb0c09f872f23f58e430e9a17612c5321f8fbb48fce4a6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2894,
+      "first_chunk_seconds": 18.357,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2935,
+        "prompt_tokens": 1657,
+        "total_tokens": 4592,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2486,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5af7c8466b14837210c0e2b9065e69a02a3f9a79e31ff28f31ca1c507ad4a86c",
+      "status": "completed",
+      "latency_seconds": 50.921
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005115"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "566c77961c95298df9ec08fa3c4deea43f40483e7a4affa42f92e7344794f623",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 459,
+      "first_chunk_seconds": 20.571,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 490,
+        "prompt_tokens": 537,
+        "total_tokens": 1027,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 383,
+          "text_tokens": 107
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bb4c4f16066cec0a1d0b5a56e249cf635ee332f4f42f6032f0ef6606d4b56360",
+      "status": "completed",
+      "latency_seconds": 24.997
+    }
+  ],
+  "status": "completed"
+}

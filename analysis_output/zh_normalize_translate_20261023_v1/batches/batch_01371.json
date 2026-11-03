@@ -1,0 +1,157 @@
+{
+  "input_sha256": "9b987b03c0056df718d445ff310c7dd7a91dad7c7cf1fd57df466ce250d12160",
+  "normalized": [
+    {
+      "record_id": "public:pbf_8d2f8ea77afdd9bfcefe",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject is an abstract concept ('intention of making traditional, saleable art objects') rather than a clean, reusable entity. The relation 'abandoned by' is highly context-specific to art history and does not map to any catalog relation. No broadly reusable new relation can be proposed without forcing a narrow, single-use category. Insufficient structural support for normalization into a reusable factual candidate.",
+      "input_sha256": "e2025aa8f9ff75e2806a90cd9787b377fad19e37ce3e2bf281ef478a7afb9115",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8d2fecc5f2c4cb327b1d",
+      "decision": "ready",
+      "subject": "president pro tempore of the senate",
+      "relation_id": "office_to_presiding_condition",
+      "relation_definition": "The specific constitutional or procedural condition under which a specified political office or role presides or exercises its primary presiding function.",
+      "direction": "office/role -> condition",
+      "answer": "in the absence of the vice president",
+      "canonical_fact": "The president pro tempore of the senate presides in the absence of the vice president.",
+      "prompt_en": "Under what condition does the president pro tempore of the senate preside?",
+      "evidence_quotes": [
+        "when does the president pro tempore of the senate preside",
+        "in the absence of the vice president"
+      ],
+      "reason": "Clear, well-known U.S. constitutional fact. The subject 'president pro tempore of the senate' is a defined political role and the answer is a precise procedural condition. No existing catalog relation fits the role-to-presiding-condition pattern, so a new precise relation 'office_to_presiding_condition' is proposed.",
+      "english": {
+        "answer": "in the absence of the vice president",
+        "relation_id": "office_to_presiding_condition",
+        "prompt_en": "Under what condition does the president pro tempore of the senate preside?",
+        "direction": "office/role -> condition",
+        "subject": "president pro tempore of the senate",
+        "canonical_fact": "The president pro tempore of the senate presides in the absence of the vice president.",
+        "relation_definition": "The specific constitutional or procedural condition under which a specified political office or role presides or exercises its primary presiding function.",
+        "answer_aliases_en": [
+          "in the absence of the vice president"
+        ],
+        "relation_spec": {
+          "id": "office_to_presiding_condition",
+          "definition": "The specific constitutional or procedural condition under which a specified political office or role presides or exercises its primary presiding function.",
+          "direction": "office/role -> condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b2dd93b3f004e8eb2d9bbb1e684ae29639d3152af279f312777e5a30ac08dd5f",
+      "input_sha256": "27b60f4be918439bee73e6fa7433e6d08dca0297010def401a0106e807f63ecc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_8d2fecc5f2c4cb327b1d",
+      "input_sha256": "27b60f4be918439bee73e6fa7433e6d08dca0297010def401a0106e807f63ecc",
+      "english": {
+        "answer": "in the absence of the vice president",
+        "relation_id": "office_to_presiding_condition",
+        "prompt_en": "Under what condition does the president pro tempore of the senate preside?",
+        "direction": "office/role -> condition",
+        "subject": "president pro tempore of the senate",
+        "canonical_fact": "The president pro tempore of the senate presides in the absence of the vice president.",
+        "relation_definition": "The specific constitutional or procedural condition under which a specified political office or role presides or exercises its primary presiding function.",
+        "answer_aliases_en": [
+          "in the absence of the vice president"
+        ],
+        "relation_spec": {
+          "id": "office_to_presiding_condition",
+          "definition": "The specific constitutional or procedural condition under which a specified political office or role presides or exercises its primary presiding function.",
+          "direction": "office/role -> condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b2dd93b3f004e8eb2d9bbb1e684ae29639d3152af279f312777e5a30ac08dd5f",
+      "translation": {
+        "record_id": "public:pbf_8d2fecc5f2c4cb327b1d",
+        "subject_zh": "参议院临时议长",
+        "prompt_zh": "参议院临时议长在什么条件下主持？",
+        "canonical_fact_zh": "参议院临时议长在副总统缺席时主持。",
+        "answer_zh": "在副总统缺席时",
+        "answer_aliases_zh": [
+          "在副总统缺席时"
+        ]
+      },
+      "translation_sha256": "f47e625387f03554a98846adf9177182328d7012ffb130e2984e45f209fff6f6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8d2f8ea77afdd9bfcefe",
+        "public:pbf_8d2fecc5f2c4cb327b1d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4d073ade90a53d6c47956a4a2a28443c5ee8ce2b2853aba89a142815cfc0cc3f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2585,
+      "first_chunk_seconds": 1.501,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2598,
+        "prompt_tokens": 1636,
+        "total_tokens": 4234,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2117,
+          "text_tokens": 481
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3c9f0eaf2a2e51846f8be21db80379027c5223274f7a6ad9d955fe3fb4f36471",
+      "status": "completed",
+      "latency_seconds": 24.355
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8d2fecc5f2c4cb327b1d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4522dd819ecadacb87fe0958565a38b88670dcb1ce4e6a4813e5344a7f034dd6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 682,
+      "first_chunk_seconds": 8.956,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 679,
+        "prompt_tokens": 556,
+        "total_tokens": 1235,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 587,
+          "text_tokens": 92
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aa9b9bf55b4b75435155423545dd903a1c5c5e4bf4e21765b7a7d6e6e69347e4",
+      "status": "completed",
+      "latency_seconds": 15.006
+    }
+  ],
+  "status": "completed"
+}

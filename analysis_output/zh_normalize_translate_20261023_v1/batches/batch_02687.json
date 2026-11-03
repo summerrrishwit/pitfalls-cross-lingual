@@ -1,0 +1,246 @@
+{
+  "input_sha256": "fdd19fe16a1f436a87bb8213f84c06f01d7508480505be820352c2dc7070b160",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007776",
+      "decision": "ready",
+      "subject": "Ann Arbor Expressway",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "michigan",
+      "canonical_fact": "The Ann Arbor Expressway is located in Michigan.",
+      "prompt_en": "Where is the Ann Arbor Expressway located?",
+      "evidence_quotes": [
+        "Where can a person find the Ann Arbor Expressway?",
+        "michigan"
+      ],
+      "reason": "The source question asks where the Ann Arbor Expressway can be found and the source answer is 'michigan'. This maps exactly to entity_to_containing_location: a geographic containment at the state level. The existing answer 'michigan' is preserved verbatim from source_answer.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "michigan",
+        "canonical_fact": "The Ann Arbor Expressway is located in Michigan.",
+        "subject": "Ann Arbor Expressway",
+        "prompt_en": "Where is the Ann Arbor Expressway located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "michigan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2f5254899d8fcef8998225f1fe9d4566afe6a756bcde697d826df8d38b94e9c8",
+      "input_sha256": "74d1e70bcec7f60f6c300ae187ca4eced6704b20f8da1a752b3e164db8d7bba8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007782",
+      "decision": "ready",
+      "subject": "liquid containing naturally occurring salt",
+      "relation_id": "description_to_example_entity",
+      "relation_definition": "An entity that satisfies a stated descriptive criterion as a non-exhaustive example; does not assert uniqueness or exhaustiveness.",
+      "direction": "descriptive criterion -> example entity",
+      "answer": "ocean water",
+      "canonical_fact": "Ocean water is a liquid that contains naturally occurring salt.",
+      "prompt_en": "What is an example of a liquid that contains naturally occurring salt?",
+      "evidence_quotes": [
+        "What liquid contains naturally occurring salt?",
+        "ocean water"
+      ],
+      "reason": "The source question asks for a liquid that contains naturally occurring salt and the source answer is 'ocean water'. No catalog relation covers a non-exhaustive example/instance mapping from a descriptive criterion to an entity (description_to_entity requires uniqueness, which is not asserted here). Proposing description_to_example_entity to capture the non-exhaustive instance relation. The existing answer 'ocean water' is preserved verbatim from source_answer.",
+      "english": {
+        "direction": "descriptive criterion -> example entity",
+        "relation_id": "description_to_example_entity",
+        "answer": "ocean water",
+        "canonical_fact": "Ocean water is a liquid that contains naturally occurring salt.",
+        "subject": "liquid containing naturally occurring salt",
+        "prompt_en": "What is an example of a liquid that contains naturally occurring salt?",
+        "relation_definition": "An entity that satisfies a stated descriptive criterion as a non-exhaustive example; does not assert uniqueness or exhaustiveness.",
+        "answer_aliases_en": [
+          "ocean water"
+        ],
+        "relation_spec": {
+          "id": "description_to_example_entity",
+          "definition": "An entity that satisfies a stated descriptive criterion as a non-exhaustive example; does not assert uniqueness or exhaustiveness.",
+          "direction": "descriptive criterion -> example entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a73620ded74a7a47d4031dc3e6e1066296e2d883bb205cddaac9c30f97abac47",
+      "input_sha256": "4fa1298b66a3bd382c838acd4b356bcbbd0042a999fe0dd430d353d2338c9eb4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007776",
+      "input_sha256": "74d1e70bcec7f60f6c300ae187ca4eced6704b20f8da1a752b3e164db8d7bba8",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "michigan",
+        "canonical_fact": "The Ann Arbor Expressway is located in Michigan.",
+        "subject": "Ann Arbor Expressway",
+        "prompt_en": "Where is the Ann Arbor Expressway located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "michigan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2f5254899d8fcef8998225f1fe9d4566afe6a756bcde697d826df8d38b94e9c8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007776",
+        "subject_zh": "安阿伯高速公路",
+        "prompt_zh": "安阿伯高速公路位于哪里？",
+        "canonical_fact_zh": "安阿伯高速公路位于密歇根。",
+        "answer_zh": "密歇根",
+        "answer_aliases_zh": [
+          "密歇根"
+        ]
+      },
+      "translation_sha256": "2df1be7a8e25c0b6902fb99bf9e8daec2d653c777980f0db3969e726844fbc3c"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007782",
+      "input_sha256": "4fa1298b66a3bd382c838acd4b356bcbbd0042a999fe0dd430d353d2338c9eb4",
+      "english": {
+        "direction": "descriptive criterion -> example entity",
+        "relation_id": "description_to_example_entity",
+        "answer": "ocean water",
+        "canonical_fact": "Ocean water is a liquid that contains naturally occurring salt.",
+        "subject": "liquid containing naturally occurring salt",
+        "prompt_en": "What is an example of a liquid that contains naturally occurring salt?",
+        "relation_definition": "An entity that satisfies a stated descriptive criterion as a non-exhaustive example; does not assert uniqueness or exhaustiveness.",
+        "answer_aliases_en": [
+          "ocean water"
+        ],
+        "relation_spec": {
+          "id": "description_to_example_entity",
+          "definition": "An entity that satisfies a stated descriptive criterion as a non-exhaustive example; does not assert uniqueness or exhaustiveness.",
+          "direction": "descriptive criterion -> example entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a73620ded74a7a47d4031dc3e6e1066296e2d883bb205cddaac9c30f97abac47",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007782",
+        "subject_zh": "含有天然盐分的液体",
+        "prompt_zh": "含有天然盐分的液体的例子是什么？",
+        "canonical_fact_zh": "海水是含有天然盐分的液体。",
+        "answer_zh": "海水",
+        "answer_aliases_zh": [
+          "海水"
+        ]
+      },
+      "translation_sha256": "3c2cab3fb3b51a1ca1cfe8dc3dac0cd0c7177c2b2d7e5160223cdd05d02f7791"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007776",
+        "historical:raw_commonsense_qa_007782"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3c5fc0dbe01ba4e9be7f57062d3b1f76571463daf08154320a8ce4d1db33143b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2514,
+      "first_chunk_seconds": 25.169,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2560,
+        "prompt_tokens": 1637,
+        "total_tokens": 4197,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2114,
+          "text_tokens": 446
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2d6cb6b972ff069f1cb2b9a4771b0abf19441b57ca368068953ef568cb31cfbd",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 62.66,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007776",
+        "historical:raw_commonsense_qa_007782"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ff6311295100b1002d8ec6e6c3207aa5dc83f14b1b99d86281b4a68c9bfc6da5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3350,
+      "first_chunk_seconds": 27.028,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3488,
+        "prompt_tokens": 1654,
+        "total_tokens": 5142,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2967,
+          "text_tokens": 521
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "735c58b93c9e2984198b4ea5bfa91f19458bee36dab01e785477e151ab1d316f",
+      "status": "completed",
+      "latency_seconds": 78.855
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007776",
+        "historical:raw_commonsense_qa_007782"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9f0ae00b90bd7a8ca5efd8dde134f3672fe346f98c1434d4fa9bf96c532271d3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1400,
+      "first_chunk_seconds": 48.593,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1507,
+        "prompt_tokens": 831,
+        "total_tokens": 2338,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1293,
+          "text_tokens": 214
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5d4b1ef7cdc2096f9f12cc22eccfafa0be760a29c4921487274a906b018c4e7e",
+      "status": "completed",
+      "latency_seconds": 69.343
+    }
+  ],
+  "status": "completed"
+}

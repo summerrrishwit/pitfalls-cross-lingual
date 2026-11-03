@@ -1,0 +1,160 @@
+{
+  "input_sha256": "a7b18c7459c1a4bb7ca2366a39fb48518346701a3ade829370780d45d712db86",
+  "normalized": [
+    {
+      "record_id": "public:pbf_cb2577170903a8ad63eb",
+      "decision": "ready",
+      "subject": "citizens and craftsmen worth £500 a year under the 1363 fur statute",
+      "relation_id": "statutory_restriction_to_permitted_material",
+      "relation_definition": "The specific material (e.g., fabric, fur) that a named statutory group is restricted to or permitted to wear or use under a specified law and period.",
+      "direction": "specified statutory group under named law -> restricted/permitted material",
+      "answer": "Budge",
+      "canonical_fact": "In the 1363 fur statute, citizens and craftsmen worth £500 a year were restricted to wearing Budge.",
+      "prompt_en": "What material were citizens and craftsmen worth £500 a year restricted to wearing under the 1363 fur statute?",
+      "evidence_quotes": [
+        "restricted to wearing",
+        "Budge"
+      ],
+      "reason": "Source question and answer explicitly state the restriction; 'Budge' is a literal substring of source_answer 'Budge.' No catalog relation covers a statutory dress-code material restriction, so a new precise relation is proposed.",
+      "english": {
+        "answer": "Budge",
+        "relation_id": "statutory_restriction_to_permitted_material",
+        "prompt_en": "What material were citizens and craftsmen worth £500 a year restricted to wearing under the 1363 fur statute?",
+        "direction": "specified statutory group under named law -> restricted/permitted material",
+        "subject": "citizens and craftsmen worth £500 a year under the 1363 fur statute",
+        "canonical_fact": "In the 1363 fur statute, citizens and craftsmen worth £500 a year were restricted to wearing Budge.",
+        "relation_definition": "The specific material (e.g., fabric, fur) that a named statutory group is restricted to or permitted to wear or use under a specified law and period.",
+        "answer_aliases_en": [
+          "Budge",
+          "Budge."
+        ],
+        "relation_spec": {
+          "id": "statutory_restriction_to_permitted_material",
+          "definition": "The specific material (e.g., fabric, fur) that a named statutory group is restricted to or permitted to wear or use under a specified law and period.",
+          "direction": "specified statutory group under named law -> restricted/permitted material"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "89e81f59f3be3d84828b19fdb661cdccc64404b001e3fd501878dde5cbea659a",
+      "input_sha256": "d99405fc66089621dad01a3f39b5367d867a7ee56e698b0c9485b0da2e19547d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_cb3ead58687b5ccd4b28",
+      "decision": "reject",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source is a deterministic numeral-to-spelling conversion (six thousand forty-nine dollars → $6,049), not a reusable factual relationship about the world. No catalog relation applies, and the 'fact' is a tautological representation change rather than an independent fact about entities or events.",
+      "input_sha256": "53f2fb2278994639d58b8eee1c881869e143e8bbe16f011b029241ed338bcf44",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_cb2577170903a8ad63eb",
+      "input_sha256": "d99405fc66089621dad01a3f39b5367d867a7ee56e698b0c9485b0da2e19547d",
+      "english": {
+        "answer": "Budge",
+        "relation_id": "statutory_restriction_to_permitted_material",
+        "prompt_en": "What material were citizens and craftsmen worth £500 a year restricted to wearing under the 1363 fur statute?",
+        "direction": "specified statutory group under named law -> restricted/permitted material",
+        "subject": "citizens and craftsmen worth £500 a year under the 1363 fur statute",
+        "canonical_fact": "In the 1363 fur statute, citizens and craftsmen worth £500 a year were restricted to wearing Budge.",
+        "relation_definition": "The specific material (e.g., fabric, fur) that a named statutory group is restricted to or permitted to wear or use under a specified law and period.",
+        "answer_aliases_en": [
+          "Budge",
+          "Budge."
+        ],
+        "relation_spec": {
+          "id": "statutory_restriction_to_permitted_material",
+          "definition": "The specific material (e.g., fabric, fur) that a named statutory group is restricted to or permitted to wear or use under a specified law and period.",
+          "direction": "specified statutory group under named law -> restricted/permitted material"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "89e81f59f3be3d84828b19fdb661cdccc64404b001e3fd501878dde5cbea659a",
+      "translation": {
+        "record_id": "public:pbf_cb2577170903a8ad63eb",
+        "subject_zh": "1363年毛皮法令下年收入500英镑的市民和手艺人",
+        "prompt_zh": "1363年毛皮法令规定，年收入500英镑的市民和手艺人被限制只能穿什么材料？",
+        "canonical_fact_zh": "1363年毛皮法令规定，年收入500英镑的市民和手艺人只能穿着Budge。",
+        "answer_zh": "Budge",
+        "answer_aliases_zh": [
+          "Budge",
+          "Budge。"
+        ]
+      },
+      "translation_sha256": "e3ab045a5ca537e8881ac23b92326321b55ab65becb0be4e5e9df6a7c7e8096e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_cb2577170903a8ad63eb",
+        "public:pbf_cb3ead58687b5ccd4b28"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "718d7c90417739ea9085057da66c4f808b5093d070fd1a6630c43b5e7133cadc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2339,
+      "first_chunk_seconds": 29.045,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2359,
+        "prompt_tokens": 1728,
+        "total_tokens": 4087,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1885,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ff45af9e93404376f20e930b67966b931269db9f91b04402eb6c79f1ba93f524",
+      "status": "completed",
+      "latency_seconds": 53.068
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_cb2577170903a8ad63eb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e3732d3ab98c1d9064882b826dcfa1ffab9c4fb10d7ab972eecb8c843cb72443",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1289,
+      "first_chunk_seconds": 6.619,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1290,
+        "prompt_tokens": 621,
+        "total_tokens": 1911,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1119,
+          "text_tokens": 171
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "025a9533c53683ff6221937b7ad2f8d7cb888cc9b18fc18ae5ab1cdcee4c9eb4",
+      "status": "completed",
+      "latency_seconds": 19.115
+    }
+  ],
+  "status": "completed"
+}

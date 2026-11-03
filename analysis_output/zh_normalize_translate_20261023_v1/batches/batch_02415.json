@@ -1,0 +1,228 @@
+{
+  "input_sha256": "e88ebf9bfdd2e5ab9df03ac70f2395ee947a9f1574cb4947ff57a004990e81da",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001744",
+      "decision": "ready",
+      "subject": "loudness of a sound wave",
+      "relation_id": "property_to_correlated_property",
+      "relation_definition": "A specified physical property that changes in the same direction as another specified physical property; the direction field states the property being related to its correlated counterpart.",
+      "direction": "property -> correlated property",
+      "answer": "amplitude",
+      "canonical_fact": "As the loudness of a sound wave increases, its amplitude also increases.",
+      "prompt_en": "What property of a sound wave increases when its loudness increases?",
+      "evidence_quotes": [
+        "As the loudness of a sound wave increases",
+        "amplitude"
+      ],
+      "reason": "Both models extracted the same fact. No existing catalog relation captures a positive correlation between two physical properties, so a new precise relation 'property_to_correlated_property' is proposed. The answer 'amplitude' is a literal substring of the source answer. The prompt does not contain the answer string.",
+      "english": {
+        "direction": "property -> correlated property",
+        "relation_id": "property_to_correlated_property",
+        "answer": "amplitude",
+        "canonical_fact": "As the loudness of a sound wave increases, its amplitude also increases.",
+        "subject": "loudness of a sound wave",
+        "prompt_en": "What property of a sound wave increases when its loudness increases?",
+        "relation_definition": "A specified physical property that changes in the same direction as another specified physical property; the direction field states the property being related to its correlated counterpart.",
+        "answer_aliases_en": [
+          "amplitude"
+        ],
+        "relation_spec": {
+          "id": "property_to_correlated_property",
+          "definition": "A specified physical property that changes in the same direction as another specified physical property; the direction field states the property being related to its correlated counterpart.",
+          "direction": "property -> correlated property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "479ab7ea316f6765a6c622c1a84407c3562b0820d985b62571c7a3a96541e103",
+      "input_sha256": "f740dafa2e787df0b8d9cc66271ab7802593f56c45e47773b13a6c3e8e730197",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001746",
+      "decision": "ready",
+      "subject": "overuse of antibiotics",
+      "relation_id": "process_to_selected_organism",
+      "relation_definition": "The group of organisms whose natural selection is most directly influenced by a stated process, practice, or environmental change; scope limited to the organism group named in the source.",
+      "direction": "process/practice -> organism group",
+      "answer": "microbes that are resistant to the antibiotics",
+      "canonical_fact": "The overuse of antibiotics influences the natural selection of microbes that are resistant to the antibiotics.",
+      "prompt_en": "Which type of organisms will have their natural selection most directly influenced by the overuse of antibiotics?",
+      "evidence_quotes": [
+        "The overuse of the antibiotics will most likely influence the natural selection",
+        "microbes that are resistant to the antibiotics"
+      ],
+      "reason": "One model extracted the fact; the other flagged it as causal reasoning, but the source answer explicitly names the organism group. No catalog relation covers 'process influences natural selection of organism group', so a new precise relation is proposed. The answer is a literal substring of the source answer. The prompt does not contain the answer string.",
+      "english": {
+        "direction": "process/practice -> organism group",
+        "relation_id": "process_to_selected_organism",
+        "answer": "microbes that are resistant to the antibiotics",
+        "canonical_fact": "The overuse of antibiotics influences the natural selection of microbes that are resistant to the antibiotics.",
+        "subject": "overuse of antibiotics",
+        "prompt_en": "Which type of organisms will have their natural selection most directly influenced by the overuse of antibiotics?",
+        "relation_definition": "The group of organisms whose natural selection is most directly influenced by a stated process, practice, or environmental change; scope limited to the organism group named in the source.",
+        "answer_aliases_en": [
+          "microbes that are resistant to the antibiotics"
+        ],
+        "relation_spec": {
+          "id": "process_to_selected_organism",
+          "definition": "The group of organisms whose natural selection is most directly influenced by a stated process, practice, or environmental change; scope limited to the organism group named in the source.",
+          "direction": "process/practice -> organism group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7818bae94ffd92daca67ccb873d2bf0e5c3d9e67377d1ada830296934ce7ba8",
+      "input_sha256": "71f20e4f5ab3d7783091563f3916e4648d3d1345d528162616372f0eda78c8b4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001744",
+      "input_sha256": "f740dafa2e787df0b8d9cc66271ab7802593f56c45e47773b13a6c3e8e730197",
+      "english": {
+        "direction": "property -> correlated property",
+        "relation_id": "property_to_correlated_property",
+        "answer": "amplitude",
+        "canonical_fact": "As the loudness of a sound wave increases, its amplitude also increases.",
+        "subject": "loudness of a sound wave",
+        "prompt_en": "What property of a sound wave increases when its loudness increases?",
+        "relation_definition": "A specified physical property that changes in the same direction as another specified physical property; the direction field states the property being related to its correlated counterpart.",
+        "answer_aliases_en": [
+          "amplitude"
+        ],
+        "relation_spec": {
+          "id": "property_to_correlated_property",
+          "definition": "A specified physical property that changes in the same direction as another specified physical property; the direction field states the property being related to its correlated counterpart.",
+          "direction": "property -> correlated property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "479ab7ea316f6765a6c622c1a84407c3562b0820d985b62571c7a3a96541e103",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001744",
+        "subject_zh": "声音波的响度",
+        "prompt_zh": "当声音波的响度增大时，声音波的哪个属性也会随之增大？",
+        "canonical_fact_zh": "随着声音波响度的增大，其振幅也随之增大。",
+        "answer_zh": "振幅",
+        "answer_aliases_zh": [
+          "振幅"
+        ]
+      },
+      "translation_sha256": "73f4b6d53c0a8d7de1b7f3ae869dae1e5ebc6827b1149e6a126099f9dd4b0ec0"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001746",
+      "input_sha256": "71f20e4f5ab3d7783091563f3916e4648d3d1345d528162616372f0eda78c8b4",
+      "english": {
+        "direction": "process/practice -> organism group",
+        "relation_id": "process_to_selected_organism",
+        "answer": "microbes that are resistant to the antibiotics",
+        "canonical_fact": "The overuse of antibiotics influences the natural selection of microbes that are resistant to the antibiotics.",
+        "subject": "overuse of antibiotics",
+        "prompt_en": "Which type of organisms will have their natural selection most directly influenced by the overuse of antibiotics?",
+        "relation_definition": "The group of organisms whose natural selection is most directly influenced by a stated process, practice, or environmental change; scope limited to the organism group named in the source.",
+        "answer_aliases_en": [
+          "microbes that are resistant to the antibiotics"
+        ],
+        "relation_spec": {
+          "id": "process_to_selected_organism",
+          "definition": "The group of organisms whose natural selection is most directly influenced by a stated process, practice, or environmental change; scope limited to the organism group named in the source.",
+          "direction": "process/practice -> organism group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7818bae94ffd92daca67ccb873d2bf0e5c3d9e67377d1ada830296934ce7ba8",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001746",
+        "subject_zh": "抗生素的过度使用",
+        "prompt_zh": "哪类生物的自然选择会受到抗生素过度使用的最直接影响？",
+        "canonical_fact_zh": "抗生素的过度使用会影响对抗生素具有耐药性的微生物的自然选择。",
+        "answer_zh": "对抗生素具有耐药性的微生物",
+        "answer_aliases_zh": [
+          "对抗生素具有耐药性的微生物"
+        ]
+      },
+      "translation_sha256": "c1a394d4aa13832c8786a0dd9cf4257cc1adf95629cc68f099c21bf23499a5ce"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001744",
+        "historical:raw_ai2_arc_easy_001746"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cfc857f41c3c070a08b46e0740827227e23c38871504809ac75495845f1583e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2361,
+      "first_chunk_seconds": 17.891,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2424,
+        "prompt_tokens": 1737,
+        "total_tokens": 4161,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1863,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5c5c6ea4f3706e27f6bbcd8b947c67911919a66f23826912eaa18a45807e9540",
+      "status": "completed",
+      "latency_seconds": 45.699
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001744",
+        "historical:raw_ai2_arc_easy_001746"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0dcb241160aad8cd5b8a9c78f96f8a868fc3c6b92971f333f831cc2644cb5f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 57.528
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001744",
+        "historical:raw_ai2_arc_easy_001746"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d0dcb241160aad8cd5b8a9c78f96f8a868fc3c6b92971f333f831cc2644cb5f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1084,
+      "first_chunk_seconds": 10.744,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1187,
+        "prompt_tokens": 921,
+        "total_tokens": 2108,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 946,
+          "text_tokens": 241
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a731df4f2e219c501bc757ce8287ad1d55da257b215bc1f52331fb4ec022d34c",
+      "status": "completed",
+      "latency_seconds": 29.188
+    }
+  ],
+  "status": "completed"
+}

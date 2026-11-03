@@ -1,0 +1,182 @@
+{
+  "input_sha256": "aca91b7f2767ad30c791b9b7281d0d64c05e68272eebc3d8032d0e0926b277ec",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001455",
+      "decision": "ready",
+      "subject": "object that helps people understand what makes up white light",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Prism",
+      "canonical_fact": "A prism is the object that helps people understand what makes up white light.",
+      "prompt_en": "Which object helps people understand what makes up white light?",
+      "evidence_quotes": [
+        "Prism",
+        "Which object helps people understand what makes up white light?"
+      ],
+      "reason": "The source question asks for the specific object that reveals the composition of white light; 'Prism' is the literal source answer. The relation description_to_entity fits exactly: the identifying description 'object that helps people understand what makes up white light' uniquely maps to the entity 'Prism'. No conflicting old extraction found; both model annotations agree on the fact.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Prism",
+        "canonical_fact": "A prism is the object that helps people understand what makes up white light.",
+        "subject": "object that helps people understand what makes up white light",
+        "prompt_en": "Which object helps people understand what makes up white light?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Prism"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "080bb7ab4b08e46952e699bcd2627273cbfe0ffca9c3dff446454e9575280583",
+      "input_sha256": "d903c89677fc7e713f03a40264e529282c8d22ce6e067338462ec74f4f565f52",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001456",
+      "decision": "ready",
+      "subject": "gravitational attraction between the moon and Earth",
+      "relation_id": "cause_to_effect",
+      "relation_definition": "A named cause or mechanism directly produces a specified resulting phenomenon or effect; the effect is a direct or well-established consequence of the stated cause.",
+      "direction": "specified cause or mechanism -> resulting phenomenon",
+      "answer": "ocean tides",
+      "canonical_fact": "The gravitational attraction between the moon and Earth causes ocean tides.",
+      "prompt_en": "What phenomenon occurs as a result of the gravitational attraction between the moon and Earth?",
+      "evidence_quotes": [
+        "ocean tides",
+        "Which phenomena occur as a result of the gravitational attraction between the moon and Earth?"
+      ],
+      "reason": "No existing catalog relation captures a causal mechanism-to-phenomenon link. Proposing new relation 'cause_to_effect' with direction 'specified cause or mechanism -> resulting phenomenon'. The source question directly asks what phenomena result from the moon–Earth gravitational attraction; 'ocean tides' is the literal source answer. Both model annotations agree on the fact.",
+      "english": {
+        "direction": "specified cause or mechanism -> resulting phenomenon",
+        "relation_id": "cause_to_effect",
+        "answer": "ocean tides",
+        "canonical_fact": "The gravitational attraction between the moon and Earth causes ocean tides.",
+        "subject": "gravitational attraction between the moon and Earth",
+        "prompt_en": "What phenomenon occurs as a result of the gravitational attraction between the moon and Earth?",
+        "relation_definition": "A named cause or mechanism directly produces a specified resulting phenomenon or effect; the effect is a direct or well-established consequence of the stated cause.",
+        "answer_aliases_en": [
+          "ocean tides"
+        ],
+        "relation_spec": {
+          "id": "cause_to_effect",
+          "definition": "A named cause or mechanism directly produces a specified resulting phenomenon or effect; the effect is a direct or well-established consequence of the stated cause.",
+          "direction": "specified cause or mechanism -> resulting phenomenon"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66bc90a39001eeebb6abaf7f57dd6daf15115987a53fd8a526ad7bd28f21fa11",
+      "input_sha256": "b030805f5279620dd5ecb0972529d61bd37e31a530d92908e658e46fc2a4a119",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001455",
+        "historical:raw_ai2_arc_easy_001456"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fd68d08511f00d00ba04086be0280fd179cce0f06fceab60dbaaaa0ccecb4181",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 22.564
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001455",
+        "historical:raw_ai2_arc_easy_001456"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fd68d08511f00d00ba04086be0280fd179cce0f06fceab60dbaaaa0ccecb4181",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2025,
+      "first_chunk_seconds": 8.346,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2107,
+        "prompt_tokens": 1720,
+        "total_tokens": 3827,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1562,
+          "text_tokens": 545
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "53b869f2c14a3d024bacf3d75e9938d0b93996514c657de0e0c318fdbf196050",
+      "status": "completed",
+      "latency_seconds": 36.719
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001455",
+        "historical:raw_ai2_arc_easy_001456"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c65ec45422bcd27e2ca72bc06e8f7a9c93a51957cd5a75f1e1f00d4b5748e38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.986
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001455",
+        "historical:raw_ai2_arc_easy_001456"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2c65ec45422bcd27e2ca72bc06e8f7a9c93a51957cd5a75f1e1f00d4b5748e38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.948
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001455",
+        "historical:raw_ai2_arc_easy_001456"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2c65ec45422bcd27e2ca72bc06e8f7a9c93a51957cd5a75f1e1f00d4b5748e38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 25.339,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

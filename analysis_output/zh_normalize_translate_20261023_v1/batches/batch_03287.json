@@ -1,0 +1,171 @@
+{
+  "input_sha256": "acfa9f7a05c61beb4e87231aca0d34986c11be5bb3598d76089f4d164fe7e50d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000455",
+      "decision": "ready",
+      "subject": "country with the most Nobel Laureates of all time",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "The United States",
+      "canonical_fact": "The United States is the country with the most Nobel Laureates of all time.",
+      "prompt_en": "Which country has the most Nobel Laureates of all time?",
+      "evidence_quotes": [
+        "The place with the most Nobel Laureates of all time is which country?",
+        "The United States"
+      ],
+      "reason": "The source question and answer jointly establish that the identifying description 'country with the most Nobel Laureates of all time' uniquely maps to the entity 'The United States'. The catalog relation description_to_entity (identifying description -> entity) fits exactly. No existing relation in the catalog captures a superlative/attribute-holder relation more precisely. Prompt is option-free and does not leak the answer.",
+      "english": {
+        "prompt_en": "Which country has the most Nobel Laureates of all time?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "The United States",
+        "canonical_fact": "The United States is the country with the most Nobel Laureates of all time.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "country with the most Nobel Laureates of all time",
+        "answer_aliases_en": [
+          "The United States"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "267e24cd62b22f4f7f82df28fe1d7a678b09d26e6d21a06c25081f7350ce8753",
+      "input_sha256": "48bb75aef746437e81f8249c4dc5ba1fbde7e242112eb2d207230c64f7f5ee2c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000462",
+      "decision": "ready",
+      "subject": "U.S. state that produces the most peaches",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "California",
+      "canonical_fact": "California is the U.S. state that produces the most peaches.",
+      "prompt_en": "Which U.S. state produces the most peaches?",
+      "evidence_quotes": [
+        "What U.S. state produces the most peaches?",
+        "California produces the most peaches in the U.S."
+      ],
+      "reason": "The source question asks for the U.S. state producing the most peaches and the answer confirms California. The identifying description 'U.S. state that produces the most peaches' maps to the entity 'California'. description_to_entity fits: a qualified description uniquely identifies an entity. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "Which U.S. state produces the most peaches?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "California",
+        "canonical_fact": "California is the U.S. state that produces the most peaches.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "U.S. state that produces the most peaches",
+        "answer_aliases_en": [
+          "California"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ed351c9473f295f6ec0345aca467a96ca387034037035ecbbe2d7ab7d9b18018",
+      "input_sha256": "2a43c712654f1d1d550d5b5acdf0577c5a8e2ec5f83d7796e2011911c7eb1537",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000455",
+        "historical:raw_truthful_qa_000462"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e04f25ffbf99669bc3f47158c5ecf8d0395de7cfef857073d577ea6122187b23",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.322
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000455",
+        "historical:raw_truthful_qa_000462"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e04f25ffbf99669bc3f47158c5ecf8d0395de7cfef857073d577ea6122187b23",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1417,
+      "first_chunk_seconds": 2.173,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1494,
+        "prompt_tokens": 1722,
+        "total_tokens": 3216,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 964,
+          "text_tokens": 530
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "50bcc3ea21b1eb107579eb84e33862e9100bcf2cb2aa5dc621e9b09596a0b29a",
+      "status": "completed",
+      "latency_seconds": 29.974
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000455",
+        "historical:raw_truthful_qa_000462"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "19b63cc919ad1b8af5da627d7a32b0e97bc658ce9227331e67e89105a27c4d5e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.75
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000455",
+        "historical:raw_truthful_qa_000462"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "19b63cc919ad1b8af5da627d7a32b0e97bc658ce9227331e67e89105a27c4d5e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.136
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000455",
+        "historical:raw_truthful_qa_000462"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "19b63cc919ad1b8af5da627d7a32b0e97bc658ce9227331e67e89105a27c4d5e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.487
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,259 @@
+{
+  "input_sha256": "dfe50136f479c499b588863b7a16da86b9c53a3dabc5eeca6dd9c84654fce60a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_710bfc082b02dc7846a3",
+      "decision": "ready",
+      "subject": "['Hi!'] * 4",
+      "relation_id": "code_expression_to_output",
+      "relation_definition": "The result of evaluating a specified code expression in a stated programming language and version.",
+      "direction": "specified code expression (language/version) -> evaluation output",
+      "answer": "['Hi!', 'Hi!', 'Hi!', 'Hi!']",
+      "canonical_fact": "In Python 3, the output of ['Hi!'] * 4 is ['Hi!', 'Hi!', 'Hi!', 'Hi!'].",
+      "prompt_en": "Factual question: In Python 3, what is the output of ['Hi!'] * 4?\nAnswer:",
+      "evidence_quotes": [
+        "what is the output of ['Hi!'] * 4?",
+        "['Hi!', 'Hi!', 'Hi!', 'Hi!']"
+      ],
+      "reason": "No catalog relation covers evaluation output of a code expression; proposed new precise relation code_expression_to_output. Source question and answer provide an unambiguous literal result; answer copied verbatim from source_answer.",
+      "english": {
+        "answer": "['Hi!', 'Hi!', 'Hi!', 'Hi!']",
+        "relation_id": "code_expression_to_output",
+        "prompt_en": "Factual question: In Python 3, what is the output of ['Hi!'] * 4?\nAnswer:",
+        "direction": "specified code expression (language/version) -> evaluation output",
+        "subject": "['Hi!'] * 4",
+        "canonical_fact": "In Python 3, the output of ['Hi!'] * 4 is ['Hi!', 'Hi!', 'Hi!', 'Hi!'].",
+        "relation_definition": "The result of evaluating a specified code expression in a stated programming language and version.",
+        "answer_aliases_en": [
+          "['Hi!', 'Hi!', 'Hi!', 'Hi!']"
+        ],
+        "relation_spec": {
+          "id": "code_expression_to_output",
+          "definition": "The result of evaluating a specified code expression in a stated programming language and version.",
+          "direction": "specified code expression (language/version) -> evaluation output"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b096b5f3635356faa78f5618e7a71e88293f91808ddce36095eaf39b7d9274bd",
+      "input_sha256": "0d4c9914f01f9f9587d9968f1bf05ba88487c4b3e983bf9004522367a393d1a7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_710cecdd6263c8e9aa50",
+      "decision": "ready",
+      "subject": "whiskey barrel",
+      "relation_id": "entity_to_capacity",
+      "relation_definition": "The stated volumetric or mass capacity of a specified entity, with unit retained as given.",
+      "direction": "entity -> capacity (unit specified)",
+      "answer": "53.0 gallons",
+      "canonical_fact": "A whiskey barrel has a capacity of 53.0 gallons.",
+      "prompt_en": "A whiskey barrel has a capacity of",
+      "evidence_quotes": [
+        "how many gallons are in a whiskey barrel",
+        "53.0 gallons"
+      ],
+      "reason": "No catalog relation covers a physical capacity/measurement property; proposed new precise relation entity_to_capacity. Source answer gives a single numeric value with unit; copied verbatim. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "53.0 gallons",
+        "relation_id": "entity_to_capacity",
+        "prompt_en": "A whiskey barrel has a capacity of",
+        "direction": "entity -> capacity (unit specified)",
+        "subject": "whiskey barrel",
+        "canonical_fact": "A whiskey barrel has a capacity of 53.0 gallons.",
+        "relation_definition": "The stated volumetric or mass capacity of a specified entity, with unit retained as given.",
+        "answer_aliases_en": [
+          "53.0 gallons",
+          "53 gallons"
+        ],
+        "relation_spec": {
+          "id": "entity_to_capacity",
+          "definition": "The stated volumetric or mass capacity of a specified entity, with unit retained as given.",
+          "direction": "entity -> capacity (unit specified)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b923a1a310e145af7129af4a0f5f546dbdbfe61fd5b2f1845291b8ab0441c266",
+      "input_sha256": "d89478903196099b7204cadb9818b6f18580e6cc813e686ca917643e2f5d194b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_710bfc082b02dc7846a3",
+      "input_sha256": "0d4c9914f01f9f9587d9968f1bf05ba88487c4b3e983bf9004522367a393d1a7",
+      "english": {
+        "answer": "['Hi!', 'Hi!', 'Hi!', 'Hi!']",
+        "relation_id": "code_expression_to_output",
+        "prompt_en": "Factual question: In Python 3, what is the output of ['Hi!'] * 4?\nAnswer:",
+        "direction": "specified code expression (language/version) -> evaluation output",
+        "subject": "['Hi!'] * 4",
+        "canonical_fact": "In Python 3, the output of ['Hi!'] * 4 is ['Hi!', 'Hi!', 'Hi!', 'Hi!'].",
+        "relation_definition": "The result of evaluating a specified code expression in a stated programming language and version.",
+        "answer_aliases_en": [
+          "['Hi!', 'Hi!', 'Hi!', 'Hi!']"
+        ],
+        "relation_spec": {
+          "id": "code_expression_to_output",
+          "definition": "The result of evaluating a specified code expression in a stated programming language and version.",
+          "direction": "specified code expression (language/version) -> evaluation output"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b096b5f3635356faa78f5618e7a71e88293f91808ddce36095eaf39b7d9274bd",
+      "translation": {
+        "record_id": "public:pbf_710bfc082b02dc7846a3",
+        "subject_zh": "['Hi!'] * 4",
+        "prompt_zh": "事实性问题：在 Python 3 中，['Hi!'] * 4 的输出是什么？\n答案：",
+        "canonical_fact_zh": "在 Python 3 中，['Hi!'] * 4 的输出为 ['Hi!', 'Hi!', 'Hi!', 'Hi!']。",
+        "answer_zh": "['Hi!', 'Hi!', 'Hi!', 'Hi!']",
+        "answer_aliases_zh": [
+          "['Hi!', 'Hi!', 'Hi!', 'Hi!']"
+        ]
+      },
+      "translation_sha256": "4dab07d0beea72051cc495f5e46650ab61eb09aa9e16a42ee4f6d400c2c4b81d"
+    },
+    {
+      "record_id": "public:pbf_710cecdd6263c8e9aa50",
+      "input_sha256": "d89478903196099b7204cadb9818b6f18580e6cc813e686ca917643e2f5d194b",
+      "english": {
+        "answer": "53.0 gallons",
+        "relation_id": "entity_to_capacity",
+        "prompt_en": "A whiskey barrel has a capacity of",
+        "direction": "entity -> capacity (unit specified)",
+        "subject": "whiskey barrel",
+        "canonical_fact": "A whiskey barrel has a capacity of 53.0 gallons.",
+        "relation_definition": "The stated volumetric or mass capacity of a specified entity, with unit retained as given.",
+        "answer_aliases_en": [
+          "53.0 gallons",
+          "53 gallons"
+        ],
+        "relation_spec": {
+          "id": "entity_to_capacity",
+          "definition": "The stated volumetric or mass capacity of a specified entity, with unit retained as given.",
+          "direction": "entity -> capacity (unit specified)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b923a1a310e145af7129af4a0f5f546dbdbfe61fd5b2f1845291b8ab0441c266",
+      "translation": {
+        "record_id": "public:pbf_710cecdd6263c8e9aa50",
+        "subject_zh": "威士忌酒桶",
+        "prompt_zh": "威士忌酒桶的容量为",
+        "canonical_fact_zh": "威士忌酒桶的容量为 53.0 加仑。",
+        "answer_zh": "53.0 加仑",
+        "answer_aliases_zh": [
+          "53.0 加仑",
+          "53 加仑"
+        ]
+      },
+      "translation_sha256": "2b42b9dfd0abe4b8974d321be6003b691c21ab9f68e6c55c6ae777ac188f8a85"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_710bfc082b02dc7846a3",
+        "public:pbf_710cecdd6263c8e9aa50"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "049fddc6cde5848bf6a7a4cd560084f68f374e629bcb3dde7256a8738f5c5169",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.961
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_710bfc082b02dc7846a3",
+        "public:pbf_710cecdd6263c8e9aa50"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "049fddc6cde5848bf6a7a4cd560084f68f374e629bcb3dde7256a8738f5c5169",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1765,
+      "first_chunk_seconds": 42.571,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1762,
+        "prompt_tokens": 1684,
+        "total_tokens": 3446,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1231,
+          "text_tokens": 531
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "508d4f21f80c22f8379d5ffe1aceb2de3a5f79e4199ede0588e77cc886088214",
+      "status": "completed",
+      "latency_seconds": 56.546
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_710bfc082b02dc7846a3",
+        "public:pbf_710cecdd6263c8e9aa50"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6ea841e89aad86a1d4a0d9de8d7c7f7a8fab7b48377e250b84a83cca928d24d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.947
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_710bfc082b02dc7846a3",
+        "public:pbf_710cecdd6263c8e9aa50"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6ea841e89aad86a1d4a0d9de8d7c7f7a8fab7b48377e250b84a83cca928d24d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.937
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_710bfc082b02dc7846a3",
+        "public:pbf_710cecdd6263c8e9aa50"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6ea841e89aad86a1d4a0d9de8d7c7f7a8fab7b48377e250b84a83cca928d24d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1142,
+      "first_chunk_seconds": 39.736,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1184,
+        "prompt_tokens": 917,
+        "total_tokens": 2101,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 874,
+          "text_tokens": 310
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a421048c226a908a1b1fe46543dd71bcf1eff5c0466439e128dd98b14ad4a881",
+      "status": "completed",
+      "latency_seconds": 50.846
+    }
+  ],
+  "status": "completed"
+}

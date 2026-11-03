@@ -1,0 +1,183 @@
+{
+  "input_sha256": "459acbf4978f583849ccecf63ed09a2d9084ec774407c5a613f90b9ee6f0aedd",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002478",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question asks for a subjective/normative judgment ('What would someone say about…'), and 'obsolete' is a time-dependent characterization rather than a stable, taxonomy-level factual relation. No catalog relation fits; proposing a new one would be too broad. One annotator flagged this as subjective_or_normative. Insufficient support for a reusable factual candidate.",
+      "input_sha256": "489602d655460aa25b4df362736dcd9b52d10936a264ba9acff202bbfddf361a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002523",
+      "decision": "ready",
+      "subject": "water loss in the body during sport",
+      "relation_id": "process_to_causal_mechanism",
+      "relation_definition": "The specific biological or physical mechanism that directly causes a stated physiological process or effect.",
+      "direction": "stated process/effect -> causal mechanism",
+      "answer": "sweating",
+      "canonical_fact": "Water loss in the body during sport is caused by sweating.",
+      "prompt_en": "What is the mechanism by which the body loses water during physical activity?",
+      "evidence_quotes": [
+        "loose water in your body while playing sport",
+        "sweating"
+      ],
+      "reason": "The source directly supplies the causal mechanism (sweating) for water loss during sport. No catalog relation covers a causal-mechanism link, so a precise new relation 'process_to_causal_mechanism' is proposed. The answer 'sweating' is copied verbatim from source_answer.",
+      "english": {
+        "prompt_en": "What is the mechanism by which the body loses water during physical activity?",
+        "relation_definition": "The specific biological or physical mechanism that directly causes a stated physiological process or effect.",
+        "answer": "sweating",
+        "canonical_fact": "Water loss in the body during sport is caused by sweating.",
+        "direction": "stated process/effect -> causal mechanism",
+        "relation_id": "process_to_causal_mechanism",
+        "subject": "water loss in the body during sport",
+        "answer_aliases_en": [
+          "sweating"
+        ],
+        "relation_spec": {
+          "id": "process_to_causal_mechanism",
+          "definition": "The specific biological or physical mechanism that directly causes a stated physiological process or effect.",
+          "direction": "stated process/effect -> causal mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b767f103ca94f38aa5ca16343a936d8fe512af532462c722045ed6c84eb81609",
+      "input_sha256": "33f01505697d9b3050092305c69d9f76c5fecc4d5bfa9d1eefa9e9c370ca05db",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002523",
+      "input_sha256": "33f01505697d9b3050092305c69d9f76c5fecc4d5bfa9d1eefa9e9c370ca05db",
+      "english": {
+        "prompt_en": "What is the mechanism by which the body loses water during physical activity?",
+        "relation_definition": "The specific biological or physical mechanism that directly causes a stated physiological process or effect.",
+        "answer": "sweating",
+        "canonical_fact": "Water loss in the body during sport is caused by sweating.",
+        "direction": "stated process/effect -> causal mechanism",
+        "relation_id": "process_to_causal_mechanism",
+        "subject": "water loss in the body during sport",
+        "answer_aliases_en": [
+          "sweating"
+        ],
+        "relation_spec": {
+          "id": "process_to_causal_mechanism",
+          "definition": "The specific biological or physical mechanism that directly causes a stated physiological process or effect.",
+          "direction": "stated process/effect -> causal mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b767f103ca94f38aa5ca16343a936d8fe512af532462c722045ed6c84eb81609",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002523",
+        "subject_zh": "运动中身体的水分流失",
+        "prompt_zh": "运动时身体失水的机制是什么？",
+        "canonical_fact_zh": "运动时体内水分流失是由出汗造成的。",
+        "answer_zh": "出汗",
+        "answer_aliases_zh": [
+          "出汗"
+        ]
+      },
+      "translation_sha256": "55b1cc5e6ac1a1b943893dd907fac33cb7eb6cd6ad50d65570fa6864c520e7c0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002478",
+        "historical:raw_commonsense_qa_002523"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3af2fe428142f2c1504b68193c6d64941e3f36c593224a743daebfd63e5d22a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2599,
+      "first_chunk_seconds": 4.262,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2703,
+        "prompt_tokens": 1581,
+        "total_tokens": 4284,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2262,
+          "text_tokens": 441
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2f78e52ef9d22f9fe2ba2fb940aa75d0a281d23fda5902ad5bd69aa9dc96aa5a",
+      "status": "completed",
+      "latency_seconds": 43.131
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002523"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0007ae85537c64091f4d13df03725bd5bba9bd417df262bb5acd4101e5f8241",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 71.458
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002523"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d0007ae85537c64091f4d13df03725bd5bba9bd417df262bb5acd4101e5f8241",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 48.845
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002523"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d0007ae85537c64091f4d13df03725bd5bba9bd417df262bb5acd4101e5f8241",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 517,
+      "first_chunk_seconds": 62.935,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 546,
+        "prompt_tokens": 531,
+        "total_tokens": 1077,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 434,
+          "text_tokens": 112
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "90e228efa6d4783db1b6e4ddc62c8a100f394f7ce0986b776fc3d10726194dae",
+      "status": "completed",
+      "latency_seconds": 75.558
+    }
+  ],
+  "status": "completed"
+}

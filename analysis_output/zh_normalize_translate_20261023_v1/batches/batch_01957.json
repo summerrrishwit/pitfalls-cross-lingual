@@ -1,0 +1,266 @@
+{
+  "input_sha256": "d010695f530742866fb721a360cb122aead70b408ddedb76f5928a764929001f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e81ed334d611d96662cb",
+      "decision": "ready",
+      "subject": "Have You Ever Seen the Rain",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "John Fogerty",
+      "canonical_fact": "John Fogerty wrote the song Have You Ever Seen the Rain.",
+      "prompt_en": "Factual question: who wrote the song have you ever seen the rain\nAnswer:",
+      "evidence_quotes": [
+        "who wrote the song have you ever seen the rain",
+        "John Fogerty"
+      ],
+      "reason": "The source question asks who wrote the song, and the source answer is 'John Fogerty'. A song is a written work (lyrics and composition), so written_work_to_author (written work -> author) fits exactly. The answer is preserved verbatim from source_answer; no conflict with existing fields.",
+      "english": {
+        "answer": "John Fogerty",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Factual question: who wrote the song have you ever seen the rain\nAnswer:",
+        "direction": "written work -> author",
+        "subject": "Have You Ever Seen the Rain",
+        "canonical_fact": "John Fogerty wrote the song Have You Ever Seen the Rain.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "John Fogerty",
+          "00010439623 IPI",
+          "John Cameron Fogerty",
+          "J.C. Fogerty",
+          "00486770701 IPI"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b11d2933997ac7f0d713b14e96c14970e3b0768d4e26848bfb4c682525736c15",
+      "input_sha256": "72c934bffbc5098b48e1dfa7242198fd66345570fa04efcb0959e384260ff317",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e81f6f282c7b771f6058",
+      "decision": "ready",
+      "subject": "Philadelphia Convention of 1787",
+      "relation_id": "event_to_presiding_officer",
+      "relation_definition": "The person who officially presided over a specified event, assembly, or convention; not a general organizer, attendee, or participant.",
+      "direction": "specified event -> presiding officer",
+      "answer": "George Washington",
+      "canonical_fact": "George Washington presided over the Philadelphia Convention of 1787.",
+      "prompt_en": "Factual question: who presided over the philadelphia convention of 1787\nAnswer:",
+      "evidence_quotes": [
+        "who presided over the philadelphia convention of 1787",
+        "George Washington"
+      ],
+      "reason": "The source question asks who presided over the Philadelphia Convention of 1787, and the source answer is 'George Washington'. No existing catalog relation covers 'event -> presiding person'; the closest candidates (entity_to_class, description_to_entity, etc.) do not fit the specific semantic of a presiding officer of a convention. Proposing event_to_presiding_officer with explicit definition. The answer is preserved verbatim from source_answer.",
+      "english": {
+        "answer": "George Washington",
+        "relation_id": "event_to_presiding_officer",
+        "prompt_en": "Factual question: who presided over the philadelphia convention of 1787\nAnswer:",
+        "direction": "specified event -> presiding officer",
+        "subject": "Philadelphia Convention of 1787",
+        "canonical_fact": "George Washington presided over the Philadelphia Convention of 1787.",
+        "relation_definition": "The person who officially presided over a specified event, assembly, or convention; not a general organizer, attendee, or participant.",
+        "answer_aliases_en": [
+          "George Washington",
+          "President Washington",
+          "G. Washington",
+          "Washington",
+          "Father of the United States"
+        ],
+        "relation_spec": {
+          "id": "event_to_presiding_officer",
+          "definition": "The person who officially presided over a specified event, assembly, or convention; not a general organizer, attendee, or participant.",
+          "direction": "specified event -> presiding officer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "77e772014f89ecb69270f7c7f2538e26df1dba7a1dd7758dd318a84e17a83ce3",
+      "input_sha256": "31f4aeb42003fc7022d0f4080d90ebead2888162fac3a9d68bd91f87a5ac021f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_e81ed334d611d96662cb",
+      "input_sha256": "72c934bffbc5098b48e1dfa7242198fd66345570fa04efcb0959e384260ff317",
+      "english": {
+        "answer": "John Fogerty",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Factual question: who wrote the song have you ever seen the rain\nAnswer:",
+        "direction": "written work -> author",
+        "subject": "Have You Ever Seen the Rain",
+        "canonical_fact": "John Fogerty wrote the song Have You Ever Seen the Rain.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "John Fogerty",
+          "00010439623 IPI",
+          "John Cameron Fogerty",
+          "J.C. Fogerty",
+          "00486770701 IPI"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b11d2933997ac7f0d713b14e96c14970e3b0768d4e26848bfb4c682525736c15",
+      "translation": {
+        "record_id": "public:pbf_e81ed334d611d96662cb",
+        "subject_zh": "你见过雨吗",
+        "prompt_zh": "事实性问题：谁创作了歌曲《你见过雨吗》\n答案：",
+        "canonical_fact_zh": "约翰·福格蒂创作了歌曲《你见过雨吗》。",
+        "answer_zh": "约翰·福格蒂",
+        "answer_aliases_zh": [
+          "约翰·福格蒂",
+          "00010439623 IPI",
+          "约翰·卡梅隆·福格蒂",
+          "J.C. 福格蒂",
+          "00486770701 IPI"
+        ]
+      },
+      "translation_sha256": "9156ee0e1664cf203aadd9af6f839c150064590d8dea85293aac314b221b15ad"
+    },
+    {
+      "record_id": "public:pbf_e81f6f282c7b771f6058",
+      "input_sha256": "31f4aeb42003fc7022d0f4080d90ebead2888162fac3a9d68bd91f87a5ac021f",
+      "english": {
+        "answer": "George Washington",
+        "relation_id": "event_to_presiding_officer",
+        "prompt_en": "Factual question: who presided over the philadelphia convention of 1787\nAnswer:",
+        "direction": "specified event -> presiding officer",
+        "subject": "Philadelphia Convention of 1787",
+        "canonical_fact": "George Washington presided over the Philadelphia Convention of 1787.",
+        "relation_definition": "The person who officially presided over a specified event, assembly, or convention; not a general organizer, attendee, or participant.",
+        "answer_aliases_en": [
+          "George Washington",
+          "President Washington",
+          "G. Washington",
+          "Washington",
+          "Father of the United States"
+        ],
+        "relation_spec": {
+          "id": "event_to_presiding_officer",
+          "definition": "The person who officially presided over a specified event, assembly, or convention; not a general organizer, attendee, or participant.",
+          "direction": "specified event -> presiding officer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "77e772014f89ecb69270f7c7f2538e26df1dba7a1dd7758dd318a84e17a83ce3",
+      "translation": {
+        "record_id": "public:pbf_e81f6f282c7b771f6058",
+        "subject_zh": "1787年费城制宪会议",
+        "prompt_zh": "事实性问题：谁主持了1787年费城制宪会议\n答案：",
+        "canonical_fact_zh": "乔治·华盛顿主持了1787年费城制宪会议。",
+        "answer_zh": "乔治·华盛顿",
+        "answer_aliases_zh": [
+          "乔治·华盛顿",
+          "华盛顿总统",
+          "G. 华盛顿",
+          "华盛顿",
+          "美国国父"
+        ]
+      },
+      "translation_sha256": "c077c0c74cfa280e37310374d96142f9e1255a6607c19542f702b766f3539b7f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e81ed334d611d96662cb",
+        "public:pbf_e81f6f282c7b771f6058"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "30a9e58b8ec53b021e592c3809e78f9e2e7fd1b554a4907366a8d1c709800abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2045,
+      "first_chunk_seconds": 68.64,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2160,
+        "prompt_tokens": 1668,
+        "total_tokens": 3828,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1582,
+          "text_tokens": 578
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6d5d060ebe257baba3800d6ecc3d70c2b6765bfe2bc1cbc494bab6dc1360246f",
+      "status": "completed",
+      "latency_seconds": 92.81
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e81ed334d611d96662cb",
+        "public:pbf_e81f6f282c7b771f6058"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "35acf2a838eaf733437f457176017d8eb73f175f4c8e81370b5a7e96807ff2ae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.028
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e81ed334d611d96662cb",
+        "public:pbf_e81f6f282c7b771f6058"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "35acf2a838eaf733437f457176017d8eb73f175f4c8e81370b5a7e96807ff2ae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.554
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e81ed334d611d96662cb",
+        "public:pbf_e81f6f282c7b771f6058"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "35acf2a838eaf733437f457176017d8eb73f175f4c8e81370b5a7e96807ff2ae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1448,
+      "first_chunk_seconds": 7.597,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1446,
+        "prompt_tokens": 945,
+        "total_tokens": 2391,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1074,
+          "text_tokens": 372
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e41e2302928544b6f86bbaea806bec9168c0532d8916ef718407b31b6b4c8c02",
+      "status": "completed",
+      "latency_seconds": 22.676
+    }
+  ],
+  "status": "completed"
+}

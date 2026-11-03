@@ -1,0 +1,214 @@
+{
+  "input_sha256": "08841bbab473ba03aa28f86fc6da66e3da59a977c2091b1026b20911ab70cbb6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000001",
+      "decision": "ready",
+      "subject": "disease that is unpreventable in type one form but may be prevented by diet in type two form",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "diabetes",
+      "canonical_fact": "Diabetes is the disease that is unpreventable in the type one form but may be prevented by diet if it is of the second type.",
+      "prompt_en": "What disease is unpreventable in the type one form but may be prevented by diet if it is of the second type?",
+      "evidence_quotes": [
+        "What disease is unpreventable in the type one form but may be prevented by diet if it is of the second type?",
+        "diabetes"
+      ],
+      "reason": "The source question supplies an identifying description (type one unpreventable, type two diet-preventable) and the source answer 'diabetes' is the unique entity satisfying that description. This maps exactly to description_to_entity in the catalog.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "diabetes",
+        "canonical_fact": "Diabetes is the disease that is unpreventable in the type one form but may be prevented by diet if it is of the second type.",
+        "subject": "disease that is unpreventable in type one form but may be prevented by diet in type two form",
+        "prompt_en": "What disease is unpreventable in the type one form but may be prevented by diet if it is of the second type?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "diabetes"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e66e38e021f8b4c5aa184ecf1cfbcc0e66105b90e3a2ed15d9501a4e15f4977d",
+      "input_sha256": "fbd5f33f5b0138c02b64c886a71d1948e728f83e1f65ff741aa7f5fcecffd57a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000003",
+      "decision": "ready",
+      "subject": "exponential growth of populations",
+      "relation_id": "process_to_enabling_condition",
+      "relation_definition": "The specified type of condition under which a named biological or physical process can occur; retains qualifiers such as 'ideal' or 'unrestricted'.",
+      "direction": "process -> condition type",
+      "answer": "ideal",
+      "canonical_fact": "Populations can grow exponentially under ideal conditions.",
+      "prompt_en": "Under what type of conditions can populations grow exponentially?",
+      "evidence_quotes": [
+        "Under what type of conditions can populations grow exponentially?",
+        "ideal"
+      ],
+      "reason": "No catalog relation covers 'the condition under which a process occurs.' Proposed new relation process_to_enabling_condition. The source question asks for the condition type and the source answer 'ideal' is a literal, unambiguous qualifier; no date, market, or version is invented. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "process -> condition type",
+        "relation_id": "process_to_enabling_condition",
+        "answer": "ideal",
+        "canonical_fact": "Populations can grow exponentially under ideal conditions.",
+        "subject": "exponential growth of populations",
+        "prompt_en": "Under what type of conditions can populations grow exponentially?",
+        "relation_definition": "The specified type of condition under which a named biological or physical process can occur; retains qualifiers such as 'ideal' or 'unrestricted'.",
+        "answer_aliases_en": [
+          "ideal"
+        ],
+        "relation_spec": {
+          "id": "process_to_enabling_condition",
+          "definition": "The specified type of condition under which a named biological or physical process can occur; retains qualifiers such as 'ideal' or 'unrestricted'.",
+          "direction": "process -> condition type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4a417d24cae92ae3ced75391cec725dd6d79d3d4e186bb05e29083f60fcbd4d6",
+      "input_sha256": "78fdc2eba28c4fdf58d93133d5d472dbae2d52712fb08d788f32f9444a037433",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000001",
+      "input_sha256": "fbd5f33f5b0138c02b64c886a71d1948e728f83e1f65ff741aa7f5fcecffd57a",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "diabetes",
+        "canonical_fact": "Diabetes is the disease that is unpreventable in the type one form but may be prevented by diet if it is of the second type.",
+        "subject": "disease that is unpreventable in type one form but may be prevented by diet in type two form",
+        "prompt_en": "What disease is unpreventable in the type one form but may be prevented by diet if it is of the second type?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "diabetes"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e66e38e021f8b4c5aa184ecf1cfbcc0e66105b90e3a2ed15d9501a4e15f4977d",
+      "translation": {
+        "record_id": "historical:raw_sciq_000001",
+        "subject_zh": "在I型形式下无法预防但在II型形式下可能通过饮食预防的疾病",
+        "prompt_zh": "哪种疾病在I型形式下无法预防，但如果是第二型则可能通过饮食预防？",
+        "canonical_fact_zh": "糖尿病是一种疾病，其I型形式无法预防，但如果是第二型则可能通过饮食预防。",
+        "answer_zh": "糖尿病",
+        "answer_aliases_zh": [
+          "糖尿病"
+        ]
+      },
+      "translation_sha256": "aa7380ab6814f53dba9487886df105f92768b2ac41e336f912dbc1e297a318ca"
+    },
+    {
+      "record_id": "historical:raw_sciq_000003",
+      "input_sha256": "78fdc2eba28c4fdf58d93133d5d472dbae2d52712fb08d788f32f9444a037433",
+      "english": {
+        "direction": "process -> condition type",
+        "relation_id": "process_to_enabling_condition",
+        "answer": "ideal",
+        "canonical_fact": "Populations can grow exponentially under ideal conditions.",
+        "subject": "exponential growth of populations",
+        "prompt_en": "Under what type of conditions can populations grow exponentially?",
+        "relation_definition": "The specified type of condition under which a named biological or physical process can occur; retains qualifiers such as 'ideal' or 'unrestricted'.",
+        "answer_aliases_en": [
+          "ideal"
+        ],
+        "relation_spec": {
+          "id": "process_to_enabling_condition",
+          "definition": "The specified type of condition under which a named biological or physical process can occur; retains qualifiers such as 'ideal' or 'unrestricted'.",
+          "direction": "process -> condition type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4a417d24cae92ae3ced75391cec725dd6d79d3d4e186bb05e29083f60fcbd4d6",
+      "translation": {
+        "record_id": "historical:raw_sciq_000003",
+        "subject_zh": "种群的指数增长",
+        "prompt_zh": "种群在何种类型的条件下可以呈指数增长？",
+        "canonical_fact_zh": "种群在理想条件下可以呈指数增长。",
+        "answer_zh": "理想",
+        "answer_aliases_zh": [
+          "理想"
+        ]
+      },
+      "translation_sha256": "e0046508bd47186418f37b5fe97d81e28c96a0c6f70a8b4ca57ccab12e697afc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000001",
+        "historical:raw_sciq_000003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f92a6f95550adcd94a1c8ddf596d1016e1279119ff2f0486c1d770cd8a2e6d50",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2610,
+      "first_chunk_seconds": 5.823,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2689,
+        "prompt_tokens": 1743,
+        "total_tokens": 4432,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2146,
+          "text_tokens": 543
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1821d83f827ae79850545bb460d798765667ac4d8299ab7e53169dfcfae8a180",
+      "status": "completed",
+      "latency_seconds": 44.82
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000001",
+        "historical:raw_sciq_000003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2a80347108aeeed82bd3afbec7af306c9a6094f2bec917b178858fd38f57d5ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1240,
+      "first_chunk_seconds": 6.245,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1500,
+        "prompt_tokens": 863,
+        "total_tokens": 2363,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1252,
+          "text_tokens": 248
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a7bb35258ca15069d5848db4aa65d939b369889021513151cc7e00065acdaf2d",
+      "status": "completed",
+      "latency_seconds": 117.993
+    }
+  ],
+  "status": "completed"
+}

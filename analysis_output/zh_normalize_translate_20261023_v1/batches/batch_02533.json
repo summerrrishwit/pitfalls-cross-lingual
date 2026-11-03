@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4a1137f380b3e40c9d02d2e300fe0fcef8e2ed0495fe914632a79bf9fba2b169",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003017",
+      "decision": "ready",
+      "subject": "a person not in their home country",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "foreign",
+      "canonical_fact": "A person not in their home country is foreign.",
+      "prompt_en": "What term describes a person who is not in their home country?",
+      "evidence_quotes": [
+        "When not in your home country you are?",
+        "foreign"
+      ],
+      "reason": "Source question supplies a defining description and requests the conventional term; description_to_term fits exactly (description given, term sought). Both model annotations agree on 'foreign' as the answer. No conflict with source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "foreign",
+        "canonical_fact": "A person not in their home country is foreign.",
+        "subject": "a person not in their home country",
+        "prompt_en": "What term describes a person who is not in their home country?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "foreign"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a9c197afbf45466ede40c33e60c84761413a3f6dafb412ceac00f8fe68c203f",
+      "input_sha256": "4640e5abfdb9b5e9cb2707fe7a41eb2413ddda0a19547b5f745235d15bedd000",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003027",
+      "decision": "ready",
+      "subject": "ice",
+      "relation_id": "substance_to_transformation_product",
+      "relation_definition": "The resulting substance or state produced when a specified substance undergoes a named physical transformation under specified conditions (e.g., melting, evaporation).",
+      "direction": "substance under specified condition -> resulting substance/state",
+      "answer": "water",
+      "canonical_fact": "Ice becomes water when exposed to the sun.",
+      "prompt_en": "What is likely to happen to ice when exposed to the sun?",
+      "evidence_quotes": [
+        "What  is likely to happen to ice in the sun?",
+        "become water"
+      ],
+      "reason": "No existing catalog relation covers a physical phase-change transformation (entity_to_material is about composition, not state change). New relation substance_to_transformation_product proposed with explicit definition and direction. Both model annotations agree on the factual content; 'water' is a valid concise extraction from source answer 'become water'.",
+      "english": {
+        "direction": "substance under specified condition -> resulting substance/state",
+        "relation_id": "substance_to_transformation_product",
+        "answer": "water",
+        "canonical_fact": "Ice becomes water when exposed to the sun.",
+        "subject": "ice",
+        "prompt_en": "What is likely to happen to ice when exposed to the sun?",
+        "relation_definition": "The resulting substance or state produced when a specified substance undergoes a named physical transformation under specified conditions (e.g., melting, evaporation).",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "substance_to_transformation_product",
+          "definition": "The resulting substance or state produced when a specified substance undergoes a named physical transformation under specified conditions (e.g., melting, evaporation).",
+          "direction": "substance under specified condition -> resulting substance/state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f4291f010a5707237539deeb9faa6a816c50a101b0c05c4de24aa5fc787c5307",
+      "input_sha256": "f6757e6047c182f41024d41dd29f5f6ba53f8f2449945a7dfde805cbee433f9f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003017",
+      "input_sha256": "4640e5abfdb9b5e9cb2707fe7a41eb2413ddda0a19547b5f745235d15bedd000",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "foreign",
+        "canonical_fact": "A person not in their home country is foreign.",
+        "subject": "a person not in their home country",
+        "prompt_en": "What term describes a person who is not in their home country?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "foreign"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a9c197afbf45466ede40c33e60c84761413a3f6dafb412ceac00f8fe68c203f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003017",
+        "subject_zh": "不在本国的人",
+        "prompt_zh": "什么词用来描述一个不在自己国家的人？",
+        "canonical_fact_zh": "不在本国的人是外国的。",
+        "answer_zh": "外国的",
+        "answer_aliases_zh": [
+          "外国的"
+        ]
+      },
+      "translation_sha256": "2338c337d29c45303981715f7057c918967441df870a8d5e8944fcc28a2776c6"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003027",
+      "input_sha256": "f6757e6047c182f41024d41dd29f5f6ba53f8f2449945a7dfde805cbee433f9f",
+      "english": {
+        "direction": "substance under specified condition -> resulting substance/state",
+        "relation_id": "substance_to_transformation_product",
+        "answer": "water",
+        "canonical_fact": "Ice becomes water when exposed to the sun.",
+        "subject": "ice",
+        "prompt_en": "What is likely to happen to ice when exposed to the sun?",
+        "relation_definition": "The resulting substance or state produced when a specified substance undergoes a named physical transformation under specified conditions (e.g., melting, evaporation).",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "substance_to_transformation_product",
+          "definition": "The resulting substance or state produced when a specified substance undergoes a named physical transformation under specified conditions (e.g., melting, evaporation).",
+          "direction": "substance under specified condition -> resulting substance/state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f4291f010a5707237539deeb9faa6a816c50a101b0c05c4de24aa5fc787c5307",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003027",
+        "subject_zh": "冰",
+        "prompt_zh": "冰在阳光下可能会发生什么？",
+        "canonical_fact_zh": "冰在阳光下会融化成水。",
+        "answer_zh": "水",
+        "answer_aliases_zh": [
+          "水"
+        ]
+      },
+      "translation_sha256": "b992086c88e67bbb83d95cbc32698560a1186df0e1c44ba06e5b4993ea902f5f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003017",
+        "historical:raw_commonsense_qa_003027"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8261d1ca4665dd96b6e32c212332766b0d7f021eb08ba399dbabd9e826ff2224",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2612,
+      "first_chunk_seconds": 11.469,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2905,
+        "prompt_tokens": 1641,
+        "total_tokens": 4546,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2419,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "50895e087c482dfec2b94ea59b17c6c671dfa11aada4197e41978f34ed7be56c",
+      "status": "completed",
+      "latency_seconds": 50.787
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003017",
+        "historical:raw_commonsense_qa_003027"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c776620cb2fa5bfff814e88eac57bd65451fc1c45a6362edd201abb2cfd2e379",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1392,
+      "first_chunk_seconds": 16.135,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1417,
+        "prompt_tokens": 845,
+        "total_tokens": 2262,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1213,
+          "text_tokens": 204
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "15ddcddcbc88606a07ec7726603fbeac630ae3dbf8abb533aefe0033085b2524",
+      "status": "completed",
+      "latency_seconds": 38.116
+    }
+  ],
+  "status": "completed"
+}

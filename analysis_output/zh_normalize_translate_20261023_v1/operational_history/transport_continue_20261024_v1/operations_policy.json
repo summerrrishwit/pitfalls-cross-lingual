@@ -1,0 +1,28 @@
+{
+  "version": "zh-operations-v2-20261024",
+  "authorization": "User explicitly requested bounded automatic recovery and larger Luna assignments on2026-10-24.",
+  "frozen_generation_and_packet_artifacts_unchanged": true,
+  "automatic_recovery": {
+    "stall_minutes": 20,
+    "confirmation_minutes": 10,
+    "max_attempts_per_24h": 3,
+    "backoff_minutes": [30, 60],
+    "probe_timeout_seconds": 90,
+    "max_failed_batches_per_attempt": 32,
+    "extra_retry_epochs_per_batch": 1,
+    "authentication_identity_or_hash_errors_require_user": true,
+    "graceful_stop_owned_confirmed_stalled_worker_only": true,
+    "force_kill_allowed": false
+  },
+  "luna_assignments": {
+    "requested_model": "gpt-6-luna",
+    "max_rows_per_assignment": 40,
+    "max_existing_packets_per_assignment": 2,
+    "frozen_packet_size": 20,
+    "max_rows_per_read": 5,
+    "separate_dispatch_output_and_finalization_per_packet": true,
+    "fallback_rows_per_assignment_on_truncation_or_coverage_error": 20,
+    "review_scope": "translation_only",
+    "human_gold": false
+  }
+}

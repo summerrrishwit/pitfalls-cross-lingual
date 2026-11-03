@@ -1,0 +1,220 @@
+{
+  "input_sha256": "0d9405868309ffaf87bb8434d9f20f6127b97c68a47f639d571c1db881bd0673",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c2422c9606aa941536cc",
+      "decision": "ready",
+      "subject": "Required reserves",
+      "relation_id": "financial_reserve_to_holding_location",
+      "relation_definition": "Physical or institutional locations where a specified type of financial reserve is permitted or required to be held.",
+      "direction": "financial reserve concept -> holding location(s)",
+      "answer": "a bank's vault or its account at the FED",
+      "canonical_fact": "Required reserves can be held in a bank's vault or its account at the FED.",
+      "prompt_en": "Where can required reserves be held?",
+      "evidence_quotes": [
+        "Required reserves",
+        "can be held in a bank's vault or its account at the FED"
+      ],
+      "reason": "Source answer explicitly states where required reserves can be held. No catalog relation covers financial storage/holding location for reserves, so a new precise relation 'financial_reserve_to_holding_location' is proposed. The answer is a literal substring of source_answer; prompt is option-free and does not leak the answer.",
+      "english": {
+        "answer": "a bank's vault or its account at the FED",
+        "relation_id": "financial_reserve_to_holding_location",
+        "prompt_en": "Where can required reserves be held?",
+        "direction": "financial reserve concept -> holding location(s)",
+        "subject": "Required reserves",
+        "canonical_fact": "Required reserves can be held in a bank's vault or its account at the FED.",
+        "relation_definition": "Physical or institutional locations where a specified type of financial reserve is permitted or required to be held.",
+        "answer_aliases_en": [
+          "a bank's vault or its account at the FED",
+          "can be held in a bank's vault or its account at the FED."
+        ],
+        "relation_spec": {
+          "id": "financial_reserve_to_holding_location",
+          "definition": "Physical or institutional locations where a specified type of financial reserve is permitted or required to be held.",
+          "direction": "financial reserve concept -> holding location(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8743214dd97b4e94767f072523026c0bf119273ed2a542ec10ea37664488913e",
+      "input_sha256": "8f66f4e0b969d5008b4408b9b6dba06afaaa1d20aa514477efb93ea992c489c1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c255799e2d2a2931b6d3",
+      "decision": "ready",
+      "subject": "most men's singles tennis titles",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Jimmy Connors",
+      "canonical_fact": "Jimmy Connors has won the most men's singles tennis titles.",
+      "prompt_en": "Who has won the most men's singles tennis titles?",
+      "evidence_quotes": [
+        "who has won the most men's singles tennis titles",
+        "Jimmy Connors"
+      ],
+      "reason": "The superlative description 'most men's singles tennis titles' uniquely identifies Jimmy Connors as the record holder, fitting the existing description_to_entity relation (description -> entity). The answer 'Jimmy Connors' is a literal substring of source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "Jimmy Connors",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who has won the most men's singles tennis titles?",
+        "direction": "identifying description -> entity",
+        "subject": "most men's singles tennis titles",
+        "canonical_fact": "Jimmy Connors has won the most men's singles tennis titles.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Jimmy Connors",
+          "James Scott Connors"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04e5544517a19a446aa86177ad28acc876ab552c41febdc05a768b4e3e52f044",
+      "input_sha256": "f611b22d56ed74b33b3d800e2c81b891ae779e2c211f00676b70c10de806c037",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c2422c9606aa941536cc",
+      "input_sha256": "8f66f4e0b969d5008b4408b9b6dba06afaaa1d20aa514477efb93ea992c489c1",
+      "english": {
+        "answer": "a bank's vault or its account at the FED",
+        "relation_id": "financial_reserve_to_holding_location",
+        "prompt_en": "Where can required reserves be held?",
+        "direction": "financial reserve concept -> holding location(s)",
+        "subject": "Required reserves",
+        "canonical_fact": "Required reserves can be held in a bank's vault or its account at the FED.",
+        "relation_definition": "Physical or institutional locations where a specified type of financial reserve is permitted or required to be held.",
+        "answer_aliases_en": [
+          "a bank's vault or its account at the FED",
+          "can be held in a bank's vault or its account at the FED."
+        ],
+        "relation_spec": {
+          "id": "financial_reserve_to_holding_location",
+          "definition": "Physical or institutional locations where a specified type of financial reserve is permitted or required to be held.",
+          "direction": "financial reserve concept -> holding location(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8743214dd97b4e94767f072523026c0bf119273ed2a542ec10ea37664488913e",
+      "translation": {
+        "record_id": "public:pbf_c2422c9606aa941536cc",
+        "subject_zh": "法定准备金",
+        "prompt_zh": "法定准备金可以存放在哪里？",
+        "canonical_fact_zh": "法定准备金可以存放在银行的金库中，或存放在其在美联储的账户中。",
+        "answer_zh": "银行的金库或其在美联储的账户",
+        "answer_aliases_zh": [
+          "银行的金库或其在美联储的账户",
+          "可以存放在银行的金库中或其在美联储的账户中。"
+        ]
+      },
+      "translation_sha256": "0febc9ebe09fec96dd52e577ea1609c942908a3722c9222654513966981f0b90"
+    },
+    {
+      "record_id": "public:pbf_c255799e2d2a2931b6d3",
+      "input_sha256": "f611b22d56ed74b33b3d800e2c81b891ae779e2c211f00676b70c10de806c037",
+      "english": {
+        "answer": "Jimmy Connors",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who has won the most men's singles tennis titles?",
+        "direction": "identifying description -> entity",
+        "subject": "most men's singles tennis titles",
+        "canonical_fact": "Jimmy Connors has won the most men's singles tennis titles.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Jimmy Connors",
+          "James Scott Connors"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04e5544517a19a446aa86177ad28acc876ab552c41febdc05a768b4e3e52f044",
+      "translation": {
+        "record_id": "public:pbf_c255799e2d2a2931b6d3",
+        "subject_zh": "最多男子单打网球冠军",
+        "prompt_zh": "谁获得了最多的男子单打网球冠军？",
+        "canonical_fact_zh": "吉米·康纳斯获得了最多的男子单打网球冠军。",
+        "answer_zh": "吉米·康纳斯",
+        "answer_aliases_zh": [
+          "吉米·康纳斯",
+          "詹姆斯·斯科特·康纳斯"
+        ]
+      },
+      "translation_sha256": "df47b527eedc5d270d5090704b2bfaaa00c2adc2612876b9aa455497e1a752b2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c2422c9606aa941536cc",
+        "public:pbf_c255799e2d2a2931b6d3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d4c31f30beb87d485d86cb47532ec7523b3dad178b62e665cbad391a5b9741fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2471,
+      "first_chunk_seconds": 31.311,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2469,
+        "prompt_tokens": 1635,
+        "total_tokens": 4104,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1950,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "df3d4627c59ee6e8e66a26448fefa07cef9ff68b873082a6bc0d996e97def729",
+      "status": "completed",
+      "latency_seconds": 52.355
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c2422c9606aa941536cc",
+        "public:pbf_c255799e2d2a2931b6d3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f77c0d3c3bab75dee087c6ee1579b4d346917830ffa54ae9a11f476c814cbe70",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1039,
+      "first_chunk_seconds": 9.027,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1036,
+        "prompt_tokens": 877,
+        "total_tokens": 1913,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 741,
+          "text_tokens": 295
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ca372d0654909ce630a8e2681b6695dcb8e705724a36f0f7b23b0a3c3488f1bf",
+      "status": "completed",
+      "latency_seconds": 17.699
+    }
+  ],
+  "status": "completed"
+}

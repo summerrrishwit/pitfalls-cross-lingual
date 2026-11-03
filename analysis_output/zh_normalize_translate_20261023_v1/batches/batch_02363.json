@@ -1,0 +1,239 @@
+{
+  "input_sha256": "8ac056f5733f92ba3843ce09824bcb1ab89451a740ea4394dd72be2d56ed5178",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001500",
+      "decision": "ready",
+      "subject": "water",
+      "relation_id": "substance_to_freezing_point",
+      "relation_definition": "Freezing point temperature of a specified substance in a stated temperature scale.",
+      "direction": "substance -> freezing point temperature",
+      "answer": "32°F",
+      "canonical_fact": "The freezing point of water is 32°F.",
+      "prompt_en": "What is the freezing point of water in degrees Fahrenheit?",
+      "evidence_quotes": [
+        "Which temperature is the freezing point of water?",
+        "32°F"
+      ],
+      "reason": "Source explicitly states 32°F as the freezing point of water. Both model annotations agree on extraction. No existing catalog relation captures a physical-property-of-substance fact; proposing precise new relation substance_to_freezing_point.",
+      "english": {
+        "direction": "substance -> freezing point temperature",
+        "relation_id": "substance_to_freezing_point",
+        "answer": "32°F",
+        "canonical_fact": "The freezing point of water is 32°F.",
+        "subject": "water",
+        "prompt_en": "What is the freezing point of water in degrees Fahrenheit?",
+        "relation_definition": "Freezing point temperature of a specified substance in a stated temperature scale.",
+        "answer_aliases_en": [
+          "32°F"
+        ],
+        "relation_spec": {
+          "id": "substance_to_freezing_point",
+          "definition": "Freezing point temperature of a specified substance in a stated temperature scale.",
+          "direction": "substance -> freezing point temperature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d69da712f0d87260887c65a901a1b472c641120abb1d8cce9d73b880ffd66c63",
+      "input_sha256": "c0f72ed5ef0a83c00bef0a5b2d5a09f5ed074caa5319528e56f931c2f55c4964",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001504",
+      "decision": "ready",
+      "subject": "Earth's gravity",
+      "relation_id": "physical_phenomenon_to_affected_scope",
+      "relation_definition": "Class or scope of entities affected by a specified physical phenomenon or force, retaining limiting qualifiers.",
+      "direction": "physical phenomenon -> affected entity class",
+      "answer": "objects that have mass",
+      "canonical_fact": "Earth's gravity affects only objects that have mass.",
+      "prompt_en": "What is the scope of objects affected by Earth's gravity?",
+      "evidence_quotes": [
+        "What objects are affected by Earth's gravity?",
+        "only objects that have mass"
+      ],
+      "reason": "Source states that only objects with mass are affected by Earth's gravity. One model flagged non-unique answer but the source is definitive and singular. Existing answer 'objects that have mass' is a concise substring of source and does not conflict; qualifier 'only' is preserved in canonical_fact. No catalog relation fits a force-interaction scope; proposing physical_phenomenon_to_affected_scope.",
+      "english": {
+        "direction": "physical phenomenon -> affected entity class",
+        "relation_id": "physical_phenomenon_to_affected_scope",
+        "answer": "objects that have mass",
+        "canonical_fact": "Earth's gravity affects only objects that have mass.",
+        "subject": "Earth's gravity",
+        "prompt_en": "What is the scope of objects affected by Earth's gravity?",
+        "relation_definition": "Class or scope of entities affected by a specified physical phenomenon or force, retaining limiting qualifiers.",
+        "answer_aliases_en": [
+          "objects that have mass"
+        ],
+        "relation_spec": {
+          "id": "physical_phenomenon_to_affected_scope",
+          "definition": "Class or scope of entities affected by a specified physical phenomenon or force, retaining limiting qualifiers.",
+          "direction": "physical phenomenon -> affected entity class"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d518e74bca5ea93332090033437e48da7a097a0d932f740c0f83d09da62e9edf",
+      "input_sha256": "cd5d1efce06b7391a0239a124faf872c727f4d62f9db51f4d5f859bf1a09c948",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001500",
+      "input_sha256": "c0f72ed5ef0a83c00bef0a5b2d5a09f5ed074caa5319528e56f931c2f55c4964",
+      "english": {
+        "direction": "substance -> freezing point temperature",
+        "relation_id": "substance_to_freezing_point",
+        "answer": "32°F",
+        "canonical_fact": "The freezing point of water is 32°F.",
+        "subject": "water",
+        "prompt_en": "What is the freezing point of water in degrees Fahrenheit?",
+        "relation_definition": "Freezing point temperature of a specified substance in a stated temperature scale.",
+        "answer_aliases_en": [
+          "32°F"
+        ],
+        "relation_spec": {
+          "id": "substance_to_freezing_point",
+          "definition": "Freezing point temperature of a specified substance in a stated temperature scale.",
+          "direction": "substance -> freezing point temperature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d69da712f0d87260887c65a901a1b472c641120abb1d8cce9d73b880ffd66c63",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001500",
+        "subject_zh": "水",
+        "prompt_zh": "水的冰点是多少华氏度？",
+        "canonical_fact_zh": "水的冰点是32°F。",
+        "answer_zh": "32°F",
+        "answer_aliases_zh": [
+          "32°F"
+        ]
+      },
+      "translation_sha256": "400ca48656629d1085924dc5d8a127728556d9b78df8b3084815cbe608afb7df"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001504",
+      "input_sha256": "cd5d1efce06b7391a0239a124faf872c727f4d62f9db51f4d5f859bf1a09c948",
+      "english": {
+        "direction": "physical phenomenon -> affected entity class",
+        "relation_id": "physical_phenomenon_to_affected_scope",
+        "answer": "objects that have mass",
+        "canonical_fact": "Earth's gravity affects only objects that have mass.",
+        "subject": "Earth's gravity",
+        "prompt_en": "What is the scope of objects affected by Earth's gravity?",
+        "relation_definition": "Class or scope of entities affected by a specified physical phenomenon or force, retaining limiting qualifiers.",
+        "answer_aliases_en": [
+          "objects that have mass"
+        ],
+        "relation_spec": {
+          "id": "physical_phenomenon_to_affected_scope",
+          "definition": "Class or scope of entities affected by a specified physical phenomenon or force, retaining limiting qualifiers.",
+          "direction": "physical phenomenon -> affected entity class"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d518e74bca5ea93332090033437e48da7a097a0d932f740c0f83d09da62e9edf",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001504",
+        "subject_zh": "地球的引力",
+        "prompt_zh": "地球引力作用的物体范围是什么？",
+        "canonical_fact_zh": "地球引力仅影响有质量的物体。",
+        "answer_zh": "有质量的物体",
+        "answer_aliases_zh": [
+          "有质量的物体"
+        ]
+      },
+      "translation_sha256": "b5151795bbe68cfb808b06da1ef23c34a0f99f5ec14850f570523e5ba13bf6e5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001500",
+        "historical:raw_ai2_arc_easy_001504"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ff7cddd9a9b5d254040afcddc97e48ebba9b06fa2673cd4f7fcf89a02f6e52da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2577,
+      "first_chunk_seconds": 15.197,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2739,
+        "prompt_tokens": 1637,
+        "total_tokens": 4376,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2241,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "deb7a57df7d1d0303412094d138356f371c812ed72cc2918165a8ef716af2b45",
+      "status": "completed",
+      "latency_seconds": 54.764
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001500",
+        "historical:raw_ai2_arc_easy_001504"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cee50d903ed26d478ec8fde557e8562b991f1de6cce614e0cb994b9d7924818b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 14.388,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001500",
+        "historical:raw_ai2_arc_easy_001504"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cee50d903ed26d478ec8fde557e8562b991f1de6cce614e0cb994b9d7924818b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 602,
+      "first_chunk_seconds": 20.769,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 599,
+        "prompt_tokens": 836,
+        "total_tokens": 1435,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 389,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "70e847571687dd254dc8d265c2f4d0a0778d89b0770927199a3c3c486dde54f9",
+      "status": "completed",
+      "latency_seconds": 28.185
+    }
+  ],
+  "status": "completed"
+}

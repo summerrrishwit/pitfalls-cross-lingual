@@ -1,0 +1,157 @@
+{
+  "input_sha256": "ea2d9cb89b13d46561b5e73f3654caabbc15e2ae4528bf39cafca230199164f5",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000842",
+      "decision": "ready",
+      "subject": "skeletal, cardiac, and smooth",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "muscle",
+      "canonical_fact": "Skeletal, cardiac, and smooth are all types of muscle.",
+      "prompt_en": "Skeletal, cardiac, and smooth are all types of what?",
+      "evidence_quotes": [
+        "Skeletal, cardiac, and smooth are all types of what?",
+        "muscle"
+      ],
+      "reason": "Both model annotations agree on subject, answer, and canonical fact. The raw relation 'types of' maps precisely to entity_to_class (stable taxonomy-level class membership: skeletal, cardiac, and smooth are subtypes of the class 'muscle'). Source question and answer directly support the fact with no qualification or uncertainty.",
+      "english": {
+        "prompt_en": "Skeletal, cardiac, and smooth are all types of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "muscle",
+        "canonical_fact": "Skeletal, cardiac, and smooth are all types of muscle.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "skeletal, cardiac, and smooth",
+        "answer_aliases_en": [
+          "muscle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "665d7251efb081839146d5c542e73405dfad4ec011ec3c2743e6ad2fc0d04722",
+      "input_sha256": "5e2472992401bb23703696d1743ba704d700263cf059c659a3c09d1035409e86",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000843",
+      "decision": "ready",
+      "subject": "reptile skin",
+      "relation_id": "body_part_to_surface_structure",
+      "relation_definition": "Characteristic surface covering of a specified body part; retain functional qualifier (e.g., protection against desiccation).",
+      "direction": "body part -> surface structure",
+      "answer": "scales",
+      "canonical_fact": "Reptile skin is covered in scales to protect them from drying out.",
+      "prompt_en": "What is reptile skin covered in to protect them from drying out?",
+      "evidence_quotes": [
+        "What is a reptiles skin covered in to protect them from drying out?",
+        "scales"
+      ],
+      "reason": "Both model annotations agree on subject, answer, and canonical fact. No existing catalog relation precisely captures 'a body part is covered by a surface structure serving a stated biological function'; entity_to_material is too narrow (scales are a structural layer, not a material composition), and organism_to_habitat does not apply. Proposing body_part_to_surface_structure as a new precise relation with the functional qualifier retained.",
+      "english": {
+        "prompt_en": "What is reptile skin covered in to protect them from drying out?",
+        "relation_definition": "Characteristic surface covering of a specified body part; retain functional qualifier (e.g., protection against desiccation).",
+        "answer": "scales",
+        "canonical_fact": "Reptile skin is covered in scales to protect them from drying out.",
+        "direction": "body part -> surface structure",
+        "relation_id": "body_part_to_surface_structure",
+        "subject": "reptile skin",
+        "answer_aliases_en": [
+          "scales"
+        ],
+        "relation_spec": {
+          "id": "body_part_to_surface_structure",
+          "definition": "Characteristic surface covering of a specified body part; retain functional qualifier (e.g., protection against desiccation).",
+          "direction": "body part -> surface structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "150827aee631e8c50d83e1114afe82cadd9a086a94f35a21d29f25d4a3845e3c",
+      "input_sha256": "a7d75ab66dff32cc8256a0a795b7f7d71c81baf1975319fd088198982450ad35",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000842",
+        "historical:raw_sciq_000843"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e017149cb0dfbe0d5883161cdc5a2554e3f5f0e17a3dd1d9b3defce38f241efb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2275,
+      "first_chunk_seconds": 22.274,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2296,
+        "prompt_tokens": 1695,
+        "total_tokens": 3991,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1762,
+          "text_tokens": 534
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c820518b05624b3797d81ef6a5e51caf58c3a19b64b2c950e2e60373b1e6d1f4",
+      "status": "completed",
+      "latency_seconds": 137.467
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000842",
+        "historical:raw_sciq_000843"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d41d2014cd6d684e05691253593a071742ce40005d9711bae92a01891d14af77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 40.856
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000842",
+        "historical:raw_sciq_000843"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d41d2014cd6d684e05691253593a071742ce40005d9711bae92a01891d14af77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.084
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000842",
+        "historical:raw_sciq_000843"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d41d2014cd6d684e05691253593a071742ce40005d9711bae92a01891d14af77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.044
+    }
+  ],
+  "status": "failed"
+}

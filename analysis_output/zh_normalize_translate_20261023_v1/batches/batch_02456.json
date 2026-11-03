@@ -1,0 +1,214 @@
+{
+  "input_sha256": "f751ea286de0b59efc37413915620d4b0e483ac81c10758ec27b5c03e1ba4226",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000642",
+      "decision": "ready",
+      "subject": "ordinary",
+      "relation_id": "term_to_antonym",
+      "relation_definition": "The antonym (opposite word) of a specified term in its common lexical sense; direction goes from the term to its standard opposite.",
+      "direction": "term -> antonym",
+      "answer": "exceptional",
+      "canonical_fact": "The opposite of ordinary is exceptional.",
+      "prompt_en": "What is the opposite of ordinary?",
+      "evidence_quotes": [
+        "What is the opposite of ordinary?",
+        "exceptional"
+      ],
+      "reason": "Source question and answer directly support that 'exceptional' is the opposite of 'ordinary'. No catalog relation covers lexical antonymy, so a precise new relation term_to_antonym is proposed. The raw answer matches source_answer exactly; model annotation exclusions are not binding.",
+      "english": {
+        "direction": "term -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "exceptional",
+        "canonical_fact": "The opposite of ordinary is exceptional.",
+        "subject": "ordinary",
+        "prompt_en": "What is the opposite of ordinary?",
+        "relation_definition": "The antonym (opposite word) of a specified term in its common lexical sense; direction goes from the term to its standard opposite.",
+        "answer_aliases_en": [
+          "exceptional"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "The antonym (opposite word) of a specified term in its common lexical sense; direction goes from the term to its standard opposite.",
+          "direction": "term -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3dec07e78e8e97672dd9d710f91295881ec9f0a61420273eb197e903a06a7755",
+      "input_sha256": "3a6931a0060aa434038dfbbbd6c0f829ab12a3d85e30133e0dcef0fd8d9be67c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000671",
+      "decision": "ready",
+      "subject": "gasoline",
+      "relation_id": "substance_to_production_location",
+      "relation_definition": "The type of industrial facility or site where a specified substance is produced or manufactured; not the origin of raw materials or the distribution site.",
+      "direction": "substance -> production location",
+      "answer": "refineries",
+      "canonical_fact": "Gasoline is made at refineries.",
+      "prompt_en": "Where is gasoline made?",
+      "evidence_quotes": [
+        "Where is gasoline made?",
+        "refineries"
+      ],
+      "reason": "Source question and answer state that gasoline is made at refineries. The catalog relation entity_to_containing_location explicitly excludes process locations, so it does not fit. A new precise relation substance_to_production_location is proposed to capture the manufacturing-site relationship without forcing a broader category.",
+      "english": {
+        "direction": "substance -> production location",
+        "relation_id": "substance_to_production_location",
+        "answer": "refineries",
+        "canonical_fact": "Gasoline is made at refineries.",
+        "subject": "gasoline",
+        "prompt_en": "Where is gasoline made?",
+        "relation_definition": "The type of industrial facility or site where a specified substance is produced or manufactured; not the origin of raw materials or the distribution site.",
+        "answer_aliases_en": [
+          "refineries"
+        ],
+        "relation_spec": {
+          "id": "substance_to_production_location",
+          "definition": "The type of industrial facility or site where a specified substance is produced or manufactured; not the origin of raw materials or the distribution site.",
+          "direction": "substance -> production location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ab77747073ad758808b5ded267d33973f8bee207c67692bb3ea2c9ae31403742",
+      "input_sha256": "095046a511703a57d8c7f9c4534b3ebfcb18b543def1b4c76959815fdd262ac4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000642",
+      "input_sha256": "3a6931a0060aa434038dfbbbd6c0f829ab12a3d85e30133e0dcef0fd8d9be67c",
+      "english": {
+        "direction": "term -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "exceptional",
+        "canonical_fact": "The opposite of ordinary is exceptional.",
+        "subject": "ordinary",
+        "prompt_en": "What is the opposite of ordinary?",
+        "relation_definition": "The antonym (opposite word) of a specified term in its common lexical sense; direction goes from the term to its standard opposite.",
+        "answer_aliases_en": [
+          "exceptional"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "The antonym (opposite word) of a specified term in its common lexical sense; direction goes from the term to its standard opposite.",
+          "direction": "term -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3dec07e78e8e97672dd9d710f91295881ec9f0a61420273eb197e903a06a7755",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000642",
+        "subject_zh": "普通的",
+        "prompt_zh": "普通的反义词是什么？",
+        "canonical_fact_zh": "普通的反义词是出色的。",
+        "answer_zh": "出色的",
+        "answer_aliases_zh": [
+          "出色的"
+        ]
+      },
+      "translation_sha256": "64c30692b522285fad94af3f63f215cb77ca724efda2b434f9f88dec668cc3ad"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000671",
+      "input_sha256": "095046a511703a57d8c7f9c4534b3ebfcb18b543def1b4c76959815fdd262ac4",
+      "english": {
+        "direction": "substance -> production location",
+        "relation_id": "substance_to_production_location",
+        "answer": "refineries",
+        "canonical_fact": "Gasoline is made at refineries.",
+        "subject": "gasoline",
+        "prompt_en": "Where is gasoline made?",
+        "relation_definition": "The type of industrial facility or site where a specified substance is produced or manufactured; not the origin of raw materials or the distribution site.",
+        "answer_aliases_en": [
+          "refineries"
+        ],
+        "relation_spec": {
+          "id": "substance_to_production_location",
+          "definition": "The type of industrial facility or site where a specified substance is produced or manufactured; not the origin of raw materials or the distribution site.",
+          "direction": "substance -> production location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ab77747073ad758808b5ded267d33973f8bee207c67692bb3ea2c9ae31403742",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000671",
+        "subject_zh": "汽油",
+        "prompt_zh": "汽油是在哪里制造的？",
+        "canonical_fact_zh": "汽油是在炼油厂生产的。",
+        "answer_zh": "炼油厂",
+        "answer_aliases_zh": [
+          "炼油厂"
+        ]
+      },
+      "translation_sha256": "5d89773f14440ea69706e1d472c699c4bd6d06c79a3401f26719175c6a921b84"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000642",
+        "historical:raw_commonsense_qa_000671"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8cd08cbf27f0e757d5a143247f7d0231cbd539b20fa1b342946ba4675b200e3e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1708,
+      "first_chunk_seconds": 59.613,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1757,
+        "prompt_tokens": 1605,
+        "total_tokens": 3362,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1288,
+          "text_tokens": 469
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0f401a6a00b544dde9032ed73924d2c066bc5dc5d40ba1c39baa31b62dd5efd3",
+      "status": "completed",
+      "latency_seconds": 81.543
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000642",
+        "historical:raw_commonsense_qa_000671"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b3363dcbac05ed1f61d19c3a3e759c2f4fef53595eb9d8f4e79f12f6c2eff145",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 749,
+      "first_chunk_seconds": 13.087,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 768,
+        "prompt_tokens": 839,
+        "total_tokens": 1607,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 575,
+          "text_tokens": 193
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a17e87937f3e08b8e85fc2a5b1ff8ab43dd11aa8f2d569d0dc5228909180c99f",
+      "status": "completed",
+      "latency_seconds": 27.759
+    }
+  ],
+  "status": "completed"
+}

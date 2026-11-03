@@ -1,0 +1,157 @@
+{
+  "input_sha256": "1cae0e92ce4668ff314a4b4fe4a62013509813b0a4223918ef1d14e3f81f9c48",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003907",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits 'has the potential to' (a vague capability/potential-effect link). The source question 'What does cancer have the potential to do?' is open-ended; 'kill' is one of many possible effects (pain, disability, etc.) and does not constitute a definitive, uniquely supported factual claim. Sensenova flagged it as non_unique_answer. Defer pending a more specific relation or source.",
+      "input_sha256": "a7f1b86f9f1dbd10ab0a8eec2d010eaeecb9b746224adc9569051600bd8415db",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003920",
+      "decision": "ready",
+      "subject": "bottom",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "butt",
+      "canonical_fact": "A bottom is also called a butt.",
+      "prompt_en": "What is another common name for a bottom?",
+      "evidence_quotes": [
+        "A bottom is also called what?",
+        "butt"
+      ],
+      "reason": "Both model annotations agree on extraction. 'Bottom' and 'butt' are established synonyms for the same body part, fitting the entity_to_alias relation exactly (equivalent name, same referent). Source answer 'butt' is a concise literal substring; no conflict with any old extraction.",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "butt",
+        "canonical_fact": "A bottom is also called a butt.",
+        "subject": "bottom",
+        "prompt_en": "What is another common name for a bottom?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "butt"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "afee1e182071d595a8b4614c793338c25c1a24f231c83709c4b54f2c79de2291",
+      "input_sha256": "db1f3c29e90de98c0b5388dc90c875d999100a82316f723213eeafe74d33dcb3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003920",
+      "input_sha256": "db1f3c29e90de98c0b5388dc90c875d999100a82316f723213eeafe74d33dcb3",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "butt",
+        "canonical_fact": "A bottom is also called a butt.",
+        "subject": "bottom",
+        "prompt_en": "What is another common name for a bottom?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "butt"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "afee1e182071d595a8b4614c793338c25c1a24f231c83709c4b54f2c79de2291",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003920",
+        "subject_zh": "臀部",
+        "prompt_zh": "臀部还有一个什么常用名称？",
+        "canonical_fact_zh": "臀部也叫屁股。",
+        "answer_zh": "屁股",
+        "answer_aliases_zh": [
+          "屁股"
+        ]
+      },
+      "translation_sha256": "2fac7a7a9f4ac68538497304fb6f251cf413516ccebb91c81fa3c966e19d8bfc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003907",
+        "historical:raw_commonsense_qa_003920"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f2e56110aa6582973bc27ded45c06882111342d189e5952c13fb7632cc18cf20",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1803,
+      "first_chunk_seconds": 8.62,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1884,
+        "prompt_tokens": 1618,
+        "total_tokens": 3502,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1469,
+          "text_tokens": 415
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c17e8577a0071233b729cf38139915a1585f5d7bcbb6a884ff7083f21cfb5de8",
+      "status": "completed",
+      "latency_seconds": 39.555
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003920"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b08705ef5535869a7bca911c1a6e0dff18ef0dda7cb33091c7941d9dea08a6ac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 940,
+      "first_chunk_seconds": 26.009,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 986,
+        "prompt_tokens": 491,
+        "total_tokens": 1477,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 878,
+          "text_tokens": 108
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc697610268c96c00a1d62034e37b7fb406aee12e018f0e36fbd2618e6b7c3ce",
+      "status": "completed",
+      "latency_seconds": 39.56
+    }
+  ],
+  "status": "completed"
+}

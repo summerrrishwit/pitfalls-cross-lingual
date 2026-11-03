@@ -1,0 +1,235 @@
+{
+  "input_sha256": "4c411fb4cb810ee2c8e08966ef2f4934739fe7cab714acd4f4d816ad82a4e287",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000449",
+      "decision": "ready",
+      "subject": "most common bird in North America that became extinct in the 1800s",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "the passenger piegon",
+      "canonical_fact": "The most common bird in North America that became extinct in the 1800s was the passenger piegon.",
+      "prompt_en": "What was the most common bird in North America that became extinct in the 1800s?",
+      "evidence_quotes": [
+        "most common bird in north america",
+        "the passenger piegon"
+      ],
+      "reason": "The source question provides an identifying description (most common bird in North America, extinct in the 1800s) and the source answer names the entity. The old answer 'the passenger piegon' matches the source answer exactly and is preserved. The relation description_to_entity fits: the subject is an explicitly qualified identifying description pointing to a unique entity.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "the passenger piegon",
+        "canonical_fact": "The most common bird in North America that became extinct in the 1800s was the passenger piegon.",
+        "subject": "most common bird in North America that became extinct in the 1800s",
+        "prompt_en": "What was the most common bird in North America that became extinct in the 1800s?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "the passenger piegon"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f696911cce9a9ba1255eadbc1e466e848d72f07cca5537f9b5f1746c69d70a7d",
+      "input_sha256": "70b5af6fadd574ba2732a78a4fafaaf8ff9e0db8b84f915e64b0bff490b64c13",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000450",
+      "decision": "ready",
+      "subject": "glass hydrometer",
+      "relation_id": "instrument_to_measured_quantity",
+      "relation_definition": "The physical quantity or property that a specified instrument is calibrated or designed to measure or indicate.",
+      "direction": "instrument -> measured quantity",
+      "answer": "specific gravity",
+      "canonical_fact": "A glass hydrometer measures specific gravity.",
+      "prompt_en": "What physical quantity does a glass hydrometer, filled with air and weighted with lead at the bottom, indicate when it is calibrated and labeled?",
+      "evidence_quotes": [
+        "calibrated and labeled so that you can read this from it",
+        "specific gravity"
+      ],
+      "reason": "The source question describes a glass hydrometer and asks what you can read from it; the source answer is 'specific gravity'. No existing catalog relation captures the instrument-to-measured-quantity link precisely, so a new relation ID 'instrument_to_measured_quantity' is proposed with explicit direction and definition. The old answer 'specific gravity' matches the source answer and is preserved verbatim.",
+      "english": {
+        "direction": "instrument -> measured quantity",
+        "relation_id": "instrument_to_measured_quantity",
+        "answer": "specific gravity",
+        "canonical_fact": "A glass hydrometer measures specific gravity.",
+        "subject": "glass hydrometer",
+        "prompt_en": "What physical quantity does a glass hydrometer, filled with air and weighted with lead at the bottom, indicate when it is calibrated and labeled?",
+        "relation_definition": "The physical quantity or property that a specified instrument is calibrated or designed to measure or indicate.",
+        "answer_aliases_en": [
+          "specific gravity"
+        ],
+        "relation_spec": {
+          "id": "instrument_to_measured_quantity",
+          "definition": "The physical quantity or property that a specified instrument is calibrated or designed to measure or indicate.",
+          "direction": "instrument -> measured quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e19b99277df0837f12672e2faac40e94a839a7b827805876a29807b7f9bd1b7a",
+      "input_sha256": "4173d19d60be21f5505f0db552689d82a50c7076db21a6cc818e0382053414a4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000449",
+        "historical:raw_sciq_000450"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "35157b8a0955b3ce6c9c7f4e2f233c2e52717070dd1d0073c17381e97139cec9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2358,
+      "first_chunk_seconds": 1.68,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2470,
+        "prompt_tokens": 1762,
+        "total_tokens": 4232,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1925,
+          "text_tokens": 545
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1d31333393c7e5a0b420888534b0090d3f1ec2f3ea02bfb27ce8cf169ecf5482",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 57.23,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000449",
+        "historical:raw_sciq_000450"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "41a0da63aad5511090bd24fb60d5572e0a64532a8185b4b8bd6fb5f937431896",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1646,
+      "first_chunk_seconds": 1.798,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1717,
+        "prompt_tokens": 1779,
+        "total_tokens": 3496,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1158,
+          "text_tokens": 559
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "742a3d1cbb94e7ed06de378ef587dfd2736c5d661918af35b531d35ce584b83b",
+      "status": "completed",
+      "latency_seconds": 29.897
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000449",
+        "historical:raw_sciq_000450"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "10c70d1d7e9b7040b0e155ee0f3092bbf9ed5c63c9f0f11ca291a286b18d3f0d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1040,
+      "first_chunk_seconds": 1.693,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1139,
+        "prompt_tokens": 855,
+        "total_tokens": 1994,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 906,
+          "text_tokens": 233
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b372969218c4318a0f2cd925fccba0ba956b379a94fc65f2ec645e9c5a2348fb",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 29.57,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000449",
+        "historical:raw_sciq_000450"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "be1f5041ee215377a6f4aa648a6bbf17cc1cfc32fbfc02d982a7000935a84ea0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1090,
+      "first_chunk_seconds": 6.705,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1214,
+        "prompt_tokens": 873,
+        "total_tokens": 2087,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 965,
+          "text_tokens": 249
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f73dc413d42c739217e3fc76483e588bc35d40532f125586d84ed93f60e03de7",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 31.889,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000449",
+        "historical:raw_sciq_000450"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "be1f5041ee215377a6f4aa648a6bbf17cc1cfc32fbfc02d982a7000935a84ea0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "PermissionDeniedError",
+      "http_status": 403,
+      "latency_seconds": 1.264,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json"
+      }
+    }
+  ],
+  "status": "failed"
+}

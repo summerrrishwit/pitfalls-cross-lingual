@@ -1,0 +1,240 @@
+{
+  "input_sha256": "3f16376f0cd8e6ee8553d61769690ea40564668bbc2a55b592aed286b2094526",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000016",
+      "decision": "ready",
+      "subject": "cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "cell membrane",
+      "canonical_fact": "The cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell is the cell membrane.",
+      "prompt_en": "What is the cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell?",
+      "evidence_quotes": [
+        "Which cellular structure in an animal cell helps maintain homeostasis by controlling the transportation of substances into and out of the cell?",
+        "cell membrane"
+      ],
+      "reason": "The source question provides an explicitly qualified identifying description (scope: animal cell; functional criterion: controls transportation of substances into and out; purpose: maintain homeostasis) that uniquely identifies the entity 'cell membrane'. This is a precise fit for description_to_entity (identifying description -> entity) in the catalog. No broader or forced category is needed.",
+      "english": {
+        "answer": "cell membrane",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell?",
+        "direction": "identifying description -> entity",
+        "subject": "cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell",
+        "canonical_fact": "The cellular structure in an animal cell that helps maintain homeostasis by controlling the transportation of substances into and out of the cell is the cell membrane.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "cell membrane"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6e35d32636315aaad49f9c5adc84b92a55ea71654e98f79e90d7195f3a8978ef",
+      "input_sha256": "ce21472f50256c33273f2504479ddbbca127369392870ac3af8709cc38376188",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000017",
+      "decision": "ready",
+      "subject": "ice cubes",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "Solid",
+      "canonical_fact": "Ice cubes are an example of the solid form of water.",
+      "prompt_en": "Ice cubes are an example of which form of water?",
+      "evidence_quotes": [
+        "Ice cubes are an example of which form of water?",
+        "Solid"
+      ],
+      "reason": "The question asks which form (state) of water ice cubes exemplify. 'Solid' is a stable class membership at the stated taxonomy level of 'form of water' (states of matter: solid/liquid/gas). This is a precise fit for entity_to_class (entity -> class) in the catalog, not an arbitrary attribute.",
+      "english": {
+        "answer": "Solid",
+        "relation_id": "entity_to_class",
+        "prompt_en": "Ice cubes are an example of which form of water?",
+        "direction": "entity -> class",
+        "subject": "ice cubes",
+        "canonical_fact": "Ice cubes are an example of the solid form of water.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "Solid"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "28b65b293a4a094c9ec9055a5bf0958fd034ab924bc4f9f2c7545f6d1def7fb9",
+      "input_sha256": "08cb43b8b334af48629c93e1a1df5d90d572cba522c351618fdb27956bdc3ec9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1778f19a5708ed7b8fcae231a32f8cb8df5b924563cb0c2459087d4c091c51be",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2130,
+      "first_chunk_seconds": 23.004,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2238,
+        "prompt_tokens": 1766,
+        "total_tokens": 4004,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1687,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6667b1d80f9d82d821b8348a27e87d25878e9f5f87ccee74ec613e33b465ee33",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 51.117,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "60246a0e17707c0840f0c2ed94888569e358f2db8d9338785ffdd1fa5fd45366",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2074,
+      "first_chunk_seconds": 22.094,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2143,
+        "prompt_tokens": 1785,
+        "total_tokens": 3928,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1582,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "28b80f881eb9eb92ae169e6473ed6cf4d81a44207308cae623d898948c97ae69",
+      "status": "completed",
+      "latency_seconds": 47.437
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.555
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.364
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.64
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.352
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 62.454
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000016",
+        "historical:raw_ai2_arc_easy_000017"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ad1767e88df347df37e9b52e73e4f3edfc9ebf50df2e95957f99e5ce18f68f2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 43.87
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02101.json",
+      "sha256": "e984f490b9817687f134276d62edee4d359757d4c9256f195d0f15cc8fa8841a",
+      "previous_status": "failed"
+    }
+  ]
+}

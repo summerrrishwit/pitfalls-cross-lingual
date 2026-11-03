@@ -1,0 +1,214 @@
+{
+  "input_sha256": "ce51bcfc2e443306ae457ab0cf138e3f81c1bbc0023abc87bf31fc66b4e2c36d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000451",
+      "decision": "ready",
+      "subject": "water molecule",
+      "relation_id": "molecule_to_atom_count",
+      "relation_definition": "Total number of constituent atoms in a specified molecule.",
+      "direction": "molecule -> atom count",
+      "answer": "3",
+      "canonical_fact": "A water molecule contains 3 atoms.",
+      "prompt_en": "How many atoms are in a water molecule?",
+      "evidence_quotes": [
+        "How many atoms does water contain?",
+        "3"
+      ],
+      "reason": "The source question explicitly asks for the atom count of water and the source answer is '3'. No catalog relation covers a quantitative atomic-composition property; proposing molecule_to_atom_count with direction molecule -> atom count. Both model annotations agree on subject, answer, and canonical fact.",
+      "english": {
+        "direction": "molecule -> atom count",
+        "relation_id": "molecule_to_atom_count",
+        "answer": "3",
+        "canonical_fact": "A water molecule contains 3 atoms.",
+        "subject": "water molecule",
+        "prompt_en": "How many atoms are in a water molecule?",
+        "relation_definition": "Total number of constituent atoms in a specified molecule.",
+        "answer_aliases_en": [
+          "3"
+        ],
+        "relation_spec": {
+          "id": "molecule_to_atom_count",
+          "definition": "Total number of constituent atoms in a specified molecule.",
+          "direction": "molecule -> atom count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19b9ea871cc282a130455247869353c945eea86c0c38a78671fb18cce7556347",
+      "input_sha256": "88090b0233b873d4167c17dd58512782106eb718e5c31c4173c7353ebcd0d8f6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000452",
+      "decision": "ready",
+      "subject": "Gymnamoebas",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "amoebozoans",
+      "canonical_fact": "Gymnamoebas constitute a large and varied group of amoebozoans.",
+      "prompt_en": "Gymnamoebas constitute a large and varied group of what?",
+      "evidence_quotes": [
+        "Gymnamoebas constitute a large and varied group of what?",
+        "amoebozoans"
+      ],
+      "reason": "The source states Gymnamoebas are a subgroup of amoebozoans, which is a taxonomic class-membership claim. entity_to_class (entity -> class) fits exactly: Gymnamoebas are classified within the taxon Amoebozoa. Both model annotations agree on subject, answer, and canonical fact.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "amoebozoans",
+        "canonical_fact": "Gymnamoebas constitute a large and varied group of amoebozoans.",
+        "subject": "Gymnamoebas",
+        "prompt_en": "Gymnamoebas constitute a large and varied group of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "amoebozoans"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64c8144fb3c10a1677e0696bf4a8038ce13def2bd7381830d92d8b2db4537f01",
+      "input_sha256": "7febcae8c0b35b33543fed0aa30e759931a2b33d57d785e24e7192a5ad29c527",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000451",
+      "input_sha256": "88090b0233b873d4167c17dd58512782106eb718e5c31c4173c7353ebcd0d8f6",
+      "english": {
+        "direction": "molecule -> atom count",
+        "relation_id": "molecule_to_atom_count",
+        "answer": "3",
+        "canonical_fact": "A water molecule contains 3 atoms.",
+        "subject": "water molecule",
+        "prompt_en": "How many atoms are in a water molecule?",
+        "relation_definition": "Total number of constituent atoms in a specified molecule.",
+        "answer_aliases_en": [
+          "3"
+        ],
+        "relation_spec": {
+          "id": "molecule_to_atom_count",
+          "definition": "Total number of constituent atoms in a specified molecule.",
+          "direction": "molecule -> atom count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19b9ea871cc282a130455247869353c945eea86c0c38a78671fb18cce7556347",
+      "translation": {
+        "record_id": "historical:raw_sciq_000451",
+        "subject_zh": "水分子",
+        "prompt_zh": "水分子中含有多少个原子？",
+        "canonical_fact_zh": "一个水分子含有3个原子。",
+        "answer_zh": "3",
+        "answer_aliases_zh": [
+          "3"
+        ]
+      },
+      "translation_sha256": "85ed698f57c77878c44087737876bc18dc7848eb68cf6b2beef6cbc8caf4cd81"
+    },
+    {
+      "record_id": "historical:raw_sciq_000452",
+      "input_sha256": "7febcae8c0b35b33543fed0aa30e759931a2b33d57d785e24e7192a5ad29c527",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "amoebozoans",
+        "canonical_fact": "Gymnamoebas constitute a large and varied group of amoebozoans.",
+        "subject": "Gymnamoebas",
+        "prompt_en": "Gymnamoebas constitute a large and varied group of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "amoebozoans"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64c8144fb3c10a1677e0696bf4a8038ce13def2bd7381830d92d8b2db4537f01",
+      "translation": {
+        "record_id": "historical:raw_sciq_000452",
+        "subject_zh": "无鞭毛变形虫",
+        "prompt_zh": "无鞭毛变形虫构成了哪一类庞大而多样的群体？",
+        "canonical_fact_zh": "无鞭毛变形虫构成了一个庞大而多样的变形虫动物群体。",
+        "answer_zh": "变形虫动物",
+        "answer_aliases_zh": [
+          "变形虫动物"
+        ]
+      },
+      "translation_sha256": "a5956540161f63e25c0fdec7c6e2926346e90d50b844f065beee5fc62232042e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000451",
+        "historical:raw_sciq_000452"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4a389755fe42728e5e6188531e6d6f0d5be6f56b3348ba47260438df0ec76ee5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1996,
+      "first_chunk_seconds": 1.494,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2004,
+        "prompt_tokens": 1697,
+        "total_tokens": 3701,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1519,
+          "text_tokens": 485
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2e48bb475e3c3aa2a6d6d970c17d6b8d104719d0a8684abdf5b5d28baad3deef",
+      "status": "completed",
+      "latency_seconds": 41.382
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000451",
+        "historical:raw_sciq_000452"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad203bc82dfc80ce3c9bf3baf5bb1edeefcd70ea6713611e9127d701290584c1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 858,
+      "first_chunk_seconds": 2.461,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 884,
+        "prompt_tokens": 805,
+        "total_tokens": 1689,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 664,
+          "text_tokens": 220
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6de598d27cf8782d81ae8f2ef76e50c2ea235a5c7c3c2a90d20653d9cff43798",
+      "status": "completed",
+      "latency_seconds": 39.635
+    }
+  ],
+  "status": "completed"
+}

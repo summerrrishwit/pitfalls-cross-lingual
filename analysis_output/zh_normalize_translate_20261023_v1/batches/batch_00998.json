@@ -1,0 +1,157 @@
+{
+  "input_sha256": "1dbf3abb89d581dc07a0bfdeff0981c38bcc1b1bb784b28379ce50dabfb1d82b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_4cfec327eaab4d3336dd",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact 'A cheetah that runs all day will find it has lost a lot of water' is a conditional physiological claim (entity under activity condition X loses substance Y). No catalog relation captures this conditional, state-dependent loss pattern. Forcing it into organism_to_habitat, entity_to_class, or any other listed relation would misrepresent the direction and semantics. Deferring without forcing a broad category.",
+      "input_sha256": "784a25bf68d218e3944f9e75c70ba2363bd5c467109cd308e76bb4ef84fd1929",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_4d0c8b0265e16606a344",
+      "decision": "ready",
+      "subject": "stack",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "Local variables",
+      "canonical_fact": "The stack is memory for storing local variables.",
+      "prompt_en": "The stack is memory for storing",
+      "evidence_quotes": [
+        "The stack is memory for storing",
+        "Local variables"
+      ],
+      "reason": "The statement defines the computer-science term 'stack' as the memory region for storing local variables. This is a direct term-to-definition fit: subject is the explicit term 'stack', and the answer 'Local variables' (within the defining clause 'memory for storing …') supplies the defining sense. Direction term→definition matches. Prompt omits the answer. No conflict with source.",
+      "english": {
+        "answer": "Local variables",
+        "relation_id": "term_to_definition",
+        "prompt_en": "The stack is memory for storing",
+        "direction": "term -> definition",
+        "subject": "stack",
+        "canonical_fact": "The stack is memory for storing local variables.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "Local variables"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1fc4e26382ec1fefcf8e04de456f014f7cb61ceb61aa3284fcb25e92c66a9376",
+      "input_sha256": "4864daf6dc271c355469d1f64434f8682ac87be3e25fe8c078991abb3f99be0c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_4d0c8b0265e16606a344",
+      "input_sha256": "4864daf6dc271c355469d1f64434f8682ac87be3e25fe8c078991abb3f99be0c",
+      "english": {
+        "answer": "Local variables",
+        "relation_id": "term_to_definition",
+        "prompt_en": "The stack is memory for storing",
+        "direction": "term -> definition",
+        "subject": "stack",
+        "canonical_fact": "The stack is memory for storing local variables.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "Local variables"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1fc4e26382ec1fefcf8e04de456f014f7cb61ceb61aa3284fcb25e92c66a9376",
+      "translation": {
+        "record_id": "public:pbf_4d0c8b0265e16606a344",
+        "subject_zh": "栈",
+        "prompt_zh": "栈是用于存储____的内存",
+        "canonical_fact_zh": "栈是用于存储局部变量的内存。",
+        "answer_zh": "局部变量",
+        "answer_aliases_zh": [
+          "局部变量"
+        ]
+      },
+      "translation_sha256": "e0c1f5a64c8f29b528755253feedba2fcff9eb78438909c423f037284c5ea10c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4cfec327eaab4d3336dd",
+        "public:pbf_4d0c8b0265e16606a344"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c8b0d5bd765482192e6bc71639271739c5b2b59467591127b2284c779c811ec",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2748,
+      "first_chunk_seconds": 8.303,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2870,
+        "prompt_tokens": 1578,
+        "total_tokens": 4448,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2418,
+          "text_tokens": 452
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a0cbe162b1228d12d71de5f16286b120d18a41c3c78a1fe1cd356a60a063d42f",
+      "status": "completed",
+      "latency_seconds": 52.852
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4d0c8b0265e16606a344"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eddf7f412efa470895a4b01ef4d7c05dbc1d4f4d6dfc4552679544c4c107ed3e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 480,
+      "first_chunk_seconds": 3.588,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 533,
+        "prompt_tokens": 501,
+        "total_tokens": 1034,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 453,
+          "text_tokens": 80
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9499160abe28800086c8626354acc92a4ddf9cbb067e69f804bd13f3f51851bd",
+      "status": "completed",
+      "latency_seconds": 31.843
+    }
+  ],
+  "status": "completed"
+}

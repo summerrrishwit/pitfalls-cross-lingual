@@ -1,0 +1,208 @@
+{
+  "input_sha256": "bd10540eba2275b40a48e2662d32042a45e5dd55674d7e32a7abda66a8c5fd1d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000450",
+      "decision": "ready",
+      "subject": "Northern Hemisphere tilted away from the Sun",
+      "relation_id": "hemisphere_tilt_to_season",
+      "relation_definition": "Season experienced by a specified hemisphere in a stated orientation relative to the Sun; conditional scientific fact, not a general definition.",
+      "direction": "hemisphere + tilt orientation -> resulting season",
+      "answer": "winter",
+      "canonical_fact": "The Northern Hemisphere experiences winter when it is tilted away from the Sun.",
+      "prompt_en": "What season does the Northern Hemisphere experience when it is tilted away from the Sun?",
+      "evidence_quotes": [
+        "What season is the Northern Hemisphere experiencing when it is tilted away from the Sun?",
+        "winter"
+      ],
+      "reason": "Source answer 'winter' is unambiguous and directly supports the conditional fact. No catalog relation precisely captures 'tilt orientation -> season', so a new snake_case relation is proposed with explicit conditional scope. Both model annotations agree on subject, relation, and answer.",
+      "english": {
+        "answer": "winter",
+        "relation_id": "hemisphere_tilt_to_season",
+        "prompt_en": "What season does the Northern Hemisphere experience when it is tilted away from the Sun?",
+        "direction": "hemisphere + tilt orientation -> resulting season",
+        "subject": "Northern Hemisphere tilted away from the Sun",
+        "canonical_fact": "The Northern Hemisphere experiences winter when it is tilted away from the Sun.",
+        "relation_definition": "Season experienced by a specified hemisphere in a stated orientation relative to the Sun; conditional scientific fact, not a general definition.",
+        "answer_aliases_en": [
+          "winter"
+        ],
+        "relation_spec": {
+          "id": "hemisphere_tilt_to_season",
+          "definition": "Season experienced by a specified hemisphere in a stated orientation relative to the Sun; conditional scientific fact, not a general definition.",
+          "direction": "hemisphere + tilt orientation -> resulting season"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "67d9b259efdddd0b8bbeb2ce93c52b63455f2be9077a0a6f0bf88463ceb0c85e",
+      "input_sha256": "fe08cd108988b21908c39bee9225af60c603e87e4b716b5c5d3ba3b39dd207df",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000452",
+      "decision": "ready",
+      "subject": "the burning of wood (releasing heat and forming ash)",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "chemical",
+      "canonical_fact": "The kind of change that occurs in wood when it burns and releases heat is chemical.",
+      "prompt_en": "What kind of change occurs in wood when it burns and releases heat?",
+      "evidence_quotes": [
+        "What kind of change occurs in the wood when it burns and releases heat?",
+        "chemical"
+      ],
+      "reason": "Source answer 'chemical' classifies the burning process within the taxonomy of change types (chemical vs. physical). entity_to_class fits: the process 'wood burning' is a stable member of the class 'chemical changes'. Both model annotations concur on answer and classification. Answer kept as the literal substring 'chemical' from source_answer.",
+      "english": {
+        "answer": "chemical",
+        "relation_id": "entity_to_class",
+        "prompt_en": "What kind of change occurs in wood when it burns and releases heat?",
+        "direction": "entity -> class",
+        "subject": "the burning of wood (releasing heat and forming ash)",
+        "canonical_fact": "The kind of change that occurs in wood when it burns and releases heat is chemical.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "chemical"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0c08fcbd9e63a40e3b4b13b6924fc59acee85b425203d0c2135d5f10ef43de6a",
+      "input_sha256": "a2731dbfc9ac4b24d9cf7ffdcbe9ca2d070c27c7e99386880a3bd933af8cd038",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "110fa09f1889809b9b1bf56ce144d248873d476f5ad47621d32588f98c9f0a59",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2081,
+      "first_chunk_seconds": 42.109,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2152,
+        "prompt_tokens": 1702,
+        "total_tokens": 3854,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1625,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "222c8de6e4316950b74357235df4794f9019c7ead45208f8cd9cc03f38ded8eb",
+      "status": "completed",
+      "latency_seconds": 71.328
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.974
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.923
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.473
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.817
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.776
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000450",
+        "historical:raw_ai2_arc_easy_000452"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "50e22c191a8ea21b5b4164c1c37e6c59c2ce8a98c22f6c11d7ae5cfb51551e8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.079
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02174.json",
+      "sha256": "837734b345ee3e3b867831e1077f163ca314b314a420d4495aef2ef607548edc",
+      "previous_status": "failed"
+    }
+  ]
+}

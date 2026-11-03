@@ -1,0 +1,157 @@
+{
+  "input_sha256": "1b8bb5078c6d17171969269aee3e9dcdee0210d83ab1a835173dc7e73140e88d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000326",
+      "decision": "ready",
+      "subject": "proton",
+      "relation_id": "entity_to_physical_property",
+      "relation_definition": "The value of a specified physical property of an entity under a stated context or condition; not a qualitative classification, material composition, or taxonomy membership.",
+      "direction": "entity -> physical property value in stated context",
+      "answer": "+1",
+      "canonical_fact": "A proton has an electrical charge of +1 in an atom.",
+      "prompt_en": "What is the electrical charge of a proton in an atom?",
+      "evidence_quotes": [
+        "What electrical charge does a proton have in an atom?",
+        "+1"
+      ],
+      "reason": "The source explicitly states the proton's electrical charge is +1 in an atom. No catalog relation captures a numeric/physical property value (entity_to_class is for taxonomy membership, entity_to_material is for composition), so a new precise relation entity_to_physical_property is proposed. Both model annotations agree on subject, relation, and answer.",
+      "english": {
+        "answer": "+1",
+        "relation_id": "entity_to_physical_property",
+        "prompt_en": "What is the electrical charge of a proton in an atom?",
+        "direction": "entity -> physical property value in stated context",
+        "subject": "proton",
+        "canonical_fact": "A proton has an electrical charge of +1 in an atom.",
+        "relation_definition": "The value of a specified physical property of an entity under a stated context or condition; not a qualitative classification, material composition, or taxonomy membership.",
+        "answer_aliases_en": [
+          "+1"
+        ],
+        "relation_spec": {
+          "id": "entity_to_physical_property",
+          "definition": "The value of a specified physical property of an entity under a stated context or condition; not a qualitative classification, material composition, or taxonomy membership.",
+          "direction": "entity -> physical property value in stated context"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "068437f15e42a5943917ab8386c2ccaf997363ebfb51322e9e34c4d059d2ed4e",
+      "input_sha256": "95872ee7c89cf37a9dc1e05af34593241653a20ddee43e0e8c71520ad623b998",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000327",
+      "decision": "ready",
+      "subject": "bones and muscles in the arm when bending at the elbow",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "Lever",
+      "canonical_fact": "The bones and muscles in the arm when bending at the elbow represent a lever.",
+      "prompt_en": "What simple machine do the bones and muscles in the arm represent when bending at the elbow?",
+      "evidence_quotes": [
+        "When you bend your arm at the elbow, the bones and muscles in your arm are acting as a system. What simple machine does this system represent?",
+        "Lever"
+      ],
+      "reason": "The source identifies the arm's bones-and-muscles system as representing a lever, which is a stable class within the taxonomy of simple machines. entity_to_class fits exactly: the biological system (entity) is mapped to the lever class. Both model annotations agree on subject, relation, and answer.",
+      "english": {
+        "answer": "Lever",
+        "relation_id": "entity_to_class",
+        "prompt_en": "What simple machine do the bones and muscles in the arm represent when bending at the elbow?",
+        "direction": "entity -> class",
+        "subject": "bones and muscles in the arm when bending at the elbow",
+        "canonical_fact": "The bones and muscles in the arm when bending at the elbow represent a lever.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "Lever"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c7c448f56114d03a32f669846926ac6ee526e10832f51dca5bbed36172ae460d",
+      "input_sha256": "ba29146cff06d53bad847cce1d8d9600af41c00cf104590ae42a76aa6d0ece85",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000326",
+        "historical:raw_ai2_arc_easy_000327"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b5100fc4a75a1159f71bf308f59c3c0b64975bccdf8c68607231a4e552a78c5c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2081,
+      "first_chunk_seconds": 15.727,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2172,
+        "prompt_tokens": 1728,
+        "total_tokens": 3900,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1630,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0831e7cc0ae3d63d0acd97a705cbf7ed8bb534db53e88862616b65a3db5db5d5",
+      "status": "completed",
+      "latency_seconds": 46.73
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000326",
+        "historical:raw_ai2_arc_easy_000327"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "77c5e6ff439764336e5549892d71d6c82dff46f28b7c92aeb35f1c6b3b13fefa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.082
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000326",
+        "historical:raw_ai2_arc_easy_000327"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "77c5e6ff439764336e5549892d71d6c82dff46f28b7c92aeb35f1c6b3b13fefa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.024
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000326",
+        "historical:raw_ai2_arc_easy_000327"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "77c5e6ff439764336e5549892d71d6c82dff46f28b7c92aeb35f1c6b3b13fefa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.057
+    }
+  ],
+  "status": "failed"
+}

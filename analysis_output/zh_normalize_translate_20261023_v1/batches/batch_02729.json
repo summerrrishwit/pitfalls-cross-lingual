@@ -1,0 +1,219 @@
+{
+  "input_sha256": "b63fe9abef315201044a6aae7fb91a6fe6487b486ad3965054c7713557f83699",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009210",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits the vague capability/purpose link 'procedure -> what it can find out'. Proposing a new relation would be overly broad (an ultrasound can determine many parameters: gestational age, fetal position, placenta location, number of fetuses, sex, etc.), so 'ultrasound -> boy or girl' is not a clean, uniquely-determined reusable fact. The Qwen-3.8-Max annotation also flagged this as non_unique_answer. Deferring.",
+      "input_sha256": "3382644a8971997f629edcd762e788445a784ff1d07661f21172b4ee95ab6299",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009266",
+      "decision": "ready",
+      "subject": "Big Sky Country",
+      "relation_id": "alias_to_entity",
+      "relation_definition": "The unique entity or region referred to by a specific widely-used nickname or alias; direction is alias/nickname -> entity. Distinct from entity_to_alias which goes the opposite direction.",
+      "direction": "alias/nickname -> entity",
+      "answer": "Montana",
+      "canonical_fact": "Montana is referred to as Big Sky Country.",
+      "prompt_en": "Which region is commonly referred to as Big Sky Country?",
+      "evidence_quotes": [
+        "big sky country",
+        "montana"
+      ],
+      "reason": "No catalog relation covers the alias-to-entity direction (entity_to_alias goes entity->alias, the inverse). The fact that Montana is widely known by the nickname 'Big Sky Country' is well-supported by the source. Proposing alias_to_entity as a precise new relation. Answer 'Montana' kept from the existing extraction (proper-noun capitalization of source 'montana').",
+      "english": {
+        "direction": "alias/nickname -> entity",
+        "relation_id": "alias_to_entity",
+        "answer": "Montana",
+        "canonical_fact": "Montana is referred to as Big Sky Country.",
+        "subject": "Big Sky Country",
+        "prompt_en": "Which region is commonly referred to as Big Sky Country?",
+        "relation_definition": "The unique entity or region referred to by a specific widely-used nickname or alias; direction is alias/nickname -> entity. Distinct from entity_to_alias which goes the opposite direction.",
+        "answer_aliases_en": [
+          "Montana"
+        ],
+        "relation_spec": {
+          "id": "alias_to_entity",
+          "definition": "The unique entity or region referred to by a specific widely-used nickname or alias; direction is alias/nickname -> entity. Distinct from entity_to_alias which goes the opposite direction.",
+          "direction": "alias/nickname -> entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5415b998903f6d73f5a77f54282e933dd39e12702cba4ffbaa7393e6deedc69c",
+      "input_sha256": "28c26b634919454911ffd2aaf041dac58b01cb2c984f0a9fafe9586f50f48a43",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009266",
+      "input_sha256": "28c26b634919454911ffd2aaf041dac58b01cb2c984f0a9fafe9586f50f48a43",
+      "english": {
+        "direction": "alias/nickname -> entity",
+        "relation_id": "alias_to_entity",
+        "answer": "Montana",
+        "canonical_fact": "Montana is referred to as Big Sky Country.",
+        "subject": "Big Sky Country",
+        "prompt_en": "Which region is commonly referred to as Big Sky Country?",
+        "relation_definition": "The unique entity or region referred to by a specific widely-used nickname or alias; direction is alias/nickname -> entity. Distinct from entity_to_alias which goes the opposite direction.",
+        "answer_aliases_en": [
+          "Montana"
+        ],
+        "relation_spec": {
+          "id": "alias_to_entity",
+          "definition": "The unique entity or region referred to by a specific widely-used nickname or alias; direction is alias/nickname -> entity. Distinct from entity_to_alias which goes the opposite direction.",
+          "direction": "alias/nickname -> entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5415b998903f6d73f5a77f54282e933dd39e12702cba4ffbaa7393e6deedc69c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009266",
+        "subject_zh": "广阔天空之乡",
+        "prompt_zh": "哪个地区通常被称为",
+        "canonical_fact_zh": "蒙大拿州被称为",
+        "answer_zh": "蒙大拿州",
+        "answer_aliases_zh": [
+          "蒙大拿州"
+        ]
+      },
+      "translation_sha256": "5da08618a6df875b0872c7a7e4c58ab04d5001aa974d2961e2691eb6cb14055c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009210",
+        "historical:raw_commonsense_qa_009266"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "50f9f5f1fe7776e81231a669e88e34f0f50686b6c38c5b92cc50e5ab3f1c2875",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2855,
+      "first_chunk_seconds": 34.075,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3048,
+        "prompt_tokens": 1673,
+        "total_tokens": 4721,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2679,
+          "text_tokens": 369
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ec04a985bd65a7d78dc3b83a9c41e1ab051b1e3c6a9a8dfae238122e06d66e6",
+      "status": "completed",
+      "latency_seconds": 88.114
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009266"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5ae102c2c9995516a3ed149d761c4053d30da9fccff36a3295a9b828a2e78137",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 521,
+      "first_chunk_seconds": 21.116,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 530,
+        "prompt_tokens": 545,
+        "total_tokens": 1075,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 457,
+          "text_tokens": 73
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8787db7840b03d1cea39b0a5d61ed50909a46f4c111650f5ac5e87559e15f30e",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 27.439,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009266"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a4c9b3e5e7ab58670517f100bb3b2179e959aeb6f79396bc0fcf20f57bab7b2b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 533,
+      "first_chunk_seconds": 37.558,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 567,
+        "prompt_tokens": 564,
+        "total_tokens": 1131,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 490,
+          "text_tokens": 77
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e2a18c379c3ccc6ae2b4a2c5484cdd148c17141a3c08791119870e2dc0f47095",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 43.462,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009266"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a4c9b3e5e7ab58670517f100bb3b2179e959aeb6f79396bc0fcf20f57bab7b2b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 873,
+      "first_chunk_seconds": 23.445,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 924,
+        "prompt_tokens": 564,
+        "total_tokens": 1488,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 807,
+          "text_tokens": 117
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "440f5334b68ede71c852ebd8bf4cdcb38ef99e02a844d327219b4dda56af5df7",
+      "status": "completed",
+      "latency_seconds": 33.638
+    }
+  ],
+  "status": "completed"
+}

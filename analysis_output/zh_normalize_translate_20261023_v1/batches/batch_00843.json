@@ -1,0 +1,234 @@
+{
+  "input_sha256": "561ba88f39bfdf8510d9cd3c6b9e56dfdca618b6e8a5918d870802a049f5d637",
+  "normalized": [
+    {
+      "record_id": "public:pbf_32edd8006e0f62864dcc",
+      "decision": "ready",
+      "subject": "Riding with the King",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "John Hiatt",
+      "canonical_fact": "John Hiatt wrote the song Riding with the King.",
+      "prompt_en": "Who wrote the song Riding with the King?",
+      "evidence_quotes": [
+        "who wrote the song riding with the king",
+        "John Hiatt"
+      ],
+      "reason": "The question asks for the writer of a specific song (a written work). written_work_to_author fits exactly with direction 'written work -> author'. The source answer 'John Hiatt' is retained as the existing answer; it is a literal substring of the source_answer and does not conflict.",
+      "english": {
+        "relation_id": "written_work_to_author",
+        "canonical_fact": "John Hiatt wrote the song Riding with the King.",
+        "prompt_en": "Who wrote the song Riding with the King?",
+        "answer": "John Hiatt",
+        "direction": "written work -> author",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "subject": "Riding with the King",
+        "answer_aliases_en": [
+          "John Hiatt",
+          "John Hyatt"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a263cfd7b6f5e60d0e20031f298851679eed90402f4fc314ca129814e148ebd2",
+      "input_sha256": "435cb905eb41e70a61e6f07ca49f95f5f799dc0e34d0fcde7c9b7d6c250cbcc1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_32fe0b44eadbcc2cfa81",
+      "decision": "ready",
+      "subject": "kingship in the Sumerian King List",
+      "relation_id": "concept_to_stated_origin",
+      "relation_definition": "The origin or source ascribed to a concept as explicitly stated within a specified text, tradition, or narrative; retains the text's own framing (e.g. 'descends from').",
+      "direction": "concept in specified text -> stated origin/source",
+      "answer": "heaven",
+      "canonical_fact": "According to the Sumerian King List, kingship descends from heaven.",
+      "prompt_en": "According to the Sumerian King List, where does kingship come from?",
+      "evidence_quotes": [
+        "According to the Sumerian King List, where does kingship come from?",
+        "Descends from heaven"
+      ],
+      "reason": "No existing catalog relation captures 'stated origin of a concept within a specific text'. entity_to_containing_location explicitly excludes origin; no other listed relation fits a text-attributed source/origin of a concept. Proposing precise new relation concept_to_stated_origin. The existing answer 'heaven' is a literal substring of source_answer 'Descends from heaven' and is retained without conflict.",
+      "english": {
+        "relation_id": "concept_to_stated_origin",
+        "canonical_fact": "According to the Sumerian King List, kingship descends from heaven.",
+        "prompt_en": "According to the Sumerian King List, where does kingship come from?",
+        "answer": "heaven",
+        "direction": "concept in specified text -> stated origin/source",
+        "relation_definition": "The origin or source ascribed to a concept as explicitly stated within a specified text, tradition, or narrative; retains the text's own framing (e.g. 'descends from').",
+        "subject": "kingship in the Sumerian King List",
+        "answer_aliases_en": [
+          "heaven",
+          "Descends from heaven"
+        ],
+        "relation_spec": {
+          "id": "concept_to_stated_origin",
+          "definition": "The origin or source ascribed to a concept as explicitly stated within a specified text, tradition, or narrative; retains the text's own framing (e.g. 'descends from').",
+          "direction": "concept in specified text -> stated origin/source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "72021884a04b74e1e8e93fb814a223a635d87fc03f6ef25b16229b767ae09c32",
+      "input_sha256": "532929705bf3adc07f3639fe852b0c2cb009361141a8e3201af0fe80a919bc28",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_32edd8006e0f62864dcc",
+      "input_sha256": "435cb905eb41e70a61e6f07ca49f95f5f799dc0e34d0fcde7c9b7d6c250cbcc1",
+      "english": {
+        "relation_id": "written_work_to_author",
+        "canonical_fact": "John Hiatt wrote the song Riding with the King.",
+        "prompt_en": "Who wrote the song Riding with the King?",
+        "answer": "John Hiatt",
+        "direction": "written work -> author",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "subject": "Riding with the King",
+        "answer_aliases_en": [
+          "John Hiatt",
+          "John Hyatt"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a263cfd7b6f5e60d0e20031f298851679eed90402f4fc314ca129814e148ebd2",
+      "translation": {
+        "record_id": "public:pbf_32edd8006e0f62864dcc",
+        "subject_zh": "Riding with the King",
+        "prompt_zh": "谁创作了歌曲《Riding with the King》？",
+        "canonical_fact_zh": "John Hiatt 创作了歌曲《Riding with the King》。",
+        "answer_zh": "John Hiatt",
+        "answer_aliases_zh": [
+          "John Hiatt",
+          "John Hyatt"
+        ]
+      },
+      "translation_sha256": "ed9928e2b866c04921c162ccabb8e97954e47f14544241083c7fc0b036b1ac15"
+    },
+    {
+      "record_id": "public:pbf_32fe0b44eadbcc2cfa81",
+      "input_sha256": "532929705bf3adc07f3639fe852b0c2cb009361141a8e3201af0fe80a919bc28",
+      "english": {
+        "relation_id": "concept_to_stated_origin",
+        "canonical_fact": "According to the Sumerian King List, kingship descends from heaven.",
+        "prompt_en": "According to the Sumerian King List, where does kingship come from?",
+        "answer": "heaven",
+        "direction": "concept in specified text -> stated origin/source",
+        "relation_definition": "The origin or source ascribed to a concept as explicitly stated within a specified text, tradition, or narrative; retains the text's own framing (e.g. 'descends from').",
+        "subject": "kingship in the Sumerian King List",
+        "answer_aliases_en": [
+          "heaven",
+          "Descends from heaven"
+        ],
+        "relation_spec": {
+          "id": "concept_to_stated_origin",
+          "definition": "The origin or source ascribed to a concept as explicitly stated within a specified text, tradition, or narrative; retains the text's own framing (e.g. 'descends from').",
+          "direction": "concept in specified text -> stated origin/source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "72021884a04b74e1e8e93fb814a223a635d87fc03f6ef25b16229b767ae09c32",
+      "translation": {
+        "record_id": "public:pbf_32fe0b44eadbcc2cfa81",
+        "subject_zh": "《苏美尔王表》中的王权",
+        "prompt_zh": "根据《苏美尔王表》，王权从何而来？",
+        "canonical_fact_zh": "根据《苏美尔王表》，王权自天而降。",
+        "answer_zh": "天",
+        "answer_aliases_zh": [
+          "天",
+          "自天而降"
+        ]
+      },
+      "translation_sha256": "481d1723853d6a80c32cdb1ad8d8e588bedf1fffb3c50b9f683a0a79b497a84d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_32edd8006e0f62864dcc",
+        "public:pbf_32fe0b44eadbcc2cfa81"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7abc035920df95de3e67aa731b592bd1de0cdbccab88e178197edbc7a1fe82d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 28.602
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_32edd8006e0f62864dcc",
+        "public:pbf_32fe0b44eadbcc2cfa81"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7abc035920df95de3e67aa731b592bd1de0cdbccab88e178197edbc7a1fe82d9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2624,
+      "first_chunk_seconds": 21.293,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2766,
+        "prompt_tokens": 1597,
+        "total_tokens": 4363,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2206,
+          "text_tokens": 560
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b1624bb4190dd21eb1725b0972239f842bd8c64746db26c7e7ebd02cbb1722a4",
+      "status": "completed",
+      "latency_seconds": 97.255
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_32edd8006e0f62864dcc",
+        "public:pbf_32fe0b44eadbcc2cfa81"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6e617e9b0267389f8b355eb6d725adb1218daf25f4550039ccb6b7b86f4e24ca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 870,
+      "first_chunk_seconds": 21.073,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 954,
+        "prompt_tokens": 903,
+        "total_tokens": 1857,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 694,
+          "text_tokens": 260
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ea29096a1ca0bdadf0aef5678c821f2b8556e0f7a4b3aee39832b07901a8a037",
+      "status": "completed",
+      "latency_seconds": 33.111
+    }
+  ],
+  "status": "completed"
+}

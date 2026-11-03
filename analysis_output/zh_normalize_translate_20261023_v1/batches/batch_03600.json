@@ -1,0 +1,227 @@
+{
+  "input_sha256": "c2007cc455222259dc97a2c1ae25c46e74ebacfaffe84485b53f28afe326fa70",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000577",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer 'Christians' is one of the two named groups in the comparative question. Any faithful prompt must name both groups being compared, so the prompt would necessarily contain the answer word, violating the 'prompt does not contain its answer' constraint. No catalog relation precisely captures a binary group-comparison on a metric (e.g., Nobel Prizes won).",
+      "input_sha256": "a31127716eff29312fb1d51cf887e56b6b7c1916fe1e443c519363774900c1e9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000584",
+      "decision": "ready",
+      "subject": "Fundamental Theorem associated with Los",
+      "relation_id": "named_result_to_subject_matter",
+      "relation_definition": "The central mathematical or scientific structure/object that a named theorem or result is about, as indicated by its conventional name; distinct from the person or field with which the result is associated.",
+      "direction": "named result (with identifying context) -> subject matter indicated by its name",
+      "answer": "Ultraproducts",
+      "canonical_fact": "The Fundamental Theorem associated with Los is the Fundamental Theorem of Ultraproducts; its subject matter is ultraproducts.",
+      "prompt_en": "The key mathematical result associated with Los is called the Fundamental Theorem of which structure?",
+      "evidence_quotes": [
+        "Associated with Los, this is a key mathematical result",
+        "Fundamental Theorem of Ultraproducts"
+      ],
+      "reason": "The source explicitly identifies the result as 'Fundamental Theorem of Ultraproducts' associated with Los. 'Ultraproducts' is a literal substring of the source answer and completes the theorem's name. No catalog relation fits exactly, so a new relation 'named_result_to_subject_matter' is proposed to capture the pattern of a named theorem/result and the structure its name indicates. The prompt avoids the answer and is option-free.",
+      "english": {
+        "prompt_en": "The key mathematical result associated with Los is called the Fundamental Theorem of which structure?",
+        "relation_definition": "The central mathematical or scientific structure/object that a named theorem or result is about, as indicated by its conventional name; distinct from the person or field with which the result is associated.",
+        "answer": "Ultraproducts",
+        "canonical_fact": "The Fundamental Theorem associated with Los is the Fundamental Theorem of Ultraproducts; its subject matter is ultraproducts.",
+        "direction": "named result (with identifying context) -> subject matter indicated by its name",
+        "relation_id": "named_result_to_subject_matter",
+        "subject": "Fundamental Theorem associated with Los",
+        "answer_aliases_en": [
+          "Ultraproducts"
+        ],
+        "relation_spec": {
+          "id": "named_result_to_subject_matter",
+          "definition": "The central mathematical or scientific structure/object that a named theorem or result is about, as indicated by its conventional name; distinct from the person or field with which the result is associated.",
+          "direction": "named result (with identifying context) -> subject matter indicated by its name"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6c367d49a686b9fef3e58286f5772d4d3776d7b4aecd68fbf1992b9233fb2ae5",
+      "input_sha256": "cd98ecff0ae074cd85e3940066005d54b490accbc71aa359db01d9fcafdd6f1d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000577",
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8bc4aefcc5be81f1726042f113a537ca7f8c706a1f4f3598acd4b577d73b193c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 39.535,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000577",
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8bc4aefcc5be81f1726042f113a537ca7f8c706a1f4f3598acd4b577d73b193c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 5558,
+      "first_chunk_seconds": 5.541,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 5711,
+        "prompt_tokens": 1637,
+        "total_tokens": 7348,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 5256,
+          "text_tokens": 455
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "399bbea72ee216b46b5fe03e2f26574cbf950dee8bb197a28d201b4e96749b60",
+      "status": "completed",
+      "latency_seconds": 105.503
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 124.779,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 87.744,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 107.624
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.785
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.081
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000584"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "eaf5fc0ddd7b7730a5c587d6d1b7ae7238c791a1774263769d2861724f228256",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.788
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03600.json",
+      "sha256": "6028ca3b6fe183ad225e5e159b487b824cdb8e1b097e12fa29013788b1aa5025",
+      "previous_status": "failed"
+    }
+  ]
+}

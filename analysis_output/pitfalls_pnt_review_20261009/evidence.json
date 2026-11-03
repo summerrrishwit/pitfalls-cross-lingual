@@ -1,0 +1,144 @@
+{
+  "audit_date": "2026-10-09",
+  "scope": "read-only cross-project research-design review; no new model inference",
+  "joined_existing_labels": {
+    "hf_directed_candidate": {
+      "unique_facts": 57,
+      "note": "Boolean categories need not be mutually exclusive across variants or completeness flags",
+      "natural_en_correct": 24,
+      "natural_zh_correct": 15,
+      "natural_pnt_gap": 9,
+      "induced_only_gap": 14,
+      "natural_en_failure": 31,
+      "semantic_review_complete": 54
+    },
+    "hf_zh_specific_strict": {
+      "unique_facts": 11,
+      "note": "Boolean categories need not be mutually exclusive across variants or completeness flags",
+      "natural_en_correct": 9,
+      "natural_zh_correct": 5,
+      "natural_pnt_gap": 3,
+      "induced_only_gap": 5,
+      "natural_en_failure": 1,
+      "semantic_review_complete": 9
+    },
+    "hf_resistant_control": {
+      "unique_facts": 15,
+      "note": "Boolean categories need not be mutually exclusive across variants or completeness flags",
+      "natural_en_correct": 14,
+      "natural_zh_correct": 11,
+      "natural_pnt_gap": 3,
+      "induced_only_gap": 4,
+      "natural_en_failure": 1,
+      "semantic_review_complete": 15
+    }
+  },
+  "multilingual": {
+    "records": 4513,
+    "all_five_accepted_facts": 3326,
+    "common_split_counts": {
+      "development": 1983,
+      "sealed": 670,
+      "validation": 673
+    },
+    "common_top_relation_partitions": [
+      [
+        "song_to_performer",
+        446
+      ],
+      [
+        "temporal",
+        386
+      ],
+      [
+        "character_to_actor",
+        352
+      ],
+      [
+        "quantity_or_measurement",
+        346
+      ],
+      [
+        "definition_term_direction_unresolved",
+        327
+      ],
+      [
+        "location_or_habitat",
+        192
+      ],
+      [
+        "term_to_definition",
+        165
+      ],
+      [
+        "classification_or_type",
+        134
+      ],
+      [
+        "work_to_release_date",
+        118
+      ],
+      [
+        "comparison_or_order",
+        110
+      ]
+    ]
+  },
+  "existing_artifact_verification": [
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/exact_hf_behavior_run_manifest.json",
+      "artifact": "exact_hf_behavior_results",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/exact_hf_development_behavior_results.jsonl",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/exact_hf_behavior_run_manifest.json",
+      "artifact": "exact_hf_labels",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/exact_hf_defect_control_labels.jsonl",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/exact_hf_behavior_run_manifest.json",
+      "artifact": "matching_manifest",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-development-v3/matching_manifest.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_attribution_manifest.json",
+      "artifact": "activation_index",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_activation_index.jsonl",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_attribution_manifest.json",
+      "artifact": "metrics",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_logit_lens.jsonl",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "manifest": "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_attribution_manifest.json",
+      "artifact": "resid_pre",
+      "local_path": "/Users/qiqing/learn_resource/mutil-language/pitfalls-cross-lingual/data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_resid_pre.pt",
+      "exists": false,
+      "sha256_matches": null
+    }
+  ],
+  "missing_core_local_artifacts": [
+    "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/frozen-v1/frozen_static_bundle.jsonl",
+    "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-g0b-v3/exact_hf_model_manifest.json",
+    "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/exact-hf-qwen3-8b-g0b-v3/exact_hf_rendered_inputs.jsonl",
+    "data_processed/factual_perturbation/static-g0a-160-dual-v8-20260916/qwen3-8b-pnt-development-v1/mcq-decision-attribution-v2/mcq_decision_resid_pre.pt"
+  ],
+  "explicit_false_assertion_example": {
+    "base_fact_id": "pbf_0239b95708d4c65b7f1a",
+    "language": "en",
+    "context": "Ted Levine portrayed Maleficent in Once Upon a Time.",
+    "user_prompt": "Context:\nTed Levine portrayed Maleficent in Once Upon a Time.\n\nComplete the following factual statement with only the missing answer:\nThe actor who portrayed Maleficent in Once Upon a Time is",
+    "designated_distractor_id": "postclosure_dist_727dfc57880cd8125348"
+  }
+}

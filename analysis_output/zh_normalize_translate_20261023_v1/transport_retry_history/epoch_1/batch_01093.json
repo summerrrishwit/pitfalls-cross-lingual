@@ -1,0 +1,158 @@
+{
+  "input_sha256": "98b53b1115db52727c5fa310a9317c9be110942dfbcdbd6c0dabf085a44430cb",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5e07ad4f21e9f93dd5c4",
+      "decision": "ready",
+      "subject": "pyruvate dehydrogenase complex",
+      "relation_id": "enzyme_to_catalyzed_reaction",
+      "relation_definition": "The specific biochemical reaction catalysed by a named enzyme or enzyme complex.",
+      "direction": "enzyme/enzyme complex -> catalysed reaction",
+      "answer": "conversion of pyruvate to acetyl CoA",
+      "canonical_fact": "The pyruvate dehydrogenase complex catalyses the conversion of pyruvate to acetyl CoA.",
+      "prompt_en": "What biochemical reaction does the pyruvate dehydrogenase complex catalyse?",
+      "evidence_quotes": [
+        "The pyruvate dehydrogenase complex:",
+        "catalyses the conversion of pyruvate to acetyl CoA."
+      ],
+      "reason": "The source answer directly states the catalytic function of the pyruvate dehydrogenase complex. No existing catalog relation captures an enzyme's catalysed reaction; proposing enzyme_to_catalyzed_reaction with explicit direction (enzyme/complex -> reaction).",
+      "english": {
+        "answer": "conversion of pyruvate to acetyl CoA",
+        "relation_id": "enzyme_to_catalyzed_reaction",
+        "prompt_en": "What biochemical reaction does the pyruvate dehydrogenase complex catalyse?",
+        "direction": "enzyme/enzyme complex -> catalysed reaction",
+        "subject": "pyruvate dehydrogenase complex",
+        "canonical_fact": "The pyruvate dehydrogenase complex catalyses the conversion of pyruvate to acetyl CoA.",
+        "relation_definition": "The specific biochemical reaction catalysed by a named enzyme or enzyme complex.",
+        "answer_aliases_en": [
+          "conversion of pyruvate to acetyl CoA",
+          "catalyses the conversion of pyruvate to acetyl CoA."
+        ],
+        "relation_spec": {
+          "id": "enzyme_to_catalyzed_reaction",
+          "definition": "The specific biochemical reaction catalysed by a named enzyme or enzyme complex.",
+          "direction": "enzyme/enzyme complex -> catalysed reaction"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9bad3c61805c85d61e344a5bae36691641bc4deb5658b0f0c0cf924fff4a0bf7",
+      "input_sha256": "9105e0b9df917706bf1195d512e8b9ea512f3ac5fa64ca69eb6302920bdd845a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5e0dc3bdd3a740c0933a",
+      "decision": "ready",
+      "subject": "religious community whose girls traditionally wear bonnets",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Amish",
+      "canonical_fact": "Girls of the Amish religious community traditionally wear bonnets.",
+      "prompt_en": "Girls of what religious community traditionally wear bonnets?",
+      "evidence_quotes": [
+        "Girls of what religious community traditionally wear bonnets?",
+        "Amish"
+      ],
+      "reason": "The source question uniquely identifies the Amish as the religious community whose girls traditionally wear bonnets, matching the existing description_to_entity relation direction (identifying description -> entity).",
+      "english": {
+        "answer": "Amish",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Girls of what religious community traditionally wear bonnets?",
+        "direction": "identifying description -> entity",
+        "subject": "religious community whose girls traditionally wear bonnets",
+        "canonical_fact": "Girls of the Amish religious community traditionally wear bonnets.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Amish"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "08294541703dcd12168c2de6d06ed689157c6e6b2a26f893c3be75cf2718365f",
+      "input_sha256": "0341b5f52a93762ed43969d14d43b53aa99647ecc62b27e7c2259e6983053484",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5e07ad4f21e9f93dd5c4",
+        "public:pbf_5e0dc3bdd3a740c0933a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "77e50d461b4d5e48ae50e31056d9f655c36f2312e723e35565af6ad6ff6618be",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2285,
+      "first_chunk_seconds": 18.463,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2288,
+        "prompt_tokens": 1678,
+        "total_tokens": 3966,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1774,
+          "text_tokens": 514
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1b0b2914f0aa7be7e3e154394bddf0da256341e88e61c4363e1ed570c714f750",
+      "status": "completed",
+      "latency_seconds": 41.944
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5e07ad4f21e9f93dd5c4",
+        "public:pbf_5e0dc3bdd3a740c0933a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "984ca2bec48f5c428ea1afc56c14e3bc8070d7570a909003714d2348376e9e8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.168
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5e07ad4f21e9f93dd5c4",
+        "public:pbf_5e0dc3bdd3a740c0933a"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "984ca2bec48f5c428ea1afc56c14e3bc8070d7570a909003714d2348376e9e8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.885
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5e07ad4f21e9f93dd5c4",
+        "public:pbf_5e0dc3bdd3a740c0933a"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "984ca2bec48f5c428ea1afc56c14e3bc8070d7570a909003714d2348376e9e8d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 54.272
+    }
+  ],
+  "status": "failed"
+}

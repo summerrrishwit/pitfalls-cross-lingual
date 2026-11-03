@@ -1,0 +1,185 @@
+{
+  "input_sha256": "871f4dc163552c80f4bd166fe6bd57437f2db7fdb8afd4c59f7f63be510d3a90",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000113",
+      "decision": "ready",
+      "subject": "diamonds",
+      "relation_id": "entity_to_lifespan",
+      "relation_definition": "Stated duration or lifespan of a specified entity (substance, mineral, organism, etc.), retaining scope and qualifiers from the source.",
+      "direction": "entity -> lifespan value",
+      "answer": "between 1 and 4 billion years",
+      "canonical_fact": "Diamonds last between 1 and 4 billion years.",
+      "prompt_en": "What is the lifespan of diamonds?",
+      "evidence_quotes": [
+        "How long do diamonds last?",
+        "Diamonds last between 1 and 4 billion years"
+      ],
+      "reason": "No existing catalog relation captures a substance's lifespan/duration. Proposed entity_to_lifespan (entity -> lifespan value) fits exactly: the subject is a natural substance and the answer is its stated geological duration. The source answer is unambiguous and both model annotations either extracted or flagged ambiguity (not wrong), so the extraction is well-supported.",
+      "english": {
+        "prompt_en": "What is the lifespan of diamonds?",
+        "relation_definition": "Stated duration or lifespan of a specified entity (substance, mineral, organism, etc.), retaining scope and qualifiers from the source.",
+        "answer": "between 1 and 4 billion years",
+        "canonical_fact": "Diamonds last between 1 and 4 billion years.",
+        "direction": "entity -> lifespan value",
+        "relation_id": "entity_to_lifespan",
+        "subject": "diamonds",
+        "answer_aliases_en": [
+          "between 1 and 4 billion years"
+        ],
+        "relation_spec": {
+          "id": "entity_to_lifespan",
+          "definition": "Stated duration or lifespan of a specified entity (substance, mineral, organism, etc.), retaining scope and qualifiers from the source.",
+          "direction": "entity -> lifespan value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "26b078e73150b717587305ff8e4e91d210b1c4e1d22029a99b6d19ecc1529744",
+      "input_sha256": "3f6310e3ad55cdad6d781bcebbce816199dd00e19de6efa48a60756a37f58ddc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000124",
+      "decision": "ready",
+      "subject": "Bielefeld",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Germany",
+      "canonical_fact": "Bielefeld is in Germany.",
+      "prompt_en": "In which country is the city of Bielefeld located?",
+      "evidence_quotes": [
+        "Where is the city of Bielefeld?",
+        "Bielefeld is in Germany"
+      ],
+      "reason": "entity_to_containing_location fits exactly: Bielefeld (a city) is geographically contained in Germany (a country). Both models agree on the extraction. The source answer is a clean, unambiguous geographic containment statement at the country level.",
+      "english": {
+        "prompt_en": "In which country is the city of Bielefeld located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer": "Germany",
+        "canonical_fact": "Bielefeld is in Germany.",
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "subject": "Bielefeld",
+        "answer_aliases_en": [
+          "Germany"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "de933533ba3a8e7f28c28866f799245b065ec03ed29a328cf50558487591698a",
+      "input_sha256": "ff90d80cb8f251649c1bea1b6c58da3cd18a6139b49137b9c4fa3ff94544e38d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b84caf46140ec127ba3eafc544666b76f2addb35d25a6cd3a38290bfa3945479",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 89.334
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b84caf46140ec127ba3eafc544666b76f2addb35d25a6cd3a38290bfa3945479",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.01
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b84caf46140ec127ba3eafc544666b76f2addb35d25a6cd3a38290bfa3945479",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1457,
+      "first_chunk_seconds": 3.999,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1500,
+        "prompt_tokens": 1639,
+        "total_tokens": 3139,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1002,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d3686a3eb747d8394b3a24ca2b896557a6a902bd92e78ee55b080cb1289760c3",
+      "status": "completed",
+      "latency_seconds": 86.692
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "14feb12dbd9323295630fcc54a49fb53c62e5ed9f7232e9fab35c1a049c510eb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.915
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "14feb12dbd9323295630fcc54a49fb53c62e5ed9f7232e9fab35c1a049c510eb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 58.385
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000113",
+        "historical:raw_truthful_qa_000124"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "14feb12dbd9323295630fcc54a49fb53c62e5ed9f7232e9fab35c1a049c510eb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 48.663
+    }
+  ],
+  "status": "failed"
+}

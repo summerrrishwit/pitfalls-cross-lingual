@@ -1,0 +1,171 @@
+{
+  "input_sha256": "845ab6a7c3404ad74340db93aea4e3387b9cdd9841055dede605dadd944dcf4b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000745",
+      "decision": "ready",
+      "subject": "objects released at a synapse to carry a nerve impulse from one neuron to the next",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "neurotransmitters",
+      "canonical_fact": "Objects released at a synapse to carry a nerve impulse from one neuron to the next are neurotransmitters.",
+      "prompt_en": "What objects are released at a synapse to carry a nerve impulse from one neuron to the next?",
+      "evidence_quotes": [
+        "objects are released to carry a nerve impulse from one neuron to the next",
+        "neurotransmitters"
+      ],
+      "reason": "Both model annotations agree on the extraction. The source question identifies an entity (neurotransmitters) by its functional description (objects released at a synapse to carry a nerve impulse from one neuron to the next). This fits description_to_entity (identifying description -> entity). The answer 'neurotransmitters' is taken verbatim from source_answer.",
+      "english": {
+        "prompt_en": "What objects are released at a synapse to carry a nerve impulse from one neuron to the next?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "neurotransmitters",
+        "canonical_fact": "Objects released at a synapse to carry a nerve impulse from one neuron to the next are neurotransmitters.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "objects released at a synapse to carry a nerve impulse from one neuron to the next",
+        "answer_aliases_en": [
+          "neurotransmitters"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "861427768f1d4bcbbb673afbbfa77c850e372b91c2d69c4515484e9ff7b723cc",
+      "input_sha256": "640f460bb98bd08e976388de89ce8dea53147456fc05470cf54f3d93a11b5bc3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000746",
+      "decision": "ready",
+      "subject": "proteins",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "amino acids",
+      "canonical_fact": "The building blocks of proteins are amino acids.",
+      "prompt_en": "What are the building blocks of proteins called?",
+      "evidence_quotes": [
+        "The building blocks of proteins are called what?",
+        "amino acids"
+      ],
+      "reason": "Both model annotations agree on the extraction. Amino acids are the constituent monomers (building blocks) of the polymer protein, fitting the whole_to_part relation (whole -> part). The answer 'amino acids' is taken verbatim from source_answer.",
+      "english": {
+        "prompt_en": "What are the building blocks of proteins called?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "amino acids",
+        "canonical_fact": "The building blocks of proteins are amino acids.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "proteins",
+        "answer_aliases_en": [
+          "amino acids"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e396cf50b9cd972ca6169b04821be9ae56ba29e39c40598e0c25dc9086599d4e",
+      "input_sha256": "aec4f45d78a65e92d0b9e800d5bbac121acdf96f7128c4c01cc010da1d762178",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000745",
+        "historical:raw_sciq_000746"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d8274a444b62c07945453efdad9a38c6f62ae53a320f0dcbdcd07d60b9774b68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 6.863
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000745",
+        "historical:raw_sciq_000746"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d8274a444b62c07945453efdad9a38c6f62ae53a320f0dcbdcd07d60b9774b68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1825,
+      "first_chunk_seconds": 8.69,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1967,
+        "prompt_tokens": 1735,
+        "total_tokens": 3702,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1459,
+          "text_tokens": 508
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22bcd29db92c3b4167cc2d1ccafaa0290fbd9f37fcbe70b8fa77523027f800dc",
+      "status": "completed",
+      "latency_seconds": 139.784
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000745",
+        "historical:raw_sciq_000746"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3b62ffc204bcf300e15d27dd6209c604f28d5ca000f334f384c880b77fde7ce9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 40.198
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000745",
+        "historical:raw_sciq_000746"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3b62ffc204bcf300e15d27dd6209c604f28d5ca000f334f384c880b77fde7ce9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 55.365
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000745",
+        "historical:raw_sciq_000746"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3b62ffc204bcf300e15d27dd6209c604f28d5ca000f334f384c880b77fde7ce9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.251
+    }
+  ],
+  "status": "failed"
+}

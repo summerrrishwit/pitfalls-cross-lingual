@@ -1,0 +1,185 @@
+{
+  "input_sha256": "68df2de8319fd1fcc15dc01a486e63cf55f7d39e16a8a3150ecfbf6d5cb6ede1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000071",
+      "decision": "ready",
+      "subject": "tool needed to measure angles",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "protractor",
+      "canonical_fact": "A protractor is the tool needed to measure angles.",
+      "prompt_en": "What tool is needed to measure the different angles of a ramp during an experiment?",
+      "evidence_quotes": [
+        "Which tool is needed to measure the different angles?",
+        "protractor"
+      ],
+      "reason": "The source question supplies a functional description (tool that measures angles in a ramp experiment) and asks for the conventional term. 'Protractor' is a literal substring of source_answer and uniquely satisfies the description. Relation description_to_term (description -> term) fits exactly.",
+      "english": {
+        "answer": "protractor",
+        "relation_id": "description_to_term",
+        "prompt_en": "What tool is needed to measure the different angles of a ramp during an experiment?",
+        "direction": "description -> term",
+        "subject": "tool needed to measure angles",
+        "canonical_fact": "A protractor is the tool needed to measure angles.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "protractor"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "256b847413c1804a07f10a486abe5b38196145c504c746628b932b84f12cf744",
+      "input_sha256": "9d345e8f7b775e34c88481574d404827b3212920d06ed10d8535e2aaa7ce623a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000078",
+      "decision": "ready",
+      "subject": "television set",
+      "relation_id": "entity_to_required_energy_type",
+      "relation_definition": "The specific form or type of energy that a specified device or system requires to function or operate.",
+      "direction": "entity -> required energy type",
+      "answer": "electrical",
+      "canonical_fact": "A television set requires electrical energy to work.",
+      "prompt_en": "Which form of energy is required for a television set to work?",
+      "evidence_quotes": [
+        "Which form of energy is required for a television set to work?",
+        "electrical"
+      ],
+      "reason": "No existing catalog relation captures the operational energy requirement of a device (entity_to_material concerns composition; entity_to_class concerns taxonomy membership). Proposed new relation entity_to_required_energy_type (entity -> required energy type) with a precise definition. 'Electrical' is a literal substring of source_answer.",
+      "english": {
+        "answer": "electrical",
+        "relation_id": "entity_to_required_energy_type",
+        "prompt_en": "Which form of energy is required for a television set to work?",
+        "direction": "entity -> required energy type",
+        "subject": "television set",
+        "canonical_fact": "A television set requires electrical energy to work.",
+        "relation_definition": "The specific form or type of energy that a specified device or system requires to function or operate.",
+        "answer_aliases_en": [
+          "electrical"
+        ],
+        "relation_spec": {
+          "id": "entity_to_required_energy_type",
+          "definition": "The specific form or type of energy that a specified device or system requires to function or operate.",
+          "direction": "entity -> required energy type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c841c22db2ffdb3f3b854dad1b0f97b9e526fec119c506b90912889a13fc2580",
+      "input_sha256": "e836e4d9147e37a69e6e5cfb25cbe9a4b8d7fc06384031348339fb7eed367e1f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4e073e0c3cbb42583fc07d86a709ad1f846ed254fb8b417d8b6fe6cb0fa48347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.554
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4e073e0c3cbb42583fc07d86a709ad1f846ed254fb8b417d8b6fe6cb0fa48347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.947
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4e073e0c3cbb42583fc07d86a709ad1f846ed254fb8b417d8b6fe6cb0fa48347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2047,
+      "first_chunk_seconds": 29.724,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2291,
+        "prompt_tokens": 1673,
+        "total_tokens": 3964,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1804,
+          "text_tokens": 487
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "adf08839e273fb33f775d2b071a6d2a3ed1ab024f38d15f0a03d2e968e0e5c27",
+      "status": "completed",
+      "latency_seconds": 61.306
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "86b5a5369d35e0efd6e53375ab74ab3930a38313c5105a3984272f2d62ed2e4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.083
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "86b5a5369d35e0efd6e53375ab74ab3930a38313c5105a3984272f2d62ed2e4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.337
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000071",
+        "historical:raw_ai2_arc_easy_000078"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "86b5a5369d35e0efd6e53375ab74ab3930a38313c5105a3984272f2d62ed2e4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.24
+    }
+  ],
+  "status": "failed"
+}

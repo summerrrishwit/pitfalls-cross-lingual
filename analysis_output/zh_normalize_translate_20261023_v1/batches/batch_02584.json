@@ -1,0 +1,214 @@
+{
+  "input_sha256": "0b5831d364e2f6deb1701bff12a4e94a652d7323496ec96c70e417e00fd8b426",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004503",
+      "decision": "ready",
+      "subject": "Fargo",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "north dakota",
+      "canonical_fact": "Fargo is in North Dakota.",
+      "prompt_en": "What state is Fargo in?",
+      "evidence_quotes": [
+        "Fargo",
+        "north dakota"
+      ],
+      "reason": "The source question asks which state one is in when in Fargo, and the source answer is 'north dakota'. The relation entity_to_containing_location fits exactly: Fargo (entity) is geographically contained in North Dakota at the state level. The fox reference in the question is contextual setup, not part of the factual claim. Answer preserved verbatim.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "north dakota",
+        "canonical_fact": "Fargo is in North Dakota.",
+        "subject": "Fargo",
+        "prompt_en": "What state is Fargo in?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "north dakota"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "200a42d2693486ec864310d918e32015b7889f30c90db0756026d85b198008b4",
+      "input_sha256": "2d3eaa9b9c7b5b920e5620828f4f0bd42c805c26e594a15515e4fca5d74955cc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004506",
+      "decision": "ready",
+      "subject": "virus",
+      "relation_id": "biological_entity_to_primary_action_on_host",
+      "relation_definition": "The primary biological action a specified entity performs on a specified host type; not a comprehensive list of all possible effects.",
+      "direction": "biological entity -> primary action on specified host",
+      "answer": "infect",
+      "canonical_fact": "A virus primarily infects a person.",
+      "prompt_en": "What does a virus primarily do to a person?",
+      "evidence_quotes": [
+        "a virus primarily do to a person",
+        "infect"
+      ],
+      "reason": "The source question asks what a virus primarily does to a person, and the source answer is 'infect'. No existing catalog relation captures this primary-action relationship exactly, so a new relation biological_entity_to_primary_action_on_host is proposed with explicit definition and direction. Answer preserved verbatim from source_answer.",
+      "english": {
+        "direction": "biological entity -> primary action on specified host",
+        "relation_id": "biological_entity_to_primary_action_on_host",
+        "answer": "infect",
+        "canonical_fact": "A virus primarily infects a person.",
+        "subject": "virus",
+        "prompt_en": "What does a virus primarily do to a person?",
+        "relation_definition": "The primary biological action a specified entity performs on a specified host type; not a comprehensive list of all possible effects.",
+        "answer_aliases_en": [
+          "infect"
+        ],
+        "relation_spec": {
+          "id": "biological_entity_to_primary_action_on_host",
+          "definition": "The primary biological action a specified entity performs on a specified host type; not a comprehensive list of all possible effects.",
+          "direction": "biological entity -> primary action on specified host"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85f18b6cd5676c72189f8f3e2199e2be08087eb3281354e68f1961d8ea433f21",
+      "input_sha256": "6270db7a814331877bf615f5f8c9bc6c3095c0c48e3aedb34e4c744f9ad43a1c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004503",
+      "input_sha256": "2d3eaa9b9c7b5b920e5620828f4f0bd42c805c26e594a15515e4fca5d74955cc",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "north dakota",
+        "canonical_fact": "Fargo is in North Dakota.",
+        "subject": "Fargo",
+        "prompt_en": "What state is Fargo in?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "north dakota"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "200a42d2693486ec864310d918e32015b7889f30c90db0756026d85b198008b4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004503",
+        "subject_zh": "法戈",
+        "prompt_zh": "法戈位于哪个州？",
+        "canonical_fact_zh": "法戈位于北达科他州。",
+        "answer_zh": "北达科他州",
+        "answer_aliases_zh": [
+          "北达科他州"
+        ]
+      },
+      "translation_sha256": "c1147a2de53e4be889d0d97950ed9bcb23c687082bdfd8f4063c5e74b2ec1257"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004506",
+      "input_sha256": "6270db7a814331877bf615f5f8c9bc6c3095c0c48e3aedb34e4c744f9ad43a1c",
+      "english": {
+        "direction": "biological entity -> primary action on specified host",
+        "relation_id": "biological_entity_to_primary_action_on_host",
+        "answer": "infect",
+        "canonical_fact": "A virus primarily infects a person.",
+        "subject": "virus",
+        "prompt_en": "What does a virus primarily do to a person?",
+        "relation_definition": "The primary biological action a specified entity performs on a specified host type; not a comprehensive list of all possible effects.",
+        "answer_aliases_en": [
+          "infect"
+        ],
+        "relation_spec": {
+          "id": "biological_entity_to_primary_action_on_host",
+          "definition": "The primary biological action a specified entity performs on a specified host type; not a comprehensive list of all possible effects.",
+          "direction": "biological entity -> primary action on specified host"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85f18b6cd5676c72189f8f3e2199e2be08087eb3281354e68f1961d8ea433f21",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004506",
+        "subject_zh": "病毒",
+        "prompt_zh": "病毒主要会对人做什么？",
+        "canonical_fact_zh": "病毒主要感染人。",
+        "answer_zh": "感染",
+        "answer_aliases_zh": [
+          "感染"
+        ]
+      },
+      "translation_sha256": "ea10b8a663e4f2558f1acb311b541cf85fea9cb47711ba5a75fc8ed207a80841"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004503",
+        "historical:raw_commonsense_qa_004506"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ba4743174fabf617ec515191a6bdf270ecb91ffe15e7f21f65750c755fea1ae3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2229,
+      "first_chunk_seconds": 3.17,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2312,
+        "prompt_tokens": 1629,
+        "total_tokens": 3941,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1841,
+          "text_tokens": 471
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0cad932294ca830586ecf098c193e51120dd6a669440c6c4ded577147c2fc5f0",
+      "status": "completed",
+      "latency_seconds": 33.399
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004503",
+        "historical:raw_commonsense_qa_004506"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e02e2d1ac0011f758eaa89d0bab55ee47c87b8e815fed933ef1955156e1479d6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 687,
+      "first_chunk_seconds": 26.589,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 726,
+        "prompt_tokens": 843,
+        "total_tokens": 1569,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 520,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d531e79eeda0011099b4dd5feea8c55c80b699e8da19522fe51d3b48abd7ca60",
+      "status": "completed",
+      "latency_seconds": 36.954
+    }
+  ],
+  "status": "completed"
+}

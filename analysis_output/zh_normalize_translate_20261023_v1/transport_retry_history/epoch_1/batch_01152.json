@@ -1,0 +1,161 @@
+{
+  "input_sha256": "b65e78b0e529a1ca2e9530bed71f3786c83976e915a29c581e27264132c101d1",
+  "normalized": [
+    {
+      "record_id": "public:pbf_67be951ebd6f4683351f",
+      "decision": "ready",
+      "subject": "season 7 of the amazing race",
+      "relation_id": "competition_to_winner",
+      "relation_definition": "The winner(s) of a specified competition season or contest.",
+      "direction": "specified competition/season -> winner(s)",
+      "answer": "uchenna and joyce",
+      "canonical_fact": "Uchenna and Joyce won season 7 of The Amazing Race.",
+      "prompt_en": "Who won season 7 of The Amazing Race?",
+      "evidence_quotes": [
+        "who won season 7 of the amazing race",
+        "uchenna and joyce"
+      ],
+      "reason": "Source question and answer directly state the winner of season 7 of The Amazing Race. No existing catalog relation matches 'winner of a TV season/competition', so a new precise relation competition_to_winner is proposed. Answer is copied literally from source_answer.",
+      "english": {
+        "answer": "uchenna and joyce",
+        "relation_id": "competition_to_winner",
+        "prompt_en": "Who won season 7 of The Amazing Race?",
+        "direction": "specified competition/season -> winner(s)",
+        "subject": "season 7 of the amazing race",
+        "canonical_fact": "Uchenna and Joyce won season 7 of The Amazing Race.",
+        "relation_definition": "The winner(s) of a specified competition season or contest.",
+        "answer_aliases_en": [
+          "uchenna and joyce"
+        ],
+        "relation_spec": {
+          "id": "competition_to_winner",
+          "definition": "The winner(s) of a specified competition season or contest.",
+          "direction": "specified competition/season -> winner(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c7da882f427c0b1ea2ac8826fd76ab33b8ff1d951e6712fa18626d24f24dd900",
+      "input_sha256": "9b8d8a1e0e20d0fcdec5c2abbf8c2d42ee7a41990e6d63781d4182a830fb9461",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_67c157929d393dcfd6e6",
+      "decision": "ready",
+      "subject": "record for most rushing yards in a game",
+      "relation_id": "record_to_holder",
+      "relation_definition": "The person who holds a specified record, with sport/category and metric stated.",
+      "direction": "specified record -> holder",
+      "answer": "Adrian Peterson",
+      "canonical_fact": "Adrian Peterson holds the record for most rushing yards in a game.",
+      "prompt_en": "Who holds the record for most rushing yards in a game?",
+      "evidence_quotes": [
+        "who holds the record for most rushing yards in a game",
+        "Adrian Peterson"
+      ],
+      "reason": "Source question and answer directly state the record holder. No existing catalog relation matches 'record holder', so a new precise relation record_to_holder is proposed. Answer is copied literally from source_answer.",
+      "english": {
+        "answer": "Adrian Peterson",
+        "relation_id": "record_to_holder",
+        "prompt_en": "Who holds the record for most rushing yards in a game?",
+        "direction": "specified record -> holder",
+        "subject": "record for most rushing yards in a game",
+        "canonical_fact": "Adrian Peterson holds the record for most rushing yards in a game.",
+        "relation_definition": "The person who holds a specified record, with sport/category and metric stated.",
+        "answer_aliases_en": [
+          "Adrian Peterson",
+          "Adrian Lewis Peterson"
+        ],
+        "relation_spec": {
+          "id": "record_to_holder",
+          "definition": "The person who holds a specified record, with sport/category and metric stated.",
+          "direction": "specified record -> holder"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "631702991cad084cad16b202fb0e93c6c924b96df0a74d03a75741a70cfc6590",
+      "input_sha256": "649f6502c3787ce14027047ebbcff73db6b587b782e9864f8a57ba0b39a46ff8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_67be951ebd6f4683351f",
+        "public:pbf_67c157929d393dcfd6e6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "98e5d14fd420c0130fdcf743877e5dd77f3f6569180503d3aed60af402c347d6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2017,
+      "first_chunk_seconds": 43.462,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2015,
+        "prompt_tokens": 1615,
+        "total_tokens": 3630,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1531,
+          "text_tokens": 484
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "64bd89ecb4b1e00a2842594fe3170a90770855d887eac92f1d3d17f551d4180f",
+      "status": "completed",
+      "latency_seconds": 59.24
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67be951ebd6f4683351f",
+        "public:pbf_67c157929d393dcfd6e6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cf93bde68bfc113ecc343969f1795ea9a54937496e3d47733739c13eac24fdcb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.923
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67be951ebd6f4683351f",
+        "public:pbf_67c157929d393dcfd6e6"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cf93bde68bfc113ecc343969f1795ea9a54937496e3d47733739c13eac24fdcb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.02
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67be951ebd6f4683351f",
+        "public:pbf_67c157929d393dcfd6e6"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cf93bde68bfc113ecc343969f1795ea9a54937496e3d47733739c13eac24fdcb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.975
+    }
+  ],
+  "status": "failed"
+}

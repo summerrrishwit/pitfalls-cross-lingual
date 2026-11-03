@@ -1,0 +1,165 @@
+{
+  "input_sha256": "f02793d4cd084f94a34be81b455174878f504d4e8a245fcf32fe1c44aba55cae",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000660",
+      "decision": "ready",
+      "subject": "animals",
+      "relation_id": "organism_to_nutrient_intake_method",
+      "relation_definition": "Method or biological process by which a specified organism type obtains a specified nutrient; retain the mechanism description as stated.",
+      "direction": "organism type (with specified nutrient) -> nutrient intake method",
+      "answer": "eating plants or organisms",
+      "canonical_fact": "Animals obtain nitrogen by eating plants or organisms.",
+      "prompt_en": "By what method do animals obtain nitrogen?",
+      "evidence_quotes": [
+        "How do animals obtain nitrogen?",
+        "eating plants or organisms"
+      ],
+      "reason": "Source explicitly states the intake method for nitrogen in animals. No catalog relation covers organism-to-nutrient-intake-method (organism_to_habitat is spatial, entity_to_material is composition, whole_to_part is structural membership). A precise new relation is proposed. Both model annotations agree on extraction; answer is a concise literal substring of source_answer.",
+      "english": {
+        "canonical_fact": "Animals obtain nitrogen by eating plants or organisms.",
+        "answer": "eating plants or organisms",
+        "subject": "animals",
+        "direction": "organism type (with specified nutrient) -> nutrient intake method",
+        "relation_definition": "Method or biological process by which a specified organism type obtains a specified nutrient; retain the mechanism description as stated.",
+        "relation_id": "organism_to_nutrient_intake_method",
+        "prompt_en": "By what method do animals obtain nitrogen?",
+        "answer_aliases_en": [
+          "eating plants or organisms"
+        ],
+        "relation_spec": {
+          "id": "organism_to_nutrient_intake_method",
+          "definition": "Method or biological process by which a specified organism type obtains a specified nutrient; retain the mechanism description as stated.",
+          "direction": "organism type (with specified nutrient) -> nutrient intake method"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7612d9b0376fcc1a3eebf919f0de0cffd1756e12bfa7cc5c560603fb78a5c88e",
+      "input_sha256": "f80bb9df117dabb2c68915a7a5d97deba983f723ed280c819416ec2d2598fd29",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000661",
+      "decision": "ready",
+      "subject": "invertebrate",
+      "relation_id": "organism_to_absent_body_part",
+      "relation_definition": "A body part or structure that a specified organism type characteristically lacks, often as a defining or diagnostic feature of that group.",
+      "direction": "organism type -> absent body part / structure",
+      "answer": "backbone",
+      "canonical_fact": "An invertebrate lacks a backbone.",
+      "prompt_en": "What structural feature does an invertebrate, like a snail, not have?",
+      "evidence_quotes": [
+        "What does an invertebrate, like a snail, not have?",
+        "backbone"
+      ],
+      "reason": "Source explicitly names the absent structural feature (backbone) that defines invertebrates. No catalog relation captures absence of a body part: whole_to_part covers constituents a whole HAS, not lacks; entity_to_class is taxonomy membership. A precise new relation organism_to_absent_body_part is proposed. Both model annotations agree; answer is a literal substring of source_answer.",
+      "english": {
+        "canonical_fact": "An invertebrate lacks a backbone.",
+        "answer": "backbone",
+        "subject": "invertebrate",
+        "direction": "organism type -> absent body part / structure",
+        "relation_definition": "A body part or structure that a specified organism type characteristically lacks, often as a defining or diagnostic feature of that group.",
+        "relation_id": "organism_to_absent_body_part",
+        "prompt_en": "What structural feature does an invertebrate, like a snail, not have?",
+        "answer_aliases_en": [
+          "backbone"
+        ],
+        "relation_spec": {
+          "id": "organism_to_absent_body_part",
+          "definition": "A body part or structure that a specified organism type characteristically lacks, often as a defining or diagnostic feature of that group.",
+          "direction": "organism type -> absent body part / structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0e9b18e609780374c7a4a8263a5052dfc578671760643511636085e587906f71",
+      "input_sha256": "3f05a563b968608b05f79d8011282592a1097df36976cef99f7fd7e85582e655",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000660",
+        "historical:raw_sciq_000661"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0a0ad163fc088134381f4ce13cdb38709f87f60d53339c6422cf8186623c264",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2250,
+      "first_chunk_seconds": 62.783,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2314,
+        "prompt_tokens": 1644,
+        "total_tokens": 3958,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1774,
+          "text_tokens": 540
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e38de8bac18889128e3874a1625de6c517f34c18f6b39c8783a13823ee2c2fbc",
+      "status": "completed",
+      "latency_seconds": 98.358
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000660",
+        "historical:raw_sciq_000661"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6fafa18c6276ae7cdcfcc6a725dd1994492ad1354bd7605b63a5be20b9b24d7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.818
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000660",
+        "historical:raw_sciq_000661"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6fafa18c6276ae7cdcfcc6a725dd1994492ad1354bd7605b63a5be20b9b24d7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 50.252
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000660",
+        "historical:raw_sciq_000661"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6fafa18c6276ae7cdcfcc6a725dd1994492ad1354bd7605b63a5be20b9b24d7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 117.822
+    }
+  ],
+  "status": "failed",
+  "recovery_history": [
+    {
+      "recovery_id": "user_gateway403_v7_20261026",
+      "previous_status": "failed",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/recovery_history/user_gateway403_v7_20261026/batches/batch_03103.json",
+      "sha256": "0f8fb90732e756df55a7fa09defaf12e9beb12a10b34be5ca500133b48bbcf7d"
+    }
+  ]
+}

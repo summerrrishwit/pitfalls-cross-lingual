@@ -1,0 +1,224 @@
+{
+  "input_sha256": "3a12eea33a9ed2727a7a4f1d9c0e3520f98595a13fe0ff93d6cb2b12fc278287",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f8ff3339386298d47c87",
+      "decision": "ready",
+      "subject": "FIFA 17",
+      "relation_id": "work_to_cover_model",
+      "relation_definition": "The person featured on the cover of a specified work (game, album, magazine, etc.); disambiguate version or market when necessary.",
+      "direction": "work -> person on cover",
+      "answer": "Marco Reus",
+      "canonical_fact": "Marco Reus is the cover athlete of FIFA 17.",
+      "prompt_en": "Who is on the cover of FIFA 17?",
+      "evidence_quotes": [
+        "who's on the cover of fifa 17",
+        "Marco Reus"
+      ],
+      "reason": "Source question explicitly asks who is on the cover of FIFA 17 and source answer is 'Marco Reus'. No existing catalog relation captures 'cover person/athlete of a work'; proposing 'work_to_cover_model' as a precise new relation. Old extraction aliases 'Woodynho' and 'pájaro loco' are incorrect and are not supported by the source; only 'Marco Reus' is retained.",
+      "english": {
+        "prompt_en": "Who is on the cover of FIFA 17?",
+        "relation_definition": "The person featured on the cover of a specified work (game, album, magazine, etc.); disambiguate version or market when necessary.",
+        "answer": "Marco Reus",
+        "canonical_fact": "Marco Reus is the cover athlete of FIFA 17.",
+        "direction": "work -> person on cover",
+        "relation_id": "work_to_cover_model",
+        "subject": "FIFA 17",
+        "answer_aliases_en": [
+          "Marco Reus",
+          "Woodynho",
+          "pájaro loco"
+        ],
+        "relation_spec": {
+          "id": "work_to_cover_model",
+          "definition": "The person featured on the cover of a specified work (game, album, magazine, etc.); disambiguate version or market when necessary.",
+          "direction": "work -> person on cover"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3272c7d0850bdf06aa5d1069af4316d854749f3997f73cb96d270572195f3bfa",
+      "input_sha256": "a9d5eaffe8cd22654ca6d35d51c687d75b2f9a3bc7606076f298b3b3ee8b9596",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f90e4faebc64b74b9cd3",
+      "decision": "ready",
+      "subject": "forward vertical integration",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "Towards the consumer",
+      "canonical_fact": "Forward vertical integration is when a firm merges or acquires another firm towards the consumer.",
+      "prompt_en": "In forward vertical integration, in which direction does a firm merge or acquire another firm?",
+      "evidence_quotes": [
+        "Vertical integration forwards is when a firm mergers or acquires another",
+        "Towards the consumer"
+      ],
+      "reason": "The source question presents a partial definition of forward vertical integration and the source answer 'Towards the consumer' supplies the defining directional component. The existing catalog relation 'term_to_definition' fits because the answer completes a definitional statement of the term.",
+      "english": {
+        "prompt_en": "In forward vertical integration, in which direction does a firm merge or acquire another firm?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "Towards the consumer",
+        "canonical_fact": "Forward vertical integration is when a firm merges or acquires another firm towards the consumer.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "forward vertical integration",
+        "answer_aliases_en": [
+          "Towards the consumer"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a9bf8b006fee975ba845f20ef69b048c5959b78e44a443703d9deccb8784616d",
+      "input_sha256": "1953293547ba13ce077313854f2f44171955d76130015aa8dead4b377b97e057",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "38431f5bfbf69c234f90ef5d0013cc0b2dbc17f9c6bfae41a077b19fbdd0aae6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.071
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "38431f5bfbf69c234f90ef5d0013cc0b2dbc17f9c6bfae41a077b19fbdd0aae6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.346
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "38431f5bfbf69c234f90ef5d0013cc0b2dbc17f9c6bfae41a077b19fbdd0aae6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.014
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "38431f5bfbf69c234f90ef5d0013cc0b2dbc17f9c6bfae41a077b19fbdd0aae6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.856
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "38431f5bfbf69c234f90ef5d0013cc0b2dbc17f9c6bfae41a077b19fbdd0aae6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2365,
+      "first_chunk_seconds": 1.157,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2444,
+        "prompt_tokens": 1611,
+        "total_tokens": 4055,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1900,
+          "text_tokens": 544
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "214a9937236fc03b232fb65aa28978067fc289c30bb3e26035c028c6f26c3ced",
+      "status": "completed",
+      "latency_seconds": 51.499
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9e53578ace2819b342241318317cd1ef05567038e9ae2a8ff38e5089ea783df0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.033
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9e53578ace2819b342241318317cd1ef05567038e9ae2a8ff38e5089ea783df0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.401
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8ff3339386298d47c87",
+        "public:pbf_f90e4faebc64b74b9cd3"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9e53578ace2819b342241318317cd1ef05567038e9ae2a8ff38e5089ea783df0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 34.665
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02056.json",
+      "sha256": "f2743a68b5bfba7271af43e4ecb4fcea7f27f84bb5a61c2a26920899e53a101c",
+      "previous_status": "failed"
+    }
+  ]
+}

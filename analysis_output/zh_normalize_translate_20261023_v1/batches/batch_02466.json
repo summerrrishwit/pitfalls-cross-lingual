@@ -1,0 +1,246 @@
+{
+  "input_sha256": "25f34eda46d695292117fb5a09cef4fa081629fcc5691e5ef0219317289f7e77",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000927",
+      "decision": "ready",
+      "subject": "vehicle whose back wheel is driven by a chain much like a bicycle",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "motorbike",
+      "canonical_fact": "A motorbike is a vehicle whose back wheel is driven by a chain much like a bicycle.",
+      "prompt_en": "What vehicle has its back wheel driven by a chain, much like a bicycle?",
+      "evidence_quotes": [
+        "a chain drives the back wheel",
+        "motorbike"
+      ],
+      "reason": "The source question supplies a defining description (a vehicle whose back wheel is driven by a chain, like a bicycle) and the source answer identifies the conventional term as 'motorbike'. This matches description_to_term (description -> term). The Qwen-3.8-Max annotation 'non_unique_answer' is not sufficient to defer because the source answer is a single concrete term and the description is scoped by the bicycle analogy.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "motorbike",
+        "canonical_fact": "A motorbike is a vehicle whose back wheel is driven by a chain much like a bicycle.",
+        "subject": "vehicle whose back wheel is driven by a chain much like a bicycle",
+        "prompt_en": "What vehicle has its back wheel driven by a chain, much like a bicycle?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "motorbike"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "01b8c7bb4e3f72b5bb697e8d915fa7dc77ba2a1f830960e0af510d4356ce1569",
+      "input_sha256": "4a29d01a1fd74ab35b200c128829d5e93520155a8dd6146eb0baf5b45fd99dbd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000930",
+      "decision": "ready",
+      "subject": "humerus",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "arm",
+      "canonical_fact": "The humerus is a bone located in the arm.",
+      "prompt_en": "The humerus is a bone located in what?",
+      "evidence_quotes": [
+        "a bone located where",
+        "arm"
+      ],
+      "reason": "The source question (with 'humorous' being a typo for 'humerus') asks where the humerus bone is located, and the source answer is 'arm'. The humerus is a constituent bone of the arm, fitting the part_to_whole relation (part -> whole). entity_to_containing_location is excluded because its definition specifies geographic containment, not anatomical.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "arm",
+        "canonical_fact": "The humerus is a bone located in the arm.",
+        "subject": "humerus",
+        "prompt_en": "The humerus is a bone located in what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "arm"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "804c2a47a70934abbecbf40a6f8e16f50537813f1a04bbf5bc68b5c69edf41db",
+      "input_sha256": "997bbb3144d4b94939edbfd2b5b4c4d09bc66a3acfc95780d86877e52b9e14f4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000927",
+      "input_sha256": "4a29d01a1fd74ab35b200c128829d5e93520155a8dd6146eb0baf5b45fd99dbd",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "motorbike",
+        "canonical_fact": "A motorbike is a vehicle whose back wheel is driven by a chain much like a bicycle.",
+        "subject": "vehicle whose back wheel is driven by a chain much like a bicycle",
+        "prompt_en": "What vehicle has its back wheel driven by a chain, much like a bicycle?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "motorbike"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "01b8c7bb4e3f72b5bb697e8d915fa7dc77ba2a1f830960e0af510d4356ce1569",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000927",
+        "subject_zh": "后轮由链条驱动的车辆，类似自行车",
+        "prompt_zh": "什么车辆的后轮由链条驱动，类似自行车？",
+        "canonical_fact_zh": "摩托车是一种后轮由链条驱动的车辆，类似自行车。",
+        "answer_zh": "摩托车",
+        "answer_aliases_zh": [
+          "摩托车"
+        ]
+      },
+      "translation_sha256": "88a84c50302c475cc667035c7f0ef0c854def6ec6f42e38d015a2c40bde817f5"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000930",
+      "input_sha256": "997bbb3144d4b94939edbfd2b5b4c4d09bc66a3acfc95780d86877e52b9e14f4",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "arm",
+        "canonical_fact": "The humerus is a bone located in the arm.",
+        "subject": "humerus",
+        "prompt_en": "The humerus is a bone located in what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "arm"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "804c2a47a70934abbecbf40a6f8e16f50537813f1a04bbf5bc68b5c69edf41db",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000930",
+        "subject_zh": "肱骨",
+        "prompt_zh": "肱骨是位于什么部位的一块骨头？",
+        "canonical_fact_zh": "肱骨是位于手臂中的一块骨头。",
+        "answer_zh": "手臂",
+        "answer_aliases_zh": [
+          "手臂"
+        ]
+      },
+      "translation_sha256": "75407fcc717738dcfca7113bd1e0ed9bb52d5b38895e524fb66610753e729033"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000927",
+        "historical:raw_commonsense_qa_000930"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "aa6feacab86f351252478a31b25faa7a2df0c28bb27d4197c36712d08ae2ee08",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2693,
+      "first_chunk_seconds": 15.808,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2870,
+        "prompt_tokens": 1653,
+        "total_tokens": 4523,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2457,
+          "text_tokens": 413
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dc0b925b95b557346d04a58e454df1fc84588186f20d24f9ddf6eab60f49be7b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 61.661,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000927",
+        "historical:raw_commonsense_qa_000930"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dbf5bd38b36c24aab9bf55352c9e5c8ec593a906c037535b600275058106a532",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3068,
+      "first_chunk_seconds": 30.962,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3232,
+        "prompt_tokens": 1672,
+        "total_tokens": 4904,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2707,
+          "text_tokens": 525
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1c24947b00762d33cf4cd426098aacd94310642a20d08bbf22854458fa329cd4",
+      "status": "completed",
+      "latency_seconds": 106.618
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000927",
+        "historical:raw_commonsense_qa_000930"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5b725d2321b2ce746eefe62d1d39127ef222d0eb801515a69bb9f5660ef0d861",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 736,
+      "first_chunk_seconds": 26.507,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 776,
+        "prompt_tokens": 822,
+        "total_tokens": 1598,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 552,
+          "text_tokens": 224
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8898aee927221d6927324090ffa8938043a764811d2324d2d84bd43eb7e2c3fe",
+      "status": "completed",
+      "latency_seconds": 36.724
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,208 @@
+{
+  "input_sha256": "da6c140624815825d9baa142674b23b4e2df59189e62d202055ccdb2f887938e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001601",
+      "decision": "ready",
+      "subject": "four seasons on Earth",
+      "relation_id": "phenomenon_to_cause",
+      "relation_definition": "The specific natural cause, mechanism, or repeating cycle responsible for a stated phenomenon; retain qualifiers and scope as stated.",
+      "direction": "phenomenon -> cause",
+      "answer": "revolution of the earth about the sun",
+      "canonical_fact": "The repeating cycle responsible for the four seasons on Earth is the revolution of the earth about the sun.",
+      "prompt_en": "What repeating cycle is responsible for the four seasons that occur on Earth?",
+      "evidence_quotes": [
+        "What repeating cycle is responsible for the four seasons that occur on Earth?",
+        "revolution of the earth about the sun"
+      ],
+      "reason": "Source question and answer directly state a causal/explanatory relationship (cycle responsible for phenomenon). No catalog relation covers phenomenon-to-cause, so a precise new relation 'phenomenon_to_cause' is proposed. Answer copied verbatim from source_answer.",
+      "english": {
+        "direction": "phenomenon -> cause",
+        "relation_id": "phenomenon_to_cause",
+        "answer": "revolution of the earth about the sun",
+        "canonical_fact": "The repeating cycle responsible for the four seasons on Earth is the revolution of the earth about the sun.",
+        "subject": "four seasons on Earth",
+        "prompt_en": "What repeating cycle is responsible for the four seasons that occur on Earth?",
+        "relation_definition": "The specific natural cause, mechanism, or repeating cycle responsible for a stated phenomenon; retain qualifiers and scope as stated.",
+        "answer_aliases_en": [
+          "revolution of the earth about the sun"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_cause",
+          "definition": "The specific natural cause, mechanism, or repeating cycle responsible for a stated phenomenon; retain qualifiers and scope as stated.",
+          "direction": "phenomenon -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "784067478257d6cd6097fcc7a00e08e9a5f9b9a43493433622da5842b2fa635f",
+      "input_sha256": "2f194ca10ecf35972db275bd874ea21df8f661fb77a11113a980fee9718bbbbc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001603",
+      "decision": "ready",
+      "subject": "property of a mineral",
+      "relation_id": "test_to_property",
+      "relation_definition": "The specific property of a stated entity identified as being assessed by a described test method; retain the test description and entity scope.",
+      "direction": "described test method on entity -> property",
+      "answer": "hardness",
+      "canonical_fact": "The property of a mineral most likely being tested when it is scratched with a nail is hardness.",
+      "prompt_en": "Which property of a mineral is most likely being tested when it is scratched with a nail?",
+      "evidence_quotes": [
+        "Which property of a mineral is most likely being tested when it is scratched with a nail?",
+        "hardness"
+      ],
+      "reason": "Source question and answer directly identify the property (hardness) tested by a specific method (scratching with a nail). No catalog relation covers test-method-to-property, so a precise new relation 'test_to_property' is proposed. Answer copied verbatim from source_answer.",
+      "english": {
+        "direction": "described test method on entity -> property",
+        "relation_id": "test_to_property",
+        "answer": "hardness",
+        "canonical_fact": "The property of a mineral most likely being tested when it is scratched with a nail is hardness.",
+        "subject": "property of a mineral",
+        "prompt_en": "Which property of a mineral is most likely being tested when it is scratched with a nail?",
+        "relation_definition": "The specific property of a stated entity identified as being assessed by a described test method; retain the test description and entity scope.",
+        "answer_aliases_en": [
+          "hardness"
+        ],
+        "relation_spec": {
+          "id": "test_to_property",
+          "definition": "The specific property of a stated entity identified as being assessed by a described test method; retain the test description and entity scope.",
+          "direction": "described test method on entity -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c66549299258a566b326c867e11b65151ee087a5bcd22fb1b11f23341f686266",
+      "input_sha256": "b1291e38530b7100ac42fa04a5727361df1c9bf953159a8a673e77ae94b48e91",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "85f0eaa3e1b16b14019e2a1b1a42ae9d45b10c28b01a1e47916634900d01c38a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2879,
+      "first_chunk_seconds": 28.547,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2956,
+        "prompt_tokens": 1725,
+        "total_tokens": 4681,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2417,
+          "text_tokens": 539
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "31847243bcd36e25559fd5ed06886a0b9ed725e82d0a4e2fed33cc7505f3cd10",
+      "status": "completed",
+      "latency_seconds": 66.719
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.981
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.978
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.708
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.785
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.798
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001601",
+        "historical:raw_ai2_arc_easy_001603"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "82c26a725e0b987b6b65b30c97998406c9843d6d4d8e530a1b8640abb09c4d16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.211
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02387.json",
+      "sha256": "4d3d68e414340607489048810c7bb0086a8c2f5b22fbd96473aff009ca66f88b",
+      "previous_status": "failed"
+    }
+  ]
+}

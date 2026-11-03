@@ -1,0 +1,214 @@
+{
+  "input_sha256": "09ec1e7480c8919d41e22badbc51e8fe51ee8f2a94c22417206ac9845de0e0df",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000241",
+      "decision": "ready",
+      "subject": "water seeping into the ground through permeable material",
+      "relation_id": "process_to_terminating_layer",
+      "relation_definition": "The geological material or layer at which a described seepage/flow process ceases due to impermeability.",
+      "direction": "process -> terminating layer",
+      "answer": "impermeable rock",
+      "canonical_fact": "Water seeping into the ground through permeable material stops when it reaches impermeable rock.",
+      "prompt_en": "Through what type of geological layer does the seepage of water stop after it has passed through permeable material in the ground?",
+      "evidence_quotes": [
+        "impermeable rock",
+        "Water seeps into the ground through permeable material and stops when it reaches what?"
+      ],
+      "reason": "No existing catalog relation captures the boundary/terminating-layer concept for a seepage process. Proposed new snake_case ID 'process_to_terminating_layer' with explicit direction. The answer 'impermeable rock' is copied verbatim from source_answer. The fact is a standard hydrogeology principle and is reusable. Subject is a process (groundwater seepage); the relation is to the layer that terminates it.",
+      "english": {
+        "direction": "process -> terminating layer",
+        "relation_id": "process_to_terminating_layer",
+        "answer": "impermeable rock",
+        "canonical_fact": "Water seeping into the ground through permeable material stops when it reaches impermeable rock.",
+        "subject": "water seeping into the ground through permeable material",
+        "prompt_en": "Through what type of geological layer does the seepage of water stop after it has passed through permeable material in the ground?",
+        "relation_definition": "The geological material or layer at which a described seepage/flow process ceases due to impermeability.",
+        "answer_aliases_en": [
+          "impermeable rock"
+        ],
+        "relation_spec": {
+          "id": "process_to_terminating_layer",
+          "definition": "The geological material or layer at which a described seepage/flow process ceases due to impermeability.",
+          "direction": "process -> terminating layer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65d4946c49737a0d07ad8603b42e7e86062ff5398ab6304f801f96df5ca33def",
+      "input_sha256": "701bf4b3965415715c779095518308468296c9dada5ff4d01ace772a7b801ec5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000242",
+      "decision": "ready",
+      "subject": "excess carbon dioxide in the atmosphere causes the oceans to become acidic",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "ocean acidification",
+      "canonical_fact": "The process in which excess carbon dioxide in the atmosphere causes the oceans to become acidic is called ocean acidification.",
+      "prompt_en": "What is the conventional term for the process by which excess carbon dioxide in the atmosphere causes the oceans to become acidic?",
+      "evidence_quotes": [
+        "ocean acidification",
+        "What occurs when excess carbon dioxide in the atmosphere causes the oceans to become acidic?"
+      ],
+      "reason": "The source question supplies a defining description (excess CO2 making oceans acidic) and asks for the conventional term. This matches description_to_term exactly (direction: description -> term). The answer 'ocean acidification' is copied verbatim from source_answer. No qualifier or uncertainty is present in the source. Prompt is option-free and does not contain the answer string.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "ocean acidification",
+        "canonical_fact": "The process in which excess carbon dioxide in the atmosphere causes the oceans to become acidic is called ocean acidification.",
+        "subject": "excess carbon dioxide in the atmosphere causes the oceans to become acidic",
+        "prompt_en": "What is the conventional term for the process by which excess carbon dioxide in the atmosphere causes the oceans to become acidic?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "ocean acidification"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ac9706b7d0e0e0fb06a85c569cbe79d69ffe4fa2a0d76355e9c776536051ce92",
+      "input_sha256": "34a90aeb87d52e24eef3845b0d872c2639e37d74e28403d58fc22a7b0a80362c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000241",
+      "input_sha256": "701bf4b3965415715c779095518308468296c9dada5ff4d01ace772a7b801ec5",
+      "english": {
+        "direction": "process -> terminating layer",
+        "relation_id": "process_to_terminating_layer",
+        "answer": "impermeable rock",
+        "canonical_fact": "Water seeping into the ground through permeable material stops when it reaches impermeable rock.",
+        "subject": "water seeping into the ground through permeable material",
+        "prompt_en": "Through what type of geological layer does the seepage of water stop after it has passed through permeable material in the ground?",
+        "relation_definition": "The geological material or layer at which a described seepage/flow process ceases due to impermeability.",
+        "answer_aliases_en": [
+          "impermeable rock"
+        ],
+        "relation_spec": {
+          "id": "process_to_terminating_layer",
+          "definition": "The geological material or layer at which a described seepage/flow process ceases due to impermeability.",
+          "direction": "process -> terminating layer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65d4946c49737a0d07ad8603b42e7e86062ff5398ab6304f801f96df5ca33def",
+      "translation": {
+        "record_id": "historical:raw_sciq_000241",
+        "subject_zh": "通过透水层渗入地下的水",
+        "prompt_zh": "水通过地下的透水层渗透后，其渗透在何种类型的地质层处会停止？",
+        "canonical_fact_zh": "通过透水层渗入地下的水，到达不透水岩层时便会停止渗透。",
+        "answer_zh": "不透水岩层",
+        "answer_aliases_zh": [
+          "不透水岩层"
+        ]
+      },
+      "translation_sha256": "c14a91abcd6af2f621d9529cfc71063e22279965f3589634afbb767b053ad189"
+    },
+    {
+      "record_id": "historical:raw_sciq_000242",
+      "input_sha256": "34a90aeb87d52e24eef3845b0d872c2639e37d74e28403d58fc22a7b0a80362c",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "ocean acidification",
+        "canonical_fact": "The process in which excess carbon dioxide in the atmosphere causes the oceans to become acidic is called ocean acidification.",
+        "subject": "excess carbon dioxide in the atmosphere causes the oceans to become acidic",
+        "prompt_en": "What is the conventional term for the process by which excess carbon dioxide in the atmosphere causes the oceans to become acidic?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "ocean acidification"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ac9706b7d0e0e0fb06a85c569cbe79d69ffe4fa2a0d76355e9c776536051ce92",
+      "translation": {
+        "record_id": "historical:raw_sciq_000242",
+        "subject_zh": "大气中过量的二氧化碳导致海洋变酸",
+        "prompt_zh": "大气中过量的二氧化碳使海洋变酸这一过程，其约定俗成的术语是什么？",
+        "canonical_fact_zh": "大气中过量的二氧化碳使海洋变酸的过程被称为海洋酸化。",
+        "answer_zh": "海洋酸化",
+        "answer_aliases_zh": [
+          "海洋酸化"
+        ]
+      },
+      "translation_sha256": "7a159895b6054da6c961825330467c3cc47845a8bc462d42521dcbe937ce030f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000241",
+        "historical:raw_sciq_000242"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f3722498148fac58a401e3c61469c1afb91ad3e9caa97f421b4d820406e97c24",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2390,
+      "first_chunk_seconds": 1.274,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2480,
+        "prompt_tokens": 1770,
+        "total_tokens": 4250,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1874,
+          "text_tokens": 606
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9412f3677995c4c7f5c78524e3a48e0072ecd0da98aff6b7227f8b7ea039162d",
+      "status": "completed",
+      "latency_seconds": 60.85
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000241",
+        "historical:raw_sciq_000242"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "240e0b252d9ed8f0f7474eb8ff507bd411b1fb4f527476e058a00c787e251355",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 821,
+      "first_chunk_seconds": 1.46,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 915,
+        "prompt_tokens": 894,
+        "total_tokens": 1809,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 653,
+          "text_tokens": 262
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d080113e7ce27184a1d9fdeb689ebe1a2db886a0c8b5f56f39ed5a902015017c",
+      "status": "completed",
+      "latency_seconds": 38.514
+    }
+  ],
+  "status": "completed"
+}

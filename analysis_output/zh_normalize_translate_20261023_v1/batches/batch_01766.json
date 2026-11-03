@@ -1,0 +1,160 @@
+{
+  "input_sha256": "ecfd335de32aca83a95255b849884c57ea1ae35552094cc8b868443735249c78",
+  "normalized": [
+    {
+      "record_id": "public:pbf_cd171c068abe89e495c2",
+      "decision": "ready",
+      "subject": "conduct disorder",
+      "relation_id": "diagnosis_to_excluded_diagnosis",
+      "relation_definition": "A diagnosis that is mutually exclusive with another specified diagnosis; the two cannot be co-diagnosed in the same individual under the stated criteria (e.g., DSM/ICD rules).",
+      "direction": "conduct disorder -> excluded co-diagnosis (Oppositional defiant disorder)",
+      "answer": "Oppositional defiant disorder",
+      "canonical_fact": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of oppositional defiant disorder.",
+      "prompt_en": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of",
+      "evidence_quotes": [
+        "A child diagnosed with conduct disorder cannot receive an additional diagnosis of",
+        "Oppositional defiant disorder"
+      ],
+      "reason": "No catalog relation precisely covers diagnostic mutual-exclusion; a new 'diagnosis_to_excluded_diagnosis' is proposed with explicit definition. Source directly states ODD cannot be co-diagnosed with conduct disorder in a child. Prompt is option-free and does not contain the answer string.",
+      "english": {
+        "answer": "Oppositional defiant disorder",
+        "relation_id": "diagnosis_to_excluded_diagnosis",
+        "prompt_en": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of",
+        "direction": "conduct disorder -> excluded co-diagnosis (Oppositional defiant disorder)",
+        "subject": "conduct disorder",
+        "canonical_fact": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of oppositional defiant disorder.",
+        "relation_definition": "A diagnosis that is mutually exclusive with another specified diagnosis; the two cannot be co-diagnosed in the same individual under the stated criteria (e.g., DSM/ICD rules).",
+        "answer_aliases_en": [
+          "Oppositional defiant disorder"
+        ],
+        "relation_spec": {
+          "id": "diagnosis_to_excluded_diagnosis",
+          "definition": "A diagnosis that is mutually exclusive with another specified diagnosis; the two cannot be co-diagnosed in the same individual under the stated criteria (e.g., DSM/ICD rules).",
+          "direction": "conduct disorder -> excluded co-diagnosis (Oppositional defiant disorder)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe591b68966db723f267fceaaf6f957c1ae77c9ec093091c0c09e31f17a6e04c",
+      "input_sha256": "19d7fd22a24a5e4736f3913ce1e8471822e6c1a3855d605f796370871dc8afb0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_cd184abee62084fb147c",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question 'How is the Arabic numeral for 2 written?' necessarily contains the answer string '2' within its subject phrase, violating the requirement that prompt_en must not contain its answer. The question is tautological and cannot be rephrased as a literal substring of the source without deviating. Defer rather than force.",
+      "input_sha256": "c8bc198851849eda01f5b5f0a7a33c9fdf747272ddd60e04289712e084783c88",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_cd171c068abe89e495c2",
+      "input_sha256": "19d7fd22a24a5e4736f3913ce1e8471822e6c1a3855d605f796370871dc8afb0",
+      "english": {
+        "answer": "Oppositional defiant disorder",
+        "relation_id": "diagnosis_to_excluded_diagnosis",
+        "prompt_en": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of",
+        "direction": "conduct disorder -> excluded co-diagnosis (Oppositional defiant disorder)",
+        "subject": "conduct disorder",
+        "canonical_fact": "A child diagnosed with conduct disorder cannot receive an additional diagnosis of oppositional defiant disorder.",
+        "relation_definition": "A diagnosis that is mutually exclusive with another specified diagnosis; the two cannot be co-diagnosed in the same individual under the stated criteria (e.g., DSM/ICD rules).",
+        "answer_aliases_en": [
+          "Oppositional defiant disorder"
+        ],
+        "relation_spec": {
+          "id": "diagnosis_to_excluded_diagnosis",
+          "definition": "A diagnosis that is mutually exclusive with another specified diagnosis; the two cannot be co-diagnosed in the same individual under the stated criteria (e.g., DSM/ICD rules).",
+          "direction": "conduct disorder -> excluded co-diagnosis (Oppositional defiant disorder)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe591b68966db723f267fceaaf6f957c1ae77c9ec093091c0c09e31f17a6e04c",
+      "translation": {
+        "record_id": "public:pbf_cd171c068abe89e495c2",
+        "subject_zh": "品行障碍",
+        "prompt_zh": "被诊断为品行障碍的儿童不能被额外诊断为",
+        "canonical_fact_zh": "被诊断为品行障碍的儿童不能被额外诊断为对立违抗障碍。",
+        "answer_zh": "对立违抗障碍",
+        "answer_aliases_zh": [
+          "对立违抗障碍"
+        ]
+      },
+      "translation_sha256": "194a7ab9dbfea1be646ce9ea4ebde06c3a7816be709eb21574d245ff9fcf7fac"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_cd171c068abe89e495c2",
+        "public:pbf_cd184abee62084fb147c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d946d0d6f0081404334fe2be7ce2dbaf7b71c28b4ad4a3b7a775b361d0a8dac9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3267,
+      "first_chunk_seconds": 74.172,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3321,
+        "prompt_tokens": 1588,
+        "total_tokens": 4909,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2846,
+          "text_tokens": 475
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "be12d0acdb72ba5840a7a3fc8d9a89c66fd1cd6a5656276bc67784c8fadd5c5f",
+      "status": "completed",
+      "latency_seconds": 107.824
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_cd171c068abe89e495c2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b1e293854dbee1c69895b3288fd8153a5e13cf3a61a48ea3b34ad863c1ade71e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 628,
+      "first_chunk_seconds": 33.948,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 625,
+        "prompt_tokens": 596,
+        "total_tokens": 1221,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 538,
+          "text_tokens": 87
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d332ec1313a23809363d753918971dc0242e35afdd360b0f55d72a57c085052e",
+      "status": "completed",
+      "latency_seconds": 39.0
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,3 @@
+# Findings
+
+Original canonical cwd is outside current writable worktree; explicit authorized stop/archive writes there need elevated access. Original old automation is PAUSED and V3 status blocked_fatal_api_error; inspect fatal details before live execution. This transition must not label translations as independent fact/relationship verification. New pipeline: supplied original QA+old annotations -> Qwen faithful relation normalization (no Luna/Sol relation review) -> Qwen English-to-Chinese translation -> Luna translation-only review -> optional one bounded translation repair -> Sol translation ambiguities. Programmatic binding and formal freeze gates remain separate.

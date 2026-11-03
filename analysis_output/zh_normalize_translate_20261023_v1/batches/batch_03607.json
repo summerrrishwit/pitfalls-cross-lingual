@@ -1,0 +1,224 @@
+{
+  "input_sha256": "f61d94682878c191d78906e51ba54c071046a9b4491e4766f30188e25e6e0ab4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000769",
+      "decision": "ready",
+      "subject": "black helicopters",
+      "relation_id": "entity_to_purpose",
+      "relation_definition": "Stated use, function, or application of an entity or vehicle class in its typical or specified context; retain uncertainty qualifiers such as 'may be'.",
+      "direction": "entity -> purpose",
+      "answer": "combat search and rescue",
+      "canonical_fact": "Black helicopters may be used for combat search and rescue.",
+      "prompt_en": "What are black helicopters used for?",
+      "evidence_quotes": [
+        "Black helicopters may be used for combat search and rescue"
+      ],
+      "reason": "No catalog relation captures purpose/use of a vehicle class. Proposed entity_to_purpose. Answer 'combat search and rescue' is a literal substring of source_answer; qualifier 'may be' preserved in canonical_fact.",
+      "english": {
+        "prompt_en": "What are black helicopters used for?",
+        "relation_definition": "Stated use, function, or application of an entity or vehicle class in its typical or specified context; retain uncertainty qualifiers such as 'may be'.",
+        "answer": "combat search and rescue",
+        "canonical_fact": "Black helicopters may be used for combat search and rescue.",
+        "direction": "entity -> purpose",
+        "relation_id": "entity_to_purpose",
+        "subject": "black helicopters",
+        "answer_aliases_en": [
+          "combat search and rescue"
+        ],
+        "relation_spec": {
+          "id": "entity_to_purpose",
+          "definition": "Stated use, function, or application of an entity or vehicle class in its typical or specified context; retain uncertainty qualifiers such as 'may be'.",
+          "direction": "entity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0b6520dad77cccd82fb1fbd762291beb899117f3ce1b9208b525872baa0491f9",
+      "input_sha256": "c3d22a293dd5ab7554fefa4ca3158544f35d32e97348434b757374b324587556",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_00b0c2ba9e111bf5d993",
+      "decision": "ready",
+      "subject": "T-Mobile",
+      "relation_id": "entity_to_network_standard",
+      "relation_definition": "The network technology or standard employed by a specified telecommunications entity in a specified market; retain the market scope.",
+      "direction": "entity -> network standard",
+      "answer": "Global System for Mobile Communications",
+      "canonical_fact": "T-Mobile uses Global System for Mobile Communications network technology in the USA.",
+      "prompt_en": "What network is T-Mobile on in the USA?",
+      "evidence_quotes": [
+        "Global System for Mobile Communications",
+        "what network is t mobile on in the usa"
+      ],
+      "reason": "No catalog relation precisely captures the network standard a telecom entity uses in a given market. Proposed entity_to_network_standard. Existing answer matches source_answer exactly; prompt cleaned to remove 'Factual question:' prefix and 'Answer:' suffix.",
+      "english": {
+        "prompt_en": "What network is T-Mobile on in the USA?",
+        "relation_definition": "The network technology or standard employed by a specified telecommunications entity in a specified market; retain the market scope.",
+        "answer": "Global System for Mobile Communications",
+        "canonical_fact": "T-Mobile uses Global System for Mobile Communications network technology in the USA.",
+        "direction": "entity -> network standard",
+        "relation_id": "entity_to_network_standard",
+        "subject": "T-Mobile",
+        "answer_aliases_en": [
+          "Global System for Mobile Communications",
+          "GSM mobile phone base station",
+          "Mobile phone base stations",
+          "GSM",
+          "2G",
+          "Groupe Spécial Mobile",
+          "Groupe Special Mobile"
+        ],
+        "relation_spec": {
+          "id": "entity_to_network_standard",
+          "definition": "The network technology or standard employed by a specified telecommunications entity in a specified market; retain the market scope.",
+          "direction": "entity -> network standard"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "826b08751fd087f6969436a6344ca3516e06510f7ac51de31daaf7c6d4490228",
+      "input_sha256": "439e1fedb649cd02983cddbaa408bfa375b8cc287298a361cb58c5dae8428c29",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "12a8fd94fc757fae5b6f09e7bab4480ab5174cc4db121028f3edde4306c00dff",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3063,
+      "first_chunk_seconds": 66.538,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3157,
+        "prompt_tokens": 1628,
+        "total_tokens": 4785,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2683,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d26d512d115210ce2485580b033e51e3fb1c7016c01b7c2d5d1fbb095abc2077",
+      "status": "completed",
+      "latency_seconds": 261.017
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 106.991
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 9.359,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.029
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.781
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.124
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000769",
+        "public:pbf_00b0c2ba9e111bf5d993"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9dd14d34782b194e914d054638159629c0added978a8d1963d1ee0e1b379f223",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.854
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03607.json",
+      "sha256": "7fd719748e95d020da8ec730d14b792c5d988faa1253f76f9ee335a88676f44b",
+      "previous_status": "failed"
+    }
+  ]
+}

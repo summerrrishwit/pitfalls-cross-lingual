@@ -1,0 +1,158 @@
+{
+  "input_sha256": "568bf001275e3149a573e73b496b14213cd25870e83ad4856ed42d0309b143f9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6ded766c632409c72fa3",
+      "decision": "ready",
+      "subject": "the shark in Finding Nemo",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Bruce",
+      "canonical_fact": "The shark in Finding Nemo is named Bruce.",
+      "prompt_en": "The shark in Finding Nemo is named",
+      "evidence_quotes": [
+        "bruce"
+      ],
+      "reason": "Source question asks for the shark's name in Finding Nemo; source_answer is 'bruce'. The existing extraction (answer 'Bruce', subject 'shark in Finding Nemo') is consistent with the source. The identifying description 'the shark in Finding Nemo' uniquely maps to the entity 'Bruce' via description_to_entity.",
+      "english": {
+        "answer": "Bruce",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The shark in Finding Nemo is named",
+        "direction": "identifying description -> entity",
+        "subject": "the shark in Finding Nemo",
+        "canonical_fact": "The shark in Finding Nemo is named Bruce.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Bruce"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c397586f1a508c1a1a0f652e0c5b1ebdb3061f9c5a25819990e3552164b0b660",
+      "input_sha256": "de6c20529c572dfaa9495439c4c7287902fe82521586043ada4154c61687ec43",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6e1b6ecc58cb90bb7c14",
+      "decision": "ready",
+      "subject": "damage to the cervical sympathetic chain",
+      "relation_id": "condition_to_clinical_signs",
+      "relation_definition": "Specifically requested clinical signs or symptoms that result from a named medical condition, nerve lesion, or injury, at the granularity stated in the question.",
+      "direction": "medical condition or injury -> clinical signs/symptoms",
+      "answer": "Pupillary constriction and vasodilation of facial vessels",
+      "canonical_fact": "Damage to the cervical sympathetic chain causes pupillary constriction and vasodilation of facial vessels.",
+      "prompt_en": "Damage to the cervical sympathetic chain causes",
+      "evidence_quotes": [
+        "Pupillary constriction and vasodilation of facial vessels"
+      ],
+      "reason": "No existing catalog relation precisely captures 'condition → its clinical signs/symptoms'. Proposing a new specific snake_case ID 'condition_to_clinical_signs' rather than forcing a broad category like term_to_definition or entity_to_class. Source question explicitly asks for the signs and symptoms; source_answer matches the existing extraction verbatim.",
+      "english": {
+        "answer": "Pupillary constriction and vasodilation of facial vessels",
+        "relation_id": "condition_to_clinical_signs",
+        "prompt_en": "Damage to the cervical sympathetic chain causes",
+        "direction": "medical condition or injury -> clinical signs/symptoms",
+        "subject": "damage to the cervical sympathetic chain",
+        "canonical_fact": "Damage to the cervical sympathetic chain causes pupillary constriction and vasodilation of facial vessels.",
+        "relation_definition": "Specifically requested clinical signs or symptoms that result from a named medical condition, nerve lesion, or injury, at the granularity stated in the question.",
+        "answer_aliases_en": [
+          "Pupillary constriction and vasodilation of facial vessels"
+        ],
+        "relation_spec": {
+          "id": "condition_to_clinical_signs",
+          "definition": "Specifically requested clinical signs or symptoms that result from a named medical condition, nerve lesion, or injury, at the granularity stated in the question.",
+          "direction": "medical condition or injury -> clinical signs/symptoms"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "076d76aba81c868ac9af4e664a3f929739407d6f19fdfc17b0b13be165b2f80d",
+      "input_sha256": "db7db86e6715b8440212bd66edcc950d2b1ad12756aadbb39d772c82dc53ebde",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6ded766c632409c72fa3",
+        "public:pbf_6e1b6ecc58cb90bb7c14"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c73bd7bee98ee282e375b3881c64ab9bcd06c3840da8e1bf4a7eaf8863fda222",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2268,
+      "first_chunk_seconds": 34.288,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2274,
+        "prompt_tokens": 1618,
+        "total_tokens": 3892,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1764,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "2e0f7e0ffcd654be46b56b27a56a356ecb8224ef4aced6cc7a67c5bd2ef42458",
+      "status": "completed",
+      "latency_seconds": 54.27
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ded766c632409c72fa3",
+        "public:pbf_6e1b6ecc58cb90bb7c14"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "67bfc7d33df3a1f184062d8d9bc9aeec2b8a069734f13aa1340ca18a2374ea61",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.945
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ded766c632409c72fa3",
+        "public:pbf_6e1b6ecc58cb90bb7c14"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "67bfc7d33df3a1f184062d8d9bc9aeec2b8a069734f13aa1340ca18a2374ea61",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.955
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6ded766c632409c72fa3",
+        "public:pbf_6e1b6ecc58cb90bb7c14"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "67bfc7d33df3a1f184062d8d9bc9aeec2b8a069734f13aa1340ca18a2374ea61",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.246
+    }
+  ],
+  "status": "failed"
+}

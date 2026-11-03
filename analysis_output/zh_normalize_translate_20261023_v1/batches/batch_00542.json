@@ -1,0 +1,268 @@
+{
+  "input_sha256": "bb9a386dd8479e935f24000227ef0f0c86d05b726b6c0e85a45be783838274ea",
+  "normalized": [
+    {
+      "record_id": "public:pbf_002fca7ca48b5daf5d25",
+      "decision": "ready",
+      "subject": "brainstem",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "hindbrain and midbrain",
+      "canonical_fact": "The brainstem is comprised of the hindbrain and midbrain.",
+      "prompt_en": "The brainstem is comprised of the",
+      "evidence_quotes": [
+        "The brainstem is comprised of the",
+        "hindbrain and midbrain."
+      ],
+      "reason": "The source states the brainstem is comprised of the hindbrain and midbrain, a whole-to-part composition. The catalog relation whole_to_part (direction whole -> part) fits exactly: brainstem is the whole, hindbrain and midbrain are its named constituent parts. Answer kept as the existing literal substring of source_answer.",
+      "english": {
+        "subject": "brainstem",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "hindbrain and midbrain",
+        "canonical_fact": "The brainstem is comprised of the hindbrain and midbrain.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "prompt_en": "The brainstem is comprised of the",
+        "answer_aliases_en": [
+          "hindbrain and midbrain",
+          "hindbrain and midbrain."
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "431117b44199c74ac4923b38407e102a3b0a8313d46edcc1128eae928bb832df",
+      "input_sha256": "972be6ceee4f0fb7f48dbb7bb68d9c79e8c69b657ebc7269dea540aa3bc79e07",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_003429974236e60a974c",
+      "decision": "ready",
+      "subject": "unfavourable fracture of the body of the mandible",
+      "relation_id": "condition_to_expected_effect",
+      "relation_definition": "Expected physical or biomechanical consequence of a specified medical condition or injury, retaining the affected structure, direction of displacement, and causative mechanism as stated in the source.",
+      "direction": "condition -> expected effect",
+      "answer": "downwards by the action of the digastric muscle",
+      "canonical_fact": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced downwards by the action of the digastric muscle.",
+      "prompt_en": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced",
+      "evidence_quotes": [
+        "unfavourable fracture of the body of the mandible, you would expect the",
+        "anterior fragment to be displaced downwards by the action of the digastric muscle."
+      ],
+      "reason": "No existing catalog relation captures a medical condition-to-biomechanical-consequence mapping. Proposed new relation condition_to_expected_effect (direction: condition -> expected effect) precisely captures the fact that a specified fracture pattern causes a specific fragment to move in a specific direction due to a named muscle. The existing answer 'downwards by the action of the digastric muscle' is a literal substring of source_answer and is kept unchanged. Prompt_en omits the answer string.",
+      "english": {
+        "subject": "unfavourable fracture of the body of the mandible",
+        "relation_definition": "Expected physical or biomechanical consequence of a specified medical condition or injury, retaining the affected structure, direction of displacement, and causative mechanism as stated in the source.",
+        "answer": "downwards by the action of the digastric muscle",
+        "canonical_fact": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced downwards by the action of the digastric muscle.",
+        "direction": "condition -> expected effect",
+        "relation_id": "condition_to_expected_effect",
+        "prompt_en": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced",
+        "answer_aliases_en": [
+          "downwards by the action of the digastric muscle",
+          "anterior fragment to be displaced downwards by the action of the digastric muscle."
+        ],
+        "relation_spec": {
+          "id": "condition_to_expected_effect",
+          "definition": "Expected physical or biomechanical consequence of a specified medical condition or injury, retaining the affected structure, direction of displacement, and causative mechanism as stated in the source.",
+          "direction": "condition -> expected effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c7a5cb41eb92bb03717c3c101a88734f6baa7ac7db662c189005c2d0fa03cb33",
+      "input_sha256": "d0bb69a82ebb296f490d7b64e68714baa7125928fb48a9dbd3575afacb54c957",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_002fca7ca48b5daf5d25",
+      "input_sha256": "972be6ceee4f0fb7f48dbb7bb68d9c79e8c69b657ebc7269dea540aa3bc79e07",
+      "english": {
+        "subject": "brainstem",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "hindbrain and midbrain",
+        "canonical_fact": "The brainstem is comprised of the hindbrain and midbrain.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "prompt_en": "The brainstem is comprised of the",
+        "answer_aliases_en": [
+          "hindbrain and midbrain",
+          "hindbrain and midbrain."
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "431117b44199c74ac4923b38407e102a3b0a8313d46edcc1128eae928bb832df",
+      "translation": {
+        "record_id": "public:pbf_002fca7ca48b5daf5d25",
+        "subject_zh": "脑干",
+        "prompt_zh": "脑干由",
+        "canonical_fact_zh": "脑干由后脑和中脑组成。",
+        "answer_zh": "后脑和中脑",
+        "answer_aliases_zh": [
+          "后脑和中脑",
+          "后脑和中脑。"
+        ]
+      },
+      "translation_sha256": "9e42ea58f21b32749589ebc28e998b9d3dbc567e4e371559a9ebb78ab4d8098f"
+    },
+    {
+      "record_id": "public:pbf_003429974236e60a974c",
+      "input_sha256": "d0bb69a82ebb296f490d7b64e68714baa7125928fb48a9dbd3575afacb54c957",
+      "english": {
+        "subject": "unfavourable fracture of the body of the mandible",
+        "relation_definition": "Expected physical or biomechanical consequence of a specified medical condition or injury, retaining the affected structure, direction of displacement, and causative mechanism as stated in the source.",
+        "answer": "downwards by the action of the digastric muscle",
+        "canonical_fact": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced downwards by the action of the digastric muscle.",
+        "direction": "condition -> expected effect",
+        "relation_id": "condition_to_expected_effect",
+        "prompt_en": "In an unfavourable fracture of the body of the mandible, the anterior fragment is expected to be displaced",
+        "answer_aliases_en": [
+          "downwards by the action of the digastric muscle",
+          "anterior fragment to be displaced downwards by the action of the digastric muscle."
+        ],
+        "relation_spec": {
+          "id": "condition_to_expected_effect",
+          "definition": "Expected physical or biomechanical consequence of a specified medical condition or injury, retaining the affected structure, direction of displacement, and causative mechanism as stated in the source.",
+          "direction": "condition -> expected effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c7a5cb41eb92bb03717c3c101a88734f6baa7ac7db662c189005c2d0fa03cb33",
+      "translation": {
+        "record_id": "public:pbf_003429974236e60a974c",
+        "subject_zh": "下颌骨体不利性骨折",
+        "prompt_zh": "在下颌骨体不利性骨折中，前段骨片预期移位",
+        "canonical_fact_zh": "在下颌骨体不利性骨折中，前段骨片预期因二腹肌的牵拉而向下移位。",
+        "answer_zh": "向下，由二腹肌的牵拉所致",
+        "answer_aliases_zh": [
+          "向下，由二腹肌的牵拉所致",
+          "前段骨片向下移位，由二腹肌的牵拉所致。"
+        ]
+      },
+      "translation_sha256": "896959124a2b2fcb4601635cd545944dfe01995315f11e4290bf44d962017222"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_002fca7ca48b5daf5d25",
+        "public:pbf_003429974236e60a974c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5be651724e712ddafb9afe60654df77e0dabdb9bdea897072c93985521076983",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3093,
+        "prompt_tokens": 1736,
+        "total_tokens": 4829,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2496,
+          "text_tokens": 597
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "04c822f7ee76debfaec127e5f1afdaf51656fad07c38dc2f942e82621eced7c8",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 59.053,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_002fca7ca48b5daf5d25",
+        "public:pbf_003429974236e60a974c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b2707267e4f880ab0cf1c2f8c1e881a651c12cd47c52728b5077ed9c0fa8e159",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2288,
+        "prompt_tokens": 1753,
+        "total_tokens": 4041,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1714,
+          "text_tokens": 574
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6c662fb9fc826d240689ffa7bf144c251d856df1a112893170544baccfc03ffe",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 49.11,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_002fca7ca48b5daf5d25",
+        "public:pbf_003429974236e60a974c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2790f4339dafa9a8797140bdcf2b88037025d50c3cfd24fee92b49c29e24e0b6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2844,
+        "prompt_tokens": 1755,
+        "total_tokens": 4599,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2221,
+          "text_tokens": 623
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1d6af1b5b439d929b41ba367472be736e6e97fd6e60343e808cc5c5be08a57a9",
+      "status": "completed",
+      "latency_seconds": 44.775
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_002fca7ca48b5daf5d25",
+        "public:pbf_003429974236e60a974c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d0becf674462137ecf1d7e6d26b592e6389ee39f4e60c30730977a171db22ec",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2636,
+        "prompt_tokens": 935,
+        "total_tokens": 3571,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2348,
+          "text_tokens": 288
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cc4d14b6c0e3f7ea08465b57ad5a1356bf9c8d76a445b5af93348b812003c8d4",
+      "status": "completed",
+      "latency_seconds": 99.386
+    }
+  ],
+  "status": "completed"
+}

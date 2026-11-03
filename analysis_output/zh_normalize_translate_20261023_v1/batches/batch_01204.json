@@ -1,0 +1,215 @@
+{
+  "input_sha256": "1bfaaae68dc37916712bc8a09f2107770c712462c7ff5c5f3c1763f771966a2b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_707a5ada8c1902933f8b",
+      "decision": "ready",
+      "subject": "expressive harm",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "a causal consequence of hate speech",
+      "canonical_fact": "According to Altman, expressive harm is a causal consequence of hate speech.",
+      "prompt_en": "According to Altman, expressive harm is",
+      "evidence_quotes": [
+        "According to Altman, expressive harm is",
+        "a causal consequence of hate speech."
+      ],
+      "reason": "The source explicitly attributes a characterization of the term 'expressive harm' to Altman. The term_to_definition relation fits because it captures a named-sense definition of an explicit term, with 'According to Altman' serving as the scope qualifier. The answer is copied verbatim from source_answer (minus trailing period for the answer field, retained in evidence quote). No conflict with existing extraction.",
+      "english": {
+        "answer": "a causal consequence of hate speech",
+        "relation_id": "term_to_definition",
+        "prompt_en": "According to Altman, expressive harm is",
+        "direction": "term -> definition",
+        "subject": "expressive harm",
+        "canonical_fact": "According to Altman, expressive harm is a causal consequence of hate speech.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "a causal consequence of hate speech",
+          "a causal consequence of hate speech."
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ae0a827a79a2ddeee6e8e254814d76c66daf972b009599f9fb3fcc233dbc2b29",
+      "input_sha256": "559e3c9b90facf5170a08e2c1648b4bf5e896efc1f652ff0c63c1a2612b5ba2e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_70892622ef950a77d851",
+      "decision": "ready",
+      "subject": "Stephen Curry",
+      "relation_id": "athlete_to_college_team",
+      "relation_definition": "The college-level team for which a specified athlete played in a named sport; retain sport and level qualifiers.",
+      "direction": "athlete -> college team",
+      "answer": "Davidson Wildcats men's basketball",
+      "canonical_fact": "Stephen Curry played for the Davidson Wildcats men's basketball team in college.",
+      "prompt_en": "Who did Stephen Curry play for in college?",
+      "evidence_quotes": [
+        "who did stephen curry play for in college",
+        "Davidson Wildcats men's basketball"
+      ],
+      "reason": "No catalog relation covers an athlete's college-team affiliation. Proposed precise new relation 'athlete_to_college_team' (athlete -> college team) to avoid forcing a broad category such as entity_to_class or part_to_whole. Source clearly states the team; answer copied as literal substring from source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "Davidson Wildcats men's basketball",
+        "relation_id": "athlete_to_college_team",
+        "prompt_en": "Who did Stephen Curry play for in college?",
+        "direction": "athlete -> college team",
+        "subject": "Stephen Curry",
+        "canonical_fact": "Stephen Curry played for the Davidson Wildcats men's basketball team in college.",
+        "relation_definition": "The college-level team for which a specified athlete played in a named sport; retain sport and level qualifiers.",
+        "answer_aliases_en": [
+          "Davidson Wildcats men's basketball",
+          "Davidson basketball",
+          "Davidson College Basketball Team",
+          "Davidson College men's basketball",
+          "Davidson College basketball",
+          "Davidson men's basketball",
+          "Davidson Wildcats basketball"
+        ],
+        "relation_spec": {
+          "id": "athlete_to_college_team",
+          "definition": "The college-level team for which a specified athlete played in a named sport; retain sport and level qualifiers.",
+          "direction": "athlete -> college team"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "82fe2eb11949193a4c3ab12cc43b15c68cf70778ef7953db1ad8a4d606e9900f",
+      "input_sha256": "d0213995c55c386b74f38c1cda1f535db7886014c9e2a85c6408f489d7ea98d3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c135ef1cc25a9251a1ffa8e34b6848abbc93bfe69e1e021113e6ee217a0d4958",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2357,
+      "first_chunk_seconds": 33.232,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2371,
+        "prompt_tokens": 1654,
+        "total_tokens": 4025,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1823,
+          "text_tokens": 548
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ace58002a7e1e583daa181580f8e1d025bc837495d86915d05693661601b156a",
+      "status": "completed",
+      "latency_seconds": 54.172
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.935
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.951
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.964
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 37.582
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 74.693
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_707a5ada8c1902933f8b",
+        "public:pbf_70892622ef950a77d851"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "13119d4ad35cb1db2c3e303b273392c9226835c53c62a5c0e6788d6f4905b1cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.022
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01204.json",
+      "sha256": "2252a3162e8a69ff66c26b537a5d8a7e2e4284bb46db9ccb3f1510e9cec6fd68",
+      "previous_status": "failed"
+    }
+  ]
+}

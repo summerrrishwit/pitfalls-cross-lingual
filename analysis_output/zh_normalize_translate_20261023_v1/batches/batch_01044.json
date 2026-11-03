@@ -1,0 +1,220 @@
+{
+  "input_sha256": "065e6ddad265e9bdee64664c3ec814747ff4fe606b2e0128aaf5570d3865aa99",
+  "normalized": [
+    {
+      "record_id": "public:pbf_54f45d3d367b49183991",
+      "decision": "ready",
+      "subject": "speed of sound at sea level",
+      "relation_id": "quantity_to_value",
+      "relation_definition": "Numerical value (with unit) of a specified physical quantity under explicitly stated conditions (e.g., pressure, location, temperature).",
+      "direction": "physical quantity at specified conditions -> value with unit",
+      "answer": "344.0 meters per second",
+      "canonical_fact": "The speed of sound at sea level is 344.0 meters per second.",
+      "prompt_en": "What is the speed of sound at sea level?",
+      "evidence_quotes": [
+        "what's the speed of sound at sea level",
+        "344.0 meters per second"
+      ],
+      "reason": "Source question and answer directly state the value. No catalog relation covers 'physical quantity under stated conditions -> numerical value,' so a new precise relation 'quantity_to_value' is proposed. The answer is a verbatim substring of source_answer. Prompt is option-free and does not contain the answer string.",
+      "english": {
+        "answer": "344.0 meters per second",
+        "relation_id": "quantity_to_value",
+        "prompt_en": "What is the speed of sound at sea level?",
+        "direction": "physical quantity at specified conditions -> value with unit",
+        "subject": "speed of sound at sea level",
+        "canonical_fact": "The speed of sound at sea level is 344.0 meters per second.",
+        "relation_definition": "Numerical value (with unit) of a specified physical quantity under explicitly stated conditions (e.g., pressure, location, temperature).",
+        "answer_aliases_en": [
+          "344.0 meters per second",
+          "344 meters per second"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_value",
+          "definition": "Numerical value (with unit) of a specified physical quantity under explicitly stated conditions (e.g., pressure, location, temperature).",
+          "direction": "physical quantity at specified conditions -> value with unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "afd850b8e17faae1a53377dc8f77a7d35032a32a13b83744c54f616b00d0b73a",
+      "input_sha256": "5e19feba4caef3c2cba97a827a22a7bd71af3e0a9cf3b682fe5c546e85cfcc08",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_550b59787d2e644f524e",
+      "decision": "ready",
+      "subject": "GDP Deflator",
+      "relation_id": "term_to_distinguishing_property",
+      "relation_definition": "A property of a term that specifically distinguishes it from a named related/compared term, as stated in the source.",
+      "direction": "term (with implicit contrast) -> distinguishing property",
+      "answer": "current year quantities",
+      "canonical_fact": "The GDP Deflator incorporates current year quantities in its calculations.",
+      "prompt_en": "How does the GDP Deflator differ from the CPI in terms of the quantities it uses in its calculations?",
+      "evidence_quotes": [
+        "The GDP Deflator differs from the CPI in that the GDP Deflator",
+        "incorporates current year quantities in its calculations"
+      ],
+      "reason": "The source explicitly contrasts GDP Deflator with CPI and states the distinguishing property. The existing answer 'current year quantities' is a literal substring of source_answer and does not conflict, so it is kept. No catalog relation precisely captures 'term -> property distinguishing it from a related term,' so a new relation 'term_to_distinguishing_property' is proposed. Prompt avoids embedding the answer string.",
+      "english": {
+        "answer": "current year quantities",
+        "relation_id": "term_to_distinguishing_property",
+        "prompt_en": "How does the GDP Deflator differ from the CPI in terms of the quantities it uses in its calculations?",
+        "direction": "term (with implicit contrast) -> distinguishing property",
+        "subject": "GDP Deflator",
+        "canonical_fact": "The GDP Deflator incorporates current year quantities in its calculations.",
+        "relation_definition": "A property of a term that specifically distinguishes it from a named related/compared term, as stated in the source.",
+        "answer_aliases_en": [
+          "current year quantities",
+          "incorporates current year quantities in its calculations"
+        ],
+        "relation_spec": {
+          "id": "term_to_distinguishing_property",
+          "definition": "A property of a term that specifically distinguishes it from a named related/compared term, as stated in the source.",
+          "direction": "term (with implicit contrast) -> distinguishing property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "01c5de083946749f560a3526009227d3f772c7305686f2966359133b9974685f",
+      "input_sha256": "1690cff3c347b487af220b6d5af5c597cf0a29fc0604a70253e98f9cdd6e34f7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_54f45d3d367b49183991",
+      "input_sha256": "5e19feba4caef3c2cba97a827a22a7bd71af3e0a9cf3b682fe5c546e85cfcc08",
+      "english": {
+        "answer": "344.0 meters per second",
+        "relation_id": "quantity_to_value",
+        "prompt_en": "What is the speed of sound at sea level?",
+        "direction": "physical quantity at specified conditions -> value with unit",
+        "subject": "speed of sound at sea level",
+        "canonical_fact": "The speed of sound at sea level is 344.0 meters per second.",
+        "relation_definition": "Numerical value (with unit) of a specified physical quantity under explicitly stated conditions (e.g., pressure, location, temperature).",
+        "answer_aliases_en": [
+          "344.0 meters per second",
+          "344 meters per second"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_value",
+          "definition": "Numerical value (with unit) of a specified physical quantity under explicitly stated conditions (e.g., pressure, location, temperature).",
+          "direction": "physical quantity at specified conditions -> value with unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "afd850b8e17faae1a53377dc8f77a7d35032a32a13b83744c54f616b00d0b73a",
+      "translation": {
+        "record_id": "public:pbf_54f45d3d367b49183991",
+        "subject_zh": "海平面的声速",
+        "prompt_zh": "海平面处的声速是多少？",
+        "canonical_fact_zh": "海平面处的声速为每秒344.0米。",
+        "answer_zh": "每秒344.0米",
+        "answer_aliases_zh": [
+          "每秒344.0米",
+          "每秒344米"
+        ]
+      },
+      "translation_sha256": "345fec4fa07f6582fab19bf9c59388cc0ff9c96419f7d617234335c1235664d7"
+    },
+    {
+      "record_id": "public:pbf_550b59787d2e644f524e",
+      "input_sha256": "1690cff3c347b487af220b6d5af5c597cf0a29fc0604a70253e98f9cdd6e34f7",
+      "english": {
+        "answer": "current year quantities",
+        "relation_id": "term_to_distinguishing_property",
+        "prompt_en": "How does the GDP Deflator differ from the CPI in terms of the quantities it uses in its calculations?",
+        "direction": "term (with implicit contrast) -> distinguishing property",
+        "subject": "GDP Deflator",
+        "canonical_fact": "The GDP Deflator incorporates current year quantities in its calculations.",
+        "relation_definition": "A property of a term that specifically distinguishes it from a named related/compared term, as stated in the source.",
+        "answer_aliases_en": [
+          "current year quantities",
+          "incorporates current year quantities in its calculations"
+        ],
+        "relation_spec": {
+          "id": "term_to_distinguishing_property",
+          "definition": "A property of a term that specifically distinguishes it from a named related/compared term, as stated in the source.",
+          "direction": "term (with implicit contrast) -> distinguishing property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "01c5de083946749f560a3526009227d3f772c7305686f2966359133b9974685f",
+      "translation": {
+        "record_id": "public:pbf_550b59787d2e644f524e",
+        "subject_zh": "GDP平减指数",
+        "prompt_zh": "GDP平减指数在计算中使用的数量方面与CPI有何不同？",
+        "canonical_fact_zh": "GDP平减指数在计算中纳入了当年数量。",
+        "answer_zh": "当年数量",
+        "answer_aliases_zh": [
+          "当年数量",
+          "在计算中纳入当年数量"
+        ]
+      },
+      "translation_sha256": "340147b3b8a20b1ad4355d68358f48a7d5f4fb9b8211b8cf923616103b96c6d7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_54f45d3d367b49183991",
+        "public:pbf_550b59787d2e644f524e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "256702bc898d43352d93273fa427cf7645822cd03229419f22b57ab1d0ef264c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2908,
+      "first_chunk_seconds": 2.679,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3050,
+        "prompt_tokens": 1653,
+        "total_tokens": 4703,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2457,
+          "text_tokens": 593
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1396312d3c8f45f9067774f7fafdfe202c15e454bca0ce7900b4bb602bfade83",
+      "status": "completed",
+      "latency_seconds": 55.777
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_54f45d3d367b49183991",
+        "public:pbf_550b59787d2e644f524e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0b4ea8ac13803fe60b14d20e0d0a2cb0db2babdc9c52d212465e1ef49c3b3494",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1406,
+      "first_chunk_seconds": 23.604,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1429,
+        "prompt_tokens": 945,
+        "total_tokens": 2374,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1136,
+          "text_tokens": 293
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c7234d5ea82e8952c79c4d0c10ecda71441790c7073e89c6194bd19264e502a0",
+      "status": "completed",
+      "latency_seconds": 41.313
+    }
+  ],
+  "status": "completed"
+}

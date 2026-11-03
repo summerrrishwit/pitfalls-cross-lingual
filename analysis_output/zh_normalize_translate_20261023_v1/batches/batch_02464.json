@@ -1,0 +1,157 @@
+{
+  "input_sha256": "98a648f7d0ef0780ed050453f646e3f34c13905aa5bb897a576208590ca28624",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000856",
+      "decision": "reject",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact 'the sun sets in the west' is a trivial, universally known physical observation (apparent diurnal motion) rather than a structured entity-attribute knowledge. No catalog relation (entity_to_containing_location, organism_to_habitat, entity_to_class, etc.) captures a cardinal-direction-of-observed-phenomenon link, and forcing a new relation for a single commonsense physical fact would be overly narrow and not reusable. The Qwen-3.8-Max annotation correctly flags this as a 'typical_action_or_location' not suitable for extraction.",
+      "input_sha256": "7742388cee6c3df32a92dfe4033d0489d686c8c0abaa3b2c9d968fa777093f8a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000862",
+      "decision": "ready",
+      "subject": "a person who has one of every kind of a thing",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "complete collection",
+      "canonical_fact": "A person who has one of every kind of a thing has a complete collection.",
+      "prompt_en": "What term describes a person who has one of every kind of a thing?",
+      "evidence_quotes": [
+        "one of every kind of a thing",
+        "complete collection"
+      ],
+      "reason": "The source question supplies a defining description ('one of every kind of a thing') and asks for the corresponding term. The catalog relation description_to_term (direction: description -> term) fits exactly: the subject is the identifying description and the answer is the conventional term 'complete collection'. The existing canonical_fact is retained as-is since it is consistent with the source answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "complete collection",
+        "canonical_fact": "A person who has one of every kind of a thing has a complete collection.",
+        "subject": "a person who has one of every kind of a thing",
+        "prompt_en": "What term describes a person who has one of every kind of a thing?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "complete collection"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5ebb7e82a5c9603accf1835c1b08e2131633e055bc6c98cd5e3a89b1d8e2dd1f",
+      "input_sha256": "40b31e03f0ed0c40132c21a3006b01816eb12ab6ea5f66e2c29f6e2cfe28cfaa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000862",
+      "input_sha256": "40b31e03f0ed0c40132c21a3006b01816eb12ab6ea5f66e2c29f6e2cfe28cfaa",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "complete collection",
+        "canonical_fact": "A person who has one of every kind of a thing has a complete collection.",
+        "subject": "a person who has one of every kind of a thing",
+        "prompt_en": "What term describes a person who has one of every kind of a thing?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "complete collection"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5ebb7e82a5c9603accf1835c1b08e2131633e055bc6c98cd5e3a89b1d8e2dd1f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000862",
+        "subject_zh": "拥有每一种事物各一件的人",
+        "prompt_zh": "用什么术语来描述拥有每一种事物各一件的人？",
+        "canonical_fact_zh": "拥有每一种事物各一件的人拥有一个完整收藏。",
+        "answer_zh": "完整收藏",
+        "answer_aliases_zh": [
+          "完整收藏"
+        ]
+      },
+      "translation_sha256": "709c933b767dd63ad5f8c70a6f054cb8ec19dcf97d271d8897b00ad94c901211"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000856",
+        "historical:raw_commonsense_qa_000862"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "80bff9ef7bb46b339704f5a4db390aec6a06cd58c44c4d71fb2807b0b3b876cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2174,
+      "first_chunk_seconds": 32.805,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2362,
+        "prompt_tokens": 1660,
+        "total_tokens": 4022,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1868,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "96d86eacf9d39ba07b52d6cf59269133dcf39e2565cef168bea8b305536bdf62",
+      "status": "completed",
+      "latency_seconds": 65.422
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000862"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c3b91f787b122cc570c6cad0c5d2db3f6eac7c7bae35e46fe4dd36fe682135c0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 751,
+      "first_chunk_seconds": 19.206,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 789,
+        "prompt_tokens": 526,
+        "total_tokens": 1315,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 707,
+          "text_tokens": 82
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a63b24afe1e05ec2b5a75839e9aa11dee0c0657e7d34f7c975e6c74941fac55",
+      "status": "completed",
+      "latency_seconds": 28.802
+    }
+  ],
+  "status": "completed"
+}

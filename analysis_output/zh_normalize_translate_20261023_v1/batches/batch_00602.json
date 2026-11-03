@@ -1,0 +1,181 @@
+{
+  "input_sha256": "b237e1ea4e6ded979f2fc6f5b4147120732766d4da400569076b63f2e83d5021",
+  "normalized": [
+    {
+      "record_id": "public:pbf_095154a95beb41c82e92",
+      "decision": "ready",
+      "subject": "Sukarno",
+      "relation_id": "person_to_stance_period",
+      "relation_definition": "The historical period during which a specified political figure attempted or maintained a particular diplomatic/political stance (e.g., neutrality); preserve qualifiers indicating degree of success or completeness.",
+      "direction": "person -> historical period",
+      "answer": "the Cold War",
+      "canonical_fact": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during the Cold War.",
+      "prompt_en": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during",
+      "evidence_quotes": [
+        "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during",
+        "the Cold War."
+      ],
+      "reason": "No catalog relation covers a person-to-historical-period political-stance fact. Proposed new relation person_to_stance_period with explicit direction person -> historical period. Qualifier 'attempted, but did not completely succeed' preserved in canonical_fact per source.",
+      "english": {
+        "subject": "Sukarno",
+        "relation_definition": "The historical period during which a specified political figure attempted or maintained a particular diplomatic/political stance (e.g., neutrality); preserve qualifiers indicating degree of success or completeness.",
+        "answer": "the Cold War",
+        "canonical_fact": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during the Cold War.",
+        "direction": "person -> historical period",
+        "relation_id": "person_to_stance_period",
+        "prompt_en": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during",
+        "answer_aliases_en": [
+          "the Cold War",
+          "the Cold War."
+        ],
+        "relation_spec": {
+          "id": "person_to_stance_period",
+          "definition": "The historical period during which a specified political figure attempted or maintained a particular diplomatic/political stance (e.g., neutrality); preserve qualifiers indicating degree of success or completeness.",
+          "direction": "person -> historical period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6d92a7777340a026bb01fd3e257b2f3272f55e4ebe0fdeedc26fd797a76253a9",
+      "input_sha256": "afee4f80db92849c69952be728212753a8b579703a0ceaea533ec73b9addd107",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0977cbf96a9b53314592",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Deferred: the required prompt_en ('Clocks on a fast-moving spaceship whizzing past Earth appear to run slow when viewed from') literally contains the answer string 'Earth', violating the constraint that prompt_en 'does not contain its answer.' No catalog relation fits this physics observation-to-reference-frame fact, and the source question structure makes the answer inseparable from the prompt without altering the original wording.",
+      "input_sha256": "73115c5a405af5fc88d3f3d78d7bcb954f66ab091c1caecd7b95a11e990164d2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_095154a95beb41c82e92",
+      "input_sha256": "afee4f80db92849c69952be728212753a8b579703a0ceaea533ec73b9addd107",
+      "english": {
+        "subject": "Sukarno",
+        "relation_definition": "The historical period during which a specified political figure attempted or maintained a particular diplomatic/political stance (e.g., neutrality); preserve qualifiers indicating degree of success or completeness.",
+        "answer": "the Cold War",
+        "canonical_fact": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during the Cold War.",
+        "direction": "person -> historical period",
+        "relation_id": "person_to_stance_period",
+        "prompt_en": "Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during",
+        "answer_aliases_en": [
+          "the Cold War",
+          "the Cold War."
+        ],
+        "relation_spec": {
+          "id": "person_to_stance_period",
+          "definition": "The historical period during which a specified political figure attempted or maintained a particular diplomatic/political stance (e.g., neutrality); preserve qualifiers indicating degree of success or completeness.",
+          "direction": "person -> historical period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6d92a7777340a026bb01fd3e257b2f3272f55e4ebe0fdeedc26fd797a76253a9",
+      "translation": {
+        "record_id": "public:pbf_095154a95beb41c82e92",
+        "subject_zh": "苏加诺",
+        "prompt_zh": "苏加诺曾试图在……期间保持中立立场，但并未完全成功。",
+        "canonical_fact_zh": "苏加诺曾试图在冷战期间保持中立立场，但并未完全成功。",
+        "answer_zh": "冷战",
+        "answer_aliases_zh": [
+          "冷战",
+          "冷战。"
+        ]
+      },
+      "translation_sha256": "5b8e3b939cdd68a3254ee8a5739f5f93c79f7f4678827acdfdd7237cf5ac9c29"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_095154a95beb41c82e92",
+        "public:pbf_0977cbf96a9b53314592"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d022abcd8ffca6b3ce30a850c1ee6c77c8abe3c3ee96bb7b5568ac288afb0adb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 31.927
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_095154a95beb41c82e92",
+        "public:pbf_0977cbf96a9b53314592"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d022abcd8ffca6b3ce30a850c1ee6c77c8abe3c3ee96bb7b5568ac288afb0adb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4444,
+        "prompt_tokens": 1805,
+        "total_tokens": 6249,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3964,
+          "text_tokens": 480
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e065f2f7186d8469737abbb23c8d64b92241f00cd6e686c1a88570846994e276",
+      "status": "completed",
+      "latency_seconds": 124.666
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_095154a95beb41c82e92"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d7ebdc7a7ad4197de2c7e304488d182f3c8c384b3f0bfcea6451e9d28fa135f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 35.631
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_095154a95beb41c82e92"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d7ebdc7a7ad4197de2c7e304488d182f3c8c384b3f0bfcea6451e9d28fa135f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1877,
+        "prompt_tokens": 572,
+        "total_tokens": 2449,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1738,
+          "text_tokens": 139
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "67d746ac14b7f2431d26cd74d7ad93877129172ca43ae8a8c433210a6c34348d",
+      "status": "completed",
+      "latency_seconds": 68.69
+    }
+  ],
+  "status": "completed"
+}

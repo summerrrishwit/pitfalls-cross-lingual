@@ -1,0 +1,129 @@
+{
+  "input_sha256": "ac28d840f1b04e7c9abebd1fb33644190f4efaf181bc5da5922d86a08a5b7eb2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000648",
+      "decision": "ready",
+      "subject": "theory stating that there is no interaction between individual gas particles",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "kinetic theory",
+      "canonical_fact": "The kinetic theory states that there is no interaction between individual gas particles.",
+      "prompt_en": "What theory states that there is no interaction between individual gas particles?",
+      "evidence_quotes": [
+        "no interaction between individual gas particles",
+        "kinetic theory"
+      ],
+      "reason": "The source question supplies a defining description (no interaction between individual gas particles) and asks for the conventional term. The source answer 'kinetic theory' is the uniquely fitting term, matching description_to_term exactly. No conflict with source.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "theory stating that there is no interaction between individual gas particles",
+        "relation_id": "description_to_term",
+        "prompt_en": "What theory states that there is no interaction between individual gas particles?",
+        "answer": "kinetic theory",
+        "canonical_fact": "The kinetic theory states that there is no interaction between individual gas particles.",
+        "answer_aliases_en": [
+          "kinetic theory"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "926cea375e2c231765273b342dd3c4544542744708b37b5ca199ed8973e92e4f",
+      "input_sha256": "83ae56a32d719902c122e2d9dd6903563e1bb24ee728aaa2371d02a6daee85ad",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000649",
+      "decision": "ready",
+      "subject": "rock layer at the bottom of an aquifer",
+      "relation_id": "entity_to_property",
+      "relation_definition": "A stated property or attribute of a specified entity at the granularity asked; retains scope qualifiers.",
+      "direction": "entity -> property",
+      "answer": "impermeable",
+      "canonical_fact": "The rock layer at the bottom of an aquifer is impermeable.",
+      "prompt_en": "What kind of rock layer makes up the bottom of an aquifer?",
+      "evidence_quotes": [
+        "What kind of rock layer makes up the bottom of an aquifer?",
+        "impermeable"
+      ],
+      "reason": "The source asks for the attribute of the rock layer at the bottom of an aquifer; the answer 'impermeable' is a property/attribute. No existing catalog relation covers a property/attribute link (entity_to_class is taxonomy-level membership, entity_to_material is composition). A new relation entity_to_property is proposed with explicit definition and direction.",
+      "english": {
+        "relation_definition": "A stated property or attribute of a specified entity at the granularity asked; retains scope qualifiers.",
+        "direction": "entity -> property",
+        "subject": "rock layer at the bottom of an aquifer",
+        "relation_id": "entity_to_property",
+        "prompt_en": "What kind of rock layer makes up the bottom of an aquifer?",
+        "answer": "impermeable",
+        "canonical_fact": "The rock layer at the bottom of an aquifer is impermeable.",
+        "answer_aliases_en": [
+          "impermeable"
+        ],
+        "relation_spec": {
+          "id": "entity_to_property",
+          "definition": "A stated property or attribute of a specified entity at the granularity asked; retains scope qualifiers.",
+          "direction": "entity -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f34b1035350f8d864eb865973646dc39eec14541aaf96c673deca18d07cbcfde",
+      "input_sha256": "d8b3a3a7f31ec498b6d1fddb4a1da1d4708a0f6c0814c659d3488667cbf6f4ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000648",
+        "historical:raw_sciq_000649"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1482db58a21782c2bb9c637196054312d8e494cf2034be7eb8ca4dbda2b21143",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2291,
+      "first_chunk_seconds": 1.025,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2345,
+        "prompt_tokens": 1720,
+        "total_tokens": 4065,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1839,
+          "text_tokens": 506
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9be4993b6442ada98104f5428558973023dae849154a27380c32b81f04b75a77",
+      "status": "completed",
+      "latency_seconds": 112.839
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000648",
+        "historical:raw_sciq_000649"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f2ab55ecdcd80bc8f31de2ff3ad566badd7494cf9e162a405ea0cd1b4794335c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 175.008
+    }
+  ],
+  "status": "failed"
+}

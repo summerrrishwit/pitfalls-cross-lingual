@@ -1,0 +1,131 @@
+{
+  "input_sha256": "21113bbba7b32284fae42a90a5e91c0161c4454a5c720e225924c73e6cc9cd06",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000979",
+      "decision": "ready",
+      "subject": "skyscrapers on the east coast of the U.S.",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "new york city",
+      "canonical_fact": "Some of the most famous skyscrapers on the east coast of the U.S. are located in New York City.",
+      "prompt_en": "Where on the east coast of the U.S. would you find some of the most famous skyscrapers?",
+      "evidence_quotes": [
+        "new york city"
+      ],
+      "reason": "The source question asks for a geographic location on the U.S. east coast associated with famous skyscrapers, and the source answer 'new york city' is the well-known city containing prominent skyscrapers. entity_to_containing_location fits: the skyscrapers (entity) are geographically contained in New York City (containing location). No date, version, or market disambiguation is needed.",
+      "english": {
+        "prompt_en": "Where on the east coast of the U.S. would you find some of the most famous skyscrapers?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer": "new york city",
+        "canonical_fact": "Some of the most famous skyscrapers on the east coast of the U.S. are located in New York City.",
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "subject": "skyscrapers on the east coast of the U.S.",
+        "answer_aliases_en": [
+          "new york city"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7776c2db6533164b27b9a7978f6b6bee4df7b952771d6f22fa277f8f6026fad3",
+      "input_sha256": "e2c5796f6f2d8ff470b7b7c1d6efaf7173ec6b22ed720d3dd5106d494b6bcd78",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001004",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question asks what a person builds up during vigorous exercise (answer: 'thirst'), which is a physiological cause-effect relationship (activity → bodily response). No catalog relation captures 'physiological result of an activity'; forcing entity_to_class, organism_to_habitat, or other listed relations would misrepresent the semantics. Deferred pending a suitable activity-to-effect relation.",
+      "input_sha256": "20c58d53702dcd36c1219e4da33824ceebba8045adda15e5640b48f2a85c8efd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000979",
+        "historical:raw_commonsense_qa_001004"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "170061dcde3d1c4535254c07a7b4750f90f5fdf9b6a259c64a7ca1b727740c95",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2207,
+      "first_chunk_seconds": 1.854,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2273,
+        "prompt_tokens": 1620,
+        "total_tokens": 3893,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1802,
+          "text_tokens": 471
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d205c5695aa59c981d4072bf84c56b61abecd7c70532b76d70291fdc9a318119",
+      "status": "completed",
+      "latency_seconds": 79.493
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000979"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "996ceb595fac009bbccd2e7304773728bc38c9fd6245cea18fd559c5c2b83950",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.015
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000979"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "996ceb595fac009bbccd2e7304773728bc38c9fd6245cea18fd559c5c2b83950",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.718
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000979"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "996ceb595fac009bbccd2e7304773728bc38c9fd6245cea18fd559c5c2b83950",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.392
+    }
+  ],
+  "status": "failed"
+}

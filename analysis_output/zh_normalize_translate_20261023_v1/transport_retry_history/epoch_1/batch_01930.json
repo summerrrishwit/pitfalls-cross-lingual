@@ -1,0 +1,158 @@
+{
+  "input_sha256": "a210f9ed0e826c5309d7e015dd957f6b27d75e1b693afb9368a13dd7a568409e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e3d898759c8e7293b63b",
+      "decision": "ready",
+      "subject": "Stephen Nathanson",
+      "relation_id": "person_to_argued_message",
+      "relation_definition": "A specific message or claim that a named person argues or advocates in a stated policy or philosophical context.",
+      "direction": "person -> argued message/claim",
+      "answer": "respect the dignity of human life",
+      "canonical_fact": "Stephen Nathanson argues that abolishing the death penalty sends the message that we respect the dignity of human life.",
+      "prompt_en": "Stephen Nathanson argues that abolishing the death penalty sends the message that we",
+      "evidence_quotes": [
+        "Nathanson argues we can send by abolishing the death penalty",
+        "we respect the dignity of human life."
+      ],
+      "reason": "The source explicitly attributes a specific message to Nathanson's argument about abolishing the death penalty. The existing answer 'respect the dignity of human life' is a literal substring of source_answer and does not conflict, so it is kept. No existing catalog relation captures a person's argued message or philosophical claim, so a new relation 'person_to_argued_message' is proposed with an explicit definition and direction.",
+      "english": {
+        "answer": "respect the dignity of human life",
+        "relation_id": "person_to_argued_message",
+        "prompt_en": "Stephen Nathanson argues that abolishing the death penalty sends the message that we",
+        "direction": "person -> argued message/claim",
+        "subject": "Stephen Nathanson",
+        "canonical_fact": "Stephen Nathanson argues that abolishing the death penalty sends the message that we respect the dignity of human life.",
+        "relation_definition": "A specific message or claim that a named person argues or advocates in a stated policy or philosophical context.",
+        "answer_aliases_en": [
+          "respect the dignity of human life",
+          "we respect the dignity of human life."
+        ],
+        "relation_spec": {
+          "id": "person_to_argued_message",
+          "definition": "A specific message or claim that a named person argues or advocates in a stated policy or philosophical context.",
+          "direction": "person -> argued message/claim"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "60676576f74213233874a0b48ab25d01b8f8a754122285cee434483c58201828",
+      "input_sha256": "5168446e4ce44d73e348dbc3cfc4803bbbba1989b2c9f5b79dc9c32a10cd85b4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e3e755a5929d32f3afdd",
+      "decision": "ready",
+      "subject": "insurance program for poor people of all ages",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Medicaid",
+      "canonical_fact": "The insurance program for poor people of all ages is called Medicaid.",
+      "prompt_en": "The insurance program for poor people of all ages is called",
+      "evidence_quotes": [
+        "The insurance program for poor people of all ages is called",
+        "Medicaid"
+      ],
+      "reason": "The source question supplies a uniquely qualifying description (insurance program, poor people, all ages) and the source answer names the entity 'Medicaid'. The catalog relation description_to_entity fits exactly: an identifying description pointing to a single named entity. The existing answer matches the source verbatim.",
+      "english": {
+        "answer": "Medicaid",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The insurance program for poor people of all ages is called",
+        "direction": "identifying description -> entity",
+        "subject": "insurance program for poor people of all ages",
+        "canonical_fact": "The insurance program for poor people of all ages is called Medicaid.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Medicaid"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "261efc80bfdaa679bb517acb5baae3364b19f65f61174dd5f3444b218558ee3d",
+      "input_sha256": "9fc02ddec49e90e1f180023ef49118c3010cce1629e5b784efaa8c3e321fbe83",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e3d898759c8e7293b63b",
+        "public:pbf_e3e755a5929d32f3afdd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "64d84a94523b3ed5e3f6a9a50cc76696155294b7e4ea7443f5681e47358ad185",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2253,
+      "first_chunk_seconds": 31.101,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2391,
+        "prompt_tokens": 1641,
+        "total_tokens": 4032,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1839,
+          "text_tokens": 552
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f1ec6b66bcc18816a735b3e563a7931ece2db983f16f22dca292e2968bac3155",
+      "status": "completed",
+      "latency_seconds": 60.093
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3d898759c8e7293b63b",
+        "public:pbf_e3e755a5929d32f3afdd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e1ff2adcf825eaf107483601ad3c2ab632d97df5f92b0b96dffda245476e776c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.148
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3d898759c8e7293b63b",
+        "public:pbf_e3e755a5929d32f3afdd"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e1ff2adcf825eaf107483601ad3c2ab632d97df5f92b0b96dffda245476e776c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.954
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3d898759c8e7293b63b",
+        "public:pbf_e3e755a5929d32f3afdd"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e1ff2adcf825eaf107483601ad3c2ab632d97df5f92b0b96dffda245476e776c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.272
+    }
+  ],
+  "status": "failed"
+}

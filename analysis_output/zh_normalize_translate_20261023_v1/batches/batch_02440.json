@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5b4bf9d92dbceeee333467e5bd6b07ab7377c448c4b27845fe2a31309040e119",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000061",
+      "decision": "ready",
+      "subject": "portable light source",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "flashlight",
+      "canonical_fact": "A portable light source is called a flashlight.",
+      "prompt_en": "What is a portable light source called?",
+      "evidence_quotes": [
+        "portable light source",
+        "flashlight"
+      ],
+      "reason": "The source question asks for the conventional term fitting the description 'portable light source'; the answer 'flashlight' is the term. This matches description_to_term (description -> term). The existing relation_raw 'term for definition' did not correspond to any catalog ID, but the semantics align exactly with description_to_term. Both model annotations agree on the extraction. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "flashlight",
+        "canonical_fact": "A portable light source is called a flashlight.",
+        "subject": "portable light source",
+        "prompt_en": "What is a portable light source called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "flashlight"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4d6b9bb1c45de259a49b4764eda077c32db71060ca0a5752ee1c6fdb331af04e",
+      "input_sha256": "1f16c5d07c5bb8d9e8b05ce72978344db5fe227567d4c9bb560ceef1499d0121",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000063",
+      "decision": "ready",
+      "subject": "robot",
+      "relation_id": "entity_to_functional_requirement",
+      "relation_definition": "A necessary resource or condition without which a specified entity cannot perform its stated function; not an optional enhancement.",
+      "direction": "entity -> functional requirement",
+      "answer": "energy",
+      "canonical_fact": "A robot requires energy to be working.",
+      "prompt_en": "What does a robot need to be able to be working?",
+      "evidence_quotes": [
+        "robot",
+        "energy"
+      ],
+      "reason": "No catalog relation captures 'entity requires X to function'. Proposed new ID entity_to_functional_requirement with direction entity -> functional requirement. The source question explicitly asks what a robot needs to be working; the answer is 'energy'. Both model annotations extracted this. The prompt is option-free and does not contain the answer 'energy'.",
+      "english": {
+        "direction": "entity -> functional requirement",
+        "relation_id": "entity_to_functional_requirement",
+        "answer": "energy",
+        "canonical_fact": "A robot requires energy to be working.",
+        "subject": "robot",
+        "prompt_en": "What does a robot need to be able to be working?",
+        "relation_definition": "A necessary resource or condition without which a specified entity cannot perform its stated function; not an optional enhancement.",
+        "answer_aliases_en": [
+          "energy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_functional_requirement",
+          "definition": "A necessary resource or condition without which a specified entity cannot perform its stated function; not an optional enhancement.",
+          "direction": "entity -> functional requirement"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2c01799ebe0a3db45a3941a5976d471177739f7d9a2df40f22dfd84dd9809150",
+      "input_sha256": "7df107f84b884820c515021e714c4558d3be880848406fec563a0f51bd578f7b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000061",
+      "input_sha256": "1f16c5d07c5bb8d9e8b05ce72978344db5fe227567d4c9bb560ceef1499d0121",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "flashlight",
+        "canonical_fact": "A portable light source is called a flashlight.",
+        "subject": "portable light source",
+        "prompt_en": "What is a portable light source called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "flashlight"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4d6b9bb1c45de259a49b4764eda077c32db71060ca0a5752ee1c6fdb331af04e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000061",
+        "subject_zh": "便携式光源",
+        "prompt_zh": "便携式光源叫什么？",
+        "canonical_fact_zh": "便携式光源被称为手电筒。",
+        "answer_zh": "手电筒",
+        "answer_aliases_zh": [
+          "手电筒"
+        ]
+      },
+      "translation_sha256": "26f6a4d3d7422a89fc9268c2f3761f4136e5eb27c6a1f9f59275117febd4dd20"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000063",
+      "input_sha256": "7df107f84b884820c515021e714c4558d3be880848406fec563a0f51bd578f7b",
+      "english": {
+        "direction": "entity -> functional requirement",
+        "relation_id": "entity_to_functional_requirement",
+        "answer": "energy",
+        "canonical_fact": "A robot requires energy to be working.",
+        "subject": "robot",
+        "prompt_en": "What does a robot need to be able to be working?",
+        "relation_definition": "A necessary resource or condition without which a specified entity cannot perform its stated function; not an optional enhancement.",
+        "answer_aliases_en": [
+          "energy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_functional_requirement",
+          "definition": "A necessary resource or condition without which a specified entity cannot perform its stated function; not an optional enhancement.",
+          "direction": "entity -> functional requirement"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2c01799ebe0a3db45a3941a5976d471177739f7d9a2df40f22dfd84dd9809150",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000063",
+        "subject_zh": "机器人",
+        "prompt_zh": "机器人需要什么才能工作？",
+        "canonical_fact_zh": "机器人需要能量才能工作。",
+        "answer_zh": "能量",
+        "answer_aliases_zh": [
+          "能量"
+        ]
+      },
+      "translation_sha256": "b515c402dc8f4e6a07a929d763369cb887b50235328cd97a2590d978e2fe424c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000061",
+        "historical:raw_commonsense_qa_000063"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e255e7a0a9a2e918d7eb27f9b2fd1007244dffa9726566aa30cde134ff00fe9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1992,
+      "first_chunk_seconds": 31.187,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2055,
+        "prompt_tokens": 1632,
+        "total_tokens": 3687,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1682,
+          "text_tokens": 373
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "779e1d59c786c87a85ea591df790af6297b74c775e56d64158935bb472c8fecc",
+      "status": "completed",
+      "latency_seconds": 55.363
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000061",
+        "historical:raw_commonsense_qa_000063"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cd8a2e31e8a7a674d03b6c369893a2ec06067265ca4965198a8f308d243f82d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 744,
+      "first_chunk_seconds": 4.369,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 768,
+        "prompt_tokens": 812,
+        "total_tokens": 1580,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 576,
+          "text_tokens": 192
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b0bf366cf3267bd1345a2d20af69d261eda4ea512848a0234e693b637e722fc5",
+      "status": "completed",
+      "latency_seconds": 16.608
+    }
+  ],
+  "status": "completed"
+}

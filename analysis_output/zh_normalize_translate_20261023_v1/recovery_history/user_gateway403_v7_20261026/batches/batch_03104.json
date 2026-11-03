@@ -1,0 +1,115 @@
+{
+  "input_sha256": "bf2f8dca2079459e3cbd91f0dd3382036feb48567296eff71e235784ac6173d7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000662",
+      "decision": "ready",
+      "subject": "ways for a species to go extinct",
+      "relation_id": "process_to_way_count",
+      "relation_definition": "The number of distinct ways or methods by which a specified process or phenomenon can occur.",
+      "direction": "specified process/phenomenon -> count of ways",
+      "answer": "two",
+      "canonical_fact": "There are two ways for a species to go extinct.",
+      "prompt_en": "How many ways are there for a species to go extinct?",
+      "evidence_quotes": [
+        "How many ways are there for a species to go extinct?",
+        "two"
+      ],
+      "reason": "Source provides a clear numeric answer ('two'). No catalog relation captures a count-of-ways fact; written_work_to_author, entity_to_class, etc. do not fit. A precise new relation 'process_to_way_count' is proposed to avoid forcing a broad category.",
+      "english": {
+        "canonical_fact": "There are two ways for a species to go extinct.",
+        "answer": "two",
+        "subject": "ways for a species to go extinct",
+        "direction": "specified process/phenomenon -> count of ways",
+        "relation_definition": "The number of distinct ways or methods by which a specified process or phenomenon can occur.",
+        "relation_id": "process_to_way_count",
+        "prompt_en": "How many ways are there for a species to go extinct?",
+        "answer_aliases_en": [
+          "two"
+        ],
+        "relation_spec": {
+          "id": "process_to_way_count",
+          "definition": "The number of distinct ways or methods by which a specified process or phenomenon can occur.",
+          "direction": "specified process/phenomenon -> count of ways"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f1fc72a538d518b3376365a4cc68046d2023495d1c60b975bef769bdcaeee3b6",
+      "input_sha256": "c1138175cb129130e100d1d8a5bf8b491056fc3b5d9ad2b47614347ab6fe5ab2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000663",
+      "decision": "ready",
+      "subject": "classification system that divided living things into several groups including mammals, insects, and reptiles",
+      "relation_id": "system_to_developer",
+      "relation_definition": "Named developer or creator of a specified classification, organizational, or theoretical system.",
+      "direction": "specified system -> developer",
+      "answer": "Aristotle",
+      "canonical_fact": "Aristotle developed a classification system that divided living things into several groups that we still use today, including mammals, insects, and reptiles.",
+      "prompt_en": "Who developed a classification system that divided living things into several groups that we still use today, including mammals, insects, and reptiles?",
+      "evidence_quotes": [
+        "Who developed a classification system that divided living things into several groups that we still use today, including mammals, insects, and reptiles?",
+        "aristotle"
+      ],
+      "reason": "Source clearly identifies Aristotle as the developer of the described classification system. The closest catalog relation 'written_work_to_author' requires a written work and uses 'author', which does not exactly match a classification-system/developer pairing. A precise new relation 'system_to_developer' is proposed.",
+      "english": {
+        "canonical_fact": "Aristotle developed a classification system that divided living things into several groups that we still use today, including mammals, insects, and reptiles.",
+        "answer": "Aristotle",
+        "subject": "classification system that divided living things into several groups including mammals, insects, and reptiles",
+        "direction": "specified system -> developer",
+        "relation_definition": "Named developer or creator of a specified classification, organizational, or theoretical system.",
+        "relation_id": "system_to_developer",
+        "prompt_en": "Who developed a classification system that divided living things into several groups that we still use today, including mammals, insects, and reptiles?",
+        "answer_aliases_en": [
+          "Aristotle"
+        ],
+        "relation_spec": {
+          "id": "system_to_developer",
+          "definition": "Named developer or creator of a specified classification, organizational, or theoretical system.",
+          "direction": "specified system -> developer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6b709a5088ee8e9c2ed58fc9c4e98bcf71f0715ded30d2e1afbdfe6cac799132",
+      "input_sha256": "27fe9a2dcfb54ce2bad8ec8eb291f28f836655201584979f929959fb2d06f8ce",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000662",
+        "historical:raw_sciq_000663"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bea5e38f62357a84a86f7ce448eceb49ec5e15e92ea28e84ae8d040daa119fd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2450,
+      "first_chunk_seconds": 64.918,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2523,
+        "prompt_tokens": 1751,
+        "total_tokens": 4274,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1975,
+          "text_tokens": 548
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3411a7c642bb7d13461aff6d50aa644639dbf728ccebd1e8bd908414b05b34c9",
+      "status": "completed",
+      "latency_seconds": 105.458
+    }
+  ],
+  "status": "failed"
+}

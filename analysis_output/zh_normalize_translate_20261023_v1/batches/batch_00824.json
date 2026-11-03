@@ -1,0 +1,214 @@
+{
+  "input_sha256": "83b04a0e39e66f3e10400a93e80a1f6b9ef6674a55df9ca1cbde0f4232dc90e1",
+  "normalized": [
+    {
+      "record_id": "public:pbf_2ee3ff79d83fd34ad5a1",
+      "decision": "ready",
+      "subject": "presence of manic episodes",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Bipolar I",
+      "canonical_fact": "The presence of manic episodes is required for a diagnosis of Bipolar I.",
+      "prompt_en": "The presence of manic episodes is required for a diagnosis of which disorder?",
+      "evidence_quotes": [
+        "The presence of manic episodes is required for a diagnosis of",
+        "Bipolar I"
+      ],
+      "reason": "The diagnostic criterion 'presence of manic episodes' is an explicitly qualified identifying description that uniquely points to Bipolar I (distinguished from Bipolar II which requires hypomanic, not manic, episodes). The existing relation description_to_entity fits: the criterion is the identifying description and Bipolar I is the unique entity satisfying it. Source question and answer provide direct literal support.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "prompt_en": "The presence of manic episodes is required for a diagnosis of which disorder?",
+        "relation_id": "description_to_entity",
+        "answer": "Bipolar I",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "presence of manic episodes",
+        "canonical_fact": "The presence of manic episodes is required for a diagnosis of Bipolar I.",
+        "answer_aliases_en": [
+          "Bipolar I"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3e203356887b00039f3256eb5e2e06d246d16d541964a67072ba6138c999551c",
+      "input_sha256": "ebfb61cbb51017e7df4712bb3fac16ea4cf2142f2cbd7064e8a2291368b4a15a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_2ef8404f3efaec272599",
+      "decision": "ready",
+      "subject": "I Can Only Imagine",
+      "relation_id": "song_to_writer",
+      "relation_definition": "Named songwriter (lyricist and/or composer) of a specified song; retain multi-writer constraints and specify version/recording when necessary.",
+      "direction": "song -> writer",
+      "answer": "Bart Millard",
+      "canonical_fact": "Bart Millard wrote the song I Can Only Imagine.",
+      "prompt_en": "Who wrote the song I Can Only Imagine?",
+      "evidence_quotes": [
+        "who wrote the song i can only imagine",
+        "Bart Millard"
+      ],
+      "reason": "The question asks for the songwriter of 'I Can Only Imagine' and the source answer is 'Bart Millard'. No existing catalog relation fits exactly: written_work_to_author targets literary authors, not songwriters; song_to_performer targets performers, not writers. A new relation song_to_writer is proposed with direction song -> writer to capture the songwriter relationship. Source question and answer provide direct literal support.",
+      "english": {
+        "direction": "song -> writer",
+        "prompt_en": "Who wrote the song I Can Only Imagine?",
+        "relation_id": "song_to_writer",
+        "answer": "Bart Millard",
+        "relation_definition": "Named songwriter (lyricist and/or composer) of a specified song; retain multi-writer constraints and specify version/recording when necessary.",
+        "subject": "I Can Only Imagine",
+        "canonical_fact": "Bart Millard wrote the song I Can Only Imagine.",
+        "answer_aliases_en": [
+          "Bart Millard"
+        ],
+        "relation_spec": {
+          "id": "song_to_writer",
+          "definition": "Named songwriter (lyricist and/or composer) of a specified song; retain multi-writer constraints and specify version/recording when necessary.",
+          "direction": "song -> writer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4ba3884ef675ec244bd3fd5cb185dc849011873ccf734b6abff81c51bd52be15",
+      "input_sha256": "7a10579290178bcda56d197be71e519db22f6e288e1d7dd32c3943ae195a8bca",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_2ee3ff79d83fd34ad5a1",
+      "input_sha256": "ebfb61cbb51017e7df4712bb3fac16ea4cf2142f2cbd7064e8a2291368b4a15a",
+      "english": {
+        "direction": "identifying description -> entity",
+        "prompt_en": "The presence of manic episodes is required for a diagnosis of which disorder?",
+        "relation_id": "description_to_entity",
+        "answer": "Bipolar I",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "presence of manic episodes",
+        "canonical_fact": "The presence of manic episodes is required for a diagnosis of Bipolar I.",
+        "answer_aliases_en": [
+          "Bipolar I"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3e203356887b00039f3256eb5e2e06d246d16d541964a67072ba6138c999551c",
+      "translation": {
+        "record_id": "public:pbf_2ee3ff79d83fd34ad5a1",
+        "subject_zh": "躁狂发作的存在",
+        "prompt_zh": "哪种疾病的诊断要求存在躁狂发作？",
+        "canonical_fact_zh": "双相I型的诊断要求存在躁狂发作。",
+        "answer_zh": "双相I型",
+        "answer_aliases_zh": [
+          "双相I型"
+        ]
+      },
+      "translation_sha256": "2909ee27fda279196ad04ea416218aef03107772ad512e362eb4343bf2aef2b1"
+    },
+    {
+      "record_id": "public:pbf_2ef8404f3efaec272599",
+      "input_sha256": "7a10579290178bcda56d197be71e519db22f6e288e1d7dd32c3943ae195a8bca",
+      "english": {
+        "direction": "song -> writer",
+        "prompt_en": "Who wrote the song I Can Only Imagine?",
+        "relation_id": "song_to_writer",
+        "answer": "Bart Millard",
+        "relation_definition": "Named songwriter (lyricist and/or composer) of a specified song; retain multi-writer constraints and specify version/recording when necessary.",
+        "subject": "I Can Only Imagine",
+        "canonical_fact": "Bart Millard wrote the song I Can Only Imagine.",
+        "answer_aliases_en": [
+          "Bart Millard"
+        ],
+        "relation_spec": {
+          "id": "song_to_writer",
+          "definition": "Named songwriter (lyricist and/or composer) of a specified song; retain multi-writer constraints and specify version/recording when necessary.",
+          "direction": "song -> writer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4ba3884ef675ec244bd3fd5cb185dc849011873ccf734b6abff81c51bd52be15",
+      "translation": {
+        "record_id": "public:pbf_2ef8404f3efaec272599",
+        "subject_zh": "《I Can Only Imagine》",
+        "prompt_zh": "谁创作了歌曲《I Can Only Imagine》？",
+        "canonical_fact_zh": "巴特·米拉德创作了歌曲《I Can Only Imagine》。",
+        "answer_zh": "巴特·米拉德",
+        "answer_aliases_zh": [
+          "巴特·米拉德"
+        ]
+      },
+      "translation_sha256": "5e6f62536ebd95962e5b3eb952d08b443043844cc656881ba8cf2c377a70a429"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2ee3ff79d83fd34ad5a1",
+        "public:pbf_2ef8404f3efaec272599"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "554306aba126f7ddab3e5440026f9899643198f6001e75e52966a4a834906d75",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3244,
+      "first_chunk_seconds": 10.799,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3463,
+        "prompt_tokens": 1588,
+        "total_tokens": 5051,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2917,
+          "text_tokens": 546
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a41abac8b0ee7f77550abfbc13216a68393c67163c8159a9c211a6d640f63069",
+      "status": "completed",
+      "latency_seconds": 95.702
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_2ee3ff79d83fd34ad5a1",
+        "public:pbf_2ef8404f3efaec272599"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5c252ac26b1e4f37f10cb2bc86cb957ed6f75f7aa8e0eeea14e986ee9f7668ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1345,
+      "first_chunk_seconds": 4.75,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1421,
+        "prompt_tokens": 837,
+        "total_tokens": 2258,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1172,
+          "text_tokens": 249
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b5659ea8fb56644590ba748564fa5690e47c0208b610b28ee3a8659b7f09e86b",
+      "status": "completed",
+      "latency_seconds": 31.2
+    }
+  ],
+  "status": "completed"
+}

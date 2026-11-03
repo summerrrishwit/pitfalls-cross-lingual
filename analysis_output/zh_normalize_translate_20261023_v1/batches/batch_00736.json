@@ -1,0 +1,214 @@
+{
+  "input_sha256": "a5cf90c96810d9725ff9a5178fbeda8060354287cc0b9e719aa4f48477a1d077",
+  "normalized": [
+    {
+      "record_id": "public:pbf_219a17dec6e874c30e24",
+      "decision": "ready",
+      "subject": "Southwest Airlines at San Jose Airport",
+      "relation_id": "airline_at_airport_to_terminal",
+      "relation_definition": "The specific terminal used or assigned to a given airline at a named airport; not a generic containing-location or class-membership claim.",
+      "direction": "airline at specified airport -> terminal",
+      "answer": "Terminal B",
+      "canonical_fact": "Southwest Airlines at San Jose Airport uses Terminal B.",
+      "prompt_en": "Southwest Airlines at San Jose Airport uses",
+      "evidence_quotes": [
+        "which terminal is southwest at san jose airport",
+        "terminal b"
+      ],
+      "reason": "Source answer 'terminal b' directly supports the fact. No catalog relation captures airline-to-terminal assignment; entity_to_containing_location is too broad (geographic containment, not operational terminal assignment). Proposing precise new relation airline_at_airport_to_terminal.",
+      "english": {
+        "direction": "airline at specified airport -> terminal",
+        "prompt_en": "Southwest Airlines at San Jose Airport uses",
+        "relation_id": "airline_at_airport_to_terminal",
+        "answer": "Terminal B",
+        "relation_definition": "The specific terminal used or assigned to a given airline at a named airport; not a generic containing-location or class-membership claim.",
+        "subject": "Southwest Airlines at San Jose Airport",
+        "canonical_fact": "Southwest Airlines at San Jose Airport uses Terminal B.",
+        "answer_aliases_en": [
+          "Terminal B"
+        ],
+        "relation_spec": {
+          "id": "airline_at_airport_to_terminal",
+          "definition": "The specific terminal used or assigned to a given airline at a named airport; not a generic containing-location or class-membership claim.",
+          "direction": "airline at specified airport -> terminal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "110474202c2f103345af96895a3fa778de9d6b97e2fe8fa928349c82b6e8cc36",
+      "input_sha256": "8ec160f417a4cdfa3346ec46d440db62075ad1c4a2626a291b10beff69d74df5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_21b85271486f6474e23a",
+      "decision": "ready",
+      "subject": "Jason Bateman",
+      "relation_id": "actor_to_character",
+      "relation_definition": "Character portrayed by a specified actor in a named work and version; inverse of character_to_actor; not a voice-actor relation unless explicitly separated.",
+      "direction": "actor -> character in specified work/version",
+      "answer": "James Cooper Ingalls",
+      "canonical_fact": "Jason Bateman played the character James Cooper Ingalls in Little House on the Prairie.",
+      "prompt_en": "In Little House on the Prairie, Jason Bateman played",
+      "evidence_quotes": [
+        "who was jason bateman in little house on the prairie",
+        "james cooper ingalls"
+      ],
+      "reason": "Source answer 'james cooper ingalls' is kept as the given fact. Existing character_to_actor has direction character->actor, which is the inverse of what is needed here (actor->character in a work). Proposing new actor_to_character with explicit direction to avoid forcing the broad category.",
+      "english": {
+        "direction": "actor -> character in specified work/version",
+        "prompt_en": "In Little House on the Prairie, Jason Bateman played",
+        "relation_id": "actor_to_character",
+        "answer": "James Cooper Ingalls",
+        "relation_definition": "Character portrayed by a specified actor in a named work and version; inverse of character_to_actor; not a voice-actor relation unless explicitly separated.",
+        "subject": "Jason Bateman",
+        "canonical_fact": "Jason Bateman played the character James Cooper Ingalls in Little House on the Prairie.",
+        "answer_aliases_en": [
+          "James Cooper Ingalls"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a specified actor in a named work and version; inverse of character_to_actor; not a voice-actor relation unless explicitly separated.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a5aaaa1b81eb9995c78f21cafbc09d64dc8da014938f3a6367a52415af3ac48",
+      "input_sha256": "296651f1aaa0df294334b59312ddeb1b4f23820aab5c51e08c2e0dbf6abd27df",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_219a17dec6e874c30e24",
+      "input_sha256": "8ec160f417a4cdfa3346ec46d440db62075ad1c4a2626a291b10beff69d74df5",
+      "english": {
+        "direction": "airline at specified airport -> terminal",
+        "prompt_en": "Southwest Airlines at San Jose Airport uses",
+        "relation_id": "airline_at_airport_to_terminal",
+        "answer": "Terminal B",
+        "relation_definition": "The specific terminal used or assigned to a given airline at a named airport; not a generic containing-location or class-membership claim.",
+        "subject": "Southwest Airlines at San Jose Airport",
+        "canonical_fact": "Southwest Airlines at San Jose Airport uses Terminal B.",
+        "answer_aliases_en": [
+          "Terminal B"
+        ],
+        "relation_spec": {
+          "id": "airline_at_airport_to_terminal",
+          "definition": "The specific terminal used or assigned to a given airline at a named airport; not a generic containing-location or class-membership claim.",
+          "direction": "airline at specified airport -> terminal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "110474202c2f103345af96895a3fa778de9d6b97e2fe8fa928349c82b6e8cc36",
+      "translation": {
+        "record_id": "public:pbf_219a17dec6e874c30e24",
+        "subject_zh": "圣何塞机场的西南航空",
+        "prompt_zh": "圣何塞机场的西南航空使用",
+        "canonical_fact_zh": "圣何塞机场的西南航空使用B航站楼。",
+        "answer_zh": "B航站楼",
+        "answer_aliases_zh": [
+          "B航站楼"
+        ]
+      },
+      "translation_sha256": "e9ff24aa4d3311514bde718464565e962a1ac2ac5b3b75cc9227c99054a74861"
+    },
+    {
+      "record_id": "public:pbf_21b85271486f6474e23a",
+      "input_sha256": "296651f1aaa0df294334b59312ddeb1b4f23820aab5c51e08c2e0dbf6abd27df",
+      "english": {
+        "direction": "actor -> character in specified work/version",
+        "prompt_en": "In Little House on the Prairie, Jason Bateman played",
+        "relation_id": "actor_to_character",
+        "answer": "James Cooper Ingalls",
+        "relation_definition": "Character portrayed by a specified actor in a named work and version; inverse of character_to_actor; not a voice-actor relation unless explicitly separated.",
+        "subject": "Jason Bateman",
+        "canonical_fact": "Jason Bateman played the character James Cooper Ingalls in Little House on the Prairie.",
+        "answer_aliases_en": [
+          "James Cooper Ingalls"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a specified actor in a named work and version; inverse of character_to_actor; not a voice-actor relation unless explicitly separated.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a5aaaa1b81eb9995c78f21cafbc09d64dc8da014938f3a6367a52415af3ac48",
+      "translation": {
+        "record_id": "public:pbf_21b85271486f6474e23a",
+        "subject_zh": "杰森·贝特曼",
+        "prompt_zh": "在《草原小屋》中，杰森·贝特曼饰演",
+        "canonical_fact_zh": "杰森·贝特曼在《草原小屋》中饰演詹姆斯·库珀·英格尔斯。",
+        "answer_zh": "詹姆斯·库珀·英格尔斯",
+        "answer_aliases_zh": [
+          "詹姆斯·库珀·英格尔斯"
+        ]
+      },
+      "translation_sha256": "54f811783c6428817df3f16e1d86c84d9a3f1a78515f2ce0a899e2a4c322fe6e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_219a17dec6e874c30e24",
+        "public:pbf_21b85271486f6474e23a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1bdd4af563df9a2ba679218f2fb243fd0cf52498dcd7d9c73ebb3c319a0c5744",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2131,
+      "first_chunk_seconds": 9.601,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2353,
+        "prompt_tokens": 1602,
+        "total_tokens": 3955,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1835,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dc794e00220ddaec12a5c61ec4dcff85d6b4cbf9c4045432c9fb810a428bcd2e",
+      "status": "completed",
+      "latency_seconds": 75.767
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_219a17dec6e874c30e24",
+        "public:pbf_21b85271486f6474e23a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac0055f7ad229ff2638a7f9088d35e88ab6da6c71422f70aae0475fb014aa829",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1164,
+      "first_chunk_seconds": 3.201,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1299,
+        "prompt_tokens": 890,
+        "total_tokens": 2189,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1030,
+          "text_tokens": 269
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "613a77a8b9636584b9d0c411718aaa61ad909b2b9c9e64b3ecdf27296a6e8140",
+      "status": "completed",
+      "latency_seconds": 27.316
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,162 @@
+{
+  "input_sha256": "7ec859e9d08120fcf80be5e0c529fea2f7e48f93c62db22c3af5ca42f4c65c06",
+  "normalized": [
+    {
+      "record_id": "public:pbf_674987ba5b907b38b9cb",
+      "decision": "ready",
+      "subject": "RuPaul's Drag Race All Stars 3",
+      "relation_id": "work_to_winner",
+      "relation_definition": "The declared winner of a specified competition/season/show; disambiguate by season/edition where necessary.",
+      "direction": "specified work/season -> winner (person)",
+      "answer": "Trixie Mattel",
+      "canonical_fact": "Trixie Mattel wins RuPaul's Drag Race All Stars 3.",
+      "prompt_en": "Who wins RuPaul's Drag Race All Stars 3?",
+      "evidence_quotes": [
+        "who wins rupaul drag race all stars 3",
+        "Trixie Mattel"
+      ],
+      "reason": "Source answer explicitly names the winner. No catalog relation covers a season/competition winner; proposing work_to_winner as a precise new relation with clear direction and scope.",
+      "english": {
+        "answer": "Trixie Mattel",
+        "relation_id": "work_to_winner",
+        "prompt_en": "Who wins RuPaul's Drag Race All Stars 3?",
+        "direction": "specified work/season -> winner (person)",
+        "subject": "RuPaul's Drag Race All Stars 3",
+        "canonical_fact": "Trixie Mattel wins RuPaul's Drag Race All Stars 3.",
+        "relation_definition": "The declared winner of a specified competition/season/show; disambiguate by season/edition where necessary.",
+        "answer_aliases_en": [
+          "Trixie Mattel",
+          "Brian Michael Firkus",
+          "Brian Firkus"
+        ],
+        "relation_spec": {
+          "id": "work_to_winner",
+          "definition": "The declared winner of a specified competition/season/show; disambiguate by season/edition where necessary.",
+          "direction": "specified work/season -> winner (person)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "df55cb867d3347d19f7c64622f99c09f85f113d9c34bbdf677e1a0c391b85682",
+      "input_sha256": "df394a5bdb4b70f6c35ae50ab5a329ec53b223e62695a501fc2914f23a4df627",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_674e91d025720eaaf052",
+      "decision": "ready",
+      "subject": "Apple Macintosh XL computer",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "Lisa 2",
+      "canonical_fact": "The original name of the Apple Macintosh XL computer was Lisa 2.",
+      "prompt_en": "What was the original name of the Apple Macintosh XL computer?",
+      "evidence_quotes": [
+        "original name of the Apple Macintosh XL computer",
+        "Lisa 2"
+      ],
+      "reason": "The original name 'Lisa 2' is an equivalent/alias name for the same product (Apple Macintosh XL). entity_to_alias fits exactly: it is a prior name for the same entity, not a descriptive property.",
+      "english": {
+        "answer": "Lisa 2",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "What was the original name of the Apple Macintosh XL computer?",
+        "direction": "entity -> alias",
+        "subject": "Apple Macintosh XL computer",
+        "canonical_fact": "The original name of the Apple Macintosh XL computer was Lisa 2.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "Lisa 2"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "20a4b0f6cff796df8cac23068012aa54085def4a43021493724c714cae0ef512",
+      "input_sha256": "1150d4fad59498d4f71bb0a0caf7cf9c0a461249ab2277e14c9de8879e6514cd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_674987ba5b907b38b9cb",
+        "public:pbf_674e91d025720eaaf052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a6d60c7ac73a0af7648270efd89725cf2db043ab1796d18b0bee30bed31d652d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1872,
+      "first_chunk_seconds": 44.076,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1869,
+        "prompt_tokens": 1625,
+        "total_tokens": 3494,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1385,
+          "text_tokens": 484
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "7703fe4842b653e09f3c87d2e14802c7ef0276611bea02502bd438855f948443",
+      "status": "completed",
+      "latency_seconds": 58.856
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_674987ba5b907b38b9cb",
+        "public:pbf_674e91d025720eaaf052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e840bea94aeb201257f5c78c51d108c914cad1b5339ebb4c0c110bbd2996c66b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.063
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_674987ba5b907b38b9cb",
+        "public:pbf_674e91d025720eaaf052"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e840bea94aeb201257f5c78c51d108c914cad1b5339ebb4c0c110bbd2996c66b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_674987ba5b907b38b9cb",
+        "public:pbf_674e91d025720eaaf052"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e840bea94aeb201257f5c78c51d108c914cad1b5339ebb4c0c110bbd2996c66b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.392
+    }
+  ],
+  "status": "failed"
+}

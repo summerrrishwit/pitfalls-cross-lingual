@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4719036493a4df15b82f337ee1fcd75dc1e8d7e4c0b2f25606cea2ab59013558",
+  "normalized": [
+    {
+      "record_id": "public:pbf_52af3f37fac632e85b9b",
+      "decision": "ready",
+      "subject": "Dr. Burke in Grey's Anatomy",
+      "relation_id": "character_event_to_episode",
+      "relation_definition": "The specific season and episode number in which a stated narrative event (e.g., return, first appearance, departure) involving a specified fictional character occurs within a named television series.",
+      "direction": "character + event + series -> episode identifier (season N episode M)",
+      "answer": "season 10 episode 22",
+      "canonical_fact": "Dr. Burke returns to Grey's Anatomy in season 10 episode 22.",
+      "prompt_en": "In which season and episode does Dr. Burke return to Grey's Anatomy?",
+      "evidence_quotes": [
+        "dr burke return to grey's anatomy",
+        "season 10 episode 22"
+      ],
+      "reason": "Source explicitly states the episode of Dr. Burke's return. No existing catalog relation captures character-event-to-episode mapping (part_to_whole is too broad and direction-mismatched; work_to_release_date is about release dates, not narrative episode locations). A precise new relation is proposed. The old extraction's answer 'season 10 episode 22' is a literal substring of source_answer and is kept unchanged.",
+      "english": {
+        "answer": "season 10 episode 22",
+        "relation_id": "character_event_to_episode",
+        "prompt_en": "In which season and episode does Dr. Burke return to Grey's Anatomy?",
+        "direction": "character + event + series -> episode identifier (season N episode M)",
+        "subject": "Dr. Burke in Grey's Anatomy",
+        "canonical_fact": "Dr. Burke returns to Grey's Anatomy in season 10 episode 22.",
+        "relation_definition": "The specific season and episode number in which a stated narrative event (e.g., return, first appearance, departure) involving a specified fictional character occurs within a named television series.",
+        "answer_aliases_en": [
+          "season 10 episode 22"
+        ],
+        "relation_spec": {
+          "id": "character_event_to_episode",
+          "definition": "The specific season and episode number in which a stated narrative event (e.g., return, first appearance, departure) involving a specified fictional character occurs within a named television series.",
+          "direction": "character + event + series -> episode identifier (season N episode M)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ec8dfc6ec1db7265364cb380131c4c5e271955c6e22e449fcb78a60d4b86dade",
+      "input_sha256": "1c2042fcded3e3488f0fd89f5ff526ffa6ca4d6ff01536d899f39c56fdc528b0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_52b1c47659d8c759c52f",
+      "decision": "ready",
+      "subject": "GST Council",
+      "relation_id": "organization_to_chairperson",
+      "relation_definition": "The appointed chairperson (presiding officer) of a specified government or regulatory council/organization; retains the formal title rather than a colloquial synonym.",
+      "direction": "organization -> chairperson (person)",
+      "answer": "Nirmala Sitharaman",
+      "canonical_fact": "Nirmala Sitharaman is the chairperson of the GST Council.",
+      "prompt_en": "Who is the chairperson of the GST Council?",
+      "evidence_quotes": [
+        "who is appointed as president of gst counsil",
+        "Nirmala Sitaraman"
+      ],
+      "reason": "Source identifies the appointed head of the GST Council. The old extraction corrected the source typo 'Sitaraman' to the canonical spelling 'Sitharaman'—this is a spelling normalization, not a factual conflict, so the existing answer is kept. No catalog relation captures an organization's presiding officer; a precise new relation organization_to_chairperson is proposed. The source uses 'president' colloquially but the official title is 'Chairperson,' which the old extraction already adopted; retained.",
+      "english": {
+        "answer": "Nirmala Sitharaman",
+        "relation_id": "organization_to_chairperson",
+        "prompt_en": "Who is the chairperson of the GST Council?",
+        "direction": "organization -> chairperson (person)",
+        "subject": "GST Council",
+        "canonical_fact": "Nirmala Sitharaman is the chairperson of the GST Council.",
+        "relation_definition": "The appointed chairperson (presiding officer) of a specified government or regulatory council/organization; retains the formal title rather than a colloquial synonym.",
+        "answer_aliases_en": [
+          "Nirmala Sitharaman"
+        ],
+        "relation_spec": {
+          "id": "organization_to_chairperson",
+          "definition": "The appointed chairperson (presiding officer) of a specified government or regulatory council/organization; retains the formal title rather than a colloquial synonym.",
+          "direction": "organization -> chairperson (person)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2fcfa52c0361c151174758057e7f5ff3a4859bf3409148007a0fd251f41c213b",
+      "input_sha256": "8c235f29cdbf859d324b60613252bbc4cf4f39a443c80371001aed6311ff672d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_52af3f37fac632e85b9b",
+      "input_sha256": "1c2042fcded3e3488f0fd89f5ff526ffa6ca4d6ff01536d899f39c56fdc528b0",
+      "english": {
+        "answer": "season 10 episode 22",
+        "relation_id": "character_event_to_episode",
+        "prompt_en": "In which season and episode does Dr. Burke return to Grey's Anatomy?",
+        "direction": "character + event + series -> episode identifier (season N episode M)",
+        "subject": "Dr. Burke in Grey's Anatomy",
+        "canonical_fact": "Dr. Burke returns to Grey's Anatomy in season 10 episode 22.",
+        "relation_definition": "The specific season and episode number in which a stated narrative event (e.g., return, first appearance, departure) involving a specified fictional character occurs within a named television series.",
+        "answer_aliases_en": [
+          "season 10 episode 22"
+        ],
+        "relation_spec": {
+          "id": "character_event_to_episode",
+          "definition": "The specific season and episode number in which a stated narrative event (e.g., return, first appearance, departure) involving a specified fictional character occurs within a named television series.",
+          "direction": "character + event + series -> episode identifier (season N episode M)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ec8dfc6ec1db7265364cb380131c4c5e271955c6e22e449fcb78a60d4b86dade",
+      "translation": {
+        "record_id": "public:pbf_52af3f37fac632e85b9b",
+        "subject_zh": "《实习医生格蕾》中的伯克医生",
+        "prompt_zh": "伯克医生在第几季第几集回到《实习医生格蕾》？",
+        "canonical_fact_zh": "伯克医生在第10季第22集回到《实习医生格蕾》。",
+        "answer_zh": "第10季第22集",
+        "answer_aliases_zh": [
+          "第10季第22集"
+        ]
+      },
+      "translation_sha256": "3569e882acb78fd329bcfde9f2e75c41081618c528b7026dfd5752a02ff3c953"
+    },
+    {
+      "record_id": "public:pbf_52b1c47659d8c759c52f",
+      "input_sha256": "8c235f29cdbf859d324b60613252bbc4cf4f39a443c80371001aed6311ff672d",
+      "english": {
+        "answer": "Nirmala Sitharaman",
+        "relation_id": "organization_to_chairperson",
+        "prompt_en": "Who is the chairperson of the GST Council?",
+        "direction": "organization -> chairperson (person)",
+        "subject": "GST Council",
+        "canonical_fact": "Nirmala Sitharaman is the chairperson of the GST Council.",
+        "relation_definition": "The appointed chairperson (presiding officer) of a specified government or regulatory council/organization; retains the formal title rather than a colloquial synonym.",
+        "answer_aliases_en": [
+          "Nirmala Sitharaman"
+        ],
+        "relation_spec": {
+          "id": "organization_to_chairperson",
+          "definition": "The appointed chairperson (presiding officer) of a specified government or regulatory council/organization; retains the formal title rather than a colloquial synonym.",
+          "direction": "organization -> chairperson (person)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2fcfa52c0361c151174758057e7f5ff3a4859bf3409148007a0fd251f41c213b",
+      "translation": {
+        "record_id": "public:pbf_52b1c47659d8c759c52f",
+        "subject_zh": "GST委员会",
+        "prompt_zh": "GST委员会的主席是谁？",
+        "canonical_fact_zh": "尼尔玛拉·西塔拉曼是GST委员会的主席。",
+        "answer_zh": "尼尔玛拉·西塔拉曼",
+        "answer_aliases_zh": [
+          "尼尔玛拉·西塔拉曼"
+        ]
+      },
+      "translation_sha256": "18d9eb785d454afeee20e0db99d4ad56092fa3ccbd3e6c9766c41dfa0b071333"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_52af3f37fac632e85b9b",
+        "public:pbf_52b1c47659d8c759c52f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "601e3e7d97db666e42f351710c68fefc8a4c4ca94dd6af54969bda730d16dd65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3532,
+      "first_chunk_seconds": 16.645,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3708,
+        "prompt_tokens": 1627,
+        "total_tokens": 5335,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3063,
+          "text_tokens": 645
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1d880ce62a3292d3fa41e0cd62709f4f2261965b38724e65c227fce9fb2ce3c9",
+      "status": "completed",
+      "latency_seconds": 66.202
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_52af3f37fac632e85b9b",
+        "public:pbf_52b1c47659d8c759c52f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "762c77d6162cde34f713d2486853a6da06bfbfccb2258a5ea17617a649da6cc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 815,
+      "first_chunk_seconds": 10.469,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 910,
+        "prompt_tokens": 950,
+        "total_tokens": 1860,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 630,
+          "text_tokens": 280
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b03216bf1708fe69fb266167732c5e274ff993dc8a5ac8f17e97505be35ebde2",
+      "status": "completed",
+      "latency_seconds": 23.215
+    }
+  ],
+  "status": "completed"
+}

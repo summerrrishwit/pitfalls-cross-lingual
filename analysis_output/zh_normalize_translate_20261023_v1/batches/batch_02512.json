@@ -1,0 +1,214 @@
+{
+  "input_sha256": "c1bf520d84860fe7851b512fc27615a2ba8b60cdb6d2534e331181db22d35ee3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002430",
+      "decision": "ready",
+      "subject": "leeches",
+      "relation_id": "substance_to_treatment_purpose",
+      "relation_definition": "The specific treatment or therapeutic purpose for which a specified substance or tool is used, retaining the historical or practitioner context stated in the source.",
+      "direction": "substance -> treatment purpose",
+      "answer": "let blood",
+      "canonical_fact": "An old time doctor might have used leeches to let blood.",
+      "prompt_en": "What treatment might an old-time doctor have tried to accomplish with leeches?",
+      "evidence_quotes": [
+        "let blood",
+        "What treatment might an old time doctor have tried to accomplish with leeches?"
+      ],
+      "reason": "Source QA directly states that an old-time doctor used leeches to 'let blood.' The qualifier 'might' is preserved. No existing catalog relation captures a substance-to-treatment-purpose link; proposing a new precise relation ID rather than forcing a broad category.",
+      "english": {
+        "direction": "substance -> treatment purpose",
+        "relation_id": "substance_to_treatment_purpose",
+        "answer": "let blood",
+        "canonical_fact": "An old time doctor might have used leeches to let blood.",
+        "subject": "leeches",
+        "prompt_en": "What treatment might an old-time doctor have tried to accomplish with leeches?",
+        "relation_definition": "The specific treatment or therapeutic purpose for which a specified substance or tool is used, retaining the historical or practitioner context stated in the source.",
+        "answer_aliases_en": [
+          "let blood"
+        ],
+        "relation_spec": {
+          "id": "substance_to_treatment_purpose",
+          "definition": "The specific treatment or therapeutic purpose for which a specified substance or tool is used, retaining the historical or practitioner context stated in the source.",
+          "direction": "substance -> treatment purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65563816449dade2b6a543d2483bbaad2f7286622a241c6a3a38351d31e56634",
+      "input_sha256": "57a9481a4eb9d69b9b16b5037678f11b4fdae7b6765985bcca0eea8d9b0cee15",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002442",
+      "decision": "ready",
+      "subject": "rain",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "weather",
+      "canonical_fact": "Rain is a type of weather.",
+      "prompt_en": "Rain is a type of what?",
+      "evidence_quotes": [
+        "weather",
+        "What is rain a type of?"
+      ],
+      "reason": "Source QA directly states rain is a type of weather. entity_to_class fits: rain (entity/phenomenon) maps to weather (stable class at the 'type of' taxonomy level). Both model annotations agree on extraction.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "weather",
+        "canonical_fact": "Rain is a type of weather.",
+        "subject": "rain",
+        "prompt_en": "Rain is a type of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "weather"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "53f2f23fb183d6e173a9eb0138b1ac8cd97ce8ca668cfe4ba86403217b57467f",
+      "input_sha256": "6147f3d444de32a4714d1698b5b3422abac0d081b1eb559edcdd63e2b03fe23d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002430",
+      "input_sha256": "57a9481a4eb9d69b9b16b5037678f11b4fdae7b6765985bcca0eea8d9b0cee15",
+      "english": {
+        "direction": "substance -> treatment purpose",
+        "relation_id": "substance_to_treatment_purpose",
+        "answer": "let blood",
+        "canonical_fact": "An old time doctor might have used leeches to let blood.",
+        "subject": "leeches",
+        "prompt_en": "What treatment might an old-time doctor have tried to accomplish with leeches?",
+        "relation_definition": "The specific treatment or therapeutic purpose for which a specified substance or tool is used, retaining the historical or practitioner context stated in the source.",
+        "answer_aliases_en": [
+          "let blood"
+        ],
+        "relation_spec": {
+          "id": "substance_to_treatment_purpose",
+          "definition": "The specific treatment or therapeutic purpose for which a specified substance or tool is used, retaining the historical or practitioner context stated in the source.",
+          "direction": "substance -> treatment purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65563816449dade2b6a543d2483bbaad2f7286622a241c6a3a38351d31e56634",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002430",
+        "subject_zh": "水蛭",
+        "prompt_zh": "古代医生可能会用水蛭来尝试实现什么治疗？",
+        "canonical_fact_zh": "古代医生可能会用水蛭来放血。",
+        "answer_zh": "放血",
+        "answer_aliases_zh": [
+          "放血"
+        ]
+      },
+      "translation_sha256": "fa8c5fa3ec34b1ad2d58e9842be128d88b6f424dcc157f3b8cb44fff32167a85"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002442",
+      "input_sha256": "6147f3d444de32a4714d1698b5b3422abac0d081b1eb559edcdd63e2b03fe23d",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "weather",
+        "canonical_fact": "Rain is a type of weather.",
+        "subject": "rain",
+        "prompt_en": "Rain is a type of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "weather"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "53f2f23fb183d6e173a9eb0138b1ac8cd97ce8ca668cfe4ba86403217b57467f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002442",
+        "subject_zh": "雨",
+        "prompt_zh": "雨属于什么的一种？",
+        "canonical_fact_zh": "雨是天气的一种。",
+        "answer_zh": "天气",
+        "answer_aliases_zh": [
+          "天气"
+        ]
+      },
+      "translation_sha256": "fa299b4bc3e41e197f03e8df288fea60167363bdea44cbf714b110e9e8a027a2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002430",
+        "historical:raw_commonsense_qa_002442"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "607b5ff3d0335da55e9a4b539da92505a7462ba060939f141c6e0e59da27b617",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2221,
+      "first_chunk_seconds": 4.822,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2281,
+        "prompt_tokens": 1634,
+        "total_tokens": 3915,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1811,
+          "text_tokens": 470
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d53ce13a4aadd4e0ce68dd28ca930940a5882e39977c9f214977de8f2fa4530d",
+      "status": "completed",
+      "latency_seconds": 37.527
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002430",
+        "historical:raw_commonsense_qa_002442"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4dea53c2875c6038f8aae3a220101c4305facc182b664bdc6d4dc6dd9fc14995",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 649,
+      "first_chunk_seconds": 1.734,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 720,
+        "prompt_tokens": 828,
+        "total_tokens": 1548,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 580,
+          "text_tokens": 140
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a6d1c2e152a887076b5a5a8561cddbf63c1bbd6ba3ec8fab64d8fa208c55958c",
+      "status": "completed",
+      "latency_seconds": 12.422
+    }
+  ],
+  "status": "completed"
+}

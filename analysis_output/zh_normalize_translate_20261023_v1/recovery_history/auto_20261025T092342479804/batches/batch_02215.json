@@ -1,0 +1,115 @@
+{
+  "input_sha256": "8441697b3645bbc04bb0ba025e9bfe1625d651ddeb532d7a8dd7e054cedf94a7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000670",
+      "decision": "ready",
+      "subject": "minerals needed to make jewelry, chalk, and concrete",
+      "relation_id": "substance_to_source",
+      "relation_definition": "The natural material or geological source from which a specified substance is obtained or extracted; retains the stated scope of the substance.",
+      "direction": "substance -> source",
+      "answer": "rocks",
+      "canonical_fact": "The minerals needed to make jewelry, chalk, and concrete are obtained from rocks.",
+      "prompt_en": "Where do we get the minerals needed to make jewelry, chalk, and concrete?",
+      "evidence_quotes": [
+        "from rocks",
+        "Where do we get the minerals needed to make these things?"
+      ],
+      "reason": "Source explicitly states minerals are obtained from rocks. No catalog relation covers a source/origin-of-material relationship (entity_to_containing_location explicitly excludes origin; entity_to_material covers composition, not extraction source), so a new precise relation is proposed.",
+      "english": {
+        "answer": "rocks",
+        "relation_id": "substance_to_source",
+        "prompt_en": "Where do we get the minerals needed to make jewelry, chalk, and concrete?",
+        "direction": "substance -> source",
+        "subject": "minerals needed to make jewelry, chalk, and concrete",
+        "canonical_fact": "The minerals needed to make jewelry, chalk, and concrete are obtained from rocks.",
+        "relation_definition": "The natural material or geological source from which a specified substance is obtained or extracted; retains the stated scope of the substance.",
+        "answer_aliases_en": [
+          "rocks"
+        ],
+        "relation_spec": {
+          "id": "substance_to_source",
+          "definition": "The natural material or geological source from which a specified substance is obtained or extracted; retains the stated scope of the substance.",
+          "direction": "substance -> source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "759d5f3a5073e0f8266339ee8cb40e6cbbd175176f40dff9ae954675c6efd63f",
+      "input_sha256": "a8859dbb71f153dade4538670bbfe276e73efa4c24c0476b4e3c2b4b178e4542",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000674",
+      "decision": "ready",
+      "subject": "location of an electron around the nucleus of an atom",
+      "relation_id": "property_to_determining_factors",
+      "relation_definition": "The specific physical factors that determine a specified physical property or quantum-mechanical state, as stated in the source; retains the enumerated set of factors.",
+      "direction": "property -> determining factors",
+      "answer": "energy and the attraction of the nucleus",
+      "canonical_fact": "The location of an electron around the nucleus of an atom is determined by energy and the attraction of the nucleus.",
+      "prompt_en": "What two factors determine the location of an electron around the nucleus of the atom?",
+      "evidence_quotes": [
+        "energy and the attraction of the nucleus",
+        "What two factors determine the location of an electron around the nucleus of the atom?"
+      ],
+      "reason": "Source explicitly names the two determining factors. The question constrains the answer to exactly two factors, mitigating the non_unique_answer concern raised by one annotator. No catalog relation covers a causal/determining-factors relationship in physics, so a new precise relation is proposed.",
+      "english": {
+        "answer": "energy and the attraction of the nucleus",
+        "relation_id": "property_to_determining_factors",
+        "prompt_en": "What two factors determine the location of an electron around the nucleus of the atom?",
+        "direction": "property -> determining factors",
+        "subject": "location of an electron around the nucleus of an atom",
+        "canonical_fact": "The location of an electron around the nucleus of an atom is determined by energy and the attraction of the nucleus.",
+        "relation_definition": "The specific physical factors that determine a specified physical property or quantum-mechanical state, as stated in the source; retains the enumerated set of factors.",
+        "answer_aliases_en": [
+          "energy and the attraction of the nucleus"
+        ],
+        "relation_spec": {
+          "id": "property_to_determining_factors",
+          "definition": "The specific physical factors that determine a specified physical property or quantum-mechanical state, as stated in the source; retains the enumerated set of factors.",
+          "direction": "property -> determining factors"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d293fab139efd1eb2c6b213a839a60916f648ae471981b83e57ace393ac36119",
+      "input_sha256": "f6fbc83fdee5ed40e0e56fcb496c5429956ba0a4ea12e6c22a6a81be048cb097",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000670",
+        "historical:raw_ai2_arc_easy_000674"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "32527052fc0c9b5ff94b6b7db98513c88b0cc970953d808805ab1ac2856a674a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2062,
+      "first_chunk_seconds": 24.435,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2190,
+        "prompt_tokens": 1735,
+        "total_tokens": 3925,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1643,
+          "text_tokens": 547
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7749d182879dd0d150d22e6ccfda366f4dea861e00592bd8a15384d1704da30d",
+      "status": "completed",
+      "latency_seconds": 58.136
+    }
+  ],
+  "status": "failed"
+}

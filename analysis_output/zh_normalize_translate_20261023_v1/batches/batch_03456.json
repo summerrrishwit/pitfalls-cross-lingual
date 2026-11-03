@@ -1,0 +1,171 @@
+{
+  "input_sha256": "1ff609d1fdb92ae9584a8ac6a34280b248478147bd7c1cc5109ce0f619786f79",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005440",
+      "decision": "ready",
+      "subject": "Dancing or walking too much",
+      "relation_id": "action_to_bodily_consequence",
+      "relation_definition": "Physical consequence or injury that results from a specified activity or behavior, at the granularity of the named body part.",
+      "direction": "activity or behavior -> bodily consequence on specified body part",
+      "answer": "blisters",
+      "canonical_fact": "Dancing or walking too much will lead to blisters on your feet.",
+      "prompt_en": "What will dancing or walking too much lead to on your feet?",
+      "evidence_quotes": [
+        "Dancing or walking too much will lead to what on your feet?",
+        "blisters"
+      ],
+      "reason": "The source question explicitly asks about the physical result of excessive dancing or walking on the feet, and the source answer is 'blisters.' No existing catalog relation captures a causal activity-to-body-part-injury relationship, so a precise new relation is proposed rather than forcing a broad category.",
+      "english": {
+        "prompt_en": "What will dancing or walking too much lead to on your feet?",
+        "relation_definition": "Physical consequence or injury that results from a specified activity or behavior, at the granularity of the named body part.",
+        "answer": "blisters",
+        "canonical_fact": "Dancing or walking too much will lead to blisters on your feet.",
+        "direction": "activity or behavior -> bodily consequence on specified body part",
+        "relation_id": "action_to_bodily_consequence",
+        "subject": "Dancing or walking too much",
+        "answer_aliases_en": [
+          "blisters"
+        ],
+        "relation_spec": {
+          "id": "action_to_bodily_consequence",
+          "definition": "Physical consequence or injury that results from a specified activity or behavior, at the granularity of the named body part.",
+          "direction": "activity or behavior -> bodily consequence on specified body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f9f4eb2ecf0f8b46a98902881b98a84a6afa3efb6264bf58f6e6acc32d08db0e",
+      "input_sha256": "81b35bff6792f44c55a4f044fa82aa0530154741559117ff9db72fcaef115801",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005474",
+      "decision": "ready",
+      "subject": "a place with lots of seats placed in rows surrounding a court",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "auditorium",
+      "canonical_fact": "An auditorium is a place with lots of seats placed in rows surrounding a court.",
+      "prompt_en": "What is the conventional term for a place where there are lots of seats placed in rows surrounding a court?",
+      "evidence_quotes": [
+        "Where are there lots of seats placed in rows surrounding a court?",
+        "auditorium"
+      ],
+      "reason": "The source question supplies a defining description (seats in rows surrounding a court) and the source answer is the conventional term 'auditorium.' The existing relation description_to_term fits exactly in direction and definition.",
+      "english": {
+        "prompt_en": "What is the conventional term for a place where there are lots of seats placed in rows surrounding a court?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "auditorium",
+        "canonical_fact": "An auditorium is a place with lots of seats placed in rows surrounding a court.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "a place with lots of seats placed in rows surrounding a court",
+        "answer_aliases_en": [
+          "auditorium"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8e03b1b0409a4d59e9dde05bb404f490fca734c51d580984d2884af4d8cb6e37",
+      "input_sha256": "784106be79e50fcd494739cf3cf382dc53d70372b6a37c043707407e5f234290",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005440",
+        "historical:raw_commonsense_qa_005474"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9bac6fe797ea6241d11c647503ca3fb1504ac44825c5b5b08c1971c6e0730adf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.989
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005440",
+        "historical:raw_commonsense_qa_005474"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9bac6fe797ea6241d11c647503ca3fb1504ac44825c5b5b08c1971c6e0730adf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2183,
+      "first_chunk_seconds": 30.512,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2334,
+        "prompt_tokens": 1618,
+        "total_tokens": 3952,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1817,
+          "text_tokens": 517
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d7748082c6cf72103aa2dd50d3ade19064535675ebdd4fab83c395cb1f685fc2",
+      "status": "completed",
+      "latency_seconds": 133.841
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005440",
+        "historical:raw_commonsense_qa_005474"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3fc28ecc17b5b88f0c5cc7f0698b3d622fa4183ebd3a8ffb4df1dacc0c095e35",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 79.952
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005440",
+        "historical:raw_commonsense_qa_005474"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3fc28ecc17b5b88f0c5cc7f0698b3d622fa4183ebd3a8ffb4df1dacc0c095e35",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.259
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005440",
+        "historical:raw_commonsense_qa_005474"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3fc28ecc17b5b88f0c5cc7f0698b3d622fa4183ebd3a8ffb4df1dacc0c095e35",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.671
+    }
+  ],
+  "status": "failed"
+}

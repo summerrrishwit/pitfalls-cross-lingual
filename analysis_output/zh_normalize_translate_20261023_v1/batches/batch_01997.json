@@ -1,0 +1,210 @@
+{
+  "input_sha256": "fa7a316ca94610f06d774983ca55f5bdb496f62cf7f8502c076b33721bf7af95",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ef1b5d70451c03dfa670",
+      "decision": "ready",
+      "subject": "woman with a schizophrenic brother",
+      "relation_id": "group_to_condition_probability",
+      "relation_definition": "Research-based probability estimate for a specified condition in a specified demographic group; retain qualifiers such as 'about' and stated study context.",
+      "direction": "specified demographic group -> probability of condition",
+      "answer": "0.42",
+      "canonical_fact": "According to research, the probability that a woman with a schizophrenic brother is or will become schizophrenic is about 0.42.",
+      "prompt_en": "According to research, the probability that a woman with a schizophrenic brother is or will become schizophrenic is about",
+      "evidence_quotes": [
+        "A woman has a schizophrenic brother",
+        "the probability thar she is or will become schizophrenic is about",
+        "0.42"
+      ],
+      "reason": "No catalog relation covers a probabilistic/risk association between a demographic group and a condition. Proposed new relation 'group_to_condition_probability' with explicit direction and definition. Source Q/A directly supports the extraction; qualifier 'about' preserved from the question. Answer matches source_answer exactly.",
+      "english": {
+        "answer": "0.42",
+        "relation_id": "group_to_condition_probability",
+        "prompt_en": "According to research, the probability that a woman with a schizophrenic brother is or will become schizophrenic is about",
+        "direction": "specified demographic group -> probability of condition",
+        "subject": "woman with a schizophrenic brother",
+        "canonical_fact": "According to research, the probability that a woman with a schizophrenic brother is or will become schizophrenic is about 0.42.",
+        "relation_definition": "Research-based probability estimate for a specified condition in a specified demographic group; retain qualifiers such as 'about' and stated study context.",
+        "answer_aliases_en": [
+          "0.42"
+        ],
+        "relation_spec": {
+          "id": "group_to_condition_probability",
+          "definition": "Research-based probability estimate for a specified condition in a specified demographic group; retain qualifiers such as 'about' and stated study context.",
+          "direction": "specified demographic group -> probability of condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "eb05b84dd942c2a9bf279d60d2026f8172bf91eb369756f9b370bdc0da32824d",
+      "input_sha256": "d8d046b741aea4cc73559464a5e35213a090c98c00b509c2ed0ffd67d82b626d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ef2fb7692ea1f0dfa0b8",
+      "decision": "ready",
+      "subject": "McDonald's and KFC",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "Franchising",
+      "canonical_fact": "McDonald's and KFC are good examples of franchising.",
+      "prompt_en": "McDonald's and KFC are good examples of",
+      "evidence_quotes": [
+        "McDonald's and KFC are good examples of",
+        "Franchising"
+      ],
+      "reason": "entity_to_class fits: McDonald's and KFC are stable members of the business-model class 'franchising' at the taxonomy level of business models. Source Q/A directly supports the extraction; qualifier 'good examples of' preserved. Answer matches source_answer.",
+      "english": {
+        "answer": "Franchising",
+        "relation_id": "entity_to_class",
+        "prompt_en": "McDonald's and KFC are good examples of",
+        "direction": "entity -> class",
+        "subject": "McDonald's and KFC",
+        "canonical_fact": "McDonald's and KFC are good examples of franchising.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "Franchising",
+          "Franchising."
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8d4fd15640f4ab102f655edc44e2e1ce3b4643466d3bde7d2b5e9d07eb63e447",
+      "input_sha256": "b5da0cbfd77958b5a2c80e3bd65fe44ca178f50d57e6e83f14cb6d81cddae1be",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "226a54ed628013ad18213053d828ca1c345ac6a80d50240f61bfe8f6ab8a700f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2458,
+      "first_chunk_seconds": 31.225,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2578,
+        "prompt_tokens": 1657,
+        "total_tokens": 4235,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2032,
+          "text_tokens": 546
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9b07861ddece731adfa7fac38284ff09dca9ebd0abe19e94b05dd6530b174787",
+      "status": "completed",
+      "latency_seconds": 63.68
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.091
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.391
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.718
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.118
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef1b5d70451c03dfa670",
+        "public:pbf_ef2fb7692ea1f0dfa0b8"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bf63b90e7abeab2b814243d54f7b20b339761bdf81a993b5eaf7f474569b7313",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.723
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01997.json",
+      "sha256": "63a21ffa790770f74362194d157e62b1671d0fcfa879e24c92c90d108cf433d8",
+      "previous_status": "failed"
+    }
+  ]
+}

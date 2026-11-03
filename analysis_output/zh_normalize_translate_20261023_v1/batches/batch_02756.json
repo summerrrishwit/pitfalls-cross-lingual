@@ -1,0 +1,214 @@
+{
+  "input_sha256": "cbb46457037af5d240763b20d16b09f6b99bfdb45f9d482b933b06ed8a60c387",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000054",
+      "decision": "ready",
+      "subject": "random walk series y",
+      "relation_id": "process_to_optimal_forecast",
+      "relation_definition": "Optimal (minimum mean-squared-error) forecast value or rule for a specified stochastic process at a stated forecast horizon.",
+      "direction": "specified stochastic process -> optimal forecast value/rule",
+      "answer": "the current value of y",
+      "canonical_fact": "The optimal one-step ahead forecast of a random walk series y is the current value of y.",
+      "prompt_en": "For a series y that follows a random walk, what is the optimal one-step ahead forecast?",
+      "evidence_quotes": [
+        "the optimal one-step ahead forecast of y",
+        "The current value of y"
+      ],
+      "reason": "No existing catalog relation captures a stochastic-process forecasting property. Proposed new relation 'process_to_optimal_forecast' with explicit horizon scope. Answer preserved from existing extraction; matches source_answer literally (modulo capitalization). Evidence quotes are exact substrings of source_question and source_answer respectively.",
+      "english": {
+        "direction": "specified stochastic process -> optimal forecast value/rule",
+        "relation_id": "process_to_optimal_forecast",
+        "answer": "the current value of y",
+        "canonical_fact": "The optimal one-step ahead forecast of a random walk series y is the current value of y.",
+        "subject": "random walk series y",
+        "prompt_en": "For a series y that follows a random walk, what is the optimal one-step ahead forecast?",
+        "relation_definition": "Optimal (minimum mean-squared-error) forecast value or rule for a specified stochastic process at a stated forecast horizon.",
+        "answer_aliases_en": [
+          "the current value of y"
+        ],
+        "relation_spec": {
+          "id": "process_to_optimal_forecast",
+          "definition": "Optimal (minimum mean-squared-error) forecast value or rule for a specified stochastic process at a stated forecast horizon.",
+          "direction": "specified stochastic process -> optimal forecast value/rule"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5f8a6b93d8d0decaf95ad6b96452a1c70093bab1cf38108f4b229e09971a599",
+      "input_sha256": "cd5dd54d13d7a645eebd69997b7711d004831b6847350cedd15f184528deef32",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000056",
+      "decision": "ready",
+      "subject": "beret",
+      "relation_id": "artifact_to_country_of_origin",
+      "relation_definition": "Country of origin or primary cultural association for a specified object, artifact, or cultural item; not geographic containment.",
+      "direction": "specified artifact/object -> country of origin",
+      "answer": "France",
+      "canonical_fact": "The beret originated in France.",
+      "prompt_en": "Which country is the fashionable headgear called the beret most closely associated with as its place of origin?",
+      "evidence_quotes": [
+        "the fashionable headgear called the beret",
+        "France"
+      ],
+      "reason": "Catalog 'entity_to_containing_location' explicitly excludes origin. No existing relation fits a country-of-origin / cultural-provenance link for an object. Proposed new relation 'artifact_to_country_of_origin'. Answer 'France' preserved from existing extraction and matches source_answer exactly. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "direction": "specified artifact/object -> country of origin",
+        "relation_id": "artifact_to_country_of_origin",
+        "answer": "France",
+        "canonical_fact": "The beret originated in France.",
+        "subject": "beret",
+        "prompt_en": "Which country is the fashionable headgear called the beret most closely associated with as its place of origin?",
+        "relation_definition": "Country of origin or primary cultural association for a specified object, artifact, or cultural item; not geographic containment.",
+        "answer_aliases_en": [
+          "France"
+        ],
+        "relation_spec": {
+          "id": "artifact_to_country_of_origin",
+          "definition": "Country of origin or primary cultural association for a specified object, artifact, or cultural item; not geographic containment.",
+          "direction": "specified artifact/object -> country of origin"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5ac8cf0b17edb95854c76b73b30e107b8339602c2934f3854a7d6bdf25bcf564",
+      "input_sha256": "817f94ea72d8c8d522262a19928664f37c8065fab15f2e97f20119cc917d3cbb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000054",
+      "input_sha256": "cd5dd54d13d7a645eebd69997b7711d004831b6847350cedd15f184528deef32",
+      "english": {
+        "direction": "specified stochastic process -> optimal forecast value/rule",
+        "relation_id": "process_to_optimal_forecast",
+        "answer": "the current value of y",
+        "canonical_fact": "The optimal one-step ahead forecast of a random walk series y is the current value of y.",
+        "subject": "random walk series y",
+        "prompt_en": "For a series y that follows a random walk, what is the optimal one-step ahead forecast?",
+        "relation_definition": "Optimal (minimum mean-squared-error) forecast value or rule for a specified stochastic process at a stated forecast horizon.",
+        "answer_aliases_en": [
+          "the current value of y"
+        ],
+        "relation_spec": {
+          "id": "process_to_optimal_forecast",
+          "definition": "Optimal (minimum mean-squared-error) forecast value or rule for a specified stochastic process at a stated forecast horizon.",
+          "direction": "specified stochastic process -> optimal forecast value/rule"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5f8a6b93d8d0decaf95ad6b96452a1c70093bab1cf38108f4b229e09971a599",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000054",
+        "subject_zh": "随机游走序列 y",
+        "prompt_zh": "对于服从随机游走的序列 y，最优的一步超前预测值是什么？",
+        "canonical_fact_zh": "随机游走序列 y 的最优一步超前预测值是 y 的当前值。",
+        "answer_zh": "y 的当前值",
+        "answer_aliases_zh": [
+          "y 的当前值"
+        ]
+      },
+      "translation_sha256": "83ee72be0bf171a0cb7118984f530776e9e05a5dd455466f0a1179684a088779"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000056",
+      "input_sha256": "817f94ea72d8c8d522262a19928664f37c8065fab15f2e97f20119cc917d3cbb",
+      "english": {
+        "direction": "specified artifact/object -> country of origin",
+        "relation_id": "artifact_to_country_of_origin",
+        "answer": "France",
+        "canonical_fact": "The beret originated in France.",
+        "subject": "beret",
+        "prompt_en": "Which country is the fashionable headgear called the beret most closely associated with as its place of origin?",
+        "relation_definition": "Country of origin or primary cultural association for a specified object, artifact, or cultural item; not geographic containment.",
+        "answer_aliases_en": [
+          "France"
+        ],
+        "relation_spec": {
+          "id": "artifact_to_country_of_origin",
+          "definition": "Country of origin or primary cultural association for a specified object, artifact, or cultural item; not geographic containment.",
+          "direction": "specified artifact/object -> country of origin"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5ac8cf0b17edb95854c76b73b30e107b8339602c2934f3854a7d6bdf25bcf564",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000056",
+        "subject_zh": "贝雷帽",
+        "prompt_zh": "贝雷帽这种时尚头饰最紧密关联的原产地是哪个国家？",
+        "canonical_fact_zh": "贝雷帽起源于法国。",
+        "answer_zh": "法国",
+        "answer_aliases_zh": [
+          "法国"
+        ]
+      },
+      "translation_sha256": "32deb56f42972bddff60655468470d5093a0762b09db45ce43b8183a23d819de"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000054",
+        "historical:raw_mmlu_000056"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "90e33ee40509483a22918cf854d0fc2be01d4815b348e40d94690ccecad69489",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2450,
+      "first_chunk_seconds": 34.173,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2577,
+        "prompt_tokens": 1701,
+        "total_tokens": 4278,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2046,
+          "text_tokens": 531
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c515beae6078a7a00091e97f9a7a1fdeea9af558522cac38119746bda0c8773e",
+      "status": "completed",
+      "latency_seconds": 120.157
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000054",
+        "historical:raw_mmlu_000056"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "776b9ded6c47b8c29437df45b2765e0d3e7b01d48361f0f52075e0152ec12b69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 686,
+      "first_chunk_seconds": 17.263,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 701,
+        "prompt_tokens": 884,
+        "total_tokens": 1585,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 466,
+          "text_tokens": 235
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "678c20aec94cacdda5f7ae856f0f7fbc1634e867ff00822b54a26dff9e3c35be",
+      "status": "completed",
+      "latency_seconds": 29.132
+    }
+  ],
+  "status": "completed"
+}

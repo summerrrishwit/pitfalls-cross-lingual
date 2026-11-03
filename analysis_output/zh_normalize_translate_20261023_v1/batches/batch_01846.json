@@ -1,0 +1,229 @@
+{
+  "input_sha256": "62eff23db0ca1b5181d3b8fc9bb10792ccd5b8a0ff2e815b8669be9d6ba3824e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_d8c58aebe285c8cd129b",
+      "decision": "ready",
+      "subject": "Millie Bobby Brown",
+      "relation_id": "actor_to_character",
+      "relation_definition": "Actor in a specified work/version -> character portrayed by that actor; disambiguate work and version when necessary.",
+      "direction": "actor in specified work -> character portrayed",
+      "answer": "Eleven",
+      "canonical_fact": "Millie Bobby Brown plays the character Eleven in Stranger Things.",
+      "prompt_en": "In Stranger Things, which character does Millie Bobby Brown portray?",
+      "evidence_quotes": [
+        "who does millie bobby brown play in stranger things",
+        "Eleven"
+      ],
+      "reason": "Source Q&A directly states Millie Bobby Brown plays Eleven in Stranger Things. The catalog's character_to_actor has direction character->actor, which is the inverse of the needed actor->character direction. No existing relation fits exactly, so proposing actor_to_character as a precise new relation.",
+      "english": {
+        "answer": "Eleven",
+        "relation_id": "actor_to_character",
+        "prompt_en": "In Stranger Things, which character does Millie Bobby Brown portray?",
+        "direction": "actor in specified work -> character portrayed",
+        "subject": "Millie Bobby Brown",
+        "canonical_fact": "Millie Bobby Brown plays the character Eleven in Stranger Things.",
+        "relation_definition": "Actor in a specified work/version -> character portrayed by that actor; disambiguate work and version when necessary.",
+        "answer_aliases_en": [
+          "Eleven",
+          "El",
+          "011",
+          "Jane Hopper",
+          "Jane Ives"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Actor in a specified work/version -> character portrayed by that actor; disambiguate work and version when necessary.",
+          "direction": "actor in specified work -> character portrayed"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c486ac9eabbf47a781b6494321898d1aa057806a1d68aade0b23345e582e5a0f",
+      "input_sha256": "2d343ce7dac97bd5ec4ee5ea2a6f5e949fc2c3f236279cf30af0b50150434493",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d8d5080ebee594133550",
+      "decision": "ready",
+      "subject": "Pompeii",
+      "relation_id": "entity_to_destroying_volcano",
+      "relation_definition": "Destroyed entity (city/town) -> specific volcano responsible for its destruction; retains historical event context and distinguishes the destroying feature from a containing location.",
+      "direction": "destroyed entity -> destroying volcano",
+      "answer": "Mount Vesuvius",
+      "canonical_fact": "Pompeii was destroyed by the volcano Mount Vesuvius.",
+      "prompt_en": "What was the name of the volcano that destroyed Pompeii?",
+      "evidence_quotes": [
+        "what was the name of the volcano that destroyed pompeii",
+        "Mount Vesuvius"
+      ],
+      "reason": "Source Q&A directly states Mount Vesuvius destroyed Pompeii. No existing catalog relation fits a causal volcanic-destruction relationship; entity_to_containing_location covers geographic containment, not a destructive event agent. Proposing entity_to_destroying_volcano as a precise new relation rather than forcing a broad category.",
+      "english": {
+        "answer": "Mount Vesuvius",
+        "relation_id": "entity_to_destroying_volcano",
+        "prompt_en": "What was the name of the volcano that destroyed Pompeii?",
+        "direction": "destroyed entity -> destroying volcano",
+        "subject": "Pompeii",
+        "canonical_fact": "Pompeii was destroyed by the volcano Mount Vesuvius.",
+        "relation_definition": "Destroyed entity (city/town) -> specific volcano responsible for its destruction; retains historical event context and distinguishes the destroying feature from a containing location.",
+        "answer_aliases_en": [
+          "Mount Vesuvius",
+          "Vesuvius"
+        ],
+        "relation_spec": {
+          "id": "entity_to_destroying_volcano",
+          "definition": "Destroyed entity (city/town) -> specific volcano responsible for its destruction; retains historical event context and distinguishes the destroying feature from a containing location.",
+          "direction": "destroyed entity -> destroying volcano"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "011ed23d0eb38decd2d2b0e264f0a3c8fe5495eae05b1e8ca90e346a039d7b2a",
+      "input_sha256": "995bab128d368533fe603c794b3f3c15cae6caba2c46e7f3ac29b01391771c6e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_d8c58aebe285c8cd129b",
+      "input_sha256": "2d343ce7dac97bd5ec4ee5ea2a6f5e949fc2c3f236279cf30af0b50150434493",
+      "english": {
+        "answer": "Eleven",
+        "relation_id": "actor_to_character",
+        "prompt_en": "In Stranger Things, which character does Millie Bobby Brown portray?",
+        "direction": "actor in specified work -> character portrayed",
+        "subject": "Millie Bobby Brown",
+        "canonical_fact": "Millie Bobby Brown plays the character Eleven in Stranger Things.",
+        "relation_definition": "Actor in a specified work/version -> character portrayed by that actor; disambiguate work and version when necessary.",
+        "answer_aliases_en": [
+          "Eleven",
+          "El",
+          "011",
+          "Jane Hopper",
+          "Jane Ives"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Actor in a specified work/version -> character portrayed by that actor; disambiguate work and version when necessary.",
+          "direction": "actor in specified work -> character portrayed"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c486ac9eabbf47a781b6494321898d1aa057806a1d68aade0b23345e582e5a0f",
+      "translation": {
+        "record_id": "public:pbf_d8c58aebe285c8cd129b",
+        "subject_zh": "米莉·博比·布朗",
+        "prompt_zh": "在《怪奇物语》中，米莉·博比·布朗饰演的是哪个角色？",
+        "canonical_fact_zh": "米莉·博比·布朗在《怪奇物语》中饰演角色十一。",
+        "answer_zh": "十一",
+        "answer_aliases_zh": [
+          "十一",
+          "艾尔",
+          "011",
+          "简·霍珀",
+          "简·艾夫斯"
+        ]
+      },
+      "translation_sha256": "5a2b72bc5d5ca2d0bb4f6ea6eb69db7dae271ca254fdc385e0a721a8314a7eed"
+    },
+    {
+      "record_id": "public:pbf_d8d5080ebee594133550",
+      "input_sha256": "995bab128d368533fe603c794b3f3c15cae6caba2c46e7f3ac29b01391771c6e",
+      "english": {
+        "answer": "Mount Vesuvius",
+        "relation_id": "entity_to_destroying_volcano",
+        "prompt_en": "What was the name of the volcano that destroyed Pompeii?",
+        "direction": "destroyed entity -> destroying volcano",
+        "subject": "Pompeii",
+        "canonical_fact": "Pompeii was destroyed by the volcano Mount Vesuvius.",
+        "relation_definition": "Destroyed entity (city/town) -> specific volcano responsible for its destruction; retains historical event context and distinguishes the destroying feature from a containing location.",
+        "answer_aliases_en": [
+          "Mount Vesuvius",
+          "Vesuvius"
+        ],
+        "relation_spec": {
+          "id": "entity_to_destroying_volcano",
+          "definition": "Destroyed entity (city/town) -> specific volcano responsible for its destruction; retains historical event context and distinguishes the destroying feature from a containing location.",
+          "direction": "destroyed entity -> destroying volcano"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "011ed23d0eb38decd2d2b0e264f0a3c8fe5495eae05b1e8ca90e346a039d7b2a",
+      "translation": {
+        "record_id": "public:pbf_d8d5080ebee594133550",
+        "subject_zh": "庞贝",
+        "prompt_zh": "摧毁庞贝的那座火山叫什么名字？",
+        "canonical_fact_zh": "庞贝被维苏威火山摧毁。",
+        "answer_zh": "维苏威火山",
+        "answer_aliases_zh": [
+          "维苏威火山",
+          "维苏威"
+        ]
+      },
+      "translation_sha256": "84a1fb44d9d886bd906787153ade338285b359bd04d8c13fee2cb22711ef1501"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_d8c58aebe285c8cd129b",
+        "public:pbf_d8d5080ebee594133550"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2bab383f39a3a7130d223c5664e42d1918e31968978912889ff3e16b616a60c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2113,
+      "first_chunk_seconds": 36.615,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2110,
+        "prompt_tokens": 1614,
+        "total_tokens": 3724,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1578,
+          "text_tokens": 532
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ad3b71229349c3fc5ab939216c282b49e015803020eba7e2646cf5b2625bbad1",
+      "status": "completed",
+      "latency_seconds": 55.511
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_d8c58aebe285c8cd129b",
+        "public:pbf_d8d5080ebee594133550"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "988d2309dbc32860c4d4a488ee6e29b109f88d5ba77d1102e8dff636c3ee0c29",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1248,
+      "first_chunk_seconds": 1.8,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1246,
+        "prompt_tokens": 907,
+        "total_tokens": 2153,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 969,
+          "text_tokens": 277
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1a577eb86060d78cafe37f6b1cd2880911bdfe92515d6bc4fe2ce2d564049555",
+      "status": "completed",
+      "latency_seconds": 14.455
+    }
+  ],
+  "status": "completed"
+}

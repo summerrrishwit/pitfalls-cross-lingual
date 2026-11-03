@@ -1,0 +1,179 @@
+{
+  "input_sha256": "0a23e1e550a0774bf3ee9512380c7525b5d01637cb5800b0f6811a36887cd035",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000572",
+      "decision": "ready",
+      "subject": "branch of science that explains much of what you observe and do in your daily life",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "physical science",
+      "canonical_fact": "Physical science is the branch of science that explains much of what you observe and do in your daily life.",
+      "prompt_en": "What branch of science explains much of what you observe and do in your daily life?",
+      "evidence_quotes": [
+        "What branch of science explains much of what you observe and do in your daily life?",
+        "physical science"
+      ],
+      "reason": "The source question supplies a defining description ('branch of science that explains much of what you observe and do in your daily life') and asks for the conventional term. The answer 'physical science' is the unique term fitting that description. This matches description_to_term exactly. Qwen-3.8-Max extraction aligns; sensenova flagged ambiguous_subject but the description is sufficiently specific to a single branch.",
+      "english": {
+        "prompt_en": "What branch of science explains much of what you observe and do in your daily life?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "physical science",
+        "canonical_fact": "Physical science is the branch of science that explains much of what you observe and do in your daily life.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "branch of science that explains much of what you observe and do in your daily life",
+        "answer_aliases_en": [
+          "physical science"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "664cfb2b96500daceb30bac9e90b2569fe4c5a262be479efd02985bb2490a99e",
+      "input_sha256": "6d47cb368b16a93100e0f351c556fc2cff35a23fcc0963eb84cf37df899e2068",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000577",
+      "decision": "ready",
+      "subject": "Wearing personal protective equipment such as goggles and gloves during an experiment",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "safety precaution",
+      "canonical_fact": "Wearing personal protective equipment such as goggles and gloves during an experiment is an example of a safety precaution.",
+      "prompt_en": "Wearing personal protective equipment such as goggles and gloves during an experiment is an example of what?",
+      "evidence_quotes": [
+        "Wearing personal protective equipment such as goggles and gloves during an experiment is an example of what?",
+        "safety precaution"
+      ],
+      "reason": "The source question asks for the class/category that the described specific action falls under. 'Safety precaution' is the stable class; the PPE action is a concrete instance of that class. This fits entity_to_class. Qwen-3.8-Max marked it as scenario_classification (defer), but the question explicitly asks 'is an example of what?' which is a class-membership query, not an open-ended scenario. sensenova extraction is valid.",
+      "english": {
+        "prompt_en": "Wearing personal protective equipment such as goggles and gloves during an experiment is an example of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "safety precaution",
+        "canonical_fact": "Wearing personal protective equipment such as goggles and gloves during an experiment is an example of a safety precaution.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "Wearing personal protective equipment such as goggles and gloves during an experiment",
+        "answer_aliases_en": [
+          "safety precaution"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a11f97678f94eab2ef08d1571e821963b2af114e797eabb16535331e8593e749",
+      "input_sha256": "dd4f51b53d5d98d6376def91cd09b98dcf2f503970cbb288801a33edb394e9bd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000572",
+        "historical:raw_sciq_000577"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d70fbbb58c8b099f363172b806e4b2e894f9c84749cec4f32ed6b66fa53ab04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2352,
+      "first_chunk_seconds": 53.568,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2432,
+        "prompt_tokens": 1638,
+        "total_tokens": 4070,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1831,
+          "text_tokens": 601
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dbe90754171953e2f3d75196789fc0572b13fba77fd31d3d7f8abcfb1165d123",
+      "status": "completed",
+      "latency_seconds": 189.373
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000572",
+        "historical:raw_sciq_000577"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "19e7e48ae274711f2f35e2a9f75b2ff0004f513b9c3358e712154a98dc4d684c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.699
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000572",
+        "historical:raw_sciq_000577"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "19e7e48ae274711f2f35e2a9f75b2ff0004f513b9c3358e712154a98dc4d684c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 4.168,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000572",
+        "historical:raw_sciq_000577"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "19e7e48ae274711f2f35e2a9f75b2ff0004f513b9c3358e712154a98dc4d684c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 28.046,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

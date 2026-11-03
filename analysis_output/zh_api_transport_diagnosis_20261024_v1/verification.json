@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-24T13:39:43.873179+00:00",
+  "tests_passed": 59,
+  "worker_pid": 32407,
+  "old_worker_pid": 99215,
+  "entrypoint": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/runtime_transport_stream_v1/run_zh_candidate_pipeline.py",
+  "response_transport": "sse",
+  "requested_model": "qwen-3.8-max",
+  "model_route_credentials_and_prompt_contracts_unchanged": true,
+  "frozen_operations_overlay_reviews_dispatch_archives_exposure_attempt_prefixes_valid": true,
+  "original_checkpoints_byte_identical": true,
+  "historical_recoveries": [
+    {
+      "recovery_id": "gateway_20261024_v1",
+      "manifest_sha256": "0b6eaf51b77df5fd8c2013305936bf126cf11d690565a4a13ff4412d2c53a9d7",
+      "archived_batch_snapshots": 19
+    },
+    {
+      "recovery_id": "stream_transport_20261024_v1",
+      "manifest_sha256": "20aac28a47374ccc158c319f84290381a43bd23f7c8209e780c554a49a3e0c45",
+      "archived_batch_snapshots": 32
+    },
+    {
+      "recovery_id": "transport_continue_20261024_v1",
+      "manifest_sha256": "f9c8eaa9578012ad468dada78523c06015c0c22e58a0112aaf4261c003c3ac66",
+      "archived_batch_snapshots": 23
+    }
+  ],
+  "diagnostic_probes": [
+    {
+      "concurrency": 1,
+      "requests": 1,
+      "peak_in_flight": 1,
+      "completed": 1,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 1
+      },
+      "identity_stable": true,
+      "wall_seconds": 12.474,
+      "p50_seconds": 12.473,
+      "p95_seconds": 12.473,
+      "requests_per_minute": 4.81,
+      "semantic_case_matches": 4,
+      "semantic_cases_total": 4,
+      "bounded_probe_passed": true
+    },
+    {
+      "concurrency": 8,
+      "requests": 8,
+      "peak_in_flight": 8,
+      "completed": 8,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 8
+      },
+      "identity_stable": true,
+      "wall_seconds": 59.868,
+      "p50_seconds": 38.747,
+      "p95_seconds": 59.86,
+      "requests_per_minute": 8.018,
+      "semantic_case_matches": 32,
+      "semantic_cases_total": 32,
+      "bounded_probe_passed": true
+    }
+  ],
+  "production_success_by_stage": {
+    "normalize": 13,
+    "translate": 11
+  },
+  "production_failure_types": {
+    "answer_leaked_in_prompt": 1,
+    "RemoteProtocolError": 6,
+    "InternalServerError": 2
+  },
+  "first_stream_production_success": "2026-10-24T13:35:48.724356+00:00",
+  "last_stream_production_success": "2026-10-24T13:38:32.911766+00:00",
+  "before_normalized": 1266,
+  "before_translated": 1212,
+  "summary": {
+    "at": "2026-10-24T13:38:40.785285+00:00",
+    "source_count": 7250,
+    "normalized_count": 1292,
+    "translated_count": 1234,
+    "reviewed_count": 1212,
+    "source_status_counts": {
+      "zh_translation_accepted": 1170,
+      "zh_translation_rejected": 40,
+      "normalization_defer": 8,
+      "technical_normalization_failed": 202,
+      "technical_translation_failed": 46,
+      "zh_translation_deferred": 2,
+      "pending_translation": 4,
+      "pending_translation_review": 22,
+      "pending_normalization": 5756
+    },
+    "counts_are_not_deduplicated_facts_or_net_new160": true,
+    "new_target_behavior_calls": 0,
+    "formal_experiment_eligible": false,
+    "human_gold": false,
+    "files": {
+      "accepted_chinese_candidates.jsonl": "a3aaeeb6a15fda923ca1b63598407901b67c0790af59b5972e898ffa79f8e7ac",
+      "source_coverage.jsonl": "82f3401206a4e1ca8ca35d3a2c8efb9fbfd835d3f871e11e30319cfa32940347",
+      "normalized_candidates.jsonl": "fa3aa2b81b5fa92293011987680361b20b937a282768ab4ab5863977b901aad5"
+    }
+  },
+  "pending_packets": [
+    "packet_0062"
+  ],
+  "tail_retry_archive_count": 0,
+  "formal_experiment_eligible": false,
+  "human_gold": false
+}

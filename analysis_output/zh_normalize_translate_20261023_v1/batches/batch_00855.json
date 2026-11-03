@@ -1,0 +1,71 @@
+{
+  "input_sha256": "2267d8bcdc9f6aa7c301d4c88166223093fcca6491f1314ba1ca4303d582b05a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_34b5ce64792b530da9eb",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures a generic organism-to-climate-requirement statement. The source is a tautological sentence completion ('A plant needs a specific climate to grow and [persist]') where the answer 'persist' is a verb, not a named entity or location. No existing relation (organism_to_habitat, entity_to_class, etc.) fits the direction and semantics. Proposing a new relation for such a generic, non-specific biological principle would be overly broad and non-reusable. Deferred for insufficient structural fit.",
+      "input_sha256": "f9b28d49cb659a966fbf2a6da8ebcb4a363c5cb2b6e05a7767a87aed0cfb3ecb",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_34d9f0a7bb4b912e6246",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation matches 'physical process → mass-change direction.' The subject 'mass in both fission and fusion' is a context-bound physical quantity, not a standard entity; the answer 'decreases' is a directional behavior, not a named entity or attribute. This encodes a fundamental physics law (E=mc²) rather than a discrete entity-to-entity factual link. Forcing it into any catalog relation (e.g., entity_to_class, entity_to_material) would misrepresent the semantics. Deferred.",
+      "input_sha256": "a8a9aa5c2270c14dcd3a27418233978a899d348ee933092a85b602a73f89dfea",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_34b5ce64792b530da9eb",
+        "public:pbf_34d9f0a7bb4b912e6246"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5200bd16a35d62d3b8bbb47ecd3fb29fda9d1cc6a96e92b0aca878b20ad0667a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2525,
+      "first_chunk_seconds": 20.633,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2665,
+        "prompt_tokens": 1584,
+        "total_tokens": 4249,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2219,
+          "text_tokens": 446
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b2c6b9fb8ab278429e787573d19d7f2d5c854a02c9ff735fd4bef6211121b289",
+      "status": "completed",
+      "latency_seconds": 66.697
+    }
+  ],
+  "status": "completed"
+}

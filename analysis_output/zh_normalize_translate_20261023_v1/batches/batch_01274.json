@@ -1,0 +1,192 @@
+{
+  "input_sha256": "4fd75b57e46c8ef015705d4909983d8c1e4bcf85d12860921a4031e6ddaf0be2",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7d6ad8e0444a6046280a",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question 'who won the new york times vs. united states case' embeds the answer entity 'The New York Times' within the case name. Any faithful prompt_en necessarily contains the answer, violating the 'does not contain its answer' constraint. No catalog relation fits 'case winner'; a new relation would need to be proposed, but the prompt-leak issue makes the record unusable in its current form. Defer.",
+      "input_sha256": "80caa7b10bd7f4159140e55b282cb2219d771623079de1c87467ac14ff5f60f7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7d8d830cbeca9d531a80",
+      "decision": "ready",
+      "subject": "WWE Greatest Royal Rumble 2018",
+      "relation_id": "event_to_winner",
+      "relation_definition": "The participant declared as the winner of a specified competition or event; direction is event -> winner.",
+      "direction": "event -> winner",
+      "answer": "Braun Strowman",
+      "canonical_fact": "Braun Strowman won the WWE Greatest Royal Rumble 2018.",
+      "prompt_en": "Factual question: Who won the WWE Greatest Royal Rumble 2018?",
+      "evidence_quotes": [
+        "who won at the wwe greatest royal rumble 2018",
+        "Braun Strowman"
+      ],
+      "reason": "Source answer explicitly names Braun Strowman as the winner. No existing catalog relation covers a competition/event winner, so a precise new relation 'event_to_winner' is proposed. Prompt contains no mention of the answer entity. No dates, markets, or versions invented.",
+      "english": {
+        "answer": "Braun Strowman",
+        "relation_id": "event_to_winner",
+        "prompt_en": "Factual question: Who won the WWE Greatest Royal Rumble 2018?",
+        "direction": "event -> winner",
+        "subject": "WWE Greatest Royal Rumble 2018",
+        "canonical_fact": "Braun Strowman won the WWE Greatest Royal Rumble 2018.",
+        "relation_definition": "The participant declared as the winner of a specified competition or event; direction is event -> winner.",
+        "answer_aliases_en": [
+          "Braun Strowman",
+          "Adam Scherr"
+        ],
+        "relation_spec": {
+          "id": "event_to_winner",
+          "definition": "The participant declared as the winner of a specified competition or event; direction is event -> winner.",
+          "direction": "event -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a56045c8482bf2f6bc80711a13a0d397439395ea2fa91696472ecac7866c7f4",
+      "input_sha256": "ea8add6e5c4d5bb4b78567cf4a9ce2941036e8632cb289189ebb67e30ff2e5d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_7d8d830cbeca9d531a80",
+      "input_sha256": "ea8add6e5c4d5bb4b78567cf4a9ce2941036e8632cb289189ebb67e30ff2e5d1",
+      "english": {
+        "answer": "Braun Strowman",
+        "relation_id": "event_to_winner",
+        "prompt_en": "Factual question: Who won the WWE Greatest Royal Rumble 2018?",
+        "direction": "event -> winner",
+        "subject": "WWE Greatest Royal Rumble 2018",
+        "canonical_fact": "Braun Strowman won the WWE Greatest Royal Rumble 2018.",
+        "relation_definition": "The participant declared as the winner of a specified competition or event; direction is event -> winner.",
+        "answer_aliases_en": [
+          "Braun Strowman",
+          "Adam Scherr"
+        ],
+        "relation_spec": {
+          "id": "event_to_winner",
+          "definition": "The participant declared as the winner of a specified competition or event; direction is event -> winner.",
+          "direction": "event -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a56045c8482bf2f6bc80711a13a0d397439395ea2fa91696472ecac7866c7f4",
+      "translation": {
+        "record_id": "public:pbf_7d8d830cbeca9d531a80",
+        "subject_zh": "WWE 2018年最伟大皇家大战",
+        "prompt_zh": "事实性问题：谁赢得了WWE 2018年最伟大皇家大战？",
+        "canonical_fact_zh": "布朗·斯特劳曼赢得了WWE 2018年最伟大皇家大战。",
+        "answer_zh": "布朗·斯特劳曼",
+        "answer_aliases_zh": [
+          "布朗·斯特劳曼",
+          "亚当·谢尔"
+        ]
+      },
+      "translation_sha256": "78118899170752de258db3fbf0fc4b6c1cb59c74ad156a4bbe1da327ea9e0605"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7d6ad8e0444a6046280a",
+        "public:pbf_7d8d830cbeca9d531a80"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b73b5d485c289f5b09a0b0f33d39e994e8eccb9adf29c9ea56d914b737e187eb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2573,
+      "first_chunk_seconds": 43.66,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2617,
+        "prompt_tokens": 1692,
+        "total_tokens": 4309,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2056,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9c7c3091f3fcb9949e4384f08d3ebae6098b033a40fe496156b12ac84cdf9ce4",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 72.223,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7d6ad8e0444a6046280a",
+        "public:pbf_7d8d830cbeca9d531a80"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "18460a459e22e8fdc77f46ea17ac315f9f75449d4dbeb6accdbdc6ef8178689b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3555,
+      "first_chunk_seconds": 38.113,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3556,
+        "prompt_tokens": 1711,
+        "total_tokens": 5267,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3075,
+          "text_tokens": 481
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e1857925d4287bf61b5f8bdd9935839799092de31319964e46eaa3a00b857ee9",
+      "status": "completed",
+      "latency_seconds": 66.371
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7d8d830cbeca9d531a80"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7053ca5a9058a4034916645ec39c741feb234b247ea439b87e3cc23a6e197bdb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1101,
+      "first_chunk_seconds": 1.557,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1098,
+        "prompt_tokens": 546,
+        "total_tokens": 1644,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 938,
+          "text_tokens": 160
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "033940d85bd8c65a768aa63029d03e905b7887917394465a35dd23e14119568a",
+      "status": "completed",
+      "latency_seconds": 10.092
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,99 @@
+{
+  "input_sha256": "342d4ee9ec1ce2525cef47e9ab209b478c99b18d6142b9440fffa1634f49e64e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007640",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits the 'listened to as' / format-of connection between vinyl and record albums. The source is a thin commonsense fill-in-the-blank ('How can someone listen to vinyl?' → 'record albums') that does not establish a stable, precise factual claim suitable for a reusable relation. A new relation such as 'entity_to_format' could be proposed, but the source support is insufficient to define it rigorously, so deferring is appropriate.",
+      "input_sha256": "a88b0c264c4f36ff6ca44cdbe03e818e7d8002add45a1e75c19007e2030c4e50",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007648",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'prior knowledge of' is a missing-word fill-in describing a component/prerequisite of the process of remembering, not a stable definition, class membership, or any other catalog relation. No listed relation (term_to_definition, entity_to_class, etc.) fits the direction 'process → prerequisite component.' A new relation (e.g., process_to_prerequisite) could be sketched, but the single thin commonsense QA pair does not provide sufficient support to define it precisely, so the record is deferred.",
+      "input_sha256": "a753f9a16167092b3d0c3d5671195e61b04018b64c9a402c928d3c35af16e33e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007640",
+        "historical:raw_commonsense_qa_007648"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0253ddb33a4d1070c718b569ebca37ff96f5bdaf1807c4f9b6f6d2661a565071",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 22.05
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007640",
+        "historical:raw_commonsense_qa_007648"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0253ddb33a4d1070c718b569ebca37ff96f5bdaf1807c4f9b6f6d2661a565071",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.745
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007640",
+        "historical:raw_commonsense_qa_007648"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0253ddb33a4d1070c718b569ebca37ff96f5bdaf1807c4f9b6f6d2661a565071",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1962,
+      "first_chunk_seconds": 2.202,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2091,
+        "prompt_tokens": 1583,
+        "total_tokens": 3674,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1673,
+          "text_tokens": 418
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "16e7e62811d06b2daed3c9950337c2488f6ae8ebf998f23d5105892f4c36dbaa",
+      "status": "completed",
+      "latency_seconds": 32.835
+    }
+  ],
+  "status": "completed"
+}

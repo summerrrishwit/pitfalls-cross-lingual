@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8093f1b7ae6d146fa166fc68efc947c237aa315ba64236ada7c55fc219e6adf3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000076",
+      "decision": "ready",
+      "subject": "stomata",
+      "relation_id": "structure_to_process",
+      "relation_definition": "The specific physiological or biochemical process that occurs through or is mediated by a named biological structure, stated at the granularity asked.",
+      "direction": "biological structure -> process",
+      "answer": "gas exchange",
+      "canonical_fact": "Gas exchange is the process involving carbon dioxide and oxygen that occurs through stomata, the small regulated openings in photosynthesis.",
+      "prompt_en": "In photosynthesis, what process involving carbon dioxide and oxygen occurs through small, regulated openings?",
+      "evidence_quotes": [
+        "gas exchange",
+        "small, regulated openings called stomata"
+      ],
+      "reason": "The source question and answer establish that gas exchange is the CO₂/O₂ process occurring through stomata. No catalog relation captures 'structure -> process mediated by it'; a precise new relation is proposed. Answer is a literal substring of source_answer; evidence quotes are verbatim from the source pair.",
+      "english": {
+        "direction": "biological structure -> process",
+        "relation_id": "structure_to_process",
+        "answer": "gas exchange",
+        "canonical_fact": "Gas exchange is the process involving carbon dioxide and oxygen that occurs through stomata, the small regulated openings in photosynthesis.",
+        "subject": "stomata",
+        "prompt_en": "In photosynthesis, what process involving carbon dioxide and oxygen occurs through small, regulated openings?",
+        "relation_definition": "The specific physiological or biochemical process that occurs through or is mediated by a named biological structure, stated at the granularity asked.",
+        "answer_aliases_en": [
+          "gas exchange"
+        ],
+        "relation_spec": {
+          "id": "structure_to_process",
+          "definition": "The specific physiological or biochemical process that occurs through or is mediated by a named biological structure, stated at the granularity asked.",
+          "direction": "biological structure -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8886177fc6fe62e005de3e17edb4a39f102ee585d2fd96eb3e2cb58c882f18cb",
+      "input_sha256": "ff764b04c0592687da7c3f5c34332ef0db9fc2deed8af002313eae6473a41e05",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000077",
+      "decision": "ready",
+      "subject": "angiosperm seed",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "an ovary",
+      "canonical_fact": "An angiosperm seed develops inside an ovary.",
+      "prompt_en": "An angiosperm seed develops inside of what?",
+      "evidence_quotes": [
+        "an ovary",
+        "Angiosperm seed develops inside of what"
+      ],
+      "reason": "The source states the angiosperm seed is contained within the ovary, a direct part-to-whole (containment) relationship. part_to_whole in the catalog fits exactly: seed (part) -> ovary (whole). Answer is a literal substring of source_answer; evidence quotes are verbatim.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "an ovary",
+        "canonical_fact": "An angiosperm seed develops inside an ovary.",
+        "subject": "angiosperm seed",
+        "prompt_en": "An angiosperm seed develops inside of what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "an ovary"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9df4ca43b7689b6ee6abb37fa62d11666bf1af7b1a5b5b232d811767b8df0b5d",
+      "input_sha256": "5de8dc6aaa4294aa8bbeb33b8f93bab245bf94712b80a773e461b2ac53ba17c4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000076",
+      "input_sha256": "ff764b04c0592687da7c3f5c34332ef0db9fc2deed8af002313eae6473a41e05",
+      "english": {
+        "direction": "biological structure -> process",
+        "relation_id": "structure_to_process",
+        "answer": "gas exchange",
+        "canonical_fact": "Gas exchange is the process involving carbon dioxide and oxygen that occurs through stomata, the small regulated openings in photosynthesis.",
+        "subject": "stomata",
+        "prompt_en": "In photosynthesis, what process involving carbon dioxide and oxygen occurs through small, regulated openings?",
+        "relation_definition": "The specific physiological or biochemical process that occurs through or is mediated by a named biological structure, stated at the granularity asked.",
+        "answer_aliases_en": [
+          "gas exchange"
+        ],
+        "relation_spec": {
+          "id": "structure_to_process",
+          "definition": "The specific physiological or biochemical process that occurs through or is mediated by a named biological structure, stated at the granularity asked.",
+          "direction": "biological structure -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8886177fc6fe62e005de3e17edb4a39f102ee585d2fd96eb3e2cb58c882f18cb",
+      "translation": {
+        "record_id": "historical:raw_sciq_000076",
+        "subject_zh": "气孔",
+        "prompt_zh": "在光合作用中，涉及二氧化碳和氧气、通过小而受调节的开口发生的什么过程？",
+        "canonical_fact_zh": "气体交换是涉及二氧化碳和氧气的过程，通过光合作用中小而受调节的开口——气孔——发生。",
+        "answer_zh": "气体交换",
+        "answer_aliases_zh": [
+          "气体交换"
+        ]
+      },
+      "translation_sha256": "6c26ceae83d3083de36575bfb6c71a283641abf7fd5f5a9b49bf48c6e67934a8"
+    },
+    {
+      "record_id": "historical:raw_sciq_000077",
+      "input_sha256": "5de8dc6aaa4294aa8bbeb33b8f93bab245bf94712b80a773e461b2ac53ba17c4",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "an ovary",
+        "canonical_fact": "An angiosperm seed develops inside an ovary.",
+        "subject": "angiosperm seed",
+        "prompt_en": "An angiosperm seed develops inside of what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "an ovary"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9df4ca43b7689b6ee6abb37fa62d11666bf1af7b1a5b5b232d811767b8df0b5d",
+      "translation": {
+        "record_id": "historical:raw_sciq_000077",
+        "subject_zh": "被子植物种子",
+        "prompt_zh": "被子植物种子在什么内部发育？",
+        "canonical_fact_zh": "被子植物种子在子房内发育。",
+        "answer_zh": "子房",
+        "answer_aliases_zh": [
+          "子房"
+        ]
+      },
+      "translation_sha256": "825765685ca6fe9930837324fee185e09c3d39ec234bd25ff7133ec15b0120d7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000076",
+        "historical:raw_sciq_000077"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4fc18cf142d58e3d657c52c2f1bdbc7797b156788cb8a391057aa81bcabb0489",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2424,
+      "first_chunk_seconds": 20.691,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2674,
+        "prompt_tokens": 1782,
+        "total_tokens": 4456,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2170,
+          "text_tokens": 504
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8144dcf092534eeee1393294f78eed553b1c79e2267bbe142ac605ce4136bdce",
+      "status": "completed",
+      "latency_seconds": 52.637
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000076",
+        "historical:raw_sciq_000077"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "faeeb19138532e095e8964ee3da029178bea130c2af8cffe67d83942d325592a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1081,
+      "first_chunk_seconds": 28.366,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1126,
+        "prompt_tokens": 894,
+        "total_tokens": 2020,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 891,
+          "text_tokens": 235
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "39798ca5eaadd8eafd3478eb42d169467bc5fde97f523f63a4e6883e64ce71b2",
+      "status": "completed",
+      "latency_seconds": 41.356
+    }
+  ],
+  "status": "completed"
+}

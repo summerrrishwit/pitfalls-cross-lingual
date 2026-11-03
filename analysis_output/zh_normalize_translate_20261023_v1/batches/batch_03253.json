@@ -1,0 +1,171 @@
+{
+  "input_sha256": "ac3ccef6b7342a903061b16b64c53fec2bf9dde4b408de6ef32d9e37260d9754",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000986",
+      "decision": "ready",
+      "subject": "heterotrophs",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "food",
+      "canonical_fact": "Heterotrophs cannot make their own food.",
+      "prompt_en": "What do heterotrophs, such as animals, not produce on their own?",
+      "evidence_quotes": [
+        "Animals are heterotrophs, which means that they cannot make their own what?",
+        "food"
+      ],
+      "reason": "The source question defines heterotrophs (using animals as the example) as organisms that cannot make their own food. The answer 'food' is a literal substring of source_answer. term_to_definition fits: the subject is the biological term 'heterotrophs' and the answer completes its defining property.",
+      "english": {
+        "prompt_en": "What do heterotrophs, such as animals, not produce on their own?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "food",
+        "canonical_fact": "Heterotrophs cannot make their own food.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "heterotrophs",
+        "answer_aliases_en": [
+          "food"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8bcd7c235bb6e996a2e1e723c156c9289bd62518db2c6f839051bc39943c8dd2",
+      "input_sha256": "81322ff75010f9adbafeb95520698ca969d241a5e4724b076ed22b5347451c10",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000987",
+      "decision": "ready",
+      "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "eardrum",
+      "canonical_fact": "A thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is the eardrum.",
+      "prompt_en": "What is the name of the thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it?",
+      "evidence_quotes": [
+        "a thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+        "eardrum"
+      ],
+      "reason": "The source question supplies a unique anatomical description and asks for its conventional term. The answer 'eardrum' is a literal substring of source_answer. description_to_term fits exactly: the identifying description uniquely corresponds to the term 'eardrum'.",
+      "english": {
+        "prompt_en": "What is the name of the thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "eardrum",
+        "canonical_fact": "A thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it is the eardrum.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "thin membrane stretched tight across the end of the ear canal that vibrates when sound waves strike it",
+        "answer_aliases_en": [
+          "eardrum"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c844b497d18d687aec7e0ea3765cc2d630f6ed0fc85ba1b8c09e0a30513987d8",
+      "input_sha256": "8f195444551bf151e96e739006eedb613702cbe794bf6dfac525d6be5d363da4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000986",
+        "historical:raw_sciq_000987"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7f92c5e3d3c66f64d859e18a4fbb57011826a0d22067b3923c7a0259c91559a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.738
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000986",
+        "historical:raw_sciq_000987"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7f92c5e3d3c66f64d859e18a4fbb57011826a0d22067b3923c7a0259c91559a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2971,
+      "first_chunk_seconds": 1.66,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3099,
+        "prompt_tokens": 1774,
+        "total_tokens": 4873,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2556,
+          "text_tokens": 543
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3228f6940a4cf312ee552a549279d0812ac5654ebb0c9da5a62e5ae01ac05aaa",
+      "status": "completed",
+      "latency_seconds": 47.027
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000986",
+        "historical:raw_sciq_000987"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6016fbfded220b608a28439ec67f89c5a771ffa8f10a3724658b6c5b4cb9fe43",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.614
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000986",
+        "historical:raw_sciq_000987"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6016fbfded220b608a28439ec67f89c5a771ffa8f10a3724658b6c5b4cb9fe43",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.844
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000986",
+        "historical:raw_sciq_000987"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6016fbfded220b608a28439ec67f89c5a771ffa8f10a3724658b6c5b4cb9fe43",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.635
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "111b77cdf538d03c39a36e90c57b3dfdfe26bce8b550a33c04743f6f5f2d8ad8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000235",
+      "decision": "ready",
+      "subject": "most energy lost to the environment",
+      "relation_id": "process_to_dominant_form",
+      "relation_definition": "The dominant or most common form/modality in which a specified physical quantity or process manifests in a stated context; preserves qualifiers such as 'most' or 'primarily'.",
+      "direction": "specified physical quantity/process in stated context -> dominant form/modality",
+      "answer": "heat",
+      "canonical_fact": "Most energy that is lost to the environment is lost as heat.",
+      "prompt_en": "In which dominant form is most energy lost to the environment?",
+      "evidence_quotes": [
+        "most energy that is lost to the environment",
+        "heat"
+      ],
+      "reason": "The source question explicitly asks for the form ('lost as?') of the most energy lost to the environment, and the answer 'heat' is the literal source answer. No catalog relation precisely captures 'dominant form/modality of a physical process in a stated context'; entity_to_class requires a stable taxonomy-level membership, whereas 'most' is a contextual qualifier and 'heat' is a transfer modality rather than a taxonomy class. Proposing process_to_dominant_form with the qualifier preserved.",
+      "english": {
+        "direction": "specified physical quantity/process in stated context -> dominant form/modality",
+        "relation_id": "process_to_dominant_form",
+        "answer": "heat",
+        "canonical_fact": "Most energy that is lost to the environment is lost as heat.",
+        "subject": "most energy lost to the environment",
+        "prompt_en": "In which dominant form is most energy lost to the environment?",
+        "relation_definition": "The dominant or most common form/modality in which a specified physical quantity or process manifests in a stated context; preserves qualifiers such as 'most' or 'primarily'.",
+        "answer_aliases_en": [
+          "heat"
+        ],
+        "relation_spec": {
+          "id": "process_to_dominant_form",
+          "definition": "The dominant or most common form/modality in which a specified physical quantity or process manifests in a stated context; preserves qualifiers such as 'most' or 'primarily'.",
+          "direction": "specified physical quantity/process in stated context -> dominant form/modality"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed72c2fde2c8d8d9a01240d44c0e2e7bc7356297548db9db4864e8227a131dbc",
+      "input_sha256": "79ff5a086d14a2dd3d9d5d3c3b82d204da3d561c0af84f3d76db18ac4992e1e9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000236",
+      "decision": "ready",
+      "subject": "populations when resources are limited",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "logistic growth",
+      "canonical_fact": "When resources are limited, populations exhibit logistic growth.",
+      "prompt_en": "When resources are limited, what type of growth do populations exhibit?",
+      "evidence_quotes": [
+        "When resources are limited, populations exhibit what type of growth?",
+        "logistic growth"
+      ],
+      "reason": "The source question asks for the 'type of growth' (a stated taxonomy level: growth patterns) exhibited by populations under the stated condition 'resources are limited'. 'Logistic growth' is a well-defined class in the taxonomy of population-growth models. entity_to_class fits: the entity is populations under the specified condition, and the class is logistic growth at the taxonomy level of growth type. The qualifier 'when resources are limited' is retained in the subject.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "logistic growth",
+        "canonical_fact": "When resources are limited, populations exhibit logistic growth.",
+        "subject": "populations when resources are limited",
+        "prompt_en": "When resources are limited, what type of growth do populations exhibit?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "logistic growth"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "451f996db793c2c441b434804418927070128ca68f536fdf5af729d6f923ba04",
+      "input_sha256": "4571e5373ea9ab98f092e866c5c6329f1d09ec86ce28dda52c20ec24cd3d1c4d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000235",
+      "input_sha256": "79ff5a086d14a2dd3d9d5d3c3b82d204da3d561c0af84f3d76db18ac4992e1e9",
+      "english": {
+        "direction": "specified physical quantity/process in stated context -> dominant form/modality",
+        "relation_id": "process_to_dominant_form",
+        "answer": "heat",
+        "canonical_fact": "Most energy that is lost to the environment is lost as heat.",
+        "subject": "most energy lost to the environment",
+        "prompt_en": "In which dominant form is most energy lost to the environment?",
+        "relation_definition": "The dominant or most common form/modality in which a specified physical quantity or process manifests in a stated context; preserves qualifiers such as 'most' or 'primarily'.",
+        "answer_aliases_en": [
+          "heat"
+        ],
+        "relation_spec": {
+          "id": "process_to_dominant_form",
+          "definition": "The dominant or most common form/modality in which a specified physical quantity or process manifests in a stated context; preserves qualifiers such as 'most' or 'primarily'.",
+          "direction": "specified physical quantity/process in stated context -> dominant form/modality"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed72c2fde2c8d8d9a01240d44c0e2e7bc7356297548db9db4864e8227a131dbc",
+      "translation": {
+        "record_id": "historical:raw_sciq_000235",
+        "subject_zh": "散失到环境中的大部分能量",
+        "prompt_zh": "散失到环境中的大部分能量主要以何种形式存在？",
+        "canonical_fact_zh": "散失到环境中的大部分能量是以热的形式散失的。",
+        "answer_zh": "热",
+        "answer_aliases_zh": [
+          "热"
+        ]
+      },
+      "translation_sha256": "50bf7b75e10a5267161dc311a527e346f0a63cdf285532c33c57993f52c41ff6"
+    },
+    {
+      "record_id": "historical:raw_sciq_000236",
+      "input_sha256": "4571e5373ea9ab98f092e866c5c6329f1d09ec86ce28dda52c20ec24cd3d1c4d",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "logistic growth",
+        "canonical_fact": "When resources are limited, populations exhibit logistic growth.",
+        "subject": "populations when resources are limited",
+        "prompt_en": "When resources are limited, what type of growth do populations exhibit?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "logistic growth"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "451f996db793c2c441b434804418927070128ca68f536fdf5af729d6f923ba04",
+      "translation": {
+        "record_id": "historical:raw_sciq_000236",
+        "subject_zh": "资源受限时种群",
+        "prompt_zh": "资源受限时，种群表现出何种类型的增长？",
+        "canonical_fact_zh": "资源受限时，种群表现出逻辑斯谛增长。",
+        "answer_zh": "逻辑斯谛增长",
+        "answer_aliases_zh": [
+          "逻辑斯谛增长"
+        ]
+      },
+      "translation_sha256": "cba4b8b85cd8a328f95e5059fa19a96b31466bf469aaa7eb784549f6b08f6dd1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000235",
+        "historical:raw_sciq_000236"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "473339a7cf4dcb95d2a2c61944f044c02085081f5eb3de34e61a06024a45213c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2383,
+      "first_chunk_seconds": 1.585,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2484,
+        "prompt_tokens": 1676,
+        "total_tokens": 4160,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1895,
+          "text_tokens": 589
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2a5ddd824809c202e041eb814a4e7282cd17c32995f149bac0dd8a9062c85ae5",
+      "status": "completed",
+      "latency_seconds": 51.854
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000235",
+        "historical:raw_sciq_000236"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0c4e0247de427820b56a9e19c9f5b35968a42a24c78e9b08bb4a400c235a5c8f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 820,
+      "first_chunk_seconds": 2.925,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 860,
+        "prompt_tokens": 870,
+        "total_tokens": 1730,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 629,
+          "text_tokens": 231
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a4ee34e58965bba56091d68218584cb4efb0c5ecf77a1d179b42a8e9caeef268",
+      "status": "completed",
+      "latency_seconds": 42.84
+    }
+  ],
+  "status": "completed"
+}

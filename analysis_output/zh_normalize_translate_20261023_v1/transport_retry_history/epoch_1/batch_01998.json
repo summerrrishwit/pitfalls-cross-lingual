@@ -1,0 +1,171 @@
+{
+  "input_sha256": "1b489cd393d3e6a4d4066c8e5cc13cfc3bbd0e12de87be29bf9beedaf36fd287",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ef38a36573d0252f3a9d",
+      "decision": "ready",
+      "subject": "fight-or-flight response",
+      "relation_id": "process_to_controlling_system",
+      "relation_definition": "The specific nervous system or physiological system that directs or controls a stated physiological process or response.",
+      "direction": "physiological process/response -> controlling system",
+      "answer": "the sympathetic nervous system",
+      "canonical_fact": "The fight-or-flight response is directed by the sympathetic nervous system.",
+      "prompt_en": "Which nervous system directs the fight-or-flight response?",
+      "evidence_quotes": [
+        "the body prepares for fight-or-flight, directed by",
+        "the sympathetic nervous system"
+      ],
+      "reason": "The source explicitly states the fight-or-flight response is directed by the sympathetic nervous system. No existing catalog relation captures a physiological control/direction relationship; a new precise relation process_to_controlling_system is proposed. The answer is a concise literal substring of the source answer.",
+      "english": {
+        "answer": "the sympathetic nervous system",
+        "relation_id": "process_to_controlling_system",
+        "prompt_en": "Which nervous system directs the fight-or-flight response?",
+        "direction": "physiological process/response -> controlling system",
+        "subject": "fight-or-flight response",
+        "canonical_fact": "The fight-or-flight response is directed by the sympathetic nervous system.",
+        "relation_definition": "The specific nervous system or physiological system that directs or controls a stated physiological process or response.",
+        "answer_aliases_en": [
+          "the sympathetic nervous system"
+        ],
+        "relation_spec": {
+          "id": "process_to_controlling_system",
+          "definition": "The specific nervous system or physiological system that directs or controls a stated physiological process or response.",
+          "direction": "physiological process/response -> controlling system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "312552d1f280c2f1d494b882a5c4e034760a14190976e1074ae386e1bbedc2d9",
+      "input_sha256": "1a2a6d3c067419b792cbadac410e4627223ea545b81245ec1f36aab085ed65e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ef4eb28e250913e280f0",
+      "decision": "ready",
+      "subject": "50 000 word novel without the letter e",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Gadsby",
+      "canonical_fact": "The 50 000 word novel without the letter e is titled Gadsby.",
+      "prompt_en": "What is the title of the 50 000 word novel that does not contain the letter e?",
+      "evidence_quotes": [
+        "50 000 word novel without the letter e",
+        "Gadsby"
+      ],
+      "reason": "The source question provides an identifying description (50,000-word novel with no letter 'e') and the answer names the unique entity Gadsby. The existing description_to_entity relation fits exactly in both definition and direction. The answer is a literal substring of the source answer.",
+      "english": {
+        "answer": "Gadsby",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the title of the 50 000 word novel that does not contain the letter e?",
+        "direction": "identifying description -> entity",
+        "subject": "50 000 word novel without the letter e",
+        "canonical_fact": "The 50 000 word novel without the letter e is titled Gadsby.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Gadsby"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2ed446f40d0ec90069b769d73acb8b70250647d099f8039b55d857920b95f567",
+      "input_sha256": "35bc138e3669400a42093e3f964e7b8ae8992603eb8cc616bd32f0cc2e580626",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ef38a36573d0252f3a9d",
+        "public:pbf_ef4eb28e250913e280f0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b6ea93ef899f9771bd3ad1625c1a3f1766f7ea958b83d7c790ad67ae7bc6ca6c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.332
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ef38a36573d0252f3a9d",
+        "public:pbf_ef4eb28e250913e280f0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b6ea93ef899f9771bd3ad1625c1a3f1766f7ea958b83d7c790ad67ae7bc6ca6c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1650,
+      "first_chunk_seconds": 13.69,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1722,
+        "prompt_tokens": 1636,
+        "total_tokens": 3358,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1196,
+          "text_tokens": 526
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "91869eeafeddf0654e31c6edf035340448c8d884d22dba8fa597e4f53f3788f8",
+      "status": "completed",
+      "latency_seconds": 34.194
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef38a36573d0252f3a9d",
+        "public:pbf_ef4eb28e250913e280f0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b544084cd76ac2e2aed7a998f75307348e19bec657dfb1b096bfc24b17e5edce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.237
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef38a36573d0252f3a9d",
+        "public:pbf_ef4eb28e250913e280f0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b544084cd76ac2e2aed7a998f75307348e19bec657dfb1b096bfc24b17e5edce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.994
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ef38a36573d0252f3a9d",
+        "public:pbf_ef4eb28e250913e280f0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b544084cd76ac2e2aed7a998f75307348e19bec657dfb1b096bfc24b17e5edce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.573
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,313 @@
+{
+  "input_sha256": "e2c35c08edc4e13113a25ba88efcd41f6ea98e586ea7fa3b5f933fa0d32e8e88",
+  "normalized": [
+    {
+      "record_id": "public:pbf_792e2098845a577d6946",
+      "decision": "ready",
+      "subject": "the airport in Punta Gorda, Florida",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Punta Gorda Airport",
+      "canonical_fact": "The airport in Punta Gorda, Florida is Punta Gorda Airport.",
+      "prompt_en": "The name of the airport in Punta Gorda, Florida is",
+      "evidence_quotes": [
+        "the airport in punta gorda florida",
+        "Punta Gorda Airport"
+      ],
+      "reason": "Source QA identifies the airport at Punta Gorda, Florida as 'Punta Gorda Airport'. The qualified description 'the airport in Punta Gorda, Florida' uniquely identifies the entity, fitting description_to_entity. No existing relation for a simple 'city has airport' link exists in the catalog, and description_to_entity is the precise match for an identifying-description-to-entity lookup.",
+      "english": {
+        "prompt_en": "The name of the airport in Punta Gorda, Florida is",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Punta Gorda Airport",
+        "canonical_fact": "The airport in Punta Gorda, Florida is Punta Gorda Airport.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "the airport in Punta Gorda, Florida",
+        "answer_aliases_en": [
+          "Punta Gorda Airport",
+          "KPGD",
+          "PGD"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f705b871b0ed664f0d03c16fb90498541ee22dfec8a6f1b5b42ac1830846d3c3",
+      "input_sha256": "a59e585e7beb1a8a70571d5ec099ee8b7c4a218a994c629c6394cdd64b31c846",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_794f9f2780162db3fb6b",
+      "decision": "ready",
+      "subject": "Muhammad",
+      "relation_id": "person_to_prophet_recognizer",
+      "relation_definition": "The specific individual who formally declared or recognized a specified person as a prophet; retains event context.",
+      "direction": "person declared as prophet -> person who declared (recognizer)",
+      "answer": "Waraqah",
+      "canonical_fact": "Waraqah declared Muhammad a prophet.",
+      "prompt_en": "The individual who declared Muhammad a prophet was",
+      "evidence_quotes": [
+        "Who declared Muhammad a prophet?",
+        "Waraqah"
+      ],
+      "reason": "Source QA names Waraqah as the person who declared Muhammad a prophet. No existing catalog relation captures a 'declared/recognized as prophet by' link between a figure and a specific recognizer. Proposing the new relation person_to_prophet_recognizer to preserve the precise event context without forcing a broader category.",
+      "english": {
+        "prompt_en": "The individual who declared Muhammad a prophet was",
+        "relation_definition": "The specific individual who formally declared or recognized a specified person as a prophet; retains event context.",
+        "answer": "Waraqah",
+        "canonical_fact": "Waraqah declared Muhammad a prophet.",
+        "direction": "person declared as prophet -> person who declared (recognizer)",
+        "relation_id": "person_to_prophet_recognizer",
+        "subject": "Muhammad",
+        "answer_aliases_en": [
+          "Waraqah"
+        ],
+        "relation_spec": {
+          "id": "person_to_prophet_recognizer",
+          "definition": "The specific individual who formally declared or recognized a specified person as a prophet; retains event context.",
+          "direction": "person declared as prophet -> person who declared (recognizer)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9be8197d08898d4f5290f802c417d3d498ede1d7a27c675ceac0499f0d877c74",
+      "input_sha256": "81f9f0307e87a92d5bedb48ca0a02931ccc904fd9d7785aca1cae72b9362a057",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_792e2098845a577d6946",
+      "input_sha256": "a59e585e7beb1a8a70571d5ec099ee8b7c4a218a994c629c6394cdd64b31c846",
+      "english": {
+        "prompt_en": "The name of the airport in Punta Gorda, Florida is",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Punta Gorda Airport",
+        "canonical_fact": "The airport in Punta Gorda, Florida is Punta Gorda Airport.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "the airport in Punta Gorda, Florida",
+        "answer_aliases_en": [
+          "Punta Gorda Airport",
+          "KPGD",
+          "PGD"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f705b871b0ed664f0d03c16fb90498541ee22dfec8a6f1b5b42ac1830846d3c3",
+      "translation": {
+        "record_id": "public:pbf_792e2098845a577d6946",
+        "subject_zh": "佛罗里达州彭塔戈尔达的机场",
+        "prompt_zh": "佛罗里达州彭塔戈尔达的机场名称是",
+        "canonical_fact_zh": "佛罗里达州彭塔戈尔达的机场是彭塔戈尔达机场。",
+        "answer_zh": "彭塔戈尔达机场",
+        "answer_aliases_zh": [
+          "彭塔戈尔达机场",
+          "KPGD",
+          "PGD"
+        ]
+      },
+      "translation_sha256": "5bbcf9d281371246823b17a3df87cafefefcc72598cd0866c1df89e526b4f60f"
+    },
+    {
+      "record_id": "public:pbf_794f9f2780162db3fb6b",
+      "input_sha256": "81f9f0307e87a92d5bedb48ca0a02931ccc904fd9d7785aca1cae72b9362a057",
+      "english": {
+        "prompt_en": "The individual who declared Muhammad a prophet was",
+        "relation_definition": "The specific individual who formally declared or recognized a specified person as a prophet; retains event context.",
+        "answer": "Waraqah",
+        "canonical_fact": "Waraqah declared Muhammad a prophet.",
+        "direction": "person declared as prophet -> person who declared (recognizer)",
+        "relation_id": "person_to_prophet_recognizer",
+        "subject": "Muhammad",
+        "answer_aliases_en": [
+          "Waraqah"
+        ],
+        "relation_spec": {
+          "id": "person_to_prophet_recognizer",
+          "definition": "The specific individual who formally declared or recognized a specified person as a prophet; retains event context.",
+          "direction": "person declared as prophet -> person who declared (recognizer)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9be8197d08898d4f5290f802c417d3d498ede1d7a27c675ceac0499f0d877c74",
+      "translation": {
+        "record_id": "public:pbf_794f9f2780162db3fb6b",
+        "subject_zh": "穆罕默德",
+        "prompt_zh": "宣布穆罕默德为先知的人是",
+        "canonical_fact_zh": "瓦拉盖宣布穆罕默德为先知。",
+        "answer_zh": "瓦拉盖",
+        "answer_aliases_zh": [
+          "瓦拉盖"
+        ]
+      },
+      "translation_sha256": "99e2d88ef12b48b3e72b23357f588259e588eaf5fdcb66a598b6b115a52092ff"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "88ac84554a586dba3a40c2a140b344caeb8d0904d1b72c494fab286ae21bb579",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.947
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "88ac84554a586dba3a40c2a140b344caeb8d0904d1b72c494fab286ae21bb579",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.056
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "88ac84554a586dba3a40c2a140b344caeb8d0904d1b72c494fab286ae21bb579",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.994
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "88ac84554a586dba3a40c2a140b344caeb8d0904d1b72c494fab286ae21bb579",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 18.907
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "88ac84554a586dba3a40c2a140b344caeb8d0904d1b72c494fab286ae21bb579",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3311,
+      "first_chunk_seconds": 1.217,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3343,
+        "prompt_tokens": 1596,
+        "total_tokens": 4939,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2816,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "291eb118e28a16124625f416cea092f1794ad04a6ee96af9c5b101ab6b8e67e9",
+      "status": "completed",
+      "latency_seconds": 109.961
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4bf0ef5a9e1b42c8e9fdfe29172b07ab153c137662323d8b3ce4fa6ef25c84bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 30.823
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4bf0ef5a9e1b42c8e9fdfe29172b07ab153c137662323d8b3ce4fa6ef25c84bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.578
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_792e2098845a577d6946",
+        "public:pbf_794f9f2780162db3fb6b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4bf0ef5a9e1b42c8e9fdfe29172b07ab153c137662323d8b3ce4fa6ef25c84bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1030,
+      "first_chunk_seconds": 1.262,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1236,
+        "prompt_tokens": 861,
+        "total_tokens": 2097,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 965,
+          "text_tokens": 271
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4966f5f9a2c3b708213dde0b9c23d271110d7248707ec37acba0fb52a5f20503",
+      "status": "completed",
+      "latency_seconds": 24.681
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01254.json",
+      "sha256": "f29cb9947f32c56c63edde3bdfc9fd6c6474f0fd7ce270d1cd43b799fc335103",
+      "previous_status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "input_sha256": "5ca5af40229edd3c09dcad8a689ec3d1e20a7212b3d2ffc6aa201e659dc863a8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006797",
+      "decision": "ready",
+      "subject": "interstate highway",
+      "relation_id": "entity_to_traversed_region",
+      "relation_definition": "A geographic linear entity (road, route, corridor) that spans or traverses the specified region or territory; distinct from containment (entity_to_containing_location).",
+      "direction": "entity -> traversed region",
+      "answer": "united states of america",
+      "canonical_fact": "An interstate highway goes across the United States of America.",
+      "prompt_en": "What region does an interstate highway go across?",
+      "evidence_quotes": [
+        "What does an interstate highway go accross?",
+        "united states of america"
+      ],
+      "reason": "The relation 'goes across' describes a highway system that spans a geographic territory. No existing catalog relation captures this traversing semantics precisely: entity_to_containing_location implies the entity is contained within the location, whereas a highway traverses across it. A new precise relation entity_to_traversed_region is proposed.",
+      "english": {
+        "direction": "entity -> traversed region",
+        "relation_id": "entity_to_traversed_region",
+        "answer": "united states of america",
+        "canonical_fact": "An interstate highway goes across the United States of America.",
+        "subject": "interstate highway",
+        "prompt_en": "What region does an interstate highway go across?",
+        "relation_definition": "A geographic linear entity (road, route, corridor) that spans or traverses the specified region or territory; distinct from containment (entity_to_containing_location).",
+        "answer_aliases_en": [
+          "united states of america"
+        ],
+        "relation_spec": {
+          "id": "entity_to_traversed_region",
+          "definition": "A geographic linear entity (road, route, corridor) that spans or traverses the specified region or territory; distinct from containment (entity_to_containing_location).",
+          "direction": "entity -> traversed region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d790e5000f62643f01ec65b286ae4739afaf38bce35fd9d3bfb77bda960ca869",
+      "input_sha256": "5061facfe9ed95766e6988c91c390bbc33e584436cc5aebde805c23d66835018",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006802",
+      "decision": "ready",
+      "subject": "animals producing offspring",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "procreate",
+      "canonical_fact": "When animals produce offspring, it is called procreate.",
+      "prompt_en": "What is it called when animals produce offspring?",
+      "evidence_quotes": [
+        "What is it called when animals produce offspring?",
+        "procreate"
+      ],
+      "reason": "The source question asks for the conventional term (procreate) that corresponds to the description 'animals producing offspring.' This matches the description_to_term relation exactly: the subject is a defining description and the answer is the conventional term.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "procreate",
+        "canonical_fact": "When animals produce offspring, it is called procreate.",
+        "subject": "animals producing offspring",
+        "prompt_en": "What is it called when animals produce offspring?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "procreate"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "acc48b898bc542894597b46ac6cba4cbabf4ebf8edb46ccc11eaed2d874f94bc",
+      "input_sha256": "63b0e0b698a377032d370d3816030407b45f6c3ff35ed1cba56466f8c6f937e6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006797",
+      "input_sha256": "5061facfe9ed95766e6988c91c390bbc33e584436cc5aebde805c23d66835018",
+      "english": {
+        "direction": "entity -> traversed region",
+        "relation_id": "entity_to_traversed_region",
+        "answer": "united states of america",
+        "canonical_fact": "An interstate highway goes across the United States of America.",
+        "subject": "interstate highway",
+        "prompt_en": "What region does an interstate highway go across?",
+        "relation_definition": "A geographic linear entity (road, route, corridor) that spans or traverses the specified region or territory; distinct from containment (entity_to_containing_location).",
+        "answer_aliases_en": [
+          "united states of america"
+        ],
+        "relation_spec": {
+          "id": "entity_to_traversed_region",
+          "definition": "A geographic linear entity (road, route, corridor) that spans or traverses the specified region or territory; distinct from containment (entity_to_containing_location).",
+          "direction": "entity -> traversed region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d790e5000f62643f01ec65b286ae4739afaf38bce35fd9d3bfb77bda960ca869",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006797",
+        "subject_zh": "州际公路",
+        "prompt_zh": "州际公路穿越哪个区域？",
+        "canonical_fact_zh": "一条州际公路穿越美利坚合众国。",
+        "answer_zh": "美利坚合众国",
+        "answer_aliases_zh": [
+          "美利坚合众国"
+        ]
+      },
+      "translation_sha256": "dfcf5b47ca90beec4afae7c197293528333feac137d884a7f7c736f698cd379c"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006802",
+      "input_sha256": "63b0e0b698a377032d370d3816030407b45f6c3ff35ed1cba56466f8c6f937e6",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "procreate",
+        "canonical_fact": "When animals produce offspring, it is called procreate.",
+        "subject": "animals producing offspring",
+        "prompt_en": "What is it called when animals produce offspring?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "procreate"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "acc48b898bc542894597b46ac6cba4cbabf4ebf8edb46ccc11eaed2d874f94bc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006802",
+        "subject_zh": "动物产生后代",
+        "prompt_zh": "动物产生后代时这叫什么？",
+        "canonical_fact_zh": "当动物产生后代时，这被称为繁殖。",
+        "answer_zh": "繁殖",
+        "answer_aliases_zh": [
+          "繁殖"
+        ]
+      },
+      "translation_sha256": "fdc614392ed201a1b3de5829b999e5d6c926a500fc3396166fc2511744445785"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006797",
+        "historical:raw_commonsense_qa_006802"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "226fe3a73afaffd6230626b055c7a4052b22ffe36371d93ab5f800889a556043",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.018
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006797",
+        "historical:raw_commonsense_qa_006802"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "226fe3a73afaffd6230626b055c7a4052b22ffe36371d93ab5f800889a556043",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2135,
+      "first_chunk_seconds": 29.331,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2261,
+        "prompt_tokens": 1661,
+        "total_tokens": 3922,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1789,
+          "text_tokens": 472
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "db01c0960082183064f1f05520d852f5cede00a0b14871484a92f07b425b1687",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 72.09,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006797",
+        "historical:raw_commonsense_qa_006802"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5bae9b4d3082664a91820354fa4d91f455d53a4da75c3f0e05b548250c1dbcd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2204,
+      "first_chunk_seconds": 27.669,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2370,
+        "prompt_tokens": 1680,
+        "total_tokens": 4050,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1881,
+          "text_tokens": 489
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2a76970c719c7fde15cf5d05f0c7c2c29d6927679e1b172492d0e8760dd6890d",
+      "status": "completed",
+      "latency_seconds": 62.42
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006797",
+        "historical:raw_commonsense_qa_006802"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7d6cf8049127f81910d85678303becddd9ea1138da25f367af5a02667909088a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 838,
+      "first_chunk_seconds": 18.64,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 866,
+        "prompt_tokens": 841,
+        "total_tokens": 1707,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 645,
+          "text_tokens": 221
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bccdd1f4fadf887379ec06260714cf856dc35544306e52e394d2e8095b32bba8",
+      "status": "completed",
+      "latency_seconds": 35.37
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,236 @@
+{
+  "input_sha256": "02c507161b67c695fc9612e33bbcc9e228db386ab11ea8826a5aad2c098f14e3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000486",
+      "decision": "ready",
+      "subject": "animal with scales that uses only its lungs to exchange gases",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "a reptile",
+      "canonical_fact": "An animal with scales that uses only its lungs to exchange gases is most likely classified as a reptile.",
+      "prompt_en": "An animal has scales and uses only its lungs to exchange gases. What is the animal most likely to be classified as?",
+      "evidence_quotes": [
+        "An animal has scales and uses only its lungs to exchange gases",
+        "a reptile"
+      ],
+      "reason": "The source provides an identifying description (scales + lung-only gas exchange) whose answer is the taxonomic class 'a reptile.' The qualifier 'most likely' from the source question is preserved in the canonical fact. The catalog relation description_to_entity fits: the description uniquely points to the entity/class reptile. No conflict with source; answer copied verbatim.",
+      "english": {
+        "prompt_en": "An animal has scales and uses only its lungs to exchange gases. What is the animal most likely to be classified as?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "a reptile",
+        "canonical_fact": "An animal with scales that uses only its lungs to exchange gases is most likely classified as a reptile.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "animal with scales that uses only its lungs to exchange gases",
+        "answer_aliases_en": [
+          "a reptile"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a507d3ab069c0f29dec9d5a5fbe46f5365fc4d21f883216f79c7f291c009f328",
+      "input_sha256": "d640016f09eb7290496b1f25723c7272c6f27e9575691cc128ec85603c20b878",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000491",
+      "decision": "ready",
+      "subject": "incoming electrical energy in a running electric fan",
+      "relation_id": "energy_to_converted_form",
+      "relation_definition": "The primary energy form into which a specified input energy is mostly converted under a stated device or process context; retains the 'most' qualifier and specific conditions.",
+      "direction": "specified energy input in a stated context -> primary converted energy form",
+      "answer": "mechanical energy",
+      "canonical_fact": "When an electric fan is running, most of the incoming electrical energy changes into mechanical energy.",
+      "prompt_en": "When an electric fan is running, most of the incoming electrical energy changes into which kind of energy?",
+      "evidence_quotes": [
+        "When an electric fan is running, most of the incoming electrical energy changes into which kind of energy?",
+        "mechanical energy"
+      ],
+      "reason": "No catalog relation covers energy conversion. A new relation energy_to_converted_form is proposed with explicit scope: the stated device (electric fan), the qualifier 'most,' and the specific input (electrical energy) mapping to the output form (mechanical energy). Answer copied verbatim from source. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "When an electric fan is running, most of the incoming electrical energy changes into which kind of energy?",
+        "relation_definition": "The primary energy form into which a specified input energy is mostly converted under a stated device or process context; retains the 'most' qualifier and specific conditions.",
+        "answer": "mechanical energy",
+        "canonical_fact": "When an electric fan is running, most of the incoming electrical energy changes into mechanical energy.",
+        "direction": "specified energy input in a stated context -> primary converted energy form",
+        "relation_id": "energy_to_converted_form",
+        "subject": "incoming electrical energy in a running electric fan",
+        "answer_aliases_en": [
+          "mechanical energy"
+        ],
+        "relation_spec": {
+          "id": "energy_to_converted_form",
+          "definition": "The primary energy form into which a specified input energy is mostly converted under a stated device or process context; retains the 'most' qualifier and specific conditions.",
+          "direction": "specified energy input in a stated context -> primary converted energy form"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a9154ded9a055ac22a4a915e6f8f9c1337fee1e75615cd9aaee0ee1671159e29",
+      "input_sha256": "6ce0a56ddd8e319c0f23dd5583971b590649f9b2cbe2c3eac9572834f71b692e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.174
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.191
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.898
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.799
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.796
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5a75eef43d531e7cc75aae43bcd89a3bb9299710adf8c33f970e9da0b5324dea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2752,
+      "first_chunk_seconds": 2.04,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2773,
+        "prompt_tokens": 1758,
+        "total_tokens": 4531,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2183,
+          "text_tokens": 590
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "48640f771fecf8f33e306c999d6af4e1b9adfad3d62dab60efaf4028e484fe2e",
+      "status": "completed",
+      "latency_seconds": 32.352
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b84628208063313ff5ef3e55f28209eadb91c89ee25c893994ddaf9c9dd09394",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.868
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b84628208063313ff5ef3e55f28209eadb91c89ee25c893994ddaf9c9dd09394",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.815
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000486",
+        "historical:raw_ai2_arc_easy_000491"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b84628208063313ff5ef3e55f28209eadb91c89ee25c893994ddaf9c9dd09394",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.092
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02181.json",
+      "sha256": "1ef11d436b7d0308a50978183a689a5f6fc057294f82e5c11b32d03260e0bc3f",
+      "previous_status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "input_sha256": "d10b77bc4171dd1ddd59081fcac9138fec45003fb8540c6a5728ca826f2443cc",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007281",
+      "decision": "ready",
+      "subject": "bald eagle",
+      "relation_id": "entity_to_role",
+      "relation_definition": "The specific functional role or capacity in which an entity serves within a named context or domain.",
+      "direction": "entity -> role served in specified context",
+      "answer": "national emblem",
+      "canonical_fact": "The bald eagle serves as the national emblem for America.",
+      "prompt_en": "What role does the bald eagle serve for America?",
+      "evidence_quotes": [
+        "The bald eagle serves as",
+        "national emblem"
+      ],
+      "reason": "Source question and answer directly state that the bald eagle serves as the national emblem for America. No existing catalog relation captures a functional role/capacity assignment (symbol_to_meaning is about what a symbol represents, not the role it fills); proposing entity_to_role with explicit context.",
+      "english": {
+        "direction": "entity -> role served in specified context",
+        "relation_id": "entity_to_role",
+        "answer": "national emblem",
+        "canonical_fact": "The bald eagle serves as the national emblem for America.",
+        "subject": "bald eagle",
+        "prompt_en": "What role does the bald eagle serve for America?",
+        "relation_definition": "The specific functional role or capacity in which an entity serves within a named context or domain.",
+        "answer_aliases_en": [
+          "national emblem"
+        ],
+        "relation_spec": {
+          "id": "entity_to_role",
+          "definition": "The specific functional role or capacity in which an entity serves within a named context or domain.",
+          "direction": "entity -> role served in specified context"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "86b9ac59a80b0acc87a712d33f8d15843f797baf8e665e9949d4410f8b6d4f3d",
+      "input_sha256": "1d3d70437b5f3d1c1b648fdeda3a3e7cdf77be121fd9025acf0ddc6d5b82cc7a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007314",
+      "decision": "ready",
+      "subject": "rose flowers",
+      "relation_id": "entity_to_typical_attribute",
+      "relation_definition": "A commonly observed attribute (e.g., color, size, texture) of an entity, retaining the 'typical' qualifier to avoid asserting universality.",
+      "direction": "entity -> typical attribute value",
+      "answer": "red",
+      "canonical_fact": "Rose flowers are typically red.",
+      "prompt_en": "What color are rose flowers typically?",
+      "evidence_quotes": [
+        "what color are rose flowers typically",
+        "red"
+      ],
+      "reason": "Source explicitly asks about the typical color of rose flowers; answer is 'red.' No catalog relation covers a typical color/attribute (entity_to_material is about composition, not color). One model incorrectly excluded this as 'typical_action_or_location,' but color is a static attribute, not an action or location. Proposing entity_to_typical_attribute.",
+      "english": {
+        "direction": "entity -> typical attribute value",
+        "relation_id": "entity_to_typical_attribute",
+        "answer": "red",
+        "canonical_fact": "Rose flowers are typically red.",
+        "subject": "rose flowers",
+        "prompt_en": "What color are rose flowers typically?",
+        "relation_definition": "A commonly observed attribute (e.g., color, size, texture) of an entity, retaining the 'typical' qualifier to avoid asserting universality.",
+        "answer_aliases_en": [
+          "red"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_attribute",
+          "definition": "A commonly observed attribute (e.g., color, size, texture) of an entity, retaining the 'typical' qualifier to avoid asserting universality.",
+          "direction": "entity -> typical attribute value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f220cbbc8c2d24e70f7bb7bb583149af3b029453d1d673bcac672eefbd83f752",
+      "input_sha256": "a9c1aab93ace8572194538b48496ad2efeb8f9949251b258b75ade91464b343b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007281",
+      "input_sha256": "1d3d70437b5f3d1c1b648fdeda3a3e7cdf77be121fd9025acf0ddc6d5b82cc7a",
+      "english": {
+        "direction": "entity -> role served in specified context",
+        "relation_id": "entity_to_role",
+        "answer": "national emblem",
+        "canonical_fact": "The bald eagle serves as the national emblem for America.",
+        "subject": "bald eagle",
+        "prompt_en": "What role does the bald eagle serve for America?",
+        "relation_definition": "The specific functional role or capacity in which an entity serves within a named context or domain.",
+        "answer_aliases_en": [
+          "national emblem"
+        ],
+        "relation_spec": {
+          "id": "entity_to_role",
+          "definition": "The specific functional role or capacity in which an entity serves within a named context or domain.",
+          "direction": "entity -> role served in specified context"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "86b9ac59a80b0acc87a712d33f8d15843f797baf8e665e9949d4410f8b6d4f3d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007281",
+        "subject_zh": "白头鹰",
+        "prompt_zh": "白头鹰在美国扮演什么角色？",
+        "canonical_fact_zh": "白头鹰是美国的国徽。",
+        "answer_zh": "国徽",
+        "answer_aliases_zh": [
+          "国徽"
+        ]
+      },
+      "translation_sha256": "e86e6e2054f7d375e1d7bad5372065879e2a716c15d3ce65d350098f5f3ccb63"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007314",
+      "input_sha256": "a9c1aab93ace8572194538b48496ad2efeb8f9949251b258b75ade91464b343b",
+      "english": {
+        "direction": "entity -> typical attribute value",
+        "relation_id": "entity_to_typical_attribute",
+        "answer": "red",
+        "canonical_fact": "Rose flowers are typically red.",
+        "subject": "rose flowers",
+        "prompt_en": "What color are rose flowers typically?",
+        "relation_definition": "A commonly observed attribute (e.g., color, size, texture) of an entity, retaining the 'typical' qualifier to avoid asserting universality.",
+        "answer_aliases_en": [
+          "red"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_attribute",
+          "definition": "A commonly observed attribute (e.g., color, size, texture) of an entity, retaining the 'typical' qualifier to avoid asserting universality.",
+          "direction": "entity -> typical attribute value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f220cbbc8c2d24e70f7bb7bb583149af3b029453d1d673bcac672eefbd83f752",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007314",
+        "subject_zh": "玫瑰花",
+        "prompt_zh": "玫瑰花通常是什么颜色？",
+        "canonical_fact_zh": "玫瑰花通常是红色的。",
+        "answer_zh": "红色",
+        "answer_aliases_zh": [
+          "红色"
+        ]
+      },
+      "translation_sha256": "a46b0bbc2e108c53b71d563063bb00ded38ba16d2f71d42461c22648d1715738"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007281",
+        "historical:raw_commonsense_qa_007314"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9da06e09910f7e3ff73bc1ca52d65a341f6acb016ddb83115311217b1a1f863d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.019
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007281",
+        "historical:raw_commonsense_qa_007314"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9da06e09910f7e3ff73bc1ca52d65a341f6acb016ddb83115311217b1a1f863d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2292,
+      "first_chunk_seconds": 38.262,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2568,
+        "prompt_tokens": 1626,
+        "total_tokens": 4194,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2080,
+          "text_tokens": 488
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1fae654ed98b39723cbf272d0b67316a38ccba055df287883a035a64b2eee65a",
+      "status": "completed",
+      "latency_seconds": 85.654
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007281",
+        "historical:raw_commonsense_qa_007314"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b388c4d6f67f0382c4d9701e026862d0ee23976f9acea1b5c151232a7ee34a78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.212
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007281",
+        "historical:raw_commonsense_qa_007314"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b388c4d6f67f0382c4d9701e026862d0ee23976f9acea1b5c151232a7ee34a78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 53.673,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007281",
+        "historical:raw_commonsense_qa_007314"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b388c4d6f67f0382c4d9701e026862d0ee23976f9acea1b5c151232a7ee34a78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 936,
+      "first_chunk_seconds": 24.097,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1090,
+        "prompt_tokens": 832,
+        "total_tokens": 1922,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 893,
+          "text_tokens": 197
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "860c304a0f93e3b3cefedecb847ffd6b9e646cb180298f862e3caa2707a81725",
+      "status": "completed",
+      "latency_seconds": 39.093
+    }
+  ],
+  "status": "completed"
+}

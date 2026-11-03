@@ -1,0 +1,218 @@
+{
+  "input_sha256": "05e6232a19896d942f31e86445d3a1a297624768e54843779243632a6eb92384",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002425",
+      "decision": "ready",
+      "subject": "door with lock that holds valuables",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "safe",
+      "canonical_fact": "A door with lock that holds valuables is called a safe.",
+      "prompt_en": "What is the conventional term for a door with lock that holds valuables?",
+      "evidence_quotes": [
+        "door with lock",
+        "holds valuables",
+        "safe"
+      ],
+      "reason": "The source question asks for the term that fits the description 'door with lock that holds valuables'; the source answer 'safe' is a literal substring of source_answer. The description_to_term relation fits exactly: the subject is a defining description and the answer is the conventional term. Both model annotations agree on extractability; the Qwen-3.8-Max annotation excluded it as malformed but the question is a standard commonsense description-to-term item.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "safe",
+        "canonical_fact": "A door with lock that holds valuables is called a safe.",
+        "subject": "door with lock that holds valuables",
+        "prompt_en": "What is the conventional term for a door with lock that holds valuables?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "safe"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bed26cb09819b9df5c4437daac51682e2d9f18e06b8807f313c0029b83025e91",
+      "input_sha256": "0db6e7b8cb4d43fe47d3786a91261cf4e76ae87072c5e5ff4108ebb3e66c31f8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002428",
+      "decision": "ready",
+      "subject": "greatest of Michigan's Great Lakes",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Lake Superior",
+      "canonical_fact": "Lake Superior is the greatest of Michigan's Great Lakes.",
+      "prompt_en": "Which lake is the greatest of Michigan's Great Lakes?",
+      "evidence_quotes": [
+        "greatest of the Michigan's greats",
+        "lake superior"
+      ],
+      "reason": "The source question asks for 'what greatest of the Michigan's greats?'—an explicitly qualified identifying description. The source answer 'lake superior' is the unique entity satisfying that description. The description_to_entity relation fits exactly; no catalog relation captures a superlative geographic identification more precisely. Both model annotations agree on extractability.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Lake Superior",
+        "canonical_fact": "Lake Superior is the greatest of Michigan's Great Lakes.",
+        "subject": "greatest of Michigan's Great Lakes",
+        "prompt_en": "Which lake is the greatest of Michigan's Great Lakes?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Lake Superior"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6777a04b6e5023d829c752aefd9e6e75ef713f15f873549be72ae84a2af838b7",
+      "input_sha256": "d01c7f1c3271c6d51e4a64ee8b2f47b6778c29c8c4dc39943f1a810dee3ebc41",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002425",
+      "input_sha256": "0db6e7b8cb4d43fe47d3786a91261cf4e76ae87072c5e5ff4108ebb3e66c31f8",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "safe",
+        "canonical_fact": "A door with lock that holds valuables is called a safe.",
+        "subject": "door with lock that holds valuables",
+        "prompt_en": "What is the conventional term for a door with lock that holds valuables?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "safe"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bed26cb09819b9df5c4437daac51682e2d9f18e06b8807f313c0029b83025e91",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002425",
+        "subject_zh": "带有锁且存放贵重物品的门",
+        "prompt_zh": "带有锁且存放贵重物品的门，其惯用术语是什么？",
+        "canonical_fact_zh": "带有锁且存放贵重物品的门称为保险箱。",
+        "answer_zh": "保险箱",
+        "answer_aliases_zh": [
+          "保险箱"
+        ]
+      },
+      "translation_sha256": "9c5f6da717cc39733c30e796d091a3cfc32705ddcab94113466b7b30bb97b077"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002428",
+      "input_sha256": "d01c7f1c3271c6d51e4a64ee8b2f47b6778c29c8c4dc39943f1a810dee3ebc41",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Lake Superior",
+        "canonical_fact": "Lake Superior is the greatest of Michigan's Great Lakes.",
+        "subject": "greatest of Michigan's Great Lakes",
+        "prompt_en": "Which lake is the greatest of Michigan's Great Lakes?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Lake Superior"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6777a04b6e5023d829c752aefd9e6e75ef713f15f873549be72ae84a2af838b7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002428",
+        "subject_zh": "密歇根州五大湖中最大的",
+        "prompt_zh": "密歇根州五大湖中最大的是哪个湖？",
+        "canonical_fact_zh": "苏必利尔湖是密歇根州五大湖中最大的。",
+        "answer_zh": "苏必利尔湖",
+        "answer_aliases_zh": [
+          "苏必利尔湖"
+        ]
+      },
+      "translation_sha256": "14c9f365fc45bf298628dcb5a8a790700c542d22fba105a92e4682d10630cb21"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002425",
+        "historical:raw_commonsense_qa_002428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d8b37028340bc40dfa114737793c2aca24e4b5031aa95d62770a3dd83da6293",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2392,
+      "first_chunk_seconds": 49.381,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2497,
+        "prompt_tokens": 1659,
+        "total_tokens": 4156,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1980,
+          "text_tokens": 517
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "3fd071e4f464c4c156750f4a8de703dc2aa923d3d7e716ad3d4157c1b9f4321a",
+      "status": "completed",
+      "latency_seconds": 84.166
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002425",
+        "historical:raw_commonsense_qa_002428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b5bccecf92ba050b933e6c71d5034e97993ce60b31612421612ee2928e2e8370",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1414,
+      "first_chunk_seconds": 70.079,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1473,
+        "prompt_tokens": 811,
+        "total_tokens": 2284,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1227,
+          "text_tokens": 246
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "85a3a93242d0611401ed9463aae58bff85aa59e6a6793ea3954e2102e59ffde0",
+      "status": "completed",
+      "latency_seconds": 161.342
+    }
+  ],
+  "status": "completed"
+}

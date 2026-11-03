@@ -1,0 +1,157 @@
+{
+  "input_sha256": "43832569b8b906fa31f91ccd84b2b61a86ad8f07802bb9e0055497e64a7e0350",
+  "normalized": [
+    {
+      "record_id": "public:pbf_8cc64b7d80fc4c31e6a9",
+      "decision": "ready",
+      "subject": "conveyance 'To Friend for life and then to the heirs of Owner'",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "The doctrine of worthier title",
+      "canonical_fact": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is the doctrine of worthier title.",
+      "prompt_en": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is",
+      "evidence_quotes": [
+        "The doctrine of worthier title",
+        "what common law doctrine?"
+      ],
+      "reason": "The source question describes a specific common-law conveyance scenario and asks which doctrine governs it; the source answer uniquely identifies 'The doctrine of worthier title.' This maps cleanly to description_to_term: the fully qualified conveyance description uniquely determines the conventional legal term. The answer is a verbatim copy of source_answer; prompt_en is option-free and does not embed the answer.",
+      "english": {
+        "answer": "The doctrine of worthier title",
+        "relation_id": "description_to_term",
+        "prompt_en": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is",
+        "direction": "description -> term",
+        "subject": "conveyance 'To Friend for life and then to the heirs of Owner'",
+        "canonical_fact": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is the doctrine of worthier title.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "The doctrine of worthier title"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6abaca2ed7c4601cbacc57e0868226aa046752bbf71098ecf565e19fd1487e71",
+      "input_sha256": "cdb84137d25dbc6c30c5728f35385e35b1c716f3dec62f8a83a375ad26b8b2a9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8cce3634796a5791a8a5",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The item is a fill-in-the-blank adjective ('more _____ for men') characterizing a biological process. No catalog relation (entity_to_class, organism_to_habitat, term_to_definition, description_to_entity, etc.) precisely captures 'a qualitative temporal-descriptor adjective for a body-system change pattern.' Proposing a new snake_case ID (e.g., process_to_temporal_characteristic) would force an imprecise, over-generalized category for what is essentially a pedagogical cloze item with thin factual grounding. Insufficient source support for a reusable, unambiguously-typed factual relation; defer.",
+      "input_sha256": "f7ec276f77df5a3c86b10feb980eb010485d4ca0f253b57644e44daea6502778",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_8cc64b7d80fc4c31e6a9",
+      "input_sha256": "cdb84137d25dbc6c30c5728f35385e35b1c716f3dec62f8a83a375ad26b8b2a9",
+      "english": {
+        "answer": "The doctrine of worthier title",
+        "relation_id": "description_to_term",
+        "prompt_en": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is",
+        "direction": "description -> term",
+        "subject": "conveyance 'To Friend for life and then to the heirs of Owner'",
+        "canonical_fact": "The common law doctrine governing the conveyance 'To Friend for life and then to the heirs of Owner' is the doctrine of worthier title.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "The doctrine of worthier title"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6abaca2ed7c4601cbacc57e0868226aa046752bbf71098ecf565e19fd1487e71",
+      "translation": {
+        "record_id": "public:pbf_8cc64b7d80fc4c31e6a9",
+        "subject_zh": "让与\"给友人终身，之后归所有人的继承人\"",
+        "prompt_zh": "普通法中规范让与\"给友人终身，之后归所有人的继承人\"的原则是",
+        "canonical_fact_zh": "普通法中规范让与\"给友人终身，之后归所有人的继承人\"的原则是更优所有权原则。",
+        "answer_zh": "更优所有权原则",
+        "answer_aliases_zh": [
+          "更优所有权原则"
+        ]
+      },
+      "translation_sha256": "296b1bc9c8ee535c2b9c2e2d93b388fa14365d616347f634795c7e7869cc4432"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8cc64b7d80fc4c31e6a9",
+        "public:pbf_8cce3634796a5791a8a5"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9c6bdb641617a0f16ecc9e7de1b7cab133d3f5a77f4bf3e97c2d2fbdb54542ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2863,
+      "first_chunk_seconds": 36.142,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2868,
+        "prompt_tokens": 1748,
+        "total_tokens": 4616,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2317,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "049022e7df6d9852fb9940b44c39ec6c1134124069128bd9faf8e1e1c214247e",
+      "status": "completed",
+      "latency_seconds": 64.471
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8cc64b7d80fc4c31e6a9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7299567e9be742ece3d4150279d2766500a55bada21ff0fdd6ef266fb5e72a8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1385,
+      "first_chunk_seconds": 5.493,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1383,
+        "prompt_tokens": 561,
+        "total_tokens": 1944,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1264,
+          "text_tokens": 119
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f063ebd5742dc9aff26e20509c8d4bc00f4fb9cfed5fa1ec2827524c448175ad",
+      "status": "completed",
+      "latency_seconds": 17.531
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,185 @@
+{
+  "input_sha256": "f4066bb222ae55b3131e8540e3b0d3fbf61ce74aebb1b454968c6f1e7a7afea2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000737",
+      "decision": "ready",
+      "subject": "properties of matter",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "chemical",
+      "canonical_fact": "Properties of matter can be considered physical or chemical.",
+      "prompt_en": "Besides physical, what is the other main category of properties of matter?",
+      "evidence_quotes": [
+        "Properties of matter can be considered physical or",
+        "chemical"
+      ],
+      "reason": "Source explicitly states properties of matter are classified as physical or chemical. entity_to_class fits: 'chemical' is a stable taxonomy-level category for properties of matter, completing the binary classification.",
+      "english": {
+        "prompt_en": "Besides physical, what is the other main category of properties of matter?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "chemical",
+        "canonical_fact": "Properties of matter can be considered physical or chemical.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "properties of matter",
+        "answer_aliases_en": [
+          "chemical"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "304d2eee402ee97c48659f03ffe4472bf30cf7e0f6d478dff2a2a82eb1724e57",
+      "input_sha256": "ed276220ffc21c6a939898d7bcf9d93e9e0cda480e9abaad18dc2fd8436147ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000738",
+      "decision": "ready",
+      "subject": "ecosystems",
+      "relation_id": "system_to_recycled_substance",
+      "relation_definition": "Substance that a specified system recycles through its internal processes, distinguished from substances it consumes or requires as external input.",
+      "direction": "system -> substance",
+      "answer": "matter",
+      "canonical_fact": "Ecosystems recycle matter.",
+      "prompt_en": "What substance do ecosystems recycle?",
+      "evidence_quotes": [
+        "what do ecosystems recycle?",
+        "matter"
+      ],
+      "reason": "Source explicitly states ecosystems recycle matter. No existing catalog relation captures a recycling/cycling relationship, so a new precise relation system_to_recycled_substance is proposed with explicit definition and direction.",
+      "english": {
+        "prompt_en": "What substance do ecosystems recycle?",
+        "relation_definition": "Substance that a specified system recycles through its internal processes, distinguished from substances it consumes or requires as external input.",
+        "answer": "matter",
+        "canonical_fact": "Ecosystems recycle matter.",
+        "direction": "system -> substance",
+        "relation_id": "system_to_recycled_substance",
+        "subject": "ecosystems",
+        "answer_aliases_en": [
+          "matter"
+        ],
+        "relation_spec": {
+          "id": "system_to_recycled_substance",
+          "definition": "Substance that a specified system recycles through its internal processes, distinguished from substances it consumes or requires as external input.",
+          "direction": "system -> substance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "84514907b6423f6dbdb6887e760772427bb0fbf634d3db29724371190a35eb4d",
+      "input_sha256": "31f77ce4ddc8831606fb5749d3840b72ba599f82edb2f3a76c16faf76c20ba98",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2016c2d4720c6ff4c5e60ed818533abe2c726977378c0a72bd3614c176ebd253",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 76.781
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2016c2d4720c6ff4c5e60ed818533abe2c726977378c0a72bd3614c176ebd253",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.655
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2016c2d4720c6ff4c5e60ed818533abe2c726977378c0a72bd3614c176ebd253",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2767,
+      "first_chunk_seconds": 64.067,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2845,
+        "prompt_tokens": 1625,
+        "total_tokens": 4470,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2425,
+          "text_tokens": 420
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "04352ea437665098dbad0162a960c5b8b269f6df55300cb59990b489de0bdf84",
+      "status": "completed",
+      "latency_seconds": 153.41
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "839578d3307063246b777853ac81f4c5e7d56ab68e9e8472457a4bf220cc8f84",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.98
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "839578d3307063246b777853ac81f4c5e7d56ab68e9e8472457a4bf220cc8f84",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.504
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000737",
+        "historical:raw_sciq_000738"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "839578d3307063246b777853ac81f4c5e7d56ab68e9e8472457a4bf220cc8f84",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 87.446
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "a66463da528b0cd0528aa1d5582da21a2fd97a1b32ff96f417c228d26b7a3a1b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005797",
+      "decision": "ready",
+      "subject": "people",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "human",
+      "canonical_fact": "People are classified as human.",
+      "prompt_en": "People sometimes seem like robots, but we're all just what?",
+      "evidence_quotes": [
+        "Sometimes people seem like robots",
+        "human"
+      ],
+      "reason": "The source states that people are 'just human,' which is a stable taxonomy-level class membership (species/human). entity_to_class fits: the subject 'people' is a group entity and 'human' is the class at the species level. The answer 'human' is taken verbatim from source_answer. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "human",
+        "canonical_fact": "People are classified as human.",
+        "subject": "people",
+        "prompt_en": "People sometimes seem like robots, but we're all just what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "human"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4dc083ab22851986fe3557360181340d4d02744cc599c6e20af5c222abb05b80",
+      "input_sha256": "183927feff11938b81f3cb0ac3c8a852ca7a7defbcd3cc4d85aab154bddf6108",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005810",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation precisely covers 'a fictional scene/trope appears in a literary genre.' The subject 'cow jumping over a moon' is a loose cultural trope, not a well-defined entity, and the answer 'nursery rhyme' is a genre category rather than a specific work, making the fact imprecise and not reusable. Deferring rather than forcing a broad category.",
+      "input_sha256": "68caf20bbf3ef76c390719e21a47c04b3d3d13fe82c89c762593f7409628acc4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005797",
+      "input_sha256": "183927feff11938b81f3cb0ac3c8a852ca7a7defbcd3cc4d85aab154bddf6108",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "human",
+        "canonical_fact": "People are classified as human.",
+        "subject": "people",
+        "prompt_en": "People sometimes seem like robots, but we're all just what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "human"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4dc083ab22851986fe3557360181340d4d02744cc599c6e20af5c222abb05b80",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005797",
+        "subject_zh": "人们",
+        "prompt_zh": "人们有时看起来像机器人，但我们其实都是什么？",
+        "canonical_fact_zh": "人们被归类为人类。",
+        "answer_zh": "人类",
+        "answer_aliases_zh": [
+          "人类"
+        ]
+      },
+      "translation_sha256": "492bcfbc767ab8684cbbafe7f488f26d186f810c3c4bea0c400c5098dca92bf4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005797",
+        "historical:raw_commonsense_qa_005810"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f0882b86ea5d277bea74d140c17f3103c52a207a2637c149d1bdd9a9e020d217",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2908,
+      "first_chunk_seconds": 72.123,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3126,
+        "prompt_tokens": 1627,
+        "total_tokens": 4753,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2698,
+          "text_tokens": 428
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a1c0e2d89e03eabbd490ccb102e562b71ff4ce71eba300b53796be9ac0a3bb83",
+      "status": "completed",
+      "latency_seconds": 142.06
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005797"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d8e1c39c9ecd51ca2bd6ae37022f0961d8d14175448c1046a4921dfa6132fdaf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 595,
+      "first_chunk_seconds": 25.109,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 628,
+        "prompt_tokens": 488,
+        "total_tokens": 1116,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 519,
+          "text_tokens": 109
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4cda7e2b9708391a386852fe0dc27399fbf70f01d78f10847156176d4d525552",
+      "status": "completed",
+      "latency_seconds": 71.187
+    }
+  ],
+  "status": "completed"
+}

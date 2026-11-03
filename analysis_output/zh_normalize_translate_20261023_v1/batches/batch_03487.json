@@ -1,0 +1,71 @@
+{
+  "input_sha256": "b7d13879d787931ed30f97de5b1fb46b2d29b20421fd65763475091902375296",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006882",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source pair 'What does an emotional person tend to be? → expressive' expresses a subjective/normative generalization rather than a hard factual claim. No catalog relation fits: entity_to_class explicitly excludes 'an arbitrary attribute,' and no listed relation captures a soft behavioral tendency of a person-type. The sensenova model independently flagged it as subjective_or_normative. Proposing a new relation (e.g. entity_to_tendency) for a single commonsense-trivia generalization would not yield a reusable, independently verifiable fact. Insufficient source support for a normalized factual candidate; defer.",
+      "input_sha256": "a60ede97ce96b57bea16beabd22603d63a33bc767716fc67d7a46b8373928a71",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006940",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The scenario 'Manny refused to give the court respect, and was charged with what? → contempt' centres on an unidentified individual ('Manny') with no court, jurisdiction, date, or case reference, making it impossible to produce a verifiable reusable fact. The underlying legal principle (contempt of court) could be stated, but no catalog relation covers 'behavior → legal charge' or 'action → legal consequence,' and forcing a description_to_entity or term_to_definition mapping would misrepresent the fact (contempt is broader than merely refusing court respect). No listed relation fits exactly; proposing a new scenario-specific relation for a single commonsense QA item is not justified. Defer.",
+      "input_sha256": "9bfbd202ed8d906deb4e6374d72544da8cc74a38edc81a0af26db841248a4c53",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006882",
+        "historical:raw_commonsense_qa_006940"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "075635b789279242dabaf967b752efcfb5c14209fea8bce9af66b917b3c503f3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2726,
+      "first_chunk_seconds": 2.518,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2860,
+        "prompt_tokens": 1586,
+        "total_tokens": 4446,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2381,
+          "text_tokens": 479
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b54dde9df2640b4c7dde4ef9cf4814140ff6f5c2cf915f5e8cfba36a8e38224f",
+      "status": "completed",
+      "latency_seconds": 69.696
+    }
+  ],
+  "status": "completed"
+}

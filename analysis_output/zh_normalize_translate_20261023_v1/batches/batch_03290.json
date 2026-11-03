@@ -1,0 +1,157 @@
+{
+  "input_sha256": "15cdfa6e94f5f856068e19bf245d993cf3c37c40d5d38f688fd170e26bcb4af9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000499",
+      "decision": "ready",
+      "subject": "crap",
+      "relation_id": "term_to_etymological_origin",
+      "relation_definition": "The source language or origin from which a specified word/term is etymologically derived.",
+      "direction": "term -> etymological source language",
+      "answer": "Latin",
+      "canonical_fact": "The word \"crap\" comes from Latin.",
+      "prompt_en": "What is the etymological source language of the word 'crap'?",
+      "evidence_quotes": [
+        "origin of the word \"crap\"",
+        "It comes from Latin"
+      ],
+      "reason": "The source question explicitly asks for the origin of the word 'crap' and the source answer states 'It comes from Latin.' No catalog relation covers etymological origin of a term, so a new precise relation 'term_to_etymological_origin' is proposed. The answer 'Latin' is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What is the etymological source language of the word 'crap'?",
+        "relation_definition": "The source language or origin from which a specified word/term is etymologically derived.",
+        "answer": "Latin",
+        "canonical_fact": "The word \"crap\" comes from Latin.",
+        "direction": "term -> etymological source language",
+        "relation_id": "term_to_etymological_origin",
+        "subject": "crap",
+        "answer_aliases_en": [
+          "Latin"
+        ],
+        "relation_spec": {
+          "id": "term_to_etymological_origin",
+          "definition": "The source language or origin from which a specified word/term is etymologically derived.",
+          "direction": "term -> etymological source language"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "831b3696315041d5074618472fb957fee8c00b009a567413308f64e1f140e2f8",
+      "input_sha256": "45c2b8c25b6c61383d0b24f1d4e7810651606573f5994f71f55306c6ed2cea39",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000510",
+      "decision": "ready",
+      "subject": "the sun when viewed from space",
+      "relation_id": "entity_to_apparent_color",
+      "relation_definition": "The perceived/apparent color of a specified entity under explicitly stated viewing conditions (e.g., observer location, medium).",
+      "direction": "entity under stated viewing conditions -> apparent color",
+      "answer": "white",
+      "canonical_fact": "The sun looks white when viewed from space.",
+      "prompt_en": "What color does the sun appear to an observer in space?",
+      "evidence_quotes": [
+        "What color is the sun when viewed from space?",
+        "the sun looks white"
+      ],
+      "reason": "The source question asks about the color of the sun under the specific condition of viewing from space, and the source answer states 'the sun looks white.' No catalog relation covers apparent color under viewing conditions, so a new precise relation 'entity_to_apparent_color' is proposed. The answer 'white' is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What color does the sun appear to an observer in space?",
+        "relation_definition": "The perceived/apparent color of a specified entity under explicitly stated viewing conditions (e.g., observer location, medium).",
+        "answer": "white",
+        "canonical_fact": "The sun looks white when viewed from space.",
+        "direction": "entity under stated viewing conditions -> apparent color",
+        "relation_id": "entity_to_apparent_color",
+        "subject": "the sun when viewed from space",
+        "answer_aliases_en": [
+          "white"
+        ],
+        "relation_spec": {
+          "id": "entity_to_apparent_color",
+          "definition": "The perceived/apparent color of a specified entity under explicitly stated viewing conditions (e.g., observer location, medium).",
+          "direction": "entity under stated viewing conditions -> apparent color"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "aa15950347c90d12497a6b1113579be89d47c004a5b1e3f5eff61d7fcc4e0620",
+      "input_sha256": "4257ee0adc57cba279bde0772d745808ed271acc181801ac7a0a81057feedf30",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000499",
+        "historical:raw_truthful_qa_000510"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "09324afe81ec842ef7242ac78fb2321c13eafa9eb1411d3f28773098d108f56e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1491,
+      "first_chunk_seconds": 3.886,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1566,
+        "prompt_tokens": 1634,
+        "total_tokens": 3200,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1050,
+          "text_tokens": 516
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2ca081787443a10982eea5fcad4691eacf88b1b623bcc549cbb72aa4ed66adc5",
+      "status": "completed",
+      "latency_seconds": 35.001
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000499",
+        "historical:raw_truthful_qa_000510"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6257459b8ff9b1bff99408f900b81b9875d40e2fb7fc10bb5923d4def53a645a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.275
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000499",
+        "historical:raw_truthful_qa_000510"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6257459b8ff9b1bff99408f900b81b9875d40e2fb7fc10bb5923d4def53a645a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.874
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000499",
+        "historical:raw_truthful_qa_000510"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6257459b8ff9b1bff99408f900b81b9875d40e2fb7fc10bb5923d4def53a645a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.232
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e60749a6ce73f0d0a36dd100c215420b49edab0fa45077e4a6b79bd2b52f0794",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003502",
+      "decision": "ready",
+      "subject": "refined mineral",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "ore",
+      "canonical_fact": "The production source material collected and mined before refining a mineral is ore.",
+      "prompt_en": "What raw material is collected and mined as the starting point for producing a refined mineral?",
+      "evidence_quotes": [
+        "Before getting the refined mineral you begin with collecting and mining the what?",
+        "ore"
+      ],
+      "reason": "The source question explicitly asks for the raw material collected and mined before obtaining a refined mineral; the source answer 'ore' directly answers this. The entity_to_material relation fits because it covers 'production source' as stated in its definition, and the direction entity -> material maps refined mineral (entity) to ore (material/production source). Both model annotations independently extracted the same fact with consistent answer.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "ore",
+        "canonical_fact": "The production source material collected and mined before refining a mineral is ore.",
+        "subject": "refined mineral",
+        "prompt_en": "What raw material is collected and mined as the starting point for producing a refined mineral?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "ore"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "048a0c69201dae43c7d48b111a665515c9d5f2fe903ce53d40e32ee95a9fbdf8",
+      "input_sha256": "cd00eb43d0d7473c04ddc888b240056b90b87e6dcd860bd4a95a5753c036a7b1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003509",
+      "decision": "ready",
+      "subject": "Tahiti",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "south pacific",
+      "canonical_fact": "Tahiti is located in the South Pacific.",
+      "prompt_en": "What geographic region contains Tahiti?",
+      "evidence_quotes": [
+        "Tahiti",
+        "south pacific"
+      ],
+      "reason": "The source question references Tahiti and the source answer 'south pacific' provides the containing geographic region. The entity_to_containing_location relation fits exactly: Tahiti (entity) is geographically contained in the South Pacific (containing location) at the regional level. This is not a habitat or origin, matching the relation's exclusion criteria. One model annotated it as not extractable due to 'typical_action_or_location', but the source answer unambiguously states the geographic containment fact, so the first model's extraction is correct and supported by the source.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "south pacific",
+        "canonical_fact": "Tahiti is located in the South Pacific.",
+        "subject": "Tahiti",
+        "prompt_en": "What geographic region contains Tahiti?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "south pacific"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ecaae40994d710c5f6f80135d40e3b6d31b8329f62952a38aad8fc80703e88ea",
+      "input_sha256": "55be22c5dbaedc0999afa1667e612bcbb63a824e9a6e362c687ab2c0ad797d3b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003502",
+      "input_sha256": "cd00eb43d0d7473c04ddc888b240056b90b87e6dcd860bd4a95a5753c036a7b1",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "ore",
+        "canonical_fact": "The production source material collected and mined before refining a mineral is ore.",
+        "subject": "refined mineral",
+        "prompt_en": "What raw material is collected and mined as the starting point for producing a refined mineral?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "ore"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "048a0c69201dae43c7d48b111a665515c9d5f2fe903ce53d40e32ee95a9fbdf8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003502",
+        "subject_zh": "精炼矿物",
+        "prompt_zh": "生产精炼矿物时，作为起点被采集和开采的原材料是什么？",
+        "canonical_fact_zh": "在提炼矿物之前被采集和开采的生产原料是矿石。",
+        "answer_zh": "矿石",
+        "answer_aliases_zh": [
+          "矿石"
+        ]
+      },
+      "translation_sha256": "6e8e36a9fe395e4d42dd2ca0572143914c1fd37cc00557824f4758cd1a3d063c"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003509",
+      "input_sha256": "55be22c5dbaedc0999afa1667e612bcbb63a824e9a6e362c687ab2c0ad797d3b",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "south pacific",
+        "canonical_fact": "Tahiti is located in the South Pacific.",
+        "subject": "Tahiti",
+        "prompt_en": "What geographic region contains Tahiti?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "south pacific"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ecaae40994d710c5f6f80135d40e3b6d31b8329f62952a38aad8fc80703e88ea",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003509",
+        "subject_zh": "塔希提",
+        "prompt_zh": "塔希提位于哪个地理区域？",
+        "canonical_fact_zh": "塔希提位于南太平洋。",
+        "answer_zh": "南太平洋",
+        "answer_aliases_zh": [
+          "南太平洋"
+        ]
+      },
+      "translation_sha256": "e9791ff4c9c4af092a5c7358b603736e3a17c699d4e11aa0890f38782d050a49"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003502",
+        "historical:raw_commonsense_qa_003509"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3abbc2d9f1536551164668deaac7d5410a0fb10d7c26234313ab0df8645fc761",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1781,
+      "first_chunk_seconds": 27.493,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1811,
+        "prompt_tokens": 1661,
+        "total_tokens": 3472,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1256,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "eb43f7d763b00d76ccbd35f46001cfb5f7b3af08bffef067a8998edc140833a2",
+      "status": "completed",
+      "latency_seconds": 55.826
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003502",
+        "historical:raw_commonsense_qa_003509"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d9b7c690d526958dba32d94cbd26448225b3e2ba13105e07bce9f9ae42a5ceab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1025,
+      "first_chunk_seconds": 29.914,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1056,
+        "prompt_tokens": 812,
+        "total_tokens": 1868,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 880,
+          "text_tokens": 176
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "570160a5b7d04b52020f26492fb63524caf1dba903417f53822258a17af44a43",
+      "status": "completed",
+      "latency_seconds": 44.331
+    }
+  ],
+  "status": "completed"
+}

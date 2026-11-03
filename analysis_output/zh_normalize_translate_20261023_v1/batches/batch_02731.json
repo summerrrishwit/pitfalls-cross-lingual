@@ -1,0 +1,246 @@
+{
+  "input_sha256": "2190629f66895a89ca60f9801002740ee9be0941e592aee7bd88bbcb5119d82e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009293",
+      "decision": "ready",
+      "subject": "North Carolina",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "United States",
+      "canonical_fact": "North Carolina is located in the United States.",
+      "prompt_en": "In which country is North Carolina located?",
+      "evidence_quotes": [
+        "Where is north carolina located?",
+        "united states"
+      ],
+      "reason": "North Carolina is a U.S. state geographically contained within the United States. The catalog relation entity_to_containing_location fits exactly: a sub-national place contained by a country. Both model annotations agree on the extraction; the source question and answer are unambiguous.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "United States",
+        "canonical_fact": "North Carolina is located in the United States.",
+        "subject": "North Carolina",
+        "prompt_en": "In which country is North Carolina located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "United States"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b8472c3f14e91d2293b891e71a3584f01f0266841dc4b19cd05231af061c71d1",
+      "input_sha256": "9122016c67b24a3de115e69817c80eb6ba95e03ce9fbe3b3bf796dfc9021d84b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009301",
+      "decision": "ready",
+      "subject": "obtuse (document descriptor)",
+      "relation_id": "term_to_antonym",
+      "relation_definition": "The conventional antonym of a specified term within a stated context or domain; the two terms denote opposite poles of the same quality scale in that context.",
+      "direction": "term (in stated context) -> antonym",
+      "answer": "clear",
+      "canonical_fact": "When describing a document, the antonym of 'obtuse' (hard to understand) is 'clear' (easy to understand).",
+      "prompt_en": "What word is the conventional antonym of 'obtuse' when it is used to describe a document?",
+      "evidence_quotes": [
+        "What would a document be if it is not obtuse?",
+        "clear"
+      ],
+      "reason": "The source asks for the opposite attribute of a document that is 'not obtuse,' yielding 'clear.' No existing catalog relation captures an antonym relationship; term_to_definition is a definition, not an antonym. A new relation term_to_antonym is proposed to precisely encode opposite-pole terms in a stated context. One model flagged ambiguity, but the source Q/A pair is literal and self-contained; the other model extracted it identically. Deferring would lose a well-supported lexical fact.",
+      "english": {
+        "direction": "term (in stated context) -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "clear",
+        "canonical_fact": "When describing a document, the antonym of 'obtuse' (hard to understand) is 'clear' (easy to understand).",
+        "subject": "obtuse (document descriptor)",
+        "prompt_en": "What word is the conventional antonym of 'obtuse' when it is used to describe a document?",
+        "relation_definition": "The conventional antonym of a specified term within a stated context or domain; the two terms denote opposite poles of the same quality scale in that context.",
+        "answer_aliases_en": [
+          "clear"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "The conventional antonym of a specified term within a stated context or domain; the two terms denote opposite poles of the same quality scale in that context.",
+          "direction": "term (in stated context) -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "eb029f57dd2588f6b8359cffd7413b6c00a5493fa60b4e2613d9b76219bf6e1d",
+      "input_sha256": "e456b51d726a8318c772bf8ec2c0b2e1330cf6f5db8772f5500880e15cc7e652",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009293",
+      "input_sha256": "9122016c67b24a3de115e69817c80eb6ba95e03ce9fbe3b3bf796dfc9021d84b",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "United States",
+        "canonical_fact": "North Carolina is located in the United States.",
+        "subject": "North Carolina",
+        "prompt_en": "In which country is North Carolina located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "United States"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b8472c3f14e91d2293b891e71a3584f01f0266841dc4b19cd05231af061c71d1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009293",
+        "subject_zh": "北卡罗来纳州",
+        "prompt_zh": "北卡罗来纳州位于哪个国家？",
+        "canonical_fact_zh": "北卡罗来纳州位于美国。",
+        "answer_zh": "美国",
+        "answer_aliases_zh": [
+          "美国"
+        ]
+      },
+      "translation_sha256": "ac00434055d45bb6e64c545202c62870e99f8affa6488b58bc0cc599d62b8fd8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009301",
+      "input_sha256": "e456b51d726a8318c772bf8ec2c0b2e1330cf6f5db8772f5500880e15cc7e652",
+      "english": {
+        "direction": "term (in stated context) -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "clear",
+        "canonical_fact": "When describing a document, the antonym of 'obtuse' (hard to understand) is 'clear' (easy to understand).",
+        "subject": "obtuse (document descriptor)",
+        "prompt_en": "What word is the conventional antonym of 'obtuse' when it is used to describe a document?",
+        "relation_definition": "The conventional antonym of a specified term within a stated context or domain; the two terms denote opposite poles of the same quality scale in that context.",
+        "answer_aliases_en": [
+          "clear"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "The conventional antonym of a specified term within a stated context or domain; the two terms denote opposite poles of the same quality scale in that context.",
+          "direction": "term (in stated context) -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "eb029f57dd2588f6b8359cffd7413b6c00a5493fa60b4e2613d9b76219bf6e1d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009301",
+        "subject_zh": "晦涩（文档描述词）",
+        "prompt_zh": "当用\"晦涩\"来形容一份文档时，其惯用反义词是什么词？",
+        "canonical_fact_zh": "在描述文档时，\"晦涩\"（难以理解）的反义词是\"清晰\"（容易理解）。",
+        "answer_zh": "清晰",
+        "answer_aliases_zh": [
+          "清晰"
+        ]
+      },
+      "translation_sha256": "5799c2f862406ce65f7551ad41192e33dc5d77af3e7db6a72824914a048e081b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009293",
+        "historical:raw_commonsense_qa_009301"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cebc9b5fb6d3a9e9a22ab1ea587094e81e8a9417493c717558d95f956e8351fc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2238,
+      "first_chunk_seconds": 7.695,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2314,
+        "prompt_tokens": 1622,
+        "total_tokens": 3936,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1759,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "908f1369981ef9a128224e44697398d36a4faebd359f11998696f62fef7ac30e",
+      "status": "completed",
+      "latency_seconds": 42.299
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009293",
+        "historical:raw_commonsense_qa_009301"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db5582cb4bf5ee17691f8843a05214484d691b06ae59b30ad583d0599a144ce4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1211,
+      "first_chunk_seconds": 2.001,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1338,
+        "prompt_tokens": 878,
+        "total_tokens": 2216,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1168,
+          "text_tokens": 170
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "175ddbde249f3ffb4b720b42e27bda9198c61afa1bf714dceef2c545d4d1e73a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 21.874,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009293",
+        "historical:raw_commonsense_qa_009301"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a0acf281469f594bb76ccd745e4d7d0b5e065ebb1300a290b5b5796e972b648e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1208,
+      "first_chunk_seconds": 26.459,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1256,
+        "prompt_tokens": 895,
+        "total_tokens": 2151,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1017,
+          "text_tokens": 239
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6711c6c2ab6441183ee3b15a1227ed74ec7b374881a021985e49816783ca855d",
+      "status": "completed",
+      "latency_seconds": 42.978
+    }
+  ],
+  "status": "completed"
+}

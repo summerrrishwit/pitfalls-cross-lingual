@@ -1,0 +1,228 @@
+{
+  "input_sha256": "a7a85181ec798652427e2884d1ddd6d3994e2560029ee60e9defa57fb734b09b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008445",
+      "decision": "ready",
+      "subject": "a person who is well educated",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "knowledgable",
+      "canonical_fact": "A person who is well educated is knowledgable.",
+      "prompt_en": "What term describes a person who is well educated?",
+      "evidence_quotes": [
+        "What is a person who is well educated?",
+        "knowledgable"
+      ],
+      "reason": "The question supplies a defining description ('a person who is well educated') and asks for the conventional term that fits it, matching description_to_term direction. Source answer 'knowledgable' kept verbatim (misspelling preserved). Both model extractions agree on the extraction; sensenova flagged ambiguity but Qwen-3.8-Max and the catalog relation resolve it cleanly.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "knowledgable",
+        "canonical_fact": "A person who is well educated is knowledgable.",
+        "subject": "a person who is well educated",
+        "prompt_en": "What term describes a person who is well educated?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "knowledgable"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a0b2b3865608e0c738e68cd582d58124c97522a4e3ece9ab4d1b8e5f61596d1",
+      "input_sha256": "909c4bb649e09326fb638a08743023e06e87d4cf99020a4231911b246b0b753d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008474",
+      "decision": "ready",
+      "subject": "most lizards",
+      "relation_id": "organism_to_locomotion_structure",
+      "relation_definition": "The body structure or means by which a specified organism group achieves locomotion; retains scope qualifiers such as 'most' and does not conflate habitat or feeding structure.",
+      "direction": "organism group -> locomotion structure",
+      "answer": "four legs",
+      "canonical_fact": "Most lizards achieve locomotion using four legs.",
+      "prompt_en": "What do most lizards use to achieve locomotion?",
+      "evidence_quotes": [
+        "Most lizards achieve locomotion using what?",
+        "four legs"
+      ],
+      "reason": "No catalog relation covers the locomotion structure or means of an organism group; proposed new relation organism_to_locomotion_structure with explicit scope-qualifier retention. Both model annotations extracted the same subject/answer, confirming consensus. Answer 'four legs' is a literal substring of source_answer.",
+      "english": {
+        "direction": "organism group -> locomotion structure",
+        "relation_id": "organism_to_locomotion_structure",
+        "answer": "four legs",
+        "canonical_fact": "Most lizards achieve locomotion using four legs.",
+        "subject": "most lizards",
+        "prompt_en": "What do most lizards use to achieve locomotion?",
+        "relation_definition": "The body structure or means by which a specified organism group achieves locomotion; retains scope qualifiers such as 'most' and does not conflate habitat or feeding structure.",
+        "answer_aliases_en": [
+          "four legs"
+        ],
+        "relation_spec": {
+          "id": "organism_to_locomotion_structure",
+          "definition": "The body structure or means by which a specified organism group achieves locomotion; retains scope qualifiers such as 'most' and does not conflate habitat or feeding structure.",
+          "direction": "organism group -> locomotion structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "009b6d333457f4227d705a8e0ca013bd26fb5030d1d0ebdc196f806c14c74080",
+      "input_sha256": "44b232492636913b0cf2ba4f440e0a3317829521f50a57244aa2ad2c3349c2f9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008445",
+      "input_sha256": "909c4bb649e09326fb638a08743023e06e87d4cf99020a4231911b246b0b753d",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "knowledgable",
+        "canonical_fact": "A person who is well educated is knowledgable.",
+        "subject": "a person who is well educated",
+        "prompt_en": "What term describes a person who is well educated?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "knowledgable"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2a0b2b3865608e0c738e68cd582d58124c97522a4e3ece9ab4d1b8e5f61596d1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008445",
+        "subject_zh": "一个受过良好教育的人",
+        "prompt_zh": "什么术语描述一个受过良好教育的人？",
+        "canonical_fact_zh": "一个受过良好教育的人是有学识的。",
+        "answer_zh": "有学识的",
+        "answer_aliases_zh": [
+          "有学识的"
+        ]
+      },
+      "translation_sha256": "b2b57ae2fb9d8940dd1eda0635bf1db02e908ce957b878f8fec1f9be66a7d6d3"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008474",
+      "input_sha256": "44b232492636913b0cf2ba4f440e0a3317829521f50a57244aa2ad2c3349c2f9",
+      "english": {
+        "direction": "organism group -> locomotion structure",
+        "relation_id": "organism_to_locomotion_structure",
+        "answer": "four legs",
+        "canonical_fact": "Most lizards achieve locomotion using four legs.",
+        "subject": "most lizards",
+        "prompt_en": "What do most lizards use to achieve locomotion?",
+        "relation_definition": "The body structure or means by which a specified organism group achieves locomotion; retains scope qualifiers such as 'most' and does not conflate habitat or feeding structure.",
+        "answer_aliases_en": [
+          "four legs"
+        ],
+        "relation_spec": {
+          "id": "organism_to_locomotion_structure",
+          "definition": "The body structure or means by which a specified organism group achieves locomotion; retains scope qualifiers such as 'most' and does not conflate habitat or feeding structure.",
+          "direction": "organism group -> locomotion structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "009b6d333457f4227d705a8e0ca013bd26fb5030d1d0ebdc196f806c14c74080",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008474",
+        "subject_zh": "大多数蜥蜴",
+        "prompt_zh": "大多数蜥蜴用什么来实现运动？",
+        "canonical_fact_zh": "大多数蜥蜴用四条腿来实现运动。",
+        "answer_zh": "四条腿",
+        "answer_aliases_zh": [
+          "四条腿"
+        ]
+      },
+      "translation_sha256": "36ccb32915f41243a2f4b1d76e98fe7a65b14abb0d34048814ae96791aff35c9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008445",
+        "historical:raw_commonsense_qa_008474"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e57bcd1038e498190750109fed26c659a958aff812f165592d5d7053941e06d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2491,
+      "first_chunk_seconds": 6.089,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2588,
+        "prompt_tokens": 1640,
+        "total_tokens": 4228,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2070,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bff98958faa93a991afcbf5f0e61c4cfec879e39f1ab657fd7ac3c970c682ac2",
+      "status": "completed",
+      "latency_seconds": 39.662
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008445",
+        "historical:raw_commonsense_qa_008474"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "424e2c410bdceae9402cfe47699081f1964ec8f83c5f7df256b7be86b2a07b74",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.016
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008445",
+        "historical:raw_commonsense_qa_008474"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "424e2c410bdceae9402cfe47699081f1964ec8f83c5f7df256b7be86b2a07b74",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1231,
+      "first_chunk_seconds": 20.621,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1294,
+        "prompt_tokens": 870,
+        "total_tokens": 2164,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1071,
+          "text_tokens": 223
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4e1e17b57948e913b401e211d854baf306d0df6981de48af582b2e2fe832a9fd",
+      "status": "completed",
+      "latency_seconds": 48.04
+    }
+  ],
+  "status": "completed"
+}

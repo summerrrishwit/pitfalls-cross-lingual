@@ -1,0 +1,157 @@
+{
+  "input_sha256": "6fdb5f6aed9bde5d676df21b6d539b521b1b4aa45dca0911d2ed80e27a93f44b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7fcc39dba3e3421f5393",
+      "decision": "ready",
+      "subject": "penguin in Wallace and Gromit",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Feathers McGraw",
+      "canonical_fact": "The penguin in Wallace and Gromit is named Feathers McGraw.",
+      "prompt_en": "What is the name of the penguin in Wallace and Gromit?",
+      "evidence_quotes": [
+        "the penguin in wallace and gromit",
+        "feathers mcgraw"
+      ],
+      "reason": "The source question and answer directly state that the penguin character in Wallace and Gromit is named Feathers McGraw. The description 'penguin in Wallace and Gromit' uniquely identifies the entity 'Feathers McGraw', fitting description_to_entity exactly. The existing answer 'Feathers McGraw' is a case-normalized form of the source 'feathers mcgraw' with no conflict.",
+      "english": {
+        "answer": "Feathers McGraw",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the penguin in Wallace and Gromit?",
+        "direction": "identifying description -> entity",
+        "subject": "penguin in Wallace and Gromit",
+        "canonical_fact": "The penguin in Wallace and Gromit is named Feathers McGraw.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Feathers McGraw"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a85ff861d598a69d32c2108a43a434c8b020a5fc7e2408229bc0ccbff88c378f",
+      "input_sha256": "853bc19413c4982c581fa0bd4a31828ea16c5df6c442123a31fd49032569e881",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7fd2b61a1194348e4e61",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source is a counterfactual/hypothetical construction ('If the HMS Beagle had completely bypassed the Galapagos Islands, Darwin would have have had a much poorer understanding of…'). While it implies Darwin possessed an understanding of the stated concept, the source does not directly assert the fact; it frames a conditional scenario. No catalog relation precisely captures 'person's understanding of a concept', and extracting a direct assertion from a counterfactual framing exceeds what the source literally states. Defer.",
+      "input_sha256": "8c1e3163a4f7cb3cbd0381157f14def5dfc8bda440700c9c716cfa662f865014",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_7fcc39dba3e3421f5393",
+      "input_sha256": "853bc19413c4982c581fa0bd4a31828ea16c5df6c442123a31fd49032569e881",
+      "english": {
+        "answer": "Feathers McGraw",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the penguin in Wallace and Gromit?",
+        "direction": "identifying description -> entity",
+        "subject": "penguin in Wallace and Gromit",
+        "canonical_fact": "The penguin in Wallace and Gromit is named Feathers McGraw.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Feathers McGraw"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a85ff861d598a69d32c2108a43a434c8b020a5fc7e2408229bc0ccbff88c378f",
+      "translation": {
+        "record_id": "public:pbf_7fcc39dba3e3421f5393",
+        "subject_zh": "《华莱士和格罗米特》中的企鹅",
+        "prompt_zh": "《华莱士和格罗米特》中那只企鹅的名字是什么？",
+        "canonical_fact_zh": "《华莱士和格罗米特》中的企鹅名叫 Feathers McGraw。",
+        "answer_zh": "Feathers McGraw",
+        "answer_aliases_zh": [
+          "Feathers McGraw"
+        ]
+      },
+      "translation_sha256": "ab4e94f9c1aec74cafcafeab90a57cd30aabb3e229b72cb99fac44379a1d7c43"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7fcc39dba3e3421f5393",
+        "public:pbf_7fd2b61a1194348e4e61"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8d2b1e56779106df5f0918a429eceb4e9a11e6ec5ba5b7d589aa5807ff65f79c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3289,
+      "first_chunk_seconds": 29.7,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3287,
+        "prompt_tokens": 1684,
+        "total_tokens": 4971,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2787,
+          "text_tokens": 500
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f7d6dd2217c9c5c1b21d486cf05055c9581d39dcb5adcf42f73fc5fe9943e9f3",
+      "status": "completed",
+      "latency_seconds": 55.747
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7fcc39dba3e3421f5393"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "12cca3d80cb328fa0a59b64dd0ee8ec556aa299c8332c8593566199d863f0511",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1075,
+      "first_chunk_seconds": 54.055,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1072,
+        "prompt_tokens": 519,
+        "total_tokens": 1591,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 962,
+          "text_tokens": 110
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5149aa31cd0c3ed02847ff6a5420106b8fe4c7a0aaf633b6a9b04b33683c6a73",
+      "status": "completed",
+      "latency_seconds": 62.47
+    }
+  ],
+  "status": "completed"
+}

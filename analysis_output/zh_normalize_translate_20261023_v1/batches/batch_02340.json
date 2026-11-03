@@ -1,0 +1,214 @@
+{
+  "input_sha256": "14622dc540c315b95f43b0b2bbd4bcaa4746f4c3b2a6c9d8ff01e4c074a41691",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001379",
+      "decision": "ready",
+      "subject": "earthquake",
+      "relation_id": "process_to_causal_component",
+      "relation_definition": "The specific structural component or layer whose sudden movement or change is the direct mechanical cause of a specified natural process or event.",
+      "direction": "natural process/event -> causal structural component",
+      "answer": "crust",
+      "canonical_fact": "An earthquake is caused by sudden shifts in the crust.",
+      "prompt_en": "In which layer of Earth do the sudden shifts occur that cause earthquakes?",
+      "evidence_quotes": [
+        "An earthquake is caused by sudden shifts in which of the following layers of Earth?",
+        "crust"
+      ],
+      "reason": "Both model annotations agree on subject 'earthquake', answer 'crust', and canonical fact. No existing catalog relation captures a causal structural component of a natural event (entity_to_material is about composition, entity_to_containing_location is about geographic containment, part_to_whole is about mere membership). Proposing 'process_to_causal_component' with explicit definition: the layer whose sudden shift mechanically causes the event. Direction: event -> component.",
+      "english": {
+        "direction": "natural process/event -> causal structural component",
+        "relation_id": "process_to_causal_component",
+        "answer": "crust",
+        "canonical_fact": "An earthquake is caused by sudden shifts in the crust.",
+        "subject": "earthquake",
+        "prompt_en": "In which layer of Earth do the sudden shifts occur that cause earthquakes?",
+        "relation_definition": "The specific structural component or layer whose sudden movement or change is the direct mechanical cause of a specified natural process or event.",
+        "answer_aliases_en": [
+          "crust"
+        ],
+        "relation_spec": {
+          "id": "process_to_causal_component",
+          "definition": "The specific structural component or layer whose sudden movement or change is the direct mechanical cause of a specified natural process or event.",
+          "direction": "natural process/event -> causal structural component"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "abc6f426c5cf6949342abe02958fa39299f4893f1b378a84ae3e7d76e6356da2",
+      "input_sha256": "76caf3ad4e2281819bea798a6bab139267f514b31463bba4729043f92ad6a19d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001383",
+      "decision": "ready",
+      "subject": "biochemical reaction converting pyruvate into carbon dioxide and water",
+      "relation_id": "process_to_subcellular_location",
+      "relation_definition": "The specific cellular organelle or subcellular compartment in which a specified biochemical or cellular process takes place.",
+      "direction": "specified biochemical/cellular process -> subcellular organelle or compartment",
+      "answer": "mitochondria",
+      "canonical_fact": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the mitochondria.",
+      "prompt_en": "In which cellular organelle does the biochemical reaction converting pyruvate into carbon dioxide and water take place?",
+      "evidence_quotes": [
+        "In what cellular organelle does this biochemical reaction occur?",
+        "mitochondria"
+      ],
+      "reason": "Both model annotations agree on the subject, answer 'mitochondria', and canonical fact. The catalog's entity_to_containing_location explicitly excludes process locations ('not habitat, origin, or process location'), and no other listed relation captures a subcellular site of a biochemical reaction. Proposing 'process_to_subcellular_location' with explicit definition and direction: biochemical process -> organelle. Source clearly supports mitochondria as the organelle.",
+      "english": {
+        "direction": "specified biochemical/cellular process -> subcellular organelle or compartment",
+        "relation_id": "process_to_subcellular_location",
+        "answer": "mitochondria",
+        "canonical_fact": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the mitochondria.",
+        "subject": "biochemical reaction converting pyruvate into carbon dioxide and water",
+        "prompt_en": "In which cellular organelle does the biochemical reaction converting pyruvate into carbon dioxide and water take place?",
+        "relation_definition": "The specific cellular organelle or subcellular compartment in which a specified biochemical or cellular process takes place.",
+        "answer_aliases_en": [
+          "mitochondria"
+        ],
+        "relation_spec": {
+          "id": "process_to_subcellular_location",
+          "definition": "The specific cellular organelle or subcellular compartment in which a specified biochemical or cellular process takes place.",
+          "direction": "specified biochemical/cellular process -> subcellular organelle or compartment"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4435e8664db526aef2f1ab0ee1f36d2fab976405d48698b6063549c627454db8",
+      "input_sha256": "0fe3c24636a98f7907de0a96e65f69d55408bfa4da92cbe2d7bd27a0d035afbb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001379",
+      "input_sha256": "76caf3ad4e2281819bea798a6bab139267f514b31463bba4729043f92ad6a19d",
+      "english": {
+        "direction": "natural process/event -> causal structural component",
+        "relation_id": "process_to_causal_component",
+        "answer": "crust",
+        "canonical_fact": "An earthquake is caused by sudden shifts in the crust.",
+        "subject": "earthquake",
+        "prompt_en": "In which layer of Earth do the sudden shifts occur that cause earthquakes?",
+        "relation_definition": "The specific structural component or layer whose sudden movement or change is the direct mechanical cause of a specified natural process or event.",
+        "answer_aliases_en": [
+          "crust"
+        ],
+        "relation_spec": {
+          "id": "process_to_causal_component",
+          "definition": "The specific structural component or layer whose sudden movement or change is the direct mechanical cause of a specified natural process or event.",
+          "direction": "natural process/event -> causal structural component"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "abc6f426c5cf6949342abe02958fa39299f4893f1b378a84ae3e7d76e6356da2",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001379",
+        "subject_zh": "地震",
+        "prompt_zh": "导致地震的突然位移发生在哪里？",
+        "canonical_fact_zh": "地震是由地壳的突然位移引起的。",
+        "answer_zh": "地壳",
+        "answer_aliases_zh": [
+          "地壳"
+        ]
+      },
+      "translation_sha256": "c4a6cf5d73d082e75baf7426a3e74cfbfb820409c05893039be3b71f4778d8c0"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001383",
+      "input_sha256": "0fe3c24636a98f7907de0a96e65f69d55408bfa4da92cbe2d7bd27a0d035afbb",
+      "english": {
+        "direction": "specified biochemical/cellular process -> subcellular organelle or compartment",
+        "relation_id": "process_to_subcellular_location",
+        "answer": "mitochondria",
+        "canonical_fact": "The biochemical reaction converting pyruvate into carbon dioxide and water occurs in the mitochondria.",
+        "subject": "biochemical reaction converting pyruvate into carbon dioxide and water",
+        "prompt_en": "In which cellular organelle does the biochemical reaction converting pyruvate into carbon dioxide and water take place?",
+        "relation_definition": "The specific cellular organelle or subcellular compartment in which a specified biochemical or cellular process takes place.",
+        "answer_aliases_en": [
+          "mitochondria"
+        ],
+        "relation_spec": {
+          "id": "process_to_subcellular_location",
+          "definition": "The specific cellular organelle or subcellular compartment in which a specified biochemical or cellular process takes place.",
+          "direction": "specified biochemical/cellular process -> subcellular organelle or compartment"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4435e8664db526aef2f1ab0ee1f36d2fab976405d48698b6063549c627454db8",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001383",
+        "subject_zh": "将丙酮酸转化为二氧化碳和水的生化反应",
+        "prompt_zh": "将丙酮酸转化为二氧化碳和水的生化反应发生在哪个细胞器中？",
+        "canonical_fact_zh": "将丙酮酸转化为二氧化碳和水的生化反应发生在线粒体中。",
+        "answer_zh": "线粒体",
+        "answer_aliases_zh": [
+          "线粒体"
+        ]
+      },
+      "translation_sha256": "705b23593a25c0845bb7f0475e2f7d1a7ade1212f58d6bed923edf2f9317bf3a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001379",
+        "historical:raw_ai2_arc_easy_001383"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ce02cf8a3f35c0e279ec215655a815bf89dbe4a8fd41ec017ff83349365e8aed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2448,
+      "first_chunk_seconds": 22.567,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2601,
+        "prompt_tokens": 1783,
+        "total_tokens": 4384,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1990,
+          "text_tokens": 611
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "09eb0bd866f2950a3cd9ebeb187d55cdfe0d4ca3b48fcebb8f3fbddf9e0d011a",
+      "status": "completed",
+      "latency_seconds": 53.568
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001379",
+        "historical:raw_ai2_arc_easy_001383"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d1da1164996f89dd2ca602fb1bdcd351b093871e008a8ad0940c879164d4a7ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 639,
+      "first_chunk_seconds": 53.31,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 709,
+        "prompt_tokens": 899,
+        "total_tokens": 1608,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 474,
+          "text_tokens": 235
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "295410bd81f2feba4cfd930c0ee44f0f21ba6fa9f7eab61d704fc399b5a73223",
+      "status": "completed",
+      "latency_seconds": 57.949
+    }
+  ],
+  "status": "completed"
+}

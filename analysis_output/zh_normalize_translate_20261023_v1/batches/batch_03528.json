@@ -1,0 +1,228 @@
+{
+  "input_sha256": "9f648907c7ef6fcda024fc7b141de5747eb2d608d95cd0c173844416ee85edf0",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008803",
+      "decision": "ready",
+      "subject": "lemurs",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "russia",
+      "canonical_fact": "The native home of lemurs is russia.",
+      "prompt_en": "What country is the native home of lemurs?",
+      "evidence_quotes": [
+        "native home of lemurs",
+        "russia"
+      ],
+      "reason": "Source explicitly states russia as the native home country of lemurs. organism_to_habitat fits because 'native home' of a species is its natural range/origin location. No catalog relation better captures species-to-native-country.",
+      "english": {
+        "prompt_en": "What country is the native home of lemurs?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer": "russia",
+        "canonical_fact": "The native home of lemurs is russia.",
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "subject": "lemurs",
+        "answer_aliases_en": [
+          "russia"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "133aeaa88a3eddcfe4a7f67a800120d3dbb441b9ac2416d7412add5b9c260166",
+      "input_sha256": "21c64146b04ee6f24a75544d536b8ae7ffa8e20c9fa2a4d590c046854f12e545",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008867",
+      "decision": "ready",
+      "subject": "colonial kingdoms",
+      "relation_id": "entity_to_origin_location",
+      "relation_definition": "The geographic region or country from which a specified entity or class of entities originated.",
+      "direction": "entity -> origin location",
+      "answer": "europe",
+      "canonical_fact": "Many colonial kingdoms originated in Europe.",
+      "prompt_en": "Where did many colonial kingdoms originate?",
+      "evidence_quotes": [
+        "many colonial kingdoms originate",
+        "europe"
+      ],
+      "reason": "Source states europe as the origin of many colonial kingdoms. No existing catalog relation captures 'origin location'; entity_to_containing_location explicitly excludes origin. Proposed new relation entity_to_origin_location with direction entity -> origin location to precisely capture this.",
+      "english": {
+        "prompt_en": "Where did many colonial kingdoms originate?",
+        "relation_definition": "The geographic region or country from which a specified entity or class of entities originated.",
+        "answer": "europe",
+        "canonical_fact": "Many colonial kingdoms originated in Europe.",
+        "direction": "entity -> origin location",
+        "relation_id": "entity_to_origin_location",
+        "subject": "colonial kingdoms",
+        "answer_aliases_en": [
+          "europe"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "The geographic region or country from which a specified entity or class of entities originated.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "563e16ca58d074553fe8c70e69bbce7f54fe37afa97cdd8cfbe636dede3d0177",
+      "input_sha256": "0bdfcee8801950cc1fbd8af951cd9e4e2779e27cb608a40a27fe3434b67f0e46",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008803",
+      "input_sha256": "21c64146b04ee6f24a75544d536b8ae7ffa8e20c9fa2a4d590c046854f12e545",
+      "english": {
+        "prompt_en": "What country is the native home of lemurs?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer": "russia",
+        "canonical_fact": "The native home of lemurs is russia.",
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "subject": "lemurs",
+        "answer_aliases_en": [
+          "russia"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "133aeaa88a3eddcfe4a7f67a800120d3dbb441b9ac2416d7412add5b9c260166",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008803",
+        "subject_zh": "狐猴",
+        "prompt_zh": "狐猴的原产地是哪个国家？",
+        "canonical_fact_zh": "狐猴的原产地是俄罗斯。",
+        "answer_zh": "俄罗斯",
+        "answer_aliases_zh": [
+          "俄罗斯"
+        ]
+      },
+      "translation_sha256": "8764fa8afa4f6157833eafc73d1f218c39f41fa92212564b198f5426d48f974d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008867",
+      "input_sha256": "0bdfcee8801950cc1fbd8af951cd9e4e2779e27cb608a40a27fe3434b67f0e46",
+      "english": {
+        "prompt_en": "Where did many colonial kingdoms originate?",
+        "relation_definition": "The geographic region or country from which a specified entity or class of entities originated.",
+        "answer": "europe",
+        "canonical_fact": "Many colonial kingdoms originated in Europe.",
+        "direction": "entity -> origin location",
+        "relation_id": "entity_to_origin_location",
+        "subject": "colonial kingdoms",
+        "answer_aliases_en": [
+          "europe"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "The geographic region or country from which a specified entity or class of entities originated.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "563e16ca58d074553fe8c70e69bbce7f54fe37afa97cdd8cfbe636dede3d0177",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008867",
+        "subject_zh": "殖民王国",
+        "prompt_zh": "许多殖民王国起源于哪里？",
+        "canonical_fact_zh": "许多殖民王国起源于欧洲。",
+        "answer_zh": "欧洲",
+        "answer_aliases_zh": [
+          "欧洲"
+        ]
+      },
+      "translation_sha256": "3e349ddaa2d15615723206ca2e1c8108120d01f4e2bac05e3be85b2a211dadf8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008803",
+        "historical:raw_commonsense_qa_008867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b694f5b432ed1dd843127790c3061126b44f5c7bcd3c0d4866adccecd36b3089",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2212,
+      "first_chunk_seconds": 2.317,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2281,
+        "prompt_tokens": 1572,
+        "total_tokens": 3853,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1845,
+          "text_tokens": 436
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bebd7dda024c3766159c14a20052baa4b3b8a5ae0f51af92ac9bd40256298638",
+      "status": "completed",
+      "latency_seconds": 43.861
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008803",
+        "historical:raw_commonsense_qa_008867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0b01c0ec2b0f296aaec1beb80a7b5baf370ac01b30503bd84bfcbba90f7b8e0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.358
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008803",
+        "historical:raw_commonsense_qa_008867"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0b01c0ec2b0f296aaec1beb80a7b5baf370ac01b30503bd84bfcbba90f7b8e0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 513,
+      "first_chunk_seconds": 2.173,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 526,
+        "prompt_tokens": 795,
+        "total_tokens": 1321,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 394,
+          "text_tokens": 132
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b84278d473724de869400bdd956594da7c5c078f08610dfb74941132c26e2dd9",
+      "status": "completed",
+      "latency_seconds": 23.936
+    }
+  ],
+  "status": "completed"
+}

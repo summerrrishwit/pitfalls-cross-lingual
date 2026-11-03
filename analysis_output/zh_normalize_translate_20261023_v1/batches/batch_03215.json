@@ -1,0 +1,68 @@
+{
+  "input_sha256": "b15c63ac21040b629f764532b5282a0cfcf1aec862af2a98063683dcca54ef0c",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000904",
+        "historical:raw_sciq_000905"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "22c308db374ec152680a18be3c3fa03cc6ea104c9d4eb0551c27ec8dcb395c1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.916
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000904",
+        "historical:raw_sciq_000905"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "22c308db374ec152680a18be3c3fa03cc6ea104c9d4eb0551c27ec8dcb395c1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2610,
+      "first_chunk_seconds": 22.673,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2691,
+        "prompt_tokens": 1711,
+        "total_tokens": 4402,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2136,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "83a0cc3e7415b1353b3c6db87f5e6af27a45252a41340d5467d726a97c53041b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 64.361,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000904",
+        "historical:raw_sciq_000905"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "efb907275e4855a38eefc52ddd7901aa6c0be0fc5225b870a91ef9360f474527",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.76
+    }
+  ],
+  "status": "failed"
+}

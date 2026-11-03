@@ -78,7 +78,40 @@ SENSENOVA_BASE_URL=https://token.sensenova.cn
 SENSENOVA_API_KEY=
 ```
 
+## Current project status (2026-11-03)
+
+The [Chinese candidate pipeline](tasks/task_zh_candidate_pipeline.md) finished production and
+translation review on 2026-10-27 (Asia/Shanghai). Of 7,250 source records, 4,985 were translated
+and reviewed: 4,807 accepted, 172 rejected, and 6 terminal deferred. The accepted rows are
+candidate records, not deduplicated facts or frozen experimental samples. Relation definitions,
+answer aliases, final Original/Neutral/Targeted inputs, exposure closure, splits, and target-model
+scoring still require closure before formal experiments.
+
+- [Accepted Chinese candidates](analysis_output/zh_normalize_translate_20261023_v1/exports/accepted_chinese_candidates.jsonl)
+- [Full source coverage and export hashes](analysis_output/zh_normalize_translate_20261023_v1/exports/summary.json)
+- [Final production/review report](analysis_output/zh_normalize_translate_20261023_v1/final_report.md)
+- [Current status, cleanup guidance, and Git audit](analysis_output/status_git_audit_20261103/report.md)
+
+The historical 160-fact repair experiment passed its Development gate but failed independent
+Validation (0/18 directed variants repaired); Sealed remains unopened. See the
+[final experiment report](analysis_output/qwen3_8b_remote_resume_20261016/repair_v5_outcome.md).
+Historical manifests retain their original absolute paths and hashes; the read-only
+`python analysis_output/status_git_audit_20261103/verify_snapshot.py` verifies the Chinese snapshot
+using an explicit path mapping into the current checkout, without starting production.
+
 ## Usage
+
+### Open-answer factual defect discovery (new candidates)
+
+New candidate construction follows the [open-answer discovery protocol](tasks/task_open_factual_discovery_protocol.md):
+reviewed source QA and wrong-option material → option-free Original/Neutral/Targeted → reviewed,
+reproducible defects → mechanism attribution and repair. MCQ-positive admission is not required.
+Development feedback is bounded to one initial candidate and at most one revision per fact;
+report independent reproducible facts per total request/token budget, including failed attempts.
+The [policy](configs/open_factual_discovery_v1.json) and offline ledger checker define these limits;
+they do not launch new inference. The EN/ZH open-result analyzer accepts cohorts of variable size,
+one or more distractors per fact, and optional MCQ comparison labels. The commands below retain
+the original published MCQ workflow and historical factual-data tooling.
 
 ### Step 1: Generate cross-lingual weaknesses
 

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "aae100802ea5d178ebd2876736cdd478759360d29d1387f4c2fb1e0db53cc923",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f3d7e252257f51a5d3b9",
+      "decision": "ready",
+      "subject": "season 8 of Worst Cooks in America",
+      "relation_id": "competition_season_to_winner",
+      "relation_definition": "The winner (grand prize recipient) of a specified competition/show season; direction is from the season to the winning contestant.",
+      "direction": "specified competition season -> winner",
+      "answer": "Nick Slater",
+      "canonical_fact": "Nick Slater won season 8 of Worst Cooks in America.",
+      "prompt_en": "Factual question: who won season 8 of worst cooks in america\nAnswer:",
+      "evidence_quotes": [
+        "who won season 8 of worst cooks in america",
+        "nick slater"
+      ],
+      "reason": "Source question and answer directly establish that Nick Slater is the winner of season 8. No existing catalog relation covers a competition/show winner, so a precise new relation 'competition_season_to_winner' is proposed. The answer is a straightforward literal copy (with standard capitalization) of the source answer.",
+      "english": {
+        "answer": "Nick Slater",
+        "relation_id": "competition_season_to_winner",
+        "prompt_en": "Factual question: who won season 8 of worst cooks in america\nAnswer:",
+        "direction": "specified competition season -> winner",
+        "subject": "season 8 of Worst Cooks in America",
+        "canonical_fact": "Nick Slater won season 8 of Worst Cooks in America.",
+        "relation_definition": "The winner (grand prize recipient) of a specified competition/show season; direction is from the season to the winning contestant.",
+        "answer_aliases_en": [
+          "Nick Slater"
+        ],
+        "relation_spec": {
+          "id": "competition_season_to_winner",
+          "definition": "The winner (grand prize recipient) of a specified competition/show season; direction is from the season to the winning contestant.",
+          "direction": "specified competition season -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ce69209994e4403ad05fc0305bde9c8c9b2d1f26fd500991531c35e8c8fec4b3",
+      "input_sha256": "aba9f4933120f854815b4d7574d1c45d6a26b6c94b51f15c925e4f5f31cde5b4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f3dc2b4dea4480fbc986",
+      "decision": "ready",
+      "subject": "presidential nominee to the Supreme Court (Senate confirmation)",
+      "relation_id": "legislative_process_to_vote_threshold",
+      "relation_definition": "The minimum vote share or number of votes a specified legislative confirmation/approval process requires to pass; direction is from the process to the threshold.",
+      "direction": "specified legislative confirmation process -> required vote threshold",
+      "answer": "Fifty-one percent",
+      "canonical_fact": "A presidential nominee to the Supreme Court must receive fifty-one percent of the votes in the Senate to be confirmed.",
+      "prompt_en": "Factual question: How many votes in the Senate must a presidential nominee to the Supreme Court receive in order to be confirmed?\nAnswer:",
+      "evidence_quotes": [
+        "How many votes in the Senate must a presidential nominee to the Supreme Court receive in order to be confirmed?",
+        "Fifty-one percent"
+      ],
+      "reason": "Source question and answer directly state the vote threshold for Senate confirmation of a Supreme Court nominee. No catalog relation covers a procedural vote threshold, so a new relation 'legislative_process_to_vote_threshold' is proposed with explicit definition and direction. The answer is copied verbatim from the source.",
+      "english": {
+        "answer": "Fifty-one percent",
+        "relation_id": "legislative_process_to_vote_threshold",
+        "prompt_en": "Factual question: How many votes in the Senate must a presidential nominee to the Supreme Court receive in order to be confirmed?\nAnswer:",
+        "direction": "specified legislative confirmation process -> required vote threshold",
+        "subject": "presidential nominee to the Supreme Court (Senate confirmation)",
+        "canonical_fact": "A presidential nominee to the Supreme Court must receive fifty-one percent of the votes in the Senate to be confirmed.",
+        "relation_definition": "The minimum vote share or number of votes a specified legislative confirmation/approval process requires to pass; direction is from the process to the threshold.",
+        "answer_aliases_en": [
+          "Fifty-one percent"
+        ],
+        "relation_spec": {
+          "id": "legislative_process_to_vote_threshold",
+          "definition": "The minimum vote share or number of votes a specified legislative confirmation/approval process requires to pass; direction is from the process to the threshold.",
+          "direction": "specified legislative confirmation process -> required vote threshold"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "804c1a33eca415ac550c03b46886edeb7ba29455a1257397e17bbf4eac187551",
+      "input_sha256": "643dbcdc22025df4ea925d4bf9e0cf2e0634d579e3abac887808f500a1347c7a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f3d7e252257f51a5d3b9",
+        "public:pbf_f3dc2b4dea4480fbc986"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bcf0db9d5c6bd30caad6cff0ea046bab3fea3add2432f62c42990a3a8231bef4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1323,
+      "first_chunk_seconds": 43.434,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1422,
+        "prompt_tokens": 1648,
+        "total_tokens": 3070,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 837,
+          "text_tokens": 585
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cad97dd3cba9fd047e7eeada9be9320f00d3d6b78db5d00e7182d7e1a17baeaa",
+      "status": "completed",
+      "latency_seconds": 62.111
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f3d7e252257f51a5d3b9",
+        "public:pbf_f3dc2b4dea4480fbc986"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "be6f2cf7ad54b826a2b21bda4f0ba0f49faa0f4a46f870752cb124a5bc52f8a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.143
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f3d7e252257f51a5d3b9",
+        "public:pbf_f3dc2b4dea4480fbc986"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "be6f2cf7ad54b826a2b21bda4f0ba0f49faa0f4a46f870752cb124a5bc52f8a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.97
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f3d7e252257f51a5d3b9",
+        "public:pbf_f3dc2b4dea4480fbc986"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "be6f2cf7ad54b826a2b21bda4f0ba0f49faa0f4a46f870752cb124a5bc52f8a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.004
+    }
+  ],
+  "status": "failed"
+}

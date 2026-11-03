@@ -1,0 +1,177 @@
+{
+  "input_sha256": "e5518b17d1699093cdb089dceacead1521ed1127e67a22dbf8e5ae614f22d263",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b1effcd96826432a0439",
+      "decision": "ready",
+      "subject": "Fiscal policy",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "changes in government spending and taxes to fight recessions or inflations",
+      "canonical_fact": "Fiscal policy refers to changes in government spending and taxes to fight recessions or inflations.",
+      "prompt_en": "What does fiscal policy refer to?",
+      "evidence_quotes": [
+        "Fiscal policy refers to",
+        "changes in government spending and taxes to fight recessions or inflations"
+      ],
+      "reason": "Source question and answer form a direct term-to-definition pair. The answer is a literal substring of source_answer with the trailing period removed. The relation term_to_definition from the catalog fits exactly: 'Fiscal policy' is the explicit term and the answer is its definition. No uncertainty or qualifiers are present that need preserving beyond the literal text.",
+      "english": {
+        "relation_id": "term_to_definition",
+        "canonical_fact": "Fiscal policy refers to changes in government spending and taxes to fight recessions or inflations.",
+        "answer": "changes in government spending and taxes to fight recessions or inflations",
+        "prompt_en": "What does fiscal policy refer to?",
+        "subject": "Fiscal policy",
+        "direction": "term -> definition",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "changes in government spending and taxes to fight recessions or inflations",
+          "changes in government spending and taxes to fight recessions or inflations."
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ad078aa3d4ce9f40eeb097e60f45edebc4b0e8fe1f84476c6161b4bfed4d9418",
+      "input_sha256": "4e341dccc4b746eb4394ef2b889ce9642e63629bdaa40f44f88b7deea9466468",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b220ffbf38dee712bbac",
+      "decision": "ready",
+      "subject": "first Apple computer",
+      "relation_id": "work_to_release_date",
+      "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+      "direction": "specified work/version/market -> release date",
+      "answer": "1976-04-01",
+      "canonical_fact": "The first Apple computer was released on 1976-04-01.",
+      "prompt_en": "When was the first Apple computer released?",
+      "evidence_quotes": [
+        "when did the first apple computer come out",
+        "1976-04-01"
+      ],
+      "reason": "Source question asks for the release date of the first Apple computer and source_answer provides 1976-04-01. The relation work_to_release_date from the catalog fits: 'first Apple computer' is the specified work and '1976-04-01' is the full release date. No market or version disambiguation is stated, so the subject remains as given.",
+      "english": {
+        "relation_id": "work_to_release_date",
+        "canonical_fact": "The first Apple computer was released on 1976-04-01.",
+        "answer": "1976-04-01",
+        "prompt_en": "When was the first Apple computer released?",
+        "subject": "first Apple computer",
+        "direction": "specified work/version/market -> release date",
+        "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+        "answer_aliases_en": [
+          "1976-04-01",
+          "01 April 1976",
+          "1976 April, 01",
+          "1976 04 01",
+          "1976 April 01"
+        ],
+        "relation_spec": {
+          "id": "work_to_release_date",
+          "direction": "specified work/version/market -> release date",
+          "definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7c87ee07758d829190c6767dbcd8a4982870561f4b319f9ca8310e109ec81f46",
+      "input_sha256": "47941ec0e9560eb33fed4838f569dd4b926206041a08dbd0bd7d5aeae3087f04",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b1effcd96826432a0439",
+        "public:pbf_b220ffbf38dee712bbac"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "747f5f1c79cd8483d5087f4008da2a59c35d3911eac5fd39104e883a8b0fc24c",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1691,
+        "prompt_tokens": 1696,
+        "total_tokens": 3387,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1115,
+          "text_tokens": 576
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a388cb491574521128d67a1c90a3b495d89ac6f2cabdf50794f460c9bbc39bc6",
+      "status": "completed",
+      "latency_seconds": 40.205
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b1effcd96826432a0439",
+        "public:pbf_b220ffbf38dee712bbac"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b6d0f4e3f444c0f275fbd43d29e084ebaed48a0dc29ddc0aa07020ffdbe27127",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 41.303
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b1effcd96826432a0439",
+        "public:pbf_b220ffbf38dee712bbac"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b6d0f4e3f444c0f275fbd43d29e084ebaed48a0dc29ddc0aa07020ffdbe27127",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.015
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b1effcd96826432a0439",
+        "public:pbf_b220ffbf38dee712bbac"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b6d0f4e3f444c0f275fbd43d29e084ebaed48a0dc29ddc0aa07020ffdbe27127",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.487
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3bcce7b5e95429c9df4677cb5aa4d2ebbc9c7fab4dc34817de13121972a0488a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004521",
+      "decision": "ready",
+      "subject": "Both sides in World War I",
+      "relation_id": "conflict_party_to_weapon_used",
+      "relation_definition": "A weapon, agent, or method employed by a specified party or side in a named conflict to achieve a stated effect; retain any current legal or status qualifier (e.g., 'now banned').",
+      "direction": "specified party in a named conflict -> weapon/agent used",
+      "answer": "poisonous gas",
+      "canonical_fact": "Both sides in World War I used poisonous gas to cause death that is now banned.",
+      "prompt_en": "What did both sides in World War I use to cause death that is now banned?",
+      "evidence_quotes": [
+        "Both sides in World War I used what to cause death that is now banned?",
+        "poisonous gas"
+      ],
+      "reason": "Source question and answer directly support the fact. No existing catalog relation covers a conflict-party-to-weapon relationship, so a new precise relation is proposed. The 'now banned' qualifier is preserved from the source.",
+      "english": {
+        "direction": "specified party in a named conflict -> weapon/agent used",
+        "relation_id": "conflict_party_to_weapon_used",
+        "answer": "poisonous gas",
+        "canonical_fact": "Both sides in World War I used poisonous gas to cause death that is now banned.",
+        "subject": "Both sides in World War I",
+        "prompt_en": "What did both sides in World War I use to cause death that is now banned?",
+        "relation_definition": "A weapon, agent, or method employed by a specified party or side in a named conflict to achieve a stated effect; retain any current legal or status qualifier (e.g., 'now banned').",
+        "answer_aliases_en": [
+          "poisonous gas"
+        ],
+        "relation_spec": {
+          "id": "conflict_party_to_weapon_used",
+          "definition": "A weapon, agent, or method employed by a specified party or side in a named conflict to achieve a stated effect; retain any current legal or status qualifier (e.g., 'now banned').",
+          "direction": "specified party in a named conflict -> weapon/agent used"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "38c096ae0cb7d0fcc73c3d939e2d2d2c671d04ef6eb825672f9e5033bf80491f",
+      "input_sha256": "144e5038aa743ddedf3a8a567391d5a3141199c28ab0d0afac6753ae84c5d4e3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004577",
+      "decision": "ready",
+      "subject": "The main part of Turkey",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Asia Minor",
+      "canonical_fact": "The main part of Turkey is located in Asia Minor.",
+      "prompt_en": "In what region is the main part of Turkey located?",
+      "evidence_quotes": [
+        "The main part of turkey makes up what?",
+        "asia minor"
+      ],
+      "reason": "Source directly states the main part of Turkey is in Asia Minor. entity_to_containing_location fits: the 'main part of Turkey' is the entity, 'Asia Minor' is the containing geographic region. Existing answer 'Asia Minor' kept with proper capitalization; source_answer 'asia minor' is a literal substring match.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Asia Minor",
+        "canonical_fact": "The main part of Turkey is located in Asia Minor.",
+        "subject": "The main part of Turkey",
+        "prompt_en": "In what region is the main part of Turkey located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Asia Minor"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "77bf121aa8d4ee2e5d14fa181170d4794d1c4f386b5059012f80e43dccddabef",
+      "input_sha256": "fdcbe0a2ae1152f4c46d47faa8592eacc6cc88dbded16d327679c5ec68fc2b75",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004521",
+      "input_sha256": "144e5038aa743ddedf3a8a567391d5a3141199c28ab0d0afac6753ae84c5d4e3",
+      "english": {
+        "direction": "specified party in a named conflict -> weapon/agent used",
+        "relation_id": "conflict_party_to_weapon_used",
+        "answer": "poisonous gas",
+        "canonical_fact": "Both sides in World War I used poisonous gas to cause death that is now banned.",
+        "subject": "Both sides in World War I",
+        "prompt_en": "What did both sides in World War I use to cause death that is now banned?",
+        "relation_definition": "A weapon, agent, or method employed by a specified party or side in a named conflict to achieve a stated effect; retain any current legal or status qualifier (e.g., 'now banned').",
+        "answer_aliases_en": [
+          "poisonous gas"
+        ],
+        "relation_spec": {
+          "id": "conflict_party_to_weapon_used",
+          "definition": "A weapon, agent, or method employed by a specified party or side in a named conflict to achieve a stated effect; retain any current legal or status qualifier (e.g., 'now banned').",
+          "direction": "specified party in a named conflict -> weapon/agent used"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "38c096ae0cb7d0fcc73c3d939e2d2d2c671d04ef6eb825672f9e5033bf80491f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004521",
+        "subject_zh": "第一次世界大战的双方",
+        "prompt_zh": "第一次世界大战的双方使用什么手段致人死亡，而该手段如今已被禁止？",
+        "canonical_fact_zh": "第一次世界大战的双方都曾使用有毒气体致人死亡，而有毒气体如今已被禁止。",
+        "answer_zh": "有毒气体",
+        "answer_aliases_zh": [
+          "有毒气体"
+        ]
+      },
+      "translation_sha256": "f96f2c2fdaf7023c51bf3a963f258396fc28328318c07d26032d9f1b4928ebe3"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004577",
+      "input_sha256": "fdcbe0a2ae1152f4c46d47faa8592eacc6cc88dbded16d327679c5ec68fc2b75",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Asia Minor",
+        "canonical_fact": "The main part of Turkey is located in Asia Minor.",
+        "subject": "The main part of Turkey",
+        "prompt_en": "In what region is the main part of Turkey located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Asia Minor"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "77bf121aa8d4ee2e5d14fa181170d4794d1c4f386b5059012f80e43dccddabef",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004577",
+        "subject_zh": "土耳其的主体部分",
+        "prompt_zh": "土耳其的主体部分位于哪个地区？",
+        "canonical_fact_zh": "土耳其的主体部分位于小亚细亚。",
+        "answer_zh": "小亚细亚",
+        "answer_aliases_zh": [
+          "小亚细亚"
+        ]
+      },
+      "translation_sha256": "749936b7b99ac32dda875af2bdb390f7905e39724af4f084f8c9b08ab6290cd7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004521",
+        "historical:raw_commonsense_qa_004577"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "201df0d2230f3fd0cfcf20b551cc58827d156acee6e12f529596241907c6bd38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2897,
+      "first_chunk_seconds": 8.327,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3002,
+        "prompt_tokens": 1658,
+        "total_tokens": 4660,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2473,
+          "text_tokens": 529
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e8798dc55d0146ffe1a5c2df4309b1f8ead75cbfaea6d9e7c747e956825592b6",
+      "status": "completed",
+      "latency_seconds": 42.759
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004521",
+        "historical:raw_commonsense_qa_004577"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dd1b21afcc36098e8374ccc6ba9023f57ee658244d423890c51422149f0c7e34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 781,
+      "first_chunk_seconds": 18.921,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 845,
+        "prompt_tokens": 892,
+        "total_tokens": 1737,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 610,
+          "text_tokens": 235
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d171d5478db07ccaa8c5d88b9b27aff49f3b1187cf624386b26575d9049f0ef9",
+      "status": "completed",
+      "latency_seconds": 27.645
+    }
+  ],
+  "status": "completed"
+}

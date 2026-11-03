@@ -1,0 +1,220 @@
+{
+  "input_sha256": "98b12d97f04694e1f65b326d7284469d6a6d35da1f836ea632ceb3ab8c8cb1a6",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3a0345c4580baf75fc89",
+      "decision": "ready",
+      "subject": "money bill",
+      "relation_id": "instrument_to_introduction_house",
+      "relation_definition": "The specific legislative house in which a designated type of bill or legislative instrument may be formally introduced; retains the procedural constraint and named chamber.",
+      "direction": "legislative instrument -> house where it can be introduced",
+      "answer": "Lok Sabha",
+      "canonical_fact": "A money bill can be introduced in the Lok Sabha.",
+      "prompt_en": "In which house of parliament can a money bill be introduced?",
+      "evidence_quotes": [
+        "in which house of parliament the money bill can be introduced",
+        "Lok Sabha"
+      ],
+      "reason": "No existing catalog relation captures a procedural 'venue of introduction' for a legislative instrument. Proposed a new relation 'instrument_to_introduction_house' to avoid forcing containment or part-whole semantics. Answer 'Lok Sabha' is a direct substring of source_answer; prompt is option-free and omits the answer.",
+      "english": {
+        "relation_id": "instrument_to_introduction_house",
+        "canonical_fact": "A money bill can be introduced in the Lok Sabha.",
+        "prompt_en": "In which house of parliament can a money bill be introduced?",
+        "answer": "Lok Sabha",
+        "direction": "legislative instrument -> house where it can be introduced",
+        "relation_definition": "The specific legislative house in which a designated type of bill or legislative instrument may be formally introduced; retains the procedural constraint and named chamber.",
+        "subject": "money bill",
+        "answer_aliases_en": [
+          "Lok Sabha",
+          "House of Representatives of India",
+          "House of the People (India)"
+        ],
+        "relation_spec": {
+          "id": "instrument_to_introduction_house",
+          "definition": "The specific legislative house in which a designated type of bill or legislative instrument may be formally introduced; retains the procedural constraint and named chamber.",
+          "direction": "legislative instrument -> house where it can be introduced"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b06b15bea0287d7a76a0077bed76f4efeb35b5fba342f15d4651070fb59c992b",
+      "input_sha256": "a852da84bba91ff862d417ee22ace88996f2c567ee520285e4ebdbda58387164",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3a0424218d8c7889d875",
+      "decision": "ready",
+      "subject": "babies",
+      "relation_id": "population_to_proportion",
+      "relation_definition": "Stated proportion or rate of a defined subset of a population meeting a specific condition; retains the qualifying scope and denominator as stated in source.",
+      "direction": "specified population subset -> proportion value",
+      "answer": "1 in 40",
+      "canonical_fact": "The proportion of babies that have an abnormality identifiable at birth is 1 in 40.",
+      "prompt_en": "The proportion of babies that have an abnormality identifiable at birth is",
+      "evidence_quotes": [
+        "The proportion of babies that have an abnormality identifiable at birth is",
+        "1 in 40"
+      ],
+      "reason": "No existing catalog relation covers a statistical proportion/rate attribute. Proposed 'population_to_proportion' to precisely capture a qualifying-condition proportion without forcing into class or material categories. Answer '1 in 40' is a literal substring of source_answer; prompt is option-free and omits the numeric answer.",
+      "english": {
+        "relation_id": "population_to_proportion",
+        "canonical_fact": "The proportion of babies that have an abnormality identifiable at birth is 1 in 40.",
+        "prompt_en": "The proportion of babies that have an abnormality identifiable at birth is",
+        "answer": "1 in 40",
+        "direction": "specified population subset -> proportion value",
+        "relation_definition": "Stated proportion or rate of a defined subset of a population meeting a specific condition; retains the qualifying scope and denominator as stated in source.",
+        "subject": "babies",
+        "answer_aliases_en": [
+          "1 in 40"
+        ],
+        "relation_spec": {
+          "id": "population_to_proportion",
+          "definition": "Stated proportion or rate of a defined subset of a population meeting a specific condition; retains the qualifying scope and denominator as stated in source.",
+          "direction": "specified population subset -> proportion value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1c82b6234bdb907a14e565af8dbe808fb22e6ec04d0304ae3a16b989c0b8c8e8",
+      "input_sha256": "e8bf103e4e458ab9b421e310c336ef02eabf51991e5641b193c2ee71bd4a993b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3a0345c4580baf75fc89",
+      "input_sha256": "a852da84bba91ff862d417ee22ace88996f2c567ee520285e4ebdbda58387164",
+      "english": {
+        "relation_id": "instrument_to_introduction_house",
+        "canonical_fact": "A money bill can be introduced in the Lok Sabha.",
+        "prompt_en": "In which house of parliament can a money bill be introduced?",
+        "answer": "Lok Sabha",
+        "direction": "legislative instrument -> house where it can be introduced",
+        "relation_definition": "The specific legislative house in which a designated type of bill or legislative instrument may be formally introduced; retains the procedural constraint and named chamber.",
+        "subject": "money bill",
+        "answer_aliases_en": [
+          "Lok Sabha",
+          "House of Representatives of India",
+          "House of the People (India)"
+        ],
+        "relation_spec": {
+          "id": "instrument_to_introduction_house",
+          "definition": "The specific legislative house in which a designated type of bill or legislative instrument may be formally introduced; retains the procedural constraint and named chamber.",
+          "direction": "legislative instrument -> house where it can be introduced"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b06b15bea0287d7a76a0077bed76f4efeb35b5fba342f15d4651070fb59c992b",
+      "translation": {
+        "record_id": "public:pbf_3a0345c4580baf75fc89",
+        "subject_zh": "金钱法案",
+        "prompt_zh": "金钱法案可以在议会的哪个院提出？",
+        "canonical_fact_zh": "金钱法案可以在人民院提出。",
+        "answer_zh": "人民院",
+        "answer_aliases_zh": [
+          "人民院",
+          "印度众议院",
+          "人民院（印度）"
+        ]
+      },
+      "translation_sha256": "4a49724c44945b0f0abbbf875b2f1fa0f53df709a8c20face8559c8cee5fafc9"
+    },
+    {
+      "record_id": "public:pbf_3a0424218d8c7889d875",
+      "input_sha256": "e8bf103e4e458ab9b421e310c336ef02eabf51991e5641b193c2ee71bd4a993b",
+      "english": {
+        "relation_id": "population_to_proportion",
+        "canonical_fact": "The proportion of babies that have an abnormality identifiable at birth is 1 in 40.",
+        "prompt_en": "The proportion of babies that have an abnormality identifiable at birth is",
+        "answer": "1 in 40",
+        "direction": "specified population subset -> proportion value",
+        "relation_definition": "Stated proportion or rate of a defined subset of a population meeting a specific condition; retains the qualifying scope and denominator as stated in source.",
+        "subject": "babies",
+        "answer_aliases_en": [
+          "1 in 40"
+        ],
+        "relation_spec": {
+          "id": "population_to_proportion",
+          "definition": "Stated proportion or rate of a defined subset of a population meeting a specific condition; retains the qualifying scope and denominator as stated in source.",
+          "direction": "specified population subset -> proportion value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1c82b6234bdb907a14e565af8dbe808fb22e6ec04d0304ae3a16b989c0b8c8e8",
+      "translation": {
+        "record_id": "public:pbf_3a0424218d8c7889d875",
+        "subject_zh": "婴儿",
+        "prompt_zh": "出生时即可识别有异常的婴儿比例为",
+        "canonical_fact_zh": "出生时即可识别有异常的婴儿比例为1/40。",
+        "answer_zh": "1/40",
+        "answer_aliases_zh": [
+          "1/40"
+        ]
+      },
+      "translation_sha256": "0f1c56fc3a593ad283baad629c518a3e186a77d03c8ab32fd807418215dd5036"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3a0345c4580baf75fc89",
+        "public:pbf_3a0424218d8c7889d875"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "78e2de4f82c715f712900e1888d0148ccfaad2f6d9276e5810a5dd608013414c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1929,
+      "first_chunk_seconds": 12.051,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2028,
+        "prompt_tokens": 1640,
+        "total_tokens": 3668,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1470,
+          "text_tokens": 558
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "651568dd55420b32f20718ecb01a5d3341c162fab6e9ca4c669043471350f9cf",
+      "status": "completed",
+      "latency_seconds": 59.651
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3a0345c4580baf75fc89",
+        "public:pbf_3a0424218d8c7889d875"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "609572230bb7b512066db9e70c93202d4d08633eb53e31ae201a700f8d2cea00",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1403,
+      "first_chunk_seconds": 4.723,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1530,
+        "prompt_tokens": 922,
+        "total_tokens": 2452,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1285,
+          "text_tokens": 245
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "06bea13e201ebdc14f5b8096e780f4acc4b54f225dbcf765b50f0daad48612e0",
+      "status": "completed",
+      "latency_seconds": 30.951
+    }
+  ],
+  "status": "completed"
+}

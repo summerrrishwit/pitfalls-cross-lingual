@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b609c05653e5a7f647fdd1db2114e9a6528d6061c54ccb3bdde7d099581a18f6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004142",
+      "decision": "ready",
+      "subject": "bald eagle",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "British Columbia",
+      "canonical_fact": "Bald eagles can be found in the province of British Columbia.",
+      "prompt_en": "In which two-word Canadian province can bald eagles be found besides the USA?",
+      "evidence_quotes": [
+        "they can be found in what two word province too?",
+        "british columbia"
+      ],
+      "reason": "Source question explicitly asks for a two-word province where bald eagles are found; source answer is 'british columbia'. organism_to_habitat fits because it covers range/distribution ('retaining scope and range'). The 'two word province' constraint in the question makes the answer sufficiently specific despite one model flagging non-uniqueness; the source pairs a single answer to a singular question. No catalog relation better captures organism-to-geographic-range than organism_to_habitat.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "British Columbia",
+        "canonical_fact": "Bald eagles can be found in the province of British Columbia.",
+        "subject": "bald eagle",
+        "prompt_en": "In which two-word Canadian province can bald eagles be found besides the USA?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "British Columbia"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bb3a8d9df4bfa5150449d300601be705a89a2b9e4a434931e3746af45790d6e2",
+      "input_sha256": "1cbf5ea02237b5c507bdad8f7f2cea78ca9213016d9521890d68e4537b289240",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004154",
+      "decision": "ready",
+      "subject": "president",
+      "relation_id": "role_to_governing_institution",
+      "relation_definition": "The governing institution or body that a specified political role or office heads or leads.",
+      "direction": "political role -> governing institution it leads",
+      "answer": "government",
+      "canonical_fact": "The president is the leader of the government.",
+      "prompt_en": "What institution does the president lead?",
+      "evidence_quotes": [
+        "The president is the leader of what institution?",
+        "government"
+      ],
+      "reason": "Source directly states 'The president is the leader of what institution?' with answer 'government'. No existing catalog relation precisely captures the role-to-led-institution link (entity_to_class is about taxonomy, symbol_to_meaning is about symbols, etc.), so a new relation role_to_governing_institution is proposed with explicit direction and definition. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "political role -> governing institution it leads",
+        "relation_id": "role_to_governing_institution",
+        "answer": "government",
+        "canonical_fact": "The president is the leader of the government.",
+        "subject": "president",
+        "prompt_en": "What institution does the president lead?",
+        "relation_definition": "The governing institution or body that a specified political role or office heads or leads.",
+        "answer_aliases_en": [
+          "government"
+        ],
+        "relation_spec": {
+          "id": "role_to_governing_institution",
+          "definition": "The governing institution or body that a specified political role or office heads or leads.",
+          "direction": "political role -> governing institution it leads"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8659dde57eead531248009d13dddb0fa33165174a4e93ed0f9411f98d5d21f87",
+      "input_sha256": "7551a4f0fef845b12472dc64d78f6aaedfd287ebb5ef25004cfa4994adfd8879",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004142",
+      "input_sha256": "1cbf5ea02237b5c507bdad8f7f2cea78ca9213016d9521890d68e4537b289240",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "British Columbia",
+        "canonical_fact": "Bald eagles can be found in the province of British Columbia.",
+        "subject": "bald eagle",
+        "prompt_en": "In which two-word Canadian province can bald eagles be found besides the USA?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "British Columbia"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bb3a8d9df4bfa5150449d300601be705a89a2b9e4a434931e3746af45790d6e2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004142",
+        "subject_zh": "白头鹰",
+        "prompt_zh": "除了美国，白头鹰可以在哪个由两个英文单词组成的加拿大省份被发现？",
+        "canonical_fact_zh": "白头鹰可以在不列颠哥伦比亚省被发现。",
+        "answer_zh": "不列颠哥伦比亚",
+        "answer_aliases_zh": [
+          "不列颠哥伦比亚"
+        ]
+      },
+      "translation_sha256": "3df2dc15326f57e0de6e7ef9fc855262fb44c858d4185979e8c02fac6462a011"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004154",
+      "input_sha256": "7551a4f0fef845b12472dc64d78f6aaedfd287ebb5ef25004cfa4994adfd8879",
+      "english": {
+        "direction": "political role -> governing institution it leads",
+        "relation_id": "role_to_governing_institution",
+        "answer": "government",
+        "canonical_fact": "The president is the leader of the government.",
+        "subject": "president",
+        "prompt_en": "What institution does the president lead?",
+        "relation_definition": "The governing institution or body that a specified political role or office heads or leads.",
+        "answer_aliases_en": [
+          "government"
+        ],
+        "relation_spec": {
+          "id": "role_to_governing_institution",
+          "definition": "The governing institution or body that a specified political role or office heads or leads.",
+          "direction": "political role -> governing institution it leads"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8659dde57eead531248009d13dddb0fa33165174a4e93ed0f9411f98d5d21f87",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004154",
+        "subject_zh": "总统",
+        "prompt_zh": "总统领导什么机构？",
+        "canonical_fact_zh": "总统是政府的领导人。",
+        "answer_zh": "政府",
+        "answer_aliases_zh": [
+          "政府"
+        ]
+      },
+      "translation_sha256": "6d6a07e91b216fe07e99d57d629f2461421a81121f5cb127927b34cb864df66f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004142",
+        "historical:raw_commonsense_qa_004154"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3f6fa16ef7728b65fb0a0b449ef00637fe8ef813b5bd2ce9609fd025d9b21914",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2753,
+      "first_chunk_seconds": 12.432,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2956,
+        "prompt_tokens": 1642,
+        "total_tokens": 4598,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2533,
+          "text_tokens": 423
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7901da83453fe40cd1ff1622de8bbc8c480567788ae33257603a2167059a0469",
+      "status": "completed",
+      "latency_seconds": 54.454
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004142",
+        "historical:raw_commonsense_qa_004154"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2a02202ff4840d759ec86a2e8cd212d5a39f9ebae8d4fd0188b94f3389086fbb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1300,
+      "first_chunk_seconds": 27.072,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1384,
+        "prompt_tokens": 820,
+        "total_tokens": 2204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1168,
+          "text_tokens": 216
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf068d1864b7eac454457866970b6b34fa0e02becfc27458f3f94b6ac903f230",
+      "status": "completed",
+      "latency_seconds": 46.692
+    }
+  ],
+  "status": "completed"
+}

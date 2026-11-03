@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "id": "automation",
+  "kind": "heartbeat",
+  "name": "Qwen 运行检查与故障恢复",
+  "prompt": "负责Qwen运行检查与自动故障修复。工作目录：/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual；运行目录：analysis_output/zh_normalize_translate_20261023_v1。\n\n持续检查真实数据增长、请求活动和进程。发现卡住、退出或接口故障时，主动读取脱敏错误、定位原因，按当前运维策略执行修复、验证和续跑，不仅记录问题或等待用户催促。原因不明的403按策略冷却后自动验证访问，全部通过再归档恢复；必要时自主修复运维程序并测试、保存版本与哈希。明确需要外部权限或配置的问题再通知用户，不擅自更换密钥、路由或模型，不改冻结输入和数据标准。\n\n正常时保持后台持续运行，避免重复worker；修复成功须有真实生产结果增长。保留失败记录，审核积压不影响生产；本任务不分派Luna/Sol或导出审核接受集。全量生成及规定补试结束并保存生产汇总后删除本任务。常规状态静默，仅实质故障、恢复、完成或需用户操作时通知。",
+  "status": "ACTIVE",
+  "rrule": "RRULE:FREQ=MINUTELY;INTERVAL=10",
+  "target_thread_id": "01a16774-5d9f-70a2-bbf1-112336d4fc72",
+  "created_at": 1792672867158,
+  "updated_at": 1792857646359
+}

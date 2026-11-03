@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d5cf3fffcdbd9ef3e946a3b50a09fd4db8ee3dee98cd9504390feb795036fc64",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005773",
+      "decision": "ready",
+      "subject": "a person with nothing they have to do",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "spare time",
+      "canonical_fact": "A person with nothing they have to do is said to have spare time.",
+      "prompt_en": "If a person has nothing they have to do, what are they said to have?",
+      "evidence_quotes": [
+        "If a person has nothing they have to do they are said to have what?",
+        "spare time"
+      ],
+      "reason": "The source describes a qualifying situation (a person with nothing to do) and asks for the conventional term that fits it; 'spare time' is that term. description_to_term fits exactly: the description is the supplied qualifying phrase and the answer is the conventional expression. Both model annotations agree on subject, relation, and answer. No conflict with source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "spare time",
+        "canonical_fact": "A person with nothing they have to do is said to have spare time.",
+        "subject": "a person with nothing they have to do",
+        "prompt_en": "If a person has nothing they have to do, what are they said to have?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "spare time"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64018769af210c30011a57eaa4908cee16e55e65155427bc4d4350841f55005c",
+      "input_sha256": "702b268d566981d2bbdd13bef1dbdbb4daa561e2f25f0e84add9aaf03e5543e3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005785",
+      "decision": "ready",
+      "subject": "energy",
+      "relation_id": "quantity_to_compositional_quantity",
+      "relation_definition": "A physical quantity stated to be constituted or composed of another physical quantity, as determined by a named authority; retains the attribution and compositional framing as stated in the source.",
+      "direction": "physical quantity -> compositional physical quantity",
+      "answer": "mass",
+      "canonical_fact": "Einstein determined that energy is made of mass.",
+      "prompt_en": "What did Einstein determine that energy is made of?",
+      "evidence_quotes": [
+        "What did Einstein determine that energy is made of?",
+        "mass"
+      ],
+      "reason": "No existing catalog relation precisely captures a compositional relationship between two abstract physical quantities attributed to a named determiner. entity_to_material implies physical material composition, not a quantity-to-quantity relation. Proposing quantity_to_compositional_quantity with explicit direction and definition. The source answer 'mass' is preserved verbatim; the Einstein attribution is retained as the determining authority. Both model annotations agree on the extracted fact.",
+      "english": {
+        "direction": "physical quantity -> compositional physical quantity",
+        "relation_id": "quantity_to_compositional_quantity",
+        "answer": "mass",
+        "canonical_fact": "Einstein determined that energy is made of mass.",
+        "subject": "energy",
+        "prompt_en": "What did Einstein determine that energy is made of?",
+        "relation_definition": "A physical quantity stated to be constituted or composed of another physical quantity, as determined by a named authority; retains the attribution and compositional framing as stated in the source.",
+        "answer_aliases_en": [
+          "mass"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_compositional_quantity",
+          "definition": "A physical quantity stated to be constituted or composed of another physical quantity, as determined by a named authority; retains the attribution and compositional framing as stated in the source.",
+          "direction": "physical quantity -> compositional physical quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed22a04129486d79a2c5d13e5cb7bd0d58d27e2973b2536ca1c1c25a5365f596",
+      "input_sha256": "04dc94652e81574bddd0e1448c0c710a154a49bd3314cfed3cbba17ca4384d25",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005773",
+      "input_sha256": "702b268d566981d2bbdd13bef1dbdbb4daa561e2f25f0e84add9aaf03e5543e3",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "spare time",
+        "canonical_fact": "A person with nothing they have to do is said to have spare time.",
+        "subject": "a person with nothing they have to do",
+        "prompt_en": "If a person has nothing they have to do, what are they said to have?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "spare time"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64018769af210c30011a57eaa4908cee16e55e65155427bc4d4350841f55005c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005773",
+        "subject_zh": "一个没有事情要做的人",
+        "prompt_zh": "如果一个人没有事情要做，人们说他有什么？",
+        "canonical_fact_zh": "一个没有事情要做的人被说是有空闲时间。",
+        "answer_zh": "空闲时间",
+        "answer_aliases_zh": [
+          "空闲时间"
+        ]
+      },
+      "translation_sha256": "10f7615eb93e20e7476ac8998c0eaaf810b452e675529774cd6432ac1720590d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005785",
+      "input_sha256": "04dc94652e81574bddd0e1448c0c710a154a49bd3314cfed3cbba17ca4384d25",
+      "english": {
+        "direction": "physical quantity -> compositional physical quantity",
+        "relation_id": "quantity_to_compositional_quantity",
+        "answer": "mass",
+        "canonical_fact": "Einstein determined that energy is made of mass.",
+        "subject": "energy",
+        "prompt_en": "What did Einstein determine that energy is made of?",
+        "relation_definition": "A physical quantity stated to be constituted or composed of another physical quantity, as determined by a named authority; retains the attribution and compositional framing as stated in the source.",
+        "answer_aliases_en": [
+          "mass"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_compositional_quantity",
+          "definition": "A physical quantity stated to be constituted or composed of another physical quantity, as determined by a named authority; retains the attribution and compositional framing as stated in the source.",
+          "direction": "physical quantity -> compositional physical quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ed22a04129486d79a2c5d13e5cb7bd0d58d27e2973b2536ca1c1c25a5365f596",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005785",
+        "subject_zh": "能量",
+        "prompt_zh": "爱因斯坦确定能量由什么构成？",
+        "canonical_fact_zh": "爱因斯坦确定能量由质量构成。",
+        "answer_zh": "质量",
+        "answer_aliases_zh": [
+          "质量"
+        ]
+      },
+      "translation_sha256": "9e62ea3c4367c140ca41a772ba9a596496d4dcd1481734c39a03efc6c2dc84e4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005773",
+        "historical:raw_commonsense_qa_005785"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "29cf5e369e096b02684a3a024bb02fbac08695b5e73dff22fb2f5993a672fb94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4844,
+      "first_chunk_seconds": 26.687,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 5141,
+        "prompt_tokens": 1687,
+        "total_tokens": 6828,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4587,
+          "text_tokens": 554
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f6828294e0c2fc8f761b59022bce68f6f61fdce9bf6af66c2eecd95ea8a85088",
+      "status": "completed",
+      "latency_seconds": 137.85
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005773",
+        "historical:raw_commonsense_qa_005785"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9e2a4a9c7b03c9a5572be4a5a2f91c31c4321ae54c83ad1c4f0d1da593c77765",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 783,
+      "first_chunk_seconds": 4.414,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 801,
+        "prompt_tokens": 866,
+        "total_tokens": 1667,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 656,
+          "text_tokens": 145
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1cc2e651d640db8930e0ce5dfe5c9a0347af1e6336d8b705d4714effd8387df6",
+      "status": "completed",
+      "latency_seconds": 15.864
+    }
+  ],
+  "status": "completed"
+}

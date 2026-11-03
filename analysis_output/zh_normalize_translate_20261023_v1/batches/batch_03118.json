@@ -1,0 +1,171 @@
+{
+  "input_sha256": "248a6b421cbe5dfd3748738b4b965c06b5c821d358fce6c53d2320efdae7298b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000690",
+      "decision": "ready",
+      "subject": "Malonate",
+      "relation_id": "substance_to_target_role",
+      "relation_definition": "The specific functional role (e.g., inhibitor, activator) that a chemical substance plays with respect to a specified biological target molecule.",
+      "direction": "substance -> functional role on a specified target",
+      "answer": "inhibitor",
+      "canonical_fact": "Malonate acts as an inhibitor of the enzyme succinate dehydrogenase.",
+      "prompt_en": "What is the functional effect of malonate on the enzyme succinate dehydrogenase?",
+      "evidence_quotes": [
+        "inhibitor",
+        "plays what negative role on the enzyme succinate dehydrogenase"
+      ],
+      "reason": "Source explicitly states malonate's role is 'inhibitor' on succinate dehydrogenase. No existing catalog relation captures a substance-to-target functional role, so a new precise relation is proposed.",
+      "english": {
+        "prompt_en": "What is the functional effect of malonate on the enzyme succinate dehydrogenase?",
+        "relation_definition": "The specific functional role (e.g., inhibitor, activator) that a chemical substance plays with respect to a specified biological target molecule.",
+        "answer": "inhibitor",
+        "canonical_fact": "Malonate acts as an inhibitor of the enzyme succinate dehydrogenase.",
+        "direction": "substance -> functional role on a specified target",
+        "relation_id": "substance_to_target_role",
+        "subject": "Malonate",
+        "answer_aliases_en": [
+          "inhibitor"
+        ],
+        "relation_spec": {
+          "id": "substance_to_target_role",
+          "definition": "The specific functional role (e.g., inhibitor, activator) that a chemical substance plays with respect to a specified biological target molecule.",
+          "direction": "substance -> functional role on a specified target"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ffecf73a47157ef1949257356c5997d8c8114ee2dfe6cfd91e30b7fb83e164c6",
+      "input_sha256": "8760980597a11bcff920bad78fe1744c4e6dadf9f53c631516dc54cda84b4905",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000691",
+      "decision": "ready",
+      "subject": "Conidiospores",
+      "relation_id": "spore_to_parent_structure",
+      "relation_definition": "The specific mycological structure from which a specified spore type is directly released or produced.",
+      "direction": "spore type -> parent structure",
+      "answer": "hypha",
+      "canonical_fact": "Conidiospores are unicellular or multicellular spores that are released directly from the tip or side of a hypha.",
+      "prompt_en": "From which fungal structure are conidiospores released directly from the tip or side?",
+      "evidence_quotes": [
+        "hypha",
+        "released directly from the tip or side of this"
+      ],
+      "reason": "Source explicitly states conidiospores are released from the tip or side of a hypha. No existing catalog relation (entity_to_containing_location excludes origin; part_to_whole implies containment) captures a spore-to-parent-structure production relationship, so a new precise relation is proposed.",
+      "english": {
+        "prompt_en": "From which fungal structure are conidiospores released directly from the tip or side?",
+        "relation_definition": "The specific mycological structure from which a specified spore type is directly released or produced.",
+        "answer": "hypha",
+        "canonical_fact": "Conidiospores are unicellular or multicellular spores that are released directly from the tip or side of a hypha.",
+        "direction": "spore type -> parent structure",
+        "relation_id": "spore_to_parent_structure",
+        "subject": "Conidiospores",
+        "answer_aliases_en": [
+          "hypha"
+        ],
+        "relation_spec": {
+          "id": "spore_to_parent_structure",
+          "definition": "The specific mycological structure from which a specified spore type is directly released or produced.",
+          "direction": "spore type -> parent structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "661239f8695a9598cf237617ebdf031252c34fcd592c33cfab9beb7457666da6",
+      "input_sha256": "bd04ea59e25f55320677b81783e1307bb09bb6505ef9ed457121e90ae044b519",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000690",
+        "historical:raw_sciq_000691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "73d8f91a3f9b31347d0e3938dbe51645283d77b1897c4dae2a5bad07f34fce37",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.975
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000690",
+        "historical:raw_sciq_000691"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "73d8f91a3f9b31347d0e3938dbe51645283d77b1897c4dae2a5bad07f34fce37",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2222,
+      "first_chunk_seconds": 1.197,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2309,
+        "prompt_tokens": 1781,
+        "total_tokens": 4090,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1785,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81f08ee5f8e870b2bd650105d0b0b6809a3c5e3600b76e4e0a48ef92b5e3d194",
+      "status": "completed",
+      "latency_seconds": 94.199
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000690",
+        "historical:raw_sciq_000691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "10d77f6a7caf40a04e8e51edb660005f0cb0c35457f009aa1d920911e6222890",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 52.399
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000690",
+        "historical:raw_sciq_000691"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "10d77f6a7caf40a04e8e51edb660005f0cb0c35457f009aa1d920911e6222890",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.05
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000690",
+        "historical:raw_sciq_000691"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "10d77f6a7caf40a04e8e51edb660005f0cb0c35457f009aa1d920911e6222890",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.784
+    }
+  ],
+  "status": "failed"
+}

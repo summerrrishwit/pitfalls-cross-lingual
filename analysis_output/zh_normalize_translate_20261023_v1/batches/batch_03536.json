@@ -1,0 +1,68 @@
+{
+  "input_sha256": "74746ca7bbfe9aa814845219613c49d6b470cc2d2a44ea87debdc9de9c2b1f39",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009198",
+        "historical:raw_commonsense_qa_009199"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b0bbcf9396263cfaa7690971cb6fd7880385a00ae735a47a3b0ce78fa1183912",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.959
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009198",
+        "historical:raw_commonsense_qa_009199"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b0bbcf9396263cfaa7690971cb6fd7880385a00ae735a47a3b0ce78fa1183912",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1928,
+      "first_chunk_seconds": 2.509,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1958,
+        "prompt_tokens": 1602,
+        "total_tokens": 3560,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1517,
+          "text_tokens": 441
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9ce01162043c59bea441686eed016f533238c85351a9c7476db1b159f35639a5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 31.171,
+      "validation_code": "answer_not_in_source"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009198",
+        "historical:raw_commonsense_qa_009199"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2ae5c3a756dbc8890307cc3d28ac8246fec6875fdd6e90c798ebce6c450c3d0d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.941
+    }
+  ],
+  "status": "failed"
+}

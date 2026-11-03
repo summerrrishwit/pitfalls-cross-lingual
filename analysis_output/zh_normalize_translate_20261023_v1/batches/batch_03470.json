@@ -1,0 +1,160 @@
+{
+  "input_sha256": "ce3e051ddea35143eaeb3720365cd296e5615276b781a5abc3ca7994e43f4ce8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006008",
+      "decision": "ready",
+      "subject": "large group of human beings",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "civilisation",
+      "canonical_fact": "A large group of human beings is called a civilisation.",
+      "prompt_en": "What is the conventional term for a large group of human beings?",
+      "evidence_quotes": [
+        "large group of human beings",
+        "civilisation"
+      ],
+      "reason": "Source question asks for the term matching the description 'large group of human beings'; source answer is the literal word 'civilisation'. This is a direct description-to-term mapping that fits the catalog relation description_to_term exactly. Sensenova extracted the same subject/answer pair. No conflict with source.",
+      "english": {
+        "prompt_en": "What is the conventional term for a large group of human beings?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "civilisation",
+        "canonical_fact": "A large group of human beings is called a civilisation.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "large group of human beings",
+        "answer_aliases_en": [
+          "civilisation"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "39c5de76642a7d9bd84f581fa57635d9a359e469ec2c6b7acae51237b7be5843",
+      "input_sha256": "5036e31ab4a081d326cdb6a5afc372377e2b91c3d51066827d62f9cfbcf724ae",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006030",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation precisely covers 'substance secreted onto skin during a specified physical activity.' The source question uses the qualifier 'likely', making it a common-sense inference rather than a strict definitional or compositional fact. Sensenova flagged it as typical_action_or_location. Forcing entity_to_material (composition of an entity) or organism_to_habitat would be inaccurate; sweat on skin is a conditional secretion, not a material constituent. A new relation would be overly instance-specific. Deferred.",
+      "input_sha256": "3ac56bdf535cace5664a805c06fe51d0b6406befb2f35f4e0e6115d909b6d60c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008",
+        "historical:raw_commonsense_qa_006030"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "390c894e24b2355576944f42546cf9f007b2ddebd8a88c527ab3e011f5673e9b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 42.597
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008",
+        "historical:raw_commonsense_qa_006030"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "390c894e24b2355576944f42546cf9f007b2ddebd8a88c527ab3e011f5673e9b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 50.21
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008",
+        "historical:raw_commonsense_qa_006030"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "390c894e24b2355576944f42546cf9f007b2ddebd8a88c527ab3e011f5673e9b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2708,
+      "first_chunk_seconds": 63.582,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2813,
+        "prompt_tokens": 1604,
+        "total_tokens": 4417,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2360,
+          "text_tokens": 453
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4ddf4e459204b5d1835f003705f0844c7cdd4b173b9f2edbe64d2cadde0903cc",
+      "status": "completed",
+      "latency_seconds": 105.916
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "50c0e8185c65c50c8813323c9bd3184a8bf1ffdb3f8f5074fa2e016f88a0b718",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.106
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "50c0e8185c65c50c8813323c9bd3184a8bf1ffdb3f8f5074fa2e016f88a0b718",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.402
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006008"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "50c0e8185c65c50c8813323c9bd3184a8bf1ffdb3f8f5074fa2e016f88a0b718",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 176.679
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,155 @@
+{
+  "input_sha256": "5520172659e809e52f9063a16ee194d9515772de7c9ca21389513e1587239b05",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000237",
+      "decision": "ready",
+      "subject": "world",
+      "relation_id": "class_to_superlative_member",
+      "relation_definition": "The unique entity holding the top superlative position (e.g., largest, longest, oldest) within a stated class and scope; not a general attribute or arbitrary ranking.",
+      "direction": "scoped class -> top-ranked member",
+      "answer": "Antarctic Desert",
+      "canonical_fact": "The Antarctic Desert is the largest desert in the world.",
+      "prompt_en": "What is the largest desert in the world?",
+      "evidence_quotes": [
+        "The Antarctic Desert is the largest desert in the world"
+      ],
+      "reason": "Source answer directly states the superlative fact. No existing catalog relation captures a top-rank superlative within a scoped class; proposing class_to_superlative_member. Answer 'Antarctic Desert' is preserved verbatim from source.",
+      "english": {
+        "prompt_en": "What is the largest desert in the world?",
+        "relation_definition": "The unique entity holding the top superlative position (e.g., largest, longest, oldest) within a stated class and scope; not a general attribute or arbitrary ranking.",
+        "answer": "Antarctic Desert",
+        "canonical_fact": "The Antarctic Desert is the largest desert in the world.",
+        "direction": "scoped class -> top-ranked member",
+        "relation_id": "class_to_superlative_member",
+        "subject": "world",
+        "answer_aliases_en": [
+          "Antarctic Desert"
+        ],
+        "relation_spec": {
+          "id": "class_to_superlative_member",
+          "definition": "The unique entity holding the top superlative position (e.g., largest, longest, oldest) within a stated class and scope; not a general attribute or arbitrary ranking.",
+          "direction": "scoped class -> top-ranked member"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ab03d48d5bb923d2c9603622fb9e5b1035ea1dce99b88508d6c6bceb5aa3e6bf",
+      "input_sha256": "32ef68b9eff85e3851f4d3b3285c1847f58a6ac5e22acf62331291ba0beb225d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000238",
+      "decision": "ready",
+      "subject": "Pocahontas",
+      "relation_id": "person_to_spouse",
+      "relation_definition": "Marital partner of a specified person; capture the marriage relationship as stated in the source.",
+      "direction": "person -> spouse",
+      "answer": "John Rolfe",
+      "canonical_fact": "Pocahontas married John Rolfe.",
+      "prompt_en": "Who did Pocahontas marry?",
+      "evidence_quotes": [
+        "Pocahontas married John Rolfe"
+      ],
+      "reason": "Source answer explicitly states the spouse. No existing catalog relation covers a marriage/spouse link; proposing person_to_spouse. Answer 'John Rolfe' is preserved verbatim from source.",
+      "english": {
+        "prompt_en": "Who did Pocahontas marry?",
+        "relation_definition": "Marital partner of a specified person; capture the marriage relationship as stated in the source.",
+        "answer": "John Rolfe",
+        "canonical_fact": "Pocahontas married John Rolfe.",
+        "direction": "person -> spouse",
+        "relation_id": "person_to_spouse",
+        "subject": "Pocahontas",
+        "answer_aliases_en": [
+          "John Rolfe"
+        ],
+        "relation_spec": {
+          "id": "person_to_spouse",
+          "definition": "Marital partner of a specified person; capture the marriage relationship as stated in the source.",
+          "direction": "person -> spouse"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "805447dc1a77f558fbdf19d738b7699e89f1453eb6dd8b2f3da81993cc9dedda",
+      "input_sha256": "7aa4ce9e1c1bdf3bde944c62ab6f4703f79deaebab3db10b47ad5f36a1424b7e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000237",
+        "historical:raw_truthful_qa_000238"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6872e2fabeb155e31887fc0228a3a0f20df8e1c86ed15204b015cf38cc791592",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2630,
+      "first_chunk_seconds": 63.27,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2774,
+        "prompt_tokens": 1668,
+        "total_tokens": 4442,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2317,
+          "text_tokens": 457
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5d6ee4f0c89ad2e31fa1f5c69d4fc960ac1867992cbb1f919a9d9370577fe375",
+      "status": "completed",
+      "latency_seconds": 109.194
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000237",
+        "historical:raw_truthful_qa_000238"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e239f2220501ab067db3907ea868727796ace533cc94874cdc3aa083cf815597",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 52.707
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000237",
+        "historical:raw_truthful_qa_000238"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e239f2220501ab067db3907ea868727796ace533cc94874cdc3aa083cf815597",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 55.865
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000237",
+        "historical:raw_truthful_qa_000238"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e239f2220501ab067db3907ea868727796ace533cc94874cdc3aa083cf815597",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.355
+    }
+  ],
+  "status": "failed"
+}

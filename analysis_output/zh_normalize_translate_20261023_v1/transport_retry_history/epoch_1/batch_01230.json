@@ -1,0 +1,172 @@
+{
+  "input_sha256": "72a4ae2e0a25a71cb02bf8b2fd36a4b872749a2b15616901b2f6ebbba1129f0f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_74a49b267dd8843c96d6",
+      "decision": "ready",
+      "subject": "primary prevention",
+      "relation_id": "concept_to_facets",
+      "relation_definition": "Recognized facets (aspects, types, or dimensions) of a specified concept; preserves the enumeration as stated in source.",
+      "direction": "concept -> facets",
+      "answer": "Universal, selective, and indicative",
+      "canonical_fact": "The facets of primary prevention are universal, selective, and indicative.",
+      "prompt_en": "The facets of primary prevention are",
+      "evidence_quotes": [
+        "facets of primary prevention",
+        "Universal, selective, and indicative"
+      ],
+      "reason": "No existing catalog relation captures 'facets' of a concept. 'whole_to_part' refers to constituents, not aspects/dimensions. A new precise relation 'concept_to_facets' is proposed to preserve the enumeration of types/aspects without forcing a broad category.",
+      "english": {
+        "answer": "Universal, selective, and indicative",
+        "relation_id": "concept_to_facets",
+        "prompt_en": "The facets of primary prevention are",
+        "direction": "concept -> facets",
+        "subject": "primary prevention",
+        "canonical_fact": "The facets of primary prevention are universal, selective, and indicative.",
+        "relation_definition": "Recognized facets (aspects, types, or dimensions) of a specified concept; preserves the enumeration as stated in source.",
+        "answer_aliases_en": [
+          "Universal, selective, and indicative"
+        ],
+        "relation_spec": {
+          "id": "concept_to_facets",
+          "definition": "Recognized facets (aspects, types, or dimensions) of a specified concept; preserves the enumeration as stated in source.",
+          "direction": "concept -> facets"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e41cd3b068eaca3af9218d17126e03f53872b7a8b13bcf65b8aaf64ebb982640",
+      "input_sha256": "0d3269754c30c73a5f1d0d299c7fb0bca290c501b89ac43cea1df3cce4d399ec",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_74a7a171918f615194f4",
+      "decision": "ready",
+      "subject": "people more likely to experience depression after a loss",
+      "relation_id": "condition_to_risk_demographic",
+      "relation_definition": "Demographic group identified as more likely to experience a specified condition or outcome; retains stated probability qualifiers.",
+      "direction": "condition/outcome description -> at-risk demographic group",
+      "answer": "young survivors",
+      "canonical_fact": "People more likely to experience depression after a loss are young survivors.",
+      "prompt_en": "People more likely to experience depression after a loss are",
+      "evidence_quotes": [
+        "more likely to experience depression after a loss",
+        "young survivors"
+      ],
+      "reason": "No existing catalog relation captures a probabilistic demographic association with a condition. 'description_to_entity' targets a unique entity, not a demographic group. A new precise relation 'condition_to_risk_demographic' is proposed to retain the probability qualifier and group-level granularity.",
+      "english": {
+        "answer": "young survivors",
+        "relation_id": "condition_to_risk_demographic",
+        "prompt_en": "People more likely to experience depression after a loss are",
+        "direction": "condition/outcome description -> at-risk demographic group",
+        "subject": "people more likely to experience depression after a loss",
+        "canonical_fact": "People more likely to experience depression after a loss are young survivors.",
+        "relation_definition": "Demographic group identified as more likely to experience a specified condition or outcome; retains stated probability qualifiers.",
+        "answer_aliases_en": [
+          "young survivors",
+          "Are young survivors"
+        ],
+        "relation_spec": {
+          "id": "condition_to_risk_demographic",
+          "definition": "Demographic group identified as more likely to experience a specified condition or outcome; retains stated probability qualifiers.",
+          "direction": "condition/outcome description -> at-risk demographic group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66496b203f858056eaf998e849e81429166159d2b6659094c340c9063f025aab",
+      "input_sha256": "d9128e42c0a4a9dce6c20cc0966e0d62ff61a699d907eeddacc2339afe14c9f7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_74a49b267dd8843c96d6",
+        "public:pbf_74a7a171918f615194f4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "333d95c75f83e16c684116f8181a763cb53d6a6fbf536e89251c4da9219938c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.261
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_74a49b267dd8843c96d6",
+        "public:pbf_74a7a171918f615194f4"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "333d95c75f83e16c684116f8181a763cb53d6a6fbf536e89251c4da9219938c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3090,
+      "first_chunk_seconds": 46.642,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3088,
+        "prompt_tokens": 1598,
+        "total_tokens": 4686,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2592,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0cc273b37a77eacb81e672785185605259ee0616b24b43e10a1400273b0cfd7f",
+      "status": "completed",
+      "latency_seconds": 70.91
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74a49b267dd8843c96d6",
+        "public:pbf_74a7a171918f615194f4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0090da8ec2ff07ba2378046bc4831ea744eced939ae98b44b397ec33cc6395e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.085
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74a49b267dd8843c96d6",
+        "public:pbf_74a7a171918f615194f4"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0090da8ec2ff07ba2378046bc4831ea744eced939ae98b44b397ec33cc6395e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.949
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74a49b267dd8843c96d6",
+        "public:pbf_74a7a171918f615194f4"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0090da8ec2ff07ba2378046bc4831ea744eced939ae98b44b397ec33cc6395e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.226
+    }
+  ],
+  "status": "failed"
+}

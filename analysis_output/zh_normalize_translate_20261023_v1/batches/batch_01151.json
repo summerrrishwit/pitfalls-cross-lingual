@@ -1,0 +1,224 @@
+{
+  "input_sha256": "ae81c8fae885cb20b2f33f70e67db625e31962adb2925bef7ae5c54d1ba1cd6b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_67594860f0bb1063c27f",
+      "decision": "ready",
+      "subject": "Northridge earthquake",
+      "relation_id": "earthquake_to_magnitude",
+      "relation_definition": "Seismic magnitude of a specified earthquake event; retain the scale (e.g., moment magnitude) if stated.",
+      "direction": "earthquake -> magnitude",
+      "answer": "6.7",
+      "canonical_fact": "The magnitude of the Northridge earthquake was 6.7.",
+      "prompt_en": "What was the magnitude of the Northridge earthquake?",
+      "evidence_quotes": [
+        "6.7"
+      ],
+      "reason": "No catalog relation covers a physical measurement attribute of an event. Proposed precise relation earthquake_to_magnitude. Source answer '6.7' is a literal substring; preserved as-is.",
+      "english": {
+        "answer": "6.7",
+        "relation_id": "earthquake_to_magnitude",
+        "prompt_en": "What was the magnitude of the Northridge earthquake?",
+        "direction": "earthquake -> magnitude",
+        "subject": "Northridge earthquake",
+        "canonical_fact": "The magnitude of the Northridge earthquake was 6.7.",
+        "relation_definition": "Seismic magnitude of a specified earthquake event; retain the scale (e.g., moment magnitude) if stated.",
+        "answer_aliases_en": [
+          "6.7"
+        ],
+        "relation_spec": {
+          "id": "earthquake_to_magnitude",
+          "definition": "Seismic magnitude of a specified earthquake event; retain the scale (e.g., moment magnitude) if stated.",
+          "direction": "earthquake -> magnitude"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "67f0d3f322a31e8af4825680cc2c63e6a84adeda5439a099b9c26d846b6fb42c",
+      "input_sha256": "83d600d3902b44b293807d8bbadddf8dd6e33be0433a1ad47d829b3c092b5947",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_67927184fd9088ff99cb",
+      "decision": "ready",
+      "subject": "Fifty Shades of Grey",
+      "relation_id": "film_to_lead_actress",
+      "relation_definition": "Lead female actor (first female lead) in a specified film version; disambiguate remake/sequel where necessary.",
+      "direction": "film -> lead actress",
+      "answer": "Dakota Johnson",
+      "canonical_fact": "Dakota Johnson is the lead actress in Fifty Shades of Grey.",
+      "prompt_en": "Who is the lead actress in Fifty Shades of Grey?",
+      "evidence_quotes": [
+        "Dakota Johnson"
+      ],
+      "reason": "Catalog relation character_to_actor requires a named character as subject; the source question asks about the film's female lead without naming a character, so no listed relation fits exactly. Proposed precise relation film_to_lead_actress. Answer 'Dakota Johnson' is a literal substring of source_answer.",
+      "english": {
+        "answer": "Dakota Johnson",
+        "relation_id": "film_to_lead_actress",
+        "prompt_en": "Who is the lead actress in Fifty Shades of Grey?",
+        "direction": "film -> lead actress",
+        "subject": "Fifty Shades of Grey",
+        "canonical_fact": "Dakota Johnson is the lead actress in Fifty Shades of Grey.",
+        "relation_definition": "Lead female actor (first female lead) in a specified film version; disambiguate remake/sequel where necessary.",
+        "answer_aliases_en": [
+          "Dakota Johnson",
+          "Dakota Mayi Johnson"
+        ],
+        "relation_spec": {
+          "id": "film_to_lead_actress",
+          "definition": "Lead female actor (first female lead) in a specified film version; disambiguate remake/sequel where necessary.",
+          "direction": "film -> lead actress"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2eab061a45678e40e0f76248e5024ee4fb9c5810464413a75f4992b71d9fbf6e",
+      "input_sha256": "2238443e452856d8398d5dd0f32effb585617f049d1f17a136ba09c7f41f07de",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7478f22990468521c0acace676726893657c96cd16f534a1f8e30eefdfc6b37",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.927
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a7478f22990468521c0acace676726893657c96cd16f534a1f8e30eefdfc6b37",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1688,
+      "first_chunk_seconds": 46.841,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1697,
+        "prompt_tokens": 1589,
+        "total_tokens": 3286,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1225,
+          "text_tokens": 472
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "af5a1aefd2d2853ed0b0fdb0539aa602bc767b82fb7ec8ff49eb4bf35106862b",
+      "status": "completed",
+      "latency_seconds": 60.456
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.944
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.945
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.048
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.281
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_67594860f0bb1063c27f",
+        "public:pbf_67927184fd9088ff99cb"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ad95518cd038daaaf20ea30a31654858eee4d2af22fb89ddf46ddf923c2940aa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.786
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01151.json",
+      "sha256": "f4ebe03919cb5b6f95e726c28c0b2004a80047e51cb88889ff3858456e90e85f",
+      "previous_status": "failed"
+    }
+  ]
+}

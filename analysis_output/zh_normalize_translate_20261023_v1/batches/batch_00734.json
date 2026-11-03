@@ -1,0 +1,208 @@
+{
+  "input_sha256": "1341a384f6ac0059f5cc1186b8fd3599635e759035f0c2f4044be55bb874fa72",
+  "normalized": [
+    {
+      "record_id": "public:pbf_218ea6a0d74457362f56",
+      "decision": "ready",
+      "subject": "American Civil War",
+      "relation_id": "event_to_winner",
+      "relation_definition": "The winning side or victor of a specified conflict or contest event.",
+      "direction": "event -> winner",
+      "answer": "Northern United States",
+      "canonical_fact": "The Northern United States won the American Civil War.",
+      "prompt_en": "Which side won the American Civil War?",
+      "evidence_quotes": [
+        "Northern United States"
+      ],
+      "reason": "Source answer directly states the winner. No existing catalog relation covers 'victor of a conflict'; proposing event_to_winner. Prompt reworded to be option-free (removed 'north or south') so the answer 'Northern United States' does not appear as a substring, fixing the previous answer_leaked_in_prompt failure.",
+      "english": {
+        "direction": "event -> winner",
+        "prompt_en": "Which side won the American Civil War?",
+        "relation_id": "event_to_winner",
+        "answer": "Northern United States",
+        "relation_definition": "The winning side or victor of a specified conflict or contest event.",
+        "subject": "American Civil War",
+        "canonical_fact": "The Northern United States won the American Civil War.",
+        "answer_aliases_en": [
+          "Northern United States",
+          "Northern United States of America",
+          "Northern USA",
+          "Northern US"
+        ],
+        "relation_spec": {
+          "id": "event_to_winner",
+          "definition": "The winning side or victor of a specified conflict or contest event.",
+          "direction": "event -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b972a25c5675ed69b886bb5c7b5c85c6c8981e0d0bb97ff612afd62ed37bf9bb",
+      "input_sha256": "f0b76c24888f5988a6a82abc5c09b64db3106196ac5ccc195e835275e980b088",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_21907f179bb0cbf597dd",
+      "decision": "ready",
+      "subject": "field extension Q(√2) over Q",
+      "relation_id": "field_extension_to_degree",
+      "relation_definition": "The degree (vector-space dimension over the base field) of a specified field extension.",
+      "direction": "specified field extension -> degree",
+      "answer": "2",
+      "canonical_fact": "The degree of the field extension Q(√2) over Q is 2.",
+      "prompt_en": "What is the degree of the field extension of the rationals by the square root of two?",
+      "evidence_quotes": [
+        "2"
+      ],
+      "reason": "Source answer explicitly gives the degree. No catalog relation covers algebraic field-extension degree; proposing field_extension_to_degree. Prompt reworded to spell 'two' instead of the digit '2' so the answer string does not appear verbatim in the prompt, avoiding a false leak while preserving the mathematical subject.",
+      "english": {
+        "direction": "specified field extension -> degree",
+        "prompt_en": "What is the degree of the field extension of the rationals by the square root of two?",
+        "relation_id": "field_extension_to_degree",
+        "answer": "2",
+        "relation_definition": "The degree (vector-space dimension over the base field) of a specified field extension.",
+        "subject": "field extension Q(√2) over Q",
+        "canonical_fact": "The degree of the field extension Q(√2) over Q is 2.",
+        "answer_aliases_en": [
+          "2"
+        ],
+        "relation_spec": {
+          "id": "field_extension_to_degree",
+          "definition": "The degree (vector-space dimension over the base field) of a specified field extension.",
+          "direction": "specified field extension -> degree"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0107b0b8a36d6b9d4bb33b98d6bc86b1d28ae2ac88234b2cc5eed42d55d8f28f",
+      "input_sha256": "6bd24bc06a873ca149e88c3e42d895eeb07ea8fbbbe2715da150dee7da2379d5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_218ea6a0d74457362f56",
+        "public:pbf_21907f179bb0cbf597dd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79c11b2a3607a63558ef74e436fda3aa6376980447e8197d2f77295308d5c953",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1430,
+      "first_chunk_seconds": 19.806,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1486,
+        "prompt_tokens": 1604,
+        "total_tokens": 3090,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 941,
+          "text_tokens": 545
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8a5e1bc31ac834059e4777b2d36dea66d361841b42bd546a68105c2970de0302",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 47.795,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_218ea6a0d74457362f56",
+        "public:pbf_21907f179bb0cbf597dd"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c4f962a464057c0cb67e3cc54ded53c79cdfac6151dec408ca791b7a7efaa7f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3800,
+      "first_chunk_seconds": 14.026,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4051,
+        "prompt_tokens": 1623,
+        "total_tokens": 5674,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3573,
+          "text_tokens": 478
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "77459aa0edfb78c5fc5b1b51bf8a95f8b53b41f719f175e6dd9c354a0d9cf3b5",
+      "status": "completed",
+      "latency_seconds": 92.038
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_218ea6a0d74457362f56",
+        "public:pbf_21907f179bb0cbf597dd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad62df5af0fb43d29cb13f13b7a61be4fe32d5de20ad1c257af11f936eaee59f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 82.492
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_218ea6a0d74457362f56",
+        "public:pbf_21907f179bb0cbf597dd"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad62df5af0fb43d29cb13f13b7a61be4fe32d5de20ad1c257af11f936eaee59f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1253,
+      "first_chunk_seconds": 28.535,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1383,
+        "prompt_tokens": 844,
+        "total_tokens": 2227,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1126,
+          "text_tokens": 257
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e8624d34dd7f7192f017c4c399871ae0de3c4bbed381a1d202cf6b7a3bff7f55",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 58.959,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_218ea6a0d74457362f56",
+        "public:pbf_21907f179bb0cbf597dd"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6e1b42c32535243eb68cd7e8c7f3c79d2e3d3233b0c15b64ffc72009a5a45aa4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 6.865
+    }
+  ],
+  "status": "failed"
+}

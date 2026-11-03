@@ -1,0 +1,223 @@
+{
+  "input_sha256": "07c9154c82a710ee2d9f82e81c1d1cf95dbce942832dac38533f54e9e1b76583",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001511",
+      "decision": "ready",
+      "subject": "sand dune formation",
+      "relation_id": "process_to_causal_agent",
+      "relation_definition": "The natural agent or factor that drives or causes a specified natural or geological process.",
+      "direction": "specified natural process -> causal agent",
+      "answer": "wind",
+      "canonical_fact": "Wind is the natural factor that forms sand dunes.",
+      "prompt_en": "What natural factor drives the formation of sand dunes?",
+      "evidence_quotes": [
+        "the formation of sand dunes",
+        "the effect of which natural factor on the landscape",
+        "wind"
+      ],
+      "reason": "No existing catalog relation captures a causal-agent-to-process link. Proposed process_to_causal_agent (process -> causal agent) fits exactly: sand dune formation is a geological process and wind is its driving natural factor. Answer 'wind' is a literal substring of source_answer. Canonical fact preserved from existing extraction and is consistent with source.",
+      "english": {
+        "direction": "specified natural process -> causal agent",
+        "relation_id": "process_to_causal_agent",
+        "answer": "wind",
+        "canonical_fact": "Wind is the natural factor that forms sand dunes.",
+        "subject": "sand dune formation",
+        "prompt_en": "What natural factor drives the formation of sand dunes?",
+        "relation_definition": "The natural agent or factor that drives or causes a specified natural or geological process.",
+        "answer_aliases_en": [
+          "wind"
+        ],
+        "relation_spec": {
+          "id": "process_to_causal_agent",
+          "definition": "The natural agent or factor that drives or causes a specified natural or geological process.",
+          "direction": "specified natural process -> causal agent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9bf44f5f5dd4e8251f9803d181ad171bf740530a5bee6b31f2bd7a408cc1d5a1",
+      "input_sha256": "0e83c27a8620c1c73573788e634cf859749a8ddd340f58127ddf820f4ff8208b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001513",
+      "decision": "ready",
+      "subject": "layer of the atmosphere containing about 75% of the gasses and almost all of the water vapor",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "troposphere",
+      "canonical_fact": "The troposphere is the layer of Earth's atmosphere that contains about 75% of the gasses and almost all of the water vapor.",
+      "prompt_en": "Which layer of the atmosphere contains about 75% of the gases and almost all of the water vapor?",
+      "evidence_quotes": [
+        "contains about 75% of the gasses and almost all of the water vapor",
+        "troposphere"
+      ],
+      "reason": "The question identifies a unique atmospheric layer via a qualifying property description, which maps exactly to description_to_entity (description -> entity). Answer 'troposphere' is a literal substring of source_answer. Canonical fact preserved from existing extraction and is consistent with source.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "troposphere",
+        "canonical_fact": "The troposphere is the layer of Earth's atmosphere that contains about 75% of the gasses and almost all of the water vapor.",
+        "subject": "layer of the atmosphere containing about 75% of the gasses and almost all of the water vapor",
+        "prompt_en": "Which layer of the atmosphere contains about 75% of the gases and almost all of the water vapor?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "troposphere"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a8473af6b18c325dae661e4ddb0b919a05ef612a78d37a882bf497a67d421af6",
+      "input_sha256": "cbbcba108f9d395cdda530268dc4fa40affed6f2989d8da560d20c6632a0c948",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b8a383de58ccd5e0f0cedfd0caba1920bc52d5b155dfcb40bf029c057fcb61ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 34.144
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b8a383de58ccd5e0f0cedfd0caba1920bc52d5b155dfcb40bf029c057fcb61ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1963,
+      "first_chunk_seconds": 7.882,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2041,
+        "prompt_tokens": 1795,
+        "total_tokens": 3836,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1503,
+          "text_tokens": 538
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22274a563156b68abcd5eedef8b153b433aa66fc6361a8e85ef43a338a662602",
+      "status": "completed",
+      "latency_seconds": 38.2
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 33.163
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.198
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.011
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.398
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.067
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001511",
+        "historical:raw_ai2_arc_easy_001513"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e75afbaf5814ba667719962bc62b208a16cdcf1e782d03554b69805a9c32321b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.978
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02366.json",
+      "sha256": "8846e5323da46df11db19927f431572e592c6ab62981c1cafcb1a4ff4c419ed5",
+      "previous_status": "failed"
+    }
+  ]
+}

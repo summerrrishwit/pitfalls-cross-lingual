@@ -1,0 +1,208 @@
+{
+  "input_sha256": "c69b3f012f12072fee29bf835fb1c464661d6959ca4776966cd7ef2e8b85b592",
+  "normalized": [
+    {
+      "record_id": "public:pbf_78bf76613066a2d0c78a",
+      "decision": "ready",
+      "subject": "Back to the Future",
+      "relation_id": "work_to_composer",
+      "relation_definition": "Named composer who wrote the musical score for a specified work (film, TV series, video game, etc.); retain version and market disambiguation where necessary.",
+      "direction": "specified work -> composer",
+      "answer": "Alan Silvestri",
+      "canonical_fact": "Alan Silvestri wrote the music for Back to the Future.",
+      "prompt_en": "Who wrote the music for the film Back to the Future?",
+      "evidence_quotes": [
+        "who wrote the music for back to the future",
+        "Alan Silvestri"
+      ],
+      "reason": "No catalog relation covers a film/score composer (written_work_to_author is for written works; song_to_performer is for recordings). Proposed new relation work_to_composer with explicit direction and definition. Source answer clearly states Alan Silvestri as the composer; kept as-is.",
+      "english": {
+        "answer": "Alan Silvestri",
+        "relation_id": "work_to_composer",
+        "prompt_en": "Who wrote the music for the film Back to the Future?",
+        "direction": "specified work -> composer",
+        "subject": "Back to the Future",
+        "canonical_fact": "Alan Silvestri wrote the music for Back to the Future.",
+        "relation_definition": "Named composer who wrote the musical score for a specified work (film, TV series, video game, etc.); retain version and market disambiguation where necessary.",
+        "answer_aliases_en": [
+          "Alan Silvestri"
+        ],
+        "relation_spec": {
+          "id": "work_to_composer",
+          "definition": "Named composer who wrote the musical score for a specified work (film, TV series, video game, etc.); retain version and market disambiguation where necessary.",
+          "direction": "specified work -> composer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b942cf3da72db9e74caa8cc3277de8220d7b5225f44c2d033a3af1a30931f97d",
+      "input_sha256": "f1b5f893b6a16c1c22869923f0698ac94644116ba8a19f66aa817e751d594374",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_78f868cd4e97b4677839",
+      "decision": "ready",
+      "subject": "coin toss involving Ritchie Valens",
+      "relation_id": "event_to_loser",
+      "relation_definition": "Named participant who lost a specified contest, game, or coin toss; retain the specific event for disambiguation.",
+      "direction": "specified event -> loser",
+      "answer": "Tommy Allsup",
+      "canonical_fact": "Tommy Allsup lost the coin toss to Ritchie Valens.",
+      "prompt_en": "Who lost the coin toss to Ritchie Valens?",
+      "evidence_quotes": [
+        "who lost the coin toss to ritchie valens",
+        "Tommy Allsup"
+      ],
+      "reason": "No catalog relation covers a specific event's loser. Proposed new relation event_to_loser with explicit direction and definition. Source answer clearly states Tommy Allsup; kept as-is.",
+      "english": {
+        "answer": "Tommy Allsup",
+        "relation_id": "event_to_loser",
+        "prompt_en": "Who lost the coin toss to Ritchie Valens?",
+        "direction": "specified event -> loser",
+        "subject": "coin toss involving Ritchie Valens",
+        "canonical_fact": "Tommy Allsup lost the coin toss to Ritchie Valens.",
+        "relation_definition": "Named participant who lost a specified contest, game, or coin toss; retain the specific event for disambiguation.",
+        "answer_aliases_en": [
+          "Tommy Allsup"
+        ],
+        "relation_spec": {
+          "id": "event_to_loser",
+          "definition": "Named participant who lost a specified contest, game, or coin toss; retain the specific event for disambiguation.",
+          "direction": "specified event -> loser"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b6536a0035acea57ac4f822985bff1ccc2ef7e2980205960dbf36bb94929febe",
+      "input_sha256": "4efff7520c163ce62f5557c3dc1785f8a63c2b4fd247ffbd6e79475f662e07b2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1e0535510a420792ef483ea54be90c1d514c99cf6cb92a98e16894a8d4392fe4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2254,
+      "first_chunk_seconds": 41.0,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2251,
+        "prompt_tokens": 1598,
+        "total_tokens": 3849,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1737,
+          "text_tokens": 514
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d23a69935d01dff35fa4b466a719490f3ef7ca7cc9f2ec9edcfa6d8cbbaca736",
+      "status": "completed",
+      "latency_seconds": 58.819
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.941
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.977
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.976
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 82.773
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 56.81
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_78bf76613066a2d0c78a",
+        "public:pbf_78f868cd4e97b4677839"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9fcbc963db14e23db66b38c79c3abe3bbf6a795cb6fbd1a242509b4c9ed081a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 90.653
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01252.json",
+      "sha256": "42766997f68716797baaa9515a2a6b5316ab831a11c9194cef24b2f3a6cf1d08",
+      "previous_status": "failed"
+    }
+  ]
+}

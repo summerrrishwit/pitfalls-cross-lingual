@@ -1,0 +1,214 @@
+{
+  "input_sha256": "683b8f28a6d0eb4d6cd7f82b3652b68a5f62d600d618105ef4ce83a95c963fac",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001407",
+      "decision": "ready",
+      "subject": "hot spots where tectonic plates move over them",
+      "relation_id": "geological_feature_to_associated_landform",
+      "relation_definition": "The landform type most likely produced or associated with a specified geological feature, retaining probabilistic qualifiers such as 'most likely'.",
+      "direction": "geological feature -> associated landform type",
+      "answer": "volcanoes",
+      "canonical_fact": "Hot spots where tectonic plates move over them are most likely associated with volcanoes.",
+      "prompt_en": "What landforms are most likely to form where tectonic plates move over hot spots?",
+      "evidence_quotes": [
+        "Which landforms are most likely associated with these hot spots?",
+        "volcanoes"
+      ],
+      "reason": "Source question and answer clearly pair hot spots (geological feature) with volcanoes (landform) as the most likely associated landform. No existing catalog relation captures a geological-feature-to-associated-landform link, so a precise new relation ID is proposed. Both model annotations agree on extraction; the answer is a concise literal substring of source_answer.",
+      "english": {
+        "direction": "geological feature -> associated landform type",
+        "relation_id": "geological_feature_to_associated_landform",
+        "answer": "volcanoes",
+        "canonical_fact": "Hot spots where tectonic plates move over them are most likely associated with volcanoes.",
+        "subject": "hot spots where tectonic plates move over them",
+        "prompt_en": "What landforms are most likely to form where tectonic plates move over hot spots?",
+        "relation_definition": "The landform type most likely produced or associated with a specified geological feature, retaining probabilistic qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "volcanoes"
+        ],
+        "relation_spec": {
+          "id": "geological_feature_to_associated_landform",
+          "definition": "The landform type most likely produced or associated with a specified geological feature, retaining probabilistic qualifiers such as 'most likely'.",
+          "direction": "geological feature -> associated landform type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0b461d5378cf0504721e45af02a142fda47324de37e299ed4c6f9b0b88953b6",
+      "input_sha256": "faabf51e872c84baafcb30a31767f311c46a631236ae0ba20933747dee43381a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001410",
+      "decision": "ready",
+      "subject": "equatorial deserts",
+      "relation_id": "geographical_feature_to_causal_factor",
+      "relation_definition": "The specific geophysical or astronomical factor cited as responsible for the presence or formation of a specified geographical feature.",
+      "direction": "geographical feature -> causal factor",
+      "answer": "tilt of the Earth's axis",
+      "canonical_fact": "The tilt of the Earth's axis is the factor responsible for the presence of equatorial deserts.",
+      "prompt_en": "What factor is responsible for the presence of equatorial deserts?",
+      "evidence_quotes": [
+        "Which factor is responsible for the presence of equatorial deserts?",
+        "tilt of the Earth's axis"
+      ],
+      "reason": "Source question asks for the causal factor behind equatorial deserts and source_answer provides 'tilt of the Earth's axis'. No existing catalog relation covers a causal/explanatory link for geographical features, so a new precise relation ID is proposed. One old review flagged this as causal_reasoning and marked it not extractable, but old reviews are not gold; the source QA pair is self-contained and the answer is a direct literal substring, supporting a ready decision.",
+      "english": {
+        "direction": "geographical feature -> causal factor",
+        "relation_id": "geographical_feature_to_causal_factor",
+        "answer": "tilt of the Earth's axis",
+        "canonical_fact": "The tilt of the Earth's axis is the factor responsible for the presence of equatorial deserts.",
+        "subject": "equatorial deserts",
+        "prompt_en": "What factor is responsible for the presence of equatorial deserts?",
+        "relation_definition": "The specific geophysical or astronomical factor cited as responsible for the presence or formation of a specified geographical feature.",
+        "answer_aliases_en": [
+          "tilt of the Earth's axis"
+        ],
+        "relation_spec": {
+          "id": "geographical_feature_to_causal_factor",
+          "definition": "The specific geophysical or astronomical factor cited as responsible for the presence or formation of a specified geographical feature.",
+          "direction": "geographical feature -> causal factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "44d6565ef64c1f98421df16730eb5694ad3285e7c25237b5f9ff2de079e9b104",
+      "input_sha256": "73f25649b39780dd798af7c586f5dc5f4d885add8391eac7dd74ba2c5c331c20",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001407",
+      "input_sha256": "faabf51e872c84baafcb30a31767f311c46a631236ae0ba20933747dee43381a",
+      "english": {
+        "direction": "geological feature -> associated landform type",
+        "relation_id": "geological_feature_to_associated_landform",
+        "answer": "volcanoes",
+        "canonical_fact": "Hot spots where tectonic plates move over them are most likely associated with volcanoes.",
+        "subject": "hot spots where tectonic plates move over them",
+        "prompt_en": "What landforms are most likely to form where tectonic plates move over hot spots?",
+        "relation_definition": "The landform type most likely produced or associated with a specified geological feature, retaining probabilistic qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "volcanoes"
+        ],
+        "relation_spec": {
+          "id": "geological_feature_to_associated_landform",
+          "definition": "The landform type most likely produced or associated with a specified geological feature, retaining probabilistic qualifiers such as 'most likely'.",
+          "direction": "geological feature -> associated landform type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f0b461d5378cf0504721e45af02a142fda47324de37e299ed4c6f9b0b88953b6",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001407",
+        "subject_zh": "板块在其上移动的热点",
+        "prompt_zh": "在板块移动经过热点的地方，最可能形成什么地貌？",
+        "canonical_fact_zh": "板块在其上移动的热点最可能与火山相关联。",
+        "answer_zh": "火山",
+        "answer_aliases_zh": [
+          "火山"
+        ]
+      },
+      "translation_sha256": "42c1030b7a74abdf0ac3c5e9dc45b0928e035a844cd2a7ca71fcfe34b5672aaa"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001410",
+      "input_sha256": "73f25649b39780dd798af7c586f5dc5f4d885add8391eac7dd74ba2c5c331c20",
+      "english": {
+        "direction": "geographical feature -> causal factor",
+        "relation_id": "geographical_feature_to_causal_factor",
+        "answer": "tilt of the Earth's axis",
+        "canonical_fact": "The tilt of the Earth's axis is the factor responsible for the presence of equatorial deserts.",
+        "subject": "equatorial deserts",
+        "prompt_en": "What factor is responsible for the presence of equatorial deserts?",
+        "relation_definition": "The specific geophysical or astronomical factor cited as responsible for the presence or formation of a specified geographical feature.",
+        "answer_aliases_en": [
+          "tilt of the Earth's axis"
+        ],
+        "relation_spec": {
+          "id": "geographical_feature_to_causal_factor",
+          "definition": "The specific geophysical or astronomical factor cited as responsible for the presence or formation of a specified geographical feature.",
+          "direction": "geographical feature -> causal factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "44d6565ef64c1f98421df16730eb5694ad3285e7c25237b5f9ff2de079e9b104",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001410",
+        "subject_zh": "赤道沙漠",
+        "prompt_zh": "什么因素导致了赤道沙漠的存在？",
+        "canonical_fact_zh": "地球自转轴的倾斜是导致赤道沙漠存在的因素。",
+        "answer_zh": "地球自转轴的倾斜",
+        "answer_aliases_zh": [
+          "地球自转轴的倾斜"
+        ]
+      },
+      "translation_sha256": "d3169f135daf903a9dd6e5aad34c7b1f2fa54efe85ae903a562d1ed4f486a28a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001407",
+        "historical:raw_ai2_arc_easy_001410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9676013d73473efbc13795dde8ef90d8e615485655ce3969ff6c315554f0d70d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1953,
+      "first_chunk_seconds": 11.192,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1950,
+        "prompt_tokens": 1739,
+        "total_tokens": 3689,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1348,
+          "text_tokens": 602
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5436022bba8eabce30bac3e6f8e15c8f576c9ae27dd5a5b8b1dfcfd57cc45155",
+      "status": "completed",
+      "latency_seconds": 38.059
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001407",
+        "historical:raw_ai2_arc_easy_001410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "aec503c66d84e534d60ed632bc5f1bc4177016d41ececb047e8a81befeaf02a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 828,
+      "first_chunk_seconds": 1.747,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 845,
+        "prompt_tokens": 909,
+        "total_tokens": 1754,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 619,
+          "text_tokens": 226
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc1b022f0eea0f6c1175f58e9fa65eb102f94def1e9ce62e12ad4cb40619dec1",
+      "status": "completed",
+      "latency_seconds": 12.839
+    }
+  ],
+  "status": "completed"
+}

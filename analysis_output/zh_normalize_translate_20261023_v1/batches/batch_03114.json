@@ -1,0 +1,189 @@
+{
+  "input_sha256": "667eed77e4e5bd88dc9c80519eb0ed78d51a95ba992a0ffb2cb5032df9a0c037",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000682",
+      "decision": "ready",
+      "subject": "anther pollen sacs",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "microsporangia",
+      "canonical_fact": "Anther pollen sacs are also called microsporangia.",
+      "prompt_en": "What is another name for anther pollen sacs?",
+      "evidence_quotes": [
+        "What is another name for anther pollen sacs?",
+        "microsporangia"
+      ],
+      "reason": "Source question explicitly asks for another name (alias) for anther pollen sacs; source answer is 'microsporangia'. entity_to_alias from the catalog fits exactly: an equivalent name for the named entity.",
+      "english": {
+        "prompt_en": "What is another name for anther pollen sacs?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer": "microsporangia",
+        "canonical_fact": "Anther pollen sacs are also called microsporangia.",
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "subject": "anther pollen sacs",
+        "answer_aliases_en": [
+          "microsporangia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5348def5813d2814d5a2845ff4e4fdd4fb9e63a69589a4081db5d6a480a2834d",
+      "input_sha256": "dfe82bb7aab9aff5259148d7ddc6692dfcd418e6ceac25065b734ac34c63a700",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000683",
+      "decision": "ready",
+      "subject": "mammals raising their hair with tiny muscles in the skin",
+      "relation_id": "process_to_result",
+      "relation_definition": "The direct observable outcome or effect produced by a specified physiological or physical process.",
+      "direction": "process -> result",
+      "answer": "goosebumps",
+      "canonical_fact": "When mammals raise their hair with tiny muscles in the skin, goosebumps result.",
+      "prompt_en": "What happens when mammals raise their hair with tiny muscles in the skin?",
+      "evidence_quotes": [
+        "What happens when mammals raise their hair with tiny muscles in the skin?",
+        "goosebumps"
+      ],
+      "reason": "Source question asks for the result of a physiological process; no existing catalog relation captures process-to-outcome causation, so a new relation process_to_result is proposed with explicit direction and definition. Answer 'goosebumps' is copied verbatim from source_answer.",
+      "english": {
+        "prompt_en": "What happens when mammals raise their hair with tiny muscles in the skin?",
+        "relation_definition": "The direct observable outcome or effect produced by a specified physiological or physical process.",
+        "answer": "goosebumps",
+        "canonical_fact": "When mammals raise their hair with tiny muscles in the skin, goosebumps result.",
+        "direction": "process -> result",
+        "relation_id": "process_to_result",
+        "subject": "mammals raising their hair with tiny muscles in the skin",
+        "answer_aliases_en": [
+          "goosebumps"
+        ],
+        "relation_spec": {
+          "id": "process_to_result",
+          "definition": "The direct observable outcome or effect produced by a specified physiological or physical process.",
+          "direction": "process -> result"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0a6824207b3aa002c03b124716db10f19d7892214758b9843d623713ad988f70",
+      "input_sha256": "faf301e6189316a8c77d1a12027c5baef2795b6130eadd14aad29b1728662aae",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000682",
+        "historical:raw_sciq_000683"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a08f3c1534a8af793cc46fb576afcbfb3a400d1ae1eb6b62b67767e155e153af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2273,
+      "first_chunk_seconds": 22.442,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2323,
+        "prompt_tokens": 1724,
+        "total_tokens": 4047,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1801,
+          "text_tokens": 522
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22d487f86c0ec6f44dc075a2ae239fdbe5ecd990203a9862b8b7159b0a3fe0d6",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 135.217,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000682",
+        "historical:raw_sciq_000683"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bbf1b6490a0474d29b8ff8f60940416c098a7f8db58eee970fa23738de45241e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1725,
+      "first_chunk_seconds": 29.47,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1801,
+        "prompt_tokens": 1743,
+        "total_tokens": 3544,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1328,
+          "text_tokens": 473
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5cc3809eea87ce234b78fe69d9b24bd073ac33d65f26de340f8fd20e222fcb40",
+      "status": "completed",
+      "latency_seconds": 154.997
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000682",
+        "historical:raw_sciq_000683"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b2ea7cabc162b0705a9b466212f5926df99bdf45f85ad166e8bc37a760925e1a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 64.82
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000682",
+        "historical:raw_sciq_000683"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b2ea7cabc162b0705a9b466212f5926df99bdf45f85ad166e8bc37a760925e1a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.495
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000682",
+        "historical:raw_sciq_000683"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b2ea7cabc162b0705a9b466212f5926df99bdf45f85ad166e8bc37a760925e1a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.814
+    }
+  ],
+  "status": "failed"
+}

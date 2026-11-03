@@ -1,0 +1,214 @@
+{
+  "input_sha256": "75508e7a58e4b875a43c01432071b878e04aecede167b2fa3012fefc34b6523e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005574",
+      "decision": "ready",
+      "subject": "person known to buy presents for others often",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "generous",
+      "canonical_fact": "A person known to buy presents for others often is called generous.",
+      "prompt_en": "What term describes a person who is known to buy presents for others often?",
+      "evidence_quotes": [
+        "known to buy presents for others often",
+        "generous"
+      ],
+      "reason": "The source question supplies a behavioral description and asks for the conventional adjective that fits; description_to_term captures this direction (description → term) exactly.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "generous",
+        "canonical_fact": "A person known to buy presents for others often is called generous.",
+        "subject": "person known to buy presents for others often",
+        "prompt_en": "What term describes a person who is known to buy presents for others often?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "generous"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d8050ccf1fb899b44e1636587ee01e6dfa102c10d8cf078fc513510bd0c16372",
+      "input_sha256": "81a2a7462ceb49cbcea5d9ad75e125cf3536f3427e4356081e8ea2659b8128fb",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005606",
+      "decision": "ready",
+      "subject": "Pat Roberts",
+      "relation_id": "person_to_state_represented",
+      "relation_definition": "The U.S. state a specified person officially represents in a legislative capacity (e.g., as a U.S. senator or state legislator).",
+      "direction": "person -> state",
+      "answer": "Kansas",
+      "canonical_fact": "Pat Roberts is the senator of Kansas.",
+      "prompt_en": "Which U.S. state does Pat Roberts represent as a senator?",
+      "evidence_quotes": [
+        "What state is Pat Roberts the senator of?",
+        "kansas"
+      ],
+      "reason": "No existing catalog relation precisely captures legislative representation of a state by a person; entity_to_containing_location is about geographic containment, not political representation. Proposed new relation person_to_state_represented with explicit direction and scope.",
+      "english": {
+        "direction": "person -> state",
+        "relation_id": "person_to_state_represented",
+        "answer": "Kansas",
+        "canonical_fact": "Pat Roberts is the senator of Kansas.",
+        "subject": "Pat Roberts",
+        "prompt_en": "Which U.S. state does Pat Roberts represent as a senator?",
+        "relation_definition": "The U.S. state a specified person officially represents in a legislative capacity (e.g., as a U.S. senator or state legislator).",
+        "answer_aliases_en": [
+          "Kansas"
+        ],
+        "relation_spec": {
+          "id": "person_to_state_represented",
+          "definition": "The U.S. state a specified person officially represents in a legislative capacity (e.g., as a U.S. senator or state legislator).",
+          "direction": "person -> state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e1720198e9da955da4863d0243eedc72c42ef7afc005885301de8813836a8620",
+      "input_sha256": "15d2f1dbc32196d4ccf56baa8d66c70b768e5f1c09a26d95b51f1a269d258359",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005574",
+      "input_sha256": "81a2a7462ceb49cbcea5d9ad75e125cf3536f3427e4356081e8ea2659b8128fb",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "generous",
+        "canonical_fact": "A person known to buy presents for others often is called generous.",
+        "subject": "person known to buy presents for others often",
+        "prompt_en": "What term describes a person who is known to buy presents for others often?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "generous"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d8050ccf1fb899b44e1636587ee01e6dfa102c10d8cf078fc513510bd0c16372",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005574",
+        "subject_zh": "经常为他人买礼物的人",
+        "prompt_zh": "经常为他人买礼物的人可以用什么词来形容？",
+        "canonical_fact_zh": "经常为他人买礼物的人被称为大方。",
+        "answer_zh": "大方",
+        "answer_aliases_zh": [
+          "大方"
+        ]
+      },
+      "translation_sha256": "47c2ba3dd743938e8200abbdd2831f9a9de52e494cec799d81d8a9ebe4634507"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005606",
+      "input_sha256": "15d2f1dbc32196d4ccf56baa8d66c70b768e5f1c09a26d95b51f1a269d258359",
+      "english": {
+        "direction": "person -> state",
+        "relation_id": "person_to_state_represented",
+        "answer": "Kansas",
+        "canonical_fact": "Pat Roberts is the senator of Kansas.",
+        "subject": "Pat Roberts",
+        "prompt_en": "Which U.S. state does Pat Roberts represent as a senator?",
+        "relation_definition": "The U.S. state a specified person officially represents in a legislative capacity (e.g., as a U.S. senator or state legislator).",
+        "answer_aliases_en": [
+          "Kansas"
+        ],
+        "relation_spec": {
+          "id": "person_to_state_represented",
+          "definition": "The U.S. state a specified person officially represents in a legislative capacity (e.g., as a U.S. senator or state legislator).",
+          "direction": "person -> state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e1720198e9da955da4863d0243eedc72c42ef7afc005885301de8813836a8620",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005606",
+        "subject_zh": "帕特·罗伯茨",
+        "prompt_zh": "帕特·罗伯茨作为参议员代表哪个美国州？",
+        "canonical_fact_zh": "帕特·罗伯茨是堪萨斯州的参议员。",
+        "answer_zh": "堪萨斯",
+        "answer_aliases_zh": [
+          "堪萨斯"
+        ]
+      },
+      "translation_sha256": "8ea99e6d31594c13a8bbb2b74468e35cf9aebad24871edf5a5084cb8658dfc52"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005574",
+        "historical:raw_commonsense_qa_005606"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7ff18850d3863f94cb51ff6eef5a1be9a0f3b5380ce93ca7dc93f65f96dbe8be",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2108,
+      "first_chunk_seconds": 43.212,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2140,
+        "prompt_tokens": 1662,
+        "total_tokens": 3802,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1686,
+          "text_tokens": 454
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6f3e2352e1a018dee3d897b36c6b73079e7f95c859079ded21485ef35f2a182e",
+      "status": "completed",
+      "latency_seconds": 99.888
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005574",
+        "historical:raw_commonsense_qa_005606"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ecafdebec70b3c11bf90d9fb3aa03109040584df5ed17143640a9bc68829839d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 889,
+      "first_chunk_seconds": 10.696,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 960,
+        "prompt_tokens": 845,
+        "total_tokens": 1805,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 736,
+          "text_tokens": 224
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "34b9da047181bfcba2acda8177d8f950f98807885e578124dad1de71201213ad",
+      "status": "completed",
+      "latency_seconds": 19.984
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,107 @@
+{
+  "version": "zh-first-relations-v1",
+  "relations": [
+    {
+      "id": "song_to_performer",
+      "direction": "song -> performer",
+      "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+    },
+    {
+      "id": "character_to_actor",
+      "direction": "character in specified work/version -> actor",
+      "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+    },
+    {
+      "id": "character_to_voice_actor",
+      "direction": "character in specified work/version -> voice actor",
+      "definition": "Voice actor for the specified character and language/version."
+    },
+    {
+      "id": "term_to_definition",
+      "direction": "term -> definition",
+      "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+    },
+    {
+      "id": "description_to_term",
+      "direction": "description -> term",
+      "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+    },
+    {
+      "id": "description_to_entity",
+      "direction": "identifying description -> entity",
+      "definition": "Unique entity satisfying an explicitly qualified identifying description."
+    },
+    {
+      "id": "work_to_release_date",
+      "direction": "specified work/version/market -> release date",
+      "definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration."
+    },
+    {
+      "id": "work_to_release_year",
+      "direction": "specified work/version -> release year",
+      "definition": "Release year, kept separate from full date."
+    },
+    {
+      "id": "written_work_to_author",
+      "direction": "written work -> author",
+      "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+    },
+    {
+      "id": "work_to_filming_location",
+      "direction": "work/version -> filming location",
+      "definition": "Specified filming site or country at the granularity asked; not setting of the story."
+    },
+    {
+      "id": "series_or_season_to_episode_count",
+      "direction": "specified series/season -> episode count",
+      "definition": "Episode count with season/version/time cutoff stated where necessary."
+    },
+    {
+      "id": "entity_to_class",
+      "direction": "entity -> class",
+      "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+    },
+    {
+      "id": "entity_to_containing_location",
+      "direction": "entity -> containing location",
+      "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+    },
+    {
+      "id": "organism_to_habitat",
+      "direction": "organism -> habitat",
+      "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+    },
+    {
+      "id": "entity_to_material",
+      "direction": "entity -> material",
+      "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+    },
+    {
+      "id": "part_to_whole",
+      "direction": "part -> whole",
+      "definition": "Stated part-whole membership; not the inverse whole_to_part."
+    },
+    {
+      "id": "whole_to_part",
+      "direction": "whole -> part",
+      "definition": "Specified constituent of a whole; account for multiple valid parts."
+    },
+    {
+      "id": "symbol_to_meaning",
+      "direction": "symbol -> meaning",
+      "definition": "Meaning of a symbol in its explicit domain/context."
+    },
+    {
+      "id": "abbreviation_to_expansion",
+      "direction": "abbreviation -> expansion",
+      "definition": "Expansion of an abbreviation in the stated domain, not a loose association."
+    },
+    {
+      "id": "entity_to_alias",
+      "direction": "entity -> alias",
+      "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+    }
+  ],
+  "unknown_relation": "defer_without_forcing",
+  "row_relation_independent_review_required": false
+}

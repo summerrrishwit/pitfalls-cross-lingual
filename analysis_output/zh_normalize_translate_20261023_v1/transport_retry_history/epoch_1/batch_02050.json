@@ -1,0 +1,159 @@
+{
+  "input_sha256": "9322fbea049c73a185e78015279ebe4539dd8eb7260fb8325ca7c9d42758f1a1",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f801237b9b7e54184400",
+      "decision": "ready",
+      "subject": "material that causes meteor showers",
+      "relation_id": "material_to_source_entity",
+      "relation_definition": "The originating entity from which a specified material or particle derives through disintegration, emission, or production; distinct from habitat, composition, or geographic containment.",
+      "direction": "material -> source entity",
+      "answer": "nuclei of comets",
+      "canonical_fact": "The source of the material that causes meteor showers is the nuclei of comets.",
+      "prompt_en": "The source of the material that causes meteor showers is the",
+      "evidence_quotes": [
+        "source of the material that causes meteor showers",
+        "nuclei of comets gradually disintegrate and spread out along the comet's orbital path"
+      ],
+      "reason": "Source answer explicitly states that nuclei of comets disintegrate and produce the sand-sized particles causing meteor showers. 'nuclei of comets' is a literal substring of the source answer. No existing catalog relation precisely captures an origin/source-of-material relationship (entity_to_material is inverse direction and about composition; entity_to_containing_location explicitly excludes origin); proposing a new precise relation material_to_source_entity.",
+      "english": {
+        "answer": "nuclei of comets",
+        "relation_id": "material_to_source_entity",
+        "prompt_en": "The source of the material that causes meteor showers is the",
+        "direction": "material -> source entity",
+        "subject": "material that causes meteor showers",
+        "canonical_fact": "The source of the material that causes meteor showers is the nuclei of comets.",
+        "relation_definition": "The originating entity from which a specified material or particle derives through disintegration, emission, or production; distinct from habitat, composition, or geographic containment.",
+        "answer_aliases_en": [
+          "nuclei of comets",
+          "The nuclei of comets gradually disintegrate and spread out along the comet's orbital path. When the Earth passes through the orbit of a comet we are bombarded by sand-sized particles which cause a meteor shower."
+        ],
+        "relation_spec": {
+          "id": "material_to_source_entity",
+          "definition": "The originating entity from which a specified material or particle derives through disintegration, emission, or production; distinct from habitat, composition, or geographic containment.",
+          "direction": "material -> source entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3760ab52c1d28474b0d8cc102d6666d47c1f6f2d71627c1ba53eec33c4efeb19",
+      "input_sha256": "bef6f77ad74fc7d79199e26caa309f5d7b96cd32cb4d4900f4b033eb24ca7358",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f816848847160b7dc908",
+      "decision": "ready",
+      "subject": "Pairs of electrons carried in the form FADH2 and NADH+H",
+      "relation_id": "electron_carrier_pair_to_atp_rephosphorylation",
+      "relation_definition": "The total count of ATP molecules rephosphorylated from the collective free energy of a specified pair of redox electron carriers (e.g., FADH2 and NADH+H).",
+      "direction": "specified electron carrier pair -> ATP count",
+      "answer": "5 ATP",
+      "canonical_fact": "Pairs of electrons carried in the form FADH2 and NADH+H collectively contain enough free energy to rephosphorylate 5 ATP.",
+      "prompt_en": "Pairs of electrons carried in the form FADH2 and NADH+H collectively contain enough free energy to rephosphorylate",
+      "evidence_quotes": [
+        "collectively contain enough free energy to rephosphorylate",
+        "5 ATP."
+      ],
+      "reason": "Source answer directly states '5 ATP' as the rephosphorylation yield. '5 ATP' is a literal substring of the source answer. No existing catalog relation captures a specific redox-to-ATP-yield quantity; proposing a new precise relation electron_carrier_pair_to_atp_rephosphorylation rather than forcing a broad category.",
+      "english": {
+        "answer": "5 ATP",
+        "relation_id": "electron_carrier_pair_to_atp_rephosphorylation",
+        "prompt_en": "Pairs of electrons carried in the form FADH2 and NADH+H collectively contain enough free energy to rephosphorylate",
+        "direction": "specified electron carrier pair -> ATP count",
+        "subject": "Pairs of electrons carried in the form FADH2 and NADH+H",
+        "canonical_fact": "Pairs of electrons carried in the form FADH2 and NADH+H collectively contain enough free energy to rephosphorylate 5 ATP.",
+        "relation_definition": "The total count of ATP molecules rephosphorylated from the collective free energy of a specified pair of redox electron carriers (e.g., FADH2 and NADH+H).",
+        "answer_aliases_en": [
+          "5 ATP",
+          "5 ATP."
+        ],
+        "relation_spec": {
+          "id": "electron_carrier_pair_to_atp_rephosphorylation",
+          "definition": "The total count of ATP molecules rephosphorylated from the collective free energy of a specified pair of redox electron carriers (e.g., FADH2 and NADH+H).",
+          "direction": "specified electron carrier pair -> ATP count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9b2c2a80b29bc9493d47369354bc698701b838aafac0da043f70c3134a3154f0",
+      "input_sha256": "ca7bdb4670cba18a49d2184484140ddcf4ab1049e395d506d08c455b2a8d8352",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f801237b9b7e54184400",
+        "public:pbf_f816848847160b7dc908"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "76d0730138ce1a490c77cccdc47a2b7aedeec567643174228b4f4a35fa26f48e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3203,
+      "first_chunk_seconds": 51.642,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3289,
+        "prompt_tokens": 1800,
+        "total_tokens": 5089,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2627,
+          "text_tokens": 662
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0edfb256b67edc7c15609c2fb5dd98a6e421dd9fa0f7b8baeacbb735a7d7e159",
+      "status": "completed",
+      "latency_seconds": 94.469
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f801237b9b7e54184400",
+        "public:pbf_f816848847160b7dc908"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "012f378759d28a51cfadcca72ace0fbfd528843e170d550952d8ad374dbde753",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.2
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f801237b9b7e54184400",
+        "public:pbf_f816848847160b7dc908"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "012f378759d28a51cfadcca72ace0fbfd528843e170d550952d8ad374dbde753",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.162
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f801237b9b7e54184400",
+        "public:pbf_f816848847160b7dc908"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "012f378759d28a51cfadcca72ace0fbfd528843e170d550952d8ad374dbde753",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.815
+    }
+  ],
+  "status": "failed"
+}

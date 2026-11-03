@@ -1,0 +1,217 @@
+{
+  "input_sha256": "87cd82a4f484a400404334cd06f87bba5ae6723ed444fb6de0f3fddc62d1bebf",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3748fa53b7dfd803514e",
+      "decision": "ready",
+      "subject": "a flying plane",
+      "relation_id": "entity_state_to_absent_interaction",
+      "relation_definition": "States that a specified physical interaction (e.g., friction) is absent between the subject entity in a named state and the other entity.",
+      "direction": "entity in specified state -> other entity",
+      "answer": "ground",
+      "canonical_fact": "A flying plane has no friction with the ground.",
+      "prompt_en": "A flying plane has no friction with the",
+      "evidence_quotes": [
+        "When it's flying, a plane has no friction with the",
+        "ground"
+      ],
+      "reason": "Physics fact clearly supported by source. No existing catalog relation captures the absence of a physical interaction between two entities in a specified state; proposed 'entity_state_to_absent_interaction' as a precise new relation. The qualifier 'flying' is retained in the subject.",
+      "english": {
+        "relation_id": "entity_state_to_absent_interaction",
+        "canonical_fact": "A flying plane has no friction with the ground.",
+        "prompt_en": "A flying plane has no friction with the",
+        "answer": "ground",
+        "direction": "entity in specified state -> other entity",
+        "relation_definition": "States that a specified physical interaction (e.g., friction) is absent between the subject entity in a named state and the other entity.",
+        "subject": "a flying plane",
+        "answer_aliases_en": [
+          "ground"
+        ],
+        "relation_spec": {
+          "id": "entity_state_to_absent_interaction",
+          "definition": "States that a specified physical interaction (e.g., friction) is absent between the subject entity in a named state and the other entity.",
+          "direction": "entity in specified state -> other entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7073768351d54d3f89fbe0d03ac550dc8394ac5d9c7e1d82b4f8d08f74485e6b",
+      "input_sha256": "9d4068a2f9e64743c2075fe76d1e983eeaea87db41d180dacc20d287651104db",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_374bbd3c0a682a784307",
+      "decision": "ready",
+      "subject": "ammonia produced from deamination of branched chain amino acids in muscle",
+      "relation_id": "metabolite_to_conversion_product",
+      "relation_definition": "Product(s) formed when a specified metabolite is converted in a named biochemical context; retain qualifiers such as 'mostly' or 'most'.",
+      "direction": "metabolite in specified biochemical context -> conversion product(s)",
+      "answer": "alanine and glutamine",
+      "canonical_fact": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into alanine and glutamine.",
+      "prompt_en": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into",
+      "evidence_quotes": [
+        "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly:",
+        "converted into alanine and glutamine and released from the muscle."
+      ],
+      "reason": "Biochemical conversion fact supported by source. No existing catalog relation captures metabolite-to-conversion-product; proposed 'metabolite_to_conversion_product' as a precise new relation. The qualifier 'mostly' is preserved in the canonical fact and prompt. The existing answer 'alanine and glutamine' is a literal substring of the source answer and is kept as-is.",
+      "english": {
+        "relation_id": "metabolite_to_conversion_product",
+        "canonical_fact": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into alanine and glutamine.",
+        "prompt_en": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into",
+        "answer": "alanine and glutamine",
+        "direction": "metabolite in specified biochemical context -> conversion product(s)",
+        "relation_definition": "Product(s) formed when a specified metabolite is converted in a named biochemical context; retain qualifiers such as 'mostly' or 'most'.",
+        "subject": "ammonia produced from deamination of branched chain amino acids in muscle",
+        "answer_aliases_en": [
+          "alanine and glutamine",
+          "converted into alanine and glutamine and released from the muscle."
+        ],
+        "relation_spec": {
+          "id": "metabolite_to_conversion_product",
+          "definition": "Product(s) formed when a specified metabolite is converted in a named biochemical context; retain qualifiers such as 'mostly' or 'most'.",
+          "direction": "metabolite in specified biochemical context -> conversion product(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66decfec1ccc9b0215219ef46db84a776204fd74e330da5c28006f3e117f32e6",
+      "input_sha256": "a9593ad0675697ee0101d141899b0b729161322860491b29cd548376ebf9b73b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3748fa53b7dfd803514e",
+      "input_sha256": "9d4068a2f9e64743c2075fe76d1e983eeaea87db41d180dacc20d287651104db",
+      "english": {
+        "relation_id": "entity_state_to_absent_interaction",
+        "canonical_fact": "A flying plane has no friction with the ground.",
+        "prompt_en": "A flying plane has no friction with the",
+        "answer": "ground",
+        "direction": "entity in specified state -> other entity",
+        "relation_definition": "States that a specified physical interaction (e.g., friction) is absent between the subject entity in a named state and the other entity.",
+        "subject": "a flying plane",
+        "answer_aliases_en": [
+          "ground"
+        ],
+        "relation_spec": {
+          "id": "entity_state_to_absent_interaction",
+          "definition": "States that a specified physical interaction (e.g., friction) is absent between the subject entity in a named state and the other entity.",
+          "direction": "entity in specified state -> other entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7073768351d54d3f89fbe0d03ac550dc8394ac5d9c7e1d82b4f8d08f74485e6b",
+      "translation": {
+        "record_id": "public:pbf_3748fa53b7dfd803514e",
+        "subject_zh": "一架飞行中的飞机",
+        "prompt_zh": "一架飞行中的飞机与____没有摩擦。",
+        "canonical_fact_zh": "一架飞行中的飞机与地面之间没有摩擦。",
+        "answer_zh": "地面",
+        "answer_aliases_zh": [
+          "地面"
+        ]
+      },
+      "translation_sha256": "8067ac68e9aa67382643c84a358c6b1cd6ede34fdd3f700c6f2a8fd893d2dae3"
+    },
+    {
+      "record_id": "public:pbf_374bbd3c0a682a784307",
+      "input_sha256": "a9593ad0675697ee0101d141899b0b729161322860491b29cd548376ebf9b73b",
+      "english": {
+        "relation_id": "metabolite_to_conversion_product",
+        "canonical_fact": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into alanine and glutamine.",
+        "prompt_en": "When branched chain amino acids are deaminated in muscle, the ammonia produced is mostly converted into",
+        "answer": "alanine and glutamine",
+        "direction": "metabolite in specified biochemical context -> conversion product(s)",
+        "relation_definition": "Product(s) formed when a specified metabolite is converted in a named biochemical context; retain qualifiers such as 'mostly' or 'most'.",
+        "subject": "ammonia produced from deamination of branched chain amino acids in muscle",
+        "answer_aliases_en": [
+          "alanine and glutamine",
+          "converted into alanine and glutamine and released from the muscle."
+        ],
+        "relation_spec": {
+          "id": "metabolite_to_conversion_product",
+          "definition": "Product(s) formed when a specified metabolite is converted in a named biochemical context; retain qualifiers such as 'mostly' or 'most'.",
+          "direction": "metabolite in specified biochemical context -> conversion product(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66decfec1ccc9b0215219ef46db84a776204fd74e330da5c28006f3e117f32e6",
+      "translation": {
+        "record_id": "public:pbf_374bbd3c0a682a784307",
+        "subject_zh": "肌肉中支链氨基酸脱氨基产生的氨",
+        "prompt_zh": "当支链氨基酸在肌肉中脱氨基时，产生的氨主要转化为____",
+        "canonical_fact_zh": "当支链氨基酸在肌肉中脱氨基时，产生的氨主要转化为丙氨酸和谷氨酰胺。",
+        "answer_zh": "丙氨酸和谷氨酰胺",
+        "answer_aliases_zh": [
+          "丙氨酸和谷氨酰胺",
+          "转化为丙氨酸和谷氨酰胺并从肌肉中释放出来。"
+        ]
+      },
+      "translation_sha256": "9ff55dff33ced1a372a4cb6293f5a7deb8021c7064937bb4310a5d2fa6289d99"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3748fa53b7dfd803514e",
+        "public:pbf_374bbd3c0a682a784307"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8424e1c151a7ed9d2893699d1ffbd8efdc4954e76fbcac87c06203f42189dd24",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2754,
+      "first_chunk_seconds": 32.218,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2959,
+        "prompt_tokens": 1662,
+        "total_tokens": 4621,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2363,
+          "text_tokens": 596
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "33fcdf7844cd603e26388185f8704c40325b2b9e8a550224fe662073896f48f3",
+      "status": "completed",
+      "latency_seconds": 74.23
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3748fa53b7dfd803514e",
+        "public:pbf_374bbd3c0a682a784307"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c89c836b389e172d2d47fafb3f3222717ab09289b841f20a611055121e928279",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1272,
+      "first_chunk_seconds": 14.281,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1313,
+        "prompt_tokens": 953,
+        "total_tokens": 2266,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1035,
+          "text_tokens": 278
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1e44648d2b0eef851a60c9f2e23cff7f2fc090090a88e7202047d0eff57ad6c0",
+      "status": "completed",
+      "latency_seconds": 32.88
+    }
+  ],
+  "status": "completed"
+}

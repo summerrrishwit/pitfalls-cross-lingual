@@ -1,0 +1,256 @@
+{
+  "input_sha256": "a42bdd7995e4f7ad614b84bb0cfae78907c951dfbd7e08398d1c1cd1b4ace25e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000688",
+      "decision": "ready",
+      "subject": "volcano",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "lava",
+      "canonical_fact": "A volcano is composed of layers of lava.",
+      "prompt_en": "Layers of what material create a volcano?",
+      "evidence_quotes": [
+        "Layers of what create a volcano?",
+        "lava"
+      ],
+      "reason": "Source question explicitly asks what substance, in layers, creates a volcano; source answer is 'lava'. This maps to entity_to_material (volcano -> its material composition). No conflict with existing annotations; both models agree on the fact. Prompt omits the answer 'lava'.",
+      "english": {
+        "prompt_en": "Layers of what material create a volcano?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer": "lava",
+        "canonical_fact": "A volcano is composed of layers of lava.",
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "subject": "volcano",
+        "answer_aliases_en": [
+          "lava"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bd4b6b53de01e736c7ab5eb3d1213218493e26e0f087bd8978d4e1ba27c3b4d1",
+      "input_sha256": "03582d57e75094804cc3de68f18e25a9220e8864dbcbcbc6cd6a4d634734b576",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000689",
+      "decision": "ready",
+      "subject": "the radioactive process used in nuclear power plants and one type of nuclear bomb",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "fission",
+      "canonical_fact": "The radioactive process used in nuclear power plants and one type of nuclear bomb is fission.",
+      "prompt_en": "What is the name of the radioactive process used in nuclear power plants and one type of nuclear bomb?",
+      "evidence_quotes": [
+        "What is the radioactive process used in nuclear power plants and one type of nuclear bomb?",
+        "fission"
+      ],
+      "reason": "Source question provides a defining description ('radioactive process used in nuclear power plants and one type of nuclear bomb') and asks for the term; source answer is 'fission'. This is a description-to-term mapping, not term-to-definition (which would give the definition of 'fission'). Prompt omits the answer 'fission'.",
+      "english": {
+        "prompt_en": "What is the name of the radioactive process used in nuclear power plants and one type of nuclear bomb?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "fission",
+        "canonical_fact": "The radioactive process used in nuclear power plants and one type of nuclear bomb is fission.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the radioactive process used in nuclear power plants and one type of nuclear bomb",
+        "answer_aliases_en": [
+          "fission"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4e19d1c27265bd0b350a85254c1a72247edb20ef46cd9d3146dd38ce4d4f38e3",
+      "input_sha256": "605a74f16bdfb3b1a2ca691065619a497a6084d8873c84b13d3fa1fda16b49ea",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000688",
+      "input_sha256": "03582d57e75094804cc3de68f18e25a9220e8864dbcbcbc6cd6a4d634734b576",
+      "english": {
+        "prompt_en": "Layers of what material create a volcano?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer": "lava",
+        "canonical_fact": "A volcano is composed of layers of lava.",
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "subject": "volcano",
+        "answer_aliases_en": [
+          "lava"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bd4b6b53de01e736c7ab5eb3d1213218493e26e0f087bd8978d4e1ba27c3b4d1",
+      "translation": {
+        "record_id": "historical:raw_sciq_000688",
+        "subject_zh": "火山",
+        "prompt_zh": "什么材料一层层堆积形成了火山？",
+        "canonical_fact_zh": "火山由一层层的熔岩构成。",
+        "answer_zh": "熔岩",
+        "answer_aliases_zh": [
+          "熔岩"
+        ]
+      },
+      "translation_sha256": "7111e41e5b92c2635b0a4dc614a5481333aa4d40cf9d6679d8e9a74591a44e1f"
+    },
+    {
+      "record_id": "historical:raw_sciq_000689",
+      "input_sha256": "605a74f16bdfb3b1a2ca691065619a497a6084d8873c84b13d3fa1fda16b49ea",
+      "english": {
+        "prompt_en": "What is the name of the radioactive process used in nuclear power plants and one type of nuclear bomb?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "fission",
+        "canonical_fact": "The radioactive process used in nuclear power plants and one type of nuclear bomb is fission.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the radioactive process used in nuclear power plants and one type of nuclear bomb",
+        "answer_aliases_en": [
+          "fission"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4e19d1c27265bd0b350a85254c1a72247edb20ef46cd9d3146dd38ce4d4f38e3",
+      "translation": {
+        "record_id": "historical:raw_sciq_000689",
+        "subject_zh": "核电站和一种核弹中使用的放射性过程",
+        "prompt_zh": "核电站和一种核弹中使用的放射性过程叫什么名称？",
+        "canonical_fact_zh": "核电站和一种核弹中使用的放射性过程是裂变。",
+        "answer_zh": "裂变",
+        "answer_aliases_zh": [
+          "裂变"
+        ]
+      },
+      "translation_sha256": "91682735a8083f6797a4828b1375973174cc9dda124029cb3da81bef14f2e1ca"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000688",
+        "historical:raw_sciq_000689"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "846ee1bd61053826a9639b67957899a4347fca5e5624b2f818b633d4e835b5b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 62.059
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000688",
+        "historical:raw_sciq_000689"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "846ee1bd61053826a9639b67957899a4347fca5e5624b2f818b633d4e835b5b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1528,
+      "first_chunk_seconds": 66.187,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1700,
+        "prompt_tokens": 1695,
+        "total_tokens": 3395,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1197,
+          "text_tokens": 503
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a4f46093cd0f0dd8ddd00c979c7e504e11031c6b9a585e12f2f07badff4fd7a",
+      "status": "completed",
+      "latency_seconds": 99.052
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000688",
+        "historical:raw_sciq_000689"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "302962befe62ab1a41c81e6745b53907fae6f1541346322ea2d41d5dfe9430ad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.157
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000688",
+        "historical:raw_sciq_000689"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "302962befe62ab1a41c81e6745b53907fae6f1541346322ea2d41d5dfe9430ad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.226
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000688",
+        "historical:raw_sciq_000689"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "302962befe62ab1a41c81e6745b53907fae6f1541346322ea2d41d5dfe9430ad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1300,
+      "first_chunk_seconds": 64.554,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1371,
+        "prompt_tokens": 824,
+        "total_tokens": 2195,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1152,
+          "text_tokens": 219
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "906ed717cd7d7d14d5e2d5cb0147491b00e87756b0d4357731a0c145d2bcec70",
+      "status": "completed",
+      "latency_seconds": 87.113
+    }
+  ],
+  "status": "completed"
+}

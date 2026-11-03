@@ -1,0 +1,52 @@
+{
+  "protocol_version": "qwen3-open-pnt-generation-first-v4-20261016",
+  "remote_root": "/root/autodl-tmp/pnt-open-development-20261016",
+  "output_dir": "/root/autodl-tmp/pnt-open-development-20261016/repair-v4",
+  "candidate_layers": [
+    12,
+    24
+  ],
+  "candidate_scales": [
+    -0.5,
+    -0.25,
+    0.25,
+    0.5
+  ],
+  "source_estimator": "unchanged_g2a_task_mean_and_translation_minus_recall",
+  "hook": "resid_pre_zero_based_decoder_layer_at_last_prompt_and_each_generated_position",
+  "coarse_screen": "No new sequence-score screening. Explicit finite candidate pool is evaluated by actual generated answers; all v3 results remain reported.",
+  "generation_candidates": "task l12 +0.25/+0.5; difference l24 -0.25/-0.5; combined task l12 +0.25 with difference l24 -0.25; no further refinement in v4",
+  "generation_scope": "all_480_ZH_Development_inputs_and_13_ZH_unrelated_controls; EN_trigger_disabled_and_frozen_baseline_reused",
+  "generation_correctness": "frozen_answer_groups_exact_or_literal_question_completion; prior_identical_fact_language_generation_semantics; explicit_blinded_Codex_proxy_review_for_remaining",
+  "candidate_selection": "retention_first_then_maximize_fact_balanced_actual_generated_ZH_Targeted_accuracy_gain_on_directed_subset; require_positive_gain_on_all_evaluable_facts_and_margin; ties_smaller_absolute_scale_then_lower_layer_then_task_difference_combined",
+  "deferrals": "missing_never_negative; original_3_natural_semantic_deferred_facts_excluded_from_repair_selection; report_all_96; unresolved_retention_on_baseline_correct_inputs_cannot_pass",
+  "retention": {
+    "original_accuracy_drop_max": 0.05,
+    "neutral_accuracy_drop_max": 0.05,
+    "english_accuracy_drop_max": 0.05,
+    "resistant_harm_rate_max": 0.05,
+    "unrelated_newly_harmed_facts_max": 0
+  },
+  "random_replicates": 5,
+  "random_seed_policy": "sha256_protocol_partition_config_layer_replicate",
+  "random_scope": "all_ZH_conditions_plus_unrelated_controls_for_generation_eligible_candidates_only",
+  "random_gate": "selected_rule_actual_generated_targeted_gain_greater_than_noop_and_mean_of_five_norm_matched_randoms; positive_paired_gold_margin_gain",
+  "final_source": "all_96_Development_facts_only_after_OOF_rule_selection; never_holdout_or_behavior_positive_filter",
+  "independent_mode": "open_induced_confirmation_plus_MCQs_for_phenotype_only",
+  "independent_gate": {
+    "all_assigned_facts_required": 32,
+    "min_induced_facts_for_directional_pilot_confirmation": 4,
+    "all_fact_targeted_generation_gain_positive": true,
+    "directed_generation_gain_above_noop_and_random_mean": true,
+    "all_fact_targeted_gold_margin_gain_positive": true,
+    "attribution_directed_vs_resistant_contrast_same_direction_as_Development": true,
+    "same_retention_constraints": true
+  },
+  "independent_uncertainty": "report_component_paired_bootstrap_95pct_interval_and_event_counts; n32_is_pilot_not_powered_population_proof",
+  "validation_policy": "run_once_only_after_G2_rule_and_final_vector_SHA_freeze; never_tune_from_outputs",
+  "sealed_policy": "open_once_only_if_fixed_Validation_gate_passes; same_rule_vector_and_scorer",
+  "futility": "if_no_Development_candidate_passes_G2_or_Validation_fails_stop_without_consuming_further_holdout; report_negative_or_insufficient_evidence",
+  "max_new_tokens": 64,
+  "statistical_unit": "base_fact_id; variants_equal_weight_within_fact",
+  "development_revision_reason": "v3 auxiliary-margin winners damaged preservation or collapsed generation; use a smaller predeclared perturbation budget and generation-first selection before any holdout exposure"
+}

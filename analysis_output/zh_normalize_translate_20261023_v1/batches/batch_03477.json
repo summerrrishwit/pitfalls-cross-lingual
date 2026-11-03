@@ -1,0 +1,242 @@
+{
+  "input_sha256": "32c83941905e3e97a5fce8c940181f6ccde9e3afed5e8c5b8a1ab0af22d81c67",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006348",
+      "decision": "ready",
+      "subject": "skin after contact with poison ivy",
+      "relation_id": "exposure_to_symptom",
+      "relation_definition": "The typical sensory or physical symptom or reaction experienced by a tissue or organ following specified exposure to a substance or condition.",
+      "direction": "specified exposure/condition -> typical symptom",
+      "answer": "itches",
+      "canonical_fact": "Skin itches after contact with poison ivy.",
+      "prompt_en": "What is the typical skin reaction after contact with poison ivy?",
+      "evidence_quotes": [
+        "How will skin feel after contact with poison ivy?",
+        "itches"
+      ],
+      "reason": "No catalog relation covers a physical/sensory symptom triggered by exposure. 'entity_to_class' is taxonomy membership, not a transient reaction. Proposed new relation 'exposure_to_symptom' with explicit direction. Answer 'itches' is a literal substring of source_answer. The two model annotations disagreed on extractability, but the source answer is unambiguous and concise; Qwen-3.8-Max's extraction aligns with the source. sensenova's 'typical_action_or_location' exclusion is inapplicable—this is a direct physical reaction, not an action or location.",
+      "english": {
+        "prompt_en": "What is the typical skin reaction after contact with poison ivy?",
+        "relation_definition": "The typical sensory or physical symptom or reaction experienced by a tissue or organ following specified exposure to a substance or condition.",
+        "answer": "itches",
+        "canonical_fact": "Skin itches after contact with poison ivy.",
+        "direction": "specified exposure/condition -> typical symptom",
+        "relation_id": "exposure_to_symptom",
+        "subject": "skin after contact with poison ivy",
+        "answer_aliases_en": [
+          "itches"
+        ],
+        "relation_spec": {
+          "id": "exposure_to_symptom",
+          "definition": "The typical sensory or physical symptom or reaction experienced by a tissue or organ following specified exposure to a substance or condition.",
+          "direction": "specified exposure/condition -> typical symptom"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "07548712316d1c1e9f526eda2c54bb99f2f74f5674bdf6550ab43376f5d5d50c",
+      "input_sha256": "eaa660d96f7a342e5b7619b19b060ee6beb4403d253806e664a52d58bbe522b9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006351",
+      "decision": "ready",
+      "subject": "game with a half court boundary and 3 pointers",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "basketball",
+      "canonical_fact": "The game with a half court boundary and 3-pointers is basketball.",
+      "prompt_en": "What sport features a half-court boundary and 3-point shots?",
+      "evidence_quotes": [
+        "crossed the half court boundary and focused on 3 pointers",
+        "basketball"
+      ],
+      "reason": "Catalog relation 'description_to_entity' fits exactly: the identifying description (half court boundary + 3 pointers) uniquely determines 'basketball.' Answer is a literal substring of source_answer. Qwen-3.8-Max marked this not-extractable (typical_action_or_location) but that exclusion is incorrect—the question asks to name the game from its identifying features, which is a description-to-entity lookup. sensenova's extraction is consistent with the source. No conflict between annotations warrants deferral.",
+      "english": {
+        "prompt_en": "What sport features a half-court boundary and 3-point shots?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "basketball",
+        "canonical_fact": "The game with a half court boundary and 3-pointers is basketball.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "game with a half court boundary and 3 pointers",
+        "answer_aliases_en": [
+          "basketball"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5f747c85c26db9152798472737a98af02838b332801a6d4d16ed31c3061215b5",
+      "input_sha256": "8b6e41c0f947be0912c968efb5fdfbae13ea640e8bb6fec775f979a1d7bd6b43",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006348",
+      "input_sha256": "eaa660d96f7a342e5b7619b19b060ee6beb4403d253806e664a52d58bbe522b9",
+      "english": {
+        "prompt_en": "What is the typical skin reaction after contact with poison ivy?",
+        "relation_definition": "The typical sensory or physical symptom or reaction experienced by a tissue or organ following specified exposure to a substance or condition.",
+        "answer": "itches",
+        "canonical_fact": "Skin itches after contact with poison ivy.",
+        "direction": "specified exposure/condition -> typical symptom",
+        "relation_id": "exposure_to_symptom",
+        "subject": "skin after contact with poison ivy",
+        "answer_aliases_en": [
+          "itches"
+        ],
+        "relation_spec": {
+          "id": "exposure_to_symptom",
+          "definition": "The typical sensory or physical symptom or reaction experienced by a tissue or organ following specified exposure to a substance or condition.",
+          "direction": "specified exposure/condition -> typical symptom"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "07548712316d1c1e9f526eda2c54bb99f2f74f5674bdf6550ab43376f5d5d50c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006348",
+        "subject_zh": "接触毒藤后的皮肤",
+        "prompt_zh": "接触毒藤后，皮肤通常会有什么反应？",
+        "canonical_fact_zh": "接触毒藤后皮肤会痒。",
+        "answer_zh": "会痒",
+        "answer_aliases_zh": [
+          "会痒"
+        ]
+      },
+      "translation_sha256": "676d05cc5e5804c7c636d690e33886ead57ee35966fc86cddab20779653a49af"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006351",
+      "input_sha256": "8b6e41c0f947be0912c968efb5fdfbae13ea640e8bb6fec775f979a1d7bd6b43",
+      "english": {
+        "prompt_en": "What sport features a half-court boundary and 3-point shots?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "basketball",
+        "canonical_fact": "The game with a half court boundary and 3-pointers is basketball.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "game with a half court boundary and 3 pointers",
+        "answer_aliases_en": [
+          "basketball"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5f747c85c26db9152798472737a98af02838b332801a6d4d16ed31c3061215b5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006351",
+        "subject_zh": "有半场边界和三分球的比赛",
+        "prompt_zh": "哪项运动有半场边界和三分球？",
+        "canonical_fact_zh": "有半场边界和三分球的运动是篮球。",
+        "answer_zh": "篮球",
+        "answer_aliases_zh": [
+          "篮球"
+        ]
+      },
+      "translation_sha256": "eb1df26f1c8c2625fb06557ec097eb0da85a17278de2d848f7d06a019acfcb87"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006348",
+        "historical:raw_commonsense_qa_006351"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1a1443e74d135765c1306317997b1c4e98b461391b4436d836e0b4f503e73bf2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.782
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006348",
+        "historical:raw_commonsense_qa_006351"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1a1443e74d135765c1306317997b1c4e98b461391b4436d836e0b4f503e73bf2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1760,
+      "first_chunk_seconds": 1.205,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1868,
+        "prompt_tokens": 1607,
+        "total_tokens": 3475,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1274,
+          "text_tokens": 594
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4122578ddf053679b6ad1c4cd79a9faf71fa7d7437dab93c1bececb5e2668c82",
+      "status": "completed",
+      "latency_seconds": 100.856
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006348",
+        "historical:raw_commonsense_qa_006351"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6183aa4d36e00ca303d10fb8bb5b3670086ffdab939c22ecdb1dc50d5e127746",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 187.187
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006348",
+        "historical:raw_commonsense_qa_006351"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6183aa4d36e00ca303d10fb8bb5b3670086ffdab939c22ecdb1dc50d5e127746",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 871,
+      "first_chunk_seconds": 1.625,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 932,
+        "prompt_tokens": 837,
+        "total_tokens": 1769,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 713,
+          "text_tokens": 219
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ebbb4f9a6d113b29df2b860148a5e83b3430b6c5354134eeff354e8b08fedf6",
+      "status": "completed",
+      "latency_seconds": 54.517
+    }
+  ],
+  "status": "completed"
+}

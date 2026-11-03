@@ -1,0 +1,209 @@
+{
+  "input_sha256": "cea1ec2dc8ac529c81f695105576514e45bd80ba40be1a9bef48bc25ed119ef4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000253",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The identifying description 'physical feature that exists on both Earth and the Moon' is not uniquely satisfied by 'mountains' alone; craters, plains, and regolith are other valid physical features present on both bodies. The source item is a multiple-choice question where 'mountains' is correct among the given options, but uniqueness cannot be established for a reusable factual candidate. Insufficient source support for a unique identification.",
+      "input_sha256": "be5697c8e9fe1b7203a3237cd307e564f7d8d8bbeaded5cd2ffe37471d6c5e49",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000321",
+      "decision": "ready",
+      "subject": "heat energy in a warm rock in a desert",
+      "relation_id": "thermal_phenomenon_to_energy_source",
+      "relation_definition": "The physical source that accounts for the thermal energy in a specified object or phenomenon; retain the environmental context that produced the heat (e.g., solar radiation vs. geothermal).",
+      "direction": "specified thermal phenomenon -> physical energy source",
+      "answer": "the Sun",
+      "canonical_fact": "The heat energy in a warm rock in a desert comes from the Sun.",
+      "prompt_en": "Where does the heat energy in a warm rock in a desert come from?",
+      "evidence_quotes": [
+        "the Sun",
+        "Where does the heat energy in the rock come from?"
+      ],
+      "reason": "The source question directly asks for the origin of heat in a rock within a desert context, and the source answer 'the Sun' is a literal, concise factual claim. No catalog relation covers causal energy sourcing, so a new precise relation 'thermal_phenomenon_to_energy_source' is proposed. The desert context distinguishes solar heating from geothermal or other sources, preserving the qualifier from the question.",
+      "english": {
+        "prompt_en": "Where does the heat energy in a warm rock in a desert come from?",
+        "relation_definition": "The physical source that accounts for the thermal energy in a specified object or phenomenon; retain the environmental context that produced the heat (e.g., solar radiation vs. geothermal).",
+        "answer": "the Sun",
+        "canonical_fact": "The heat energy in a warm rock in a desert comes from the Sun.",
+        "direction": "specified thermal phenomenon -> physical energy source",
+        "relation_id": "thermal_phenomenon_to_energy_source",
+        "subject": "heat energy in a warm rock in a desert",
+        "answer_aliases_en": [
+          "the Sun"
+        ],
+        "relation_spec": {
+          "id": "thermal_phenomenon_to_energy_source",
+          "definition": "The physical source that accounts for the thermal energy in a specified object or phenomenon; retain the environmental context that produced the heat (e.g., solar radiation vs. geothermal).",
+          "direction": "specified thermal phenomenon -> physical energy source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "49330f4cb49e4af5fdfcc6ed922a58d611b8baf3ee9b3ee613d650db63cc212c",
+      "input_sha256": "789c98eb8004e48ffc8327b5ffafb0f4fedb4fa8f053350d74678c4a51acfffd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000321",
+      "input_sha256": "789c98eb8004e48ffc8327b5ffafb0f4fedb4fa8f053350d74678c4a51acfffd",
+      "english": {
+        "prompt_en": "Where does the heat energy in a warm rock in a desert come from?",
+        "relation_definition": "The physical source that accounts for the thermal energy in a specified object or phenomenon; retain the environmental context that produced the heat (e.g., solar radiation vs. geothermal).",
+        "answer": "the Sun",
+        "canonical_fact": "The heat energy in a warm rock in a desert comes from the Sun.",
+        "direction": "specified thermal phenomenon -> physical energy source",
+        "relation_id": "thermal_phenomenon_to_energy_source",
+        "subject": "heat energy in a warm rock in a desert",
+        "answer_aliases_en": [
+          "the Sun"
+        ],
+        "relation_spec": {
+          "id": "thermal_phenomenon_to_energy_source",
+          "definition": "The physical source that accounts for the thermal energy in a specified object or phenomenon; retain the environmental context that produced the heat (e.g., solar radiation vs. geothermal).",
+          "direction": "specified thermal phenomenon -> physical energy source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "49330f4cb49e4af5fdfcc6ed922a58d611b8baf3ee9b3ee613d650db63cc212c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000321",
+        "subject_zh": "沙漠中一块温暖岩石中的热能",
+        "prompt_zh": "沙漠中一块温暖岩石中的热能来自哪里？",
+        "canonical_fact_zh": "沙漠中一块温暖岩石中的热能来自太阳。",
+        "answer_zh": "太阳",
+        "answer_aliases_zh": [
+          "太阳"
+        ]
+      },
+      "translation_sha256": "002195c72e0176d3c6a1d389b5509648e458c59715289e9854b74e4bd92b4270"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000253",
+        "historical:raw_ai2_arc_easy_000321"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1562690bc351f528e395e1e35f243c5e1888ebe55b03458f91047a01cd370b71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 12.855,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000253",
+        "historical:raw_ai2_arc_easy_000321"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1562690bc351f528e395e1e35f243c5e1888ebe55b03458f91047a01cd370b71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.819
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000253",
+        "historical:raw_ai2_arc_easy_000321"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1562690bc351f528e395e1e35f243c5e1888ebe55b03458f91047a01cd370b71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2300,
+      "first_chunk_seconds": 6.145,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2351,
+        "prompt_tokens": 1616,
+        "total_tokens": 3967,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1853,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1824718fee0c205e0bbb63488a0564ccae4727e64904411faeceb84a1d0eace8",
+      "status": "completed",
+      "latency_seconds": 55.656
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000321"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "64d15e1a39b47c2b661f87728895990f59802440a553121cb1594f5f94bfbb59",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 29.887
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000321"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "64d15e1a39b47c2b661f87728895990f59802440a553121cb1594f5f94bfbb59",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 552,
+      "first_chunk_seconds": 2.867,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 579,
+        "prompt_tokens": 566,
+        "total_tokens": 1145,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 461,
+          "text_tokens": 118
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "825a2f3065b4eebcc6645af26f909107f0148da348d2b050d07909f6e6000465",
+      "status": "completed",
+      "latency_seconds": 12.55
+    }
+  ],
+  "status": "completed"
+}

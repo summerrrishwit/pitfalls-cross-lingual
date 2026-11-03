@@ -1,0 +1,189 @@
+{
+  "input_sha256": "7370f2ffebc10f1d98d93a058206a5b1c5b79aae2d589bc4b963eb76e3074e43",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001782",
+      "decision": "ready",
+      "subject": "Alaska",
+      "relation_id": "entity_to_superlative_scope",
+      "relation_definition": "The named group or geographic scope within which an entity holds a stated superlative rank for a specified attribute (e.g., 'has the most X of any Y in').",
+      "direction": "entity -> scope",
+      "answer": "united states",
+      "canonical_fact": "Alaska has the most coast of any state in the United States.",
+      "prompt_en": "Alaska has the most coastline of any state in what group?",
+      "evidence_quotes": [
+        "Alaska has the most coast of any in the what?",
+        "united states"
+      ],
+      "reason": "Source directly supports the fact that Alaska's coastline is the longest among states in the United States. No catalog relation captures a superlative-attribute-within-scope relationship, so a precise new relation is proposed. Both model annotations independently extracted the same fact; 'state' is the implicit comparison class consistent with the source phrasing 'any in the [group]'. Answer copied verbatim from source_answer.",
+      "english": {
+        "direction": "entity -> scope",
+        "relation_id": "entity_to_superlative_scope",
+        "answer": "united states",
+        "canonical_fact": "Alaska has the most coast of any state in the United States.",
+        "subject": "Alaska",
+        "prompt_en": "Alaska has the most coastline of any state in what group?",
+        "relation_definition": "The named group or geographic scope within which an entity holds a stated superlative rank for a specified attribute (e.g., 'has the most X of any Y in').",
+        "answer_aliases_en": [
+          "united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_superlative_scope",
+          "definition": "The named group or geographic scope within which an entity holds a stated superlative rank for a specified attribute (e.g., 'has the most X of any Y in').",
+          "direction": "entity -> scope"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d340a7ab78e24a261259aae4a37b0e53d2ef1262083a573c2cc0827a9aaf1303",
+      "input_sha256": "69b9221b487fd89ea4392aebfef3803cdfe347b4671ab541b10e8d34b5c59e11",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001837",
+      "decision": "reject",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The statement 'a snowflake falls through the air' is a trivial, generic commonsense observation about a momentary physical action, not a stable or specific factual attribute. The relation 'falls through' is not a persistent factual link and no catalog relation (or reasonable new relation) captures it as a reusable fact. sensenova correctly flagged it as not_extractable (typical_action_or_location). Insufficient source support for a meaningful factual candidate.",
+      "input_sha256": "da4aba2c6041f79041aea4277e5bbebdf8fe6c8360237a3981b2aec1042ee55c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001782",
+      "input_sha256": "69b9221b487fd89ea4392aebfef3803cdfe347b4671ab541b10e8d34b5c59e11",
+      "english": {
+        "direction": "entity -> scope",
+        "relation_id": "entity_to_superlative_scope",
+        "answer": "united states",
+        "canonical_fact": "Alaska has the most coast of any state in the United States.",
+        "subject": "Alaska",
+        "prompt_en": "Alaska has the most coastline of any state in what group?",
+        "relation_definition": "The named group or geographic scope within which an entity holds a stated superlative rank for a specified attribute (e.g., 'has the most X of any Y in').",
+        "answer_aliases_en": [
+          "united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_superlative_scope",
+          "definition": "The named group or geographic scope within which an entity holds a stated superlative rank for a specified attribute (e.g., 'has the most X of any Y in').",
+          "direction": "entity -> scope"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d340a7ab78e24a261259aae4a37b0e53d2ef1262083a573c2cc0827a9aaf1303",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001782",
+        "subject_zh": "阿拉斯加",
+        "prompt_zh": "阿拉斯加的海岸线在哪个范围内是所有州中最长的？",
+        "canonical_fact_zh": "阿拉斯加拥有美国所有州中最长的海岸。",
+        "answer_zh": "美国",
+        "answer_aliases_zh": [
+          "美国"
+        ]
+      },
+      "translation_sha256": "edac1949e786874ba13b48e809f6ff20bb547fa9ef5c105fe6101ee69ba75602"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001782",
+        "historical:raw_commonsense_qa_001837"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "414c439a5177b794b483e259f29890b79c5c0618ec532064c72e34f6df3ff436",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2240,
+      "first_chunk_seconds": 15.868,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2476,
+        "prompt_tokens": 1667,
+        "total_tokens": 4143,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1978,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d4c1a378bc84925a52aea1e4fc291fe9ecd24d6e2579b0ee88ec7c03e20dd7b6",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 45.978,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001782",
+        "historical:raw_commonsense_qa_001837"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a910b1767d52336322db18d154e4d55735adb69987ea0d5d815ca4f66731ea7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2822,
+      "first_chunk_seconds": 18.599,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2892,
+        "prompt_tokens": 1686,
+        "total_tokens": 4578,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2400,
+          "text_tokens": 492
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d0dc1eb3afcacdd92d7864e6160a5a47204532cf3fc63817d5259e8f04e428c4",
+      "status": "completed",
+      "latency_seconds": 65.901
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001782"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1e237344cf72a8cc8b346d203418a68ef3c8af2f9927933734aade79e1b09408",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1018,
+      "first_chunk_seconds": 56.259,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1095,
+        "prompt_tokens": 556,
+        "total_tokens": 1651,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 977,
+          "text_tokens": 118
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "272c7241b91b91f3405b25b66003b6178832b4c420a696c0aa0ffe149da7f65e",
+      "status": "completed",
+      "latency_seconds": 89.408
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,171 @@
+{
+  "input_sha256": "da9cd690586f6ff867e9228ffb5adb07f57f884fee0dff9146df96f8c953c389",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000507",
+      "decision": "ready",
+      "subject": "changes to rocks",
+      "relation_id": "process_to_rate",
+      "relation_definition": "The characteristic speed or rate at which a specified process occurs; retains the qualitative descriptor as stated without asserting exact numeric values.",
+      "direction": "process -> rate descriptor",
+      "answer": "slowly",
+      "canonical_fact": "Changes to rocks happen slowly.",
+      "prompt_en": "How fast do changes to rocks typically happen?",
+      "evidence_quotes": [
+        "changes to rocks happen",
+        "slowly"
+      ],
+      "reason": "Both model annotations agree on extraction; source answer 'slowly' is a direct, unambiguous rate qualifier for rock changes. No existing catalog relation captures a process rate, so a new relation process_to_rate is proposed with direction process -> rate descriptor.",
+      "english": {
+        "relation_definition": "The characteristic speed or rate at which a specified process occurs; retains the qualitative descriptor as stated without asserting exact numeric values.",
+        "direction": "process -> rate descriptor",
+        "subject": "changes to rocks",
+        "relation_id": "process_to_rate",
+        "prompt_en": "How fast do changes to rocks typically happen?",
+        "answer": "slowly",
+        "canonical_fact": "Changes to rocks happen slowly.",
+        "answer_aliases_en": [
+          "slowly"
+        ],
+        "relation_spec": {
+          "id": "process_to_rate",
+          "definition": "The characteristic speed or rate at which a specified process occurs; retains the qualitative descriptor as stated without asserting exact numeric values.",
+          "direction": "process -> rate descriptor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe6d46a8fa4472f1cb50666ba8775a1d0267ff0fd8e695757a2c3639999986b1",
+      "input_sha256": "cfd30be740e6a829bc837cb84b0f193f4374a1e2b7bc74572f05a5aa0b500499",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000508",
+      "decision": "ready",
+      "subject": "Prokaryotes",
+      "relation_id": "organism_to_reproduction_method",
+      "relation_definition": "The specific biological process or mechanism by which a specified organism or class of organisms reproduces; retains stated qualifiers (e.g., quickly, asexually) without asserting exclusivity.",
+      "direction": "organism -> reproduction method",
+      "answer": "binary fission",
+      "canonical_fact": "Prokaryotes can reproduce quickly by binary fission.",
+      "prompt_en": "By what process can prokaryotes reproduce quickly?",
+      "evidence_quotes": [
+        "Prokaryotes can reproduce quickly by",
+        "binary fission"
+      ],
+      "reason": "Both model annotations agree on extraction; source answer 'binary fission' is a direct, unambiguous reproduction method for prokaryotes. No existing catalog relation captures an organism-specific reproduction mechanism, so a new relation organism_to_reproduction_method is proposed with direction organism -> reproduction method.",
+      "english": {
+        "relation_definition": "The specific biological process or mechanism by which a specified organism or class of organisms reproduces; retains stated qualifiers (e.g., quickly, asexually) without asserting exclusivity.",
+        "direction": "organism -> reproduction method",
+        "subject": "Prokaryotes",
+        "relation_id": "organism_to_reproduction_method",
+        "prompt_en": "By what process can prokaryotes reproduce quickly?",
+        "answer": "binary fission",
+        "canonical_fact": "Prokaryotes can reproduce quickly by binary fission.",
+        "answer_aliases_en": [
+          "binary fission"
+        ],
+        "relation_spec": {
+          "id": "organism_to_reproduction_method",
+          "definition": "The specific biological process or mechanism by which a specified organism or class of organisms reproduces; retains stated qualifiers (e.g., quickly, asexually) without asserting exclusivity.",
+          "direction": "organism -> reproduction method"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "710547346fa5ae84732000a4f0d7446e7ff528df8e21ab8351ee1213ae194fb6",
+      "input_sha256": "1ff1ee08d885d55b71ff0972814c2eb84c300c6fccd3bb7d377f4fee3f530372",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000507",
+        "historical:raw_sciq_000508"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a324dfcd607aec8cd7c16a2472e96d9106a16f3dcbe8618eba0c1dbc1f65ca9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 5.714
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000507",
+        "historical:raw_sciq_000508"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a324dfcd607aec8cd7c16a2472e96d9106a16f3dcbe8618eba0c1dbc1f65ca9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1929,
+      "first_chunk_seconds": 1.11,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1978,
+        "prompt_tokens": 1636,
+        "total_tokens": 3614,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1491,
+          "text_tokens": 487
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0b19a54a32d71e043b46490c03507f388176571863132dfa3ad47deb418150a6",
+      "status": "completed",
+      "latency_seconds": 44.621
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000507",
+        "historical:raw_sciq_000508"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "baeaedd36f4657cfed5c1525985ca053ab7a6a588fb3a32546c459c9e33003a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.884
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000507",
+        "historical:raw_sciq_000508"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "baeaedd36f4657cfed5c1525985ca053ab7a6a588fb3a32546c459c9e33003a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.204
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000507",
+        "historical:raw_sciq_000508"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "baeaedd36f4657cfed5c1525985ca053ab7a6a588fb3a32546c459c9e33003a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.325
+    }
+  ],
+  "status": "failed"
+}

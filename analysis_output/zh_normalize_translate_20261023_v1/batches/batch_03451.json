@@ -1,0 +1,160 @@
+{
+  "input_sha256": "5e251c0dbe5af2aac67c3daae892727e7b23e316b5d6258f2115ba2a2a720a37",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005232",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'most people' lacks a geographic or demographic qualifier, making the fact imprecise and non-reusable. No catalog relation matches 'what enables X to transport'; the structure is a vague commonsense prompt rather than a stable relational fact.",
+      "input_sha256": "0f11b9fb0c6158d1dbbeb1a45f852ca0b9be6ebc1021590d692ef58da0f80a2f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005233",
+      "decision": "ready",
+      "subject": "cat",
+      "relation_id": "organism_to_typical_vocalization",
+      "relation_definition": "Typical vocalization sound produced by a specified organism; retains the 'normal/typical' qualifier from the source.",
+      "direction": "specified organism -> typical vocalization",
+      "answer": "meow",
+      "canonical_fact": "A cat's typical vocalization is 'meow'.",
+      "prompt_en": "What is the typical vocalization of a cat?",
+      "evidence_quotes": [
+        "What would you normally expect a cat to say?",
+        "meow"
+      ],
+      "reason": "No existing catalog relation covers typical vocalization of an organism. Proposed 'organism_to_typical_vocalization' with direction organism→vocalization. The source explicitly uses 'normally expect' to frame the claim, and the answer 'meow' is a literal substring of source_answer. The prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "What is the typical vocalization of a cat?",
+        "relation_definition": "Typical vocalization sound produced by a specified organism; retains the 'normal/typical' qualifier from the source.",
+        "answer": "meow",
+        "canonical_fact": "A cat's typical vocalization is 'meow'.",
+        "direction": "specified organism -> typical vocalization",
+        "relation_id": "organism_to_typical_vocalization",
+        "subject": "cat",
+        "answer_aliases_en": [
+          "meow"
+        ],
+        "relation_spec": {
+          "id": "organism_to_typical_vocalization",
+          "definition": "Typical vocalization sound produced by a specified organism; retains the 'normal/typical' qualifier from the source.",
+          "direction": "specified organism -> typical vocalization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a35c8a45b65da984646e5614d0f8aca6fd5b71d86a18ac08b1315087a7c31c42",
+      "input_sha256": "5c671fb2bc33c2043fe74fd93a62a9ecce7272c57d77e184250ab26914b2079f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005232",
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7cf2c51f1eaf7f3ffa82ef16ef15d9647fbeb355eb7358503c460c4db825cbac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.949
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005232",
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7cf2c51f1eaf7f3ffa82ef16ef15d9647fbeb355eb7358503c460c4db825cbac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 67.887
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005232",
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7cf2c51f1eaf7f3ffa82ef16ef15d9647fbeb355eb7358503c460c4db825cbac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1456,
+      "first_chunk_seconds": 1.303,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1507,
+        "prompt_tokens": 1579,
+        "total_tokens": 3086,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1083,
+          "text_tokens": 424
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7d7536d96d4ffea9720085af90157252c19420ebca135498bd88540aaabd76d5",
+      "status": "completed",
+      "latency_seconds": 88.736
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3e8bbcdb4b8886b675627d94120698f0893f0340733db1eff8305afa38c8f0f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 20.565
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3e8bbcdb4b8886b675627d94120698f0893f0340733db1eff8305afa38c8f0f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.023
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005233"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3e8bbcdb4b8886b675627d94120698f0893f0340733db1eff8305afa38c8f0f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.238
+    }
+  ],
+  "status": "failed"
+}

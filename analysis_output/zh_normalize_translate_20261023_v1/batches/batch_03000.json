@@ -1,0 +1,61 @@
+{
+  "input_sha256": "e68c54f9eccd9f38ba762a615027072ac92e90c96cf74b451d87ae03b30320ec",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000433",
+        "historical:raw_sciq_000434"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1e31373c16fb7313cca29d39129903f88eb3f62da9f133ed7a036803064cabf0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 27.622
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000433",
+        "historical:raw_sciq_000434"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1e31373c16fb7313cca29d39129903f88eb3f62da9f133ed7a036803064cabf0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.892,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000433",
+        "historical:raw_sciq_000434"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1e31373c16fb7313cca29d39129903f88eb3f62da9f133ed7a036803064cabf0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.527
+    }
+  ],
+  "status": "failed"
+}

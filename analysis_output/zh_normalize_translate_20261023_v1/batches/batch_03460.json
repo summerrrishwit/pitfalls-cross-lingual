@@ -1,0 +1,185 @@
+{
+  "input_sha256": "fb63d723a0ad354da9c13380bb38e6a5f16556788f2190bfc2b20f3cbbd00281",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005630",
+      "decision": "ready",
+      "subject": "symptoms of mental illness",
+      "relation_id": "condition_to_expected_outcome",
+      "relation_definition": "A specified condition or cessation of an action -> the expected outcome or effect that may result.",
+      "direction": "condition -> expected outcome",
+      "answer": "recur",
+      "canonical_fact": "Symptoms of mental illness may recur when medication is stopped.",
+      "prompt_en": "What may happen to the symptoms of a person with mental illness who stops their medication?",
+      "evidence_quotes": [
+        "may have symptoms do what?",
+        "recur"
+      ],
+      "reason": "Source question and answer together establish that stopping medication may cause symptoms to recur. No catalog relation captures a conditional/causal 'X may happen when Y' pattern, so a new precise relation is proposed. The qualifier 'may' is preserved from the source.",
+      "english": {
+        "prompt_en": "What may happen to the symptoms of a person with mental illness who stops their medication?",
+        "relation_definition": "A specified condition or cessation of an action -> the expected outcome or effect that may result.",
+        "answer": "recur",
+        "canonical_fact": "Symptoms of mental illness may recur when medication is stopped.",
+        "direction": "condition -> expected outcome",
+        "relation_id": "condition_to_expected_outcome",
+        "subject": "symptoms of mental illness",
+        "answer_aliases_en": [
+          "recur"
+        ],
+        "relation_spec": {
+          "id": "condition_to_expected_outcome",
+          "definition": "A specified condition or cessation of an action -> the expected outcome or effect that may result.",
+          "direction": "condition -> expected outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "988e9bd2866850b8604a957e75cec934a1cb82fcf53b89ba70a39814bdb932d4",
+      "input_sha256": "23ff87bc968e7a84f918356596d9f5fa4f6cd7f42a2a6407ed1da7b095502be8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005647",
+      "decision": "ready",
+      "subject": "bright green ficus",
+      "relation_id": "entity_to_property",
+      "relation_definition": "A specified entity -> a characteristic property or trait associated with it in the stated context.",
+      "direction": "entity -> property",
+      "answer": "good health",
+      "canonical_fact": "A trait of a bright green ficus is good health.",
+      "prompt_en": "What is a trait of a bright green ficus?",
+      "evidence_quotes": [
+        "What is a trait of a bright green ficus?",
+        "good health"
+      ],
+      "reason": "Source question asks for a trait of a bright green ficus and the answer is 'good health.' No catalog relation covers a general entity-to-property/trait link, so a new precise relation is proposed. The framing as 'trait' is retained from the source.",
+      "english": {
+        "prompt_en": "What is a trait of a bright green ficus?",
+        "relation_definition": "A specified entity -> a characteristic property or trait associated with it in the stated context.",
+        "answer": "good health",
+        "canonical_fact": "A trait of a bright green ficus is good health.",
+        "direction": "entity -> property",
+        "relation_id": "entity_to_property",
+        "subject": "bright green ficus",
+        "answer_aliases_en": [
+          "good health"
+        ],
+        "relation_spec": {
+          "id": "entity_to_property",
+          "definition": "A specified entity -> a characteristic property or trait associated with it in the stated context.",
+          "direction": "entity -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "239868390d6eed4b437f5e3ec8bd8ec1985f09b48e7ddb611ab346edf9374fe8",
+      "input_sha256": "2f5f3d36fdd880845f3ddebcb543b6a0caa75c9c596efbd1485bdad35ea1263c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "85530611c2a71e483049260b553deee62a9653badf0422b8ee2d4c519bfe4039",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.853
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "85530611c2a71e483049260b553deee62a9653badf0422b8ee2d4c519bfe4039",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 44.786
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "85530611c2a71e483049260b553deee62a9653badf0422b8ee2d4c519bfe4039",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1963,
+      "first_chunk_seconds": 63.649,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2055,
+        "prompt_tokens": 1594,
+        "total_tokens": 3649,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1660,
+          "text_tokens": 395
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8e9ef58a54fe3b6994917fcdf3aa187d99d263585427bd4c501d314431857bd6",
+      "status": "completed",
+      "latency_seconds": 89.422
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7e02ef5b4404354f3f9b01d5c8202c97d401dc6ea9ca4bab56c8ea552a4eee31",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 68.113
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7e02ef5b4404354f3f9b01d5c8202c97d401dc6ea9ca4bab56c8ea552a4eee31",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.016
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005630",
+        "historical:raw_commonsense_qa_005647"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7e02ef5b4404354f3f9b01d5c8202c97d401dc6ea9ca4bab56c8ea552a4eee31",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 73.637
+    }
+  ],
+  "status": "failed"
+}

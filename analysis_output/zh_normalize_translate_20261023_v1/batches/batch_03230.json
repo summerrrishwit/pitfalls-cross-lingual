@@ -1,0 +1,171 @@
+{
+  "input_sha256": "7766edda52bba2abc44b98f6fe6bbe5447283375d060d0b2efc6b3dfee93a3d7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000938",
+      "decision": "ready",
+      "subject": "oocyte in humans",
+      "relation_id": "biological_entity_to_release_structure",
+      "relation_definition": "The specific anatomical structure from which a named biological entity (cell, gamete, etc.) is released or departs in a stated organism context. Distinct from habitat (organism_to_habitat) and geographic containment (entity_to_containing_location); captures a process-level departure rather than static residence.",
+      "direction": "biological entity (cell/gamete) -> anatomical structure from which it is released",
+      "answer": "ovary",
+      "canonical_fact": "In humans, fertilization occurs soon after the oocyte leaves the ovary.",
+      "prompt_en": "In humans, fertilization occurs soon after the oocyte leaves which anatomical structure?",
+      "evidence_quotes": [
+        "fertilization occurs soon after the oocyte leaves this",
+        "ovary"
+      ],
+      "reason": "No catalog relation covers a process-level departure of a biological entity from an anatomical structure. entity_to_containing_location is explicitly limited to geographic containment and excludes origin/process locations. A precise new relation is needed to capture 'the structure from which the oocyte is released.' The answer 'ovary' is a literal substring of source_answer and the canonical fact preserves the source qualifier 'in humans' and the temporal link to fertilization.",
+      "english": {
+        "prompt_en": "In humans, fertilization occurs soon after the oocyte leaves which anatomical structure?",
+        "relation_definition": "The specific anatomical structure from which a named biological entity (cell, gamete, etc.) is released or departs in a stated organism context. Distinct from habitat (organism_to_habitat) and geographic containment (entity_to_containing_location); captures a process-level departure rather than static residence.",
+        "answer": "ovary",
+        "canonical_fact": "In humans, fertilization occurs soon after the oocyte leaves the ovary.",
+        "direction": "biological entity (cell/gamete) -> anatomical structure from which it is released",
+        "relation_id": "biological_entity_to_release_structure",
+        "subject": "oocyte in humans",
+        "answer_aliases_en": [
+          "ovary"
+        ],
+        "relation_spec": {
+          "id": "biological_entity_to_release_structure",
+          "definition": "The specific anatomical structure from which a named biological entity (cell, gamete, etc.) is released or departs in a stated organism context. Distinct from habitat (organism_to_habitat) and geographic containment (entity_to_containing_location); captures a process-level departure rather than static residence.",
+          "direction": "biological entity (cell/gamete) -> anatomical structure from which it is released"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "33bb22ab482320639356dba2e5511e48ce358a8a6f4872e2f9cd9089c7514e24",
+      "input_sha256": "19f1775f91d1b71704b38f487b118ed769170dc4dca047a7c95eee1c916b1510",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000939",
+      "decision": "ready",
+      "subject": "atoms of a given element",
+      "relation_id": "entity_type_to_shared_property",
+      "relation_definition": "A numerical or qualitative property that all members of a specified entity type share; retains scope qualifiers from the source (e.g., 'given element'). Distinct from entity_to_class (taxonomy membership) and entity_to_material (composition).",
+      "direction": "entity type -> shared property/attribute",
+      "answer": "protons and electrons",
+      "canonical_fact": "All the atoms of a given element have the same number of protons and electrons.",
+      "prompt_en": "All the atoms of a given element have the same number of what?",
+      "evidence_quotes": [
+        "All the atoms of a given element have the same number",
+        "protons and electrons"
+      ],
+      "reason": "No catalog relation captures a shared numerical property of an entity type. entity_to_class is about taxonomy, entity_to_material is about composition. The question asks for a defining count property shared by all atoms of a given element, which is best modeled as a new relation. The answer 'protons and electrons' is a literal copy of source_answer. The prompt is option-free and does not contain the answer string.",
+      "english": {
+        "prompt_en": "All the atoms of a given element have the same number of what?",
+        "relation_definition": "A numerical or qualitative property that all members of a specified entity type share; retains scope qualifiers from the source (e.g., 'given element'). Distinct from entity_to_class (taxonomy membership) and entity_to_material (composition).",
+        "answer": "protons and electrons",
+        "canonical_fact": "All the atoms of a given element have the same number of protons and electrons.",
+        "direction": "entity type -> shared property/attribute",
+        "relation_id": "entity_type_to_shared_property",
+        "subject": "atoms of a given element",
+        "answer_aliases_en": [
+          "protons and electrons"
+        ],
+        "relation_spec": {
+          "id": "entity_type_to_shared_property",
+          "definition": "A numerical or qualitative property that all members of a specified entity type share; retains scope qualifiers from the source (e.g., 'given element'). Distinct from entity_to_class (taxonomy membership) and entity_to_material (composition).",
+          "direction": "entity type -> shared property/attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7992910614ba4590059b0f896d406d9b04f8d618332e2c16e644ba5b5cfcd4ca",
+      "input_sha256": "5516279e234c2bf8a68770e96ad496145bef0edc4549b34ac7debbb02cb95a7d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000938",
+        "historical:raw_sciq_000939"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d9057149ed79f1ef898c97eb1fcb4c97b8fbedeb320dc7dd3a95432c2b6a5703",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.509
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000938",
+        "historical:raw_sciq_000939"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d9057149ed79f1ef898c97eb1fcb4c97b8fbedeb320dc7dd3a95432c2b6a5703",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2635,
+      "first_chunk_seconds": 4.598,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2690,
+        "prompt_tokens": 1789,
+        "total_tokens": 4479,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2034,
+          "text_tokens": 656
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "12eebb177cd474be36aa0b533c97c8968bd3dae1a4951c9532eb91c44068fa71",
+      "status": "completed",
+      "latency_seconds": 45.903
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000938",
+        "historical:raw_sciq_000939"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fff44da189dbc86e84bb2862f4b51db1b0799417f2a3ac25761669a57d4e0ad4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.108
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000938",
+        "historical:raw_sciq_000939"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fff44da189dbc86e84bb2862f4b51db1b0799417f2a3ac25761669a57d4e0ad4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.988
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000938",
+        "historical:raw_sciq_000939"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fff44da189dbc86e84bb2862f4b51db1b0799417f2a3ac25761669a57d4e0ad4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.268
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,242 @@
+{
+  "input_sha256": "e26dc5a240e0a25073d156f097b903d42c530e1c66dcb8d933342d6460589609",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000700",
+      "decision": "ready",
+      "subject": "oldest eukaryotes",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "protists",
+      "canonical_fact": "Scientists think protists to be the oldest eukaryotes.",
+      "prompt_en": "What group of organisms do scientists consider to be the oldest eukaryotes?",
+      "evidence_quotes": [
+        "What do scientists think to be the oldest eukaryotes?",
+        "protists"
+      ],
+      "reason": "The source question asks for the organism group considered the oldest eukaryotes. 'description_to_entity' fits: 'oldest eukaryotes' is an explicitly qualified identifying description satisfied by 'protists'. The epistemic qualifier 'scientists think' is preserved in the canonical fact to retain uncertainty.",
+      "english": {
+        "prompt_en": "What group of organisms do scientists consider to be the oldest eukaryotes?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "protists",
+        "canonical_fact": "Scientists think protists to be the oldest eukaryotes.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "oldest eukaryotes",
+        "answer_aliases_en": [
+          "protists"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5d944c5a5ebae1500098f0241cf0fa1a52bfdc51d4e7a525c1a36006d3e503ba",
+      "input_sha256": "da60c8f535cfec30fed3410cf76adf9ba1d75b5f5ffe3ff39cdfaede73f3e76b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000701",
+      "decision": "ready",
+      "subject": "bursitis",
+      "relation_id": "condition_to_nearby_anatomical_structure",
+      "relation_definition": "The anatomical structure near which the affected structure of a specified medical condition is located.",
+      "direction": "medical_condition -> anatomical_structure",
+      "answer": "joint",
+      "canonical_fact": "Bursitis is the inflammation of a bursa near a joint.",
+      "prompt_en": "Bursitis is the inflammation of a bursa near which anatomical structure?",
+      "evidence_quotes": [
+        "Bursitis is the inflammation of a bursa near what?",
+        "joint"
+      ],
+      "reason": "No existing catalog relation precisely captures the anatomical-proximity fact that the affected structure (bursa) in a specified medical condition (bursitis) is located near a particular structure (joint). Proposed 'condition_to_nearby_anatomical_structure' with direction medical_condition -> anatomical_structure. Source support is explicit in the question and answer.",
+      "english": {
+        "prompt_en": "Bursitis is the inflammation of a bursa near which anatomical structure?",
+        "relation_definition": "The anatomical structure near which the affected structure of a specified medical condition is located.",
+        "answer": "joint",
+        "canonical_fact": "Bursitis is the inflammation of a bursa near a joint.",
+        "direction": "medical_condition -> anatomical_structure",
+        "relation_id": "condition_to_nearby_anatomical_structure",
+        "subject": "bursitis",
+        "answer_aliases_en": [
+          "joint"
+        ],
+        "relation_spec": {
+          "id": "condition_to_nearby_anatomical_structure",
+          "definition": "The anatomical structure near which the affected structure of a specified medical condition is located.",
+          "direction": "medical_condition -> anatomical_structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a632b3cad2431b1bd3667b027bc86dd99460cbe21985ce7681ad30790ebe10b",
+      "input_sha256": "ca5439a3d430020318ef4700055de42541699a7ba564f745807233152a33dc54",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000700",
+      "input_sha256": "da60c8f535cfec30fed3410cf76adf9ba1d75b5f5ffe3ff39cdfaede73f3e76b",
+      "english": {
+        "prompt_en": "What group of organisms do scientists consider to be the oldest eukaryotes?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "protists",
+        "canonical_fact": "Scientists think protists to be the oldest eukaryotes.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "oldest eukaryotes",
+        "answer_aliases_en": [
+          "protists"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5d944c5a5ebae1500098f0241cf0fa1a52bfdc51d4e7a525c1a36006d3e503ba",
+      "translation": {
+        "record_id": "historical:raw_sciq_000700",
+        "subject_zh": "最古老的真核生物",
+        "prompt_zh": "科学家认为哪类生物是最古老的真核生物？",
+        "canonical_fact_zh": "科学家认为原生生物是最古老的真核生物。",
+        "answer_zh": "原生生物",
+        "answer_aliases_zh": [
+          "原生生物"
+        ]
+      },
+      "translation_sha256": "7b26879fdf68c7977bf5435396acbb2538c01141f3ef5363307681078fe5552e"
+    },
+    {
+      "record_id": "historical:raw_sciq_000701",
+      "input_sha256": "ca5439a3d430020318ef4700055de42541699a7ba564f745807233152a33dc54",
+      "english": {
+        "prompt_en": "Bursitis is the inflammation of a bursa near which anatomical structure?",
+        "relation_definition": "The anatomical structure near which the affected structure of a specified medical condition is located.",
+        "answer": "joint",
+        "canonical_fact": "Bursitis is the inflammation of a bursa near a joint.",
+        "direction": "medical_condition -> anatomical_structure",
+        "relation_id": "condition_to_nearby_anatomical_structure",
+        "subject": "bursitis",
+        "answer_aliases_en": [
+          "joint"
+        ],
+        "relation_spec": {
+          "id": "condition_to_nearby_anatomical_structure",
+          "definition": "The anatomical structure near which the affected structure of a specified medical condition is located.",
+          "direction": "medical_condition -> anatomical_structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a632b3cad2431b1bd3667b027bc86dd99460cbe21985ce7681ad30790ebe10b",
+      "translation": {
+        "record_id": "historical:raw_sciq_000701",
+        "subject_zh": "滑囊炎",
+        "prompt_zh": "滑囊炎是靠近哪个解剖结构的滑囊发生的炎症？",
+        "canonical_fact_zh": "滑囊炎是关节附近滑囊的炎症。",
+        "answer_zh": "关节",
+        "answer_aliases_zh": [
+          "关节"
+        ]
+      },
+      "translation_sha256": "0fc3436b97d04957ea827aa43590618caebdcd1cc9d637f36fdc2bbbf8054494"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000700",
+        "historical:raw_sciq_000701"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "25508314d9a77d997e0abda984234271aff808a44018a8ca8b54dfeb74909fdb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4774,
+      "first_chunk_seconds": 62.351,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4854,
+        "prompt_tokens": 1693,
+        "total_tokens": 6547,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4344,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "097ea1310e8d14c238bada7d5a12847e0039e1a66ffaa40dadf1e0efa8da2cc9",
+      "status": "completed",
+      "latency_seconds": 131.444
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000700",
+        "historical:raw_sciq_000701"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6933407ad34ecc87600825cf23941f271fd361d36e8ed1489f8c76ac946b1355",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 244.569
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000700",
+        "historical:raw_sciq_000701"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6933407ad34ecc87600825cf23941f271fd361d36e8ed1489f8c76ac946b1355",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.797
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000700",
+        "historical:raw_sciq_000701"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6933407ad34ecc87600825cf23941f271fd361d36e8ed1489f8c76ac946b1355",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 717,
+      "first_chunk_seconds": 62.327,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 716,
+        "prompt_tokens": 811,
+        "total_tokens": 1527,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 561,
+          "text_tokens": 155
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a5c53e4c465b4f32c18232d52e62a58d7b31f2d0e0b4c11e9311f268d49a115a",
+      "status": "completed",
+      "latency_seconds": 73.488
+    }
+  ],
+  "status": "completed"
+}

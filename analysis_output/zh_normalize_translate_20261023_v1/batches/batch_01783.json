@@ -1,0 +1,195 @@
+{
+  "input_sha256": "63c419710684292e7a80144c0619570b741eee6716a6158f45ee732080743461",
+  "normalized": [
+    {
+      "record_id": "public:pbf_cfcc5cc7cfcc84201082",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Existing answer 'Earl Grey' is not a literal substring of source_answer 'Earl' and conflicts with the source. Per instructions, if the existing answer conflicts with source, defer. No acceptable literal substring of source_answer alone would preserve the intended tea name without adding information absent from the source.",
+      "input_sha256": "795700d44374c9fffa066aeb4fbb03a68a107ca35776a8eed1062323b352fcb1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_cfdb713e48aa34ca9566",
+      "decision": "ready",
+      "subject": "King Joffrey in Game of Thrones",
+      "relation_id": "killed_character_to_killer",
+      "relation_definition": "The character who killed the subject character in a specified fictional work; specifies the killing event and the work context.",
+      "direction": "killed character in specified work -> killer character",
+      "answer": "Petyr Baelish",
+      "canonical_fact": "Petyr Baelish killed King Joffrey in Game of Thrones.",
+      "prompt_en": "In Game of Thrones, who killed King Joffrey?\nAnswer:",
+      "evidence_quotes": [
+        "Petyr Baelish",
+        "who killed king geoffrey in game of thrones"
+      ],
+      "reason": "Source_answer 'Petyr Baelish' matches existing answer exactly. No existing catalog relation covers a fictional-killing/perpetrator relationship; proposed new relation 'killed_character_to_killer' with explicit direction from the killed character to the killer in a specified work. Source question contains the typo 'geoffrey' for 'joffrey'; subject normalized to the correct character name as confirmed by the source_answer context.",
+      "english": {
+        "answer": "Petyr Baelish",
+        "relation_id": "killed_character_to_killer",
+        "prompt_en": "In Game of Thrones, who killed King Joffrey?\nAnswer:",
+        "direction": "killed character in specified work -> killer character",
+        "subject": "King Joffrey in Game of Thrones",
+        "canonical_fact": "Petyr Baelish killed King Joffrey in Game of Thrones.",
+        "relation_definition": "The character who killed the subject character in a specified fictional work; specifies the killing event and the work context.",
+        "answer_aliases_en": [
+          "Petyr Baelish",
+          "Littlefinger"
+        ],
+        "relation_spec": {
+          "id": "killed_character_to_killer",
+          "definition": "The character who killed the subject character in a specified fictional work; specifies the killing event and the work context.",
+          "direction": "killed character in specified work -> killer character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ee02aef1fc76917dbeade07845a8cfc7deb9b4f4215e675d18a9c2ce590f4b5",
+      "input_sha256": "4dbc7c7a734474eebadb823c0cbad5a4d15d48b3c7953a87cc7f78cc3261d014",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_cfdb713e48aa34ca9566",
+      "input_sha256": "4dbc7c7a734474eebadb823c0cbad5a4d15d48b3c7953a87cc7f78cc3261d014",
+      "english": {
+        "answer": "Petyr Baelish",
+        "relation_id": "killed_character_to_killer",
+        "prompt_en": "In Game of Thrones, who killed King Joffrey?\nAnswer:",
+        "direction": "killed character in specified work -> killer character",
+        "subject": "King Joffrey in Game of Thrones",
+        "canonical_fact": "Petyr Baelish killed King Joffrey in Game of Thrones.",
+        "relation_definition": "The character who killed the subject character in a specified fictional work; specifies the killing event and the work context.",
+        "answer_aliases_en": [
+          "Petyr Baelish",
+          "Littlefinger"
+        ],
+        "relation_spec": {
+          "id": "killed_character_to_killer",
+          "definition": "The character who killed the subject character in a specified fictional work; specifies the killing event and the work context.",
+          "direction": "killed character in specified work -> killer character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ee02aef1fc76917dbeade07845a8cfc7deb9b4f4215e675d18a9c2ce590f4b5",
+      "translation": {
+        "record_id": "public:pbf_cfdb713e48aa34ca9566",
+        "subject_zh": "《权力的游戏》中的乔佛里国王",
+        "prompt_zh": "在《权力的游戏》中，谁杀了乔佛里国王？\n答案：",
+        "canonical_fact_zh": "彼特·贝里席在《权力的游戏》中杀了乔佛里国王。",
+        "answer_zh": "彼特·贝里席",
+        "answer_aliases_zh": [
+          "彼特·贝里席",
+          "小指头"
+        ]
+      },
+      "translation_sha256": "205790f61ac1beb9f5d4552364bb2d490b875bda9c994e839c39c8658cf2cc4a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_cfcc5cc7cfcc84201082",
+        "public:pbf_cfdb713e48aa34ca9566"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c90800adb409299868225c7068e340a22d251a559bb33aa96d1750a24d8822e2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3269,
+      "first_chunk_seconds": 38.845,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3336,
+        "prompt_tokens": 1617,
+        "total_tokens": 4953,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2831,
+          "text_tokens": 505
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "82459409f325f3788519de4464b4b82a56924db7c949230ff5f3c8c8869f3fa0",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 75.605,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_cfcc5cc7cfcc84201082",
+        "public:pbf_cfdb713e48aa34ca9566"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8264c945a2b2aa75f87b4ad0f62e5397a93b30b803255e764edf86905d57fc18",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3266,
+      "first_chunk_seconds": 33.668,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3319,
+        "prompt_tokens": 1636,
+        "total_tokens": 4955,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2837,
+          "text_tokens": 482
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "b5a8fa439c321d43e549ad6d2a010e1fd21d1aa87cfb5669db1e599036fc5bae",
+      "status": "completed",
+      "latency_seconds": 63.917
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_cfdb713e48aa34ca9566"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "114d6a78d04e42f58e7bff93a053f2a590042b96e7d3a16a23c0b53fabd560a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 702,
+      "first_chunk_seconds": 7.993,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 710,
+        "prompt_tokens": 557,
+        "total_tokens": 1267,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 553,
+          "text_tokens": 157
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fcca9ff46f1de28bf721cfddb47b24f47ccf3c80700b922a9611e0f58742369f",
+      "status": "completed",
+      "latency_seconds": 15.477
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "7bddb85198cd9c7e4bc06e8f27f18283550612dc39a780c082e0308efe40e69d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000894",
+      "decision": "ready",
+      "subject": "many plants",
+      "relation_id": "organism_to_seasonal_response",
+      "relation_definition": "The specific behavioral or physiological state change an organism or organism group enters in response to a specified seasonal or environmental cue (e.g., shorter days in fall); retain the trigger context in the fact.",
+      "direction": "organism/group -> seasonal response",
+      "answer": "going dormant",
+      "canonical_fact": "Many plants respond to the days growing shorter in the fall by going dormant.",
+      "prompt_en": "What do many plants do in response to the days growing shorter in the fall?",
+      "evidence_quotes": [
+        "Many plants respond to the days growing shorter in the fall by doing what?",
+        "going dormant"
+      ],
+      "reason": "No existing catalog relation covers an organism's behavioral/physiological response to a seasonal cue. Proposed organism_to_seasonal_response to capture the stimulus-response pair without forcing a broad category such as habitat or class. Both model annotations agree on subject, answer, and canonical fact; source_answer 'going dormant' is copied verbatim.",
+      "english": {
+        "prompt_en": "What do many plants do in response to the days growing shorter in the fall?",
+        "relation_definition": "The specific behavioral or physiological state change an organism or organism group enters in response to a specified seasonal or environmental cue (e.g., shorter days in fall); retain the trigger context in the fact.",
+        "answer": "going dormant",
+        "canonical_fact": "Many plants respond to the days growing shorter in the fall by going dormant.",
+        "direction": "organism/group -> seasonal response",
+        "relation_id": "organism_to_seasonal_response",
+        "subject": "many plants",
+        "answer_aliases_en": [
+          "going dormant"
+        ],
+        "relation_spec": {
+          "id": "organism_to_seasonal_response",
+          "definition": "The specific behavioral or physiological state change an organism or organism group enters in response to a specified seasonal or environmental cue (e.g., shorter days in fall); retain the trigger context in the fact.",
+          "direction": "organism/group -> seasonal response"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ef3acdb9f6258f5f127f7d8804c1f3f73e3e36a4a557b797d20d0f758054338c",
+      "input_sha256": "621b5b2aa00f74f8e1e6c6629519bd6ca1dc3c11c84d0bedd510d078f111b6fa",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000895",
+      "decision": "ready",
+      "subject": "Calcium ion",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "second",
+      "canonical_fact": "Calcium ion is an example of a second messenger.",
+      "prompt_en": "Calcium ion is an example of what type of messenger?",
+      "evidence_quotes": [
+        "Calcium ion is an example of what kind of messenger?",
+        "second"
+      ],
+      "reason": "entity_to_class fits exactly: Calcium ion (entity) is a stable member of the signaling-molecule class 'second messenger.' The source_answer 'second' is the class qualifier already framed by the question; copied verbatim. Both model annotations concur on subject, answer, and canonical fact.",
+      "english": {
+        "prompt_en": "Calcium ion is an example of what type of messenger?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "second",
+        "canonical_fact": "Calcium ion is an example of a second messenger.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "Calcium ion",
+        "answer_aliases_en": [
+          "second"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2db7b73083f91ef2cfac93db14532bd4dd4deae8c73826ac3f718e01f90fa506",
+      "input_sha256": "97cf357acd8f587386c1e976ddd990655ba237662db7cc97afa6ca208a833697",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000894",
+        "historical:raw_sciq_000895"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "46ab35ec0b0d37c21ca6371084671f55e33d7005a3eb8f5fce5e4d8b2d2a0e95",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2283,
+      "first_chunk_seconds": 66.201,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2437,
+        "prompt_tokens": 1673,
+        "total_tokens": 4110,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1916,
+          "text_tokens": 521
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "72385453574d0a6143993fdd98af6f5fddc0ad78e482c129f3bdbc6ef30de56c",
+      "status": "completed",
+      "latency_seconds": 121.288
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000894",
+        "historical:raw_sciq_000895"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e3e0f503a65f61f0388112e4af4487b3ee45b91d27c0d9e69c8ff5705ac14e4a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.798
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000894",
+        "historical:raw_sciq_000895"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e3e0f503a65f61f0388112e4af4487b3ee45b91d27c0d9e69c8ff5705ac14e4a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 88.601
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000894",
+        "historical:raw_sciq_000895"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e3e0f503a65f61f0388112e4af4487b3ee45b91d27c0d9e69c8ff5705ac14e4a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.426
+    }
+  ],
+  "status": "failed"
+}

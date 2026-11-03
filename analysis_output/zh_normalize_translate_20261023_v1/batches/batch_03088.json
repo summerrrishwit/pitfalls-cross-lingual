@@ -1,0 +1,214 @@
+{
+  "input_sha256": "290d76a4b88b935d658786e5ede001c3c7ae03a7244240d2519fa0eb02eb6fc8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000629",
+      "decision": "ready",
+      "subject": "process by which plants make the simple sugar glucose from carbon dioxide and water",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "photosynthesis",
+      "canonical_fact": "The process by which plants make the simple sugar glucose from carbon dioxide and water is called photosynthesis.",
+      "prompt_en": "What is the name of the process by which plants make the simple sugar glucose from carbon dioxide and water?",
+      "evidence_quotes": [
+        "the process by which plants make the simple sugar glucose from carbon dioxide and water",
+        "photosynthesis"
+      ],
+      "reason": "The question supplies a defining description and asks for the conventional term. The catalog relation description_to_term (description -> term) fits exactly. The answer 'photosynthesis' is a literal substring of source_answer. No new relation needed.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "process by which plants make the simple sugar glucose from carbon dioxide and water",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the name of the process by which plants make the simple sugar glucose from carbon dioxide and water?",
+        "answer": "photosynthesis",
+        "canonical_fact": "The process by which plants make the simple sugar glucose from carbon dioxide and water is called photosynthesis.",
+        "answer_aliases_en": [
+          "photosynthesis"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "67d65e7ad44d0ffc879fb41be32776e2c7b84dafeb80ae58975650ae7858d771",
+      "input_sha256": "8cc4ac8a566e9a80a5aab69a4220e4c5d9d4c691ce3bf2fbc33a5990ee12f7cd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000630",
+      "decision": "ready",
+      "subject": "birds",
+      "relation_id": "organism_to_continent_count",
+      "relation_definition": "The number of continents on which the specified organism both lives and breeds; a quantity, not a list of locations.",
+      "direction": "organism -> count of continents",
+      "answer": "seven",
+      "canonical_fact": "Birds live and breed on seven continents.",
+      "prompt_en": "On how many of the continents do birds live and breed?",
+      "evidence_quotes": [
+        "On how many of the continents do birds live and breed?",
+        "seven"
+      ],
+      "reason": "No existing catalog relation captures a count of continents for an organism's range. organism_to_habitat is about the habitat itself, not a numeric count. Propose new snake_case relation organism_to_continent_count (organism -> count of continents) with explicit definition. Answer 'seven' is a literal substring of source_answer.",
+      "english": {
+        "relation_definition": "The number of continents on which the specified organism both lives and breeds; a quantity, not a list of locations.",
+        "direction": "organism -> count of continents",
+        "subject": "birds",
+        "relation_id": "organism_to_continent_count",
+        "prompt_en": "On how many of the continents do birds live and breed?",
+        "answer": "seven",
+        "canonical_fact": "Birds live and breed on seven continents.",
+        "answer_aliases_en": [
+          "seven"
+        ],
+        "relation_spec": {
+          "id": "organism_to_continent_count",
+          "definition": "The number of continents on which the specified organism both lives and breeds; a quantity, not a list of locations.",
+          "direction": "organism -> count of continents"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "435e2b09c366b416a83a6b3b83473e192503f6c44a2c84e3ec965a50ed5c92a4",
+      "input_sha256": "6f4924995b761462b781520dc0cee247ece9d6d4d44727f49d79a2866b752dfa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000629",
+      "input_sha256": "8cc4ac8a566e9a80a5aab69a4220e4c5d9d4c691ce3bf2fbc33a5990ee12f7cd",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "process by which plants make the simple sugar glucose from carbon dioxide and water",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the name of the process by which plants make the simple sugar glucose from carbon dioxide and water?",
+        "answer": "photosynthesis",
+        "canonical_fact": "The process by which plants make the simple sugar glucose from carbon dioxide and water is called photosynthesis.",
+        "answer_aliases_en": [
+          "photosynthesis"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "67d65e7ad44d0ffc879fb41be32776e2c7b84dafeb80ae58975650ae7858d771",
+      "translation": {
+        "record_id": "historical:raw_sciq_000629",
+        "subject_zh": "植物利用二氧化碳和水制造简单糖类葡萄糖的过程",
+        "prompt_zh": "植物利用二氧化碳和水制造简单糖类葡萄糖的过程叫什么名称？",
+        "canonical_fact_zh": "植物利用二氧化碳和水制造简单糖类葡萄糖的过程叫做光合作用。",
+        "answer_zh": "光合作用",
+        "answer_aliases_zh": [
+          "光合作用"
+        ]
+      },
+      "translation_sha256": "b6fe2bc87e9ad167179574b695df501b2fb949ebbf18d9572fc8e0febf5ccfcf"
+    },
+    {
+      "record_id": "historical:raw_sciq_000630",
+      "input_sha256": "6f4924995b761462b781520dc0cee247ece9d6d4d44727f49d79a2866b752dfa",
+      "english": {
+        "relation_definition": "The number of continents on which the specified organism both lives and breeds; a quantity, not a list of locations.",
+        "direction": "organism -> count of continents",
+        "subject": "birds",
+        "relation_id": "organism_to_continent_count",
+        "prompt_en": "On how many of the continents do birds live and breed?",
+        "answer": "seven",
+        "canonical_fact": "Birds live and breed on seven continents.",
+        "answer_aliases_en": [
+          "seven"
+        ],
+        "relation_spec": {
+          "id": "organism_to_continent_count",
+          "definition": "The number of continents on which the specified organism both lives and breeds; a quantity, not a list of locations.",
+          "direction": "organism -> count of continents"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "435e2b09c366b416a83a6b3b83473e192503f6c44a2c84e3ec965a50ed5c92a4",
+      "translation": {
+        "record_id": "historical:raw_sciq_000630",
+        "subject_zh": "鸟类",
+        "prompt_zh": "鸟类在几个大洲上既生活又繁殖？",
+        "canonical_fact_zh": "鸟类在七大洲上生活并繁殖。",
+        "answer_zh": "七",
+        "answer_aliases_zh": [
+          "七"
+        ]
+      },
+      "translation_sha256": "03938527cc5eeee402667a9ed88b9aa1efe0a6dc2e74fc1750062ce25a37ac54"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000629",
+        "historical:raw_sciq_000630"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fddfcd3ce814c7093ed4b6715e53114fd4509d65fa5466bc44486bc3f43da1de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1670,
+      "first_chunk_seconds": 2.008,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1740,
+        "prompt_tokens": 1716,
+        "total_tokens": 3456,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1225,
+          "text_tokens": 515
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d65abf4566ea66cff57392665105adfe9e1c3c9626092b2c135322089fdca226",
+      "status": "completed",
+      "latency_seconds": 57.674
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000629",
+        "historical:raw_sciq_000630"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "010949dae863b7bf51cc0694bc988699c6412b2f20035f41700f236086f242a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1087,
+      "first_chunk_seconds": 1.671,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1225,
+        "prompt_tokens": 854,
+        "total_tokens": 2079,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1004,
+          "text_tokens": 221
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "052c7f1628b062d95062015dee5cea41995b6b243534a536ea9ef53612a2b769",
+      "status": "completed",
+      "latency_seconds": 98.859
+    }
+  ],
+  "status": "completed"
+}

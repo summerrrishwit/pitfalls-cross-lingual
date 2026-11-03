@@ -1,0 +1,258 @@
+{
+  "input_sha256": "f64dc1bfba020bc5e8afac60f7d0f52f41ebd56aaebd6362a17c258649d2c9c0",
+  "normalized": [
+    {
+      "record_id": "public:pbf_143642e86c6cffd4c176",
+      "decision": "ready",
+      "subject": "clergy",
+      "relation_id": "group_advice_timing",
+      "relation_definition": "The time period or life stage at which a specified group advises or encourages a particular action; retain qualifiers and scope.",
+      "direction": "clergy -> early in life",
+      "answer": "early in life",
+      "canonical_fact": "Clergy encourage capable people to make wills early in life.",
+      "prompt_en": "When do clergy encourage capable people to make wills?",
+      "evidence_quotes": [
+        "When do clergy encourage capable people to make wills?",
+        "To do so early in life."
+      ],
+      "reason": "The source Q/A clearly states the timing at which clergy encourage will-making. No existing catalog relation covers advisory-timing for a group, so a new relation 'group_advice_timing' is proposed with direction 'group -> timing of specific advice'.",
+      "english": {
+        "prompt_en": "When do clergy encourage capable people to make wills?",
+        "relation_definition": "The time period or life stage at which a specified group advises or encourages a particular action; retain qualifiers and scope.",
+        "answer": "early in life",
+        "canonical_fact": "Clergy encourage capable people to make wills early in life.",
+        "direction": "clergy -> early in life",
+        "relation_id": "group_advice_timing",
+        "subject": "clergy",
+        "answer_aliases_en": [
+          "early in life",
+          "To do so early in life."
+        ],
+        "relation_spec": {
+          "id": "group_advice_timing",
+          "definition": "The time period or life stage at which a specified group advises or encourages a particular action; retain qualifiers and scope.",
+          "direction": "clergy -> early in life"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "575628472e8577ad7877eb33f47c674b13edf73197421bef318f4a95410afbcc",
+      "input_sha256": "e9b414d547250645c87c3905f724e3cb67e2257cceabeaea946e6ae5954ac81b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_145f38d41c68a678b761",
+      "decision": "ready",
+      "subject": "corporate communications for publicly traded companies before and during the period that new securities are being registered",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Securities Act of 1933",
+      "canonical_fact": "The Securities Act of 1933 restricts corporate communications for publicly traded companies before and during the period that new securities are being registered.",
+      "prompt_en": "Which law restricts corporate communications for publicly traded companies before and during the period that new securities are being registered?",
+      "evidence_quotes": [
+        "Which law restricts corporate communications for publicly traded companies before and during the period that new securities are being registered?",
+        "Securities Act of 1933"
+      ],
+      "reason": "The source Q/A identifies the Securities Act of 1933 as the unique law (entity) satisfying the describing restriction. The description_to_entity relation fits exactly: an explicitly qualified identifying description points to a unique entity.",
+      "english": {
+        "prompt_en": "Which law restricts corporate communications for publicly traded companies before and during the period that new securities are being registered?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Securities Act of 1933",
+        "canonical_fact": "The Securities Act of 1933 restricts corporate communications for publicly traded companies before and during the period that new securities are being registered.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "corporate communications for publicly traded companies before and during the period that new securities are being registered",
+        "answer_aliases_en": [
+          "Securities Act of 1933"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "af47c820298e76a23a64e8b477eb76fa6c872a6c0336838695204a7809bb4b2c",
+      "input_sha256": "dc7abb5b193a78ab2670183c0566c26a3c3b62e7d0c50f52df02309c2c6718e6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4208b4f7c49531f531782f4dcd815edf4027c3bee5bfc56401ef3d5895a8b7fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2961,
+        "prompt_tokens": 1716,
+        "total_tokens": 4677,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2360,
+          "text_tokens": 601
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf5d01e63251c992abead72a7fc582a804a731c3c6698ea4effbca62dfd16cd1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 62.631,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "88e4a53f570e9b4105a8b2a0428a99b16e1d12f4877d7bbd6c5f54ab03f3303f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 42.256
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "88e4a53f570e9b4105a8b2a0428a99b16e1d12f4877d7bbd6c5f54ab03f3303f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 29.292
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4208b4f7c49531f531782f4dcd815edf4027c3bee5bfc56401ef3d5895a8b7fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2891,
+      "first_chunk_seconds": 6.179,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3041,
+        "prompt_tokens": 1716,
+        "total_tokens": 4757,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2489,
+          "text_tokens": 552
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9071cedcf131c5fe226087d68549ae0541af7bb8ef5c5566b367dba147011793",
+      "status": "completed",
+      "latency_seconds": 44.709
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9ebb7de311738e0fb32e165420667efaa759d3fb47bb06fe594e07ee0070be1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 22.411,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9ebb7de311738e0fb32e165420667efaa759d3fb47bb06fe594e07ee0070be1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 108.317,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_143642e86c6cffd4c176",
+        "public:pbf_145f38d41c68a678b761"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9ebb7de311738e0fb32e165420667efaa759d3fb47bb06fe594e07ee0070be1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 55.987,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00667.json",
+      "sha256": "75b7f6437ab6aafbb566b06e4b0bc829be4a3c94e55fdf025d92eda22f27d337",
+      "previous_status": "failed"
+    }
+  ]
+}

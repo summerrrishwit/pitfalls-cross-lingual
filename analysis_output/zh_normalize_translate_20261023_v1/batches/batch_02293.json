@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e6109ee18634c98ad2d0d831777a1777ca2e7643f091c847448b68b8c6c99347",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001100",
+      "decision": "ready",
+      "subject": "polio vaccine",
+      "relation_id": "product_to_developer",
+      "relation_definition": "Named individual or team credited for the development of a specified scientific or technological product; retain credit attribution qualifiers.",
+      "direction": "specified product/invention -> credited developer",
+      "answer": "Jonas Salk",
+      "canonical_fact": "Jonas Salk is credited for the development of the polio vaccine.",
+      "prompt_en": "Which scientist is credited for the development of the polio vaccine?",
+      "evidence_quotes": [
+        "credited for the development of the polio vaccine",
+        "Jonas Salk"
+      ],
+      "reason": "Both model annotations agree on extraction. Source question and answer clearly support a developer-credit relationship for the polio vaccine. No existing catalog relation fits exactly (work_to_author is scoped to written works), so a new precise relation product_to_developer is proposed.",
+      "english": {
+        "direction": "specified product/invention -> credited developer",
+        "relation_id": "product_to_developer",
+        "answer": "Jonas Salk",
+        "canonical_fact": "Jonas Salk is credited for the development of the polio vaccine.",
+        "subject": "polio vaccine",
+        "prompt_en": "Which scientist is credited for the development of the polio vaccine?",
+        "relation_definition": "Named individual or team credited for the development of a specified scientific or technological product; retain credit attribution qualifiers.",
+        "answer_aliases_en": [
+          "Jonas Salk"
+        ],
+        "relation_spec": {
+          "id": "product_to_developer",
+          "definition": "Named individual or team credited for the development of a specified scientific or technological product; retain credit attribution qualifiers.",
+          "direction": "specified product/invention -> credited developer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a2e09f7ff136f6d342f54878d90c13ceceb3be5ae098f5e3369e001e641e0ae9",
+      "input_sha256": "6e3f448899f0e8e577625bf04f006a870aca388ace59de30e85ada36f1cb7292",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001102",
+      "decision": "ready",
+      "subject": "outer membrane of the chloroplast",
+      "relation_id": "biological_structure_to_theoretical_origin",
+      "relation_definition": "The source structure from which a specified biological structure is theorized to have originated, as stated by a named theory; retain the theoretical qualifier.",
+      "direction": "specified biological structure -> origin source structure per named theory",
+      "answer": "the cell membrane of an eukaryotic host cell",
+      "canonical_fact": "According to the endosymbiotic theory, the outer membrane of the chloroplast originated from the cell membrane of an eukaryotic host cell.",
+      "prompt_en": "According to the endosymbiotic theory, from which structure did the outer membrane of the chloroplast originate?",
+      "evidence_quotes": [
+        "the outer membrane of the chloroplast originated from",
+        "the cell membrane of an eukaryotic host cell"
+      ],
+      "reason": "Both model annotations agree on extraction. The source explicitly ties the origin to the endosymbiotic theory. No existing catalog relation covers theoretical biogenetic origin of a structure (entity_to_containing_location explicitly excludes origin), so a new precise relation biological_structure_to_theoretical_origin is proposed.",
+      "english": {
+        "direction": "specified biological structure -> origin source structure per named theory",
+        "relation_id": "biological_structure_to_theoretical_origin",
+        "answer": "the cell membrane of an eukaryotic host cell",
+        "canonical_fact": "According to the endosymbiotic theory, the outer membrane of the chloroplast originated from the cell membrane of an eukaryotic host cell.",
+        "subject": "outer membrane of the chloroplast",
+        "prompt_en": "According to the endosymbiotic theory, from which structure did the outer membrane of the chloroplast originate?",
+        "relation_definition": "The source structure from which a specified biological structure is theorized to have originated, as stated by a named theory; retain the theoretical qualifier.",
+        "answer_aliases_en": [
+          "the cell membrane of an eukaryotic host cell"
+        ],
+        "relation_spec": {
+          "id": "biological_structure_to_theoretical_origin",
+          "definition": "The source structure from which a specified biological structure is theorized to have originated, as stated by a named theory; retain the theoretical qualifier.",
+          "direction": "specified biological structure -> origin source structure per named theory"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c880aadc50371132474a5a6f5c5273d32a14b3f2109600f12abe67254313bb7c",
+      "input_sha256": "79dfae1d0e09e84ce3acc72f8794ce7dd4354e80f08b59a84443a35217654a3e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001100",
+      "input_sha256": "6e3f448899f0e8e577625bf04f006a870aca388ace59de30e85ada36f1cb7292",
+      "english": {
+        "direction": "specified product/invention -> credited developer",
+        "relation_id": "product_to_developer",
+        "answer": "Jonas Salk",
+        "canonical_fact": "Jonas Salk is credited for the development of the polio vaccine.",
+        "subject": "polio vaccine",
+        "prompt_en": "Which scientist is credited for the development of the polio vaccine?",
+        "relation_definition": "Named individual or team credited for the development of a specified scientific or technological product; retain credit attribution qualifiers.",
+        "answer_aliases_en": [
+          "Jonas Salk"
+        ],
+        "relation_spec": {
+          "id": "product_to_developer",
+          "definition": "Named individual or team credited for the development of a specified scientific or technological product; retain credit attribution qualifiers.",
+          "direction": "specified product/invention -> credited developer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a2e09f7ff136f6d342f54878d90c13ceceb3be5ae098f5e3369e001e641e0ae9",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001100",
+        "subject_zh": "脊髓灰质炎疫苗",
+        "prompt_zh": "哪位科学家因开发脊髓灰质炎疫苗而获得认可？",
+        "canonical_fact_zh": "乔纳斯·索克因开发脊髓灰质炎疫苗而获得认可。",
+        "answer_zh": "乔纳斯·索克",
+        "answer_aliases_zh": [
+          "乔纳斯·索克"
+        ]
+      },
+      "translation_sha256": "e773a206ec82f56d0904db0d5c4899d506382c03e4d4d37c4e2b751451f89404"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001102",
+      "input_sha256": "79dfae1d0e09e84ce3acc72f8794ce7dd4354e80f08b59a84443a35217654a3e",
+      "english": {
+        "direction": "specified biological structure -> origin source structure per named theory",
+        "relation_id": "biological_structure_to_theoretical_origin",
+        "answer": "the cell membrane of an eukaryotic host cell",
+        "canonical_fact": "According to the endosymbiotic theory, the outer membrane of the chloroplast originated from the cell membrane of an eukaryotic host cell.",
+        "subject": "outer membrane of the chloroplast",
+        "prompt_en": "According to the endosymbiotic theory, from which structure did the outer membrane of the chloroplast originate?",
+        "relation_definition": "The source structure from which a specified biological structure is theorized to have originated, as stated by a named theory; retain the theoretical qualifier.",
+        "answer_aliases_en": [
+          "the cell membrane of an eukaryotic host cell"
+        ],
+        "relation_spec": {
+          "id": "biological_structure_to_theoretical_origin",
+          "definition": "The source structure from which a specified biological structure is theorized to have originated, as stated by a named theory; retain the theoretical qualifier.",
+          "direction": "specified biological structure -> origin source structure per named theory"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c880aadc50371132474a5a6f5c5273d32a14b3f2109600f12abe67254313bb7c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001102",
+        "subject_zh": "叶绿体的外膜",
+        "prompt_zh": "根据内共生理论，叶绿体的外膜起源于哪种结构？",
+        "canonical_fact_zh": "根据内共生理论，叶绿体的外膜起源于真核宿主细胞的细胞膜。",
+        "answer_zh": "真核宿主细胞的细胞膜",
+        "answer_aliases_zh": [
+          "真核宿主细胞的细胞膜"
+        ]
+      },
+      "translation_sha256": "97be4e6e7ed74e69dbeae1730cf1d4900f24e2e374014c2e34171dd7464732d2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001100",
+        "historical:raw_ai2_arc_easy_001102"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7347d750d7cbe27a61a629dda4ecc4f70e365784ec5a76a9cffe5abc8e2c42ab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2421,
+      "first_chunk_seconds": 40.499,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2481,
+        "prompt_tokens": 1812,
+        "total_tokens": 4293,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1920,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5ce38ab968e26038c1119d663578361a349f76258da97090159c8282ddabcf1f",
+      "status": "completed",
+      "latency_seconds": 84.112
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001100",
+        "historical:raw_ai2_arc_easy_001102"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "46402ee1900e9155e7b3dd6a7f9206fa5218589e27f6885982a86a4b4af3925b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1354,
+      "first_chunk_seconds": 65.948,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1411,
+        "prompt_tokens": 927,
+        "total_tokens": 2338,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1156,
+          "text_tokens": 255
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2bdfc6e2057411a856d91e7930d0be2d232c048d2f9570fedd12faa39c509138",
+      "status": "completed",
+      "latency_seconds": 85.067
+    }
+  ],
+  "status": "completed"
+}

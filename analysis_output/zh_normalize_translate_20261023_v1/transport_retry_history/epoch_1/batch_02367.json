@@ -1,0 +1,171 @@
+{
+  "input_sha256": "2e7806bf8bd8b1041005f65d65eca2f2b2974b6957e7842f109bb1825b11f7e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001514",
+      "decision": "ready",
+      "subject": "plants",
+      "relation_id": "organism_to_process_product",
+      "relation_definition": "Product of a specified biological or chemical process performed by an organism; retains the process context in which the product is generated.",
+      "direction": "organism -> process product",
+      "answer": "sugar",
+      "canonical_fact": "Plants produce sugar during photosynthesis.",
+      "prompt_en": "Which substance do plants produce during photosynthesis?",
+      "evidence_quotes": [
+        "Which substance do plants produce during photosynthesis?",
+        "sugar"
+      ],
+      "reason": "Source directly states that plants produce sugar during photosynthesis. No existing catalog relation fits a biological process output; proposing new relation organism_to_process_product with explicit process context.",
+      "english": {
+        "direction": "organism -> process product",
+        "relation_id": "organism_to_process_product",
+        "answer": "sugar",
+        "canonical_fact": "Plants produce sugar during photosynthesis.",
+        "subject": "plants",
+        "prompt_en": "Which substance do plants produce during photosynthesis?",
+        "relation_definition": "Product of a specified biological or chemical process performed by an organism; retains the process context in which the product is generated.",
+        "answer_aliases_en": [
+          "sugar"
+        ],
+        "relation_spec": {
+          "id": "organism_to_process_product",
+          "definition": "Product of a specified biological or chemical process performed by an organism; retains the process context in which the product is generated.",
+          "direction": "organism -> process product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1fee13534407783d885f855bd0f3ef9f1fbc2994f297b61b7de0385d24295523",
+      "input_sha256": "fea95d0a21235c082b932eb1b63a91a77b571b9b92d67b02368ae92f7ee208c8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001515",
+      "decision": "ready",
+      "subject": "improvements in deep-sea drilling technology",
+      "relation_id": "technology_to_available_resource",
+      "relation_definition": "A specified technological advancement that increases the availability or extractability of a particular resource; causal direction from technology to resource.",
+      "direction": "technology -> resource",
+      "answer": "crude oil",
+      "canonical_fact": "Improvements in deep-sea drilling technology increase the availability of crude oil.",
+      "prompt_en": "Which resource is more available due to improvements in deep-sea drilling technology?",
+      "evidence_quotes": [
+        "Which resource is more available due to improvements in deep-sea drilling technology?",
+        "crude oil"
+      ],
+      "reason": "Source directly states that crude oil is the resource made more available by deep-sea drilling technology improvements. No existing catalog relation captures this technology-to-resource-availability causal link; proposing new relation technology_to_available_resource.",
+      "english": {
+        "direction": "technology -> resource",
+        "relation_id": "technology_to_available_resource",
+        "answer": "crude oil",
+        "canonical_fact": "Improvements in deep-sea drilling technology increase the availability of crude oil.",
+        "subject": "improvements in deep-sea drilling technology",
+        "prompt_en": "Which resource is more available due to improvements in deep-sea drilling technology?",
+        "relation_definition": "A specified technological advancement that increases the availability or extractability of a particular resource; causal direction from technology to resource.",
+        "answer_aliases_en": [
+          "crude oil"
+        ],
+        "relation_spec": {
+          "id": "technology_to_available_resource",
+          "definition": "A specified technological advancement that increases the availability or extractability of a particular resource; causal direction from technology to resource.",
+          "direction": "technology -> resource"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b78741fba364cd61f6de37356da04e245ff1ce7a9e03bbc9ec70d3a05e2dcd2d",
+      "input_sha256": "5fce30c0f8407cfbce7eeaf6b865d90f08162f827e0c0381a25cf6433697aef4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001514",
+        "historical:raw_ai2_arc_easy_001515"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "915941a5cd884f7b54f7b6ed601c3c84ea20e71900e8e46cc53737219bd67917",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 34.044
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001514",
+        "historical:raw_ai2_arc_easy_001515"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "915941a5cd884f7b54f7b6ed601c3c84ea20e71900e8e46cc53737219bd67917",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2289,
+      "first_chunk_seconds": 28.439,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2400,
+        "prompt_tokens": 1675,
+        "total_tokens": 4075,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1935,
+          "text_tokens": 465
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ac12a38464efd2c6cc186f2daf3f5be59cfa65d4e9aa6fa56f42b57f12137b30",
+      "status": "completed",
+      "latency_seconds": 68.165
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001514",
+        "historical:raw_ai2_arc_easy_001515"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d18556222a8bf2a6e373578473f04fa8c92f8a37592c28d30f39fd5d4b35ca09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.093
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001514",
+        "historical:raw_ai2_arc_easy_001515"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d18556222a8bf2a6e373578473f04fa8c92f8a37592c28d30f39fd5d4b35ca09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.233
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001514",
+        "historical:raw_ai2_arc_easy_001515"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d18556222a8bf2a6e373578473f04fa8c92f8a37592c28d30f39fd5d4b35ca09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.958
+    }
+  ],
+  "status": "failed"
+}

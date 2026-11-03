@@ -1,0 +1,71 @@
+{
+  "input_sha256": "3a1137c9ca2081f1f80a6842a9aacb957a0ba921478d659ebdc172e27477fb5d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009033",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures 'typical activity of a role/person.' entity_to_class requires stable taxonomy membership, not a stereotypical action. term_to_definition would require a full definitional equivalence, not a single activity. Proposing a new relation (e.g., entity_to_typical_activity) would be overly broad and poorly bounded. The source answer 'ride horses' is a commonsense stereotype, not a precise factual claim, so it is insufficiently supported for a reusable normalized fact.",
+      "input_sha256": "2a587e8e6cb43d017415f306c808dcc4854d5f95ba47d47784e6ba212c0700c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009045",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question asks for a category that news/reality shows are NOT works of (answer: fiction). No catalog relation encodes negative class membership ('entity is NOT in class X'). entity_to_class is defined for positive, stable class membership. Using it for exclusion would invert the intended direction and definition. No listed relation fits exactly; forcing one would violate the 'do not force a broad category' instruction. Deferring without proposing a new relation.",
+      "input_sha256": "fdc3084c1af9df32f7d72e1b67a5ec24f3895b8b79149e2fa8710dd3afb5757d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009033",
+        "historical:raw_commonsense_qa_009045"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "deaf3a232bf711e84b82bb6bbd067d619761e8eb4bffd9cc0edd9168fb96c4e3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1436,
+      "first_chunk_seconds": 4.426,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1532,
+        "prompt_tokens": 1581,
+        "total_tokens": 3113,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1215,
+          "text_tokens": 317
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ac2bb1d3f3516b9370135190429456137426fde4f97979482cb33cf06c1014c6",
+      "status": "completed",
+      "latency_seconds": 28.233
+    }
+  ],
+  "status": "completed"
+}

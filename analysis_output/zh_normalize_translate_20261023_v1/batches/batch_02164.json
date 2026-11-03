@@ -1,0 +1,210 @@
+{
+  "input_sha256": "e0040ba4c98586f5fc7ac393e2ba898d5813ddf895ef674eeecde83a13b3e010",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000408",
+      "decision": "ready",
+      "subject": "convection currents in the mantle",
+      "relation_id": "process_to_effect_location",
+      "relation_definition": "The specific location where a stated geological process produces its named tectonic effect; direction: process -> effect location.",
+      "direction": "geological process -> location of its stated effect",
+      "answer": "mid-ocean ridges",
+      "canonical_fact": "Convection currents in the mantle cause tectonic plates to diverge at mid-ocean ridges.",
+      "prompt_en": "Convection currents in the mantle are thought to be the driving force behind tectonic movement. At which location do the convection currents cause the plates to diverge?",
+      "evidence_quotes": [
+        "Convection currents in the mantle are thought to be the driving force behind tectonic movement.",
+        "At which location do the convection currents cause the plates to diverge?",
+        "mid-ocean ridges"
+      ],
+      "reason": "No existing catalog relation fits a process-to-location mapping for a geological effect; entity_to_containing_location explicitly excludes process locations. Proposed new relation process_to_effect_location with precise definition. Answer 'mid-ocean ridges' is a literal substring of source_answer. The source question contains the qualifier 'are thought to be' indicating this is a widely accepted model, not absolute fact; canonical_fact preserves the causal claim without over-strengthening.",
+      "english": {
+        "prompt_en": "Convection currents in the mantle are thought to be the driving force behind tectonic movement. At which location do the convection currents cause the plates to diverge?",
+        "relation_definition": "The specific location where a stated geological process produces its named tectonic effect; direction: process -> effect location.",
+        "answer": "mid-ocean ridges",
+        "canonical_fact": "Convection currents in the mantle cause tectonic plates to diverge at mid-ocean ridges.",
+        "direction": "geological process -> location of its stated effect",
+        "relation_id": "process_to_effect_location",
+        "subject": "convection currents in the mantle",
+        "answer_aliases_en": [
+          "mid-ocean ridges"
+        ],
+        "relation_spec": {
+          "id": "process_to_effect_location",
+          "definition": "The specific location where a stated geological process produces its named tectonic effect; direction: process -> effect location.",
+          "direction": "geological process -> location of its stated effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe07d44b679ec5eba30fc09d518c2708bd56b6add2ef5737467709ea21840009",
+      "input_sha256": "417d7622264d790452f3096ca6e7a5dd7265c55f31698c7823ccc717eb187f6e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000410",
+      "decision": "ready",
+      "subject": "intensely bright object formed when a star explodes",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "supernova",
+      "canonical_fact": "The intensely bright object formed when a star explodes is called a supernova.",
+      "prompt_en": "When a star explodes, an intensely bright object is formed. What is the name of this object?",
+      "evidence_quotes": [
+        "When a star explodes, an intensely bright object is formed.",
+        "What is the name of this object?",
+        "supernova"
+      ],
+      "reason": "The description 'intensely bright object formed when a star explodes' uniquely identifies the conventional astronomical term 'supernova', fitting description_to_term exactly. Answer 'supernova' is a literal substring of source_answer. Both model annotations agree on extraction; no conflict with source.",
+      "english": {
+        "prompt_en": "When a star explodes, an intensely bright object is formed. What is the name of this object?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "supernova",
+        "canonical_fact": "The intensely bright object formed when a star explodes is called a supernova.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "intensely bright object formed when a star explodes",
+        "answer_aliases_en": [
+          "supernova"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b656a8d91e948096b2d3bc47c127585ee0fb0f94574b160ee5b6501c21a22f89",
+      "input_sha256": "cde7c940b52f843a6ab991723c55c36286e79c48b54cdbc00905c837aa02d022",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b4b1d2311fafec43eb3edb05237fe2ed32499cf4815b85f81da5de9c0ecc7de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.462
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6b4b1d2311fafec43eb3edb05237fe2ed32499cf4815b85f81da5de9c0ecc7de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.293
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6b4b1d2311fafec43eb3edb05237fe2ed32499cf4815b85f81da5de9c0ecc7de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.448
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b4b1d2311fafec43eb3edb05237fe2ed32499cf4815b85f81da5de9c0ecc7de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2315,
+      "first_chunk_seconds": 16.145,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2341,
+        "prompt_tokens": 1761,
+        "total_tokens": 4102,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1720,
+          "text_tokens": 621
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2a69d9869cb71d967bb264271c4ee7f68a496260396ccd5a8e879d58e7c558b7",
+      "status": "completed",
+      "latency_seconds": 41.88
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dbceef4955945dec5632a1aa8897d3cd1678d5e76c2fbcb4512761aa3d037aa6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.811
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dbceef4955945dec5632a1aa8897d3cd1678d5e76c2fbcb4512761aa3d037aa6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.791
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000408",
+        "historical:raw_ai2_arc_easy_000410"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "dbceef4955945dec5632a1aa8897d3cd1678d5e76c2fbcb4512761aa3d037aa6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.009
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02164.json",
+      "sha256": "8ca4291f85c362914b650195caa6e9f3b74d58de5eb1a47558683a8a990a649a",
+      "previous_status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "input_sha256": "94f14c825baca9d526e817fb5864871718f3e959860d00d10f8d09dde7ee5f61",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ad69399b629545b45b8b",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Existing answer 'increased energy' conflicts with source_answer 'produce increased energy'. The old extraction split 'produce' into the relation ('cannot produce') but the source_answer explicitly includes 'produce' as part of the answer. Per rule 'if it conflicts with source, defer', this record must be deferred rather than modifying the existing answer.",
+      "input_sha256": "44bd3b297d4004b1faf860e46870df53cb8d33423c6e5c953761b6cf9fad2e53",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ad6b150c80216c720ba2",
+      "decision": "ready",
+      "subject": "Fatihah",
+      "relation_id": "ritual_practice_to_recitation_count_per_day",
+      "relation_definition": "The number of times a specified religious or ritual practice is recited per day, preserving stated qualifiers (e.g., 'at least').",
+      "direction": "specified ritual practice -> recitation count per day (with qualifier)",
+      "answer": "At least 17",
+      "canonical_fact": "The Fatihah is recited at least 17 times a day.",
+      "prompt_en": "How many times a day is the Fatihah recited?",
+      "evidence_quotes": [
+        "How many times a day is the Fatihah recited?",
+        "At least 17"
+      ],
+      "reason": "Existing answer 'At least 17' matches source_answer exactly. No catalog relation fits a daily recitation frequency for a specific ritual prayer, so a precise new snake_case relation is proposed. Subject, answer, and canonical_fact are all preserved from the source. Prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "At least 17",
+        "relation_id": "ritual_practice_to_recitation_count_per_day",
+        "prompt_en": "How many times a day is the Fatihah recited?",
+        "direction": "specified ritual practice -> recitation count per day (with qualifier)",
+        "subject": "Fatihah",
+        "canonical_fact": "The Fatihah is recited at least 17 times a day.",
+        "relation_definition": "The number of times a specified religious or ritual practice is recited per day, preserving stated qualifiers (e.g., 'at least').",
+        "answer_aliases_en": [
+          "At least 17"
+        ],
+        "relation_spec": {
+          "id": "ritual_practice_to_recitation_count_per_day",
+          "definition": "The number of times a specified religious or ritual practice is recited per day, preserving stated qualifiers (e.g., 'at least').",
+          "direction": "specified ritual practice -> recitation count per day (with qualifier)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9edb5f7bd227b74f45123282610c3b329d77fe39eb7ec126896f2a79b93d41b5",
+      "input_sha256": "9a31c0050ecd767555fea663a4b0ff16e8340cbfad7a9fb243098b0e4299cde3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ad6b150c80216c720ba2",
+      "input_sha256": "9a31c0050ecd767555fea663a4b0ff16e8340cbfad7a9fb243098b0e4299cde3",
+      "english": {
+        "answer": "At least 17",
+        "relation_id": "ritual_practice_to_recitation_count_per_day",
+        "prompt_en": "How many times a day is the Fatihah recited?",
+        "direction": "specified ritual practice -> recitation count per day (with qualifier)",
+        "subject": "Fatihah",
+        "canonical_fact": "The Fatihah is recited at least 17 times a day.",
+        "relation_definition": "The number of times a specified religious or ritual practice is recited per day, preserving stated qualifiers (e.g., 'at least').",
+        "answer_aliases_en": [
+          "At least 17"
+        ],
+        "relation_spec": {
+          "id": "ritual_practice_to_recitation_count_per_day",
+          "definition": "The number of times a specified religious or ritual practice is recited per day, preserving stated qualifiers (e.g., 'at least').",
+          "direction": "specified ritual practice -> recitation count per day (with qualifier)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9edb5f7bd227b74f45123282610c3b329d77fe39eb7ec126896f2a79b93d41b5",
+      "translation": {
+        "record_id": "public:pbf_ad6b150c80216c720ba2",
+        "subject_zh": "法提哈",
+        "prompt_zh": "法提哈每天诵读几次？",
+        "canonical_fact_zh": "法提哈每天至少诵读17次。",
+        "answer_zh": "至少17",
+        "answer_aliases_zh": [
+          "至少17"
+        ]
+      },
+      "translation_sha256": "dc4f8f7b60c1426d4452dbfd1f4e88bfadbdf2457e082b67d7f11fc835d7c8b7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ad69399b629545b45b8b",
+        "public:pbf_ad6b150c80216c720ba2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f916ff9062e8180295e63c520b451feaf42e3026822644af2024d161bc58a76c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3113,
+      "first_chunk_seconds": 29.242,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3110,
+        "prompt_tokens": 1618,
+        "total_tokens": 4728,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2544,
+          "text_tokens": 566
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "56301e55702d1eb86f976a414dce115b355a116f5eb0dc04e25538b17550d995",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 54.005,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ad69399b629545b45b8b",
+        "public:pbf_ad6b150c80216c720ba2"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4afeb4f933e3e629e08b8d75ad6e770edff7fc98b81ca2102a3868b9ba38076a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2368,
+      "first_chunk_seconds": 32.959,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2366,
+        "prompt_tokens": 1635,
+        "total_tokens": 4001,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1887,
+          "text_tokens": 479
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0bc64c210d1a94f65c7f2b42c239a0a503f58c0eaba06212115191e6c58b45e3",
+      "status": "completed",
+      "latency_seconds": 52.001
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ad6b150c80216c720ba2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "895f624427750bcc2b2907a6cbe37b94d80937ec66bfa4f9325405ef35da0494",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1304,
+      "first_chunk_seconds": 31.867,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1305,
+        "prompt_tokens": 577,
+        "total_tokens": 1882,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1184,
+          "text_tokens": 121
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0807167ed8c4a7394501cb349f547b8c0be2ecdb155b8e6cfa020bd88f03208b",
+      "status": "completed",
+      "latency_seconds": 42.243
+    }
+  ],
+  "status": "completed"
+}

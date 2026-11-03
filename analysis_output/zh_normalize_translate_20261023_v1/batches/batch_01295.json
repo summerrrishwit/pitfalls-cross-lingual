@@ -1,0 +1,217 @@
+{
+  "input_sha256": "1cab85979f20151f65cf9a2172820e08d68fb42d676f3cfe8c58a6f4b213610c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_80da8a6a004361a82b58",
+      "decision": "ready",
+      "subject": "cyanosis",
+      "relation_id": "condition_to_clinical_threshold",
+      "relation_definition": "A specific physiological measurement threshold at which a named medical condition is typically present or indicated; retains scope qualifiers such as 'or below' or 'or above'.",
+      "direction": "medical condition -> associated clinical threshold value",
+      "answer": "80% or below",
+      "canonical_fact": "Cyanosis is associated with an oxygen saturation level of 80% or below.",
+      "prompt_en": "What oxygen saturation level is typically associated with cyanosis?",
+      "evidence_quotes": [
+        "what might their oxygen saturation level be",
+        "80% or below."
+      ],
+      "reason": "No catalog relation captures a named medical condition linked to a specific physiological threshold value. Proposed 'condition_to_clinical_threshold' as a precise, bounded relation. The source answer '80% or below' is copied verbatim with its qualifier. Direction goes from the condition (cyanosis) to the threshold value, matching the question structure.",
+      "english": {
+        "answer": "80% or below",
+        "relation_id": "condition_to_clinical_threshold",
+        "prompt_en": "What oxygen saturation level is typically associated with cyanosis?",
+        "direction": "medical condition -> associated clinical threshold value",
+        "subject": "cyanosis",
+        "canonical_fact": "Cyanosis is associated with an oxygen saturation level of 80% or below.",
+        "relation_definition": "A specific physiological measurement threshold at which a named medical condition is typically present or indicated; retains scope qualifiers such as 'or below' or 'or above'.",
+        "answer_aliases_en": [
+          "80% or below",
+          "80% or below."
+        ],
+        "relation_spec": {
+          "id": "condition_to_clinical_threshold",
+          "definition": "A specific physiological measurement threshold at which a named medical condition is typically present or indicated; retains scope qualifiers such as 'or below' or 'or above'.",
+          "direction": "medical condition -> associated clinical threshold value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2697515b6f802948fb0cf249b979a7827d97386919de5347cfd0d20a9dc5d1c9",
+      "input_sha256": "4a4e2f50109a0d2c8db2fef62cea854a0359009ce1a9e40770fa23069800c126",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_80f29a86d6959c47c30a",
+      "decision": "ready",
+      "subject": "atmosphere of Mars",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "CO2",
+      "canonical_fact": "The atmosphere of Mars consists mostly of CO2.",
+      "prompt_en": "The atmosphere of Mars consists mostly of what gas?",
+      "evidence_quotes": [
+        "the atmosphere consists mostly of",
+        "CO2"
+      ],
+      "reason": "CO2 is a constituent material of the Martian atmosphere, which maps directly to 'entity_to_material' (entity -> material). The qualifier 'consists mostly of' is preserved in the canonical fact to retain the partial-composition nuance. Answer 'CO2' is a literal substring of the source answer.",
+      "english": {
+        "answer": "CO2",
+        "relation_id": "entity_to_material",
+        "prompt_en": "The atmosphere of Mars consists mostly of what gas?",
+        "direction": "entity -> material",
+        "subject": "atmosphere of Mars",
+        "canonical_fact": "The atmosphere of Mars consists mostly of CO2.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "CO2"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c266ece02f081b715f61bcafc72a4e919c2757fcef73e6c31ea2ded92187889a",
+      "input_sha256": "5e5b92d015ad37a587310593c4905e72ed4444bd723eff0ae570983d9d7df5e4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_80da8a6a004361a82b58",
+      "input_sha256": "4a4e2f50109a0d2c8db2fef62cea854a0359009ce1a9e40770fa23069800c126",
+      "english": {
+        "answer": "80% or below",
+        "relation_id": "condition_to_clinical_threshold",
+        "prompt_en": "What oxygen saturation level is typically associated with cyanosis?",
+        "direction": "medical condition -> associated clinical threshold value",
+        "subject": "cyanosis",
+        "canonical_fact": "Cyanosis is associated with an oxygen saturation level of 80% or below.",
+        "relation_definition": "A specific physiological measurement threshold at which a named medical condition is typically present or indicated; retains scope qualifiers such as 'or below' or 'or above'.",
+        "answer_aliases_en": [
+          "80% or below",
+          "80% or below."
+        ],
+        "relation_spec": {
+          "id": "condition_to_clinical_threshold",
+          "definition": "A specific physiological measurement threshold at which a named medical condition is typically present or indicated; retains scope qualifiers such as 'or below' or 'or above'.",
+          "direction": "medical condition -> associated clinical threshold value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2697515b6f802948fb0cf249b979a7827d97386919de5347cfd0d20a9dc5d1c9",
+      "translation": {
+        "record_id": "public:pbf_80da8a6a004361a82b58",
+        "subject_zh": "发绀",
+        "prompt_zh": "发绀通常与何种血氧饱和度水平相关？",
+        "canonical_fact_zh": "发绀通常与血氧饱和度80%或以下相关。",
+        "answer_zh": "80%或以下",
+        "answer_aliases_zh": [
+          "80%或以下",
+          "80%或以下。"
+        ]
+      },
+      "translation_sha256": "5726ee414bae90ec6382a9f354964116e60b5cfd2a041d8f3b2289ad62ca82fa"
+    },
+    {
+      "record_id": "public:pbf_80f29a86d6959c47c30a",
+      "input_sha256": "5e5b92d015ad37a587310593c4905e72ed4444bd723eff0ae570983d9d7df5e4",
+      "english": {
+        "answer": "CO2",
+        "relation_id": "entity_to_material",
+        "prompt_en": "The atmosphere of Mars consists mostly of what gas?",
+        "direction": "entity -> material",
+        "subject": "atmosphere of Mars",
+        "canonical_fact": "The atmosphere of Mars consists mostly of CO2.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "CO2"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c266ece02f081b715f61bcafc72a4e919c2757fcef73e6c31ea2ded92187889a",
+      "translation": {
+        "record_id": "public:pbf_80f29a86d6959c47c30a",
+        "subject_zh": "火星大气",
+        "prompt_zh": "火星大气主要由什么气体组成？",
+        "canonical_fact_zh": "火星大气主要由CO2组成。",
+        "answer_zh": "CO2",
+        "answer_aliases_zh": [
+          "CO2"
+        ]
+      },
+      "translation_sha256": "3359839cdedef10a299044ff43e8f45c906f3c61008371125d74581a9305281e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_80da8a6a004361a82b58",
+        "public:pbf_80f29a86d6959c47c30a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8c9ab863ac1a21f7ee4795044dd3e87ee5e782172d242ebfda66aa3fb2cf4693",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2104,
+      "first_chunk_seconds": 10.48,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2102,
+        "prompt_tokens": 1622,
+        "total_tokens": 3724,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1569,
+          "text_tokens": 533
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "35ebb350a41587810d7a4832522b8467192b09a8b89c29d24a6ac285eb756787",
+      "status": "completed",
+      "latency_seconds": 27.038
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_80da8a6a004361a82b58",
+        "public:pbf_80f29a86d6959c47c30a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "55a07b0ede3b926c89121c6c975dd93c01dd884baf2acd8fdc2b329d86ba2229",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1196,
+      "first_chunk_seconds": 36.944,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1211,
+        "prompt_tokens": 882,
+        "total_tokens": 2093,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 961,
+          "text_tokens": 250
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6168cb2e527fca5bc2aa1a0991685e61b8926e5feefe59450d967bf0e973c7e0",
+      "status": "completed",
+      "latency_seconds": 46.449
+    }
+  ],
+  "status": "completed"
+}

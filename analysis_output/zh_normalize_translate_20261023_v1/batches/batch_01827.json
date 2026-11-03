@@ -1,0 +1,214 @@
+{
+  "input_sha256": "839a1305f78d0510d93659e91264294fc43172099b081d074cae063637e7b824",
+  "normalized": [
+    {
+      "record_id": "public:pbf_d627813a1dd19243d6ed",
+      "decision": "ready",
+      "subject": "flame",
+      "relation_id": "entity_to_extreme_region",
+      "relation_definition": "The specific region or constituent of a specified entity at which a named extreme property (e.g., highest temperature, greatest intensity) is realized; the extreme property and the entity must be explicitly stated.",
+      "direction": "specified entity -> region/constituent at which a named extreme property is realized",
+      "answer": "blue part",
+      "canonical_fact": "The hottest part of a flame is the blue part.",
+      "prompt_en": "The hottest part of a flame is the",
+      "evidence_quotes": [
+        "hottest part of a flame",
+        "blue part"
+      ],
+      "reason": "Source answer 'blue part' is a literal substring of source_answer. No existing catalog relation captures 'the constituent region of an entity where a named extreme property is realized'; 'whole_to_part' omits the extreme-property qualifier, so a new precise relation is proposed. The fact is supported solely by the supplied QA pair.",
+      "english": {
+        "answer": "blue part",
+        "relation_id": "entity_to_extreme_region",
+        "prompt_en": "The hottest part of a flame is the",
+        "direction": "specified entity -> region/constituent at which a named extreme property is realized",
+        "subject": "flame",
+        "canonical_fact": "The hottest part of a flame is the blue part.",
+        "relation_definition": "The specific region or constituent of a specified entity at which a named extreme property (e.g., highest temperature, greatest intensity) is realized; the extreme property and the entity must be explicitly stated.",
+        "answer_aliases_en": [
+          "blue part"
+        ],
+        "relation_spec": {
+          "id": "entity_to_extreme_region",
+          "definition": "The specific region or constituent of a specified entity at which a named extreme property (e.g., highest temperature, greatest intensity) is realized; the extreme property and the entity must be explicitly stated.",
+          "direction": "specified entity -> region/constituent at which a named extreme property is realized"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2e9df970c6ddf47140412aa8151e8034efbfd464ed60f853f676287726c5252e",
+      "input_sha256": "371ac915099d55d636a4d53c5789f4974eb5dc5282f4e0b0442dc5c526fd1526",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d642e3f98ea0d0a9afbe",
+      "decision": "ready",
+      "subject": "test for checking mean plasma glucose concentration over the previous 8-10 weeks",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Hemoglobin A1c",
+      "canonical_fact": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is Hemoglobin A1c.",
+      "prompt_en": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is",
+      "evidence_quotes": [
+        "test for checking mean plasma glucose concentration over the previous 8-10 weeks",
+        "Hemoglobin A1c"
+      ],
+      "reason": "The source question provides an explicitly qualified identifying description ('test for checking mean plasma glucose concentration over the previous 8-10 weeks') and the source answer 'Hemoglobin A1c' is the unique entity satisfying it. The existing catalog relation 'description_to_entity' fits exactly in definition and direction. No qualifiers are lost; the 8-10-week window is preserved.",
+      "english": {
+        "answer": "Hemoglobin A1c",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is",
+        "direction": "identifying description -> entity",
+        "subject": "test for checking mean plasma glucose concentration over the previous 8-10 weeks",
+        "canonical_fact": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is Hemoglobin A1c.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Hemoglobin A1c"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "532fae9dd9201f23699067b4d9fc4bf064246f80062434957d6da22f6b4b524d",
+      "input_sha256": "6ed546d084afaa008800d572136a814eb0659816c71531cbc09104c998478286",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_d627813a1dd19243d6ed",
+      "input_sha256": "371ac915099d55d636a4d53c5789f4974eb5dc5282f4e0b0442dc5c526fd1526",
+      "english": {
+        "answer": "blue part",
+        "relation_id": "entity_to_extreme_region",
+        "prompt_en": "The hottest part of a flame is the",
+        "direction": "specified entity -> region/constituent at which a named extreme property is realized",
+        "subject": "flame",
+        "canonical_fact": "The hottest part of a flame is the blue part.",
+        "relation_definition": "The specific region or constituent of a specified entity at which a named extreme property (e.g., highest temperature, greatest intensity) is realized; the extreme property and the entity must be explicitly stated.",
+        "answer_aliases_en": [
+          "blue part"
+        ],
+        "relation_spec": {
+          "id": "entity_to_extreme_region",
+          "definition": "The specific region or constituent of a specified entity at which a named extreme property (e.g., highest temperature, greatest intensity) is realized; the extreme property and the entity must be explicitly stated.",
+          "direction": "specified entity -> region/constituent at which a named extreme property is realized"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2e9df970c6ddf47140412aa8151e8034efbfd464ed60f853f676287726c5252e",
+      "translation": {
+        "record_id": "public:pbf_d627813a1dd19243d6ed",
+        "subject_zh": "火焰",
+        "prompt_zh": "火焰中最热的部分是",
+        "canonical_fact_zh": "火焰中最热的部分是蓝色部分。",
+        "answer_zh": "蓝色部分",
+        "answer_aliases_zh": [
+          "蓝色部分"
+        ]
+      },
+      "translation_sha256": "f2d7f4f32208c8a540a67e74aa536509f38076a60c770ed5efcc0ff2e21c3830"
+    },
+    {
+      "record_id": "public:pbf_d642e3f98ea0d0a9afbe",
+      "input_sha256": "6ed546d084afaa008800d572136a814eb0659816c71531cbc09104c998478286",
+      "english": {
+        "answer": "Hemoglobin A1c",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is",
+        "direction": "identifying description -> entity",
+        "subject": "test for checking mean plasma glucose concentration over the previous 8-10 weeks",
+        "canonical_fact": "The test for checking mean plasma glucose concentration over the previous 8-10 weeks is Hemoglobin A1c.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Hemoglobin A1c"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "532fae9dd9201f23699067b4d9fc4bf064246f80062434957d6da22f6b4b524d",
+      "translation": {
+        "record_id": "public:pbf_d642e3f98ea0d0a9afbe",
+        "subject_zh": "检测过去8-10周平均血浆葡萄糖浓度的检验",
+        "prompt_zh": "检测过去8-10周平均血浆葡萄糖浓度的检验是",
+        "canonical_fact_zh": "检测过去8-10周平均血浆葡萄糖浓度的检验是糖化血红蛋白A1c。",
+        "answer_zh": "糖化血红蛋白A1c",
+        "answer_aliases_zh": [
+          "糖化血红蛋白A1c"
+        ]
+      },
+      "translation_sha256": "68c6b19bd027fb3eef9de27af5eb318b350660dc9da5170aca0c4828303c0783"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_d627813a1dd19243d6ed",
+        "public:pbf_d642e3f98ea0d0a9afbe"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "97f20728b166809ac0aada1ef329cb188072510f036ad170acb4b58b2f4d71d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2121,
+      "first_chunk_seconds": 3.552,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2127,
+        "prompt_tokens": 1630,
+        "total_tokens": 3757,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1539,
+          "text_tokens": 588
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b047b7d5c333bc1671e9792364049073a228f94ec06ec5603c08d039c95599f2",
+      "status": "completed",
+      "latency_seconds": 21.361
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_d627813a1dd19243d6ed",
+        "public:pbf_d642e3f98ea0d0a9afbe"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ea31e8c4ff47ba8e4028d607c1487b946caa949b8f6f9bf67e85b994781a0a10",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1020,
+      "first_chunk_seconds": 29.527,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1128,
+        "prompt_tokens": 921,
+        "total_tokens": 2049,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 879,
+          "text_tokens": 249
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5fcc880695f6791aee17420e200d4e8ed6084fe78f14049b21966ae5bab2c758",
+      "status": "completed",
+      "latency_seconds": 41.281
+    }
+  ],
+  "status": "completed"
+}

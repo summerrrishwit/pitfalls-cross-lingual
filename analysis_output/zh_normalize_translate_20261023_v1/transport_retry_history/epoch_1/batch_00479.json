@@ -1,0 +1,189 @@
+{
+  "input_sha256": "3f93fbb7b56545d0aa396da6cc979486359f1c0e127028a6adfcca4c0dde2e10",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e3eb174173c4b42cff4f",
+      "decision": "ready",
+      "subject": "David Banner in the TV series",
+      "relation_id": "character_to_actor",
+      "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "character in specified work/version -> actor",
+      "answer": "Bill Bixby",
+      "canonical_fact": "Bill Bixby played David Banner in the TV series.",
+      "prompt_en": "Who played the Hulk in the TV series?",
+      "evidence_quotes": [
+        "who played the hulk in the tv series",
+        "Bill Bixby"
+      ],
+      "reason": "Source clearly states Bill Bixby played the Hulk (canonically David Banner) in the TV series. The catalog relation character_to_actor fits exactly: a character in a specified work/version mapped to the actor who portrayed it. No uncertainty or qualifiers in the source answer.",
+      "english": {
+        "subject": "David Banner in the TV series",
+        "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer": "Bill Bixby",
+        "canonical_fact": "Bill Bixby played David Banner in the TV series.",
+        "direction": "character in specified work/version -> actor",
+        "relation_id": "character_to_actor",
+        "prompt_en": "Who played the Hulk in the TV series?",
+        "answer_aliases_en": [
+          "Bill Bixby",
+          "Wilfred Bailey Everett Bixby III",
+          "Wilfred Bailey Bixby"
+        ],
+        "relation_spec": {
+          "id": "character_to_actor",
+          "direction": "character in specified work/version -> actor",
+          "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "990b4fd59d1d75cec72650770dc1b4cbd7a805071e90dd073faf74f7c5d1954b",
+      "input_sha256": "b9deff3ba9c175dd56d72b929808b7b0ccadc0325b85384742668d1fcc6ee803",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e40506f1152abdf79a09",
+      "decision": "ready",
+      "subject": "Story of My Life",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "One Direction",
+      "canonical_fact": "One Direction sings the song Story of My Life.",
+      "prompt_en": "Who sings the song Story of My Life?",
+      "evidence_quotes": [
+        "who sings the song story of my life",
+        "One Direction"
+      ],
+      "reason": "Source clearly states One Direction is the singing performer of Story of My Life. The catalog relation song_to_performer fits exactly: a specified song mapped to its performing artist. No uncertainty or qualifiers in the source answer.",
+      "english": {
+        "subject": "Story of My Life",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer": "One Direction",
+        "canonical_fact": "One Direction sings the song Story of My Life.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sings the song Story of My Life?",
+        "answer_aliases_en": [
+          "One Direction",
+          "1D"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bfb11867e5f26eda93ab3962ffd45b988678e633fe24d9be089aeb7aaa5580b7",
+      "input_sha256": "e68500b0297f3c24c290441e265d790d85cee8f5655d89f3653ad9e7a9fa4ca8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e3eb174173c4b42cff4f",
+        "public:pbf_e40506f1152abdf79a09"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a985e48e5239ed77e8e91bfa7d681edfda6a05b72e4dc94f90160d8703cf24f8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2039,
+        "prompt_tokens": 1600,
+        "total_tokens": 3639,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1637,
+          "text_tokens": 402
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e073248a5f996d0dd4d303958f74416a15e7845e5e8cdbd9e011794f01f35008",
+      "status": "completed",
+      "latency_seconds": 74.803
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3eb174173c4b42cff4f",
+        "public:pbf_e40506f1152abdf79a09"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "16970237b28aa4d63559660b24539f6c3ea98677dd3dc31103b6960c5f22dd3b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.945
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3eb174173c4b42cff4f",
+        "public:pbf_e40506f1152abdf79a09"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "16970237b28aa4d63559660b24539f6c3ea98677dd3dc31103b6960c5f22dd3b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 46.796
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3eb174173c4b42cff4f",
+        "public:pbf_e40506f1152abdf79a09"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "16970237b28aa4d63559660b24539f6c3ea98677dd3dc31103b6960c5f22dd3b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.507
+    }
+  ],
+  "status": "failed"
+}

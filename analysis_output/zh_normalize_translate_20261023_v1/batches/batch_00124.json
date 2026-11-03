@@ -1,0 +1,166 @@
+{
+  "input_sha256": "973ec79d0305befeffe26e8ba3ba50ee206afec6cf29244cf16736c93beee751",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3ea3298fe455d1529e26",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The old extraction assigns the subject 'The Sound of Silence', but the source question asks about 'hello darkness my old friend' (a different song). The subject in the old extraction conflicts with the source question, making the canonical fact about the wrong song. Deferred until the correct subject matching the source question is identified.",
+      "input_sha256": "69c687b3f3c21f4654389d3a3b0b14f382b291c3b3619087b2aac0e553f059d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3ec1e672a9ccbc6cf2b2",
+      "decision": "ready",
+      "subject": "I Wish You Were Here",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Pink Floyd",
+      "canonical_fact": "I Wish You Were Here is performed by Pink Floyd.",
+      "prompt_en": "Who sang the song I Wish You Were Here?",
+      "evidence_quotes": [
+        "who sang the song i wish you were here",
+        "Pink Floyd"
+      ],
+      "reason": "The source question and answer clearly state that Pink Floyd sang 'I Wish You Were Here.' This matches the existing song_to_performer relation (song -> performer) exactly. The old extraction's subject, answer, and canonical fact are all consistent with the source; only the phrasing of the canonical fact is normalized to align with the relation direction.",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "I Wish You Were Here is performed by Pink Floyd.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song I Wish You Were Here?",
+        "subject": "I Wish You Were Here",
+        "answer": "Pink Floyd",
+        "answer_aliases_en": [
+          "Pink Floyd",
+          "The Pink Floyd Sound",
+          "The Pink Floyd"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04d3a4596416f7a8d743b5664b113fecdc45f059eac8c3326e6b21f5e284cdad",
+      "input_sha256": "e0461d67bb1463a518c664b75b08707141ea4fe271d580017fea4bfff3fdb59e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3ec1e672a9ccbc6cf2b2",
+      "input_sha256": "e0461d67bb1463a518c664b75b08707141ea4fe271d580017fea4bfff3fdb59e",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "I Wish You Were Here is performed by Pink Floyd.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song I Wish You Were Here?",
+        "subject": "I Wish You Were Here",
+        "answer": "Pink Floyd",
+        "answer_aliases_en": [
+          "Pink Floyd",
+          "The Pink Floyd Sound",
+          "The Pink Floyd"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04d3a4596416f7a8d743b5664b113fecdc45f059eac8c3326e6b21f5e284cdad",
+      "translation": {
+        "record_id": "public:pbf_3ec1e672a9ccbc6cf2b2",
+        "subject_zh": "I Wish You Were Here",
+        "prompt_zh": "谁演唱了歌曲《I Wish You Were Here》？",
+        "canonical_fact_zh": "《I Wish You Were Here》由 Pink Floyd 演唱。",
+        "answer_zh": "Pink Floyd",
+        "answer_aliases_zh": [
+          "Pink Floyd",
+          "The Pink Floyd Sound",
+          "The Pink Floyd"
+        ]
+      },
+      "translation_sha256": "7dc69880d07cec25424fe73c8150a189cc0fc231f6fb485978043450cd8c9c24"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3ea3298fe455d1529e26",
+        "public:pbf_3ec1e672a9ccbc6cf2b2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "10de66ae11381e1bc3f0aefb4c8638d08d5cece0cd0b01a46a1589130e263db3",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 156.329
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3ea3298fe455d1529e26",
+        "public:pbf_3ec1e672a9ccbc6cf2b2"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "10de66ae11381e1bc3f0aefb4c8638d08d5cece0cd0b01a46a1589130e263db3",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2350,
+        "prompt_tokens": 1594,
+        "total_tokens": 3944,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1912,
+          "text_tokens": 438
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "efb7fa61fbb02b54d156cd68a07ddcbb7629069b35bbec395759dbf020aa57a7",
+      "status": "completed",
+      "latency_seconds": 113.702
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3ec1e672a9ccbc6cf2b2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1ecf5fb3e2b5cbf11776aab8e814c8717223386d8e80e420d4e2616a9aa1b9c7",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 679,
+        "prompt_tokens": 528,
+        "total_tokens": 1207,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 530,
+          "text_tokens": 149
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d6c8183f11fa477a348081a8c4d9eeacb174466c7e7e7e615558754ea57b14d7",
+      "status": "completed",
+      "latency_seconds": 51.492
+    }
+  ],
+  "status": "completed"
+}

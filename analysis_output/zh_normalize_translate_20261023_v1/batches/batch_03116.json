@@ -1,0 +1,185 @@
+{
+  "input_sha256": "916801acfed394656dc3f50e61bb6c005d1ed91ed79587b913feecea20acf57b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000686",
+      "decision": "ready",
+      "subject": "things classified by climatic factors and types of primary producers",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "terrestrial biomes",
+      "canonical_fact": "Terrestrial biomes are classified by climatic factors and types of primary producers.",
+      "prompt_en": "What is the category of ecosystems that are classified by climatic factors and types of primary producers?",
+      "evidence_quotes": [
+        "What are classified by climatic factors and types of primary producers?",
+        "terrestrial biomes"
+      ],
+      "reason": "The source question supplies an identifying description ('classified by climatic factors and types of primary producers') and the source answer names the unique entity 'terrestrial biomes' that satisfies it. This fits description_to_entity exactly: a qualifying description pointing to a single entity.",
+      "english": {
+        "prompt_en": "What is the category of ecosystems that are classified by climatic factors and types of primary producers?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "terrestrial biomes",
+        "canonical_fact": "Terrestrial biomes are classified by climatic factors and types of primary producers.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "things classified by climatic factors and types of primary producers",
+        "answer_aliases_en": [
+          "terrestrial biomes"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7d5635985b33d082f2971b078138860b9c5a04791ddfdbe43a46ce29820825d1",
+      "input_sha256": "8a1e1b984f3eb122b3e640d86bb0de9777929b6ea01838c2b93d3156e58a18ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000687",
+      "decision": "ready",
+      "subject": "angiosperms",
+      "relation_id": "organism_to_anatomical_site",
+      "relation_definition": "The specific anatomical structure or organ within an organism in which a stated biological process occurs; excludes geographic locations, habitats, and general taxonomy classes.",
+      "direction": "organism/plant group -> anatomical site of specified biological process",
+      "answer": "ovaries",
+      "canonical_fact": "Angiosperms form seeds in ovaries.",
+      "prompt_en": "In which anatomical structure do angiosperms form their seeds?",
+      "evidence_quotes": [
+        "Where do angiosperms form seeds?",
+        "ovaries"
+      ],
+      "reason": "No existing catalog relation covers a sub-organism anatomical process site: entity_to_containing_location is explicitly limited to geographic containment and excludes 'process location'; organism_to_habitat is about external habitat, not internal structure. Proposing organism_to_anatomical_site as a precise new relation for 'structure within an organism where a named process occurs.'",
+      "english": {
+        "prompt_en": "In which anatomical structure do angiosperms form their seeds?",
+        "relation_definition": "The specific anatomical structure or organ within an organism in which a stated biological process occurs; excludes geographic locations, habitats, and general taxonomy classes.",
+        "answer": "ovaries",
+        "canonical_fact": "Angiosperms form seeds in ovaries.",
+        "direction": "organism/plant group -> anatomical site of specified biological process",
+        "relation_id": "organism_to_anatomical_site",
+        "subject": "angiosperms",
+        "answer_aliases_en": [
+          "ovaries"
+        ],
+        "relation_spec": {
+          "id": "organism_to_anatomical_site",
+          "definition": "The specific anatomical structure or organ within an organism in which a stated biological process occurs; excludes geographic locations, habitats, and general taxonomy classes.",
+          "direction": "organism/plant group -> anatomical site of specified biological process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4a21277e0410052119fbd0564794a9e533c63205954172f650f3b35f473b108c",
+      "input_sha256": "da945d57440f4146b57c5221bc891ee728c8ed0e0695acb3b4f5157407f22739",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "df0b8ada2748228fe17edd3c904d579da669369f5116113dd9f1287b0c9cefc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 48.956
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "df0b8ada2748228fe17edd3c904d579da669369f5116113dd9f1287b0c9cefc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 29.299
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "df0b8ada2748228fe17edd3c904d579da669369f5116113dd9f1287b0c9cefc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1991,
+      "first_chunk_seconds": 65.729,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2042,
+        "prompt_tokens": 1693,
+        "total_tokens": 3735,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1515,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9bee7715c9bf0726b9220eba1b101f354714ac6d79da778dae0c16f065fff2ce",
+      "status": "completed",
+      "latency_seconds": 132.392
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "abc34f09c40e1a398c5772c4bcccd9afa0cf7e47f75620d8e09c904616159edb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.42
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "abc34f09c40e1a398c5772c4bcccd9afa0cf7e47f75620d8e09c904616159edb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.373
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000686",
+        "historical:raw_sciq_000687"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "abc34f09c40e1a398c5772c4bcccd9afa0cf7e47f75620d8e09c904616159edb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 35.226
+    }
+  ],
+  "status": "failed"
+}

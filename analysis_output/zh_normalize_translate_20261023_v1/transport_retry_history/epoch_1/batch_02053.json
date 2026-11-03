@@ -1,0 +1,158 @@
+{
+  "input_sha256": "198c7316fe88296f1fd3df102dd059448f39d015adae4e494c747e4eaaea83ab",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f87620a0ad6d1d1b0dae",
+      "decision": "ready",
+      "subject": "evil (Augustine)",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "the absence of good",
+      "canonical_fact": "According to Augustine, evil is identified with the absence of good.",
+      "prompt_en": "According to Augustine, evil is identified with what?",
+      "evidence_quotes": [
+        "the absence of good.",
+        "Augustine identifies evil with:"
+      ],
+      "reason": "The source question and answer clearly state Augustine's identification of evil as the absence of good. The existing relation term_to_definition fits: this is a definitional identification of a philosophical term within a named thinker's framework, with scope retained via the 'Augustine' qualifier.",
+      "english": {
+        "answer": "the absence of good",
+        "relation_id": "term_to_definition",
+        "prompt_en": "According to Augustine, evil is identified with what?",
+        "direction": "term -> definition",
+        "subject": "evil (Augustine)",
+        "canonical_fact": "According to Augustine, evil is identified with the absence of good.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "the absence of good",
+          "the absence of good."
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "df7ec6546c35a148223fea5dcb5711b16506b92349faa9d23d523cfadfe8a07e",
+      "input_sha256": "f8d403052233d17a7c947e96cc1a6888aa3f60ab4f93011a74aa19f748e691cb",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f88430ecc2513bd5e830",
+      "decision": "ready",
+      "subject": "Minoan economy",
+      "relation_id": "economy_to_key_dependence",
+      "relation_definition": "The specific economic sector or activity on which a specified economy relied heavily, indicating its primary economic dependence.",
+      "direction": "economy -> key sector/activity",
+      "answer": "maritime trade",
+      "canonical_fact": "The Minoan economy relied heavily on maritime trade.",
+      "prompt_en": "What economic sector or activity did the Minoan economy rely heavily on?",
+      "evidence_quotes": [
+        "maritime trade",
+        "relied heavily on:"
+      ],
+      "reason": "No existing catalog relation captures economic dependence on a sector. Proposed new relation economy_to_key_dependence (direction: economy -> key sector/activity) to precisely capture this dependency. The source clearly identifies maritime trade as what the Minoan economy relied heavily on; the 'may have been vulnerable' qualifier applies to the consequence, not to the reliance fact itself, so the canonical fact states the reliance as stated.",
+      "english": {
+        "answer": "maritime trade",
+        "relation_id": "economy_to_key_dependence",
+        "prompt_en": "What economic sector or activity did the Minoan economy rely heavily on?",
+        "direction": "economy -> key sector/activity",
+        "subject": "Minoan economy",
+        "canonical_fact": "The Minoan economy relied heavily on maritime trade.",
+        "relation_definition": "The specific economic sector or activity on which a specified economy relied heavily, indicating its primary economic dependence.",
+        "answer_aliases_en": [
+          "maritime trade"
+        ],
+        "relation_spec": {
+          "id": "economy_to_key_dependence",
+          "definition": "The specific economic sector or activity on which a specified economy relied heavily, indicating its primary economic dependence.",
+          "direction": "economy -> key sector/activity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e3b964c08da75d1cf1f3da252a903806fe7d935f808e985b5530eb4e383c2686",
+      "input_sha256": "1800089c9f23a7deac4e8c1b20c7728603d1b5ebaa65e51c6fdbd1be6074cd46",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f87620a0ad6d1d1b0dae",
+        "public:pbf_f88430ecc2513bd5e830"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da3c9d6f021cc8a0ead2267e43f179b74628644b92e7ab31ab8f49400f7949ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2794,
+      "first_chunk_seconds": 31.894,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2918,
+        "prompt_tokens": 1579,
+        "total_tokens": 4497,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2400,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2ac797ec5e3b8028be27fb944f90667e5c1b3365e1543c4f2110007ea158f6d8",
+      "status": "completed",
+      "latency_seconds": 66.948
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f87620a0ad6d1d1b0dae",
+        "public:pbf_f88430ecc2513bd5e830"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "67ef268fdca3fc9472265d9631aac7e74c404e3ff6c9e9f2c8d620e971111e0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.225
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f87620a0ad6d1d1b0dae",
+        "public:pbf_f88430ecc2513bd5e830"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "67ef268fdca3fc9472265d9631aac7e74c404e3ff6c9e9f2c8d620e971111e0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 196.441
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f87620a0ad6d1d1b0dae",
+        "public:pbf_f88430ecc2513bd5e830"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "67ef268fdca3fc9472265d9631aac7e74c404e3ff6c9e9f2c8d620e971111e0c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 45.856
+    }
+  ],
+  "status": "failed"
+}

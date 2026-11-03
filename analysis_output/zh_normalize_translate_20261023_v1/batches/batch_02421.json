@@ -1,0 +1,208 @@
+{
+  "input_sha256": "71fb1d9c1be982b2c87f65a7571f77467a852b2321f049aa972384eeb43ef30c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001770",
+      "decision": "ready",
+      "subject": "process in living things where large and complex molecules are broken down into small and simple molecules",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "digestion",
+      "canonical_fact": "The process in living things where large and complex molecules are broken down into small and simple molecules is called digestion.",
+      "prompt_en": "What is the process in living things where large and complex molecules are broken down into small and simple molecules called?",
+      "evidence_quotes": [
+        "large and complex molecules are broken down into small and simple molecules",
+        "digestion"
+      ],
+      "reason": "The question supplies a defining description and asks for the conventional term. Catalog relation description_to_term (direction: description -> term) fits exactly. Answer 'digestion' is a literal substring of source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "digestion",
+        "canonical_fact": "The process in living things where large and complex molecules are broken down into small and simple molecules is called digestion.",
+        "subject": "process in living things where large and complex molecules are broken down into small and simple molecules",
+        "prompt_en": "What is the process in living things where large and complex molecules are broken down into small and simple molecules called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "digestion"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "53b95eab6a8960a9c37a5255c975b2276c47677d346f756cbf712687a5389b4a",
+      "input_sha256": "edec96b1db662bf13aa3caf96d789063ec8fc908c3bb3d997c86a7a0e038f96a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001772",
+      "decision": "ready",
+      "subject": "protons and electrons",
+      "relation_id": "entity_pair_to_shared_attribute",
+      "relation_definition": "A specific property or physical attribute in which two named entities are always equal or identical; retains the universal qualifier ('always').",
+      "direction": "named entity pair -> shared attribute",
+      "answer": "magnitude of charge",
+      "canonical_fact": "Protons and electrons are always equal in magnitude of charge.",
+      "prompt_en": "In what respect are protons and electrons always equal?",
+      "evidence_quotes": [
+        "In what respect are protons and electrons always equal?",
+        "magnitude of charge"
+      ],
+      "reason": "No catalog relation exactly covers a shared property between two named entities. Proposed new relation entity_pair_to_shared_attribute (direction: named entity pair -> shared attribute). Answer 'magnitude of charge' is a literal substring of source_answer. The qualifier 'always' is preserved. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "named entity pair -> shared attribute",
+        "relation_id": "entity_pair_to_shared_attribute",
+        "answer": "magnitude of charge",
+        "canonical_fact": "Protons and electrons are always equal in magnitude of charge.",
+        "subject": "protons and electrons",
+        "prompt_en": "In what respect are protons and electrons always equal?",
+        "relation_definition": "A specific property or physical attribute in which two named entities are always equal or identical; retains the universal qualifier ('always').",
+        "answer_aliases_en": [
+          "magnitude of charge"
+        ],
+        "relation_spec": {
+          "id": "entity_pair_to_shared_attribute",
+          "definition": "A specific property or physical attribute in which two named entities are always equal or identical; retains the universal qualifier ('always').",
+          "direction": "named entity pair -> shared attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b851433470aaadc093e2a6327563be69689c6b2b82c63837ccce7c9540c88f79",
+      "input_sha256": "8a1c33eae3a31adffcf1ee26296021f0f1579373009c0872bc0f4d7e1b46ac30",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e4e73c65d56a9ff7f40bfc24d1ba35401034dc080d80f261c2a60eaea6d4c559",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1031,
+      "first_chunk_seconds": 2.105,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1091,
+        "prompt_tokens": 1753,
+        "total_tokens": 2844,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 679,
+          "text_tokens": 412
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "beb00dac924d4d2ebc39d5eb0c320924e54d2894f794ae149c6d86f3cd8f8ba3",
+      "status": "completed",
+      "latency_seconds": 16.572
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.23
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.49
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.296
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.796
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.779
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001770",
+        "historical:raw_ai2_arc_easy_001772"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cab45d1d6bc63fc9751326d5500668c82b8653d4751fe882ed2254190c029e86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.231
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02421.json",
+      "sha256": "b4c566343f6b179c46b611bd24a31fb205047cb0c4a82809ed87b1c53e861613",
+      "previous_status": "failed"
+    }
+  ]
+}

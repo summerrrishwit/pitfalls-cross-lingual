@@ -1,0 +1,171 @@
+{
+  "input_sha256": "b1c7f655d85cee7c09448d3954b6edb69a50cdfa592dd11d986e6719419ddb93",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000740",
+      "decision": "ready",
+      "subject": "energy produced by plants",
+      "relation_id": "entity_to_energy_source",
+      "relation_definition": "The external energy source from which a specified entity or biological process derives its energy; retain the specific organism/process context.",
+      "direction": "entity/process -> energy source",
+      "answer": "sunlight",
+      "canonical_fact": "The energy produced by plants comes from sunlight.",
+      "prompt_en": "What is the source of energy produced by plants?",
+      "evidence_quotes": [
+        "Where does the energy produced by plants come from?",
+        "sunlight"
+      ],
+      "reason": "No catalog relation exactly captures an energy-source relationship for a biological process. entity_to_material addresses material composition, not energy derivation. Proposed entity_to_energy_source as a precise new relation with explicit direction (process -> its external energy source).",
+      "english": {
+        "prompt_en": "What is the source of energy produced by plants?",
+        "relation_definition": "The external energy source from which a specified entity or biological process derives its energy; retain the specific organism/process context.",
+        "answer": "sunlight",
+        "canonical_fact": "The energy produced by plants comes from sunlight.",
+        "direction": "entity/process -> energy source",
+        "relation_id": "entity_to_energy_source",
+        "subject": "energy produced by plants",
+        "answer_aliases_en": [
+          "sunlight"
+        ],
+        "relation_spec": {
+          "id": "entity_to_energy_source",
+          "definition": "The external energy source from which a specified entity or biological process derives its energy; retain the specific organism/process context.",
+          "direction": "entity/process -> energy source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6e8dd697d569ae0ded7881c9910abe6fe33aadfa2f812e65e4ad3fc725c06c8d",
+      "input_sha256": "2730a876aa6ee79df0facace2edb51abc8299ae06a2a3d6f8c3bc2f63e2d2af9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000741",
+      "decision": "ready",
+      "subject": "atmospheric sulfur",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "sulfur dioxide (so2)",
+      "canonical_fact": "Atmospheric sulfur is found in the form of sulfur dioxide (so2).",
+      "prompt_en": "In what chemical form is atmospheric sulfur found?",
+      "evidence_quotes": [
+        "In what form is atmospheric sulfur found?",
+        "sulfur dioxide (so2)"
+      ],
+      "reason": "entity_to_material fits exactly: the subject 'atmospheric sulfur' is an entity described by its material/chemical form 'sulfur dioxide (so2)'. Direction entity -> material aligns with the question 'In what form is X found?'. Both model annotations agree on extraction.",
+      "english": {
+        "prompt_en": "In what chemical form is atmospheric sulfur found?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer": "sulfur dioxide (so2)",
+        "canonical_fact": "Atmospheric sulfur is found in the form of sulfur dioxide (so2).",
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "subject": "atmospheric sulfur",
+        "answer_aliases_en": [
+          "sulfur dioxide (so2)"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "954d272c9d34d408931c74a0ccab78c23b0c072136839f316c10760f32b537f7",
+      "input_sha256": "09753233aeca06907005ef39d37331219f02f7bad9a83a9a4217a38f7d31a477",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000740",
+        "historical:raw_sciq_000741"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "33b137d0b9eb315ef49fc900a9b7486f240a8e8b648031fce5ef0dabd274671a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 53.768
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000740",
+        "historical:raw_sciq_000741"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "33b137d0b9eb315ef49fc900a9b7486f240a8e8b648031fce5ef0dabd274671a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2208,
+      "first_chunk_seconds": 61.988,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2295,
+        "prompt_tokens": 1681,
+        "total_tokens": 3976,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1815,
+          "text_tokens": 480
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4a0f8a249cb20abddb71b66462478b850d09885ffd33b1784c77482277c2cf32",
+      "status": "completed",
+      "latency_seconds": 118.332
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000740",
+        "historical:raw_sciq_000741"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8c9e751f421a25f9272a6570544bfd6fc3ca2b29758b714e41ccc1ebf3536653",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.39
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000740",
+        "historical:raw_sciq_000741"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8c9e751f421a25f9272a6570544bfd6fc3ca2b29758b714e41ccc1ebf3536653",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 89.313
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000740",
+        "historical:raw_sciq_000741"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8c9e751f421a25f9272a6570544bfd6fc3ca2b29758b714e41ccc1ebf3536653",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.6
+    }
+  ],
+  "status": "failed"
+}

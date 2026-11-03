@@ -1,0 +1,185 @@
+{
+  "input_sha256": "323bfaa764da3e6aee18b50589a206e7c1a45a11c774220c7c83d91e8c9d3dd7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000731",
+      "decision": "ready",
+      "subject": "root region above the meristem",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "epidermal",
+      "canonical_fact": "Above the meristem, the rest of the root is covered with a single layer of epidermal cells, which may have root hairs.",
+      "prompt_en": "Above the meristem, the rest of the root is covered with a single layer of what type of cells, which may have root hairs?",
+      "evidence_quotes": [
+        "Above the meristem, the rest of the root is covered with a single layer of what type of cells, which may have root hairs?",
+        "epidermal"
+      ],
+      "reason": "The source question and answer establish that the root region above the meristem is covered by a single layer of epidermal cells. 'whole_to_part' fits: the root region (whole) has epidermal cells as a specified constituent layer. The answer 'epidermal' is a literal substring of the source_answer. The prompt is the source question itself, which is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "Above the meristem, the rest of the root is covered with a single layer of what type of cells, which may have root hairs?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "epidermal",
+        "canonical_fact": "Above the meristem, the rest of the root is covered with a single layer of epidermal cells, which may have root hairs.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "root region above the meristem",
+        "answer_aliases_en": [
+          "epidermal"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fbbd8b86fe69d8160316a72db84828aabb5cd83b849e204eed7551f5d93b2ac3",
+      "input_sha256": "59c68ca14e8da62d124a4ab284f4ee194bbbdaf5c0b8f9ab607783d0d6a808ff",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000732",
+      "decision": "ready",
+      "subject": "photic zone",
+      "relation_id": "zone_to_depth_extent",
+      "relation_definition": "Maximum depth extent in the specified unit for a defined natural zone (oceanic, atmospheric, etc.); retains unit and qualifier.",
+      "direction": "defined zone -> depth extent in specified unit",
+      "answer": "200",
+      "canonical_fact": "The photic zone extends 200 meters deep.",
+      "prompt_en": "How many meters deep does the photic zone extend?",
+      "evidence_quotes": [
+        "How many meters deep does the photic zone extend?",
+        "200"
+      ],
+      "reason": "No existing catalog relation captures a quantitative depth-extent property of a defined natural zone. Proposed 'zone_to_depth_extent' with explicit direction (zone -> depth in specified unit). The source clearly states the photic zone extends 200 m; answer '200' is a literal substring of source_answer. The prompt is the source question, option-free, and does not contain the answer.",
+      "english": {
+        "prompt_en": "How many meters deep does the photic zone extend?",
+        "relation_definition": "Maximum depth extent in the specified unit for a defined natural zone (oceanic, atmospheric, etc.); retains unit and qualifier.",
+        "answer": "200",
+        "canonical_fact": "The photic zone extends 200 meters deep.",
+        "direction": "defined zone -> depth extent in specified unit",
+        "relation_id": "zone_to_depth_extent",
+        "subject": "photic zone",
+        "answer_aliases_en": [
+          "200"
+        ],
+        "relation_spec": {
+          "id": "zone_to_depth_extent",
+          "definition": "Maximum depth extent in the specified unit for a defined natural zone (oceanic, atmospheric, etc.); retains unit and qualifier.",
+          "direction": "defined zone -> depth extent in specified unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "574c2aeda64729c228bb179a249a44a888f8e248ed20256432673a356ca6e9db",
+      "input_sha256": "79c3229c6196892f2ea6592ba83c12785f92c757aa88ed6a8c4587c3e58c988d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "efbd65c05e71fb02faf8c1589d9630c53e58a3f7948950f5ee0eab8290c0bdb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 69.157
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "efbd65c05e71fb02faf8c1589d9630c53e58a3f7948950f5ee0eab8290c0bdb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 56.574
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "efbd65c05e71fb02faf8c1589d9630c53e58a3f7948950f5ee0eab8290c0bdb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2210,
+      "first_chunk_seconds": 32.977,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2395,
+        "prompt_tokens": 1769,
+        "total_tokens": 4164,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1920,
+          "text_tokens": 475
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5d8f07f1af57b22756b5d356a1cade948b59e58ec6d693f7f721000734004733",
+      "status": "completed",
+      "latency_seconds": 169.883
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7357dd98646d7749135e3dbbcf8d455ffead38c52e86fd08e3c05786910f6aae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 40.267
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7357dd98646d7749135e3dbbcf8d455ffead38c52e86fd08e3c05786910f6aae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.319
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000731",
+        "historical:raw_sciq_000732"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7357dd98646d7749135e3dbbcf8d455ffead38c52e86fd08e3c05786910f6aae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.683
+    }
+  ],
+  "status": "failed"
+}

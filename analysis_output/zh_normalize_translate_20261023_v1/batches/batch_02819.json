@@ -1,0 +1,157 @@
+{
+  "input_sha256": "d14ea30d03d4b20556fb49f5641563d13cecd9217f31fd732d3e091022d1ec59",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000022",
+      "decision": "ready",
+      "subject": "natural gas",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "methane",
+      "canonical_fact": "Natural gas is predominantly composed of methane.",
+      "prompt_en": "What substance is natural gas predominantly composed of?",
+      "evidence_quotes": [
+        "Natural gas is the predominately made up of?",
+        "methane"
+      ],
+      "reason": "The source question directly asks for the predominant constituent of natural gas and the answer is 'methane'. This maps to entity_to_material: natural gas (entity) -> methane (constituent material). The qualifier 'predominantly' is preserved in the canonical fact. No conflict with existing extractions.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "methane",
+        "canonical_fact": "Natural gas is predominantly composed of methane.",
+        "subject": "natural gas",
+        "prompt_en": "What substance is natural gas predominantly composed of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "methane"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0a81cb11fd7d0474dd632268529ddfdd719667e0cef85da31d91d43658f3bd55",
+      "input_sha256": "d02cbeb76f615e2ca61dcac1f1087f36b5861923efb0617f6b5869e33e654e01",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000023",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'initial kinetic energy of downhill skiers' is a scenario-dependent physical quantity, not a stable reusable entity. The relation 'small compared with the gain in' expresses a physics comparison principle rather than a fixed attribute of an entity. No catalog relation fits, and proposing a new relation (e.g., kinetic_energy_to_potential_energy_baseline) would be too narrow and non-reusable. Deferred per insufficient source support for a generalizable fact.",
+      "input_sha256": "ac4b2691f4cd49b4d444b26d76cb054d8e7c95a286fde7666d09cf72524a4f2b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000022",
+      "input_sha256": "d02cbeb76f615e2ca61dcac1f1087f36b5861923efb0617f6b5869e33e654e01",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "methane",
+        "canonical_fact": "Natural gas is predominantly composed of methane.",
+        "subject": "natural gas",
+        "prompt_en": "What substance is natural gas predominantly composed of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "methane"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0a81cb11fd7d0474dd632268529ddfdd719667e0cef85da31d91d43658f3bd55",
+      "translation": {
+        "record_id": "historical:raw_sciq_000022",
+        "subject_zh": "天然气",
+        "prompt_zh": "天然气主要由什么物质组成？",
+        "canonical_fact_zh": "天然气主要由甲烷组成。",
+        "answer_zh": "甲烷",
+        "answer_aliases_zh": [
+          "甲烷"
+        ]
+      },
+      "translation_sha256": "48289973f25a0341ca38342db6c237ee30328e3c414d849ef542f31c220c02cc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000022",
+        "historical:raw_sciq_000023"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6f969a69b1500871304ec3fc41313647adead9c55cde4b7129bc3c1faa8d2315",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1668,
+      "first_chunk_seconds": 19.539,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1790,
+        "prompt_tokens": 1721,
+        "total_tokens": 3511,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1359,
+          "text_tokens": 431
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1ca005ac021654e52357462a3be9288c611b0fb0345462414138d2d92768a3bf",
+      "status": "completed",
+      "latency_seconds": 70.742
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000022"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e201b968817225029178d62cbfc27e141bf7a073417bf411f7aa5eb01dc73db4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 395,
+      "first_chunk_seconds": 21.265,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 424,
+        "prompt_tokens": 493,
+        "total_tokens": 917,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 360,
+          "text_tokens": 64
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8135b9329644fafbc708b1a6d0fed3600b620a748181477c4e9e29f4fa4304d9",
+      "status": "completed",
+      "latency_seconds": 57.762
+    }
+  ],
+  "status": "completed"
+}

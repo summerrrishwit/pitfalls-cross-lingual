@@ -1,0 +1,61 @@
+{
+  "input_sha256": "29b36261df20f4519ee0871ad8c430da479543aaf217b0c37b2d6154ecb95a2f",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.188
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.013
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 3.184,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

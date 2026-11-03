@@ -1,0 +1,38 @@
+# Evidence and implementation notes
+
+Live remote checks: RTX 4090 D, 24564 MiB total / 24081 MiB free; CUDA and BF16 available. Data disk ~26 GB free.
+Python: /root/autodl-tmp/venvs/vllm/bin/python, Python 3.10.12; torch 2.13.0+cu130; transformers 5.17.0; tokenizer 0.23.2. System Python has no ML packages.
+Experiment root: /root/autodl-tmp/pnt-g0b-qwen3-8b-20260919.
+Model snapshot: /root/autodl-tmp/hf-cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218.
+Recovered remote SHA bindings match local freeze/attribution manifest:
+- input/frozen_static_bundle.jsonl: 601f23902b309cca12df3da07c6364214b408f8c91ac53808363bcafb138f224
+- output-v3/exact_hf_model_manifest.json: 3f132c2d09940184eba006c204b227bc2c87b3f8c504d86a9ac10cc8139c384f
+- output-v3/exact_hf_rendered_inputs.jsonl: bbd9f3aec7493ecce235291caad31b3525c9dce95d5f3ecc4c22a0e0bac1bbbc
+- mcq-attribution-v2/mcq_decision_resid_pre.pt: 8a1ebe9e1e30110d7e8264f1882d8fe3fc213ead069cecc3b4817e20102b6b9d
+
+Sources: tasks/task_160_mcq_pnt_protocol.md; analysis_output/pitfalls_pnt_review_20261009/review.md; G2A contract and natural semantic review manifests.
+
+First remote unit checks passed 5/5. Tokenizer audit caught Transformers 5.17 returning a Mapping (BatchEncoding) rather than a plain dict. Fixed Mapping handling and added a regression check; no inference had run and no result was overwritten.
+
+Remote tests passed 10/10. Exact checkpoint bytes matched the frozen model manifest. Tokenizer audit passed all 960 + 1920 + 26 prompts; remote tmux pipeline started. New endpoint protocol v2 keeps generated-answer success separate from sequence preference. Semantic uncertainty is recorded as missing.
+
+Full remote run completed: 960 inputs, 96 facts, 192 variants, 26 unrelated controls; no generation budget exhaustion. Semantic review: 516 explicit unique proxy decisions, 15 output-level deferrals, no unreviewed cohort output. Directed open defects: 17 facts/25 variants; strict language-specific: 5 facts. MCQ/open cross-tab: MCQ positive 12 open positive, 41 negative, 4 unresolved; MCQ negative 5 open positive, 33 negative, 1 unresolved. Auxiliary sequence-preference transfer: 57 facts, not generated transfer. All 25 positive variants inspected; positive ZH triples and strict EN triples submitted for exact-runtime repetition.
+
+Positive repetition passed 82/82 across all 17 positive facts. Frozen unrelated control semantic baseline: 15 true, 8 false, 3 defer. Full run and review evidence synchronized into remote_artifacts/. No intervention or holdout was run.
+
+Authorized continuation: v3 prospectively restricts the unexecuted search to layers 12/24/32 and scales -1/+1, preserving all four source/evaluation folds and the original source estimators. Candidate selection and independent gates are saved before new activation/intervention outputs. Remote injection tests 5/5 passed (teacher forcing positions, cached generation positions, zero hook, norm-matched repeatable randoms, negation-safe wrapper parsing).
+
+V3 screening and 3 x 532 generation calls completed. Task and combined have definite unrelated-control harm (including empty outputs); difference l24/-1 changes a previously resistant Margot Robbie fact to other actors, exceeding the 5% resistant-fact harm limit (1/14). Only decisive verdicts were required; other failed-candidate ambiguities remain missing. A retention aggregation bug was fixed: known harm cannot be erased by another missing arm; regression tested remotely. V4 prospectively tests a finite five-candidate smaller-strength pool using generated answers directly, reusing exactly the same OOF vector bank, before any holdout exposure. No threshold or independent rule is relaxed.
+
+Freeze binding regression check caught an authorization-order issue introduced while adding semantic-cache SHA binding: the failed-G2 guard read an unrelated config field before rejecting. Moved the G2 status check ahead of those reads and reran the focused remote guard test. No holdout/model execution was affected. The remote retention/injection suite passed 8 checks after the known-harm aggregation fix.
+
+Final v4 completed all 5×532 calls, exit 0. Condition-blinded full-answer review and an explicit provenance-preserving recheck establish at least 1/2/2/1/2 resistant fact harms out of 14. The weakest task's primary-data answer defines pre-collected/unanalysed status, omitting first-hand/study-specific first collection; rechecked as false. Risk-population paraphrase rechecked true consistently with baseline. Partial year-only date remains missing. All 8 v3/v4 candidates fail preservation; no candidate can advance regardless of the remaining missing judgments. No random or holdout inference was run. Standalone remote artifact audit recomputed source-fold isolation, exact counts/uniqueness, semantic SHA binding and known resistant harms without importing the selection analyzer; passed. Forty synchronized bound artifacts match SHA. The SHA-bound decision is a negative Development closure, not a frozen successful repair or independent confirmation.
+
+V5 user-authorized continuation: prefill-only hook unit checks passed remotely. Initialization initially encountered orphan seeded semantic decisions; text-unbound entries are skipped. Actual self-patch generation matched at all four layers, but sequence margins deviated by .107/.268/.754/.526. The self-patch gate correctly stopped before oracle or source-independent trials. Running an explicit actual-layer-input vs returned/cached-state coordinate audit and prefill vs teacher-forced numerical-path comparison; no causal recovery claim yet.
+
+Coordinate audit outcome: cached and returned activations exactly match actual layer input (max abs 0 at 12/20/28/32). Teacher-forced vs prefill relative L2 differences are .0194/.0262/.0222/.0190. Fresh baseline margin matches saved within6.3e-9; zero additive hook has zero score change. Version v5b prospectively replaces absolute state overwrite with float32 cached source-minus-target additive shifts, matching operations during generation/scoring. Self controls then pass at all layers, text exact and margin delta6.3e-9.
+
+V5b 352 local diagnostic trials complete, 56 explicit blinded unique proxy verdicts, none missing. Positive recovery by layer12/20/28/32:0/2/11/10 of25variants, fact-weighted0/.0882/.4706/.4118 over17facts. Reverse errors0/0/9/9. No resistant variant known harmed in either direction. Select layer28. This supports local state-dependent recoverability, not source-independent repair or unique causal localization. Full four-fold source-independent paired/centered prefill trials at rho .01/.03 launched. New source-size estimator tests verify nested stratified sources, norm calibration, and fold exclusion.
+
+
+V5b closure: paired layer28/rho.03/prefill passes G2 with one corrected Captain America variant, directed gain.0294118, five random gains0. Source18/36(two seeds)/72 same gain; timing every-token diagnostic gain.0882353/no resistant harm, opposite direction gain0/one resistant harmed. Final96 source vectors and14code files frozen. Validation completed all32facts/320open+320MCQs, repair173+random5x173;174explicit proxy verdicts,5deferred.10directed facts/18variants,0recovered; Targeted/noop accuracy unchanged; margin+.783(all)/+.931(directed). Fails generated efficacy, above-random and layer28 contrast gates. Rule not adjusted; Sealed unopened. Integrity audit verifies counts, identities and semantic bindings. Learning curve does not support prioritizing simple source expansion within18-72, but cannot rule out data effects broadly. Exposed Validation cannot serve as fresh independent confirmation for a subsequently tuned rule.

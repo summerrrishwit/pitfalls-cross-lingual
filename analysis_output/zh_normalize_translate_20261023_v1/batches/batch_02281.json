@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2e6aca6a0b31bcb3b6c3eaf15484ee7901c05b21bcb8769ab06a92c184e75aae",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001043",
+      "decision": "ready",
+      "subject": "brown bear",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "omnivore",
+      "canonical_fact": "A brown bear is an omnivore.",
+      "prompt_en": "Which dietary class best describes a brown bear?",
+      "evidence_quotes": [
+        "Which best describes a brown bear?",
+        "omnivore"
+      ],
+      "reason": "The source question asks for the best dietary description of a brown bear and the source answer is 'omnivore'. This is a stable ecological/taxonomic class membership, fitting entity_to_class exactly (brown bear -> omnivore). The qualifier 'a variety of foods including berries, insects, and small animals' in the question supports the omnivore classification without constricting scope further.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "omnivore",
+        "canonical_fact": "A brown bear is an omnivore.",
+        "subject": "brown bear",
+        "prompt_en": "Which dietary class best describes a brown bear?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "omnivore"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a709d458f9da26ceacc57d76e18537c0a5cddb6cd92dcae16114711544b88bb4",
+      "input_sha256": "11eb10e6b5ba0d66a3acacee75dc3cefaa53d66e8020297a63b4181d08cfdc93",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001044",
+      "decision": "ready",
+      "subject": "some insects",
+      "relation_id": "organism_group_to_life_cycle_sequence",
+      "relation_definition": "The ordered sequence of developmental stages characterizing the life cycle of the specified organism group or species; retain qualifier scope (e.g., 'some insects').",
+      "direction": "organism group -> life cycle sequence",
+      "answer": "egg -> larva -> pupa -> adult",
+      "canonical_fact": "The life cycle of some insects is egg -> larva -> pupa -> adult.",
+      "prompt_en": "What sequence of developmental stages describes the life cycle of some insects?",
+      "evidence_quotes": [
+        "Which sequence shows the life cycle of some insects?",
+        "egg -> larva -> pupa -> adult"
+      ],
+      "reason": "No catalog relation precisely captures an ordered developmental-stage sequence for an organism group. Proposing organism_group_to_life_cycle_sequence (organism group -> life cycle sequence) to avoid forcing the fact into a broad category. The qualifier 'some insects' is preserved to reflect that the sequence applies to a subset (holometabolous insects), not all insects. The answer is a literal substring of the source answer.",
+      "english": {
+        "direction": "organism group -> life cycle sequence",
+        "relation_id": "organism_group_to_life_cycle_sequence",
+        "answer": "egg -> larva -> pupa -> adult",
+        "canonical_fact": "The life cycle of some insects is egg -> larva -> pupa -> adult.",
+        "subject": "some insects",
+        "prompt_en": "What sequence of developmental stages describes the life cycle of some insects?",
+        "relation_definition": "The ordered sequence of developmental stages characterizing the life cycle of the specified organism group or species; retain qualifier scope (e.g., 'some insects').",
+        "answer_aliases_en": [
+          "egg -> larva -> pupa -> adult"
+        ],
+        "relation_spec": {
+          "id": "organism_group_to_life_cycle_sequence",
+          "definition": "The ordered sequence of developmental stages characterizing the life cycle of the specified organism group or species; retain qualifier scope (e.g., 'some insects').",
+          "direction": "organism group -> life cycle sequence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5d1298ac4443c8a80bf9e5f4089be33fd780df420ee17afea6b77f08d11fe06b",
+      "input_sha256": "5bab04a66c9dc6576a029c76e20022c93807e2aa13337d02efe6d05980a8f839",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001043",
+      "input_sha256": "11eb10e6b5ba0d66a3acacee75dc3cefaa53d66e8020297a63b4181d08cfdc93",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "omnivore",
+        "canonical_fact": "A brown bear is an omnivore.",
+        "subject": "brown bear",
+        "prompt_en": "Which dietary class best describes a brown bear?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "omnivore"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a709d458f9da26ceacc57d76e18537c0a5cddb6cd92dcae16114711544b88bb4",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001043",
+        "subject_zh": "棕熊",
+        "prompt_zh": "哪个食性类别最能描述棕熊？",
+        "canonical_fact_zh": "棕熊是杂食动物。",
+        "answer_zh": "杂食动物",
+        "answer_aliases_zh": [
+          "杂食动物"
+        ]
+      },
+      "translation_sha256": "5e1ff92e4dba75b8d242decdcc71ecdca3b9a2220031ee797eff271bb67fffb6"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001044",
+      "input_sha256": "5bab04a66c9dc6576a029c76e20022c93807e2aa13337d02efe6d05980a8f839",
+      "english": {
+        "direction": "organism group -> life cycle sequence",
+        "relation_id": "organism_group_to_life_cycle_sequence",
+        "answer": "egg -> larva -> pupa -> adult",
+        "canonical_fact": "The life cycle of some insects is egg -> larva -> pupa -> adult.",
+        "subject": "some insects",
+        "prompt_en": "What sequence of developmental stages describes the life cycle of some insects?",
+        "relation_definition": "The ordered sequence of developmental stages characterizing the life cycle of the specified organism group or species; retain qualifier scope (e.g., 'some insects').",
+        "answer_aliases_en": [
+          "egg -> larva -> pupa -> adult"
+        ],
+        "relation_spec": {
+          "id": "organism_group_to_life_cycle_sequence",
+          "definition": "The ordered sequence of developmental stages characterizing the life cycle of the specified organism group or species; retain qualifier scope (e.g., 'some insects').",
+          "direction": "organism group -> life cycle sequence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5d1298ac4443c8a80bf9e5f4089be33fd780df420ee17afea6b77f08d11fe06b",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001044",
+        "subject_zh": "某些昆虫",
+        "prompt_zh": "描述某些昆虫生活史的发育阶段序列是什么？",
+        "canonical_fact_zh": "某些昆虫的生活史为卵 → 幼虫 → 蛹 → 成虫。",
+        "answer_zh": "卵 → 幼虫 → 蛹 → 成虫",
+        "answer_aliases_zh": [
+          "卵 → 幼虫 → 蛹 → 成虫"
+        ]
+      },
+      "translation_sha256": "30416ac12a4fc9bdbf4793e5c6baab76f4b7d624b4edd80c21051e6237f86ca9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001043",
+        "historical:raw_ai2_arc_easy_001044"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d79d7d11259a08dcf2581b3a74d79c75d40da7ae5193aeed15e56e8bfeca7418",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1753,
+      "first_chunk_seconds": 58.039,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1825,
+        "prompt_tokens": 1713,
+        "total_tokens": 3538,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1271,
+          "text_tokens": 554
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "32933c935c79fd5c63bcc472606c9ecf748c29b70bdb7b88ae28bd948608afbf",
+      "status": "completed",
+      "latency_seconds": 84.733
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001043",
+        "historical:raw_ai2_arc_easy_001044"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3c8494e8e9fd3c1db09d271bbdd36be72ba76680657aafb42c15f65957029f2d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 701,
+      "first_chunk_seconds": 9.803,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 752,
+        "prompt_tokens": 856,
+        "total_tokens": 1608,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 509,
+          "text_tokens": 243
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7d554a05536b27bc2a0df705b04e75f7cef15a8d7866064e1c43841114e9fad9",
+      "status": "completed",
+      "latency_seconds": 18.527
+    }
+  ],
+  "status": "completed"
+}

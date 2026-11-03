@@ -1,0 +1,7 @@
+# Findings
+
+CodeGraph confirms old conversion runners, inventory and semantic relation-review gates are a separate implementation. Literal references outside the old implementation/tests do not depend on those dedicated files. Current Chinese pipeline, recovery and watch tools DO use probe_relation_expansion_api.py; keep source copies and frozen runtime copy unchanged. The old scheme task plans were already removed with the archived payload; no separate active old task document exists. Current tasks/task_zh_candidate_pipeline.md is the NEW translation-review protocol, so retain it and only update obsolete historical/deletion wording. Never alter active run/protocol.md or other frozen/current-run files.
+
+Preparation stopped at an assertion before any deletion. Rechecking current documentation headers and frozen hashes; adjust only the planned documentation matching if its date/header differs.
+
+Preparation errors were resolved before any deletion: README lacked the optional transition header and was excluded; worktree utils/.env does not exist because current run uses the preserved primary env. Final prepare/execute completed after binding only existing current dependencies. Verification:27 existing current pipeline/recovery tests passed; deleted modules no longer referenced by remaining scripts/tests; all frozen/current/shared probe/env/automation guards passed. No source-code backup or deleted workflow copy created.

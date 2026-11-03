@@ -1,0 +1,160 @@
+{
+  "input_sha256": "740b65e48e2fd58807d87a56aa829d7b09eca297d6df314339a45faaa7bd6c0f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3d3830761b19b67bdd1d",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source_question is a bare noun phrase ('Inherited characteristics') with no interrogative structure, contextual framing, or attribution. The source_answer ('include spots on a ladybug') is a syntactic fragment. No existing catalog relation fits the 'include' (whole-to-example/instance) direction, and the source support is insufficient to establish a precise, reusable factual candidate with a well-defined subject, relation, and answer.",
+      "input_sha256": "0ba9572efa80fd59d7fc0c972235afc691101fa4ac7da3d679b227cbfa0c3dfc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3d560be7128f3a195fa3",
+      "decision": "ready",
+      "subject": "the word 'good'",
+      "relation_id": "term_to_suitability",
+      "relation_definition": "Stated suitability or functional purpose of a term (or its meaning) in a specified theoretical or contextual framework, attributed to a named source; distinct from the term's definition or meaning.",
+      "direction": "term -> suitability/purpose in a specified theoretical context",
+      "answer": "dynamic use",
+      "canonical_fact": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for dynamic use.",
+      "prompt_en": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for what use?",
+      "evidence_quotes": [
+        "dynamic use",
+        "According to Stevenson, the word “good” has a pleasing emotive meaning that fits it for"
+      ],
+      "reason": "The source is a proper fill-in question with explicit attribution to C.L. Stevenson and a concise answer. No existing catalog relation fits the 'fits it for' / functional-suitability relationship exactly (symbol_to_meaning would require the answer to BE the meaning, not a purpose the meaning enables), so a precise new relation 'term_to_suitability' is proposed. The prompt is option-free and does not contain the answer 'dynamic use'.",
+      "english": {
+        "relation_id": "term_to_suitability",
+        "canonical_fact": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for dynamic use.",
+        "prompt_en": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for what use?",
+        "answer": "dynamic use",
+        "direction": "term -> suitability/purpose in a specified theoretical context",
+        "relation_definition": "Stated suitability or functional purpose of a term (or its meaning) in a specified theoretical or contextual framework, attributed to a named source; distinct from the term's definition or meaning.",
+        "subject": "the word 'good'",
+        "answer_aliases_en": [
+          "dynamic use",
+          "dynamic use."
+        ],
+        "relation_spec": {
+          "id": "term_to_suitability",
+          "definition": "Stated suitability or functional purpose of a term (or its meaning) in a specified theoretical or contextual framework, attributed to a named source; distinct from the term's definition or meaning.",
+          "direction": "term -> suitability/purpose in a specified theoretical context"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "722925a4bf378ced4a3f399b0c53a9a6066202081b01be31a28a624beb61fb10",
+      "input_sha256": "764e8fd97a0b171cb159431c75036b7f29c20c53deb73e2d3be974a023bd8433",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3d560be7128f3a195fa3",
+      "input_sha256": "764e8fd97a0b171cb159431c75036b7f29c20c53deb73e2d3be974a023bd8433",
+      "english": {
+        "relation_id": "term_to_suitability",
+        "canonical_fact": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for dynamic use.",
+        "prompt_en": "According to Stevenson, the word 'good' has a pleasing emotive meaning that fits it for what use?",
+        "answer": "dynamic use",
+        "direction": "term -> suitability/purpose in a specified theoretical context",
+        "relation_definition": "Stated suitability or functional purpose of a term (or its meaning) in a specified theoretical or contextual framework, attributed to a named source; distinct from the term's definition or meaning.",
+        "subject": "the word 'good'",
+        "answer_aliases_en": [
+          "dynamic use",
+          "dynamic use."
+        ],
+        "relation_spec": {
+          "id": "term_to_suitability",
+          "definition": "Stated suitability or functional purpose of a term (or its meaning) in a specified theoretical or contextual framework, attributed to a named source; distinct from the term's definition or meaning.",
+          "direction": "term -> suitability/purpose in a specified theoretical context"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "722925a4bf378ced4a3f399b0c53a9a6066202081b01be31a28a624beb61fb10",
+      "translation": {
+        "record_id": "public:pbf_3d560be7128f3a195fa3",
+        "subject_zh": "'good'一词",
+        "prompt_zh": "根据斯蒂文森的观点，'good'一词具有令人愉悦的情感含义，这使其适用于何种使用？",
+        "canonical_fact_zh": "根据斯蒂文森的观点，'good'一词具有令人愉悦的情感含义，这使其适用于动态使用。",
+        "answer_zh": "动态使用",
+        "answer_aliases_zh": [
+          "动态使用",
+          "动态使用。"
+        ]
+      },
+      "translation_sha256": "3ea4d3805d6c9f2722d6537e875f6fa8f900e71918f9febad60e9d2239cec464"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3d3830761b19b67bdd1d",
+        "public:pbf_3d560be7128f3a195fa3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b10cfe2202f2e01edb0a5bfbbd0bd58811ea070d9f5c2180f59104d127627bcf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4549,
+      "first_chunk_seconds": 43.507,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4871,
+        "prompt_tokens": 1609,
+        "total_tokens": 6480,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4320,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5015e0660dc4ed3d9aa5c5655d5eb8b1e164375f687deb43471fc68d47cf0dd9",
+      "status": "completed",
+      "latency_seconds": 131.282
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3d560be7128f3a195fa3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c66663ced63a224b38fa80731e1e373e477eda0abb4104bc59d3453e22a1f150",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1262,
+      "first_chunk_seconds": 13.568,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1327,
+        "prompt_tokens": 599,
+        "total_tokens": 1926,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1167,
+          "text_tokens": 160
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "39601a455359a91d9d84bb03162df5d05143dbf32f54161de5c6398a8035a5a0",
+      "status": "completed",
+      "latency_seconds": 35.966
+    }
+  ],
+  "status": "completed"
+}

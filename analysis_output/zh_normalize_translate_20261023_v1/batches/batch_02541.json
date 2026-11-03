@@ -1,0 +1,278 @@
+{
+  "input_sha256": "2c5b68706bbd6e8cceec4fcfc7a24eaa080bc4128797d0baf5d2dab49acb8a1b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003211",
+      "decision": "ready",
+      "subject": "most birds",
+      "relation_id": "organism_to_ability",
+      "relation_definition": "Typical or general ability/capability shared by a specified group of organisms; retains the qualifier 'most' where present; not exclusive to that group.",
+      "direction": "organism group -> typical ability",
+      "answer": "fly",
+      "canonical_fact": "Most birds have the ability to fly.",
+      "prompt_en": "What ability do most birds have?",
+      "evidence_quotes": [
+        "What do most birds have the ability to do?",
+        "ability to fly"
+      ],
+      "reason": "Source question and answer clearly state that most birds have the ability to fly. No catalog relation covers 'organism group -> typical ability', so a precise new snake_case relation is proposed. The answer 'fly' is a literal substring of source_answer 'ability to fly'. The qualifier 'most' is preserved.",
+      "english": {
+        "direction": "organism group -> typical ability",
+        "relation_id": "organism_to_ability",
+        "answer": "fly",
+        "canonical_fact": "Most birds have the ability to fly.",
+        "subject": "most birds",
+        "prompt_en": "What ability do most birds have?",
+        "relation_definition": "Typical or general ability/capability shared by a specified group of organisms; retains the qualifier 'most' where present; not exclusive to that group.",
+        "answer_aliases_en": [
+          "fly"
+        ],
+        "relation_spec": {
+          "id": "organism_to_ability",
+          "definition": "Typical or general ability/capability shared by a specified group of organisms; retains the qualifier 'most' where present; not exclusive to that group.",
+          "direction": "organism group -> typical ability"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b6338dd2cb33d5f781be0b55208d2055c8fa39aed70a522d297fadbdcf517722",
+      "input_sha256": "aa65eb2414250297eddc369917e9eee3436129c66fb8f57ba5df78012552a59d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003257",
+      "decision": "ready",
+      "subject": "building in Washington D.C. with the most books",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "library of congress",
+      "canonical_fact": "The building in Washington D.C. with the most books is the Library of Congress.",
+      "prompt_en": "Which building in Washington D.C. has the most books?",
+      "evidence_quotes": [
+        "What building in Washington D.C. has the most books?",
+        "library of congress"
+      ],
+      "reason": "The source provides an identifying description (building in Washington D.C. with the most books) that uniquely points to the Library of Congress. This fits description_to_entity exactly in direction and scope. The answer 'library of congress' is copied verbatim from source_answer.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "library of congress",
+        "canonical_fact": "The building in Washington D.C. with the most books is the Library of Congress.",
+        "subject": "building in Washington D.C. with the most books",
+        "prompt_en": "Which building in Washington D.C. has the most books?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "library of congress"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4581999a7846f64f31ed10b0ae10190c2789104ab7bb601f09187e7710d979b6",
+      "input_sha256": "ff73689f0ca314dc3a826f7b9cb1ee76ea519e3d73424c1b42ee3dc1835b2354",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003211",
+      "input_sha256": "aa65eb2414250297eddc369917e9eee3436129c66fb8f57ba5df78012552a59d",
+      "english": {
+        "direction": "organism group -> typical ability",
+        "relation_id": "organism_to_ability",
+        "answer": "fly",
+        "canonical_fact": "Most birds have the ability to fly.",
+        "subject": "most birds",
+        "prompt_en": "What ability do most birds have?",
+        "relation_definition": "Typical or general ability/capability shared by a specified group of organisms; retains the qualifier 'most' where present; not exclusive to that group.",
+        "answer_aliases_en": [
+          "fly"
+        ],
+        "relation_spec": {
+          "id": "organism_to_ability",
+          "definition": "Typical or general ability/capability shared by a specified group of organisms; retains the qualifier 'most' where present; not exclusive to that group.",
+          "direction": "organism group -> typical ability"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b6338dd2cb33d5f781be0b55208d2055c8fa39aed70a522d297fadbdcf517722",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003211",
+        "subject_zh": "大多数鸟类",
+        "prompt_zh": "大多数鸟类拥有什么能力？",
+        "canonical_fact_zh": "大多数鸟类具有飞行的能力。",
+        "answer_zh": "飞行",
+        "answer_aliases_zh": [
+          "飞行"
+        ]
+      },
+      "translation_sha256": "927b3bdc4534fa4112b80219e2caf2534c996cd6558a98851ee68a556883fa8d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003257",
+      "input_sha256": "ff73689f0ca314dc3a826f7b9cb1ee76ea519e3d73424c1b42ee3dc1835b2354",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "library of congress",
+        "canonical_fact": "The building in Washington D.C. with the most books is the Library of Congress.",
+        "subject": "building in Washington D.C. with the most books",
+        "prompt_en": "Which building in Washington D.C. has the most books?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "library of congress"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4581999a7846f64f31ed10b0ae10190c2789104ab7bb601f09187e7710d979b6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003257",
+        "subject_zh": "华盛顿特区藏书最多的建筑",
+        "prompt_zh": "华盛顿特区哪座建筑藏书最多？",
+        "canonical_fact_zh": "华盛顿特区藏书最多的建筑是国会图书馆。",
+        "answer_zh": "国会图书馆",
+        "answer_aliases_zh": [
+          "国会图书馆"
+        ]
+      },
+      "translation_sha256": "6e76f8f8f40c78cf9d5cc68d67dd4237430d3291c9156182dd94ec5ecd073bc6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003211",
+        "historical:raw_commonsense_qa_003257"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e07f6a83aa6369173382955845eaccbfdb1e624056a8fa697b381b88cf034fd0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2896,
+      "first_chunk_seconds": 31.128,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2978,
+        "prompt_tokens": 1663,
+        "total_tokens": 4641,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2502,
+          "text_tokens": 476
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f5f11354a46d4f24bc5e0a1854aad4ff4506da522c5854750474f56dfb560875",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 71.359,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003211",
+        "historical:raw_commonsense_qa_003257"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1e185bd97cfa73751dda55d4409e1b08ae25839755c4ea42d0a3f029736b209a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2437,
+      "first_chunk_seconds": 31.102,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2651,
+        "prompt_tokens": 1680,
+        "total_tokens": 4331,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2193,
+          "text_tokens": 458
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cd01a538508ff9fcc625834e7ebf4c06135de0f85ba38362cd53eabe2c1b5347",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 124.373,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003211",
+        "historical:raw_commonsense_qa_003257"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6d134600ccc4cbf532b163b699684dcabee5702fdf282e0ebaffe3b132479d50",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2319,
+      "first_chunk_seconds": 9.272,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2450,
+        "prompt_tokens": 1682,
+        "total_tokens": 4132,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1954,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "20e7ec7adc35d92c1739a129846b3ac697fb0714d7a951c6150db1a7113ee9b4",
+      "status": "completed",
+      "latency_seconds": 39.821
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003211",
+        "historical:raw_commonsense_qa_003257"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a2643d2039b0070b9f92f03ef8b75f96061fc24a441165b83e3487fb0cde379e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 660,
+      "first_chunk_seconds": 21.831,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 714,
+        "prompt_tokens": 833,
+        "total_tokens": 1547,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 506,
+          "text_tokens": 208
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5afa428ecaf58952d5cd92881b619c5b6f7724fd00d6aa8e000e9fb829848016",
+      "status": "completed",
+      "latency_seconds": 85.715
+    }
+  ],
+  "status": "completed"
+}

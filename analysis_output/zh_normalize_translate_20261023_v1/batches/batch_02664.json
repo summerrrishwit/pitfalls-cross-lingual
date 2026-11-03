@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d765a3b2d0747647328e5e856f8b392b0bc2e970b172077466b0dd1b33a6e9e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007002",
+      "decision": "ready",
+      "subject": "song",
+      "relation_id": "entity_to_perception_sense",
+      "relation_definition": "The primary sensory modality through which the specified entity is perceived or experienced by a listener/observer.",
+      "direction": "entity -> sense",
+      "answer": "hearing",
+      "canonical_fact": "A song is perceived through hearing.",
+      "prompt_en": "Through which sensory modality is a song primarily perceived?",
+      "evidence_quotes": [
+        "hearing",
+        "touch your heart"
+      ],
+      "reason": "The source QA gives the unambiguous answer 'hearing' for how a song is perceived. No catalog relation matches a perceptual-modality fact; proposing entity_to_perception_sense (entity -> sense) to capture 'the sense through which an entity is experienced.' Both model annotations agree on extraction; no conflict with source.",
+      "english": {
+        "direction": "entity -> sense",
+        "relation_id": "entity_to_perception_sense",
+        "answer": "hearing",
+        "canonical_fact": "A song is perceived through hearing.",
+        "subject": "song",
+        "prompt_en": "Through which sensory modality is a song primarily perceived?",
+        "relation_definition": "The primary sensory modality through which the specified entity is perceived or experienced by a listener/observer.",
+        "answer_aliases_en": [
+          "hearing"
+        ],
+        "relation_spec": {
+          "id": "entity_to_perception_sense",
+          "definition": "The primary sensory modality through which the specified entity is perceived or experienced by a listener/observer.",
+          "direction": "entity -> sense"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "378b4061d9cf38e2702dbf923a11bc0dab3f9f7fac934374217bde38af30e6da",
+      "input_sha256": "04aeb2c9f1fe576e03a0bcaba5e40495ff8ef33176f2c4d2682445b011835abf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007010",
+      "decision": "ready",
+      "subject": "beaver",
+      "relation_id": "organism_to_blocked_feature",
+      "relation_definition": "The specific environmental feature or resource that the organism's constructed structures (e.g., dams, lodges) are designed to block, dam, or divert.",
+      "direction": "organism -> feature",
+      "answer": "body of water",
+      "canonical_fact": "A beaver builds structures to block a body of water.",
+      "prompt_en": "What kind of feature do beavers build their structures to block?",
+      "evidence_quotes": [
+        "body of water",
+        "A beaver builds structures to block"
+      ],
+      "reason": "The source QA unambiguously states the answer is 'body of water.' No catalog relation (e.g., organism_to_habitat, part_to_whole) captures the functional/behavioral fact of what an organism's structures block. Proposing organism_to_blocked_feature (organism -> feature). Both models agree on extraction; no conflict with source.",
+      "english": {
+        "direction": "organism -> feature",
+        "relation_id": "organism_to_blocked_feature",
+        "answer": "body of water",
+        "canonical_fact": "A beaver builds structures to block a body of water.",
+        "subject": "beaver",
+        "prompt_en": "What kind of feature do beavers build their structures to block?",
+        "relation_definition": "The specific environmental feature or resource that the organism's constructed structures (e.g., dams, lodges) are designed to block, dam, or divert.",
+        "answer_aliases_en": [
+          "body of water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_blocked_feature",
+          "definition": "The specific environmental feature or resource that the organism's constructed structures (e.g., dams, lodges) are designed to block, dam, or divert.",
+          "direction": "organism -> feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4d57ac3fdf80b9391d612d625dabe751b9abbbfd95cd4ec948c8ceeaddb5372c",
+      "input_sha256": "b355b5dae5bdfb534df79cde6237578815c43130c7c12a90947d157303eae338",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007002",
+      "input_sha256": "04aeb2c9f1fe576e03a0bcaba5e40495ff8ef33176f2c4d2682445b011835abf",
+      "english": {
+        "direction": "entity -> sense",
+        "relation_id": "entity_to_perception_sense",
+        "answer": "hearing",
+        "canonical_fact": "A song is perceived through hearing.",
+        "subject": "song",
+        "prompt_en": "Through which sensory modality is a song primarily perceived?",
+        "relation_definition": "The primary sensory modality through which the specified entity is perceived or experienced by a listener/observer.",
+        "answer_aliases_en": [
+          "hearing"
+        ],
+        "relation_spec": {
+          "id": "entity_to_perception_sense",
+          "definition": "The primary sensory modality through which the specified entity is perceived or experienced by a listener/observer.",
+          "direction": "entity -> sense"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "378b4061d9cf38e2702dbf923a11bc0dab3f9f7fac934374217bde38af30e6da",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007002",
+        "subject_zh": "歌曲",
+        "prompt_zh": "歌曲主要通过哪种感官模态来感知？",
+        "canonical_fact_zh": "歌曲是通过听觉来感知的。",
+        "answer_zh": "听觉",
+        "answer_aliases_zh": [
+          "听觉"
+        ]
+      },
+      "translation_sha256": "24c8af8b6467d60029c89812736f5fa743877656ed1ac9d0d914c632b5d0d554"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007010",
+      "input_sha256": "b355b5dae5bdfb534df79cde6237578815c43130c7c12a90947d157303eae338",
+      "english": {
+        "direction": "organism -> feature",
+        "relation_id": "organism_to_blocked_feature",
+        "answer": "body of water",
+        "canonical_fact": "A beaver builds structures to block a body of water.",
+        "subject": "beaver",
+        "prompt_en": "What kind of feature do beavers build their structures to block?",
+        "relation_definition": "The specific environmental feature or resource that the organism's constructed structures (e.g., dams, lodges) are designed to block, dam, or divert.",
+        "answer_aliases_en": [
+          "body of water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_blocked_feature",
+          "definition": "The specific environmental feature or resource that the organism's constructed structures (e.g., dams, lodges) are designed to block, dam, or divert.",
+          "direction": "organism -> feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4d57ac3fdf80b9391d612d625dabe751b9abbbfd95cd4ec948c8ceeaddb5372c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007010",
+        "subject_zh": "海狸",
+        "prompt_zh": "海狸建造结构是为了阻挡什么类型的环境特征？",
+        "canonical_fact_zh": "海狸建造结构来阻挡水体。",
+        "answer_zh": "水体",
+        "answer_aliases_zh": [
+          "水体"
+        ]
+      },
+      "translation_sha256": "35f481d383a45fc553e6bdbd20e73c1ab34a643a6707b4d4351c49f013c74a23"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007002",
+        "historical:raw_commonsense_qa_007010"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "058788ae2a8d612d00f37f7791478eee0f2511e3b2404c531a631dee5c121fbb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2045,
+      "first_chunk_seconds": 32.242,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2141,
+        "prompt_tokens": 1640,
+        "total_tokens": 3781,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1647,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d96160129d8f2c2f9538cecb139187c00a2dea4d6ce2f115081e448b1751a9d0",
+      "status": "completed",
+      "latency_seconds": 59.783
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007002",
+        "historical:raw_commonsense_qa_007010"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7c952c3b3da6be5eabc6a5710818176c0200b865290f3ab8ceda58d17d96a87",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1331,
+      "first_chunk_seconds": 26.083,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1366,
+        "prompt_tokens": 839,
+        "total_tokens": 2205,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1159,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bb2d701dd615b7527fca9bfe5c2913f5f42fe057b40a100a0b8c9e54019b3ab8",
+      "status": "completed",
+      "latency_seconds": 47.601
+    }
+  ],
+  "status": "completed"
+}

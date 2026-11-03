@@ -1,0 +1,61 @@
+{
+  "input_sha256": "d136046fa1689bbb08b07760ef01d78f7c4d7d6e233f063de22922f96b56f54a",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 64.963
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 25.779,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 41.445
+    }
+  ],
+  "status": "failed"
+}

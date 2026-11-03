@@ -1,0 +1,183 @@
+{
+  "input_sha256": "c06f9f8be2fcdd9d805096ff4093e4a236fd4938d292bf5e2144abd75615dc15",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004169",
+      "decision": "ready",
+      "subject": "having fun",
+      "relation_id": "state_to_facial_sign",
+      "relation_definition": "A facial expression or sign that characteristically manifests a specified emotional state or activity.",
+      "direction": "specified state or activity -> facial sign",
+      "answer": "smiling",
+      "canonical_fact": "Smiling is a facial sign of having fun.",
+      "prompt_en": "What is a facial sign of having fun?",
+      "evidence_quotes": [
+        "smiling"
+      ],
+      "reason": "Source question asks for a facial sign of having fun; source answer is 'smiling'. No catalog relation covers state-to-facial-manifestation, so a new relation state_to_facial_sign is proposed. The answer is a concise literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What is a facial sign of having fun?",
+        "relation_definition": "A facial expression or sign that characteristically manifests a specified emotional state or activity.",
+        "answer": "smiling",
+        "canonical_fact": "Smiling is a facial sign of having fun.",
+        "direction": "specified state or activity -> facial sign",
+        "relation_id": "state_to_facial_sign",
+        "subject": "having fun",
+        "answer_aliases_en": [
+          "smiling"
+        ],
+        "relation_spec": {
+          "id": "state_to_facial_sign",
+          "definition": "A facial expression or sign that characteristically manifests a specified emotional state or activity.",
+          "direction": "specified state or activity -> facial sign"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e6655621afb2435ac31795b0c0b4ed3863dc666a844f3f7556148f9cdc60ac42",
+      "input_sha256": "87c4c222f511ae33c10c1e829e54cba9b6dd5cd389ad7af47462dc235bea8a34",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004245",
+      "decision": "ready",
+      "subject": "garbage reality shows",
+      "relation_id": "content_to_watching_medium",
+      "relation_definition": "The standard medium or platform on which a specified type of content is viewed or consumed.",
+      "direction": "specified content type -> viewing medium/platform",
+      "answer": "television",
+      "canonical_fact": "Garbage reality shows are watched on television.",
+      "prompt_en": "What does one watch garbage reality shows on?",
+      "evidence_quotes": [
+        "television"
+      ],
+      "reason": "Source question asks what medium one watches garbage reality shows on; source answer is 'television'. No catalog relation covers content-to-viewing-medium, so a new relation content_to_watching_medium is proposed. The qualifier 'garbage' is preserved from the source as a colloquial descriptor. Answer is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What does one watch garbage reality shows on?",
+        "relation_definition": "The standard medium or platform on which a specified type of content is viewed or consumed.",
+        "answer": "television",
+        "canonical_fact": "Garbage reality shows are watched on television.",
+        "direction": "specified content type -> viewing medium/platform",
+        "relation_id": "content_to_watching_medium",
+        "subject": "garbage reality shows",
+        "answer_aliases_en": [
+          "television"
+        ],
+        "relation_spec": {
+          "id": "content_to_watching_medium",
+          "definition": "The standard medium or platform on which a specified type of content is viewed or consumed.",
+          "direction": "specified content type -> viewing medium/platform"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3f8b9e67fb50cf2bbe48d34591900e4aa96962c4383f75e363cef54fad133610",
+      "input_sha256": "7bca6580add58bc5fe51e6558612745125706f948037653b6b4c5abebe2d3e1b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c6a0391a6824f45a48b672cf9d1ad16c70943d755f7d85cc69920b2cf030e83b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.564
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c6a0391a6824f45a48b672cf9d1ad16c70943d755f7d85cc69920b2cf030e83b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.744
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c6a0391a6824f45a48b672cf9d1ad16c70943d755f7d85cc69920b2cf030e83b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2388,
+      "first_chunk_seconds": 49.999,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2568,
+        "prompt_tokens": 1581,
+        "total_tokens": 4149,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2122,
+          "text_tokens": 446
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "343dfa6f1cda73a9b2752fbf2ef566ea7b01d12fc9a099f406d8bd7156782624",
+      "status": "completed",
+      "latency_seconds": 157.886
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "46cbca83c174ef0c93a8a0dc474a46197ba4597d521bd3bf3a82d96e0897bd92",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.961
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "46cbca83c174ef0c93a8a0dc474a46197ba4597d521bd3bf3a82d96e0897bd92",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 59.948
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004169",
+        "historical:raw_commonsense_qa_004245"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "46cbca83c174ef0c93a8a0dc474a46197ba4597d521bd3bf3a82d96e0897bd92",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 77.776
+    }
+  ],
+  "status": "failed"
+}

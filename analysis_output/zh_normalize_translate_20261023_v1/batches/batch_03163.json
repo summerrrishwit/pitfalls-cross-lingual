@@ -1,0 +1,186 @@
+{
+  "input_sha256": "a80bef3892dd3ad2e4a6442af77220edd56b02c0f2883f6658743cf7ac21e45f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000791",
+      "decision": "ready",
+      "subject": "mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "air",
+      "canonical_fact": "A mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves, is called air.",
+      "prompt_en": "What is the name of a mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves?",
+      "evidence_quotes": [
+        "molecules of many different gases",
+        "feel it when it moves",
+        "air"
+      ],
+      "reason": "The source question supplies a defining description (invisible, tasteless, odorless mixture of gas molecules felt only when moving) and the answer is the conventional term 'air'. This fits description_to_term exactly (identifying description -> unique term). No conflict with existing extractions; both model annotations agree on subject, answer, and canonical fact.",
+      "english": {
+        "prompt_en": "What is the name of a mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "air",
+        "canonical_fact": "A mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves, is called air.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "mixture of molecules of many different gases that is usually invisible, tasteless, and odorless, and can only be felt when it moves",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f443f0b0f33671a8ccf04663b2de7b61ec4b463346c5948171f5a79b5056a654",
+      "input_sha256": "dc80ff9b5801672d5032914dcbc96dead8c6c4f8fc7e65b6005d1e140065eb77",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000792",
+      "decision": "ready",
+      "subject": "phosphate mineral turquoise",
+      "relation_id": "entity_to_color",
+      "relation_definition": "Characteristic or typical visual color of a specified entity; not to be confused with artificial coloring or a single anomalous sample.",
+      "direction": "entity -> color",
+      "answer": "blue",
+      "canonical_fact": "The phosphate mineral turquoise is blue.",
+      "prompt_en": "What is the color of the phosphate mineral turquoise?",
+      "evidence_quotes": [
+        "phosphate mineral turquoise",
+        "blue"
+      ],
+      "reason": "No existing catalog relation covers a physical color attribute of an entity. Proposed new relation entity_to_color with direction entity -> color. The source question explicitly asks for the color of the phosphate mineral turquoise and the source answer is 'blue'. Both model annotations agree. No conflict.",
+      "english": {
+        "prompt_en": "What is the color of the phosphate mineral turquoise?",
+        "relation_definition": "Characteristic or typical visual color of a specified entity; not to be confused with artificial coloring or a single anomalous sample.",
+        "answer": "blue",
+        "canonical_fact": "The phosphate mineral turquoise is blue.",
+        "direction": "entity -> color",
+        "relation_id": "entity_to_color",
+        "subject": "phosphate mineral turquoise",
+        "answer_aliases_en": [
+          "blue"
+        ],
+        "relation_spec": {
+          "id": "entity_to_color",
+          "definition": "Characteristic or typical visual color of a specified entity; not to be confused with artificial coloring or a single anomalous sample.",
+          "direction": "entity -> color"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4ec324bc541c5c9cad461460cb4dab6890d9a2f430b57a78f5db597e5718d33f",
+      "input_sha256": "81b8270fb435b6d72ad8fd7dba20dda1467fd0909d625f4f1802a8744c0b48ec",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c46c36572d4feec29b71a6bf29f2e64a28e704f9ecf7dd88de9b107e02f0227",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 18.817
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2c46c36572d4feec29b71a6bf29f2e64a28e704f9ecf7dd88de9b107e02f0227",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 62.149
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2c46c36572d4feec29b71a6bf29f2e64a28e704f9ecf7dd88de9b107e02f0227",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1858,
+      "first_chunk_seconds": 62.642,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1987,
+        "prompt_tokens": 1759,
+        "total_tokens": 3746,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1437,
+          "text_tokens": 550
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cb2f4513621bc409a5dcad4ab99d1ff0685f0167bfdeb0d19f8814356c4614b2",
+      "status": "completed",
+      "latency_seconds": 92.639
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "871913232286dc034663b7763e1e1a7bbe0eade471cd3cdc8c72a3b659459e45",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.637
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "871913232286dc034663b7763e1e1a7bbe0eade471cd3cdc8c72a3b659459e45",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 124.261
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000791",
+        "historical:raw_sciq_000792"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "871913232286dc034663b7763e1e1a7bbe0eade471cd3cdc8c72a3b659459e45",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 63.437
+    }
+  ],
+  "status": "failed"
+}

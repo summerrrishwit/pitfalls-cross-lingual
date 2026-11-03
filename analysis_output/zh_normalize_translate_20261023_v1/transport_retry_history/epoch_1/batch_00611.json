@@ -1,0 +1,171 @@
+{
+  "input_sha256": "195131973c4848e3f6e7310792863c85e3a2624a72a99b248cb6aff9b0fece4f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0ab63d73b92da83ef194",
+      "decision": "ready",
+      "subject": "Aquinas's moral theory",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "natural law theory",
+      "canonical_fact": "Aquinas's moral theory is a version of natural law theory.",
+      "prompt_en": "Aquinas's moral theory is a version of",
+      "evidence_quotes": [
+        "Aquinas's moral theory is a version of",
+        "natural law theory."
+      ],
+      "reason": "Source states Aquinas's moral theory is a version of natural law theory. 'Version of' maps to class membership: Aquinas's moral theory is a specific instantiation within the broader class of natural law theory. entity_to_class fits the direction (entity -> class) and the stable taxonomy-level membership.",
+      "english": {
+        "subject": "Aquinas's moral theory",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "natural law theory",
+        "canonical_fact": "Aquinas's moral theory is a version of natural law theory.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "prompt_en": "Aquinas's moral theory is a version of",
+        "answer_aliases_en": [
+          "natural law theory",
+          "natural law theory."
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c2ecb13615394ab6b130cb538b4a60b04170788441038cc76655807b0eab5fd4",
+      "input_sha256": "c93eb4df8df9649a30fd87e2c23a858ee6f67e34388af8e44c90954e9d191963",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0aeb40f740cb3184fc67",
+      "decision": "ready",
+      "subject": "obligation of reparation",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "restitution, compensation, and satisfaction",
+      "canonical_fact": "The obligation of reparation may take the forms of restitution, compensation, and satisfaction, either alone or alongside other forms of reparation.",
+      "prompt_en": "The obligation of reparation may take the forms of",
+      "evidence_quotes": [
+        "What forms may the obligation of reparation take?",
+        "restitution, compensation, and satisfaction"
+      ],
+      "reason": "Source identifies restitution, compensation, and satisfaction as the constituent forms of the obligation of reparation. whole_to_part fits: the obligation (whole) has these specified constituent forms (parts), and the qualifier 'either alone or alongside other forms of reparation' is preserved in the canonical_fact. The existing answer is kept exactly; no conflict with source.",
+      "english": {
+        "subject": "obligation of reparation",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "restitution, compensation, and satisfaction",
+        "canonical_fact": "The obligation of reparation may take the forms of restitution, compensation, and satisfaction, either alone or alongside other forms of reparation.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "prompt_en": "The obligation of reparation may take the forms of",
+        "answer_aliases_en": [
+          "restitution, compensation, and satisfaction",
+          "Reparation includes restitution, compensation, and satisfaction, either alone or alongside other forms of reparation"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3b5784e7ee0f0a2860ef549733002963287503abf89d517a92ac8f62d92be554",
+      "input_sha256": "dd1194af7658a5e9d0d8ddbfed409f4098c3a8afbf7d4666d2aa7933108e4f86",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0ab63d73b92da83ef194",
+        "public:pbf_0aeb40f740cb3184fc67"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6df63ac2ac3aacc589284514535a10e5a1eceefd4745508d3e6c2283fa68d74a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 49.242
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0ab63d73b92da83ef194",
+        "public:pbf_0aeb40f740cb3184fc67"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6df63ac2ac3aacc589284514535a10e5a1eceefd4745508d3e6c2283fa68d74a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3399,
+        "prompt_tokens": 1640,
+        "total_tokens": 5039,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2871,
+          "text_tokens": 528
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e3c47c2905ed0e1eccad66389378cca45cae22086fbd226bf9b7b36ae8dde89c",
+      "status": "completed",
+      "latency_seconds": 86.036
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0ab63d73b92da83ef194",
+        "public:pbf_0aeb40f740cb3184fc67"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0891408ef12800a166d5ee8d6d3e647ada761679b4dcc49e0ebcd6e619726235",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 17.503
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0ab63d73b92da83ef194",
+        "public:pbf_0aeb40f740cb3184fc67"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0891408ef12800a166d5ee8d6d3e647ada761679b4dcc49e0ebcd6e619726235",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0ab63d73b92da83ef194",
+        "public:pbf_0aeb40f740cb3184fc67"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0891408ef12800a166d5ee8d6d3e647ada761679b4dcc49e0ebcd6e619726235",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.294
+    }
+  ],
+  "status": "failed"
+}

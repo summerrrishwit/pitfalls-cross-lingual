@@ -1,0 +1,195 @@
+{
+  "input_sha256": "0f0039405de1d94468f2dfb2dae4604828c66f0229a1514492a327baf4bb0cdd",
+  "normalized": [
+    {
+      "record_id": "public:pbf_adf4e4c07f32fd6710c6",
+      "decision": "ready",
+      "subject": "dog from Toy Story",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Slinky Dog",
+      "canonical_fact": "The dog from Toy Story is named Slinky Dog.",
+      "prompt_en": "What is the name of the dog from Toy Story?",
+      "evidence_quotes": [
+        "the dogs name from toy story",
+        "Slinky Dog"
+      ],
+      "reason": "The source question provides an identifying description ('the dog from Toy Story') that resolves to a unique entity. The source answer 'Slinky Dog' is the name of that entity. The catalog relation description_to_entity fits exactly: an explicitly qualified identifying description yields a unique entity.",
+      "english": {
+        "answer": "Slinky Dog",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the dog from Toy Story?",
+        "direction": "identifying description -> entity",
+        "subject": "dog from Toy Story",
+        "canonical_fact": "The dog from Toy Story is named Slinky Dog.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Slinky Dog",
+          "Slinky"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "03036bcc6cc81849d937c1caf3ef952c0e36ea5df5d34d5d96441995a257c643",
+      "input_sha256": "1b1dfbd7d093e7ad515c630a94559e6ce21ad1ed8d84c72d0cd79812b616fbf1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_adf66a039263889f875d",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question asks which view Mill's view 'most closely resembles' according to Brandt. This is a qualified degree-of-similarity scholarly attribution, not a definitional equivalence (term_to_definition) nor stable taxonomy membership (entity_to_class). No listed relation captures 'most closely resembles' without forcing a broad category. Deferred without forcing per catalog guidance.",
+      "input_sha256": "955ce789aaa143e0c0e3c50b5e22b26193952ecf47a544549dc7e80435b0ab59",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_adf4e4c07f32fd6710c6",
+      "input_sha256": "1b1dfbd7d093e7ad515c630a94559e6ce21ad1ed8d84c72d0cd79812b616fbf1",
+      "english": {
+        "answer": "Slinky Dog",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the dog from Toy Story?",
+        "direction": "identifying description -> entity",
+        "subject": "dog from Toy Story",
+        "canonical_fact": "The dog from Toy Story is named Slinky Dog.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Slinky Dog",
+          "Slinky"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "03036bcc6cc81849d937c1caf3ef952c0e36ea5df5d34d5d96441995a257c643",
+      "translation": {
+        "record_id": "public:pbf_adf4e4c07f32fd6710c6",
+        "subject_zh": "《玩具总动员》中的狗",
+        "prompt_zh": "《玩具总动员》中的狗叫什么名字？",
+        "canonical_fact_zh": "《玩具总动员》中的狗名叫弹簧狗。",
+        "answer_zh": "弹簧狗",
+        "answer_aliases_zh": [
+          "弹簧狗",
+          "弹簧"
+        ]
+      },
+      "translation_sha256": "f480b124e78746d77517d6703e7435d8c3b0e7a1f3854eebbb7e698263f2b276"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_adf4e4c07f32fd6710c6",
+        "public:pbf_adf66a039263889f875d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "57c1625ccfe3c094fa21c522b00a960290a11e13f66129fa4e15ed16e42941f3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3122,
+      "first_chunk_seconds": 51.092,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3120,
+        "prompt_tokens": 1652,
+        "total_tokens": 4772,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2581,
+          "text_tokens": 539
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "47c4312d491b79cce0c276a00df4ce3912db137e73c68f9fd8ad9f098b67242d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 79.146,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_adf4e4c07f32fd6710c6",
+        "public:pbf_adf66a039263889f875d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c24c635287fb4e516aae7e9626850f5c5e769bfb5fb40240f0eab2ad63305d9e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2205,
+      "first_chunk_seconds": 9.752,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2203,
+        "prompt_tokens": 1670,
+        "total_tokens": 3873,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1782,
+          "text_tokens": 421
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "4b96c39310413c8bd21b8072636557c163119fe1cadb072d7840b6fc1c9a605b",
+      "status": "completed",
+      "latency_seconds": 27.131
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_adf4e4c07f32fd6710c6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7ee37533bb4703a7b3e70359acc6c81bc0ff42394a8ee9acef4f948aea773386",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 903,
+      "first_chunk_seconds": 36.017,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 903,
+        "prompt_tokens": 502,
+        "total_tokens": 1405,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 773,
+          "text_tokens": 130
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5cc79e25be2484e1c0e11c2e88ff61cb7017cc8dcc8db60622319bae8844bce0",
+      "status": "completed",
+      "latency_seconds": 44.002
+    }
+  ],
+  "status": "completed"
+}

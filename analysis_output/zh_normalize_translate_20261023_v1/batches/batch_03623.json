@@ -1,0 +1,172 @@
+{
+  "input_sha256": "d35c4df37bb130b25a76bb1a2c65ef717834cf47b7667bc0d52b0d80ff69510e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000131",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question is option-dependent ('Which of the following…'). The description 'designed to convert energy into mechanical work' is not uniquely qualified to identify 'Electric fan' (many devices—motors, turbines, pumps—fit the description). Without the original option set, no precise description_to_entity or term_to_definition relation can be established. Both annotators flagged option_dependent. Insufficient source support for a clean, unambiguous factual extraction.",
+      "input_sha256": "631387d730fa4fe94f007e8ed59113d2204e6568197da1ab2c156296af214bca",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006198",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question asks where a crowded motorway is 'likely' to be, yielding a probabilistic/commonsense association ('city') rather than a stable, hard fact. No catalog relation fits: entity_to_containing_location requires geographic containment, not typical/probabilistic location; organism_to_habitat requires an organism. The answer is a typical-location inference, not a definable relational fact. Qwen-3.8-Max flagged typical_action_or_location. Insufficient source support for a precise relation extraction.",
+      "input_sha256": "beb9325aa95484db3e1780c377fd4b3b01f309458b6324db2d5080d4c0229212",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.282
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 20.05,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.094,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.781
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.802
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000131",
+        "historical:raw_commonsense_qa_006198"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c2295892bc2a9030bf8ac6cb9ac7ae9e6cab2e6b31c8096b6508d1f5ee4b3d88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1465,
+      "first_chunk_seconds": 2.55,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1503,
+        "prompt_tokens": 1550,
+        "total_tokens": 3053,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1090,
+          "text_tokens": 413
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1be0c819c02720e943bc3ef3542d66497d343d3865a3cf39e1e75d3f144d7a41",
+      "status": "completed",
+      "latency_seconds": 20.525
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03623.json",
+      "sha256": "fd24eaaeb5351a1d393c179af20dc0a1ff7969994d8eb974204b07c752e52e6d",
+      "previous_status": "failed"
+    }
+  ]
+}

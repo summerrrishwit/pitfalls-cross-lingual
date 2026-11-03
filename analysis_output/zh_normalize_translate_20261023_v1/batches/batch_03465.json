@@ -1,0 +1,170 @@
+{
+  "input_sha256": "7d87bfc68684a0bdc244c74c955fb88ff4d1e6f1e647957a28008d7f5cac46f9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005838",
+      "decision": "ready",
+      "subject": "freeze-dried or dehydrated food",
+      "relation_id": "entity_to_typical_transport",
+      "relation_definition": "The type of transport on which a specified entity is normally found, retaining the 'normally' qualifier; not a general location or habitat.",
+      "direction": "entity -> typical transport",
+      "answer": "space shuttle",
+      "canonical_fact": "Freeze-dried or dehydrated food is normally found on a space shuttle.",
+      "prompt_en": "On what kind of transport is freeze-dried or dehydrated food normally found?",
+      "evidence_quotes": [
+        "Food on what kind of transport is normally freeze dried or dehydrated?",
+        "space shuttle"
+      ],
+      "reason": "Source question and answer establish that freeze-dried or dehydrated food is normally found on a space shuttle. No existing catalog relation precisely captures 'typical transport context' (entity_to_containing_location is geographic; organism_to_habitat is ecological), so a new relation entity_to_typical_transport is proposed with an explicit 'normally' qualifier. Evidence is direct and unambiguous.",
+      "english": {
+        "prompt_en": "On what kind of transport is freeze-dried or dehydrated food normally found?",
+        "relation_definition": "The type of transport on which a specified entity is normally found, retaining the 'normally' qualifier; not a general location or habitat.",
+        "answer": "space shuttle",
+        "canonical_fact": "Freeze-dried or dehydrated food is normally found on a space shuttle.",
+        "direction": "entity -> typical transport",
+        "relation_id": "entity_to_typical_transport",
+        "subject": "freeze-dried or dehydrated food",
+        "answer_aliases_en": [
+          "space shuttle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_transport",
+          "definition": "The type of transport on which a specified entity is normally found, retaining the 'normally' qualifier; not a general location or habitat.",
+          "direction": "entity -> typical transport"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d26faa1393950b4de93b35b7728e7650f330b677922da22c1017e6e4c5c3363a",
+      "input_sha256": "c57d0d1c4446992622ddf69453413118aa86dcf665b82e4b5c8234f2820e11ef",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005870",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The description 'has blood and parents' is not a uniquely defining description for 'person'; many other organisms (animals, insects, etc.) also have blood and parents. The sensenova model correctly flagged non_unique_answer. The description_to_term relation requires a 'uniquely fitting' description, which is not met here. No other catalog relation captures a partial property assertion ('entity has property X') without forcing a broad category. Deferred.",
+      "input_sha256": "b2f62b53c2e80bc69254b637c00877ef1db569f83317fea59ae6cc9ecf0b5628",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005838",
+      "input_sha256": "c57d0d1c4446992622ddf69453413118aa86dcf665b82e4b5c8234f2820e11ef",
+      "english": {
+        "prompt_en": "On what kind of transport is freeze-dried or dehydrated food normally found?",
+        "relation_definition": "The type of transport on which a specified entity is normally found, retaining the 'normally' qualifier; not a general location or habitat.",
+        "answer": "space shuttle",
+        "canonical_fact": "Freeze-dried or dehydrated food is normally found on a space shuttle.",
+        "direction": "entity -> typical transport",
+        "relation_id": "entity_to_typical_transport",
+        "subject": "freeze-dried or dehydrated food",
+        "answer_aliases_en": [
+          "space shuttle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_transport",
+          "definition": "The type of transport on which a specified entity is normally found, retaining the 'normally' qualifier; not a general location or habitat.",
+          "direction": "entity -> typical transport"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d26faa1393950b4de93b35b7728e7650f330b677922da22c1017e6e4c5c3363a",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005838",
+        "subject_zh": "冻干或脱水食品",
+        "prompt_zh": "冻干或脱水食品通常出现在哪种交通工具上？",
+        "canonical_fact_zh": "冻干或脱水食品通常出现在航天飞机上。",
+        "answer_zh": "航天飞机",
+        "answer_aliases_zh": [
+          "航天飞机"
+        ]
+      },
+      "translation_sha256": "483c2da409b3fafe68047fb6a61fae7036deae0088740e40c095575e31ebadec"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005838",
+        "historical:raw_commonsense_qa_005870"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "07d60194a946ecf0436f1354cbb98d961be60b7d40f653d2eb18243abbdbd6d7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2988,
+      "first_chunk_seconds": 9.503,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3096,
+        "prompt_tokens": 1596,
+        "total_tokens": 4692,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2605,
+          "text_tokens": 491
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ab2753d8dd27f7e55c99d7b5127494e288881c8b2ef8bd0ad88d006889080b25",
+      "status": "completed",
+      "latency_seconds": 112.19
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005838"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db64370cff2f949b14e6e5d4ba7a394f88e329a99334d6e66f2648e8cd83a679",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.131
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005838"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "db64370cff2f949b14e6e5d4ba7a394f88e329a99334d6e66f2648e8cd83a679",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 507,
+      "first_chunk_seconds": 66.346,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 503,
+        "prompt_tokens": 554,
+        "total_tokens": 1057,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 383,
+          "text_tokens": 120
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b60a0f097e3e271b7256f4c77834ce643a7bd7e87b10b4814b9deb2f8af7d869",
+      "status": "completed",
+      "latency_seconds": 90.995
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,244 @@
+{
+  "input_sha256": "2e7cdde35beb4383d9cade8c9cc7ff177c33f520db6c767ad80fb735ffc09816",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001460",
+      "decision": "ready",
+      "subject": "growing leaf cell",
+      "relation_id": "entity_to_process",
+      "relation_definition": "A biological, chemical, or physical process that occurs in (or at) a specified entity; retain the entity's qualification (e.g., cell type, growth state). Direction: entity -> process.",
+      "direction": "entity -> process",
+      "answer": "sugar production",
+      "canonical_fact": "Sugar production occurs in a growing leaf cell.",
+      "prompt_en": "What biological process occurs in a growing leaf cell?",
+      "evidence_quotes": [
+        "Which process occurs in a growing leaf cell?",
+        "sugar production"
+      ],
+      "reason": "Source answer is 'sugar production'; no existing catalog relation captures 'process that occurs in an entity.' Proposed new relation entity_to_process. Sensenova's non_unique concern is overridden by the explicit source answer and the specific qualifier 'growing leaf cell.' Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "entity -> process",
+        "relation_id": "entity_to_process",
+        "answer": "sugar production",
+        "canonical_fact": "Sugar production occurs in a growing leaf cell.",
+        "subject": "growing leaf cell",
+        "prompt_en": "What biological process occurs in a growing leaf cell?",
+        "relation_definition": "A biological, chemical, or physical process that occurs in (or at) a specified entity; retain the entity's qualification (e.g., cell type, growth state). Direction: entity -> process.",
+        "answer_aliases_en": [
+          "sugar production"
+        ],
+        "relation_spec": {
+          "id": "entity_to_process",
+          "definition": "A biological, chemical, or physical process that occurs in (or at) a specified entity; retain the entity's qualification (e.g., cell type, growth state). Direction: entity -> process.",
+          "direction": "entity -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "39057080634236b559356e720923a0b037839f9c90006048169152b20343bd55",
+      "input_sha256": "0a982d5981df7ffe01ac4bef484dcc9703cddb55c03e311cf701bb5baf84aabc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001461",
+      "decision": "ready",
+      "subject": "Anton van Leeuwenhoek",
+      "relation_id": "person_to_field_of_contribution",
+      "relation_definition": "The scientific or academic field to which a specified person is credited with the most (superlative) or a stated degree of contribution. Direction: person -> field.",
+      "direction": "person -> field",
+      "answer": "microbiology",
+      "canonical_fact": "Anton van Leeuwenhoek is credited with the most contributions to microbiology.",
+      "prompt_en": "To which scientific field is Anton van Leeuwenhoek credited with the most contributions?",
+      "evidence_quotes": [
+        "To which scientific field is Leeuwenhoek credited with the most contributions?",
+        "microbiology"
+      ],
+      "reason": "Source answer is 'microbiology.' No catalog relation captures 'field of most contribution' (entity_to_class is taxonomy membership, not contribution). Proposed new relation person_to_field_of_contribution. Prompt mirrors the source phrasing, is option-free, and omits the answer.",
+      "english": {
+        "direction": "person -> field",
+        "relation_id": "person_to_field_of_contribution",
+        "answer": "microbiology",
+        "canonical_fact": "Anton van Leeuwenhoek is credited with the most contributions to microbiology.",
+        "subject": "Anton van Leeuwenhoek",
+        "prompt_en": "To which scientific field is Anton van Leeuwenhoek credited with the most contributions?",
+        "relation_definition": "The scientific or academic field to which a specified person is credited with the most (superlative) or a stated degree of contribution. Direction: person -> field.",
+        "answer_aliases_en": [
+          "microbiology"
+        ],
+        "relation_spec": {
+          "id": "person_to_field_of_contribution",
+          "definition": "The scientific or academic field to which a specified person is credited with the most (superlative) or a stated degree of contribution. Direction: person -> field.",
+          "direction": "person -> field"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d6da1c9f812f9d4f64111603ffe73c7dfe989606e0ba11cadaf930f5917e4841",
+      "input_sha256": "381e0c664a49a6f0164e7add1ff16f0af2a0a6177178af9bd3921c30ee6e22d4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "984a8da9819bbd6113e7cb8c0c62a64f7d04a7a1cccdd83de08e7513e8e98ec9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 12.844,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "984a8da9819bbd6113e7cb8c0c62a64f7d04a7a1cccdd83de08e7513e8e98ec9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1590,
+      "first_chunk_seconds": 21.217,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1695,
+        "prompt_tokens": 1711,
+        "total_tokens": 3406,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1163,
+          "text_tokens": 532
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1826823fd1e49d150263bea5e35d4deb381654f04366d4a52457306d8070e183",
+      "status": "completed",
+      "latency_seconds": 40.128
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.955
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.198
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 21.299,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.807
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.799
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001460",
+        "historical:raw_ai2_arc_easy_001461"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "89ade711735748a645cc27eb90248dd4bff720542d96af2ca2c537e812ca1eb7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.701
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02354.json",
+      "sha256": "c1aa3fa117e1b8013d1e23041d3c1ca5cb623380711c921d0b4b2a7dd8c4f8cb",
+      "previous_status": "failed"
+    }
+  ]
+}

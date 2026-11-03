@@ -1,0 +1,214 @@
+{
+  "input_sha256": "17484bf9978fcb0345d0ba2bcea2f9182f1d7e6ac8468f90228d8cbbcbccefeb",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000001",
+      "decision": "ready",
+      "subject": "Government, planned cities, workers, institutions, technology and record keeping",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "civilization",
+      "canonical_fact": "Government, planned cities, workers, institutions, technology and record keeping are characteristics of civilization among human populations.",
+      "prompt_en": "Government, planned cities, workers, institutions, technology, and record keeping are characteristics of what concept among human populations?",
+      "evidence_quotes": [
+        "Government, planned cities, workers, institutions, technology and record keeping are characteristics of",
+        "civilization"
+      ],
+      "reason": "The source question supplies a list of identifying characteristics (description) and asks for the term they define. 'civilization' is a literal substring of source_answer and fits the description_to_term direction (description -> term). No catalog relation is a better exact match; term_to_definition is the inverse direction and does not fit.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "civilization",
+        "canonical_fact": "Government, planned cities, workers, institutions, technology and record keeping are characteristics of civilization among human populations.",
+        "subject": "Government, planned cities, workers, institutions, technology and record keeping",
+        "prompt_en": "Government, planned cities, workers, institutions, technology, and record keeping are characteristics of what concept among human populations?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "civilization"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5a252e4e43be46e89b36499e311c0f010160de310145414e7b63a8825e2ecedc",
+      "input_sha256": "3e99cf3f83fc6d08b04de5e184903f1e5ea2d035f8c3247fd1616b8c2a15866c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000015",
+      "decision": "ready",
+      "subject": "Artie Shaw",
+      "relation_id": "musician_to_fame_ensemble",
+      "relation_definition": "The specific ensemble or group context in which a musician became professionally famous, as stated in source; not a genre, not a single performance, not an occupation.",
+      "direction": "musician -> ensemble/group",
+      "answer": "jazz band",
+      "canonical_fact": "Artie Shaw became famous playing a clarinet in a jazz band.",
+      "prompt_en": "In what ensemble did Artie Shaw become famous playing the clarinet?",
+      "evidence_quotes": [
+        "Artie Shaw became famous playing a clarinet in what outfit?",
+        "jazz band"
+      ],
+      "reason": "No existing catalog relation precisely captures 'the ensemble/group in which a musician became famous.' song_to_performer is about a specific song recording, not a career-defining group context. entity_to_class is a stable taxonomy membership, not a biographical fame context. Proposed new relation musician_to_fame_ensemble fits exactly: a named musician mapped to the ensemble context of their fame. The answer 'jazz band' is a literal substring of source_answer.",
+      "english": {
+        "direction": "musician -> ensemble/group",
+        "relation_id": "musician_to_fame_ensemble",
+        "answer": "jazz band",
+        "canonical_fact": "Artie Shaw became famous playing a clarinet in a jazz band.",
+        "subject": "Artie Shaw",
+        "prompt_en": "In what ensemble did Artie Shaw become famous playing the clarinet?",
+        "relation_definition": "The specific ensemble or group context in which a musician became professionally famous, as stated in source; not a genre, not a single performance, not an occupation.",
+        "answer_aliases_en": [
+          "jazz band"
+        ],
+        "relation_spec": {
+          "id": "musician_to_fame_ensemble",
+          "definition": "The specific ensemble or group context in which a musician became professionally famous, as stated in source; not a genre, not a single performance, not an occupation.",
+          "direction": "musician -> ensemble/group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "99b20327cc09deaa1720fe360347087ffb067dea230cbaaf88261d48d896bd16",
+      "input_sha256": "19407c4450b54d2c340afc7c5b00f9de5e1d4af64b200145fd81a5f7f2a675c3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000001",
+      "input_sha256": "3e99cf3f83fc6d08b04de5e184903f1e5ea2d035f8c3247fd1616b8c2a15866c",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "civilization",
+        "canonical_fact": "Government, planned cities, workers, institutions, technology and record keeping are characteristics of civilization among human populations.",
+        "subject": "Government, planned cities, workers, institutions, technology and record keeping",
+        "prompt_en": "Government, planned cities, workers, institutions, technology, and record keeping are characteristics of what concept among human populations?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "civilization"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5a252e4e43be46e89b36499e311c0f010160de310145414e7b63a8825e2ecedc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000001",
+        "subject_zh": "政府、规划城市、劳动者、制度、技术和记录保存",
+        "prompt_zh": "政府、规划城市、劳动者、制度、技术和记录保存是人类群体中什么概念的特征？",
+        "canonical_fact_zh": "政府、规划城市、劳动者、制度、技术和记录保存是人类群体中文明的特征。",
+        "answer_zh": "文明",
+        "answer_aliases_zh": [
+          "文明"
+        ]
+      },
+      "translation_sha256": "f836368f7ca573b6ec5c62e5901ae63ed71e716200aba5d0adbe0dc70f033637"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000015",
+      "input_sha256": "19407c4450b54d2c340afc7c5b00f9de5e1d4af64b200145fd81a5f7f2a675c3",
+      "english": {
+        "direction": "musician -> ensemble/group",
+        "relation_id": "musician_to_fame_ensemble",
+        "answer": "jazz band",
+        "canonical_fact": "Artie Shaw became famous playing a clarinet in a jazz band.",
+        "subject": "Artie Shaw",
+        "prompt_en": "In what ensemble did Artie Shaw become famous playing the clarinet?",
+        "relation_definition": "The specific ensemble or group context in which a musician became professionally famous, as stated in source; not a genre, not a single performance, not an occupation.",
+        "answer_aliases_en": [
+          "jazz band"
+        ],
+        "relation_spec": {
+          "id": "musician_to_fame_ensemble",
+          "definition": "The specific ensemble or group context in which a musician became professionally famous, as stated in source; not a genre, not a single performance, not an occupation.",
+          "direction": "musician -> ensemble/group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "99b20327cc09deaa1720fe360347087ffb067dea230cbaaf88261d48d896bd16",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000015",
+        "subject_zh": "阿蒂·肖",
+        "prompt_zh": "阿蒂·肖在什么乐团中演奏单簧管而出名？",
+        "canonical_fact_zh": "阿蒂·肖因在爵士乐队中演奏单簧管而出名。",
+        "answer_zh": "爵士乐队",
+        "answer_aliases_zh": [
+          "爵士乐队"
+        ]
+      },
+      "translation_sha256": "c35b64965cb7bd93c8f344e96d433c12406fb221ba477650164f15dcf75834b4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000001",
+        "historical:raw_commonsense_qa_000015"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f122d3429127da3c62a1e3a3bd01ae934cc121eb233170d4b6626651d1939c4b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2332,
+      "first_chunk_seconds": 34.866,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2398,
+        "prompt_tokens": 1759,
+        "total_tokens": 4157,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1812,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "71b646dc6a37a5d0e0d3c8a3a5433ad40193733022ee91431f6a60a483407814",
+      "status": "completed",
+      "latency_seconds": 63.355
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000001",
+        "historical:raw_commonsense_qa_000015"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "510f61f0dc26e4900fda4ab30aca1619568876047a72c3298bf2cedd67743e12",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1690,
+      "first_chunk_seconds": 5.367,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1796,
+        "prompt_tokens": 890,
+        "total_tokens": 2686,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1541,
+          "text_tokens": 255
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cebaeb017dffce2b4098bd28c2ff22c52e23d753faf146c040ee5a4b1a0856b7",
+      "status": "completed",
+      "latency_seconds": 40.251
+    }
+  ],
+  "status": "completed"
+}

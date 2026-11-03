@@ -1,0 +1,242 @@
+{
+  "input_sha256": "fb9e06ac85edb787ce3461500c2c270d8ea5ae166a79653b4a18fdb5ead7af1a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000355",
+      "decision": "ready",
+      "subject": "orbital period of a planet around the sun",
+      "relation_id": "orbital_period_to_determining_factor",
+      "relation_definition": "The physical quantity or factor that determines the orbital period (duration of revolution) of a specified celestial body orbiting a specified primary body.",
+      "direction": "orbital period of a specified body -> determining factor",
+      "answer": "distance",
+      "canonical_fact": "The orbital period (duration of orbit) of a planet around the sun is determined by its distance from the sun.",
+      "prompt_en": "What determines the duration of a planet's orbit around the sun?",
+      "evidence_quotes": [
+        "distance",
+        "determines how long a planet's orbit is around the sun"
+      ],
+      "reason": "Source answer explicitly states 'distance' as the determining factor. No existing catalog relation captures a causal/determinative physics relationship (determines/caused-by), so a precise new relation orbital_period_to_determining_factor is proposed. Qwen-3.8-Max marked non_extractable but the source answer is a single unambiguous token 'distance'; the non-unique concern is not supported by the source text. The canonical fact preserves the original qualifier 'determines' and the specific body (planet orbiting the sun).",
+      "english": {
+        "direction": "orbital period of a specified body -> determining factor",
+        "relation_id": "orbital_period_to_determining_factor",
+        "answer": "distance",
+        "canonical_fact": "The orbital period (duration of orbit) of a planet around the sun is determined by its distance from the sun.",
+        "subject": "orbital period of a planet around the sun",
+        "prompt_en": "What determines the duration of a planet's orbit around the sun?",
+        "relation_definition": "The physical quantity or factor that determines the orbital period (duration of revolution) of a specified celestial body orbiting a specified primary body.",
+        "answer_aliases_en": [
+          "distance"
+        ],
+        "relation_spec": {
+          "id": "orbital_period_to_determining_factor",
+          "definition": "The physical quantity or factor that determines the orbital period (duration of revolution) of a specified celestial body orbiting a specified primary body.",
+          "direction": "orbital period of a specified body -> determining factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0ace75fa473d8cd46aa07b2b7780e65b6a8afe04305885b5a603cea7c5dbcb33",
+      "input_sha256": "0a22fd22d3332d1cb9ad6b6df4fe232b4b719cb6e6e30b0ef568d31414fade5f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000356",
+      "decision": "ready",
+      "subject": "the study of how forces affect the motion of objects",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "dynamics",
+      "canonical_fact": "Dynamics is the study of how forces affect the motion of objects.",
+      "prompt_en": "What is the field of study that deals with how forces affect the motion of objects?",
+      "evidence_quotes": [
+        "dynamics",
+        "the study of how forces affect the motion of objects"
+      ],
+      "reason": "The source question supplies a defining description ('the study of how forces affect the motion of objects') and the source answer gives the conventional term 'dynamics.' The catalog relation description_to_term (direction: description -> term) fits exactly. Both model annotations agree on the extraction. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "dynamics",
+        "canonical_fact": "Dynamics is the study of how forces affect the motion of objects.",
+        "subject": "the study of how forces affect the motion of objects",
+        "prompt_en": "What is the field of study that deals with how forces affect the motion of objects?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "dynamics"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "550c08d5cc5b5b32161802d1aaec7b4ba1a060fc22fddeadb0f6c5b9beb79f7a",
+      "input_sha256": "11d25cd268d4bd19f3a3633d4c24b654b2082c027ff13c487be1a21ecb4cd0f0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000355",
+      "input_sha256": "0a22fd22d3332d1cb9ad6b6df4fe232b4b719cb6e6e30b0ef568d31414fade5f",
+      "english": {
+        "direction": "orbital period of a specified body -> determining factor",
+        "relation_id": "orbital_period_to_determining_factor",
+        "answer": "distance",
+        "canonical_fact": "The orbital period (duration of orbit) of a planet around the sun is determined by its distance from the sun.",
+        "subject": "orbital period of a planet around the sun",
+        "prompt_en": "What determines the duration of a planet's orbit around the sun?",
+        "relation_definition": "The physical quantity or factor that determines the orbital period (duration of revolution) of a specified celestial body orbiting a specified primary body.",
+        "answer_aliases_en": [
+          "distance"
+        ],
+        "relation_spec": {
+          "id": "orbital_period_to_determining_factor",
+          "definition": "The physical quantity or factor that determines the orbital period (duration of revolution) of a specified celestial body orbiting a specified primary body.",
+          "direction": "orbital period of a specified body -> determining factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0ace75fa473d8cd46aa07b2b7780e65b6a8afe04305885b5a603cea7c5dbcb33",
+      "translation": {
+        "record_id": "historical:raw_sciq_000355",
+        "subject_zh": "行星绕太阳运行的轨道周期",
+        "prompt_zh": "什么因素决定了行星绕太阳运行的轨道持续时间？",
+        "canonical_fact_zh": "行星绕太阳运行的轨道周期（绕行的持续时间）由它到太阳的距离决定。",
+        "answer_zh": "距离",
+        "answer_aliases_zh": [
+          "距离"
+        ]
+      },
+      "translation_sha256": "42cf526083d5f6f9cb56570423ca91534e172be1e155b1c30bca7e96c4170540"
+    },
+    {
+      "record_id": "historical:raw_sciq_000356",
+      "input_sha256": "11d25cd268d4bd19f3a3633d4c24b654b2082c027ff13c487be1a21ecb4cd0f0",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "dynamics",
+        "canonical_fact": "Dynamics is the study of how forces affect the motion of objects.",
+        "subject": "the study of how forces affect the motion of objects",
+        "prompt_en": "What is the field of study that deals with how forces affect the motion of objects?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "dynamics"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "550c08d5cc5b5b32161802d1aaec7b4ba1a060fc22fddeadb0f6c5b9beb79f7a",
+      "translation": {
+        "record_id": "historical:raw_sciq_000356",
+        "subject_zh": "研究力如何影响物体运动的学科",
+        "prompt_zh": "研究力如何影响物体运动的学科是什么？",
+        "canonical_fact_zh": "动力学是研究力如何影响物体运动的学科。",
+        "answer_zh": "动力学",
+        "answer_aliases_zh": [
+          "动力学"
+        ]
+      },
+      "translation_sha256": "94e28a2654dc9d7c287a264c03c8925f0a02e5fe0b118fbfc45a201ef0509b0e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000355",
+        "historical:raw_sciq_000356"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1094039a98f6f59550bcc99065469ec1641c9747c75b2abd7ad6244e7e727478",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.399
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000355",
+        "historical:raw_sciq_000356"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1094039a98f6f59550bcc99065469ec1641c9747c75b2abd7ad6244e7e727478",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2370,
+      "first_chunk_seconds": 2.438,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2571,
+        "prompt_tokens": 1693,
+        "total_tokens": 4264,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1980,
+          "text_tokens": 591
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ebe3333091adcec35cc681f65c602331e41afa9d076ef564ec5705eada63e87f",
+      "status": "completed",
+      "latency_seconds": 113.176
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000355",
+        "historical:raw_sciq_000356"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "05136b8569938e6d9f978cb2ff845ff445ef387410f648ed0d86b42262319c74",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.349
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000355",
+        "historical:raw_sciq_000356"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "05136b8569938e6d9f978cb2ff845ff445ef387410f648ed0d86b42262319c74",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1149,
+      "first_chunk_seconds": 4.174,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1270,
+        "prompt_tokens": 873,
+        "total_tokens": 2143,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1043,
+          "text_tokens": 227
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec7ac7c20cc558749e83b6cf108248c81d64391639aec664871f361a5eee1c3d",
+      "status": "completed",
+      "latency_seconds": 28.459
+    }
+  ],
+  "status": "completed"
+}

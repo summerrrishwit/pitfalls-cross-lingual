@@ -1,0 +1,217 @@
+{
+  "input_sha256": "d99cdbde64d40d8dc5d99740c2e1161849b4672ec74ed01129380448c3595df6",
+  "normalized": [
+    {
+      "record_id": "public:pbf_2e7a68d81a83e6433dee",
+      "decision": "ready",
+      "subject": "longest motorway in the UK",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "M6 motorway",
+      "canonical_fact": "The M6 motorway is the longest motorway in the UK.",
+      "prompt_en": "Which is the longest motorway in the UK?",
+      "evidence_quotes": [
+        "which is the longest motorway in the uk",
+        "M6 motorway"
+      ],
+      "reason": "The source question supplies a superlative identifying description ('longest motorway in the UK') whose unique referent is the M6 motorway. The catalog relation description_to_entity fits exactly: the description is explicitly qualified (superlative + domain) and uniquely identifies the entity. No date, market, or version qualifier is present in the source, so none is added.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "prompt_en": "Which is the longest motorway in the UK?",
+        "relation_id": "description_to_entity",
+        "answer": "M6 motorway",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "longest motorway in the UK",
+        "canonical_fact": "The M6 motorway is the longest motorway in the UK.",
+        "answer_aliases_en": [
+          "M6 motorway",
+          "M6"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d189355c2362298b3c664b514eb466269b7952c6c0f989875ce912b5782af509",
+      "input_sha256": "35885311570bb5319f49d4913935bfb508c12a55f8201fefcb9022e9b4f6ff48",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_2e7ad6b2b5626d40dd34",
+      "decision": "ready",
+      "subject": "fluorescent molecule of 1,000 daltons injected into one cell",
+      "relation_id": "molecule_to_transport_structure",
+      "relation_definition": "The specific intercellular structure (e.g., gap junction, plasmodesma) through which a stated molecule of stated size and type crosses between adjacent cells in a stated biological context.",
+      "direction": "specified molecule (stated size/type) in stated cellular context -> intercellular transport structure",
+      "answer": "gap junction",
+      "canonical_fact": "A fluorescent molecule of 1,000 daltons injected into one cell enters an adjacent cell by passing through a gap junction.",
+      "prompt_en": "A fluorescent molecule of 1,000 daltons injected into one cell is observed to enter an adjacent cell by passing through a …",
+      "evidence_quotes": [
+        "A fluorescent molecule of 1,000 daltons injected into one cell is observed to enter an adjacent cell by passing through a",
+        "gap junction"
+      ],
+      "reason": "The source states a cell-biology transport fact: a ~1 kDa fluorescent molecule traverses an adjacent cell via a gap junction. No catalog relation captures this molecule-to-transport-structure association; the closest existing relations (part_to_whole, entity_to_material, entity_to_containing_location) are structurally mismatched. A precise new relation molecule_to_transport_structure is proposed to avoid forcing a broad category.",
+      "english": {
+        "direction": "specified molecule (stated size/type) in stated cellular context -> intercellular transport structure",
+        "prompt_en": "A fluorescent molecule of 1,000 daltons injected into one cell is observed to enter an adjacent cell by passing through a …",
+        "relation_id": "molecule_to_transport_structure",
+        "answer": "gap junction",
+        "relation_definition": "The specific intercellular structure (e.g., gap junction, plasmodesma) through which a stated molecule of stated size and type crosses between adjacent cells in a stated biological context.",
+        "subject": "fluorescent molecule of 1,000 daltons injected into one cell",
+        "canonical_fact": "A fluorescent molecule of 1,000 daltons injected into one cell enters an adjacent cell by passing through a gap junction.",
+        "answer_aliases_en": [
+          "gap junction"
+        ],
+        "relation_spec": {
+          "id": "molecule_to_transport_structure",
+          "definition": "The specific intercellular structure (e.g., gap junction, plasmodesma) through which a stated molecule of stated size and type crosses between adjacent cells in a stated biological context.",
+          "direction": "specified molecule (stated size/type) in stated cellular context -> intercellular transport structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0c6dc420e5c4e1f7b4345c850962fb5688443a3e07a1db28fb10ff678ddc74da",
+      "input_sha256": "e7991c324d4fa63270a9f209b671b98ea94fa36d77ae7ef9f331dfdfa4d43435",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_2e7a68d81a83e6433dee",
+      "input_sha256": "35885311570bb5319f49d4913935bfb508c12a55f8201fefcb9022e9b4f6ff48",
+      "english": {
+        "direction": "identifying description -> entity",
+        "prompt_en": "Which is the longest motorway in the UK?",
+        "relation_id": "description_to_entity",
+        "answer": "M6 motorway",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "subject": "longest motorway in the UK",
+        "canonical_fact": "The M6 motorway is the longest motorway in the UK.",
+        "answer_aliases_en": [
+          "M6 motorway",
+          "M6"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d189355c2362298b3c664b514eb466269b7952c6c0f989875ce912b5782af509",
+      "translation": {
+        "record_id": "public:pbf_2e7a68d81a83e6433dee",
+        "subject_zh": "英国最长的公路",
+        "prompt_zh": "英国最长的公路是哪条？",
+        "canonical_fact_zh": "M6公路是英国最长的公路。",
+        "answer_zh": "M6公路",
+        "answer_aliases_zh": [
+          "M6公路",
+          "M6"
+        ]
+      },
+      "translation_sha256": "c65fa1868bb9d9c5e7965eac1bd6c115e352aeb8c7f7e059212e89b3203000c4"
+    },
+    {
+      "record_id": "public:pbf_2e7ad6b2b5626d40dd34",
+      "input_sha256": "e7991c324d4fa63270a9f209b671b98ea94fa36d77ae7ef9f331dfdfa4d43435",
+      "english": {
+        "direction": "specified molecule (stated size/type) in stated cellular context -> intercellular transport structure",
+        "prompt_en": "A fluorescent molecule of 1,000 daltons injected into one cell is observed to enter an adjacent cell by passing through a …",
+        "relation_id": "molecule_to_transport_structure",
+        "answer": "gap junction",
+        "relation_definition": "The specific intercellular structure (e.g., gap junction, plasmodesma) through which a stated molecule of stated size and type crosses between adjacent cells in a stated biological context.",
+        "subject": "fluorescent molecule of 1,000 daltons injected into one cell",
+        "canonical_fact": "A fluorescent molecule of 1,000 daltons injected into one cell enters an adjacent cell by passing through a gap junction.",
+        "answer_aliases_en": [
+          "gap junction"
+        ],
+        "relation_spec": {
+          "id": "molecule_to_transport_structure",
+          "definition": "The specific intercellular structure (e.g., gap junction, plasmodesma) through which a stated molecule of stated size and type crosses between adjacent cells in a stated biological context.",
+          "direction": "specified molecule (stated size/type) in stated cellular context -> intercellular transport structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0c6dc420e5c4e1f7b4345c850962fb5688443a3e07a1db28fb10ff678ddc74da",
+      "translation": {
+        "record_id": "public:pbf_2e7ad6b2b5626d40dd34",
+        "subject_zh": "被注入单个细胞的1000道尔顿荧光分子",
+        "prompt_zh": "将一个1000道尔顿的荧光分子注入一个细胞后，观察到它通过……进入相邻细胞。",
+        "canonical_fact_zh": "将一个1000道尔顿的荧光分子注入一个细胞后，它通过间隙连接进入相邻细胞。",
+        "answer_zh": "间隙连接",
+        "answer_aliases_zh": [
+          "间隙连接"
+        ]
+      },
+      "translation_sha256": "e57eeb8e4cf6c8826e0633629fd87caa358822665b11f67c87f400a761a18f11"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2e7a68d81a83e6433dee",
+        "public:pbf_2e7ad6b2b5626d40dd34"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "023da5264b7375a2e230f9fd13af2485c3fa39317311e7dcb49fad15927c0658",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2672,
+      "first_chunk_seconds": 4.846,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2796,
+        "prompt_tokens": 1684,
+        "total_tokens": 4480,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2156,
+          "text_tokens": 640
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8edf28df28454b17b34a0f17f20e35bd32a0062c6f63af08e482e0b611353121",
+      "status": "completed",
+      "latency_seconds": 57.406
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_2e7a68d81a83e6433dee",
+        "public:pbf_2e7ad6b2b5626d40dd34"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "71fcaf0633fda805c1b7b9d2a5487d87443c0089f918c570eb5f82519015e20c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 773,
+      "first_chunk_seconds": 8.181,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 859,
+        "prompt_tokens": 949,
+        "total_tokens": 1808,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 591,
+          "text_tokens": 268
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "660cbd4f7d1d4daccaabfae2a637ecbd5dc7b1f3439e63e81ddcfc6ef245cba1",
+      "status": "completed",
+      "latency_seconds": 22.667
+    }
+  ],
+  "status": "completed"
+}

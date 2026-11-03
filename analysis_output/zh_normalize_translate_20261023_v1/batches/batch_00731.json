@@ -1,0 +1,91 @@
+{
+  "input_sha256": "addddc96d41afc2b944282a0c03bfa3f0308d8cb13002f45a94f884dfca74b45",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2067c9069a35e9d3a774",
+        "public:pbf_20a1bce885b5ac9d8c1d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2d8f652dceabbac6c9bd4e550002d8194d9da9e57aa5387e8b1c96470ba97869",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 194.18
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2067c9069a35e9d3a774",
+        "public:pbf_20a1bce885b5ac9d8c1d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2d8f652dceabbac6c9bd4e550002d8194d9da9e57aa5387e8b1c96470ba97869",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 33.245
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2067c9069a35e9d3a774",
+        "public:pbf_20a1bce885b5ac9d8c1d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2d8f652dceabbac6c9bd4e550002d8194d9da9e57aa5387e8b1c96470ba97869",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 66.352
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2067c9069a35e9d3a774",
+        "public:pbf_20a1bce885b5ac9d8c1d"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2d8f652dceabbac6c9bd4e550002d8194d9da9e57aa5387e8b1c96470ba97869",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1355,
+      "first_chunk_seconds": 66.215,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1448,
+        "prompt_tokens": 1608,
+        "total_tokens": 3056,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 922,
+          "text_tokens": 526
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6e89c6ec54bf49db20655f2325c2d0089a34eeedb20d8c5f2a8ba877bfc321b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 85.382,
+      "validation_code": "known_relation_spec_mismatch"
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00731.json",
+      "sha256": "343042bc1d0797e70bb1845c5ba7f9c6d039282e1fae10d1bf3d5f922c2591fb",
+      "previous_status": "failed"
+    }
+  ]
+}

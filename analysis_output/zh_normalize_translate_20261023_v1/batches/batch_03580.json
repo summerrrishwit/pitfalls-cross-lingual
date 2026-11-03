@@ -1,0 +1,247 @@
+{
+  "input_sha256": "d136046fa1689bbb08b07760ef01d78f7c4d7d6e233f063de22922f96b56f54a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000798",
+      "decision": "ready",
+      "subject": "evaporative loss of the most energetic water molecules",
+      "relation_id": "process_to_effect_on_target",
+      "relation_definition": "The physical effect or consequence that a specified process or phenomenon produces on a specified target.",
+      "direction": "process/phenomenon -> effect on specified target",
+      "answer": "cools it",
+      "canonical_fact": "The evaporative loss of the most energetic water molecules cools a surface.",
+      "prompt_en": "What effect does the evaporative loss of the most energetic water molecules have on a surface?",
+      "evidence_quotes": [
+        "The evaporative loss of the most energetic water molecules does what to a surface?",
+        "cools it"
+      ],
+      "reason": "The source explicitly asks what effect the evaporative loss of the most energetic water molecules has on a surface and answers 'cools it.' This is a direct physics fact with a clear process-target-effect structure. No existing catalog relation captures a physical-process-to-effect mapping, so a new relation 'process_to_effect_on_target' is proposed.",
+      "english": {
+        "prompt_en": "What effect does the evaporative loss of the most energetic water molecules have on a surface?",
+        "relation_definition": "The physical effect or consequence that a specified process or phenomenon produces on a specified target.",
+        "answer": "cools it",
+        "canonical_fact": "The evaporative loss of the most energetic water molecules cools a surface.",
+        "direction": "process/phenomenon -> effect on specified target",
+        "relation_id": "process_to_effect_on_target",
+        "subject": "evaporative loss of the most energetic water molecules",
+        "answer_aliases_en": [
+          "cools it"
+        ],
+        "relation_spec": {
+          "id": "process_to_effect_on_target",
+          "definition": "The physical effect or consequence that a specified process or phenomenon produces on a specified target.",
+          "direction": "process/phenomenon -> effect on specified target"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85b681d3d51668f42ce0a79e0cf7e8592764ad58dc74a7ce752ac27e87def6ca",
+      "input_sha256": "ff156ccb81d115b3b0fddc09a98129e11d1e55abbbb7dd3f2981ccc9848c74dd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000799",
+      "decision": "ready",
+      "subject": "whooping cough and flu",
+      "relation_id": "condition_to_prevention_method",
+      "relation_definition": "A specific preventive intervention or method applicable to a specified disease or medical condition.",
+      "direction": "specified disease/condition -> prevention method",
+      "answer": "preventive vaccinations",
+      "canonical_fact": "Whooping cough and flu can be prevented by preventive vaccinations.",
+      "prompt_en": "How can you prevent diseases such as whooping cough and flu?",
+      "evidence_quotes": [
+        "How can you prevent diseases such as whooping cough and flu?",
+        "preventive vaccinations"
+      ],
+      "reason": "The source directly asks how to prevent whooping cough and flu and answers 'preventive vaccinations.' This is a well-established factual medical relationship. No existing catalog relation covers disease-to-prevention-method, so a new relation 'condition_to_prevention_method' is proposed. The sensenova annotation flagging this as subjective_or_normative is not supported: the question asks for a factual preventive method, and the answer is a concrete medical intervention, not a value judgment.",
+      "english": {
+        "prompt_en": "How can you prevent diseases such as whooping cough and flu?",
+        "relation_definition": "A specific preventive intervention or method applicable to a specified disease or medical condition.",
+        "answer": "preventive vaccinations",
+        "canonical_fact": "Whooping cough and flu can be prevented by preventive vaccinations.",
+        "direction": "specified disease/condition -> prevention method",
+        "relation_id": "condition_to_prevention_method",
+        "subject": "whooping cough and flu",
+        "answer_aliases_en": [
+          "preventive vaccinations"
+        ],
+        "relation_spec": {
+          "id": "condition_to_prevention_method",
+          "definition": "A specific preventive intervention or method applicable to a specified disease or medical condition.",
+          "direction": "specified disease/condition -> prevention method"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "405f7a3dbb3b67a95bcb4520ed4d90ad232f650a5f7b603a4496441e0bd2da5e",
+      "input_sha256": "988a1dfae02fe94ffb0469c489934b621770c136fc1b5e04ab59c1adba5bb978",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 64.963
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 25.779,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 41.445
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.813
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.096
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d636b054b4e90114a46d8d7c6987af351f3ef8054c98425ff3dd63adca134e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2568,
+      "first_chunk_seconds": 1.599,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2589,
+        "prompt_tokens": 1636,
+        "total_tokens": 4225,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2023,
+          "text_tokens": 566
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "986be7bd0887e1e5d5e44326266818194700bbef1e663ddee9cf1ed06d80e830",
+      "status": "completed",
+      "latency_seconds": 28.823
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2fe88f5135a8c68150896bbcdcd6a8ccfee995c702dda85c12c7dbc256672c07",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.253
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2fe88f5135a8c68150896bbcdcd6a8ccfee995c702dda85c12c7dbc256672c07",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.805
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000798",
+        "historical:raw_sciq_000799"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2fe88f5135a8c68150896bbcdcd6a8ccfee995c702dda85c12c7dbc256672c07",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.816
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03580.json",
+      "sha256": "72cd478b35601e3e2ad84c8f8eef3ba6858c466dd248190eea32cae403c27acb",
+      "previous_status": "failed"
+    }
+  ]
+}

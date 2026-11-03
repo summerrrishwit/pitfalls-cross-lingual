@@ -1,0 +1,222 @@
+{
+  "input_sha256": "47e065dfe176438a65308bfad137da033204251c4c626e1055949b31f7f01f17",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000422",
+      "decision": "ready",
+      "subject": "different colors of stars",
+      "relation_id": "phenomenon_to_causal_explanation",
+      "relation_definition": "The primary physical mechanism or property that explains a specified observable phenomenon.",
+      "direction": "phenomenon -> causal explanation",
+      "answer": "the surface temperature",
+      "canonical_fact": "The different colors of stars are caused by the surface temperature.",
+      "prompt_en": "What physical property causes the different colors of stars?",
+      "evidence_quotes": [
+        "What causes the different colors of the stars?",
+        "the surface temperature"
+      ],
+      "reason": "Source directly states the surface temperature as the cause of the different colors of stars. No existing catalog relation captures a causal-explanation mapping; proposing phenomenon_to_causal_explanation to avoid forcing into entity_to_class or another broad category.",
+      "english": {
+        "answer": "the surface temperature",
+        "relation_id": "phenomenon_to_causal_explanation",
+        "prompt_en": "What physical property causes the different colors of stars?",
+        "direction": "phenomenon -> causal explanation",
+        "subject": "different colors of stars",
+        "canonical_fact": "The different colors of stars are caused by the surface temperature.",
+        "relation_definition": "The primary physical mechanism or property that explains a specified observable phenomenon.",
+        "answer_aliases_en": [
+          "the surface temperature"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_causal_explanation",
+          "definition": "The primary physical mechanism or property that explains a specified observable phenomenon.",
+          "direction": "phenomenon -> causal explanation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6934a6900e8da5f9b9c813520b3d467b989c61343adbcc3023448e50a4c792b1",
+      "input_sha256": "0cf434811ebc4e029e46d5ebd109f2a522a599db13610c497147fba43e055193",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000428",
+      "decision": "ready",
+      "subject": "O2 molecules",
+      "relation_id": "entity_to_attribute",
+      "relation_definition": "A specified physical or chemical property/attribute of a well-defined entity.",
+      "direction": "entity -> attribute",
+      "answer": "neutral",
+      "canonical_fact": "The electrical charge of O2 molecules is neutral.",
+      "prompt_en": "What is the electrical charge of O2 molecules?",
+      "evidence_quotes": [
+        "What is the electrical charge of the O_{2} molecules?",
+        "neutral"
+      ],
+      "reason": "Source directly states the electrical charge of O2 molecules is neutral. No existing catalog relation captures a generic entity-to-attribute mapping; proposing entity_to_attribute rather than forcing into entity_to_material or entity_to_class.",
+      "english": {
+        "answer": "neutral",
+        "relation_id": "entity_to_attribute",
+        "prompt_en": "What is the electrical charge of O2 molecules?",
+        "direction": "entity -> attribute",
+        "subject": "O2 molecules",
+        "canonical_fact": "The electrical charge of O2 molecules is neutral.",
+        "relation_definition": "A specified physical or chemical property/attribute of a well-defined entity.",
+        "answer_aliases_en": [
+          "neutral"
+        ],
+        "relation_spec": {
+          "id": "entity_to_attribute",
+          "definition": "A specified physical or chemical property/attribute of a well-defined entity.",
+          "direction": "entity -> attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fef502494149323bdb5f5d4118e6342d9a95e43607264476a6b4d051fc68c510",
+      "input_sha256": "f427c8e8d074307d86c73da8ff145a4d5c706346d2dad2d7ab905adf8bd42519",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a81b147098d8fe7573b012333784f3849e8c570c7c7746165e78d70ce8eb771f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.133
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a81b147098d8fe7573b012333784f3849e8c570c7c7746165e78d70ce8eb771f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1783,
+      "first_chunk_seconds": 1.718,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1817,
+        "prompt_tokens": 1679,
+        "total_tokens": 3496,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1368,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "37a4a302352c73c7a759e1c15f618f1b8d5004b1de9f5cd7efd0c498cf3dd08c",
+      "status": "completed",
+      "latency_seconds": 22.867
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.279
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.957
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.237
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.481
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.801
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000422",
+        "historical:raw_ai2_arc_easy_000428"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "dd9f28d8028b5aa67ef195a38578679d6ec04a984040bb3356a9ab942994baf1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.799
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02167.json",
+      "sha256": "09f310f93af4e60e8e1c30c051ea48e52c93df163d2aed14c054dee2f35d59e3",
+      "previous_status": "failed"
+    }
+  ]
+}

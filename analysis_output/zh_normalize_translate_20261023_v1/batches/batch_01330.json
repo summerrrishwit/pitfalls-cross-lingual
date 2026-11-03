@@ -1,0 +1,284 @@
+{
+  "input_sha256": "30b6f3d648a6c69bc87ce203075d81a3951f5a39fa768c9f5c7bc24fbdd3cbde",
+  "normalized": [
+    {
+      "record_id": "public:pbf_86ed321ba53777967c90",
+      "decision": "ready",
+      "subject": "Green Green Grass of Home",
+      "relation_id": "song_to_writer",
+      "relation_definition": "Named writer/songwriter of a specified song; disambiguate recording or version when necessary.",
+      "direction": "song -> writer",
+      "answer": "Claude Putman",
+      "canonical_fact": "Claude Putman wrote the song Green Green Grass of Home.",
+      "prompt_en": "Who wrote the song Green Green Grass of Home?",
+      "evidence_quotes": [
+        "wrote the song",
+        "Claude Putman"
+      ],
+      "reason": "Source question asks for the writer of the song; answer 'Claude Putman' is a literal substring of source_answer. No existing catalog relation covers song-to-writer; proposed new relation song_to_writer with explicit direction and definition.",
+      "english": {
+        "answer": "Claude Putman",
+        "relation_id": "song_to_writer",
+        "prompt_en": "Who wrote the song Green Green Grass of Home?",
+        "direction": "song -> writer",
+        "subject": "Green Green Grass of Home",
+        "canonical_fact": "Claude Putman wrote the song Green Green Grass of Home.",
+        "relation_definition": "Named writer/songwriter of a specified song; disambiguate recording or version when necessary.",
+        "answer_aliases_en": [
+          "Claude Putman",
+          "Curly Putman"
+        ],
+        "relation_spec": {
+          "id": "song_to_writer",
+          "definition": "Named writer/songwriter of a specified song; disambiguate recording or version when necessary.",
+          "direction": "song -> writer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "69caa795fb3a0215e4ff30e7e2c96ef1cf66528ceffd2340bef7427e3590f59d",
+      "input_sha256": "4589cd8b9c4772e5f20ac47e8b959aafb32dd2b6a0ac582cc7c167f9f0f3dc86",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_87073e7760820d1ed029",
+      "decision": "ready",
+      "subject": "fraction of the world's population living in low and lower-middle income countries in 1997",
+      "relation_id": "statistic_to_value",
+      "relation_definition": "The reported value of a specified statistic, retaining the source institution, year, and scope qualifiers.",
+      "direction": "statistic (with source and time qualifier) -> value",
+      "answer": "75%",
+      "canonical_fact": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries was approximately 75%.",
+      "prompt_en": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries (per capita incomes of $1230 or less) was approximately how much?",
+      "evidence_quotes": [
+        "In 1997, the World Bank found",
+        "75%"
+      ],
+      "reason": "Source question specifies a 1997 World Bank statistic with a threshold qualifier; answer '75%' is a literal substring of source_answer. No existing catalog relation covers statistic-to-value; proposed new relation statistic_to_value with explicit direction and definition.",
+      "english": {
+        "answer": "75%",
+        "relation_id": "statistic_to_value",
+        "prompt_en": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries (per capita incomes of $1230 or less) was approximately how much?",
+        "direction": "statistic (with source and time qualifier) -> value",
+        "subject": "fraction of the world's population living in low and lower-middle income countries in 1997",
+        "canonical_fact": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries was approximately 75%.",
+        "relation_definition": "The reported value of a specified statistic, retaining the source institution, year, and scope qualifiers.",
+        "answer_aliases_en": [
+          "75%"
+        ],
+        "relation_spec": {
+          "id": "statistic_to_value",
+          "definition": "The reported value of a specified statistic, retaining the source institution, year, and scope qualifiers.",
+          "direction": "statistic (with source and time qualifier) -> value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7beb24849106af2149086af80d1a9691c95787f8ba3ea83a44d8070bb39e15f",
+      "input_sha256": "1383ba4af6e15d4decc9a91c4aac0a23f470724c0dbd71ceaf79761bb1f9fa15",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_86ed321ba53777967c90",
+      "input_sha256": "4589cd8b9c4772e5f20ac47e8b959aafb32dd2b6a0ac582cc7c167f9f0f3dc86",
+      "english": {
+        "answer": "Claude Putman",
+        "relation_id": "song_to_writer",
+        "prompt_en": "Who wrote the song Green Green Grass of Home?",
+        "direction": "song -> writer",
+        "subject": "Green Green Grass of Home",
+        "canonical_fact": "Claude Putman wrote the song Green Green Grass of Home.",
+        "relation_definition": "Named writer/songwriter of a specified song; disambiguate recording or version when necessary.",
+        "answer_aliases_en": [
+          "Claude Putman",
+          "Curly Putman"
+        ],
+        "relation_spec": {
+          "id": "song_to_writer",
+          "definition": "Named writer/songwriter of a specified song; disambiguate recording or version when necessary.",
+          "direction": "song -> writer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "69caa795fb3a0215e4ff30e7e2c96ef1cf66528ceffd2340bef7427e3590f59d",
+      "translation": {
+        "record_id": "public:pbf_86ed321ba53777967c90",
+        "subject_zh": "Green Green Grass of Home",
+        "prompt_zh": "歌曲 Green Green Grass of Home 是由谁创作的？",
+        "canonical_fact_zh": "Claude Putman 创作了歌曲 Green Green Grass of Home。",
+        "answer_zh": "Claude Putman",
+        "answer_aliases_zh": [
+          "Claude Putman",
+          "Curly Putman"
+        ]
+      },
+      "translation_sha256": "a6490a835a41acce908c59f58c63c67a922ed779637bbc19b692b161b13440ba"
+    },
+    {
+      "record_id": "public:pbf_87073e7760820d1ed029",
+      "input_sha256": "1383ba4af6e15d4decc9a91c4aac0a23f470724c0dbd71ceaf79761bb1f9fa15",
+      "english": {
+        "answer": "75%",
+        "relation_id": "statistic_to_value",
+        "prompt_en": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries (per capita incomes of $1230 or less) was approximately how much?",
+        "direction": "statistic (with source and time qualifier) -> value",
+        "subject": "fraction of the world's population living in low and lower-middle income countries in 1997",
+        "canonical_fact": "In 1997, the World Bank found that the fraction of the world's population living in low and lower-middle income countries was approximately 75%.",
+        "relation_definition": "The reported value of a specified statistic, retaining the source institution, year, and scope qualifiers.",
+        "answer_aliases_en": [
+          "75%"
+        ],
+        "relation_spec": {
+          "id": "statistic_to_value",
+          "definition": "The reported value of a specified statistic, retaining the source institution, year, and scope qualifiers.",
+          "direction": "statistic (with source and time qualifier) -> value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b7beb24849106af2149086af80d1a9691c95787f8ba3ea83a44d8070bb39e15f",
+      "translation": {
+        "record_id": "public:pbf_87073e7760820d1ed029",
+        "subject_zh": "1997年居住在低收入和中低收入国家的世界人口比例",
+        "prompt_zh": "1997年，世界银行发现，居住在低收入和中低收入国家（人均收入不超过1230美元）的世界人口比例大约是多少？",
+        "canonical_fact_zh": "1997年，世界银行发现，居住在低收入和中低收入国家的世界人口比例约为75%。",
+        "answer_zh": "75%",
+        "answer_aliases_zh": [
+          "75%"
+        ]
+      },
+      "translation_sha256": "e5b2494e433353ba21386dd6570099bd094f4d34460e88c864f93caccc7d0202"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_86ed321ba53777967c90",
+        "public:pbf_87073e7760820d1ed029"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d55d6ab50105c3e9c376d82313eabeecd78a36f0546e379ba90870245339062c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3624,
+      "first_chunk_seconds": 33.115,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3622,
+        "prompt_tokens": 1718,
+        "total_tokens": 5340,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3049,
+          "text_tokens": 573
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a8912b4b979d37d84fd4d75c72cd656c65fb4dcea4b88e4b0a02fae6c6c6408b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 62.014,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_86ed321ba53777967c90",
+        "public:pbf_87073e7760820d1ed029"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c13324f3cc251f44b810f81fe42d2fc34c1bcd3ed2481711715b599b18c6d28e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2712,
+      "first_chunk_seconds": 23.597,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2709,
+        "prompt_tokens": 1736,
+        "total_tokens": 4445,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2151,
+          "text_tokens": 558
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c5ec702385387cab4cbd7fb84943107802b9d406288e8874eaa82f5c1b2a8098",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 44.848,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_86ed321ba53777967c90",
+        "public:pbf_87073e7760820d1ed029"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c13324f3cc251f44b810f81fe42d2fc34c1bcd3ed2481711715b599b18c6d28e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2562,
+      "first_chunk_seconds": 74.727,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2560,
+        "prompt_tokens": 1736,
+        "total_tokens": 4296,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2077,
+          "text_tokens": 483
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1536
+        }
+      },
+      "content_sha256": "2ada86952bf622c9a3217d0cbee6722bdeb305b10c827b35ea81dc2e290d4d0e",
+      "status": "completed",
+      "latency_seconds": 94.921
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_86ed321ba53777967c90",
+        "public:pbf_87073e7760820d1ed029"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ba336761e8dd0a713375ef09776a40be458ef2af66df391ee7a812d93fd2f21d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1068,
+      "first_chunk_seconds": 31.581,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1065,
+        "prompt_tokens": 923,
+        "total_tokens": 1988,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 759,
+          "text_tokens": 306
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "28a06758521e7674cd2fc8298535d3e20d6267926b041bbbcf625e498b1aa7b8",
+      "status": "completed",
+      "latency_seconds": 39.887
+    }
+  ],
+  "status": "completed"
+}

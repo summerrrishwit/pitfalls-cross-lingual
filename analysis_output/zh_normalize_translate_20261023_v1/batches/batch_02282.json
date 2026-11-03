@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3d95db68bd7e21f905e9f70eb8296d13104578ed07fc8e3249ea5a114bef156c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001046",
+      "decision": "ready",
+      "subject": "human body",
+      "relation_id": "entity_to_basic_organizational_level",
+      "relation_definition": "The smallest or most fundamental unit/level at which a specified entity or biological system is organized and carries out its functions; a stable structural fact. Direction: entity -> its most basic organizational level.",
+      "direction": "entity -> its most basic level of organization",
+      "answer": "a cell",
+      "canonical_fact": "The most basic level of organization in the human body is a cell.",
+      "prompt_en": "What is the most basic level of organization in the human body?",
+      "evidence_quotes": [
+        "a cell",
+        "most basic level of organization in the human body"
+      ],
+      "reason": "No catalog relation precisely captures 'most basic level of organization' as a stable biological/structural fact about an entity. Proposed new relation entity_to_basic_organizational_level. Answer 'a cell' is a literal substring of source_answer. Both model annotations agree on extraction. The fact is a well-established biological principle and is reusable.",
+      "english": {
+        "direction": "entity -> its most basic level of organization",
+        "relation_id": "entity_to_basic_organizational_level",
+        "answer": "a cell",
+        "canonical_fact": "The most basic level of organization in the human body is a cell.",
+        "subject": "human body",
+        "prompt_en": "What is the most basic level of organization in the human body?",
+        "relation_definition": "The smallest or most fundamental unit/level at which a specified entity or biological system is organized and carries out its functions; a stable structural fact. Direction: entity -> its most basic organizational level.",
+        "answer_aliases_en": [
+          "a cell"
+        ],
+        "relation_spec": {
+          "id": "entity_to_basic_organizational_level",
+          "definition": "The smallest or most fundamental unit/level at which a specified entity or biological system is organized and carries out its functions; a stable structural fact. Direction: entity -> its most basic organizational level.",
+          "direction": "entity -> its most basic level of organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4d295bdb613377f00a34005e9dc2e384efcfb4960727dbf8548b7bdf0e301078",
+      "input_sha256": "f12990a0f142408b0f370df36aeddb9dac073dfa97f9378fcbd8edc2026d9dc6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001047",
+      "decision": "ready",
+      "subject": "reaction between silver nitrate and sodium chloride",
+      "relation_id": "reaction_to_product",
+      "relation_definition": "A chemical product formed in a specified reaction identified by its named reactants; a reaction may yield multiple products. Direction: specified chemical reaction (by named reactants) -> a product of that reaction.",
+      "direction": "specified chemical reaction -> product",
+      "answer": "AgCl",
+      "canonical_fact": "A product of the reaction between silver nitrate and sodium chloride is AgCl.",
+      "prompt_en": "What is a product of the reaction between silver nitrate and sodium chloride?",
+      "evidence_quotes": [
+        "AgCl",
+        "silver nitrate and sodium chloride"
+      ],
+      "reason": "No catalog relation covers chemical reactant-to-product mappings. Proposed new relation reaction_to_product. Answer 'AgCl' is a literal substring of source_answer. The Qwen-3.8-Max annotation marked it 'option_dependent' but the underlying chemical fact (AgCl is a product of AgNO3 + NaCl) is stable and not actually dependent on the multiple-choice options; the source confirms it. Sensenova extracted it correctly. The canonical fact uses 'a product' (indefinite) to preserve that multiple products exist (AgCl and NaNO3).",
+      "english": {
+        "direction": "specified chemical reaction -> product",
+        "relation_id": "reaction_to_product",
+        "answer": "AgCl",
+        "canonical_fact": "A product of the reaction between silver nitrate and sodium chloride is AgCl.",
+        "subject": "reaction between silver nitrate and sodium chloride",
+        "prompt_en": "What is a product of the reaction between silver nitrate and sodium chloride?",
+        "relation_definition": "A chemical product formed in a specified reaction identified by its named reactants; a reaction may yield multiple products. Direction: specified chemical reaction (by named reactants) -> a product of that reaction.",
+        "answer_aliases_en": [
+          "AgCl"
+        ],
+        "relation_spec": {
+          "id": "reaction_to_product",
+          "definition": "A chemical product formed in a specified reaction identified by its named reactants; a reaction may yield multiple products. Direction: specified chemical reaction (by named reactants) -> a product of that reaction.",
+          "direction": "specified chemical reaction -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a55706dee7c99392da10e0c64ed5a21b6c86ac5ae6b8025db3302ae2f6a3d02c",
+      "input_sha256": "c7a5d6b48d11d31a9651226c0ee89f0a24eb1280dc9e484ee8e5655e1dff6d8f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001046",
+      "input_sha256": "f12990a0f142408b0f370df36aeddb9dac073dfa97f9378fcbd8edc2026d9dc6",
+      "english": {
+        "direction": "entity -> its most basic level of organization",
+        "relation_id": "entity_to_basic_organizational_level",
+        "answer": "a cell",
+        "canonical_fact": "The most basic level of organization in the human body is a cell.",
+        "subject": "human body",
+        "prompt_en": "What is the most basic level of organization in the human body?",
+        "relation_definition": "The smallest or most fundamental unit/level at which a specified entity or biological system is organized and carries out its functions; a stable structural fact. Direction: entity -> its most basic organizational level.",
+        "answer_aliases_en": [
+          "a cell"
+        ],
+        "relation_spec": {
+          "id": "entity_to_basic_organizational_level",
+          "definition": "The smallest or most fundamental unit/level at which a specified entity or biological system is organized and carries out its functions; a stable structural fact. Direction: entity -> its most basic organizational level.",
+          "direction": "entity -> its most basic level of organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4d295bdb613377f00a34005e9dc2e384efcfb4960727dbf8548b7bdf0e301078",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001046",
+        "subject_zh": "人体",
+        "prompt_zh": "人体最基本的组织层次是什么？",
+        "canonical_fact_zh": "人体最基本的组织层次是细胞。",
+        "answer_zh": "细胞",
+        "answer_aliases_zh": [
+          "细胞"
+        ]
+      },
+      "translation_sha256": "186ebe0f6f20f4f3bc882cdf66efed4174eee4629e611961a6332576dcae7127"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001047",
+      "input_sha256": "c7a5d6b48d11d31a9651226c0ee89f0a24eb1280dc9e484ee8e5655e1dff6d8f",
+      "english": {
+        "direction": "specified chemical reaction -> product",
+        "relation_id": "reaction_to_product",
+        "answer": "AgCl",
+        "canonical_fact": "A product of the reaction between silver nitrate and sodium chloride is AgCl.",
+        "subject": "reaction between silver nitrate and sodium chloride",
+        "prompt_en": "What is a product of the reaction between silver nitrate and sodium chloride?",
+        "relation_definition": "A chemical product formed in a specified reaction identified by its named reactants; a reaction may yield multiple products. Direction: specified chemical reaction (by named reactants) -> a product of that reaction.",
+        "answer_aliases_en": [
+          "AgCl"
+        ],
+        "relation_spec": {
+          "id": "reaction_to_product",
+          "definition": "A chemical product formed in a specified reaction identified by its named reactants; a reaction may yield multiple products. Direction: specified chemical reaction (by named reactants) -> a product of that reaction.",
+          "direction": "specified chemical reaction -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a55706dee7c99392da10e0c64ed5a21b6c86ac5ae6b8025db3302ae2f6a3d02c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001047",
+        "subject_zh": "硝酸银与氯化钠之间的反应",
+        "prompt_zh": "硝酸银与氯化钠之间反应的产物之一是什么？",
+        "canonical_fact_zh": "硝酸银与氯化钠之间反应的产物之一是 AgCl。",
+        "answer_zh": "AgCl",
+        "answer_aliases_zh": [
+          "AgCl"
+        ]
+      },
+      "translation_sha256": "3188ced59b621924ebc6269dadf203e4d5401d40748ec35fa670aa053329c92c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001046",
+        "historical:raw_ai2_arc_easy_001047"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "23c479ec20d213619eaf4b813f5552e7d70b3a605dc38db55070d45c2a1a7a3c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4197,
+      "first_chunk_seconds": 33.315,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4249,
+        "prompt_tokens": 1705,
+        "total_tokens": 5954,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3641,
+          "text_tokens": 608
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3dddbf03fbcff7d60026d27d7aff5af08deb089911cea1fe7ace566ce4f5a52f",
+      "status": "completed",
+      "latency_seconds": 104.75
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001046",
+        "historical:raw_ai2_arc_easy_001047"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9ed5a832d2e680fc0ad336477e1a95c9a78416a581d1ce4718b7478dd59a451e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 886,
+      "first_chunk_seconds": 21.228,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 940,
+        "prompt_tokens": 929,
+        "total_tokens": 1869,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 792,
+          "text_tokens": 148
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "32b9678d5abf8e04071eeecf8a4c798ed04d9b36366475363eef4f3ebd197320",
+      "status": "completed",
+      "latency_seconds": 33.9
+    }
+  ],
+  "status": "completed"
+}

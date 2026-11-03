@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5d9b23af232be29ac100f73603961e843e8ab19a5269dd172ee83251f4e02c13",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000082",
+      "decision": "ready",
+      "subject": "The type of bond that forms between molecules",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "hydrogen bond",
+      "canonical_fact": "The type of bond that forms between molecules is called a hydrogen bond.",
+      "prompt_en": "What is the type of bond that forms between molecules called?",
+      "evidence_quotes": [
+        "The type of bond that forms between molecules is called what?",
+        "hydrogen bond"
+      ],
+      "reason": "The source question supplies a defining description ('the type of bond that forms between molecules') and asks for the conventional term. The source answer is 'hydrogen bond'. This maps directly to the existing description_to_term relation (description -> term). Both model annotations: one flagged non_unique but the source answer is a single unambiguous term; deferring that concern is unwarranted because the source itself presents a unique answer. Keeping the existing answer verbatim.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "hydrogen bond",
+        "canonical_fact": "The type of bond that forms between molecules is called a hydrogen bond.",
+        "subject": "The type of bond that forms between molecules",
+        "prompt_en": "What is the type of bond that forms between molecules called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "hydrogen bond"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ba801a169a37451d9b95f586b898058b04d5c38e557e6ef9aa6a1002aca58d55",
+      "input_sha256": "587767e9d5d2b796fad2235d779f1932771a9be2fc861e85b688ab8c5d2a0db6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000084",
+      "decision": "ready",
+      "subject": "protonephridia",
+      "relation_id": "structure_to_adapting_evolutionary_process",
+      "relation_definition": "The named evolutionary process credited with adapting a specified biological structure to varying tasks or environments.",
+      "direction": "specified biological structure -> evolutionary process responsible for its adaptation",
+      "answer": "natural selection",
+      "canonical_fact": "Natural selection is the evolutionary process that has adapted protonephridia to different tasks in different environments.",
+      "prompt_en": "What evolutionary process has adapted protonephridia to different tasks in different environments?",
+      "evidence_quotes": [
+        "What evolutionary process has adapted protonephridia to different tasks in different environments?",
+        "natural selection"
+      ],
+      "reason": "No existing catalog relation captures a biological-structure-to-evolutionary-mechanism link. Proposing structure_to_adapting_evolutionary_process as a precise new snake_case ID with explicit direction. Both model annotations independently extracted the same subject, relation, and answer; the source answer 'natural selection' is copied verbatim. The prompt is the source question rephrased minimally, contains no answer text, and is option-free.",
+      "english": {
+        "direction": "specified biological structure -> evolutionary process responsible for its adaptation",
+        "relation_id": "structure_to_adapting_evolutionary_process",
+        "answer": "natural selection",
+        "canonical_fact": "Natural selection is the evolutionary process that has adapted protonephridia to different tasks in different environments.",
+        "subject": "protonephridia",
+        "prompt_en": "What evolutionary process has adapted protonephridia to different tasks in different environments?",
+        "relation_definition": "The named evolutionary process credited with adapting a specified biological structure to varying tasks or environments.",
+        "answer_aliases_en": [
+          "natural selection"
+        ],
+        "relation_spec": {
+          "id": "structure_to_adapting_evolutionary_process",
+          "definition": "The named evolutionary process credited with adapting a specified biological structure to varying tasks or environments.",
+          "direction": "specified biological structure -> evolutionary process responsible for its adaptation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7c6d0312b9c431565bcc9205d4b5f865602c317ecec17049e5367e187aaa1376",
+      "input_sha256": "826ff1ffd8dfe8de9c1b300122a3192ad29fea7506cbb32388dfb3858e6e4b25",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000082",
+      "input_sha256": "587767e9d5d2b796fad2235d779f1932771a9be2fc861e85b688ab8c5d2a0db6",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "hydrogen bond",
+        "canonical_fact": "The type of bond that forms between molecules is called a hydrogen bond.",
+        "subject": "The type of bond that forms between molecules",
+        "prompt_en": "What is the type of bond that forms between molecules called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "hydrogen bond"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ba801a169a37451d9b95f586b898058b04d5c38e557e6ef9aa6a1002aca58d55",
+      "translation": {
+        "record_id": "historical:raw_sciq_000082",
+        "subject_zh": "分子间形成的键的类型",
+        "prompt_zh": "分子间形成的键的类型叫什么？",
+        "canonical_fact_zh": "分子间形成的键的类型称为氢键。",
+        "answer_zh": "氢键",
+        "answer_aliases_zh": [
+          "氢键"
+        ]
+      },
+      "translation_sha256": "2ee4c4753eeba13a1667e1acd871760d1af55a588508c399fbce86f4a535e3e9"
+    },
+    {
+      "record_id": "historical:raw_sciq_000084",
+      "input_sha256": "826ff1ffd8dfe8de9c1b300122a3192ad29fea7506cbb32388dfb3858e6e4b25",
+      "english": {
+        "direction": "specified biological structure -> evolutionary process responsible for its adaptation",
+        "relation_id": "structure_to_adapting_evolutionary_process",
+        "answer": "natural selection",
+        "canonical_fact": "Natural selection is the evolutionary process that has adapted protonephridia to different tasks in different environments.",
+        "subject": "protonephridia",
+        "prompt_en": "What evolutionary process has adapted protonephridia to different tasks in different environments?",
+        "relation_definition": "The named evolutionary process credited with adapting a specified biological structure to varying tasks or environments.",
+        "answer_aliases_en": [
+          "natural selection"
+        ],
+        "relation_spec": {
+          "id": "structure_to_adapting_evolutionary_process",
+          "definition": "The named evolutionary process credited with adapting a specified biological structure to varying tasks or environments.",
+          "direction": "specified biological structure -> evolutionary process responsible for its adaptation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7c6d0312b9c431565bcc9205d4b5f865602c317ecec17049e5367e187aaa1376",
+      "translation": {
+        "record_id": "historical:raw_sciq_000084",
+        "subject_zh": "原肾管",
+        "prompt_zh": "哪种进化过程使原肾管适应不同环境中的不同功能？",
+        "canonical_fact_zh": "自然选择是使原肾管适应不同环境中不同功能的进化过程。",
+        "answer_zh": "自然选择",
+        "answer_aliases_zh": [
+          "自然选择"
+        ]
+      },
+      "translation_sha256": "a999a9d694274a0059f0494facf59196ad13fa3714ae8e5c820272a0781d68c8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000082",
+        "historical:raw_sciq_000084"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b273a3c6ce77a11e2793b1d88b298e33ec48ff14d42541c2c8c1c42f4461bbf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2250,
+      "first_chunk_seconds": 2.525,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2312,
+        "prompt_tokens": 1729,
+        "total_tokens": 4041,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1723,
+          "text_tokens": 589
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "451478ccfa6a91903ee9ff33b371749e42f46cefcd3e3c400fb3e10d630d5db9",
+      "status": "completed",
+      "latency_seconds": 46.636
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000082",
+        "historical:raw_sciq_000084"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "91f2544a2024f062f64e6a311631edb3cc40156ebe9e5ca78f8d8ab71104524d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 749,
+      "first_chunk_seconds": 9.559,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 784,
+        "prompt_tokens": 861,
+        "total_tokens": 1645,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 560,
+          "text_tokens": 224
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4861f77ba8973fae96399b55791b097e8aa88ec169de19a4683378656ef733b1",
+      "status": "completed",
+      "latency_seconds": 26.367
+    }
+  ],
+  "status": "completed"
+}

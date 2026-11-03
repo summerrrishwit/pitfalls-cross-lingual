@@ -1,0 +1,228 @@
+{
+  "input_sha256": "c40233c710cd29d2c931d522ec504c2268381f02c1db895a0665daa179b2573d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000498",
+      "decision": "ready",
+      "subject": "nervous tissue",
+      "relation_id": "tissue_to_basis_cell",
+      "relation_definition": "The fundamental cell type that constitutes the structural and functional basis of a specified tissue; not merely any cell found within it.",
+      "direction": "tissue -> basis cell type",
+      "answer": "neurons",
+      "canonical_fact": "Neurons are the basis cells of nervous tissue.",
+      "prompt_en": "What cell type is the basis of nervous tissue?",
+      "evidence_quotes": [
+        "What cells are the basis of nervous tissue?",
+        "neurons"
+      ],
+      "reason": "Source directly states neurons are the basis cells of nervous tissue. No existing catalog relation precisely captures the specific 'basis cell type of a tissue' relationship; whole_to_part is too broad and entity_to_material refers to physical material composition. Proposing new relation tissue_to_basis_cell.",
+      "english": {
+        "relation_definition": "The fundamental cell type that constitutes the structural and functional basis of a specified tissue; not merely any cell found within it.",
+        "direction": "tissue -> basis cell type",
+        "subject": "nervous tissue",
+        "relation_id": "tissue_to_basis_cell",
+        "prompt_en": "What cell type is the basis of nervous tissue?",
+        "answer": "neurons",
+        "canonical_fact": "Neurons are the basis cells of nervous tissue.",
+        "answer_aliases_en": [
+          "neurons"
+        ],
+        "relation_spec": {
+          "id": "tissue_to_basis_cell",
+          "definition": "The fundamental cell type that constitutes the structural and functional basis of a specified tissue; not merely any cell found within it.",
+          "direction": "tissue -> basis cell type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f470258362730246d418b95ac068e11f32255f23f41550da2dd7c5dd011dd3ed",
+      "input_sha256": "513062eb9e025920ce1b57943e07e768543193637c966f8f82dbaa0a995a3b8f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000499",
+      "decision": "ready",
+      "subject": "trees that can be planted and harvested",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "renewable",
+      "canonical_fact": "Trees that can be planted and harvested are an example of a renewable resource.",
+      "prompt_en": "What type of resource are trees that can be planted and harvested?",
+      "evidence_quotes": [
+        "Trees, which can be planted and harvested, are an example of what type of resource?",
+        "renewable"
+      ],
+      "reason": "Source explicitly states that trees which can be planted and harvested are an example of a renewable resource. entity_to_class fits: the qualified entity (trees with the property of being plantable and harvestable) belongs to the resource class 'renewable' at the stated taxonomy level (resource type).",
+      "english": {
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "direction": "entity -> class",
+        "subject": "trees that can be planted and harvested",
+        "relation_id": "entity_to_class",
+        "prompt_en": "What type of resource are trees that can be planted and harvested?",
+        "answer": "renewable",
+        "canonical_fact": "Trees that can be planted and harvested are an example of a renewable resource.",
+        "answer_aliases_en": [
+          "renewable"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f0606acff2c93b0b5fcb2a961479ce8fbd08aa8009101efb46315c092106e9dc",
+      "input_sha256": "a5c7f39201b79719a36548327bbd0ceb8a77adfb5fa287a4c29b04ac2b0b6a82",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000498",
+      "input_sha256": "513062eb9e025920ce1b57943e07e768543193637c966f8f82dbaa0a995a3b8f",
+      "english": {
+        "relation_definition": "The fundamental cell type that constitutes the structural and functional basis of a specified tissue; not merely any cell found within it.",
+        "direction": "tissue -> basis cell type",
+        "subject": "nervous tissue",
+        "relation_id": "tissue_to_basis_cell",
+        "prompt_en": "What cell type is the basis of nervous tissue?",
+        "answer": "neurons",
+        "canonical_fact": "Neurons are the basis cells of nervous tissue.",
+        "answer_aliases_en": [
+          "neurons"
+        ],
+        "relation_spec": {
+          "id": "tissue_to_basis_cell",
+          "definition": "The fundamental cell type that constitutes the structural and functional basis of a specified tissue; not merely any cell found within it.",
+          "direction": "tissue -> basis cell type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f470258362730246d418b95ac068e11f32255f23f41550da2dd7c5dd011dd3ed",
+      "translation": {
+        "record_id": "historical:raw_sciq_000498",
+        "subject_zh": "神经组织",
+        "prompt_zh": "神经组织的基础细胞类型是什么？",
+        "canonical_fact_zh": "神经元是神经组织的基础细胞。",
+        "answer_zh": "神经元",
+        "answer_aliases_zh": [
+          "神经元"
+        ]
+      },
+      "translation_sha256": "c9451064b3c6ecb503a5c69a34e21123e1fda93f8ebce78ce209f6a6d687e140"
+    },
+    {
+      "record_id": "historical:raw_sciq_000499",
+      "input_sha256": "a5c7f39201b79719a36548327bbd0ceb8a77adfb5fa287a4c29b04ac2b0b6a82",
+      "english": {
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "direction": "entity -> class",
+        "subject": "trees that can be planted and harvested",
+        "relation_id": "entity_to_class",
+        "prompt_en": "What type of resource are trees that can be planted and harvested?",
+        "answer": "renewable",
+        "canonical_fact": "Trees that can be planted and harvested are an example of a renewable resource.",
+        "answer_aliases_en": [
+          "renewable"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f0606acff2c93b0b5fcb2a961479ce8fbd08aa8009101efb46315c092106e9dc",
+      "translation": {
+        "record_id": "historical:raw_sciq_000499",
+        "subject_zh": "可以种植和收获的树木",
+        "prompt_zh": "可以种植和收获的树木属于什么类型的资源？",
+        "canonical_fact_zh": "可以种植和收获的树木是可再生资源的一个例子。",
+        "answer_zh": "可再生资源",
+        "answer_aliases_zh": [
+          "可再生资源"
+        ]
+      },
+      "translation_sha256": "993e987570f6470669d458cab1f5d9301d40f330b4ae2d6294ac474584df69ce"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000498",
+        "historical:raw_sciq_000499"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5fb8092cec8c5f374b6a3a02f646af1bce4d78b807fd01a185eb6b7c29f5f0b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 27.143
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000498",
+        "historical:raw_sciq_000499"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5fb8092cec8c5f374b6a3a02f646af1bce4d78b807fd01a185eb6b7c29f5f0b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2407,
+      "first_chunk_seconds": 1.582,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2429,
+        "prompt_tokens": 1673,
+        "total_tokens": 4102,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1930,
+          "text_tokens": 499
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1e65e69a39a20e65213ed0361daea3089282b9a5f78cfa0cd58ebeb9827ccc10",
+      "status": "completed",
+      "latency_seconds": 62.077
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000498",
+        "historical:raw_sciq_000499"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9f706735107c99ceaf6e5d86e9739be71f2f165d33b6fe8771cf03c2c210f4fd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 867,
+      "first_chunk_seconds": 0.986,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 872,
+        "prompt_tokens": 837,
+        "total_tokens": 1709,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 662,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "46a8d4ecb3b8eb478dc857835a7489a05e7417e6e9b57e60a2edc73cb9cff5e4",
+      "status": "completed",
+      "latency_seconds": 49.271
+    }
+  ],
+  "status": "completed"
+}

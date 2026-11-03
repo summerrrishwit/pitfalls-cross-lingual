@@ -1,0 +1,193 @@
+{
+  "input_sha256": "ae02ad3dfe06ef8d3583aa43cf7dcc79f39848222442b8a47a7b53c195f1803c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002516",
+      "decision": "ready",
+      "subject": "unhappy",
+      "relation_id": "term_to_antonym",
+      "relation_definition": "The conventional opposite or antonym of a specified word/term in its standard usage context.",
+      "direction": "term -> antonym",
+      "answer": "happy",
+      "canonical_fact": "The opposite of unhappy is happy.",
+      "prompt_en": "What is the opposite of unhappy?",
+      "evidence_quotes": [
+        "the opposite of that?",
+        "happy"
+      ],
+      "reason": "Source explicitly asks for the opposite of 'unhappy' and answers 'happy'. No catalog relation covers antonym/opposite, so a new precise relation 'term_to_antonym' is proposed. Both model annotations agree on extraction. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "term -> antonym",
+        "relation_id": "term_to_antonym",
+        "answer": "happy",
+        "canonical_fact": "The opposite of unhappy is happy.",
+        "subject": "unhappy",
+        "prompt_en": "What is the opposite of unhappy?",
+        "relation_definition": "The conventional opposite or antonym of a specified word/term in its standard usage context.",
+        "answer_aliases_en": [
+          "happy"
+        ],
+        "relation_spec": {
+          "id": "term_to_antonym",
+          "definition": "The conventional opposite or antonym of a specified word/term in its standard usage context.",
+          "direction": "term -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "785350b34151e8bc5bff6d1e59d6b65f7fbfd805779d55d7a25cf379a9f9a564",
+      "input_sha256": "f11028b8bf8bde07ca35cf6dcf331465b569e98fe15e21d1b90fb310fa3a2b9a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002524",
+      "decision": "ready",
+      "subject": "films",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "entertainment",
+      "canonical_fact": "Films are a form of entertainment.",
+      "prompt_en": "Films are a form of what?",
+      "evidence_quotes": [
+        "They were her favorite form of what?",
+        "entertainment"
+      ],
+      "reason": "Source states films are a form of entertainment, which is a stable class-membership statement (films belong to the class of entertainment). The existing 'entity_to_class' relation fits: direction entity -> class, stable taxonomy membership. One model flagged ambiguity but the source question clearly scopes the subject to 'films' (the antecedent of 'They'). Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "entertainment",
+        "canonical_fact": "Films are a form of entertainment.",
+        "subject": "films",
+        "prompt_en": "Films are a form of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "entertainment"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9c9c0c21fc4dfbb29a65f93290386aad7ad79a86232751101bc6c2bd7897704a",
+      "input_sha256": "9797c20fadd27fdf02f3492b0971fd5eac3809a9a693d1fbdbda1292bdf0682f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002516",
+        "historical:raw_commonsense_qa_002524"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6569790217adc084678af92fa4513e69518df082971793139c934ddacf4be1c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1394,
+      "first_chunk_seconds": 2.088,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1502,
+        "prompt_tokens": 1612,
+        "total_tokens": 3114,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1048,
+          "text_tokens": 454
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c0b4cfa64f5d2b7655a304118378a24ca5ba31d6c23e47ec0d82c106e6d543ff",
+      "status": "completed",
+      "latency_seconds": 23.432
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002516",
+        "historical:raw_commonsense_qa_002524"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "48556698fa77ba7ff16f14ca04dc87e2ea9c76783cf0398daf803ff2aa4a564e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1352,
+      "first_chunk_seconds": 15.311,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1447,
+        "prompt_tokens": 784,
+        "total_tokens": 2231,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1253,
+          "text_tokens": 194
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d4b2a50bbf035ad9b9e4d92b0f01729746e02ce8631fe7ee5f7795ba3f91f9f7",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 160.522,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002516",
+        "historical:raw_commonsense_qa_002524"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "59f062110b5ec8e00c122f67bdab8da7966acf6cd263f308285104b6f947bf17",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1184,
+      "first_chunk_seconds": 10.789,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1213,
+        "prompt_tokens": 802,
+        "total_tokens": 2015,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1018,
+          "text_tokens": 195
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c17012d04908ade7e91e6457742cbf1dacaffba6d8d8b74543fd555c4c315038",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 28.693,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002516",
+        "historical:raw_commonsense_qa_002524"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "59f062110b5ec8e00c122f67bdab8da7966acf6cd263f308285104b6f947bf17",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 100.847
+    }
+  ],
+  "status": "failed"
+}

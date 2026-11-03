@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2701b97213fbe8dbb9fd7d27f1fb40bb2e921c804cf73be379adea67f1ad7325",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000335",
+      "decision": "ready",
+      "subject": "Down syndrome",
+      "relation_id": "condition_to_cause",
+      "relation_definition": "Most common cause of a specified medical condition; retain qualifier 'most common' and do not list all possible causes.",
+      "direction": "medical_condition -> cause",
+      "answer": "trisomy 21",
+      "canonical_fact": "The most common cause of Down syndrome is trisomy 21.",
+      "prompt_en": "What is the most common cause of Down syndrome?",
+      "evidence_quotes": [
+        "most common cause of down syndrome",
+        "trisomy 21"
+      ],
+      "reason": "Source answer explicitly gives 'trisomy 21' as the most common cause of Down syndrome. No existing catalog relation covers causation for a medical condition, so a new precise relation 'condition_to_cause' is proposed. Both model annotations agree. Answer and subject are unambiguous.",
+      "english": {
+        "direction": "medical_condition -> cause",
+        "relation_id": "condition_to_cause",
+        "answer": "trisomy 21",
+        "canonical_fact": "The most common cause of Down syndrome is trisomy 21.",
+        "subject": "Down syndrome",
+        "prompt_en": "What is the most common cause of Down syndrome?",
+        "relation_definition": "Most common cause of a specified medical condition; retain qualifier 'most common' and do not list all possible causes.",
+        "answer_aliases_en": [
+          "trisomy 21"
+        ],
+        "relation_spec": {
+          "id": "condition_to_cause",
+          "definition": "Most common cause of a specified medical condition; retain qualifier 'most common' and do not list all possible causes.",
+          "direction": "medical_condition -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a054f6294085acf3d2490936455ac4041d4fc605d80bfedf4466d24b2797d9ae",
+      "input_sha256": "d4915d303b18c2cc5ea836439b013acca14bd3ccfb0882b93c503f1d4eb846b3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000336",
+      "decision": "ready",
+      "subject": "first true tetrapods, vertebrates with four limbs",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "amphibians",
+      "canonical_fact": "Amphibians are the broad group of animals that are the first true tetrapods, vertebrates with four limbs.",
+      "prompt_en": "What broad group of animals are the first true tetrapods, vertebrates with four limbs?",
+      "evidence_quotes": [
+        "broad group of animals are the first true tetrapods, vertebrates with four limbs",
+        "amphibians"
+      ],
+      "reason": "Source answer identifies 'amphibians' as the broad taxonomic group (class level) to which the first true tetrapods belong. The existing catalog relation entity_to_class fits exactly: the subject is a defined animal group and the answer is its stable taxonomic class at the 'broad group' level stated in the question. Both model annotations agree.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "amphibians",
+        "canonical_fact": "Amphibians are the broad group of animals that are the first true tetrapods, vertebrates with four limbs.",
+        "subject": "first true tetrapods, vertebrates with four limbs",
+        "prompt_en": "What broad group of animals are the first true tetrapods, vertebrates with four limbs?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "amphibians"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7089722e7bcca977ed44172589e7bb0db4ba15175228a9265bba2a3155761f47",
+      "input_sha256": "8e7534a1701aad627473be34fe5149b5d074b61dc97ecbad6f8617e6815fff5b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000335",
+      "input_sha256": "d4915d303b18c2cc5ea836439b013acca14bd3ccfb0882b93c503f1d4eb846b3",
+      "english": {
+        "direction": "medical_condition -> cause",
+        "relation_id": "condition_to_cause",
+        "answer": "trisomy 21",
+        "canonical_fact": "The most common cause of Down syndrome is trisomy 21.",
+        "subject": "Down syndrome",
+        "prompt_en": "What is the most common cause of Down syndrome?",
+        "relation_definition": "Most common cause of a specified medical condition; retain qualifier 'most common' and do not list all possible causes.",
+        "answer_aliases_en": [
+          "trisomy 21"
+        ],
+        "relation_spec": {
+          "id": "condition_to_cause",
+          "definition": "Most common cause of a specified medical condition; retain qualifier 'most common' and do not list all possible causes.",
+          "direction": "medical_condition -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a054f6294085acf3d2490936455ac4041d4fc605d80bfedf4466d24b2797d9ae",
+      "translation": {
+        "record_id": "historical:raw_sciq_000335",
+        "subject_zh": "唐氏综合征",
+        "prompt_zh": "唐氏综合征最常见的原因是什么？",
+        "canonical_fact_zh": "唐氏综合征最常见的原因是21三体。",
+        "answer_zh": "21三体",
+        "answer_aliases_zh": [
+          "21三体"
+        ]
+      },
+      "translation_sha256": "11c23d4ed637bbd836955d3c51641d794c44229db20133c9df20e153ab426184"
+    },
+    {
+      "record_id": "historical:raw_sciq_000336",
+      "input_sha256": "8e7534a1701aad627473be34fe5149b5d074b61dc97ecbad6f8617e6815fff5b",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "amphibians",
+        "canonical_fact": "Amphibians are the broad group of animals that are the first true tetrapods, vertebrates with four limbs.",
+        "subject": "first true tetrapods, vertebrates with four limbs",
+        "prompt_en": "What broad group of animals are the first true tetrapods, vertebrates with four limbs?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "amphibians"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7089722e7bcca977ed44172589e7bb0db4ba15175228a9265bba2a3155761f47",
+      "translation": {
+        "record_id": "historical:raw_sciq_000336",
+        "subject_zh": "首批真正的四足动物，即具有四肢的脊椎动物",
+        "prompt_zh": "首批真正的四足动物，即具有四肢的脊椎动物，属于哪一类动物？",
+        "canonical_fact_zh": "两栖动物是首批真正的四足动物（即具有四肢的脊椎动物）这一广泛的动物类群。",
+        "answer_zh": "两栖动物",
+        "answer_aliases_zh": [
+          "两栖动物"
+        ]
+      },
+      "translation_sha256": "34c8e2c581af42638bbd244593a59c6d4d3073afc71833e040da91c9960d5773"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000335",
+        "historical:raw_sciq_000336"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "df897364f34497947f7cf210529b2a1e57237b04614f575f09cda204f4713868",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1947,
+      "first_chunk_seconds": 1.506,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2026,
+        "prompt_tokens": 1761,
+        "total_tokens": 3787,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1484,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7403fd293831e288bee571739fc5cbb2a0a9d6ac3c3da1749770fa573455a9a2",
+      "status": "completed",
+      "latency_seconds": 47.36
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000335",
+        "historical:raw_sciq_000336"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "36f51a695bf49a73de0b32fdfc88dcca3a9eae0b7160b765f16afc38ad5f411b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1520,
+      "first_chunk_seconds": 2.905,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1553,
+        "prompt_tokens": 852,
+        "total_tokens": 2405,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1306,
+          "text_tokens": 247
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8baee7dcfeb81b6a5e1dc72a46e1bebf179079037fd097c95e70560f8e73cff4",
+      "status": "completed",
+      "latency_seconds": 36.472
+    }
+  ],
+  "status": "completed"
+}

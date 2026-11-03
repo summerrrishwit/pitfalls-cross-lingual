@@ -1,0 +1,157 @@
+{
+  "input_sha256": "7070c4cc2a5b4178e1c719cdddb5c77e07c81135badec46b832f74e77d56337a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000672",
+      "decision": "ready",
+      "subject": "nuclear envelope",
+      "relation_id": "cellular_structure_to_breakdown_phase",
+      "relation_definition": "The specific cell-cycle or meiosis phase at which a given cellular structure begins to disintegrate or break down.",
+      "direction": "cellular structure -> breakdown phase",
+      "answer": "prophase i",
+      "canonical_fact": "The nuclear envelope begins to break down in prophase I.",
+      "prompt_en": "What phase does the nuclear envelope begin to break down?",
+      "evidence_quotes": [
+        "What phase does the nuclear envelope begin to break down?",
+        "prophase i"
+      ],
+      "reason": "Source Q&A directly states the phase in which the nuclear envelope begins to break down. No catalog relation fits this biological process-to-phase mapping, so a new relation cellular_structure_to_breakdown_phase is proposed.",
+      "english": {
+        "prompt_en": "What phase does the nuclear envelope begin to break down?",
+        "relation_definition": "The specific cell-cycle or meiosis phase at which a given cellular structure begins to disintegrate or break down.",
+        "answer": "prophase i",
+        "canonical_fact": "The nuclear envelope begins to break down in prophase I.",
+        "direction": "cellular structure -> breakdown phase",
+        "relation_id": "cellular_structure_to_breakdown_phase",
+        "subject": "nuclear envelope",
+        "answer_aliases_en": [
+          "prophase i"
+        ],
+        "relation_spec": {
+          "id": "cellular_structure_to_breakdown_phase",
+          "definition": "The specific cell-cycle or meiosis phase at which a given cellular structure begins to disintegrate or break down.",
+          "direction": "cellular structure -> breakdown phase"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "59a609eecd96d29b1af7da7255c55d4a21aaadaf4204983a1dd4f6cb58eb50ed",
+      "input_sha256": "eca46ce2598bbc22aaca67090e779971972aac7159e212b7166c1c99762a5caf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000673",
+      "decision": "ready",
+      "subject": "ants, termites, bees, and wasps",
+      "relation_id": "organism_group_to_social_structure",
+      "relation_definition": "The type of social structure in which a specified group of organisms lives; retain scale or size qualifiers where stated.",
+      "direction": "organism group -> social structure type",
+      "answer": "colony",
+      "canonical_fact": "Ants, termites, bees, and wasps live in a colony, a social structure that may include millions of individual insects.",
+      "prompt_en": "Ants, termites, bees, and wasps live in what type of social structure that may include millions of individual insects?",
+      "evidence_quotes": [
+        "Ants, termites, bees, and wasps live in what type of social structure that may include millions of individual insects?",
+        "colony"
+      ],
+      "reason": "Source Q&A directly identifies the social structure type as colony. No catalog relation fits the organism-group-to-social-structure mapping, so a new relation organism_group_to_social_structure is proposed. Scale qualifier (millions of individuals) preserved from the source.",
+      "english": {
+        "prompt_en": "Ants, termites, bees, and wasps live in what type of social structure that may include millions of individual insects?",
+        "relation_definition": "The type of social structure in which a specified group of organisms lives; retain scale or size qualifiers where stated.",
+        "answer": "colony",
+        "canonical_fact": "Ants, termites, bees, and wasps live in a colony, a social structure that may include millions of individual insects.",
+        "direction": "organism group -> social structure type",
+        "relation_id": "organism_group_to_social_structure",
+        "subject": "ants, termites, bees, and wasps",
+        "answer_aliases_en": [
+          "colony"
+        ],
+        "relation_spec": {
+          "id": "organism_group_to_social_structure",
+          "definition": "The type of social structure in which a specified group of organisms lives; retain scale or size qualifiers where stated.",
+          "direction": "organism group -> social structure type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "41ed7404f06b6ed553eccddf36b19cdd37b4a7b2436f5d17a479c39ecf96167b",
+      "input_sha256": "0b99b2cf0052b07456b1a1a21aa67a095ee85c5e92a39e75b07f5d5d4497fa95",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000672",
+        "historical:raw_sciq_000673"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1e6147c74fa68fb6808163bbbdab4fb39e3b0d91b24b259cf0302be5c3b06c30",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2453,
+      "first_chunk_seconds": 63.052,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2569,
+        "prompt_tokens": 1732,
+        "total_tokens": 4301,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2038,
+          "text_tokens": 531
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3e5d291db6c76bb7144336d73b429b0e041b65ac1a7d35fb4444497da494adad",
+      "status": "completed",
+      "latency_seconds": 98.464
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000672",
+        "historical:raw_sciq_000673"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1b0b34dda37570cbef0bc2855ee6921af3575952b080eeac0a3f1d44fdc2663f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 53.423
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000672",
+        "historical:raw_sciq_000673"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1b0b34dda37570cbef0bc2855ee6921af3575952b080eeac0a3f1d44fdc2663f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 83.371
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000672",
+        "historical:raw_sciq_000673"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1b0b34dda37570cbef0bc2855ee6921af3575952b080eeac0a3f1d44fdc2663f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 29.358
+    }
+  ],
+  "status": "failed"
+}

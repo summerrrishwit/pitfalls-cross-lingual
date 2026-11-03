@@ -1,0 +1,242 @@
+{
+  "input_sha256": "7cd6736cc06c71ab9391ea8618d63e245414c3b00dad20239a314543c2c327e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000187",
+      "decision": "ready",
+      "subject": "display used to trace a particular trait back through several generations of ancestors",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "pedigree chart",
+      "canonical_fact": "A pedigree chart is a display used to trace a particular trait back through several generations of ancestors.",
+      "prompt_en": "What is the conventional term for a display used to trace a particular trait back through several generations of ancestors?",
+      "evidence_quotes": [
+        "pedigree chart",
+        "trace a particular trait back through several generations of her ancestors"
+      ],
+      "reason": "The source question asks for the type of display that helps trace a trait through ancestral generations; 'pedigree chart' is the conventional term fitting that description. The catalog relation description_to_term (direction description -> term) matches exactly: the subject is the defining description and the answer is the conventional term. Both model extractions agree.",
+      "english": {
+        "answer": "pedigree chart",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the conventional term for a display used to trace a particular trait back through several generations of ancestors?",
+        "direction": "description -> term",
+        "subject": "display used to trace a particular trait back through several generations of ancestors",
+        "canonical_fact": "A pedigree chart is a display used to trace a particular trait back through several generations of ancestors.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "pedigree chart"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "27c56bc0b9de37aaa5bb6ad353466f79a7d508290c086be54422972eec031a08",
+      "input_sha256": "048f9b56bb8758f27c727235d63c64919d19df2d51475cbce8eed3b34262eac3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000191",
+      "decision": "ready",
+      "subject": "specialized cell",
+      "relation_id": "entity_to_shaping_structure",
+      "relation_definition": "The specific structural component that provides or determines the shape/form of a specified biological entity; stated at the granularity asked in the source.",
+      "direction": "entity -> shaping structure",
+      "answer": "structure of the cytoskeleton",
+      "canonical_fact": "The structure of the cytoskeleton provides a specialized cell with its shape.",
+      "prompt_en": "What provides a specialized cell with its shape?",
+      "evidence_quotes": [
+        "structure of the cytoskeleton",
+        "What provides a specialized cell with its shape?"
+      ],
+      "reason": "The source question asks specifically what provides a specialized cell with its shape; the answer is 'structure of the cytoskeleton.' No existing catalog relation captures the functional/causal link between an entity and the structure that determines its shape (whole_to_part only captures membership, not the shape-determining role). A new precise relation entity_to_shaping_structure is proposed with direction entity -> shaping structure. Both model extractions agree on the same subject, answer, and canonical fact.",
+      "english": {
+        "answer": "structure of the cytoskeleton",
+        "relation_id": "entity_to_shaping_structure",
+        "prompt_en": "What provides a specialized cell with its shape?",
+        "direction": "entity -> shaping structure",
+        "subject": "specialized cell",
+        "canonical_fact": "The structure of the cytoskeleton provides a specialized cell with its shape.",
+        "relation_definition": "The specific structural component that provides or determines the shape/form of a specified biological entity; stated at the granularity asked in the source.",
+        "answer_aliases_en": [
+          "structure of the cytoskeleton"
+        ],
+        "relation_spec": {
+          "id": "entity_to_shaping_structure",
+          "definition": "The specific structural component that provides or determines the shape/form of a specified biological entity; stated at the granularity asked in the source.",
+          "direction": "entity -> shaping structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c55f9b26eb6feba1988a3a794ed73bbd60b0fe2e325990e385d30ddc25ae6de7",
+      "input_sha256": "48124415cf0f1c0c147880db97912f400bbca754d810313a44491eeed214ecaa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000187",
+      "input_sha256": "048f9b56bb8758f27c727235d63c64919d19df2d51475cbce8eed3b34262eac3",
+      "english": {
+        "answer": "pedigree chart",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the conventional term for a display used to trace a particular trait back through several generations of ancestors?",
+        "direction": "description -> term",
+        "subject": "display used to trace a particular trait back through several generations of ancestors",
+        "canonical_fact": "A pedigree chart is a display used to trace a particular trait back through several generations of ancestors.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "pedigree chart"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "27c56bc0b9de37aaa5bb6ad353466f79a7d508290c086be54422972eec031a08",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000187",
+        "subject_zh": "用于追溯某一特定性状在数代祖先中传递情况的展示图",
+        "prompt_zh": "用于追溯某一特定性状在数代祖先中传递情况的展示图，其惯用术语是什么？",
+        "canonical_fact_zh": "系谱图是一种用于追溯某一特定性状在数代祖先中传递情况的展示图。",
+        "answer_zh": "系谱图",
+        "answer_aliases_zh": [
+          "系谱图"
+        ]
+      },
+      "translation_sha256": "f0870fec62856086a89394d7875851ee7a8178b06907e8ba48813dd1a0cbb41e"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000191",
+      "input_sha256": "48124415cf0f1c0c147880db97912f400bbca754d810313a44491eeed214ecaa",
+      "english": {
+        "answer": "structure of the cytoskeleton",
+        "relation_id": "entity_to_shaping_structure",
+        "prompt_en": "What provides a specialized cell with its shape?",
+        "direction": "entity -> shaping structure",
+        "subject": "specialized cell",
+        "canonical_fact": "The structure of the cytoskeleton provides a specialized cell with its shape.",
+        "relation_definition": "The specific structural component that provides or determines the shape/form of a specified biological entity; stated at the granularity asked in the source.",
+        "answer_aliases_en": [
+          "structure of the cytoskeleton"
+        ],
+        "relation_spec": {
+          "id": "entity_to_shaping_structure",
+          "definition": "The specific structural component that provides or determines the shape/form of a specified biological entity; stated at the granularity asked in the source.",
+          "direction": "entity -> shaping structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c55f9b26eb6feba1988a3a794ed73bbd60b0fe2e325990e385d30ddc25ae6de7",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000191",
+        "subject_zh": "特化细胞",
+        "prompt_zh": "是什么赋予特化细胞以其形态？",
+        "canonical_fact_zh": "细胞骨架的结构赋予特化细胞以其形态。",
+        "answer_zh": "细胞骨架的结构",
+        "answer_aliases_zh": [
+          "细胞骨架的结构"
+        ]
+      },
+      "translation_sha256": "7c0317fa9472aef2fcbdbe28d16bf56944b0b1102fbed1ff597147776168dd95"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000187",
+        "historical:raw_ai2_arc_easy_000191"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b6bfb3531222114df41d2e0c906fbe8c7a18e4ec420377d268520b15e5554152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.185
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000187",
+        "historical:raw_ai2_arc_easy_000191"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b6bfb3531222114df41d2e0c906fbe8c7a18e4ec420377d268520b15e5554152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.061
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000187",
+        "historical:raw_ai2_arc_easy_000191"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b6bfb3531222114df41d2e0c906fbe8c7a18e4ec420377d268520b15e5554152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2662,
+      "first_chunk_seconds": 29.365,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2859,
+        "prompt_tokens": 1763,
+        "total_tokens": 4622,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2282,
+          "text_tokens": 577
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "32e82bd6b3caf634590468482a138f8e5b586e38e5ad699527777cef3655b0fc",
+      "status": "completed",
+      "latency_seconds": 71.464
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000187",
+        "historical:raw_ai2_arc_easy_000191"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8a43dd9154c3a12adcd5abc2cdec2d64d99edfacae9c3d25cb17295d3eab836a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1657,
+      "first_chunk_seconds": 38.726,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1678,
+        "prompt_tokens": 868,
+        "total_tokens": 2546,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1492,
+          "text_tokens": 186
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f0314e15537ccd5c18ea491fba208e2b542687f6067991967197dbf47b21554e",
+      "status": "completed",
+      "latency_seconds": 56.242
+    }
+  ],
+  "status": "completed"
+}

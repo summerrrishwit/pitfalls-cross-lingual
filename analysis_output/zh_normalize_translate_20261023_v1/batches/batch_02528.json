@@ -1,0 +1,214 @@
+{
+  "input_sha256": "134b3791343cda36f7819f66992a6c7e8cf666b3fed4b1c53cb80de7f255258d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002915",
+      "decision": "ready",
+      "subject": "American Civil War",
+      "relation_id": "event_to_purpose",
+      "relation_definition": "The explicitly stated purpose or objective for which a specific event was undertaken or fought.",
+      "direction": "event -> stated purpose/objective",
+      "answer": "slavery",
+      "canonical_fact": "The American Civil War was fought to free people from slavery.",
+      "prompt_en": "What was the American Civil War fought to free people from?",
+      "evidence_quotes": [
+        "slavery",
+        "fought to free people from what?"
+      ],
+      "reason": "Both models extracted the fact consistently. The source question explicitly asks what the Civil War was fought to free people from, and the source answer is 'slavery'. No existing catalog relation captures event-purpose; a new relation event_to_purpose is proposed to precisely represent the stated objective of a historical event. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "event -> stated purpose/objective",
+        "relation_id": "event_to_purpose",
+        "answer": "slavery",
+        "canonical_fact": "The American Civil War was fought to free people from slavery.",
+        "subject": "American Civil War",
+        "prompt_en": "What was the American Civil War fought to free people from?",
+        "relation_definition": "The explicitly stated purpose or objective for which a specific event was undertaken or fought.",
+        "answer_aliases_en": [
+          "slavery"
+        ],
+        "relation_spec": {
+          "id": "event_to_purpose",
+          "definition": "The explicitly stated purpose or objective for which a specific event was undertaken or fought.",
+          "direction": "event -> stated purpose/objective"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de206fca028e2cc5e6f978369724528eb5c8bee26f2089a22bde6a29af3c2736",
+      "input_sha256": "67bc2acb5418d4d3ac69848c89040a2e13631ea8a843c9e6ea279bcde10c7608",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002916",
+      "decision": "ready",
+      "subject": "Space Shuttle",
+      "relation_id": "vehicle_to_operator",
+      "relation_definition": "The organization or entity responsible for operating a specified vehicle, spacecraft, or transportation system.",
+      "direction": "vehicle/spacecraft -> operating organization",
+      "answer": "NASA",
+      "canonical_fact": "NASA operated the Space Shuttle.",
+      "prompt_en": "Which organization operated the Space Shuttle?",
+      "evidence_quotes": [
+        "nasa",
+        "who was operating it?"
+      ],
+      "reason": "The source question identifies the Space Shuttle ('the shuttle was inverted onto the launch platform') and asks who was operating it; the source answer is 'nasa'. One model flagged ambiguity but the referent is clear in context. No existing catalog relation covers operator-of-vehicle; a new relation vehicle_to_operator is proposed. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "vehicle/spacecraft -> operating organization",
+        "relation_id": "vehicle_to_operator",
+        "answer": "NASA",
+        "canonical_fact": "NASA operated the Space Shuttle.",
+        "subject": "Space Shuttle",
+        "prompt_en": "Which organization operated the Space Shuttle?",
+        "relation_definition": "The organization or entity responsible for operating a specified vehicle, spacecraft, or transportation system.",
+        "answer_aliases_en": [
+          "NASA"
+        ],
+        "relation_spec": {
+          "id": "vehicle_to_operator",
+          "definition": "The organization or entity responsible for operating a specified vehicle, spacecraft, or transportation system.",
+          "direction": "vehicle/spacecraft -> operating organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b49b16a8f43c3f33ab8a221e56c8bfa66c6d9cb8de3d5e95da1db7151f62e203",
+      "input_sha256": "5811eed73dd9b68753950e66ecf333ca45abc3aef20f8387af0a5887ccae1802",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002915",
+      "input_sha256": "67bc2acb5418d4d3ac69848c89040a2e13631ea8a843c9e6ea279bcde10c7608",
+      "english": {
+        "direction": "event -> stated purpose/objective",
+        "relation_id": "event_to_purpose",
+        "answer": "slavery",
+        "canonical_fact": "The American Civil War was fought to free people from slavery.",
+        "subject": "American Civil War",
+        "prompt_en": "What was the American Civil War fought to free people from?",
+        "relation_definition": "The explicitly stated purpose or objective for which a specific event was undertaken or fought.",
+        "answer_aliases_en": [
+          "slavery"
+        ],
+        "relation_spec": {
+          "id": "event_to_purpose",
+          "definition": "The explicitly stated purpose or objective for which a specific event was undertaken or fought.",
+          "direction": "event -> stated purpose/objective"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de206fca028e2cc5e6f978369724528eb5c8bee26f2089a22bde6a29af3c2736",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002915",
+        "subject_zh": "美国内战",
+        "prompt_zh": "美国内战是为了使人们摆脱什么而进行的？",
+        "canonical_fact_zh": "美国内战是为了使人们摆脱奴隶制而进行的。",
+        "answer_zh": "奴隶制",
+        "answer_aliases_zh": [
+          "奴隶制"
+        ]
+      },
+      "translation_sha256": "667c90d344411bb2c145a0dcb2366408423ca3d0ccbdebcfb30b41ed4994b28e"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002916",
+      "input_sha256": "5811eed73dd9b68753950e66ecf333ca45abc3aef20f8387af0a5887ccae1802",
+      "english": {
+        "direction": "vehicle/spacecraft -> operating organization",
+        "relation_id": "vehicle_to_operator",
+        "answer": "NASA",
+        "canonical_fact": "NASA operated the Space Shuttle.",
+        "subject": "Space Shuttle",
+        "prompt_en": "Which organization operated the Space Shuttle?",
+        "relation_definition": "The organization or entity responsible for operating a specified vehicle, spacecraft, or transportation system.",
+        "answer_aliases_en": [
+          "NASA"
+        ],
+        "relation_spec": {
+          "id": "vehicle_to_operator",
+          "definition": "The organization or entity responsible for operating a specified vehicle, spacecraft, or transportation system.",
+          "direction": "vehicle/spacecraft -> operating organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b49b16a8f43c3f33ab8a221e56c8bfa66c6d9cb8de3d5e95da1db7151f62e203",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002916",
+        "subject_zh": "航天飞机",
+        "prompt_zh": "哪个机构运营了航天飞机？",
+        "canonical_fact_zh": "NASA 运营了航天飞机。",
+        "answer_zh": "NASA",
+        "answer_aliases_zh": [
+          "NASA"
+        ]
+      },
+      "translation_sha256": "f58179a62d4fa93e97ac6fa055000d2c39cc1db58ecae231c1677b9598349c14"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002915",
+        "historical:raw_commonsense_qa_002916"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0754588119f9ac1642870d1119ce6807d892843bc717c9591d7b5ef6e1bc0c5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2253,
+      "first_chunk_seconds": 31.867,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2410,
+        "prompt_tokens": 1638,
+        "total_tokens": 4048,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1912,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "896e650674199e66a633ee9cc474f0fbc531ceccb5bd73026a622b599fc58d72",
+      "status": "completed",
+      "latency_seconds": 63.869
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002915",
+        "historical:raw_commonsense_qa_002916"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "055dbd76777565713c62778acc2dd5a09e3bdd7f6f957e8bdbd5801faa78a2e8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 878,
+      "first_chunk_seconds": 5.697,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 891,
+        "prompt_tokens": 803,
+        "total_tokens": 1694,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 745,
+          "text_tokens": 146
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3ec8041f2896e97ce8e9f1972e06f99be3a930e8eb766bb0f35ef3102425d5e2",
+      "status": "completed",
+      "latency_seconds": 103.51
+    }
+  ],
+  "status": "completed"
+}

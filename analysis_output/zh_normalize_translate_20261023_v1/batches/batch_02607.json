@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3216944f2989c9fb0280fc6386cf47fe2c03610c98acc7833da7992de08759a3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005239",
+      "decision": "ready",
+      "subject": "Louisiana",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "deep south",
+      "canonical_fact": "Louisiana was a confederate state in the deep south.",
+      "prompt_en": "In which geographic region was Louisiana a confederate state?",
+      "evidence_quotes": [
+        "Louisiana was a confederate state in the what?",
+        "deep south"
+      ],
+      "reason": "The source question explicitly asks for the region in which Louisiana was a confederate state; 'deep south' is the literal answer. entity_to_containing_location fits because the Deep South is a geographic region containing Louisiana. The qualifier 'confederate state' is preserved from the source.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "deep south",
+        "canonical_fact": "Louisiana was a confederate state in the deep south.",
+        "subject": "Louisiana",
+        "prompt_en": "In which geographic region was Louisiana a confederate state?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "deep south"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fb3a1667bf7a9e719f679e5b103cc3f62f359204ae2fead1151d4821120b7b48",
+      "input_sha256": "009ca0b982073a2092cdb7b358ba92096479a3ec58e1b818c567101a08d88920",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005242",
+      "decision": "ready",
+      "subject": "Two year college degrees",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "arts",
+      "canonical_fact": "Two year college degrees are either an associates of science or an associates of arts.",
+      "prompt_en": "Besides an associate of science, what is the other type of two-year college degree?",
+      "evidence_quotes": [
+        "Two year college degrees are either an associates of science or an associates of what?",
+        "arts"
+      ],
+      "reason": "The source frames two-year college degrees as a whole with two constituent types (associate of science, associate of arts). whole_to_part captures this: 'Two year college degrees' is the whole category and 'arts' (i.e., associate of arts) is one specified constituent. The 'either/or' structure in the source confirms multiple valid parts, which the definition accommodates.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "arts",
+        "canonical_fact": "Two year college degrees are either an associates of science or an associates of arts.",
+        "subject": "Two year college degrees",
+        "prompt_en": "Besides an associate of science, what is the other type of two-year college degree?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "arts"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d28debb0e9d129778d7e67c88efbfa71ff9bfc3c3306e319ff53ae9486cf76d4",
+      "input_sha256": "8ba8d0789bdddf1e34862a0da13a8993ebbfd181201ac84e3af814cc4daab6d0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005239",
+      "input_sha256": "009ca0b982073a2092cdb7b358ba92096479a3ec58e1b818c567101a08d88920",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "deep south",
+        "canonical_fact": "Louisiana was a confederate state in the deep south.",
+        "subject": "Louisiana",
+        "prompt_en": "In which geographic region was Louisiana a confederate state?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "deep south"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fb3a1667bf7a9e719f679e5b103cc3f62f359204ae2fead1151d4821120b7b48",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005239",
+        "subject_zh": "路易斯安那州",
+        "prompt_zh": "路易斯安那州是南方联盟哪个地理区域的州？",
+        "canonical_fact_zh": "路易斯安那州是深南方的南方联盟州。",
+        "answer_zh": "深南方",
+        "answer_aliases_zh": [
+          "深南方"
+        ]
+      },
+      "translation_sha256": "837a09e2ba08b498f69c7ada5a6eda8529bde324be9e932a6cc1bda5a41ba0cc"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005242",
+      "input_sha256": "8ba8d0789bdddf1e34862a0da13a8993ebbfd181201ac84e3af814cc4daab6d0",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "arts",
+        "canonical_fact": "Two year college degrees are either an associates of science or an associates of arts.",
+        "subject": "Two year college degrees",
+        "prompt_en": "Besides an associate of science, what is the other type of two-year college degree?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "arts"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d28debb0e9d129778d7e67c88efbfa71ff9bfc3c3306e319ff53ae9486cf76d4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005242",
+        "subject_zh": "两年制大专学位",
+        "prompt_zh": "除了副理科学学位，另一种两年制大专学位是什么？",
+        "canonical_fact_zh": "两年制大专学位要么是副理科学学位，要么是副文学学位。",
+        "answer_zh": "文学",
+        "answer_aliases_zh": [
+          "文学"
+        ]
+      },
+      "translation_sha256": "093e02e19fe57b49b0ad8fced365587fca0b88e93ffa2faaf5e79dc7c766d5be"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005239",
+        "historical:raw_commonsense_qa_005242"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c68e1e3bfa4b43119749fc0cb48a37596aea1059d5cb12d8d33b8fe2ce84822f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2087,
+      "first_chunk_seconds": 9.184,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2185,
+        "prompt_tokens": 1658,
+        "total_tokens": 3843,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1673,
+          "text_tokens": 512
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "25a50698ed38e40c5adf587953eaa07f7f557babe196881b06eabdd201d9251b",
+      "status": "completed",
+      "latency_seconds": 49.595
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005239",
+        "historical:raw_commonsense_qa_005242"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f89deec64e10b8d23608ce4835ef0f2269e7f1ea0ec0875de608a45167087b7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1113,
+      "first_chunk_seconds": 23.819,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1208,
+        "prompt_tokens": 811,
+        "total_tokens": 2019,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 977,
+          "text_tokens": 231
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "071b40e1c3587e69dc056845351677dea0eafb858b282e4fcb95325c317ec864",
+      "status": "completed",
+      "latency_seconds": 44.633
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2ffdc8492aece59d64296598d04288618e71bad93de5e494f7363b84000757d3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000601",
+      "decision": "ready",
+      "subject": "car brought to a stop by friction on level ground",
+      "relation_id": "physical_scenario_to_lost_quantity",
+      "relation_definition": "In a described physical process or scenario, the specific physical quantity (e.g., kinetic energy, momentum) lost or dissipated by the subject due to the stated mechanism and conditions.",
+      "direction": "specified physical scenario -> quantity lost",
+      "answer": "kinetic energy",
+      "canonical_fact": "A car brought to a stop by friction on level ground loses kinetic energy.",
+      "prompt_en": "When a car is brought to a stop by friction on level ground, what physical quantity does it lose?",
+      "evidence_quotes": [
+        "it loses what?",
+        "kinetic energy"
+      ],
+      "reason": "Both model annotations agree on extraction. The source question and answer clearly establish that a car stopped by friction on level ground loses kinetic energy. No existing catalog relation captures a scenario-to-quantity-lost mapping, so a new precise relation 'physical_scenario_to_lost_quantity' is proposed. The prompt avoids stating the answer 'kinetic energy'.",
+      "english": {
+        "relation_definition": "In a described physical process or scenario, the specific physical quantity (e.g., kinetic energy, momentum) lost or dissipated by the subject due to the stated mechanism and conditions.",
+        "direction": "specified physical scenario -> quantity lost",
+        "subject": "car brought to a stop by friction on level ground",
+        "relation_id": "physical_scenario_to_lost_quantity",
+        "prompt_en": "When a car is brought to a stop by friction on level ground, what physical quantity does it lose?",
+        "answer": "kinetic energy",
+        "canonical_fact": "A car brought to a stop by friction on level ground loses kinetic energy.",
+        "answer_aliases_en": [
+          "kinetic energy"
+        ],
+        "relation_spec": {
+          "id": "physical_scenario_to_lost_quantity",
+          "definition": "In a described physical process or scenario, the specific physical quantity (e.g., kinetic energy, momentum) lost or dissipated by the subject due to the stated mechanism and conditions.",
+          "direction": "specified physical scenario -> quantity lost"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "042ff261a1dc428bd5ab5c0d45170a665baa597be0a69d594b431ba1cd3147e9",
+      "input_sha256": "a82dee9b8de410b0e6b10c40fea698b2baa6efa8bc29ed1e1e49847f5ecb1227",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000602",
+      "decision": "ready",
+      "subject": "people with osteoporosis",
+      "relation_id": "condition_group_to_risked_outcome",
+      "relation_definition": "A specific health outcome for which a group defined by a named medical condition has a statistically increased risk; retain the specific condition and outcome as stated.",
+      "direction": "group defined by medical condition -> health outcome with increased risk",
+      "answer": "bone fractures",
+      "canonical_fact": "People with osteoporosis are at increased risk of bone fractures.",
+      "prompt_en": "What health outcome are people with osteoporosis at increased risk of?",
+      "evidence_quotes": [
+        "What are people with osteoporosis at increased risk of?",
+        "bone fractures"
+      ],
+      "reason": "Both model annotations agree. The source clearly states the increased risk association between osteoporosis and bone fractures. No catalog relation covers a condition-group-to-risked-outcome mapping, so a new precise relation 'condition_group_to_risked_outcome' is proposed. The prompt avoids containing the answer 'bone fractures'.",
+      "english": {
+        "relation_definition": "A specific health outcome for which a group defined by a named medical condition has a statistically increased risk; retain the specific condition and outcome as stated.",
+        "direction": "group defined by medical condition -> health outcome with increased risk",
+        "subject": "people with osteoporosis",
+        "relation_id": "condition_group_to_risked_outcome",
+        "prompt_en": "What health outcome are people with osteoporosis at increased risk of?",
+        "answer": "bone fractures",
+        "canonical_fact": "People with osteoporosis are at increased risk of bone fractures.",
+        "answer_aliases_en": [
+          "bone fractures"
+        ],
+        "relation_spec": {
+          "id": "condition_group_to_risked_outcome",
+          "definition": "A specific health outcome for which a group defined by a named medical condition has a statistically increased risk; retain the specific condition and outcome as stated.",
+          "direction": "group defined by medical condition -> health outcome with increased risk"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "026892ceb811bf57a825951ca11fcece6dd9c1ed2c096cbb7244e84d643505b9",
+      "input_sha256": "a72bd15cf4e698da03c9d40afda71bdfa2eeb1956879b322c66d28552523ec20",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000601",
+      "input_sha256": "a82dee9b8de410b0e6b10c40fea698b2baa6efa8bc29ed1e1e49847f5ecb1227",
+      "english": {
+        "relation_definition": "In a described physical process or scenario, the specific physical quantity (e.g., kinetic energy, momentum) lost or dissipated by the subject due to the stated mechanism and conditions.",
+        "direction": "specified physical scenario -> quantity lost",
+        "subject": "car brought to a stop by friction on level ground",
+        "relation_id": "physical_scenario_to_lost_quantity",
+        "prompt_en": "When a car is brought to a stop by friction on level ground, what physical quantity does it lose?",
+        "answer": "kinetic energy",
+        "canonical_fact": "A car brought to a stop by friction on level ground loses kinetic energy.",
+        "answer_aliases_en": [
+          "kinetic energy"
+        ],
+        "relation_spec": {
+          "id": "physical_scenario_to_lost_quantity",
+          "definition": "In a described physical process or scenario, the specific physical quantity (e.g., kinetic energy, momentum) lost or dissipated by the subject due to the stated mechanism and conditions.",
+          "direction": "specified physical scenario -> quantity lost"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "042ff261a1dc428bd5ab5c0d45170a665baa597be0a69d594b431ba1cd3147e9",
+      "translation": {
+        "record_id": "historical:raw_sciq_000601",
+        "subject_zh": "在水平地面上因摩擦而停下的汽车",
+        "prompt_zh": "当一辆汽车在水平地面上因摩擦力而停下时，它损失了哪种物理量？",
+        "canonical_fact_zh": "在水平地面上因摩擦而停下的汽车会损失动能。",
+        "answer_zh": "动能",
+        "answer_aliases_zh": [
+          "动能"
+        ]
+      },
+      "translation_sha256": "cc036b4cb06e4b0590a2601885ced18dbe9842507bdbe5a76af8dc497f5f6736"
+    },
+    {
+      "record_id": "historical:raw_sciq_000602",
+      "input_sha256": "a72bd15cf4e698da03c9d40afda71bdfa2eeb1956879b322c66d28552523ec20",
+      "english": {
+        "relation_definition": "A specific health outcome for which a group defined by a named medical condition has a statistically increased risk; retain the specific condition and outcome as stated.",
+        "direction": "group defined by medical condition -> health outcome with increased risk",
+        "subject": "people with osteoporosis",
+        "relation_id": "condition_group_to_risked_outcome",
+        "prompt_en": "What health outcome are people with osteoporosis at increased risk of?",
+        "answer": "bone fractures",
+        "canonical_fact": "People with osteoporosis are at increased risk of bone fractures.",
+        "answer_aliases_en": [
+          "bone fractures"
+        ],
+        "relation_spec": {
+          "id": "condition_group_to_risked_outcome",
+          "definition": "A specific health outcome for which a group defined by a named medical condition has a statistically increased risk; retain the specific condition and outcome as stated.",
+          "direction": "group defined by medical condition -> health outcome with increased risk"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "026892ceb811bf57a825951ca11fcece6dd9c1ed2c096cbb7244e84d643505b9",
+      "translation": {
+        "record_id": "historical:raw_sciq_000602",
+        "subject_zh": "骨质疏松患者",
+        "prompt_zh": "骨质疏松患者面临哪些健康后果的风险增加？",
+        "canonical_fact_zh": "骨质疏松患者发生骨折的风险增加。",
+        "answer_zh": "骨折",
+        "answer_aliases_zh": [
+          "骨折"
+        ]
+      },
+      "translation_sha256": "55daefc3b9c711f30fd3d7e56878498284f663d28151194cc3d34936e95c826e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000601",
+        "historical:raw_sciq_000602"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7f0e61ef8051e66ad490d94f87ce765eb55fb80d4a3907194882ebc98fc9e475",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2117,
+      "first_chunk_seconds": 1.694,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2213,
+        "prompt_tokens": 1708,
+        "total_tokens": 3921,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1649,
+          "text_tokens": 564
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d1689078e13d43ecaa1ba5adc72bb44912f74b0818d327e1693e86d6162f9e35",
+      "status": "completed",
+      "latency_seconds": 66.997
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000601",
+        "historical:raw_sciq_000602"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fcda3d23ed2952a2047ddb4fd0e48dee60b96d1cd0ad81e0b76378f4612491c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1506,
+      "first_chunk_seconds": 1.689,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1530,
+        "prompt_tokens": 920,
+        "total_tokens": 2450,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1370,
+          "text_tokens": 160
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8a198cfd4e68e3becdd07b6889d29c606c18e76f93602f51951cac3a81d9602e",
+      "status": "completed",
+      "latency_seconds": 74.302
+    }
+  ],
+  "status": "completed"
+}

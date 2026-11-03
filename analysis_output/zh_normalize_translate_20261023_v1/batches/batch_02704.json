@@ -1,0 +1,214 @@
+{
+  "input_sha256": "cf4d1f83aa1c7a44a19fd69708392021aecb6742374fa558f10e93cc414bd833",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008375",
+      "decision": "ready",
+      "subject": "left-hand driving on a motorway",
+      "relation_id": "driving_convention_to_region",
+      "relation_definition": "The country or region where a specific driving-side convention (left-hand or right-hand traffic) is in effect on motorways.",
+      "direction": "driving convention context -> region/country",
+      "answer": "england",
+      "canonical_fact": "In England, people drive on the left on a motorway.",
+      "prompt_en": "In which country do people drive on the left side of a motorway?",
+      "evidence_quotes": [
+        "Where do people drive on the left on a motorway?",
+        "england"
+      ],
+      "reason": "No existing catalog relation captures 'which region applies a given driving-side convention.' The question asks for the country where left-hand motorway driving is the norm; the source answer is 'england.' Proposed a precise new relation driving_convention_to_region rather than forcing entity_to_containing_location (which is about geographic containment, not traffic rules).",
+      "english": {
+        "direction": "driving convention context -> region/country",
+        "relation_id": "driving_convention_to_region",
+        "answer": "england",
+        "canonical_fact": "In England, people drive on the left on a motorway.",
+        "subject": "left-hand driving on a motorway",
+        "prompt_en": "In which country do people drive on the left side of a motorway?",
+        "relation_definition": "The country or region where a specific driving-side convention (left-hand or right-hand traffic) is in effect on motorways.",
+        "answer_aliases_en": [
+          "england"
+        ],
+        "relation_spec": {
+          "id": "driving_convention_to_region",
+          "definition": "The country or region where a specific driving-side convention (left-hand or right-hand traffic) is in effect on motorways.",
+          "direction": "driving convention context -> region/country"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "20ba88ac0dcf5ee98fe15031c91654c77c3f8b221bcbf58fc292497e237aef3d",
+      "input_sha256": "30247a1b253e6c8104c4c6f45e5d280aea0eb778fc0645ae6acc70c9f43045fc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008410",
+      "decision": "ready",
+      "subject": "product that has been out of stock but is now restocked",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "available",
+      "canonical_fact": "A product that has been out of stock but is now restocked is available.",
+      "prompt_en": "What single word describes the status of a product that has been out of stock but is now restocked?",
+      "evidence_quotes": [
+        "A product that has been out of stock but is now restocked is what?",
+        "available"
+      ],
+      "reason": "The question supplies a defining description of a product's status and asks for the conventional term. description_to_term fits exactly: the description 'out of stock but now restocked' maps to the term 'available.' Both model annotations independently extracted this; no conflict with source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "available",
+        "canonical_fact": "A product that has been out of stock but is now restocked is available.",
+        "subject": "product that has been out of stock but is now restocked",
+        "prompt_en": "What single word describes the status of a product that has been out of stock but is now restocked?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "available"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a9d667a1fc16e9e0baa7fb5ce6b27687cd855956f655fe782976555a8f1111ba",
+      "input_sha256": "8adac041021e926022cfcc94f6db286c3a6ea5acd14800da6f10ccc51a638905",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008375",
+      "input_sha256": "30247a1b253e6c8104c4c6f45e5d280aea0eb778fc0645ae6acc70c9f43045fc",
+      "english": {
+        "direction": "driving convention context -> region/country",
+        "relation_id": "driving_convention_to_region",
+        "answer": "england",
+        "canonical_fact": "In England, people drive on the left on a motorway.",
+        "subject": "left-hand driving on a motorway",
+        "prompt_en": "In which country do people drive on the left side of a motorway?",
+        "relation_definition": "The country or region where a specific driving-side convention (left-hand or right-hand traffic) is in effect on motorways.",
+        "answer_aliases_en": [
+          "england"
+        ],
+        "relation_spec": {
+          "id": "driving_convention_to_region",
+          "definition": "The country or region where a specific driving-side convention (left-hand or right-hand traffic) is in effect on motorways.",
+          "direction": "driving convention context -> region/country"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "20ba88ac0dcf5ee98fe15031c91654c77c3f8b221bcbf58fc292497e237aef3d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008375",
+        "subject_zh": "高速公路上的左侧通行",
+        "prompt_zh": "在哪个国家，人们在高速公路上靠左侧行驶？",
+        "canonical_fact_zh": "在英国，人们在高速公路上靠左侧行驶。",
+        "answer_zh": "英国",
+        "answer_aliases_zh": [
+          "英国"
+        ]
+      },
+      "translation_sha256": "b324e54366c68e0e3e02adc1568b9aebac4db35f4146488130980eb88b33595a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008410",
+      "input_sha256": "8adac041021e926022cfcc94f6db286c3a6ea5acd14800da6f10ccc51a638905",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "available",
+        "canonical_fact": "A product that has been out of stock but is now restocked is available.",
+        "subject": "product that has been out of stock but is now restocked",
+        "prompt_en": "What single word describes the status of a product that has been out of stock but is now restocked?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "available"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a9d667a1fc16e9e0baa7fb5ce6b27687cd855956f655fe782976555a8f1111ba",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008410",
+        "subject_zh": "已缺货但现已补货的产品",
+        "prompt_zh": "用一个词来描述已缺货但现已补货的产品的状态，该词是什么？",
+        "canonical_fact_zh": "已缺货但现已补货的产品即为有货。",
+        "answer_zh": "有货",
+        "answer_aliases_zh": [
+          "有货"
+        ]
+      },
+      "translation_sha256": "50efec1b1a2ba6856c1933ac5f78b04f279f7d0b94ef11620c6228cd5c13542d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008375",
+        "historical:raw_commonsense_qa_008410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad582cc5de1a7f8c7dc2547316324e591200fe95d8623c183d0f7cc62c901276",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2513,
+      "first_chunk_seconds": 54.556,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2679,
+        "prompt_tokens": 1685,
+        "total_tokens": 4364,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2141,
+          "text_tokens": 538
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "36c120b746c222247c56ad8db0eab54682f364c63edb222f7dd8f8a3bd9da0cb",
+      "status": "completed",
+      "latency_seconds": 92.074
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008375",
+        "historical:raw_commonsense_qa_008410"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a4a103cf30382bbac60f36e87b75aa190b36fc76f1308fbf5f2cb209ba2ce25",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1183,
+      "first_chunk_seconds": 21.038,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1239,
+        "prompt_tokens": 865,
+        "total_tokens": 2104,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1006,
+          "text_tokens": 233
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f81bc92f1bc11c2f59fc33ae696f13696667c4ba76dcd251030f9dc78afdd3de",
+      "status": "completed",
+      "latency_seconds": 56.276
+    }
+  ],
+  "status": "completed"
+}

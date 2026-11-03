@@ -1,0 +1,195 @@
+{
+  "input_sha256": "4caf9d493e259f732d7ad6a0db5e3470c978064bbef66fb765247d052630232f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000318",
+      "decision": "ready",
+      "subject": "overall voltage of a battery",
+      "relation_id": "physical_quantity_to_summand",
+      "relation_definition": "Specifies that a composite or aggregate physical quantity equals the sum of a particular component quantity across the individual elements constituting the composite.",
+      "direction": "composite quantity -> summand quantity",
+      "answer": "voltages",
+      "canonical_fact": "The overall voltage of a battery is the sum of the voltages of the individual cells.",
+      "prompt_en": "The overall voltage of a battery is the sum of what property of the individual cells?",
+      "evidence_quotes": [
+        "the sum of",
+        "the individual cells",
+        "voltages"
+      ],
+      "reason": "The source states a physical aggregation rule: overall battery voltage equals the sum of individual cell voltages. No catalog relation exactly captures a quantitative summation relationship between a composite quantity and its component quantities, so a new relation 'physical_quantity_to_summand' is proposed. The answer 'voltages' is a direct literal from source_answer. The prompt avoids the answer word 'voltages'.",
+      "english": {
+        "direction": "composite quantity -> summand quantity",
+        "relation_id": "physical_quantity_to_summand",
+        "answer": "voltages",
+        "canonical_fact": "The overall voltage of a battery is the sum of the voltages of the individual cells.",
+        "subject": "overall voltage of a battery",
+        "prompt_en": "The overall voltage of a battery is the sum of what property of the individual cells?",
+        "relation_definition": "Specifies that a composite or aggregate physical quantity equals the sum of a particular component quantity across the individual elements constituting the composite.",
+        "answer_aliases_en": [
+          "voltages"
+        ],
+        "relation_spec": {
+          "id": "physical_quantity_to_summand",
+          "definition": "Specifies that a composite or aggregate physical quantity equals the sum of a particular component quantity across the individual elements constituting the composite.",
+          "direction": "composite quantity -> summand quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "20749a1d08806fe88a205204cc5c82f6393ccbf97c746e766a3cfe6cdd3ef035",
+      "input_sha256": "a0fe29f81d3329445bce626a9169c2ca0330826093a3560aeb71448dd461117c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000319",
+      "decision": "ready",
+      "subject": "crossing over, independent assortment, and the random union of gametes",
+      "relation_id": "mechanism_to_outcome",
+      "relation_definition": "States that a specified set of mechanisms or biological processes gives rise to a particular outcome or phenomenon.",
+      "direction": "mechanism/process -> outcome",
+      "answer": "genetic variation",
+      "canonical_fact": "Genetic variation arises due to crossing over, independent assortment, and the random union of gametes.",
+      "prompt_en": "What biological outcome arises due to crossing over, independent assortment, and the random union of gametes?",
+      "evidence_quotes": [
+        "crossing over, independent assortment, and the random union of gametes",
+        "arises due to",
+        "genetic variation"
+      ],
+      "reason": "The source explicitly links three genetic mechanisms to the outcome 'genetic variation.' No catalog relation covers a causal/mechanism-to-outcome link in biology, so a new relation 'mechanism_to_outcome' is proposed. The answer 'genetic variation' is a direct literal from source_answer. The prompt avoids the answer string.",
+      "english": {
+        "direction": "mechanism/process -> outcome",
+        "relation_id": "mechanism_to_outcome",
+        "answer": "genetic variation",
+        "canonical_fact": "Genetic variation arises due to crossing over, independent assortment, and the random union of gametes.",
+        "subject": "crossing over, independent assortment, and the random union of gametes",
+        "prompt_en": "What biological outcome arises due to crossing over, independent assortment, and the random union of gametes?",
+        "relation_definition": "States that a specified set of mechanisms or biological processes gives rise to a particular outcome or phenomenon.",
+        "answer_aliases_en": [
+          "genetic variation"
+        ],
+        "relation_spec": {
+          "id": "mechanism_to_outcome",
+          "definition": "States that a specified set of mechanisms or biological processes gives rise to a particular outcome or phenomenon.",
+          "direction": "mechanism/process -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "52a0f1bb51f2aebfdce42ce90c39fb4d5602ef0af7bc0f2246949e98c34b6f7b",
+      "input_sha256": "28bd9dae4c3674a079ff5654c067ad2b1018436f30e5fb52d7e1d908b04d68c6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000318",
+        "historical:raw_sciq_000319"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1f7470a8334593ec724c29d446fdf40defa0cf00c98052f3bdb9618a1f161fad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3815,
+      "first_chunk_seconds": 1.289,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3957,
+        "prompt_tokens": 1766,
+        "total_tokens": 5723,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3376,
+          "text_tokens": 581
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "389725c52d065dcbae22ac806b099f0604780149f3dfdfadfd9bb00e540372ef",
+      "status": "completed",
+      "latency_seconds": 92.96
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000318",
+        "historical:raw_sciq_000319"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bcc42f525be2d435621f9e9ab25b066f796807ec3ad3ff3f10cec4f998763663",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 19.003
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000318",
+        "historical:raw_sciq_000319"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bcc42f525be2d435621f9e9ab25b066f796807ec3ad3ff3f10cec4f998763663",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 645,
+      "first_chunk_seconds": 1.398,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 663,
+        "prompt_tokens": 887,
+        "total_tokens": 1550,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 429,
+          "text_tokens": 234
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "228cb331caaeedfc06381c94f1ddb3c7f21e3bc67832257b43dbc3024683ac18",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 18.085,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000318",
+        "historical:raw_sciq_000319"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8168ffb9cfde3a48309e594ff8a99eb66f28126d4a20387b120562cdb491b227",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1119,
+      "first_chunk_seconds": 1.837,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1169,
+        "prompt_tokens": 905,
+        "total_tokens": 2074,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 935,
+          "text_tokens": 234
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6b0d6a7f940438e415e4bdd9092c4a29416a814339ff1c25e4f76b2867ff2393",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 44.016,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

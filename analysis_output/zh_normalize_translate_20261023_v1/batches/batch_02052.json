@@ -1,0 +1,255 @@
+{
+  "input_sha256": "73d68da7962da8e884ca8a3f2b07109b2b92de117d6168db925dd7b96b476e28",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f835bfdb0a52794c9831",
+      "decision": "ready",
+      "subject": "first coup in Nigeria",
+      "relation_id": "event_to_agent",
+      "relation_definition": "The person or group that carried out or perpetrated a specified event.",
+      "direction": "event -> agent (person/group)",
+      "answer": "Chukwuma Kaduna Nzeogwu",
+      "canonical_fact": "Chukwuma Kaduna Nzeogwu carried out the first coup in Nigeria.",
+      "prompt_en": "Who carried out the first coup in Nigeria?",
+      "evidence_quotes": [
+        "who carried out the first coup in nigeria",
+        "Chukwuma Kaduna Nzeogwu"
+      ],
+      "reason": "The source question asks who carried out the first coup in Nigeria and the source answer names Chukwuma Kaduna Nzeogwu as the agent. No catalog relation covers event-to-perpetrator/agency, so a new precise relation 'event_to_agent' is proposed with direction event → agent.",
+      "english": {
+        "prompt_en": "Who carried out the first coup in Nigeria?",
+        "relation_definition": "The person or group that carried out or perpetrated a specified event.",
+        "answer": "Chukwuma Kaduna Nzeogwu",
+        "canonical_fact": "Chukwuma Kaduna Nzeogwu carried out the first coup in Nigeria.",
+        "direction": "event -> agent (person/group)",
+        "relation_id": "event_to_agent",
+        "subject": "first coup in Nigeria",
+        "answer_aliases_en": [
+          "Chukwuma Kaduna Nzeogwu"
+        ],
+        "relation_spec": {
+          "id": "event_to_agent",
+          "definition": "The person or group that carried out or perpetrated a specified event.",
+          "direction": "event -> agent (person/group)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bc8c309423f40bd4b19f9d5076f6cdb7fc43c129cf4a4cc4db8308e7da4460ed",
+      "input_sha256": "deb45a4c75c1897f3e96feccc3342a5847c9de408fb1c05734a64f35af477bdd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f86a11afebb724950978",
+      "decision": "ready",
+      "subject": "Earth",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "mantle",
+      "canonical_fact": "The mantle is the layer that comprises approximately 80% of Earth by volume.",
+      "prompt_en": "What is the layer that comprises approximately 80% of Earth by volume?",
+      "evidence_quotes": [
+        "the layer that comprises approximately 80 of earth by volume is the",
+        "mantle"
+      ],
+      "reason": "The source identifies the mantle as the layer comprising approximately 80% of Earth's volume. The catalog relation 'whole_to_part' fits exactly: Earth (whole) → mantle (specified part/constituent), with the volume qualifier disambiguating which part is asked.",
+      "english": {
+        "prompt_en": "What is the layer that comprises approximately 80% of Earth by volume?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "mantle",
+        "canonical_fact": "The mantle is the layer that comprises approximately 80% of Earth by volume.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "Earth",
+        "answer_aliases_en": [
+          "mantle",
+          "Earth's mantle"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0767b3be6ccaf97a59d1afa4d974823918ff7c35aecc294b48f7174dfa2c5e3c",
+      "input_sha256": "ac622c7349b3e248712b69ace34e505588e4dd57cb2c34f24fef5c3232fbc7d0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e21605ceb062f0250030a2ff76698d8f2be7bb710e61faf8b251628f4ae5c948",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2332,
+      "first_chunk_seconds": 57.55,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2476,
+        "prompt_tokens": 1648,
+        "total_tokens": 4124,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1920,
+          "text_tokens": 556
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6202994779f98b5fba9fb8fc4349a17423187eb10cb0b946b0b8d52933415f42",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 89.694,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3891741dbcd03c404f9cdda878ee824a7490746ecb43f51e3acf5eb9efec6c8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.202
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3891741dbcd03c404f9cdda878ee824a7490746ecb43f51e3acf5eb9efec6c8a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.641
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e21605ceb062f0250030a2ff76698d8f2be7bb710e61faf8b251628f4ae5c948",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.67
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e21605ceb062f0250030a2ff76698d8f2be7bb710e61faf8b251628f4ae5c948",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.726
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e21605ceb062f0250030a2ff76698d8f2be7bb710e61faf8b251628f4ae5c948",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2395,
+      "first_chunk_seconds": 2.857,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2500,
+        "prompt_tokens": 1648,
+        "total_tokens": 4148,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1981,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "21b1f64742113b43298bb6b7f8fda02609872342a20bc3198359657a030ac1c6",
+      "status": "completed",
+      "latency_seconds": 36.768
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db61f2ceecdb9604c071deffd93adbe918b9e5ecf5aacf7ab15ca510fe3e48bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.434
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "db61f2ceecdb9604c071deffd93adbe918b9e5ecf5aacf7ab15ca510fe3e48bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.59
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f835bfdb0a52794c9831",
+        "public:pbf_f86a11afebb724950978"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "db61f2ceecdb9604c071deffd93adbe918b9e5ecf5aacf7ab15ca510fe3e48bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.489
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02052.json",
+      "sha256": "a7e67965f0b50dfc56b5364eab7981c077f7f9598bac1db4d89f46d65ec056ad",
+      "previous_status": "failed"
+    }
+  ]
+}

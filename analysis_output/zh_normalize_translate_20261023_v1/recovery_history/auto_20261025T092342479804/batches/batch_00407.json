@@ -1,0 +1,185 @@
+{
+  "input_sha256": "fb7fa7f03c20e7b07e282873385a27163ef0aa41f8619dfd3967112383a809e4",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c10e4c7587aa4972eb85",
+      "decision": "ready",
+      "subject": "Waterfalls",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "TLC",
+      "canonical_fact": "The song Waterfalls was performed by TLC.",
+      "prompt_en": "The song Waterfalls was performed by",
+      "evidence_quotes": [
+        "who sang the song don't go chasing waterfalls",
+        "TLC"
+      ],
+      "reason": "The catalog relation song_to_performer exactly matches the source question asking 'who sang' a specific song. The answer 'TLC' is a literal substring of the source answer.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "The song Waterfalls was performed by TLC.",
+        "answer": "TLC",
+        "prompt_en": "The song Waterfalls was performed by",
+        "subject": "Waterfalls",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "TLC"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04a96f3c55a6658eaca6c44b4b2a5f57bbac13655c7093fc33366151e41150cd",
+      "input_sha256": "f7870641a2f04ef936d9f8af0fa88b11e9b5d4f75788993063b324f0386ae74f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c11e1470238fe37623e8",
+      "decision": "ready",
+      "subject": "Don't Give Up on Me",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Andy Grammer",
+      "canonical_fact": "The song Don't Give Up on Me was performed by Andy Grammer.",
+      "prompt_en": "The song Don't Give Up on Me was performed by",
+      "evidence_quotes": [
+        "who sings don't give up on me",
+        "Andy Grammer"
+      ],
+      "reason": "The catalog relation song_to_performer exactly matches the source question asking 'who sings' a specific song. The answer 'Andy Grammer' is a literal substring of the source answer.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "The song Don't Give Up on Me was performed by Andy Grammer.",
+        "answer": "Andy Grammer",
+        "prompt_en": "The song Don't Give Up on Me was performed by",
+        "subject": "Don't Give Up on Me",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Andy Grammer"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "89023dc044a55b9bb4f6734c3ac02d1a09ae860e847f3c44583b4ae00d9dddd8",
+      "input_sha256": "4ceecf6484d118fb0ce9eb9fd4043aa2076f11c58354bc407fdabd6acd1542d6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c10e4c7587aa4972eb85",
+        "public:pbf_c11e1470238fe37623e8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "951cb857369e32468ebab70a3a65cb2095167c38bb3359b61bddc3c3b6cbbd62",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.015
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c10e4c7587aa4972eb85",
+        "public:pbf_c11e1470238fe37623e8"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "951cb857369e32468ebab70a3a65cb2095167c38bb3359b61bddc3c3b6cbbd62",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2046,
+        "prompt_tokens": 1559,
+        "total_tokens": 3605,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1715,
+          "text_tokens": 331
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf2de9031cf42da20a6db0046b0e0ababd8d48a80ba265ea1867d29257c3e8ee",
+      "status": "completed",
+      "latency_seconds": 45.415
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c10e4c7587aa4972eb85",
+        "public:pbf_c11e1470238fe37623e8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d9503d6d5badcaabc189cf0405a9d7f550c689f450a6a58ec6c97e3de550b4b6",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 44.986
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c10e4c7587aa4972eb85",
+        "public:pbf_c11e1470238fe37623e8"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d9503d6d5badcaabc189cf0405a9d7f550c689f450a6a58ec6c97e3de550b4b6",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 46.874
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c10e4c7587aa4972eb85",
+        "public:pbf_c11e1470238fe37623e8"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d9503d6d5badcaabc189cf0405a9d7f550c689f450a6a58ec6c97e3de550b4b6",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 46.889
+    }
+  ],
+  "status": "failed"
+}

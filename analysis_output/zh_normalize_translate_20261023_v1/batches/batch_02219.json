@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d96fdf905872c765f8120e9c4ff9ddc830bd227c6a37b80a8ad2aed22884c5be",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000689",
+      "decision": "ready",
+      "subject": "Gasoline",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "oil",
+      "canonical_fact": "Gasoline is made from oil.",
+      "prompt_en": "Gasoline is a nonrenewable energy resource used in most cars and trucks. From what source material is gasoline produced?",
+      "evidence_quotes": [
+        "Gasoline is made from which source?",
+        "oil"
+      ],
+      "reason": "The source question explicitly asks for the production source of gasoline; the source answer is 'oil'. The catalog relation entity_to_material (direction: entity -> material) fits precisely: gasoline is the entity and oil is its production-source material. Both model annotations independently extracted the same fact, confirming consistency.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "oil",
+        "canonical_fact": "Gasoline is made from oil.",
+        "subject": "Gasoline",
+        "prompt_en": "Gasoline is a nonrenewable energy resource used in most cars and trucks. From what source material is gasoline produced?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "oil"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "76aed5bf7ac8c37c7efa475b01360917553bc96751872d6545b6ec226810485c",
+      "input_sha256": "c4bdd60db85b493f207fc00c42db4bbb2226343c3b7d12bdb98d8f12db575a44",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000691",
+      "decision": "ready",
+      "subject": "precipitation form (rain or snow)",
+      "relation_id": "phenomenon_to_determining_factor",
+      "relation_definition": "The specific physical factor that determines the form or outcome of a specified natural phenomenon; the decisive variable rather than a general influence.",
+      "direction": "specified natural phenomenon or outcome -> determining physical factor",
+      "answer": "temperature",
+      "canonical_fact": "Temperature determines whether precipitation will be in the form of rain or snow.",
+      "prompt_en": "Which physical factor determines whether precipitation will fall as rain or snow?",
+      "evidence_quotes": [
+        "Which factor determines whether precipitation will be in the form of rain or snow?",
+        "temperature"
+      ],
+      "reason": "The source question asks for the determining factor of precipitation form; the source answer is 'temperature'. No existing catalog relation captures a causal/determining-factor relationship for a natural phenomenon, so a precise new relation phenomenon_to_determining_factor is proposed. Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "specified natural phenomenon or outcome -> determining physical factor",
+        "relation_id": "phenomenon_to_determining_factor",
+        "answer": "temperature",
+        "canonical_fact": "Temperature determines whether precipitation will be in the form of rain or snow.",
+        "subject": "precipitation form (rain or snow)",
+        "prompt_en": "Which physical factor determines whether precipitation will fall as rain or snow?",
+        "relation_definition": "The specific physical factor that determines the form or outcome of a specified natural phenomenon; the decisive variable rather than a general influence.",
+        "answer_aliases_en": [
+          "temperature"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_determining_factor",
+          "definition": "The specific physical factor that determines the form or outcome of a specified natural phenomenon; the decisive variable rather than a general influence.",
+          "direction": "specified natural phenomenon or outcome -> determining physical factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0195ca64e8cad00447a6f04689a5828211178f44ad70cd7c4b2a20d60bfce806",
+      "input_sha256": "9db11b4bcaf09018fe797a82160f911921e4991b9beecee62aef6891b173b8d6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000689",
+      "input_sha256": "c4bdd60db85b493f207fc00c42db4bbb2226343c3b7d12bdb98d8f12db575a44",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "oil",
+        "canonical_fact": "Gasoline is made from oil.",
+        "subject": "Gasoline",
+        "prompt_en": "Gasoline is a nonrenewable energy resource used in most cars and trucks. From what source material is gasoline produced?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "oil"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "76aed5bf7ac8c37c7efa475b01360917553bc96751872d6545b6ec226810485c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000689",
+        "subject_zh": "汽油",
+        "prompt_zh": "汽油是一种不可再生的能源资源，广泛用于大多数汽车和卡车。汽油是由什么原料生产的？",
+        "canonical_fact_zh": "汽油是由石油制成的。",
+        "answer_zh": "石油",
+        "answer_aliases_zh": [
+          "石油"
+        ]
+      },
+      "translation_sha256": "0d6aff577c797e49a8a41f267371c7867ebe27f7b03956dbe88565dbf75d0b72"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000691",
+      "input_sha256": "9db11b4bcaf09018fe797a82160f911921e4991b9beecee62aef6891b173b8d6",
+      "english": {
+        "direction": "specified natural phenomenon or outcome -> determining physical factor",
+        "relation_id": "phenomenon_to_determining_factor",
+        "answer": "temperature",
+        "canonical_fact": "Temperature determines whether precipitation will be in the form of rain or snow.",
+        "subject": "precipitation form (rain or snow)",
+        "prompt_en": "Which physical factor determines whether precipitation will fall as rain or snow?",
+        "relation_definition": "The specific physical factor that determines the form or outcome of a specified natural phenomenon; the decisive variable rather than a general influence.",
+        "answer_aliases_en": [
+          "temperature"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_determining_factor",
+          "definition": "The specific physical factor that determines the form or outcome of a specified natural phenomenon; the decisive variable rather than a general influence.",
+          "direction": "specified natural phenomenon or outcome -> determining physical factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0195ca64e8cad00447a6f04689a5828211178f44ad70cd7c4b2a20d60bfce806",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000691",
+        "subject_zh": "降水形式（雨或雪）",
+        "prompt_zh": "哪个物理因素决定了降水是以雨还是雪的形式降落？",
+        "canonical_fact_zh": "温度决定了降水是以雨还是雪的形式出现。",
+        "answer_zh": "温度",
+        "answer_aliases_zh": [
+          "温度"
+        ]
+      },
+      "translation_sha256": "48019e34845e9aa07fbfbbd79a3cb1ffbc202b9bcc6f3a7dee511b071bf11d71"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000689",
+        "historical:raw_ai2_arc_easy_000691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "807270cb629aa581301fbfc9d12557b82ca215224b77ce53d060b2b18556393b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2258,
+      "first_chunk_seconds": 8.604,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2391,
+        "prompt_tokens": 1667,
+        "total_tokens": 4058,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1880,
+          "text_tokens": 511
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "733c2400048d3fcfaf6f5411e657eda990b8a4229dd3ebab4ab3cf5c0809ddec",
+      "status": "completed",
+      "latency_seconds": 84.069
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000689",
+        "historical:raw_ai2_arc_easy_000691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fecbf2f595df3448e22a87ff7df00768ba00a63eb4d4ad8749423f0c8f279879",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 664,
+      "first_chunk_seconds": 34.81,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 661,
+        "prompt_tokens": 848,
+        "total_tokens": 1509,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 437,
+          "text_tokens": 224
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6de6294b0dba02eab905f081cfb7812e29a39d7e28b2b2fc2510346c22344e64",
+      "status": "completed",
+      "latency_seconds": 41.866
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "034b7ae0f78e8039bdd32fab81bbea1a609e61a4dab62b92d1b372da8cb4683e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f305abf7ab5a7fd7b44c",
+      "decision": "ready",
+      "subject": "England national football team",
+      "relation_id": "team_to_manager",
+      "relation_definition": "Manager or coach of a specified sports team in a specified competition or period.",
+      "direction": "sports team (in specified competition/period) -> manager",
+      "answer": "Gareth Southgate",
+      "canonical_fact": "Gareth Southgate was the manager of the England national football team in the last World Cup.",
+      "prompt_en": "Who was the manager of the England national football team in the last World Cup?",
+      "evidence_quotes": [
+        "who was england manager in last world cup",
+        "Gareth Southgate"
+      ],
+      "reason": "Source directly states Gareth Southgate as England's manager in the last World Cup. No catalog relation fits team-to-manager; proposing new relation team_to_manager. The old extraction's '2022' is not in the source; preserving the source's relative qualifier 'last World Cup' to avoid inventing a specific year.",
+      "english": {
+        "answer": "Gareth Southgate",
+        "relation_id": "team_to_manager",
+        "prompt_en": "Who was the manager of the England national football team in the last World Cup?",
+        "direction": "sports team (in specified competition/period) -> manager",
+        "subject": "England national football team",
+        "canonical_fact": "Gareth Southgate was the manager of the England national football team in the last World Cup.",
+        "relation_definition": "Manager or coach of a specified sports team in a specified competition or period.",
+        "answer_aliases_en": [
+          "Gareth Southgate"
+        ],
+        "relation_spec": {
+          "id": "team_to_manager",
+          "definition": "Manager or coach of a specified sports team in a specified competition or period.",
+          "direction": "sports team (in specified competition/period) -> manager"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4cab76b7d11374397f6b7f13f521be5c5f42bbab5c624b294845be767fdee915",
+      "input_sha256": "c2db18b8a6566f3cf6ad07f96265c78229f5e7124134b74e1705d85589f7e6df",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f337e608f760b14a73f2",
+      "decision": "ready",
+      "subject": "member of the paramyxovirus family that can cause very serious croup",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Meta pneumo virus",
+      "canonical_fact": "Meta pneumo virus is a member of the paramyxovirus family that can cause very serious croup.",
+      "prompt_en": "Which member of the paramyxovirus family can cause very serious croup?",
+      "evidence_quotes": [
+        "Which member of the paramyxovirus family can cause very serious croup?",
+        "Meta pneumo virus"
+      ],
+      "reason": "Source directly identifies 'Meta pneumo virus' as the paramyxovirus family member causing very serious croup. Using existing relation description_to_entity because the question identifies a specific entity via a qualified description. Answer kept verbatim from source ('Meta pneumo virus' with spacing as given).",
+      "english": {
+        "answer": "Meta pneumo virus",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which member of the paramyxovirus family can cause very serious croup?",
+        "direction": "identifying description -> entity",
+        "subject": "member of the paramyxovirus family that can cause very serious croup",
+        "canonical_fact": "Meta pneumo virus is a member of the paramyxovirus family that can cause very serious croup.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Meta pneumo virus"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f31b0a8decaa21045b73222fcd96e402e10b23d22616e4f2324a9e160281c81d",
+      "input_sha256": "6be9037f088f4941852868c1a80f1e599032174cf8888e7178ad64d539e742d9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f305abf7ab5a7fd7b44c",
+        "public:pbf_f337e608f760b14a73f2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6022e0f8a534a77f739d0e5d78a2a36de89a2096ea354e79646dacf8c1b53044",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2766,
+      "first_chunk_seconds": 19.599,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2860,
+        "prompt_tokens": 1670,
+        "total_tokens": 4530,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2429,
+          "text_tokens": 431
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3646a89fc10d6baff2974257838cb3a70db2b93b67182450591245e0f4aa8c9f",
+      "status": "completed",
+      "latency_seconds": 58.578
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f305abf7ab5a7fd7b44c",
+        "public:pbf_f337e608f760b14a73f2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "42177d0d251390bfe2e5963f0cb579c28f770c31486fb8122f7b1a2d53f29d9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 79.724
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f305abf7ab5a7fd7b44c",
+        "public:pbf_f337e608f760b14a73f2"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "42177d0d251390bfe2e5963f0cb579c28f770c31486fb8122f7b1a2d53f29d9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.099
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f305abf7ab5a7fd7b44c",
+        "public:pbf_f337e608f760b14a73f2"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "42177d0d251390bfe2e5963f0cb579c28f770c31486fb8122f7b1a2d53f29d9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.126
+    }
+  ],
+  "status": "failed"
+}

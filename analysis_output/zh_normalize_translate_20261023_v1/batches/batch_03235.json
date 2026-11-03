@@ -1,0 +1,157 @@
+{
+  "input_sha256": "75330d9ee773ff1893860c550ec5798e3df2b82c3d72d48d4a22956e8e61b968",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000948",
+      "decision": "ready",
+      "subject": "DNA from all 46 chromosomes in a human cell nucleus laid out end to end",
+      "relation_id": "entity_to_length",
+      "relation_definition": "The stated length or distance measurement of a specified entity or conditional arrangement; retain units and qualifiers such as approximate.",
+      "direction": "specified entity/arrangement -> length value",
+      "answer": "two meters",
+      "canonical_fact": "The DNA from all 46 chromosomes in a human cell nucleus laid out end to end would measure approximately two meters.",
+      "prompt_en": "If the DNA from all 46 chromosomes in a human cell nucleus was laid out end to end, approximately how long would it measure?",
+      "evidence_quotes": [
+        "two meters",
+        "dna from all 46 chromosomes in a human cell nucleus was laid out end to end"
+      ],
+      "reason": "Source question and answer directly state the approximate length. No catalog relation captures a length/distance measurement property, so a new precise relation entity_to_length is proposed. The answer 'two meters' is a literal substring of source_answer and is preserved unchanged.",
+      "english": {
+        "prompt_en": "If the DNA from all 46 chromosomes in a human cell nucleus was laid out end to end, approximately how long would it measure?",
+        "relation_definition": "The stated length or distance measurement of a specified entity or conditional arrangement; retain units and qualifiers such as approximate.",
+        "answer": "two meters",
+        "canonical_fact": "The DNA from all 46 chromosomes in a human cell nucleus laid out end to end would measure approximately two meters.",
+        "direction": "specified entity/arrangement -> length value",
+        "relation_id": "entity_to_length",
+        "subject": "DNA from all 46 chromosomes in a human cell nucleus laid out end to end",
+        "answer_aliases_en": [
+          "two meters"
+        ],
+        "relation_spec": {
+          "id": "entity_to_length",
+          "definition": "The stated length or distance measurement of a specified entity or conditional arrangement; retain units and qualifiers such as approximate.",
+          "direction": "specified entity/arrangement -> length value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "affd17426efb8875f90d8b04408cda10256f88d62ed23748b0bc0d58645d17e3",
+      "input_sha256": "51a0fa6e3f8b4ef9451d0b2b46cb52e8ac797e47742f0ba58af3b8021c861716",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000949",
+      "decision": "ready",
+      "subject": "neon light",
+      "relation_id": "light_source_to_lighting_mechanism",
+      "relation_definition": "The specific physical process or mechanism by which a specified light source produces visible light.",
+      "direction": "light source -> lighting mechanism",
+      "answer": "electroluminescence",
+      "canonical_fact": "A neon light produces visible light by electroluminescence.",
+      "prompt_en": "By what physical process does a neon light produce visible light?",
+      "evidence_quotes": [
+        "electroluminescence",
+        "How does a neon light produce visible light?"
+      ],
+      "reason": "Source question explicitly asks for the mechanism of visible-light production; source_answer 'electroluminescence' is a literal substring and is preserved. No catalog relation precisely captures a device-to-lighting-mechanism relationship (entity_to_material covers composition, not process), so a new precise relation light_source_to_lighting_mechanism is proposed.",
+      "english": {
+        "prompt_en": "By what physical process does a neon light produce visible light?",
+        "relation_definition": "The specific physical process or mechanism by which a specified light source produces visible light.",
+        "answer": "electroluminescence",
+        "canonical_fact": "A neon light produces visible light by electroluminescence.",
+        "direction": "light source -> lighting mechanism",
+        "relation_id": "light_source_to_lighting_mechanism",
+        "subject": "neon light",
+        "answer_aliases_en": [
+          "electroluminescence"
+        ],
+        "relation_spec": {
+          "id": "light_source_to_lighting_mechanism",
+          "definition": "The specific physical process or mechanism by which a specified light source produces visible light.",
+          "direction": "light source -> lighting mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "267d3bc151c09dfb6181cf9256cd395aa4967b45a5182ecca2c57a6869fc5819",
+      "input_sha256": "fa7252a1b2f8b14720d6a7e5cc5a985b9cb8ed082c72ed23e60b2d44d4b6be8a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000948",
+        "historical:raw_sciq_000949"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3abf785c545433fdc21bbeb8f121ff53cb3dccceecfc7299b2f20644b48c678e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2354,
+      "first_chunk_seconds": 2.195,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2546,
+        "prompt_tokens": 1776,
+        "total_tokens": 4322,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1993,
+          "text_tokens": 553
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d94825af16761ffaf8d445a97740715ebf8ce9a910dc7b5a94a1fe98a44460cf",
+      "status": "completed",
+      "latency_seconds": 111.94
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000948",
+        "historical:raw_sciq_000949"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8043404b910ebd250ac672ab4015435e0189199c715c2986d7f08a04a509d41c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.581
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000948",
+        "historical:raw_sciq_000949"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8043404b910ebd250ac672ab4015435e0189199c715c2986d7f08a04a509d41c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.463
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000948",
+        "historical:raw_sciq_000949"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8043404b910ebd250ac672ab4015435e0189199c715c2986d7f08a04a509d41c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.17
+    }
+  ],
+  "status": "failed"
+}

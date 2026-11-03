@@ -1,0 +1,217 @@
+{
+  "input_sha256": "8835cb9f0ddd69c34e01daf090f5efb78f584aa18642f0029e344d818350dcbb",
+  "normalized": [
+    {
+      "record_id": "public:pbf_d9e47a7cb61ed01283dd",
+      "decision": "ready",
+      "subject": "a planet in the solar system with active plate tectonics",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Earth",
+      "canonical_fact": "Earth is the only planet in the solar system with active plate tectonics.",
+      "prompt_en": "Which planet(s) in the solar system has/have active plate tectonics?",
+      "evidence_quotes": [
+        "Which planet(s) in the solar system has/have active plate tectonics?",
+        "Earth"
+      ],
+      "reason": "The source question identifies a planet by the property of having active plate tectonics within the solar system; the source answer is 'Earth'. This maps exactly to description_to_entity (identifying description -> entity). The old extraction's subject 'Solar System planets' is a set rather than the description itself, so the subject is normalized to the qualifying description. Answer preserved verbatim from source.",
+      "english": {
+        "answer": "Earth",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which planet(s) in the solar system has/have active plate tectonics?",
+        "direction": "identifying description -> entity",
+        "subject": "a planet in the solar system with active plate tectonics",
+        "canonical_fact": "Earth is the only planet in the solar system with active plate tectonics.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d095595d3ff9986e528cdf29aab58967c9523239ef57d582f900e12acb0cb536",
+      "input_sha256": "684e974d85b1087df9bb77e88a5bf15f8e4df57cbc3c35aa481f4b96aed5c6d7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d9e5e646b4e8c375dba7",
+      "decision": "ready",
+      "subject": "Thomas Malthus's population theory",
+      "relation_id": "theory_to_unrecognized_factor",
+      "relation_definition": "A key factor or variable that a specified theory or model explicitly failed to account for or recognize, as identified by later critique or analysis.",
+      "direction": "specified theory -> unrecognized factor",
+      "answer": "technology's ability to raise the Earth's carrying capacity",
+      "canonical_fact": "Thomas Malthus's population theory failed to recognize technology's ability to raise the Earth's carrying capacity.",
+      "prompt_en": "What key factor did Thomas Malthus fail to recognize in his population theory?",
+      "evidence_quotes": [
+        "The key factor Thomas Malthus failed to recognize in his population theory was",
+        "technology's ability to raise the Earth's carrying capacity."
+      ],
+      "reason": "No existing catalog relation captures 'a factor a theory failed to recognize'. The source question explicitly frames this as a key factor Malthus did not account for; the answer is a literal substring of source_answer. A new precise relation theory_to_unrecognized_factor is proposed with direction 'specified theory -> unrecognized factor'. Answer preserved verbatim; prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "technology's ability to raise the Earth's carrying capacity",
+        "relation_id": "theory_to_unrecognized_factor",
+        "prompt_en": "What key factor did Thomas Malthus fail to recognize in his population theory?",
+        "direction": "specified theory -> unrecognized factor",
+        "subject": "Thomas Malthus's population theory",
+        "canonical_fact": "Thomas Malthus's population theory failed to recognize technology's ability to raise the Earth's carrying capacity.",
+        "relation_definition": "A key factor or variable that a specified theory or model explicitly failed to account for or recognize, as identified by later critique or analysis.",
+        "answer_aliases_en": [
+          "technology's ability to raise the Earth's carrying capacity",
+          "technology's ability to raise the Earth's carrying capacity."
+        ],
+        "relation_spec": {
+          "id": "theory_to_unrecognized_factor",
+          "definition": "A key factor or variable that a specified theory or model explicitly failed to account for or recognize, as identified by later critique or analysis.",
+          "direction": "specified theory -> unrecognized factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "23948ef93c42fd076dd6a9f44813608c6565d4f1b85c4f2dfc2bfc3ec2589f06",
+      "input_sha256": "dc90b3164cccb75015b22b53bb8551c72208ad845bfb2a9402c3710cdcef9197",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_d9e47a7cb61ed01283dd",
+      "input_sha256": "684e974d85b1087df9bb77e88a5bf15f8e4df57cbc3c35aa481f4b96aed5c6d7",
+      "english": {
+        "answer": "Earth",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which planet(s) in the solar system has/have active plate tectonics?",
+        "direction": "identifying description -> entity",
+        "subject": "a planet in the solar system with active plate tectonics",
+        "canonical_fact": "Earth is the only planet in the solar system with active plate tectonics.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d095595d3ff9986e528cdf29aab58967c9523239ef57d582f900e12acb0cb536",
+      "translation": {
+        "record_id": "public:pbf_d9e47a7cb61ed01283dd",
+        "subject_zh": "太阳系中拥有活跃板块构造的行星",
+        "prompt_zh": "太阳系中哪颗（些）行星拥有活跃的板块构造？",
+        "canonical_fact_zh": "地球是太阳系中唯一拥有活跃板块构造的行星。",
+        "answer_zh": "地球",
+        "answer_aliases_zh": [
+          "地球"
+        ]
+      },
+      "translation_sha256": "af3aad7d7420dcc73de4ef5279a3c0662255226163e60dfe475a0f1f51f77747"
+    },
+    {
+      "record_id": "public:pbf_d9e5e646b4e8c375dba7",
+      "input_sha256": "dc90b3164cccb75015b22b53bb8551c72208ad845bfb2a9402c3710cdcef9197",
+      "english": {
+        "answer": "technology's ability to raise the Earth's carrying capacity",
+        "relation_id": "theory_to_unrecognized_factor",
+        "prompt_en": "What key factor did Thomas Malthus fail to recognize in his population theory?",
+        "direction": "specified theory -> unrecognized factor",
+        "subject": "Thomas Malthus's population theory",
+        "canonical_fact": "Thomas Malthus's population theory failed to recognize technology's ability to raise the Earth's carrying capacity.",
+        "relation_definition": "A key factor or variable that a specified theory or model explicitly failed to account for or recognize, as identified by later critique or analysis.",
+        "answer_aliases_en": [
+          "technology's ability to raise the Earth's carrying capacity",
+          "technology's ability to raise the Earth's carrying capacity."
+        ],
+        "relation_spec": {
+          "id": "theory_to_unrecognized_factor",
+          "definition": "A key factor or variable that a specified theory or model explicitly failed to account for or recognize, as identified by later critique or analysis.",
+          "direction": "specified theory -> unrecognized factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "23948ef93c42fd076dd6a9f44813608c6565d4f1b85c4f2dfc2bfc3ec2589f06",
+      "translation": {
+        "record_id": "public:pbf_d9e5e646b4e8c375dba7",
+        "subject_zh": "托马斯·马尔萨斯的人口理论",
+        "prompt_zh": "托马斯·马尔萨斯在其人口理论中未能认识到哪些关键因素？",
+        "canonical_fact_zh": "托马斯·马尔萨斯的人口理论未能认识到技术提升地球环境承载力的能力。",
+        "answer_zh": "技术提升地球环境承载力的能力",
+        "answer_aliases_zh": [
+          "技术提升地球环境承载力的能力",
+          "技术提升地球环境承载力的能力。"
+        ]
+      },
+      "translation_sha256": "375312a19a789f4bc51bb084239a7e68796fd6163662c0880d399e034b808ee0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_d9e47a7cb61ed01283dd",
+        "public:pbf_d9e5e646b4e8c375dba7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "821fa429c0367b55e35dc17a0287860b05a4250490e1949797f209fe7abc910f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2947,
+      "first_chunk_seconds": 36.558,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2997,
+        "prompt_tokens": 1677,
+        "total_tokens": 4674,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2511,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bd0bd0c6725e12c981a21e658117a37c4023a7cdccbd34b8c61e84bb0adadf76",
+      "status": "completed",
+      "latency_seconds": 74.454
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_d9e47a7cb61ed01283dd",
+        "public:pbf_d9e5e646b4e8c375dba7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c2f157d9527d4e1a72f06d889cd6b50169fd6f363b83f8b63eef92ffa130be95",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 859,
+      "first_chunk_seconds": 27.064,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 856,
+        "prompt_tokens": 896,
+        "total_tokens": 1752,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 571,
+          "text_tokens": 285
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "651af6c10486d4068c9cd7f86a1161eef10e08c7dbe1c1c8ff07361b99e2bfe7",
+      "status": "completed",
+      "latency_seconds": 34.032
+    }
+  ],
+  "status": "completed"
+}

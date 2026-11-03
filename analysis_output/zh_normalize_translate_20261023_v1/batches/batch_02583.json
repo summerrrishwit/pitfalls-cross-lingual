@@ -1,0 +1,278 @@
+{
+  "input_sha256": "e63f318b23f7004b908ce8a736b40c5719d2ee3a8da18bcf258190dca41d09b0",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004466",
+      "decision": "ready",
+      "subject": "silver screen",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "movies",
+      "canonical_fact": "The term 'silver screen' refers to movies.",
+      "prompt_en": "What does the term 'silver screen' refer to?",
+      "evidence_quotes": [
+        "silver screen",
+        "movies"
+      ],
+      "reason": "The source question explicitly uses 'silver screen' as a quoted term and the source answer identifies the referent as 'movies.' This is a direct term-to-definition mapping with no ambiguity.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "movies",
+        "canonical_fact": "The term 'silver screen' refers to movies.",
+        "subject": "silver screen",
+        "prompt_en": "What does the term 'silver screen' refer to?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "movies"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64bf7da080d931d3bdc555f68609da2493d7c083edf1736c9783765ca5b2979c",
+      "input_sha256": "de08d4d13bedd012315e178fbe6001c6a4510fc63519573edc4703a7ae63f1e2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004502",
+      "decision": "ready",
+      "subject": "television",
+      "relation_id": "entity_to_distinguishing_attribute",
+      "relation_definition": "A characteristic attribute that distinguishes a given entity from a specified contrast entity; retains the contrast context and does not assert exclusivity.",
+      "direction": "entity -> attribute (in contrast to a specified entity)",
+      "answer": "visual",
+      "canonical_fact": "Television is distinguished from radio by being a visual medium.",
+      "prompt_en": "How does television differ from radio?",
+      "evidence_quotes": [
+        "How is television different from radio?",
+        "visual"
+      ],
+      "reason": "The source question asks for the distinguishing feature of television relative to radio and the source answer is the single word 'visual.' No existing catalog relation captures a contrast-based distinguishing attribute, so a new precise relation 'entity_to_distinguishing_attribute' is proposed.",
+      "english": {
+        "direction": "entity -> attribute (in contrast to a specified entity)",
+        "relation_id": "entity_to_distinguishing_attribute",
+        "answer": "visual",
+        "canonical_fact": "Television is distinguished from radio by being a visual medium.",
+        "subject": "television",
+        "prompt_en": "How does television differ from radio?",
+        "relation_definition": "A characteristic attribute that distinguishes a given entity from a specified contrast entity; retains the contrast context and does not assert exclusivity.",
+        "answer_aliases_en": [
+          "visual"
+        ],
+        "relation_spec": {
+          "id": "entity_to_distinguishing_attribute",
+          "definition": "A characteristic attribute that distinguishes a given entity from a specified contrast entity; retains the contrast context and does not assert exclusivity.",
+          "direction": "entity -> attribute (in contrast to a specified entity)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8073d967a74fd1bdba2b6274a03f516c504262f38df09033516e2da12e9d54dd",
+      "input_sha256": "29cc46ea3bd26fadde05bfd6ba7efa7c390739fd8c4894be99d5b2c9ba1e4182",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004466",
+      "input_sha256": "de08d4d13bedd012315e178fbe6001c6a4510fc63519573edc4703a7ae63f1e2",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "movies",
+        "canonical_fact": "The term 'silver screen' refers to movies.",
+        "subject": "silver screen",
+        "prompt_en": "What does the term 'silver screen' refer to?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "movies"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "64bf7da080d931d3bdc555f68609da2493d7c083edf1736c9783765ca5b2979c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004466",
+        "subject_zh": "银幕",
+        "prompt_zh": "“银幕”一词指的是什么？",
+        "canonical_fact_zh": "“银幕”一词指的是电影。",
+        "answer_zh": "电影",
+        "answer_aliases_zh": [
+          "电影"
+        ]
+      },
+      "translation_sha256": "37aa6c7ffa1ad62a3310d6b9975351454ae4af62038172e1f674b97268a5b388"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004502",
+      "input_sha256": "29cc46ea3bd26fadde05bfd6ba7efa7c390739fd8c4894be99d5b2c9ba1e4182",
+      "english": {
+        "direction": "entity -> attribute (in contrast to a specified entity)",
+        "relation_id": "entity_to_distinguishing_attribute",
+        "answer": "visual",
+        "canonical_fact": "Television is distinguished from radio by being a visual medium.",
+        "subject": "television",
+        "prompt_en": "How does television differ from radio?",
+        "relation_definition": "A characteristic attribute that distinguishes a given entity from a specified contrast entity; retains the contrast context and does not assert exclusivity.",
+        "answer_aliases_en": [
+          "visual"
+        ],
+        "relation_spec": {
+          "id": "entity_to_distinguishing_attribute",
+          "definition": "A characteristic attribute that distinguishes a given entity from a specified contrast entity; retains the contrast context and does not assert exclusivity.",
+          "direction": "entity -> attribute (in contrast to a specified entity)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8073d967a74fd1bdba2b6274a03f516c504262f38df09033516e2da12e9d54dd",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004502",
+        "subject_zh": "电视",
+        "prompt_zh": "电视与广播有何不同？",
+        "canonical_fact_zh": "电视作为视觉媒介，区别于广播。",
+        "answer_zh": "视觉",
+        "answer_aliases_zh": [
+          "视觉"
+        ]
+      },
+      "translation_sha256": "b665f878c1b6549c37067d7eb3d9d6dcbb9c0407c4a4ba6a5b84f56445ce229c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004466",
+        "historical:raw_commonsense_qa_004502"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4223369a1e48671e96d6a81f5f9a89b0532be80a108961f805fe76432838628c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2196,
+      "first_chunk_seconds": 20.417,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2325,
+        "prompt_tokens": 1647,
+        "total_tokens": 3972,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1795,
+          "text_tokens": 530
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "019384175c715288f74b2584887cb0634be1b71c8a561e9379d655769a7dd562",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 39.454,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004466",
+        "historical:raw_commonsense_qa_004502"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f2fca02a1ee5a0bebf5dd4fc5d0717b6f24ece12dfc82f884b51372cdae837a1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2728,
+      "first_chunk_seconds": 18.157,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2989,
+        "prompt_tokens": 1665,
+        "total_tokens": 4654,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2494,
+          "text_tokens": 495
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cbea8ad1688e7297de7d8a32d6961e57135439160dd42286736f3d80e211d491",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 61.457,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004466",
+        "historical:raw_commonsense_qa_004502"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f2fca02a1ee5a0bebf5dd4fc5d0717b6f24ece12dfc82f884b51372cdae837a1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3021,
+      "first_chunk_seconds": 26.003,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3161,
+        "prompt_tokens": 1665,
+        "total_tokens": 4826,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2715,
+          "text_tokens": 446
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "11946d796f41375331b46bdccafeac754f97c01bcb8af4c65aab51c177c641cc",
+      "status": "completed",
+      "latency_seconds": 75.723
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004466",
+        "historical:raw_commonsense_qa_004502"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1b9b662c7745b4796d47e8b038514c04c144f3552e2e4de6a6113ccbfdd2a1d3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1174,
+      "first_chunk_seconds": 26.705,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1215,
+        "prompt_tokens": 828,
+        "total_tokens": 2043,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1016,
+          "text_tokens": 199
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "79159df73d198e78523de5fac111d2f4375e6c3e5459b6ff0acb03f912ac0872",
+      "status": "completed",
+      "latency_seconds": 41.186
+    }
+  ],
+  "status": "completed"
+}

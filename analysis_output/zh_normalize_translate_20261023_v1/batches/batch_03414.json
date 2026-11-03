@@ -1,0 +1,185 @@
+{
+  "input_sha256": "33f7d357e0baa1341c32a36e3e74f81fe466dd9acc546f9d5a8d044bbb08fd3e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002889",
+      "decision": "ready",
+      "subject": "Playing a harmonica",
+      "relation_id": "activity_to_required_body_part",
+      "relation_definition": "A body part that is universally necessary (every human possesses it and it is indispensable) to perform a specified physical activity.",
+      "direction": "activity -> required body part",
+      "answer": "mouth",
+      "canonical_fact": "Playing a harmonica requires a mouth.",
+      "prompt_en": "What body part is absolutely necessary for every human to play a harmonica?",
+      "evidence_quotes": [
+        "play a harmonica",
+        "mouth"
+      ],
+      "reason": "No existing catalog relation captures 'absolutely necessary body part for an activity.' Proposing activity_to_required_body_part with a narrow, non-forced definition. Answer 'mouth' is the full literal source_answer. Subject 'Playing a harmonica' is normalized from the question's 'play a harmonica.' Both models agree on extractability (one extracted, the other marked typical_action_or_location but the fact is stable and reusable).",
+      "english": {
+        "prompt_en": "What body part is absolutely necessary for every human to play a harmonica?",
+        "relation_definition": "A body part that is universally necessary (every human possesses it and it is indispensable) to perform a specified physical activity.",
+        "answer": "mouth",
+        "canonical_fact": "Playing a harmonica requires a mouth.",
+        "direction": "activity -> required body part",
+        "relation_id": "activity_to_required_body_part",
+        "subject": "Playing a harmonica",
+        "answer_aliases_en": [
+          "mouth"
+        ],
+        "relation_spec": {
+          "id": "activity_to_required_body_part",
+          "definition": "A body part that is universally necessary (every human possesses it and it is indispensable) to perform a specified physical activity.",
+          "direction": "activity -> required body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d4b804830e18dd3df9768814f36bb148d03a18eb9dbaa1c02eb0e60887d701d2",
+      "input_sha256": "db1db687fce906f3703a527be7133c81d46f9238daec8a213e2837c2649449fc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002903",
+      "decision": "ready",
+      "subject": "Living in a humid climate",
+      "relation_id": "environmental_condition_to_physiological_effect",
+      "relation_definition": "A typical or expected physiological / bodily effect that results from sustained exposure to a specified environmental condition (climate, temperature, humidity, etc.).",
+      "direction": "environmental condition -> physiological effect",
+      "answer": "perspiration",
+      "canonical_fact": "Living in a humid climate leads to perspiration.",
+      "prompt_en": "What physiological effect does living in a humid climate typically cause?",
+      "evidence_quotes": [
+        "Living in a humid climate",
+        "perspiration"
+      ],
+      "reason": "No existing catalog relation fits a general causal 'environment leads to bodily effect' link. Proposing environmental_condition_to_physiological_effect to avoid forcing into organism_to_habitat or entity_to_class. Answer 'perspiration' is the full literal source_answer. The qualifier 'can be uncomfortable' and 'a lot of' are preserved as a typical/expected effect, not an exclusive or universal claim.",
+      "english": {
+        "prompt_en": "What physiological effect does living in a humid climate typically cause?",
+        "relation_definition": "A typical or expected physiological / bodily effect that results from sustained exposure to a specified environmental condition (climate, temperature, humidity, etc.).",
+        "answer": "perspiration",
+        "canonical_fact": "Living in a humid climate leads to perspiration.",
+        "direction": "environmental condition -> physiological effect",
+        "relation_id": "environmental_condition_to_physiological_effect",
+        "subject": "Living in a humid climate",
+        "answer_aliases_en": [
+          "perspiration"
+        ],
+        "relation_spec": {
+          "id": "environmental_condition_to_physiological_effect",
+          "definition": "A typical or expected physiological / bodily effect that results from sustained exposure to a specified environmental condition (climate, temperature, humidity, etc.).",
+          "direction": "environmental condition -> physiological effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c5a944d6f7aecb2c5e7be4c76f7a58ccd493344b98d08a60d39855170bb99767",
+      "input_sha256": "39eacc69922087fda2d3c92f99df3e08678b73c1285c1982bc44d1e65c2b9b21",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b5c483e1eb5f867c627b5253add4556258b072425fd2593f2390c23d9dd96a8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.933
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b5c483e1eb5f867c627b5253add4556258b072425fd2593f2390c23d9dd96a8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 37.003
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b5c483e1eb5f867c627b5253add4556258b072425fd2593f2390c23d9dd96a8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1824,
+      "first_chunk_seconds": 17.662,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1893,
+        "prompt_tokens": 1595,
+        "total_tokens": 3488,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1346,
+          "text_tokens": 547
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b3f943d7d567c1a79eb6bb912f0da8a386c40cd5fbb0e3efcbffb197263ef4d0",
+      "status": "completed",
+      "latency_seconds": 119.664
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8becaef60826d68f1dcfb74c8a8a3ad9b5bb83ad00e272b54ca288c2dd6c0e73",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 20.532
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8becaef60826d68f1dcfb74c8a8a3ad9b5bb83ad00e272b54ca288c2dd6c0e73",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 70.755
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002889",
+        "historical:raw_commonsense_qa_002903"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8becaef60826d68f1dcfb74c8a8a3ad9b5bb83ad00e272b54ca288c2dd6c0e73",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 27.119
+    }
+  ],
+  "status": "failed"
+}

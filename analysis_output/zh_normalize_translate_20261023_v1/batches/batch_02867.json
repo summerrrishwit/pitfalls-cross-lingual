@@ -1,0 +1,160 @@
+{
+  "input_sha256": "a18620e5ca3ede9cf140b7324551deee01a311538a615eed94cf54a2472fcf44",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000131",
+      "decision": "ready",
+      "subject": "high tides",
+      "relation_id": "entity_to_recurrence_interval",
+      "relation_definition": "The regular time interval at which a specified periodic natural phenomenon recurs; not a one-time duration, a single event, or a release cycle.",
+      "direction": "entity/phenomenon -> recurrence interval",
+      "answer": "every 12 hours",
+      "canonical_fact": "High tides occur every 12 hours.",
+      "prompt_en": "How frequently do high tides occur?",
+      "evidence_quotes": [
+        "How frequently do high tides occur?",
+        "every 12 hours"
+      ],
+      "reason": "Source question asks for the frequency of high tides; source answer is 'every 12 hours.' No catalog relation covers the periodicity or recurrence interval of a natural phenomenon, so a precise new relation is proposed. Both model annotations agree on extraction and canonical form.",
+      "english": {
+        "direction": "entity/phenomenon -> recurrence interval",
+        "relation_id": "entity_to_recurrence_interval",
+        "answer": "every 12 hours",
+        "canonical_fact": "High tides occur every 12 hours.",
+        "subject": "high tides",
+        "prompt_en": "How frequently do high tides occur?",
+        "relation_definition": "The regular time interval at which a specified periodic natural phenomenon recurs; not a one-time duration, a single event, or a release cycle.",
+        "answer_aliases_en": [
+          "every 12 hours"
+        ],
+        "relation_spec": {
+          "id": "entity_to_recurrence_interval",
+          "definition": "The regular time interval at which a specified periodic natural phenomenon recurs; not a one-time duration, a single event, or a release cycle.",
+          "direction": "entity/phenomenon -> recurrence interval"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3eb8e05e35b19371751c04218844fd9cb8abeae862d6adab539280d4259b6952",
+      "input_sha256": "c031698f9f753085158db8359a1f04fcc745956944fdc3b550d853a3dc06b26b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000132",
+      "decision": "ready",
+      "subject": "rock that contains important minerals",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "ore",
+      "canonical_fact": "A rock that contains important minerals is called ore.",
+      "prompt_en": "What is the conventional mining term for a rock that contains important minerals?",
+      "evidence_quotes": [
+        "A rock that contains important minerals is called what, a term associated with mining?",
+        "ore"
+      ],
+      "reason": "Source question supplies a defining description ('a rock that contains important minerals') and asks for the associated mining term; source answer is 'ore.' Catalog relation description_to_term (description -> term) fits exactly. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "ore",
+        "canonical_fact": "A rock that contains important minerals is called ore.",
+        "subject": "rock that contains important minerals",
+        "prompt_en": "What is the conventional mining term for a rock that contains important minerals?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "ore"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1ae2e4be4ae74dd599f109bd9693754357e5529c0f2606597532c5195e3fbd0f",
+      "input_sha256": "7e0749b04ee044159b4ad757cca4c51c6ff1993c935003c7dc779010a2f46c6f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000131",
+        "historical:raw_sciq_000132"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c7824b5d1760addd86848b74a027c380b5b402952bb25f7ea044ecbe5989ccb3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1693,
+      "first_chunk_seconds": 1.48,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1753,
+        "prompt_tokens": 1665,
+        "total_tokens": 3418,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1387,
+          "text_tokens": 366
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "b55e382f80ca8592f7ca100c6445fa37d1f6f2e14beb5c2771bc6fc54fce8a5f",
+      "status": "completed",
+      "latency_seconds": 48.868
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000131",
+        "historical:raw_sciq_000132"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2498a1ef3ae07c3436182a01abeafff798feac3a63546e8a433e9ac556b8d172",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.015
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000131",
+        "historical:raw_sciq_000132"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2498a1ef3ae07c3436182a01abeafff798feac3a63546e8a433e9ac556b8d172",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.515
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000131",
+        "historical:raw_sciq_000132"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2498a1ef3ae07c3436182a01abeafff798feac3a63546e8a433e9ac556b8d172",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.143
+    }
+  ],
+  "status": "failed"
+}

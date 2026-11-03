@@ -1,0 +1,214 @@
+{
+  "input_sha256": "deeecd7b16752bdeee994acad5e1f178ac4a9b9520909cd16f25f6b7a0cc00d8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003360",
+      "decision": "ready",
+      "subject": "U.S. Congress",
+      "relation_id": "entity_to_seat_building",
+      "relation_definition": "The named building that officially houses or serves as the seat of a specified organization, government body, or institution.",
+      "direction": "entity -> seat building",
+      "answer": "capitol building",
+      "canonical_fact": "The U.S. Congress is housed in the capitol building.",
+      "prompt_en": "What is the name of the government building that houses the U.S. Congress?",
+      "evidence_quotes": [
+        "government building that houses the U.S. Congress",
+        "capitol building"
+      ],
+      "reason": "No existing catalog relation exactly captures 'government body -> its official housing building.' entity_to_containing_location is about geographic hierarchy, not institutional seat. Proposed entity_to_seat_building to precisely express the institutional seating relationship. Answer 'capitol building' is a literal substring of source_answer; prompt_en is the original question (option-free, does not contain the answer).",
+      "english": {
+        "direction": "entity -> seat building",
+        "relation_id": "entity_to_seat_building",
+        "answer": "capitol building",
+        "canonical_fact": "The U.S. Congress is housed in the capitol building.",
+        "subject": "U.S. Congress",
+        "prompt_en": "What is the name of the government building that houses the U.S. Congress?",
+        "relation_definition": "The named building that officially houses or serves as the seat of a specified organization, government body, or institution.",
+        "answer_aliases_en": [
+          "capitol building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_seat_building",
+          "definition": "The named building that officially houses or serves as the seat of a specified organization, government body, or institution.",
+          "direction": "entity -> seat building"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fb20404936e22fee458ecf122f12c12124afad64da8ba8e52f0d896a9e89cf30",
+      "input_sha256": "5606da3bcd1a0ec9b9834013e867cdbb658f5d5504a36b419c6c04e720c4aeea",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003395",
+      "decision": "ready",
+      "subject": "all humans",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "two ears",
+      "canonical_fact": "All humans have two ears on the side of their head.",
+      "prompt_en": "What do all humans have on the side of their head?",
+      "evidence_quotes": [
+        "all humans have on the side of their head",
+        "two ears"
+      ],
+      "reason": "whole_to_part fits: 'all humans' (whole) have 'two ears' (constituent body parts). The positional qualifier 'on the side of their head' is preserved from the source question as scope context. Answer 'two ears' is a literal substring of source_answer. Prompt_en is the original question, option-free, and does not contain the answer.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "two ears",
+        "canonical_fact": "All humans have two ears on the side of their head.",
+        "subject": "all humans",
+        "prompt_en": "What do all humans have on the side of their head?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "two ears"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "247499cf693c7db031c5a785617a50bc98a4ce26a946d6640384c6f7bc12bd3c",
+      "input_sha256": "f4c17859598602d1732f755f0c9e43f3bbd7046356ee9d5b3c593cafd7645b15",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003360",
+      "input_sha256": "5606da3bcd1a0ec9b9834013e867cdbb658f5d5504a36b419c6c04e720c4aeea",
+      "english": {
+        "direction": "entity -> seat building",
+        "relation_id": "entity_to_seat_building",
+        "answer": "capitol building",
+        "canonical_fact": "The U.S. Congress is housed in the capitol building.",
+        "subject": "U.S. Congress",
+        "prompt_en": "What is the name of the government building that houses the U.S. Congress?",
+        "relation_definition": "The named building that officially houses or serves as the seat of a specified organization, government body, or institution.",
+        "answer_aliases_en": [
+          "capitol building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_seat_building",
+          "definition": "The named building that officially houses or serves as the seat of a specified organization, government body, or institution.",
+          "direction": "entity -> seat building"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fb20404936e22fee458ecf122f12c12124afad64da8ba8e52f0d896a9e89cf30",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003360",
+        "subject_zh": "美国国会",
+        "prompt_zh": "美国国会所在的政府建筑叫什么名字？",
+        "canonical_fact_zh": "美国国会设于国会大厦内。",
+        "answer_zh": "国会大厦",
+        "answer_aliases_zh": [
+          "国会大厦"
+        ]
+      },
+      "translation_sha256": "3d62794cb46f7eed2951ef2e274125b0c476f8bab5dc82aff1f1c03349a825f8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003395",
+      "input_sha256": "f4c17859598602d1732f755f0c9e43f3bbd7046356ee9d5b3c593cafd7645b15",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "two ears",
+        "canonical_fact": "All humans have two ears on the side of their head.",
+        "subject": "all humans",
+        "prompt_en": "What do all humans have on the side of their head?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "two ears"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "247499cf693c7db031c5a785617a50bc98a4ce26a946d6640384c6f7bc12bd3c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003395",
+        "subject_zh": "所有人",
+        "prompt_zh": "所有人头部侧面有什么？",
+        "canonical_fact_zh": "所有人在头部侧面都有两只耳朵。",
+        "answer_zh": "两只耳朵",
+        "answer_aliases_zh": [
+          "两只耳朵"
+        ]
+      },
+      "translation_sha256": "5f8657613bd4d373a232c3c9e2094d85a5b2d3d5be88eb892959b3d6ff7fe1c4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003360",
+        "historical:raw_commonsense_qa_003395"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b2ef7f59cbc05cd4e28f9924664821f4cad74ad7cc5541ef7860fad86c612972",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2178,
+      "first_chunk_seconds": 6.65,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2335,
+        "prompt_tokens": 1688,
+        "total_tokens": 4023,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1815,
+          "text_tokens": 520
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "67220d7b813a95a900731c8fb8b2e6796c088e002b40dfff1170945ff6e718e4",
+      "status": "completed",
+      "latency_seconds": 36.836
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003360",
+        "historical:raw_commonsense_qa_003395"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3a84443645bd7c2276efb6a404c5a34aa1e616a7051658a5d90a4230cc154618",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 766,
+      "first_chunk_seconds": 22.25,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 906,
+        "prompt_tokens": 823,
+        "total_tokens": 1729,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 702,
+          "text_tokens": 204
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f8fed0bf1dec2b7a3cf907e1e2eda27514b4f575de1104776a77a3121547eda4",
+      "status": "completed",
+      "latency_seconds": 32.971
+    }
+  ],
+  "status": "completed"
+}

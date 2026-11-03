@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-25T18:24:54.416889+00:00",
+  "status_snapshot": {
+    "updated_at": "2026-10-25T18:24:09.528653+00:00",
+    "state": "blocked_api",
+    "input_count": 7250,
+    "normalized_records": 5156,
+    "normalization_decisions": {
+      "ready": 5060,
+      "defer": 93,
+      "reject": 3
+    },
+    "translated_records": 4737,
+    "batch_status_counts": {
+      "completed": 2416,
+      "failed": 685
+    },
+    "review_packets": 241,
+    "reviewed_outcomes": {
+      "zh_translation_accepted": 4564,
+      "zh_translation_rejected": 167,
+      "zh_translation_deferred": 6
+    },
+    "human_gold": false,
+    "formal_experiment_eligible": false
+  },
+  "guard_observation": {
+    "at": "2026-10-25T18:24:41.563279+00:00",
+    "fingerprint": "3c3775e67b2c1b5452d348723f6a082e13c70802c641c9d9239519b8977cb6c3",
+    "pid": 64913,
+    "eligible_repair": true,
+    "last_activity_age_seconds": 3112.562471151352,
+    "state": "recoverable_access_403",
+    "retryable_technical_batches": 463,
+    "policy_sha256": "20004d0b6db1ae5f3a8bc08136406e569a2bed441aa149f012962a1d33b899bd"
+  },
+  "binding_checks": {
+    "manifest.json": true,
+    "operations_tools.json": true,
+    "active_worker_runtime.json": true
+  },
+  "fatal": {
+    "stage": "translate",
+    "record_ids": [
+      "historical:raw_sciq_000640",
+      "historical:raw_sciq_000641"
+    ],
+    "attempt": 2,
+    "prompt_sha256": "f03be08713de95d7ff9f33ab4e94c074a9bb45d4971743ef34d6f98f5519d4f8",
+    "requested_model": "qwen-3.8-max",
+    "worker_policy": "transport_stream_v1",
+    "status": "failed",
+    "error_type": "PermissionDeniedError",
+    "http_status": 403,
+    "latency_seconds": 1.458,
+    "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+    "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+    "provider_error_body_truncated": false,
+    "provider_error_type": "server_error",
+    "provider_error_message": "网络连接不稳定，请稍后重试。",
+    "provider_error_headers": {
+      "server": "nginx",
+      "content-type": "application/json"
+    },
+    "at": "2026-10-25T17:32:40.682969+00:00",
+    "error_code": "api_access_or_model_unavailable"
+  },
+  "worker_error_present": false,
+  "recovery_budget_available": false,
+  "attempts_in_rolling24h": 3,
+  "earliest_budget_release_at": "2026-10-26T08:49:50.178213+00:00",
+  "probe_or_restart_performed": false,
+  "review_or_export_performed": false,
+  "automation_retained": true,
+  "decision": "NOTIFY",
+  "state": "known_gateway403_blocked_by_daily_recovery_budget"
+}

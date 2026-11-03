@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5274e96ac97de1a34c7c463ae045bf18e4527a6316938af0d4642236fd35e62b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001348",
+      "decision": "ready",
+      "subject": "tissue that functions to move the bones",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "muscle",
+      "canonical_fact": "Muscle is the type of tissue that functions to move the bones.",
+      "prompt_en": "Which type of tissue functions to move the bones?",
+      "evidence_quotes": [
+        "tissue functions to move the bones",
+        "muscle"
+      ],
+      "reason": "The source question identifies tissue by its function (moving bones) and the source answer names it as muscle. description_to_entity fits precisely: the qualifying description 'tissue that functions to move the bones' uniquely maps to the entity 'muscle'. Both model annotations agree on extraction; no conflict with source.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "muscle",
+        "canonical_fact": "Muscle is the type of tissue that functions to move the bones.",
+        "subject": "tissue that functions to move the bones",
+        "prompt_en": "Which type of tissue functions to move the bones?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "muscle"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "36ae930e9d55314d46cf3bc18b5e9f9b15c17ea1d5e97fc4d63f596d280e0cb9",
+      "input_sha256": "bf8abe7a2a1ccb6dfce40a290d9477d5ae9efa14135e487f03661dadb239fb2e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001349",
+      "decision": "ready",
+      "subject": "active volcanoes",
+      "relation_id": "geological_feature_to_tectonic_setting",
+      "relation_definition": "The tectonic or plate-boundary context where a specified geological feature or phenomenon is most commonly found; retains probability qualifiers such as 'most likely'.",
+      "direction": "geological feature -> tectonic setting",
+      "answer": "where tectonic plates meet",
+      "canonical_fact": "Active volcanoes are most likely to be found where tectonic plates meet.",
+      "prompt_en": "Where are active volcanoes most likely to be found?",
+      "evidence_quotes": [
+        "active volcanoes most likely to be found",
+        "where tectonic plates meet"
+      ],
+      "reason": "Source clearly states the tectonic context for active volcanoes. No existing catalog relation captures a geological feature-to-tectonic-setting mapping (entity_to_containing_location is for geographic containment; organism_to_habitat is organism-specific). A precise new relation geological_feature_to_tectonic_setting is proposed. The qualifier 'most likely' is retained in the canonical fact. Sensenova flagged this as 'typical_action_or_location' and excluded it, but the source answer is a direct factual statement, so extraction is justified; the deferral in old reviews is not binding.",
+      "english": {
+        "direction": "geological feature -> tectonic setting",
+        "relation_id": "geological_feature_to_tectonic_setting",
+        "answer": "where tectonic plates meet",
+        "canonical_fact": "Active volcanoes are most likely to be found where tectonic plates meet.",
+        "subject": "active volcanoes",
+        "prompt_en": "Where are active volcanoes most likely to be found?",
+        "relation_definition": "The tectonic or plate-boundary context where a specified geological feature or phenomenon is most commonly found; retains probability qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "where tectonic plates meet"
+        ],
+        "relation_spec": {
+          "id": "geological_feature_to_tectonic_setting",
+          "definition": "The tectonic or plate-boundary context where a specified geological feature or phenomenon is most commonly found; retains probability qualifiers such as 'most likely'.",
+          "direction": "geological feature -> tectonic setting"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "52745c4e27e515393a21c82ac48c08aea00b07696f3896e21a2601ba7efc6c39",
+      "input_sha256": "f8a17af51fca71e491a5c280285ec6432c26d16649931e0d77ffa7f8765d1204",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001348",
+      "input_sha256": "bf8abe7a2a1ccb6dfce40a290d9477d5ae9efa14135e487f03661dadb239fb2e",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "muscle",
+        "canonical_fact": "Muscle is the type of tissue that functions to move the bones.",
+        "subject": "tissue that functions to move the bones",
+        "prompt_en": "Which type of tissue functions to move the bones?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "muscle"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "36ae930e9d55314d46cf3bc18b5e9f9b15c17ea1d5e97fc4d63f596d280e0cb9",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001348",
+        "subject_zh": "能够移动骨骼的组织",
+        "prompt_zh": "哪种组织具有移动骨骼的功能？",
+        "canonical_fact_zh": "肌肉是具有移动骨骼功能的组织类型。",
+        "answer_zh": "肌肉",
+        "answer_aliases_zh": [
+          "肌肉"
+        ]
+      },
+      "translation_sha256": "079b92a603f0d9c28ec1f12ec46870afc5c3bf9769dde7ebc5aa7c3dfd8a8d04"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001349",
+      "input_sha256": "f8a17af51fca71e491a5c280285ec6432c26d16649931e0d77ffa7f8765d1204",
+      "english": {
+        "direction": "geological feature -> tectonic setting",
+        "relation_id": "geological_feature_to_tectonic_setting",
+        "answer": "where tectonic plates meet",
+        "canonical_fact": "Active volcanoes are most likely to be found where tectonic plates meet.",
+        "subject": "active volcanoes",
+        "prompt_en": "Where are active volcanoes most likely to be found?",
+        "relation_definition": "The tectonic or plate-boundary context where a specified geological feature or phenomenon is most commonly found; retains probability qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "where tectonic plates meet"
+        ],
+        "relation_spec": {
+          "id": "geological_feature_to_tectonic_setting",
+          "definition": "The tectonic or plate-boundary context where a specified geological feature or phenomenon is most commonly found; retains probability qualifiers such as 'most likely'.",
+          "direction": "geological feature -> tectonic setting"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "52745c4e27e515393a21c82ac48c08aea00b07696f3896e21a2601ba7efc6c39",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001349",
+        "subject_zh": "活火山",
+        "prompt_zh": "活火山最有可能出现在哪里？",
+        "canonical_fact_zh": "活火山最有可能出现在板块交汇之处。",
+        "answer_zh": "板块交汇之处",
+        "answer_aliases_zh": [
+          "板块交汇之处"
+        ]
+      },
+      "translation_sha256": "f15930c87cb59f6cd6baf86d8f9dbb5f7b582f9b1167fd9f768345213115c0e2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001348",
+        "historical:raw_ai2_arc_easy_001349"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c58b44857f4400c2ee4efce48ab62c380a5e6fecb07a04be2274472198b3d597",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3487,
+      "first_chunk_seconds": 11.294,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3652,
+        "prompt_tokens": 1695,
+        "total_tokens": 5347,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3081,
+          "text_tokens": 571
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "84bf22b22c6c42b45a4290642e5eee7fc4d464b970dfcd4b0c2f879bc169666f",
+      "status": "completed",
+      "latency_seconds": 90.278
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001348",
+        "historical:raw_ai2_arc_easy_001349"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d3c7e2bbae9696d0e6d620fa65abe3ff7fc8ccbf28d63b35c91b3d6e1b75c84",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 776,
+      "first_chunk_seconds": 14.444,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 781,
+        "prompt_tokens": 860,
+        "total_tokens": 1641,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 571,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "38885837cae4ca1e76ff3d89549ec92278111f6b17ec6a60fba2fa89e9dcd0a3",
+      "status": "completed",
+      "latency_seconds": 23.034
+    }
+  ],
+  "status": "completed"
+}

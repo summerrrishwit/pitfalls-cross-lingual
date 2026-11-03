@@ -1,0 +1,162 @@
+{
+  "input_sha256": "7f1a12e07bba5fac8749f20668e32e523c28198bf9003cf2ef02318c93bc8394",
+  "normalized": [
+    {
+      "record_id": "public:pbf_bfddf10a7e7fac41ec12",
+      "decision": "ready",
+      "subject": "Stuck in the Middle with You",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Stealers Wheel",
+      "canonical_fact": "Stealers Wheel performed the song Stuck in the Middle with You.",
+      "prompt_en": "Which band performed the song Stuck in the Middle with You?",
+      "evidence_quotes": [
+        "who performed stuck in the middle with you",
+        "Stealers Wheel"
+      ],
+      "reason": "The source question asks for the performer of a specific song and the source answer provides 'Stealers Wheel'. The catalog relation song_to_performer (song -> performer) fits exactly: subject is the song, answer is the performing band. No ambiguity or missing qualifier detected.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Stealers Wheel performed the song Stuck in the Middle with You.",
+        "answer": "Stealers Wheel",
+        "prompt_en": "Which band performed the song Stuck in the Middle with You?",
+        "subject": "Stuck in the Middle with You",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Stealers Wheel"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a4881f28601d1f74577e19afa7d20acf0cf6763b816ae351f06d5c92fa9be94d",
+      "input_sha256": "2776efe58331644e1710231cfb03a7fa9ad64afa1b7b51750006d63a5c5e858c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_bffc221922efa4155a9a",
+      "decision": "ready",
+      "subject": "Take Me to Church",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Hozier",
+      "canonical_fact": "Hozier sang the song Take Me to Church.",
+      "prompt_en": "Who sang the song Take Me to Church?",
+      "evidence_quotes": [
+        "who sang the song take me to church",
+        "Hozier"
+      ],
+      "reason": "The source question asks who sang a specific song and the source answer is 'Hozier'. The catalog relation song_to_performer (song -> performer) fits exactly: subject is the song, answer is the performing musician. No ambiguity or missing qualifier detected.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Hozier sang the song Take Me to Church.",
+        "answer": "Hozier",
+        "prompt_en": "Who sang the song Take Me to Church?",
+        "subject": "Take Me to Church",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Hozier"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d280d5115b0ad05d3be3d918f3adb8917a0801ccbd4d7607e1da62323e0d2c38",
+      "input_sha256": "aa299cb20f6706912f5d8368e133a31084a84e399ce6b026a21c5de18f595f33",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_bfddf10a7e7fac41ec12",
+        "public:pbf_bffc221922efa4155a9a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "69903975f1cbef1eff8fd6db4e0b57d5c0994d5a2c9cd94b7188872fbe3d25a3",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1266,
+        "prompt_tokens": 1574,
+        "total_tokens": 2840,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 794,
+          "text_tokens": 472
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "29dae52d398e82e1a5bd08e23a20e3fd5cc586ca7c77109c0114de793dde0da3",
+      "status": "completed",
+      "latency_seconds": 96.334
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_bfddf10a7e7fac41ec12",
+        "public:pbf_bffc221922efa4155a9a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ffde39b1f19954f2f7db5d888ca66d42c77f38d71da48cd51c0212572e14f20c",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 28.23
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_bfddf10a7e7fac41ec12",
+        "public:pbf_bffc221922efa4155a9a"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ffde39b1f19954f2f7db5d888ca66d42c77f38d71da48cd51c0212572e14f20c",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 42.45
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_bfddf10a7e7fac41ec12",
+        "public:pbf_bffc221922efa4155a9a"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ffde39b1f19954f2f7db5d888ca66d42c77f38d71da48cd51c0212572e14f20c",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.555
+    }
+  ],
+  "status": "failed"
+}

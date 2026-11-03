@@ -1,0 +1,214 @@
+{
+  "input_sha256": "433228d4e1180fc19843e2510dab57001c3fccecf06b36c31c72548649ad0ee5",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001090",
+      "decision": "ready",
+      "subject": "object dropped from hand",
+      "relation_id": "phenomenon_to_cause",
+      "relation_definition": "The physical force or mechanism that causes a specified observable phenomenon or event.",
+      "direction": "phenomenon/observed event -> cause",
+      "answer": "gravity",
+      "canonical_fact": "Gravity causes an object to fall to the ground when it is dropped from a hand.",
+      "prompt_en": "Name the force that causes an object to fall to the ground when dropped from a hand.",
+      "evidence_quotes": [
+        "What causes an object to fall to the ground when you let it drop from your hand?",
+        "gravity"
+      ],
+      "reason": "Source question explicitly asks for the cause of an object falling when dropped; answer 'gravity' is a literal substring of source_answer. No existing catalog relation covers a causal/force relationship, so a new relation 'phenomenon_to_cause' is proposed with direction 'phenomenon/observed event -> cause'.",
+      "english": {
+        "direction": "phenomenon/observed event -> cause",
+        "relation_id": "phenomenon_to_cause",
+        "answer": "gravity",
+        "canonical_fact": "Gravity causes an object to fall to the ground when it is dropped from a hand.",
+        "subject": "object dropped from hand",
+        "prompt_en": "Name the force that causes an object to fall to the ground when dropped from a hand.",
+        "relation_definition": "The physical force or mechanism that causes a specified observable phenomenon or event.",
+        "answer_aliases_en": [
+          "gravity"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_cause",
+          "definition": "The physical force or mechanism that causes a specified observable phenomenon or event.",
+          "direction": "phenomenon/observed event -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7d0ec37fdab674308c2e516248c39aba32ae9e5f64a9a4dcd42aa055a384c9f0",
+      "input_sha256": "e7aa46352983604b6beb2b2f5a959f506d0891d4bd784c9ef82b30bd5f410e52",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001093",
+      "decision": "ready",
+      "subject": "light-year",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "distance",
+      "canonical_fact": "A light-year measures distance.",
+      "prompt_en": "What quantity does a light-year measure?",
+      "evidence_quotes": [
+        "What does a light-year measure?",
+        "distance"
+      ],
+      "reason": "Source question and answer state that a light-year measures distance, which is the defining purpose of the unit. This fits the existing term_to_definition relation exactly (term 'light-year' -> its defined quantity 'distance'). Answer 'distance' is a literal substring of source_answer. No conflict with existing annotations.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "distance",
+        "canonical_fact": "A light-year measures distance.",
+        "subject": "light-year",
+        "prompt_en": "What quantity does a light-year measure?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "distance"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6de5e51bb09a73fd7d5b596d3bfc29a5465310d05428a1fc149e61d573568317",
+      "input_sha256": "2d97db0c8925734652b749d4eb82ed650d83742b0cd0c1d062c673b9a590fc6e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001090",
+      "input_sha256": "e7aa46352983604b6beb2b2f5a959f506d0891d4bd784c9ef82b30bd5f410e52",
+      "english": {
+        "direction": "phenomenon/observed event -> cause",
+        "relation_id": "phenomenon_to_cause",
+        "answer": "gravity",
+        "canonical_fact": "Gravity causes an object to fall to the ground when it is dropped from a hand.",
+        "subject": "object dropped from hand",
+        "prompt_en": "Name the force that causes an object to fall to the ground when dropped from a hand.",
+        "relation_definition": "The physical force or mechanism that causes a specified observable phenomenon or event.",
+        "answer_aliases_en": [
+          "gravity"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_cause",
+          "definition": "The physical force or mechanism that causes a specified observable phenomenon or event.",
+          "direction": "phenomenon/observed event -> cause"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7d0ec37fdab674308c2e516248c39aba32ae9e5f64a9a4dcd42aa055a384c9f0",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001090",
+        "subject_zh": "从手中释放的物体",
+        "prompt_zh": "说出当物体从手中释放后使其落到地面的力。",
+        "canonical_fact_zh": "重力使从手中释放的物体落到地面。",
+        "answer_zh": "重力",
+        "answer_aliases_zh": [
+          "重力"
+        ]
+      },
+      "translation_sha256": "10447767cc260e5702e39c8662d1adafb91a89bfaaae2706246e91c46a6f8f98"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001093",
+      "input_sha256": "2d97db0c8925734652b749d4eb82ed650d83742b0cd0c1d062c673b9a590fc6e",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "distance",
+        "canonical_fact": "A light-year measures distance.",
+        "subject": "light-year",
+        "prompt_en": "What quantity does a light-year measure?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "distance"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6de5e51bb09a73fd7d5b596d3bfc29a5465310d05428a1fc149e61d573568317",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001093",
+        "subject_zh": "光年",
+        "prompt_zh": "光年衡量的是什么物理量？",
+        "canonical_fact_zh": "光年是衡量距离的单位。",
+        "answer_zh": "距离",
+        "answer_aliases_zh": [
+          "距离"
+        ]
+      },
+      "translation_sha256": "8d3f67424c4734599abb43fd38c5f47c2c997d227b100f6aade6143848a5e132"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001090",
+        "historical:raw_ai2_arc_easy_001093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f830b4ca5200ea920c073db85c40ef3d91b772d7c341eade285736019b914741",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1813,
+      "first_chunk_seconds": 29.3,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1939,
+        "prompt_tokens": 1654,
+        "total_tokens": 3593,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1442,
+          "text_tokens": 497
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ce40aaf066970f7d7e97090ba031b556dc8341a1ed1061d32289d161f2e1bf1a",
+      "status": "completed",
+      "latency_seconds": 63.341
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001090",
+        "historical:raw_ai2_arc_easy_001093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f5d947946fca2f2733b571010f947e55c9f1d4ef944a35b4450eb9e5878a531a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 580,
+      "first_chunk_seconds": 14.567,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 585,
+        "prompt_tokens": 822,
+        "total_tokens": 1407,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 374,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f9125e8a7b186377eb3abcff04cd619eb85e6fd4e8784c40df8030b3aed9420c",
+      "status": "completed",
+      "latency_seconds": 23.959
+    }
+  ],
+  "status": "completed"
+}

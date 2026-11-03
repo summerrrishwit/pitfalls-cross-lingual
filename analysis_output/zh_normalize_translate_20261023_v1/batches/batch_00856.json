@@ -1,0 +1,228 @@
+{
+  "input_sha256": "21d4bda373d91abcd3a1c5afeeeebd9c35b1bc537c92a1738512ae70a9d33ab3",
+  "normalized": [
+    {
+      "record_id": "public:pbf_34e4aaa96acd261366bf",
+      "decision": "ready",
+      "subject": "In the Still of the Night",
+      "relation_id": "song_to_songwriter",
+      "relation_definition": "Named songwriter or composer of a specified song; distinguish from performer, producer, or arranger.",
+      "direction": "song -> songwriter",
+      "answer": "fred parris",
+      "canonical_fact": "Fred Parris wrote the song In the Still of the Night.",
+      "prompt_en": "Who wrote the song In the Still of the Night?",
+      "evidence_quotes": [
+        "who wrote in the still of the night",
+        "fred parris"
+      ],
+      "reason": "No existing catalog relation precisely captures 'songwriter/composer of a song.' written_work_to_author targets literary works; song_to_performer targets performers. A new relation song_to_songwriter is needed to express the authorship/composition relationship for a song. Source answer 'fred parris' directly supports the fact.",
+      "english": {
+        "relation_id": "song_to_songwriter",
+        "canonical_fact": "Fred Parris wrote the song In the Still of the Night.",
+        "prompt_en": "Who wrote the song In the Still of the Night?",
+        "answer": "fred parris",
+        "direction": "song -> songwriter",
+        "relation_definition": "Named songwriter or composer of a specified song; distinguish from performer, producer, or arranger.",
+        "subject": "In the Still of the Night",
+        "answer_aliases_en": [
+          "fred parris"
+        ],
+        "relation_spec": {
+          "id": "song_to_songwriter",
+          "definition": "Named songwriter or composer of a specified song; distinguish from performer, producer, or arranger.",
+          "direction": "song -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2967c3f532b3e74990c06182e4330dc4e489d92c3345a9bd07cf648b3b4ae4cc",
+      "input_sha256": "698268b88d8cdba2be10178f51c276d017988f2c20dc2bb729d826f84ec48009",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_34eec5fa72af50de8bc7",
+      "decision": "ready",
+      "subject": "right ventricle of the heart",
+      "relation_id": "anatomical_structure_to_outflow",
+      "relation_definition": "The anatomical structure into which blood flows from a specified source structure (e.g., cardiac chamber or vessel) as part of normal physiological circulation.",
+      "direction": "source anatomical structure -> receiving anatomical structure",
+      "answer": "Pulmonary arteries",
+      "canonical_fact": "Blood flows from the right ventricle of the heart into the pulmonary arteries.",
+      "prompt_en": "Blood flows from the right ventricle of the heart into which anatomical structure?",
+      "evidence_quotes": [
+        "Blood flows from the right ventricle of the heart into which of the following structures?",
+        "Pulmonary arteries"
+      ],
+      "reason": "No existing catalog relation captures a physiological flow connection between anatomical structures. part_to_whole and entity_to_containing_location are about spatial/constitutive membership, not directional flow. A new relation anatomical_structure_to_outflow is proposed to express the source-to-destination flow relationship. Source answer 'Pulmonary arteries' directly supports the fact.",
+      "english": {
+        "relation_id": "anatomical_structure_to_outflow",
+        "canonical_fact": "Blood flows from the right ventricle of the heart into the pulmonary arteries.",
+        "prompt_en": "Blood flows from the right ventricle of the heart into which anatomical structure?",
+        "answer": "Pulmonary arteries",
+        "direction": "source anatomical structure -> receiving anatomical structure",
+        "relation_definition": "The anatomical structure into which blood flows from a specified source structure (e.g., cardiac chamber or vessel) as part of normal physiological circulation.",
+        "subject": "right ventricle of the heart",
+        "answer_aliases_en": [
+          "Pulmonary arteries"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_outflow",
+          "definition": "The anatomical structure into which blood flows from a specified source structure (e.g., cardiac chamber or vessel) as part of normal physiological circulation.",
+          "direction": "source anatomical structure -> receiving anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "04c743a9fe989c0966bca3480a76228d51667299a8b3855379adab2e8cd48e9e",
+      "input_sha256": "925bcf0775a582362621c067214148c67df1c0251367cb5faaa57ed422c93939",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_34e4aaa96acd261366bf",
+      "input_sha256": "698268b88d8cdba2be10178f51c276d017988f2c20dc2bb729d826f84ec48009",
+      "english": {
+        "relation_id": "song_to_songwriter",
+        "canonical_fact": "Fred Parris wrote the song In the Still of the Night.",
+        "prompt_en": "Who wrote the song In the Still of the Night?",
+        "answer": "fred parris",
+        "direction": "song -> songwriter",
+        "relation_definition": "Named songwriter or composer of a specified song; distinguish from performer, producer, or arranger.",
+        "subject": "In the Still of the Night",
+        "answer_aliases_en": [
+          "fred parris"
+        ],
+        "relation_spec": {
+          "id": "song_to_songwriter",
+          "definition": "Named songwriter or composer of a specified song; distinguish from performer, producer, or arranger.",
+          "direction": "song -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2967c3f532b3e74990c06182e4330dc4e489d92c3345a9bd07cf648b3b4ae4cc",
+      "translation": {
+        "record_id": "public:pbf_34e4aaa96acd261366bf",
+        "subject_zh": "In the Still of the Night",
+        "prompt_zh": "歌曲《In the Still of the Night》是谁创作的？",
+        "canonical_fact_zh": "Fred Parris 创作了歌曲《In the Still of the Night》。",
+        "answer_zh": "Fred Parris",
+        "answer_aliases_zh": [
+          "Fred Parris"
+        ]
+      },
+      "translation_sha256": "b639d8e78589e1986969ffd0852472cb02499ca0dfabc8c17b1cf04f51684ae0"
+    },
+    {
+      "record_id": "public:pbf_34eec5fa72af50de8bc7",
+      "input_sha256": "925bcf0775a582362621c067214148c67df1c0251367cb5faaa57ed422c93939",
+      "english": {
+        "relation_id": "anatomical_structure_to_outflow",
+        "canonical_fact": "Blood flows from the right ventricle of the heart into the pulmonary arteries.",
+        "prompt_en": "Blood flows from the right ventricle of the heart into which anatomical structure?",
+        "answer": "Pulmonary arteries",
+        "direction": "source anatomical structure -> receiving anatomical structure",
+        "relation_definition": "The anatomical structure into which blood flows from a specified source structure (e.g., cardiac chamber or vessel) as part of normal physiological circulation.",
+        "subject": "right ventricle of the heart",
+        "answer_aliases_en": [
+          "Pulmonary arteries"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_outflow",
+          "definition": "The anatomical structure into which blood flows from a specified source structure (e.g., cardiac chamber or vessel) as part of normal physiological circulation.",
+          "direction": "source anatomical structure -> receiving anatomical structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "04c743a9fe989c0966bca3480a76228d51667299a8b3855379adab2e8cd48e9e",
+      "translation": {
+        "record_id": "public:pbf_34eec5fa72af50de8bc7",
+        "subject_zh": "心脏右心室",
+        "prompt_zh": "血液从心脏右心室流入哪个解剖结构？",
+        "canonical_fact_zh": "血液从心脏右心室流入肺动脉。",
+        "answer_zh": "肺动脉",
+        "answer_aliases_zh": [
+          "肺动脉"
+        ]
+      },
+      "translation_sha256": "39bed3b2fdbb6a0e15d12494b4bf744715eb09a7ec96fd3b15220676c3a666bc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_34e4aaa96acd261366bf",
+        "public:pbf_34eec5fa72af50de8bc7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "93aaac73018f8b6b8c4fd4d65f81870b3d6a61c8846b390f61c9037092a70018",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1920,
+      "first_chunk_seconds": 12.165,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1970,
+        "prompt_tokens": 1607,
+        "total_tokens": 3577,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1412,
+          "text_tokens": 558
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "de00c015bde100de0ca4ac665c38c93705790e3a5c3636e37032bb69e14cf4ef",
+      "status": "completed",
+      "latency_seconds": 42.656
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_34e4aaa96acd261366bf",
+        "public:pbf_34eec5fa72af50de8bc7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7f02871640540c2b9dff8d8bfccd54bebc7f2f9153345d7ecb558b40b0b3104a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.019
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_34e4aaa96acd261366bf",
+        "public:pbf_34eec5fa72af50de8bc7"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7f02871640540c2b9dff8d8bfccd54bebc7f2f9153345d7ecb558b40b0b3104a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 601,
+      "first_chunk_seconds": 7.799,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 680,
+        "prompt_tokens": 893,
+        "total_tokens": 1573,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 506,
+          "text_tokens": 174
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fef1bb8ce2c486f9781b3d9dddb504a0cbdb8b84e4305be4f940f217ad26f366",
+      "status": "completed",
+      "latency_seconds": 30.303
+    }
+  ],
+  "status": "completed"
+}

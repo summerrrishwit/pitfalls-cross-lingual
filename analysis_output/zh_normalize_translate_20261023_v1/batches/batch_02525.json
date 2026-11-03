@@ -1,0 +1,214 @@
+{
+  "input_sha256": "23b2deb0bf2e42672f7354d2817a9a4083d181d10275fd6597a1cc6d30cbde8e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002829",
+      "decision": "ready",
+      "subject": "newspaper",
+      "relation_id": "entity_to_purpose",
+      "relation_definition": "Stated primary purpose or function of a specified entity type; retain qualifiers from source.",
+      "direction": "entity -> purpose",
+      "answer": "inform",
+      "canonical_fact": "The purpose of a newspaper is to inform.",
+      "prompt_en": "What is the purpose of a newspaper?",
+      "evidence_quotes": [
+        "What is the purpose of a newspaper?",
+        "inform"
+      ],
+      "reason": "Both model annotations agree on subject 'newspaper', relation 'purpose', and answer 'inform'. No catalog relation captures a function/purpose relation, so a new precise relation 'entity_to_purpose' is proposed. The source question and answer are unambiguous and the canonical fact is a direct paraphrase.",
+      "english": {
+        "direction": "entity -> purpose",
+        "relation_id": "entity_to_purpose",
+        "answer": "inform",
+        "canonical_fact": "The purpose of a newspaper is to inform.",
+        "subject": "newspaper",
+        "prompt_en": "What is the purpose of a newspaper?",
+        "relation_definition": "Stated primary purpose or function of a specified entity type; retain qualifiers from source.",
+        "answer_aliases_en": [
+          "inform"
+        ],
+        "relation_spec": {
+          "id": "entity_to_purpose",
+          "definition": "Stated primary purpose or function of a specified entity type; retain qualifiers from source.",
+          "direction": "entity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b971861c3a1a9ae946a1b153fb9dcaeb77f6d13a2ec40a7d971a643eabcbdae2",
+      "input_sha256": "0e0a8c10988ab1d506a8c5d84583ba8d667c7569783a425ab0a5efb5e52f78b7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002844",
+      "decision": "ready",
+      "subject": "launch pad",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "space center",
+      "canonical_fact": "A launch pad is part of a space center.",
+      "prompt_en": "A launch pad is a part of what?",
+      "evidence_quotes": [
+        "the launch pad was just one part of what?",
+        "space center"
+      ],
+      "reason": "Catalog relation 'part_to_whole' (direction part -> whole) fits exactly: a launch pad is a component of a space center. One model flagged ambiguous_subject, but the source question explicitly identifies 'the launch pad' as the subject, making the part-whole reading unambiguous. Prompt is option-free and does not contain the answer 'space center'.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "space center",
+        "canonical_fact": "A launch pad is part of a space center.",
+        "subject": "launch pad",
+        "prompt_en": "A launch pad is a part of what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "space center"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "607b760637e3bbfb90054972c16843aea5000fd15eaf6d74d922fce35cabe2ed",
+      "input_sha256": "bcb8bf773ce036726afbd22b9f5d56dc789a3a0882e22c143740ca11c24e5161",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002829",
+      "input_sha256": "0e0a8c10988ab1d506a8c5d84583ba8d667c7569783a425ab0a5efb5e52f78b7",
+      "english": {
+        "direction": "entity -> purpose",
+        "relation_id": "entity_to_purpose",
+        "answer": "inform",
+        "canonical_fact": "The purpose of a newspaper is to inform.",
+        "subject": "newspaper",
+        "prompt_en": "What is the purpose of a newspaper?",
+        "relation_definition": "Stated primary purpose or function of a specified entity type; retain qualifiers from source.",
+        "answer_aliases_en": [
+          "inform"
+        ],
+        "relation_spec": {
+          "id": "entity_to_purpose",
+          "definition": "Stated primary purpose or function of a specified entity type; retain qualifiers from source.",
+          "direction": "entity -> purpose"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b971861c3a1a9ae946a1b153fb9dcaeb77f6d13a2ec40a7d971a643eabcbdae2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002829",
+        "subject_zh": "报纸",
+        "prompt_zh": "报纸的用途是什么？",
+        "canonical_fact_zh": "报纸的用途是提供信息。",
+        "answer_zh": "提供信息",
+        "answer_aliases_zh": [
+          "提供信息"
+        ]
+      },
+      "translation_sha256": "fba4c9862f380690235f402b134e42de6ff4270784b49623ba9dbc5c7004db86"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002844",
+      "input_sha256": "bcb8bf773ce036726afbd22b9f5d56dc789a3a0882e22c143740ca11c24e5161",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "space center",
+        "canonical_fact": "A launch pad is part of a space center.",
+        "subject": "launch pad",
+        "prompt_en": "A launch pad is a part of what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "space center"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "607b760637e3bbfb90054972c16843aea5000fd15eaf6d74d922fce35cabe2ed",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002844",
+        "subject_zh": "发射台",
+        "prompt_zh": "发射台是哪里的一部分？",
+        "canonical_fact_zh": "发射台是航天中心的一部分。",
+        "answer_zh": "航天中心",
+        "answer_aliases_zh": [
+          "航天中心"
+        ]
+      },
+      "translation_sha256": "047e82be8fd4d5050aabc3415f6b919e62239888c65343fd03fdd8de1532c6ed"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002829",
+        "historical:raw_commonsense_qa_002844"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fc420176aa0345f1355175f0df9fbe5bb59ea0c690c946ddd50117218d514452",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1535,
+      "first_chunk_seconds": 7.501,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1805,
+        "prompt_tokens": 1619,
+        "total_tokens": 3424,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1325,
+          "text_tokens": 480
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3fb66f9853830027e74a7e5309b116e31ef601caffe9f43261303bd9ab28ae4d",
+      "status": "completed",
+      "latency_seconds": 170.902
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002829",
+        "historical:raw_commonsense_qa_002844"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cbd65d098edf95dd0cd2faba33edbafcdc86cf492f223be8be45921d56482187",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 923,
+      "first_chunk_seconds": 12.469,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1032,
+        "prompt_tokens": 789,
+        "total_tokens": 1821,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 831,
+          "text_tokens": 201
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ab47de3818ac0eb4cebe53db736278f86b721d47b748dc9099b99641ec510a97",
+      "status": "completed",
+      "latency_seconds": 48.126
+    }
+  ],
+  "status": "completed"
+}

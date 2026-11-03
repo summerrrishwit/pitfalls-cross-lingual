@@ -1,0 +1,61 @@
+{
+  "input_sha256": "3201e02b5cd379ad32785476e9801cd5af76415614227c1af54f6cbd559a0c65",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006547",
+        "historical:raw_commonsense_qa_006554"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d9b748ea5586f78bc42d3c24c41c466f48a14bac196a424b167e1b02807ac1c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.628
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006547",
+        "historical:raw_commonsense_qa_006554"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d9b748ea5586f78bc42d3c24c41c466f48a14bac196a424b167e1b02807ac1c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.194,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006547",
+        "historical:raw_commonsense_qa_006554"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d9b748ea5586f78bc42d3c24c41c466f48a14bac196a424b167e1b02807ac1c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 46.489
+    }
+  ],
+  "status": "failed"
+}

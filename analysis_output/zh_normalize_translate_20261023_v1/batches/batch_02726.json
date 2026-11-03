@@ -1,0 +1,214 @@
+{
+  "input_sha256": "6d22238f2e0352c4a296eb69bc8c8110670430b7802ea344a40c9ab92ba0de08",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009145",
+      "decision": "ready",
+      "subject": "Arkansas",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "United States",
+      "canonical_fact": "Arkansas is in the United States.",
+      "prompt_en": "In which country is Arkansas located?",
+      "evidence_quotes": [
+        "What country is arkansas in?",
+        "united states"
+      ],
+      "reason": "Arkansas is a U.S. state; entity_to_containing_location captures geographic containment at country level. Answer 'United States' matches source_answer 'united states' (case-normalized). Both model annotations agree.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "United States",
+        "canonical_fact": "Arkansas is in the United States.",
+        "subject": "Arkansas",
+        "prompt_en": "In which country is Arkansas located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "United States"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "14b55ed841fdd37745f788ca3a994cf4dcafd2a2f5632200318142ac22831bc2",
+      "input_sha256": "9af5c0d0eb309fb2997bc3226814f59019d3b002e1aa28f1ce3e33cd6a585eb7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009149",
+      "decision": "ready",
+      "subject": "mammal skin",
+      "relation_id": "growth_surface_to_structure",
+      "relation_definition": "The biological structure (hair, fur, feathers, nails, etc.) that grows from a specified anatomical surface or tissue.",
+      "direction": "growth surface -> structure growing from it",
+      "answer": "fur",
+      "canonical_fact": "Fur grows from all mammal skin.",
+      "prompt_en": "What structure grows from all mammal skin?",
+      "evidence_quotes": [
+        "What grows from all mammal skin?",
+        "fur"
+      ],
+      "reason": "No existing catalog relation captures a growth-from surface relationship; proposed growth_surface_to_structure (growth surface -> structure growing from it). Both model annotations extracted the same fact. Answer 'fur' is a literal substring of source_answer.",
+      "english": {
+        "direction": "growth surface -> structure growing from it",
+        "relation_id": "growth_surface_to_structure",
+        "answer": "fur",
+        "canonical_fact": "Fur grows from all mammal skin.",
+        "subject": "mammal skin",
+        "prompt_en": "What structure grows from all mammal skin?",
+        "relation_definition": "The biological structure (hair, fur, feathers, nails, etc.) that grows from a specified anatomical surface or tissue.",
+        "answer_aliases_en": [
+          "fur"
+        ],
+        "relation_spec": {
+          "id": "growth_surface_to_structure",
+          "definition": "The biological structure (hair, fur, feathers, nails, etc.) that grows from a specified anatomical surface or tissue.",
+          "direction": "growth surface -> structure growing from it"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5c1d1c71e3dd0711c00cd1410aab779e9b99d225f680d8f13af66389eb3b4c4a",
+      "input_sha256": "b54856c2aa96954b64da3da362bd8514d7061b47c58754a5481e26fe3261e643",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009145",
+      "input_sha256": "9af5c0d0eb309fb2997bc3226814f59019d3b002e1aa28f1ce3e33cd6a585eb7",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "United States",
+        "canonical_fact": "Arkansas is in the United States.",
+        "subject": "Arkansas",
+        "prompt_en": "In which country is Arkansas located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "United States"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "14b55ed841fdd37745f788ca3a994cf4dcafd2a2f5632200318142ac22831bc2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009145",
+        "subject_zh": "阿肯色",
+        "prompt_zh": "阿肯色位于哪个国家？",
+        "canonical_fact_zh": "阿肯色位于美国。",
+        "answer_zh": "美国",
+        "answer_aliases_zh": [
+          "美国"
+        ]
+      },
+      "translation_sha256": "f79fca7583feb8b5e8baf7ef828761cf41b179860e532e42e2624b317b4f4db5"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009149",
+      "input_sha256": "b54856c2aa96954b64da3da362bd8514d7061b47c58754a5481e26fe3261e643",
+      "english": {
+        "direction": "growth surface -> structure growing from it",
+        "relation_id": "growth_surface_to_structure",
+        "answer": "fur",
+        "canonical_fact": "Fur grows from all mammal skin.",
+        "subject": "mammal skin",
+        "prompt_en": "What structure grows from all mammal skin?",
+        "relation_definition": "The biological structure (hair, fur, feathers, nails, etc.) that grows from a specified anatomical surface or tissue.",
+        "answer_aliases_en": [
+          "fur"
+        ],
+        "relation_spec": {
+          "id": "growth_surface_to_structure",
+          "definition": "The biological structure (hair, fur, feathers, nails, etc.) that grows from a specified anatomical surface or tissue.",
+          "direction": "growth surface -> structure growing from it"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5c1d1c71e3dd0711c00cd1410aab779e9b99d225f680d8f13af66389eb3b4c4a",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009149",
+        "subject_zh": "哺乳动物皮肤",
+        "prompt_zh": "所有哺乳动物的皮肤上生长着什么结构？",
+        "canonical_fact_zh": "所有哺乳动物的皮肤上都长有毛发。",
+        "answer_zh": "毛发",
+        "answer_aliases_zh": [
+          "毛发"
+        ]
+      },
+      "translation_sha256": "4c3e637a9ae3edb6138c39800b2c75c53d05567752e18bed49081fb3ae6b38ca"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009145",
+        "historical:raw_commonsense_qa_009149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "55ab9070514632cad4b64361af3a362626ba1d94482637da8aa74cf202890f89",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2416,
+      "first_chunk_seconds": 23.87,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2636,
+        "prompt_tokens": 1625,
+        "total_tokens": 4261,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2205,
+          "text_tokens": 431
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cb32775087f52fd1790340724ba2d0b2f4f7bf784ba99bcdc1c49ddca6df0c45",
+      "status": "completed",
+      "latency_seconds": 58.61
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009145",
+        "historical:raw_commonsense_qa_009149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1faee0273931ee9a9c27e0048af40ba33fa33c5a96441677655882dacb0c7656",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 504,
+      "first_chunk_seconds": 3.146,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 619,
+        "prompt_tokens": 825,
+        "total_tokens": 1444,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 413,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf9db5e4bd6ff3ebab761b37b221f6010419ebe6ecaa0c0cfdcfa51b077b3b14",
+      "status": "completed",
+      "latency_seconds": 9.265
+    }
+  ],
+  "status": "completed"
+}

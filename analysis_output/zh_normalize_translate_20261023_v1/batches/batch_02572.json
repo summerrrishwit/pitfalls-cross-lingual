@@ -1,0 +1,157 @@
+{
+  "input_sha256": "1bef00ddabd7427bec6d15f63598b2adef675eda83c09e48caf0ebb9d2810b97",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004128",
+      "decision": "ready",
+      "subject": "castle built upon Castle Rock in Scotland",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "edinburgh",
+      "canonical_fact": "Edinburgh Castle is built upon Castle Rock in Scotland.",
+      "prompt_en": "What castle is built upon Castle Rock in Scotland?",
+      "evidence_quotes": [
+        "edinburgh",
+        "Castle Rock in Scotland"
+      ],
+      "reason": "The source question provides an identifying description (a castle built upon Castle Rock in Scotland) and the source answer is the literal entity name 'edinburgh' (Edinburgh Castle). The description_to_entity relation fits exactly: a qualified identifying description uniquely resolves to a named entity. No catalog relation better captures this identification pattern.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "edinburgh",
+        "canonical_fact": "Edinburgh Castle is built upon Castle Rock in Scotland.",
+        "subject": "castle built upon Castle Rock in Scotland",
+        "prompt_en": "What castle is built upon Castle Rock in Scotland?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "edinburgh"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a17a30af664afc00dabdb6f6165f89220a0255b374ded4e8f7207aa97c034acf",
+      "input_sha256": "6464c886dec3e9d76870e29cb1d9230f673771d255bb291ee1c6a291235ee9ad",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004135",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source maps a behavior description ('lying to one another') to a single adjective ('deceptive'). This is a commonsense attribute association, not a stable class membership, factual identification, or definition. No catalog relation cleanly fits 'behavior -> behavioral adjective', and proposing a new relation for a single-word commonsense inference would be overly narrow and not reusable as a factual record. Insufficient source support for a precise, verifiable fact.",
+      "input_sha256": "4841814fc09213717b0ea3cd967754734edadb59b87cccce3868f532c18ffb22",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004128",
+      "input_sha256": "6464c886dec3e9d76870e29cb1d9230f673771d255bb291ee1c6a291235ee9ad",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "edinburgh",
+        "canonical_fact": "Edinburgh Castle is built upon Castle Rock in Scotland.",
+        "subject": "castle built upon Castle Rock in Scotland",
+        "prompt_en": "What castle is built upon Castle Rock in Scotland?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "edinburgh"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a17a30af664afc00dabdb6f6165f89220a0255b374ded4e8f7207aa97c034acf",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004128",
+        "subject_zh": "建在苏格兰城堡岩上的城堡",
+        "prompt_zh": "哪座城堡建在苏格兰的城堡岩上？",
+        "canonical_fact_zh": "爱丁堡城堡建在苏格兰的城堡岩上。",
+        "answer_zh": "爱丁堡",
+        "answer_aliases_zh": [
+          "爱丁堡"
+        ]
+      },
+      "translation_sha256": "7509fa732a5857004bcda3d65827520b0616bc1c14889b213677edff9614324f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004128",
+        "historical:raw_commonsense_qa_004135"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8d082b93e24d88d638efdeee633c8f70f2c807763ea02f03da346f8adde54bc7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2251,
+      "first_chunk_seconds": 19.969,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2359,
+        "prompt_tokens": 1646,
+        "total_tokens": 4005,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1935,
+          "text_tokens": 424
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d421e8fc93cb062ecc9e7af74d6ce151c8c095d898a6eb0631441885eaf9d553",
+      "status": "completed",
+      "latency_seconds": 60.606
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004128"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "20d65a37a16ff8b81e2554160131de08bb68b9b74f317ed96637bba5023ddd34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 471,
+      "first_chunk_seconds": 8.619,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 468,
+        "prompt_tokens": 494,
+        "total_tokens": 962,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 340,
+          "text_tokens": 128
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6d50c4c185e9078582e6cf352a5f2bb9034899a2a10f94f9da3827e7f9933503",
+      "status": "completed",
+      "latency_seconds": 13.345
+    }
+  ],
+  "status": "completed"
+}

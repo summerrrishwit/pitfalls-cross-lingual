@@ -1,0 +1,160 @@
+{
+  "input_sha256": "8e13e73d86855e427fb6cfec58402beb993bc1820ced3b677afa9da5048ba305",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000171",
+      "decision": "ready",
+      "subject": "the forbidden fruit eaten by Adam and Eve in the Garden of Eden (Biblical account)",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "fruit of the tree of knowledge of good and evil",
+      "canonical_fact": "According to the Bible, the forbidden fruit eaten by Adam and Eve in the Garden of Eden is the fruit of the tree of knowledge of good and evil.",
+      "prompt_en": "According to the Bible, what is the forbidden fruit that Adam and Eve ate in the Garden of Eden?",
+      "evidence_quotes": [
+        "the fruit of the tree of knowledge of good and evil",
+        "what forbidden fruit did Adam and Eve eat in the Garden of Eden"
+      ],
+      "reason": "The source answer explicitly identifies the forbidden fruit as 'the fruit of the tree of knowledge of good and evil.' The description_to_entity relation fits precisely: the qualified Biblical description (forbidden fruit, Adam and Eve, Garden of Eden) uniquely identifies the entity. The answer is a literal substring of the source answer. No date, market, or version is invented.",
+      "english": {
+        "prompt_en": "According to the Bible, what is the forbidden fruit that Adam and Eve ate in the Garden of Eden?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "fruit of the tree of knowledge of good and evil",
+        "canonical_fact": "According to the Bible, the forbidden fruit eaten by Adam and Eve in the Garden of Eden is the fruit of the tree of knowledge of good and evil.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "the forbidden fruit eaten by Adam and Eve in the Garden of Eden (Biblical account)",
+        "answer_aliases_en": [
+          "fruit of the tree of knowledge of good and evil"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "faf114cdcc557e893c57f6dd82822e879babfbbf69c077f22fac5790956eaf5e",
+      "input_sha256": "cc19da60c65e97bf947e59c3b77c73927e77aa445b0465b6e28c0a21fcc04bac",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000174",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The statement that blondes and brunettes differ in hair colors is tautological: the terms 'blonde' and 'brunette' are themselves defined by hair color. No catalog relation cleanly captures a 'differ_in_attribute' relation without forcing a broad category, and the fact adds no information beyond the lexical definitions of the terms.",
+      "input_sha256": "281552eaae2d528c8d0e095664d5f93cfdf6136c7dcd6321d221dec92ffd3288",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171",
+        "historical:raw_truthful_qa_000174"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db23b237e03628209a1522044eb05701dc311ea349e708ab41c1a3b6010aa78b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.697
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171",
+        "historical:raw_truthful_qa_000174"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "db23b237e03628209a1522044eb05701dc311ea349e708ab41c1a3b6010aa78b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 83.953
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171",
+        "historical:raw_truthful_qa_000174"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "db23b237e03628209a1522044eb05701dc311ea349e708ab41c1a3b6010aa78b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2590,
+      "first_chunk_seconds": 61.911,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2738,
+        "prompt_tokens": 1782,
+        "total_tokens": 4520,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2246,
+          "text_tokens": 492
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "57c786e22c0a7051f3a23d72db79c6f2097381a36adba7b459626baf71b6ceeb",
+      "status": "completed",
+      "latency_seconds": 104.558
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "302e643176a9296a3dce3896001885608853e6397887611bd3859a8c3168fb0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 53.376
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "302e643176a9296a3dce3896001885608853e6397887611bd3859a8c3168fb0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 77.242
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000171"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "302e643176a9296a3dce3896001885608853e6397887611bd3859a8c3168fb0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 76.068
+    }
+  ],
+  "status": "failed"
+}

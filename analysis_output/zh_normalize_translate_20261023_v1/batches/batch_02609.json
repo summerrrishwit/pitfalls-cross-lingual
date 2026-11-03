@@ -1,0 +1,303 @@
+{
+  "input_sha256": "277835d9dd52a91cf77af48ffe3fdf941f36f11fb6589089a06d11c5072676a9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005320",
+      "decision": "ready",
+      "subject": "bread dough",
+      "relation_id": "food_to_leavening_agent",
+      "relation_definition": "The specific leavening ingredient added to a named food or dough preparation to cause it to rise; distinct from general composition or other functional ingredients.",
+      "direction": "specified food/dough preparation -> leavening agent",
+      "answer": "yeast",
+      "canonical_fact": "Yeast is added to bread dough to make it rise.",
+      "prompt_en": "What ingredient is added to bread dough to make it rise?",
+      "evidence_quotes": [
+        "What do you add to you dough when making bread to make it rise?",
+        "yeast"
+      ],
+      "reason": "Source answer 'yeast' is consistent across all old extractions and the source. No existing catalog relation precisely captures the leavening-agent role for a dough preparation (entity_to_material covers general composition, not a functional additive), so a new relation food_to_leavening_agent is proposed. Answer kept verbatim from source_answer.",
+      "english": {
+        "direction": "specified food/dough preparation -> leavening agent",
+        "relation_id": "food_to_leavening_agent",
+        "answer": "yeast",
+        "canonical_fact": "Yeast is added to bread dough to make it rise.",
+        "subject": "bread dough",
+        "prompt_en": "What ingredient is added to bread dough to make it rise?",
+        "relation_definition": "The specific leavening ingredient added to a named food or dough preparation to cause it to rise; distinct from general composition or other functional ingredients.",
+        "answer_aliases_en": [
+          "yeast"
+        ],
+        "relation_spec": {
+          "id": "food_to_leavening_agent",
+          "definition": "The specific leavening ingredient added to a named food or dough preparation to cause it to rise; distinct from general composition or other functional ingredients.",
+          "direction": "specified food/dough preparation -> leavening agent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cc69e47ebcf47cc67d4c32f8bbc1d2bb8b64bfe60aeb867bcd274f4ffa3954d7",
+      "input_sha256": "cd39dc6577a15178f9bb56b211cf8f23a1b96885f35e2d5f7ecfc2c8fae0572f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005340",
+      "decision": "ready",
+      "subject": "the big apple",
+      "relation_id": "alias_to_entity",
+      "relation_definition": "The canonical real-world entity denoted by a specified nickname, alias, or conventional moniker; inverse of entity_to_alias; not a free-form description-to-entity mapping.",
+      "direction": "alias/nickname -> entity",
+      "answer": "new york",
+      "canonical_fact": "The Big Apple is a nickname for New York.",
+      "prompt_en": "What city is referred to by the nickname 'The Big Apple'?",
+      "evidence_quotes": [
+        "The hit a toll road or two on their way to the big apple, it was their first time where?",
+        "new york"
+      ],
+      "reason": "Source answer 'new york' is consistent across all old extractions and the source. Catalog contains entity_to_alias (entity -> alias) but lacks the inverse alias -> entity direction; a new relation alias_to_entity is proposed to capture the moniker-to-canonical-entity mapping. Answer kept verbatim from source_answer.",
+      "english": {
+        "direction": "alias/nickname -> entity",
+        "relation_id": "alias_to_entity",
+        "answer": "new york",
+        "canonical_fact": "The Big Apple is a nickname for New York.",
+        "subject": "the big apple",
+        "prompt_en": "What city is referred to by the nickname 'The Big Apple'?",
+        "relation_definition": "The canonical real-world entity denoted by a specified nickname, alias, or conventional moniker; inverse of entity_to_alias; not a free-form description-to-entity mapping.",
+        "answer_aliases_en": [
+          "new york"
+        ],
+        "relation_spec": {
+          "id": "alias_to_entity",
+          "definition": "The canonical real-world entity denoted by a specified nickname, alias, or conventional moniker; inverse of entity_to_alias; not a free-form description-to-entity mapping.",
+          "direction": "alias/nickname -> entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8d7518ce74acacffbed21d893a42537ece6f319dc6ddd3d131b2812abf988154",
+      "input_sha256": "e3cb1dc68cad8f2eb526f6b9e2d303c366fad2172cc966953c1ee4c213db530c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005320",
+      "input_sha256": "cd39dc6577a15178f9bb56b211cf8f23a1b96885f35e2d5f7ecfc2c8fae0572f",
+      "english": {
+        "direction": "specified food/dough preparation -> leavening agent",
+        "relation_id": "food_to_leavening_agent",
+        "answer": "yeast",
+        "canonical_fact": "Yeast is added to bread dough to make it rise.",
+        "subject": "bread dough",
+        "prompt_en": "What ingredient is added to bread dough to make it rise?",
+        "relation_definition": "The specific leavening ingredient added to a named food or dough preparation to cause it to rise; distinct from general composition or other functional ingredients.",
+        "answer_aliases_en": [
+          "yeast"
+        ],
+        "relation_spec": {
+          "id": "food_to_leavening_agent",
+          "definition": "The specific leavening ingredient added to a named food or dough preparation to cause it to rise; distinct from general composition or other functional ingredients.",
+          "direction": "specified food/dough preparation -> leavening agent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cc69e47ebcf47cc67d4c32f8bbc1d2bb8b64bfe60aeb867bcd274f4ffa3954d7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005320",
+        "subject_zh": "面包面团",
+        "prompt_zh": "什么成分被添加到面包面团中使其膨胀？",
+        "canonical_fact_zh": "酵母被添加到面包面团中使其膨胀。",
+        "answer_zh": "酵母",
+        "answer_aliases_zh": [
+          "酵母"
+        ]
+      },
+      "translation_sha256": "beaabdd33ef97276e3483de5e7a018a18c597c75ec9abcb5450b19675125160a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005340",
+      "input_sha256": "e3cb1dc68cad8f2eb526f6b9e2d303c366fad2172cc966953c1ee4c213db530c",
+      "english": {
+        "direction": "alias/nickname -> entity",
+        "relation_id": "alias_to_entity",
+        "answer": "new york",
+        "canonical_fact": "The Big Apple is a nickname for New York.",
+        "subject": "the big apple",
+        "prompt_en": "What city is referred to by the nickname 'The Big Apple'?",
+        "relation_definition": "The canonical real-world entity denoted by a specified nickname, alias, or conventional moniker; inverse of entity_to_alias; not a free-form description-to-entity mapping.",
+        "answer_aliases_en": [
+          "new york"
+        ],
+        "relation_spec": {
+          "id": "alias_to_entity",
+          "definition": "The canonical real-world entity denoted by a specified nickname, alias, or conventional moniker; inverse of entity_to_alias; not a free-form description-to-entity mapping.",
+          "direction": "alias/nickname -> entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8d7518ce74acacffbed21d893a42537ece6f319dc6ddd3d131b2812abf988154",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005340",
+        "subject_zh": "大苹果",
+        "prompt_zh": "昵称\"大苹果\"指的是哪个城市？",
+        "canonical_fact_zh": "\"大苹果\"是纽约的昵称。",
+        "answer_zh": "纽约",
+        "answer_aliases_zh": [
+          "纽约"
+        ]
+      },
+      "translation_sha256": "527e3f752e053a5be7db07f093ffda223809fc53f87a5469e25fe9f1632d3d8a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005320",
+        "historical:raw_commonsense_qa_005340"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "35e64c57c86ff5275dfd4c7a31b2260cabe55fe0ca2a7cbb1186c838f1e8fc0b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2787,
+      "first_chunk_seconds": 15.872,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2955,
+        "prompt_tokens": 1667,
+        "total_tokens": 4622,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2464,
+          "text_tokens": 491
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b04d083a2d3cef12575978a8f92ae35a1a6ffb0e2799819b0a70cd08a51cd4d2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 55.859,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005320",
+        "historical:raw_commonsense_qa_005340"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "91a14afbfd98ee1e3aff12a664d1545e6ebf9d0b918695718fa57762f959b653",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2916,
+      "first_chunk_seconds": 11.398,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3069,
+        "prompt_tokens": 1684,
+        "total_tokens": 4753,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2519,
+          "text_tokens": 550
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "32afe5ea3114c6b6b24b3d65b19bcc8f517a43e985b7614ed699fb95114d64bd",
+      "status": "completed",
+      "latency_seconds": 54.003
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005320",
+        "historical:raw_commonsense_qa_005340"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "017f92a0c3b9967759a0432aec38e2dda0817ed53d2a80281b147ad20fa8a872",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 16.878,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005320",
+        "historical:raw_commonsense_qa_005340"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "017f92a0c3b9967759a0432aec38e2dda0817ed53d2a80281b147ad20fa8a872",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 773,
+      "first_chunk_seconds": 3.923,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 894,
+        "prompt_tokens": 875,
+        "total_tokens": 1769,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 717,
+          "text_tokens": 177
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "891c848037833c0c76afdce4922e70136ed18d3d69853dea56424c9a3cc52750",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 14.7,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005320",
+        "historical:raw_commonsense_qa_005340"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "71443c3427ac02ceb28235788fd03a3a612725d0f4686a3176dba13c70970341",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 620,
+      "first_chunk_seconds": 6.955,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 617,
+        "prompt_tokens": 894,
+        "total_tokens": 1511,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 408,
+          "text_tokens": 209
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f1aa62d6cdffb757db6f70bebc90c0dbc4b21770dc0acbe3e399b52583384f25",
+      "status": "completed",
+      "latency_seconds": 13.227
+    }
+  ],
+  "status": "completed"
+}

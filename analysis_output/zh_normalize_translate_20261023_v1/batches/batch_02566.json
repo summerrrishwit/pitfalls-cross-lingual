@@ -1,0 +1,214 @@
+{
+  "input_sha256": "1762a21af9fe6a0a35dc6c78bb0c10fcde594ebd7ecbba9867c1404a024dd104",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003967",
+      "decision": "ready",
+      "subject": "cogitating",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "think about things",
+      "canonical_fact": "Cogitating means to think about things.",
+      "prompt_en": "What is the definition of the word 'cogitating'?",
+      "evidence_quotes": [
+        "What is the definition of cogitating?",
+        "think about things"
+      ],
+      "reason": "The source question explicitly asks for the definition of 'cogitating' and the source answer provides 'think about things'. This maps directly to the term_to_definition catalog relation. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "think about things",
+        "canonical_fact": "Cogitating means to think about things.",
+        "subject": "cogitating",
+        "prompt_en": "What is the definition of the word 'cogitating'?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "think about things"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bd6cb2b1e8fdab2e2559c9b9ad9a403b9d6d58487f5f4be581d00dce1edd1979",
+      "input_sha256": "b3e1249c5fdaf7ba8a6f7e289cc5308604f8cce536bf41a77a85cb3bbe8f9079",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003974",
+      "decision": "ready",
+      "subject": "glass that hasn't been treated to be extra strong",
+      "relation_id": "material_to_property",
+      "relation_definition": "A property or characteristic of a specified material in a stated condition; retain the qualifying state or treatment status.",
+      "direction": "material (with state qualifier) -> property",
+      "answer": "fragile",
+      "canonical_fact": "Glass that hasn't been treated to be extra strong is fragile.",
+      "prompt_en": "What property does glass have when it hasn't been treated to be extra strong?",
+      "evidence_quotes": [
+        "Glass that hasn't been treated to be extra strong is what?",
+        "fragile"
+      ],
+      "reason": "The source asks about the property of glass in a specific untreated state; the answer 'fragile' is a material property. No existing catalog relation covers material->property (entity_to_class is taxonomy membership, entity_to_material is composition). Proposing material_to_property to capture property-of-material with state qualifier. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "material (with state qualifier) -> property",
+        "relation_id": "material_to_property",
+        "answer": "fragile",
+        "canonical_fact": "Glass that hasn't been treated to be extra strong is fragile.",
+        "subject": "glass that hasn't been treated to be extra strong",
+        "prompt_en": "What property does glass have when it hasn't been treated to be extra strong?",
+        "relation_definition": "A property or characteristic of a specified material in a stated condition; retain the qualifying state or treatment status.",
+        "answer_aliases_en": [
+          "fragile"
+        ],
+        "relation_spec": {
+          "id": "material_to_property",
+          "definition": "A property or characteristic of a specified material in a stated condition; retain the qualifying state or treatment status.",
+          "direction": "material (with state qualifier) -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e5f0ece389ea2b1f1749014634b5b77acaf908246f469a9df178cf969561758f",
+      "input_sha256": "cdd980eb841d297fde4508882e7cea5e4b10b2af0661e4dedc5759d518bcca7d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003967",
+      "input_sha256": "b3e1249c5fdaf7ba8a6f7e289cc5308604f8cce536bf41a77a85cb3bbe8f9079",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "think about things",
+        "canonical_fact": "Cogitating means to think about things.",
+        "subject": "cogitating",
+        "prompt_en": "What is the definition of the word 'cogitating'?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "think about things"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bd6cb2b1e8fdab2e2559c9b9ad9a403b9d6d58487f5f4be581d00dce1edd1979",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003967",
+        "subject_zh": "沉思",
+        "prompt_zh": "'cogitating'（沉思）一词的定义是什么？",
+        "canonical_fact_zh": "'cogitating'（沉思）意为思考事情。",
+        "answer_zh": "思考事情",
+        "answer_aliases_zh": [
+          "思考事情"
+        ]
+      },
+      "translation_sha256": "764baa995d47e3fa41a46a80183a6582b6f000741ed9e047406c12374965afa3"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003974",
+      "input_sha256": "cdd980eb841d297fde4508882e7cea5e4b10b2af0661e4dedc5759d518bcca7d",
+      "english": {
+        "direction": "material (with state qualifier) -> property",
+        "relation_id": "material_to_property",
+        "answer": "fragile",
+        "canonical_fact": "Glass that hasn't been treated to be extra strong is fragile.",
+        "subject": "glass that hasn't been treated to be extra strong",
+        "prompt_en": "What property does glass have when it hasn't been treated to be extra strong?",
+        "relation_definition": "A property or characteristic of a specified material in a stated condition; retain the qualifying state or treatment status.",
+        "answer_aliases_en": [
+          "fragile"
+        ],
+        "relation_spec": {
+          "id": "material_to_property",
+          "definition": "A property or characteristic of a specified material in a stated condition; retain the qualifying state or treatment status.",
+          "direction": "material (with state qualifier) -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e5f0ece389ea2b1f1749014634b5b77acaf908246f469a9df178cf969561758f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003974",
+        "subject_zh": "未经特殊强化处理的玻璃",
+        "prompt_zh": "玻璃在未经特殊强化处理时会表现出什么特性？",
+        "canonical_fact_zh": "未经特殊强化处理的玻璃是易碎的。",
+        "answer_zh": "易碎的",
+        "answer_aliases_zh": [
+          "易碎的"
+        ]
+      },
+      "translation_sha256": "eabcadea9f86533696aae4cb45db2f4e2a5b04a787e9478b8fac63990bea2b9f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003967",
+        "historical:raw_commonsense_qa_003974"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "56e71ce61adc116263014d8637d773fcf724f404989cdd67cf352e1e0c41b085",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1587,
+      "first_chunk_seconds": 17.041,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1585,
+        "prompt_tokens": 1663,
+        "total_tokens": 3248,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1091,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ebb336b0c07ef403913b60fbb531d01f00b18710a873ed8d41b5482583915dac",
+      "status": "completed",
+      "latency_seconds": 35.455
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003967",
+        "historical:raw_commonsense_qa_003974"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "048933fcf2e7db04adf180539321fe433cf7586b254524d15a7eafafc9b9ea2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1216,
+      "first_chunk_seconds": 27.925,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1306,
+        "prompt_tokens": 830,
+        "total_tokens": 2136,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1085,
+          "text_tokens": 221
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "df5d5e2741f3495e60d77b0975aea0f12ee770daa6d8dcc37c2563008cb9b7a0",
+      "status": "completed",
+      "latency_seconds": 45.794
+    }
+  ],
+  "status": "completed"
+}

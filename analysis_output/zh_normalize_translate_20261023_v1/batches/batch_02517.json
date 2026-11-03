@@ -1,0 +1,214 @@
+{
+  "input_sha256": "581e34ae4104d355b6e6c57660d46dc5b672f58d8db49f5e812f83288cbbf016",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002578",
+      "decision": "ready",
+      "subject": "getting drunk",
+      "relation_id": "term_to_synonym",
+      "relation_definition": "A word or phrase that serves as a direct equivalent expression (synonym or near-paraphrase) for another term in ordinary usage; direction is from the source term/phrase to the equivalent word.",
+      "direction": "term/phrase -> equivalent word",
+      "answer": "intoxication",
+      "canonical_fact": "Intoxication is another word for getting drunk.",
+      "prompt_en": "What is another word for getting drunk?",
+      "evidence_quotes": [
+        "what is another word for getting drunk?",
+        "intoxication"
+      ],
+      "reason": "The source question explicitly asks for 'another word for getting drunk' and the source answer is 'intoxication'. No catalog relation covers a direct synonym/paraphrase between a phrase and a word, so a new precise relation 'term_to_synonym' is proposed. The existing 'entity_to_alias' requires an entity with an equivalent name, which does not fit a verb-phrase-to-noun synonym link. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "term/phrase -> equivalent word",
+        "relation_id": "term_to_synonym",
+        "answer": "intoxication",
+        "canonical_fact": "Intoxication is another word for getting drunk.",
+        "subject": "getting drunk",
+        "prompt_en": "What is another word for getting drunk?",
+        "relation_definition": "A word or phrase that serves as a direct equivalent expression (synonym or near-paraphrase) for another term in ordinary usage; direction is from the source term/phrase to the equivalent word.",
+        "answer_aliases_en": [
+          "intoxication"
+        ],
+        "relation_spec": {
+          "id": "term_to_synonym",
+          "definition": "A word or phrase that serves as a direct equivalent expression (synonym or near-paraphrase) for another term in ordinary usage; direction is from the source term/phrase to the equivalent word.",
+          "direction": "term/phrase -> equivalent word"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7c84eec28ad215fce9f3eb243fe3683c94d00e04a73d4f0020c4de9ae9d68cce",
+      "input_sha256": "e0101345068bd50fcea2f55cae2a05dbfa33af83d4371fd7946682cd99e94852",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002590",
+      "decision": "ready",
+      "subject": "New England",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "eastern united states",
+      "canonical_fact": "New England is located in the eastern United States.",
+      "prompt_en": "In which larger U.S. region is New England geographically contained?",
+      "evidence_quotes": [
+        "New England and other parts of where?",
+        "eastern united states"
+      ],
+      "reason": "The source question asks 'New England and other parts of where?' and the source answer is 'eastern united states', establishing that New England is geographically contained within the eastern United States. This maps directly to the catalog relation 'entity_to_containing_location' (entity -> containing location). One model flagged it as ambiguous_subject, but the source question clearly positions New England as a sub-region within the eastern US, making the containment relation unambiguous.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "eastern united states",
+        "canonical_fact": "New England is located in the eastern United States.",
+        "subject": "New England",
+        "prompt_en": "In which larger U.S. region is New England geographically contained?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "eastern united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cf637857995ee76a81b048b7c41fa0b992487e5186e8d6bda28f0d5e86521885",
+      "input_sha256": "2b2471beaef65557e5d8f283e844317cb1793657e023c42cf3bf2e96877d378b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002578",
+      "input_sha256": "e0101345068bd50fcea2f55cae2a05dbfa33af83d4371fd7946682cd99e94852",
+      "english": {
+        "direction": "term/phrase -> equivalent word",
+        "relation_id": "term_to_synonym",
+        "answer": "intoxication",
+        "canonical_fact": "Intoxication is another word for getting drunk.",
+        "subject": "getting drunk",
+        "prompt_en": "What is another word for getting drunk?",
+        "relation_definition": "A word or phrase that serves as a direct equivalent expression (synonym or near-paraphrase) for another term in ordinary usage; direction is from the source term/phrase to the equivalent word.",
+        "answer_aliases_en": [
+          "intoxication"
+        ],
+        "relation_spec": {
+          "id": "term_to_synonym",
+          "definition": "A word or phrase that serves as a direct equivalent expression (synonym or near-paraphrase) for another term in ordinary usage; direction is from the source term/phrase to the equivalent word.",
+          "direction": "term/phrase -> equivalent word"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7c84eec28ad215fce9f3eb243fe3683c94d00e04a73d4f0020c4de9ae9d68cce",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002578",
+        "subject_zh": "喝醉",
+        "prompt_zh": "喝醉的另一个说法是什么？",
+        "canonical_fact_zh": "醉酒是喝醉的另一个说法。",
+        "answer_zh": "醉酒",
+        "answer_aliases_zh": [
+          "醉酒"
+        ]
+      },
+      "translation_sha256": "e234b0159d40d81f451df0ce2bd2890eaf812d113f5e2250107ba2d0915a7c9b"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002590",
+      "input_sha256": "2b2471beaef65557e5d8f283e844317cb1793657e023c42cf3bf2e96877d378b",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "eastern united states",
+        "canonical_fact": "New England is located in the eastern United States.",
+        "subject": "New England",
+        "prompt_en": "In which larger U.S. region is New England geographically contained?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "eastern united states"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cf637857995ee76a81b048b7c41fa0b992487e5186e8d6bda28f0d5e86521885",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002590",
+        "subject_zh": "新英格兰",
+        "prompt_zh": "新英格兰在地理上被包含在哪个更大的美国区域中？",
+        "canonical_fact_zh": "新英格兰位于美国东部。",
+        "answer_zh": "美国东部",
+        "answer_aliases_zh": [
+          "美国东部"
+        ]
+      },
+      "translation_sha256": "257f490df2b78c723f26abbf3ccc2a1da5a02737d78fedccfdc4bd1314b607b9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002578",
+        "historical:raw_commonsense_qa_002590"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c55bca04f322b38acfbb6450691206a2438f7082a2aa870281e7bd922d7f8f86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2143,
+      "first_chunk_seconds": 62.815,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2250,
+        "prompt_tokens": 1639,
+        "total_tokens": 3889,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1682,
+          "text_tokens": 568
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b95a25a0e26049eba7a1909296f7f3dee145210ebe037221e19355b55bb4d0cd",
+      "status": "completed",
+      "latency_seconds": 96.514
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002578",
+        "historical:raw_commonsense_qa_002590"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "98f334808f35b57716692f79f1b4f6b854c3c25ebb2bc154d0d5b57d918562a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 853,
+      "first_chunk_seconds": 2.806,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 851,
+        "prompt_tokens": 865,
+        "total_tokens": 1716,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 641,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "99a966e8123d8c4bd193dbc62b17b50ccc8f244d9ca0536454b404cdff20c801",
+      "status": "completed",
+      "latency_seconds": 12.46
+    }
+  ],
+  "status": "completed"
+}

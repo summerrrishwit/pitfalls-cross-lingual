@@ -1,0 +1,214 @@
+{
+  "input_sha256": "40f483073117fa89423c4881bdf4420d3c4b318fccfbda2cfbb19898cfd21ecd",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000012",
+      "decision": "ready",
+      "subject": "Milton Friedman",
+      "relation_id": "person_to_stated_belief",
+      "relation_definition": "A specific claim or position explicitly attributed to a person as their stated belief; retain the exact framing and scope of the attributed view.",
+      "direction": "person -> belief content",
+      "answer": "its shareholders",
+      "canonical_fact": "Milton Friedman stated that the sole social responsibility of business is to its shareholders.",
+      "prompt_en": "What did Milton Friedman identify as the sole social responsibility of business?",
+      "evidence_quotes": [
+        "The only social responsibility of business is to its shareholders",
+        "What does Milton Friedman believe to be the sole responsibility of business?"
+      ],
+      "reason": "Source question and answer clearly establish Friedman's attributed position. No catalog relation captures a person's stated belief; proposed person_to_stated_belief. Answer 'its shareholders' is a literal substring of source_answer and is retained from prior extraction without conflict.",
+      "english": {
+        "direction": "person -> belief content",
+        "relation_id": "person_to_stated_belief",
+        "answer": "its shareholders",
+        "canonical_fact": "Milton Friedman stated that the sole social responsibility of business is to its shareholders.",
+        "subject": "Milton Friedman",
+        "prompt_en": "What did Milton Friedman identify as the sole social responsibility of business?",
+        "relation_definition": "A specific claim or position explicitly attributed to a person as their stated belief; retain the exact framing and scope of the attributed view.",
+        "answer_aliases_en": [
+          "its shareholders"
+        ],
+        "relation_spec": {
+          "id": "person_to_stated_belief",
+          "definition": "A specific claim or position explicitly attributed to a person as their stated belief; retain the exact framing and scope of the attributed view.",
+          "direction": "person -> belief content"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "762e154be93fe7af7301f08c2544ec4e4e2bf79fda1b761964684bdad0853b14",
+      "input_sha256": "d69a0742250e30d3f9f9808cd4e42b242e93e80c83da6b12b54a668a50f53e28",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000015",
+      "decision": "ready",
+      "subject": "King of the Pan3Flute",
+      "relation_id": "musical_work_to_artist",
+      "relation_definition": "The artist or group credited as the performing/releasing artist of a specified musical work (album, track, etc.); disambiguate version or edition where necessary.",
+      "direction": "musical work (album/track) -> performing artist",
+      "answer": "Zamfir",
+      "canonical_fact": "The 1998 New Age album 'King of the Pan3Flute' was released by Zamfir.",
+      "prompt_en": "Which New Age musician released the 1998 album 'King of the Pan3Flute'?",
+      "evidence_quotes": [
+        "Zamfir",
+        "What New Age musician released a 1998 album titled 'King of the Pan3Flute'?"
+      ],
+      "reason": "Source question and answer identify Zamfir as the releasing artist of the 1998 album. song_to_performer is scoped to a single song recording, not an album, so a new relation musical_work_to_artist is proposed. Answer 'Zamfir' is the literal source_answer and is retained.",
+      "english": {
+        "direction": "musical work (album/track) -> performing artist",
+        "relation_id": "musical_work_to_artist",
+        "answer": "Zamfir",
+        "canonical_fact": "The 1998 New Age album 'King of the Pan3Flute' was released by Zamfir.",
+        "subject": "King of the Pan3Flute",
+        "prompt_en": "Which New Age musician released the 1998 album 'King of the Pan3Flute'?",
+        "relation_definition": "The artist or group credited as the performing/releasing artist of a specified musical work (album, track, etc.); disambiguate version or edition where necessary.",
+        "answer_aliases_en": [
+          "Zamfir"
+        ],
+        "relation_spec": {
+          "id": "musical_work_to_artist",
+          "definition": "The artist or group credited as the performing/releasing artist of a specified musical work (album, track, etc.); disambiguate version or edition where necessary.",
+          "direction": "musical work (album/track) -> performing artist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8dfc16e13022cc6a09f1bd0d5497149ac2ebe8878c6cd0f47498f8dddb500cd9",
+      "input_sha256": "c0d3c02233f18cfd84908b494d5b5fe7c743098a7cb073ec5d73e297d810f049",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000012",
+      "input_sha256": "d69a0742250e30d3f9f9808cd4e42b242e93e80c83da6b12b54a668a50f53e28",
+      "english": {
+        "direction": "person -> belief content",
+        "relation_id": "person_to_stated_belief",
+        "answer": "its shareholders",
+        "canonical_fact": "Milton Friedman stated that the sole social responsibility of business is to its shareholders.",
+        "subject": "Milton Friedman",
+        "prompt_en": "What did Milton Friedman identify as the sole social responsibility of business?",
+        "relation_definition": "A specific claim or position explicitly attributed to a person as their stated belief; retain the exact framing and scope of the attributed view.",
+        "answer_aliases_en": [
+          "its shareholders"
+        ],
+        "relation_spec": {
+          "id": "person_to_stated_belief",
+          "definition": "A specific claim or position explicitly attributed to a person as their stated belief; retain the exact framing and scope of the attributed view.",
+          "direction": "person -> belief content"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "762e154be93fe7af7301f08c2544ec4e4e2bf79fda1b761964684bdad0853b14",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000012",
+        "subject_zh": "米尔顿·弗里德曼",
+        "prompt_zh": "米尔顿·弗里德曼认为企业的唯一社会责任是什么？",
+        "canonical_fact_zh": "米尔顿·弗里德曼表示，企业的唯一社会责任是对其股东负责。",
+        "answer_zh": "其股东",
+        "answer_aliases_zh": [
+          "其股东"
+        ]
+      },
+      "translation_sha256": "644bae1c2230fb8b25e7757464eaebf277bb46880f9ab05430817f651f4ba4f7"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000015",
+      "input_sha256": "c0d3c02233f18cfd84908b494d5b5fe7c743098a7cb073ec5d73e297d810f049",
+      "english": {
+        "direction": "musical work (album/track) -> performing artist",
+        "relation_id": "musical_work_to_artist",
+        "answer": "Zamfir",
+        "canonical_fact": "The 1998 New Age album 'King of the Pan3Flute' was released by Zamfir.",
+        "subject": "King of the Pan3Flute",
+        "prompt_en": "Which New Age musician released the 1998 album 'King of the Pan3Flute'?",
+        "relation_definition": "The artist or group credited as the performing/releasing artist of a specified musical work (album, track, etc.); disambiguate version or edition where necessary.",
+        "answer_aliases_en": [
+          "Zamfir"
+        ],
+        "relation_spec": {
+          "id": "musical_work_to_artist",
+          "definition": "The artist or group credited as the performing/releasing artist of a specified musical work (album, track, etc.); disambiguate version or edition where necessary.",
+          "direction": "musical work (album/track) -> performing artist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8dfc16e13022cc6a09f1bd0d5497149ac2ebe8878c6cd0f47498f8dddb500cd9",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000015",
+        "subject_zh": "《Pan3Flute之王》",
+        "prompt_zh": "哪位新世纪音乐音乐人发行了1998年的专辑《Pan3Flute之王》？",
+        "canonical_fact_zh": "1998年的新世纪音乐专辑《Pan3Flute之王》由Zamfir发行。",
+        "answer_zh": "Zamfir",
+        "answer_aliases_zh": [
+          "Zamfir"
+        ]
+      },
+      "translation_sha256": "665925378fddd959605bd21b21fc52db0c667ab863b3e8a800d1aaaf046f7932"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000012",
+        "historical:raw_mmlu_000015"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "31ffdb6fcca9d9eff964336561d2adaa4205eccda1bd9072810a731b962da3b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2088,
+      "first_chunk_seconds": 19.549,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2270,
+        "prompt_tokens": 1743,
+        "total_tokens": 4013,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1823,
+          "text_tokens": 447
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e34c9fb23a3de1394fc83e5c365c88d495cc7db20ec3df2208d86ed4b0292391",
+      "status": "completed",
+      "latency_seconds": 81.428
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000012",
+        "historical:raw_mmlu_000015"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dbca7af3608c031db40e31956926c4a817696ed5acb08510869abc121609d72e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1220,
+      "first_chunk_seconds": 10.715,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1217,
+        "prompt_tokens": 921,
+        "total_tokens": 2138,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 961,
+          "text_tokens": 256
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81a3939136ce8a6c43c2d018846031116723f72e8819f1afdcc501a49fb4ee9a",
+      "status": "completed",
+      "latency_seconds": 28.155
+    }
+  ],
+  "status": "completed"
+}

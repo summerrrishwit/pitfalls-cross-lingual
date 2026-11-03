@@ -1,0 +1,223 @@
+{
+  "input_sha256": "570c0ef584ad1ee47e44b0b5a86b0a3417205e330154cdf8591410236b7f2d66",
+  "normalized": [
+    {
+      "record_id": "public:pbf_b0a09bbf728e7f4cf795",
+      "decision": "ready",
+      "subject": "Mozart's first symphony",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "Symphony No. 1 in E flat major, K. 16",
+      "canonical_fact": "Mozart's first symphony is formally named Symphony No. 1 in E flat major, K. 16.",
+      "prompt_en": "What is the formal name of Mozart's first symphony?",
+      "evidence_quotes": [
+        "the name of mozart's first symphony",
+        "Symphony No. 1 in E flat major, K. 16"
+      ],
+      "reason": "The source question explicitly asks for the name of Mozart's first symphony and the source answer provides the formal title 'Symphony No. 1 in E flat major, K. 16'. The relation entity_to_alias fits because 'Mozart's first symphony' is a descriptive identifier for the entity and the answer is its formal equivalent name. No conflict with existing data.",
+      "english": {
+        "answer": "Symphony No. 1 in E flat major, K. 16",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "What is the formal name of Mozart's first symphony?",
+        "direction": "entity -> alias",
+        "subject": "Mozart's first symphony",
+        "canonical_fact": "Mozart's first symphony is formally named Symphony No. 1 in E flat major, K. 16.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "Symphony No. 1 in E flat major, K. 16"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "857c79f356fa3ff6dc601b4fd133c57a059ed07a4c0f3559252ec99d6dab82af",
+      "input_sha256": "3aef01e2e816ed2cfe28d2c26e2f6f05b3762c38228fbdb3d28d077f6e0e1d44",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_b0c258505fdb84df202b",
+      "decision": "ready",
+      "subject": "golf (major championship wins)",
+      "relation_id": "domain_to_top_achiever",
+      "relation_definition": "The person who has achieved the most of a specified measurable accomplishment (e.g., most major championships) within a named domain or sport.",
+      "direction": "domain + specified record -> person",
+      "answer": "Jack Nicklaus",
+      "canonical_fact": "Jack Nicklaus has won the most major championships in golf.",
+      "prompt_en": "Who has won the most major championships in golf?",
+      "evidence_quotes": [
+        "who is won the most majors in golf",
+        "Jack Nicklaus"
+      ],
+      "reason": "The source question asks who has won the most majors in golf and the source answer is 'Jack Nicklaus'. No existing catalog relation precisely captures a domain-scoped superlative achievement holder, so I propose the new relation 'domain_to_top_achiever' with explicit direction (domain + specified record -> person). The answer is directly stated in the source with no ambiguity.",
+      "english": {
+        "answer": "Jack Nicklaus",
+        "relation_id": "domain_to_top_achiever",
+        "prompt_en": "Who has won the most major championships in golf?",
+        "direction": "domain + specified record -> person",
+        "subject": "golf (major championship wins)",
+        "canonical_fact": "Jack Nicklaus has won the most major championships in golf.",
+        "relation_definition": "The person who has achieved the most of a specified measurable accomplishment (e.g., most major championships) within a named domain or sport.",
+        "answer_aliases_en": [
+          "Jack Nicklaus",
+          "Golden Bear",
+          "Bear",
+          "Jack William Nicklaus"
+        ],
+        "relation_spec": {
+          "id": "domain_to_top_achiever",
+          "definition": "The person who has achieved the most of a specified measurable accomplishment (e.g., most major championships) within a named domain or sport.",
+          "direction": "domain + specified record -> person"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e7a1c7a4516eba937277bc75ae026a67b463c6c497fce25198a4cf7cb5a99507",
+      "input_sha256": "2301c7df917cd5c86c91b3c74b225c4d81fd7dcdd9afc6fdf577e3ae1f6f312e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_b0a09bbf728e7f4cf795",
+      "input_sha256": "3aef01e2e816ed2cfe28d2c26e2f6f05b3762c38228fbdb3d28d077f6e0e1d44",
+      "english": {
+        "answer": "Symphony No. 1 in E flat major, K. 16",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "What is the formal name of Mozart's first symphony?",
+        "direction": "entity -> alias",
+        "subject": "Mozart's first symphony",
+        "canonical_fact": "Mozart's first symphony is formally named Symphony No. 1 in E flat major, K. 16.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "Symphony No. 1 in E flat major, K. 16"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "857c79f356fa3ff6dc601b4fd133c57a059ed07a4c0f3559252ec99d6dab82af",
+      "translation": {
+        "record_id": "public:pbf_b0a09bbf728e7f4cf795",
+        "subject_zh": "莫扎特的第一交响曲",
+        "prompt_zh": "莫扎特第一交响曲的正式名称是什么？",
+        "canonical_fact_zh": "莫扎特的第一交响曲正式命名为降E大调第1号交响曲，K. 16。",
+        "answer_zh": "降E大调第1号交响曲，K. 16",
+        "answer_aliases_zh": [
+          "降E大调第1号交响曲，K. 16"
+        ]
+      },
+      "translation_sha256": "75d3187d89ef1353fb4d72181b89838b53b405052e64db8e644483b6821019e8"
+    },
+    {
+      "record_id": "public:pbf_b0c258505fdb84df202b",
+      "input_sha256": "2301c7df917cd5c86c91b3c74b225c4d81fd7dcdd9afc6fdf577e3ae1f6f312e",
+      "english": {
+        "answer": "Jack Nicklaus",
+        "relation_id": "domain_to_top_achiever",
+        "prompt_en": "Who has won the most major championships in golf?",
+        "direction": "domain + specified record -> person",
+        "subject": "golf (major championship wins)",
+        "canonical_fact": "Jack Nicklaus has won the most major championships in golf.",
+        "relation_definition": "The person who has achieved the most of a specified measurable accomplishment (e.g., most major championships) within a named domain or sport.",
+        "answer_aliases_en": [
+          "Jack Nicklaus",
+          "Golden Bear",
+          "Bear",
+          "Jack William Nicklaus"
+        ],
+        "relation_spec": {
+          "id": "domain_to_top_achiever",
+          "definition": "The person who has achieved the most of a specified measurable accomplishment (e.g., most major championships) within a named domain or sport.",
+          "direction": "domain + specified record -> person"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e7a1c7a4516eba937277bc75ae026a67b463c6c497fce25198a4cf7cb5a99507",
+      "translation": {
+        "record_id": "public:pbf_b0c258505fdb84df202b",
+        "subject_zh": "高尔夫球（大满贯冠军次数）",
+        "prompt_zh": "谁在高尔夫球领域获得的大满贯冠军最多？",
+        "canonical_fact_zh": "杰克·尼克劳斯在高尔夫球领域获得的大满贯冠军最多。",
+        "answer_zh": "杰克·尼克劳斯",
+        "answer_aliases_zh": [
+          "杰克·尼克劳斯",
+          "金熊",
+          "熊",
+          "杰克·威廉·尼克劳斯"
+        ]
+      },
+      "translation_sha256": "cd88eaabc6cc4e7a7dcc1b50e1e68761efe676160f0318509b68a54696df12a0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_b0a09bbf728e7f4cf795",
+        "public:pbf_b0c258505fdb84df202b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0fa928d84a736598ad8ba8811dacac7fdbcc4b0b7cd7e3834465988d07ac55ae",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2799,
+      "first_chunk_seconds": 26.391,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2803,
+        "prompt_tokens": 1674,
+        "total_tokens": 4477,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2217,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4a581ca0e6b1d5bcd38e3859c6ade16e98e532fe8b92ee713d166e11debf64d9",
+      "status": "completed",
+      "latency_seconds": 53.099
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_b0a09bbf728e7f4cf795",
+        "public:pbf_b0c258505fdb84df202b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "307e38e6a170daf232fa8f4e95e18b99f47e0705e878d018cb09f10d53020aa1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1174,
+      "first_chunk_seconds": 26.526,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1189,
+        "prompt_tokens": 901,
+        "total_tokens": 2090,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 953,
+          "text_tokens": 236
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2bba2556da635483d26a86f74aa3aff59ed3e0e4bf688fb36a4f76b5e69fe96f",
+      "status": "completed",
+      "latency_seconds": 37.098
+    }
+  ],
+  "status": "completed"
+}

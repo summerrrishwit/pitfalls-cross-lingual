@@ -1,0 +1,185 @@
+{
+  "input_sha256": "b0ec81e07443208388593414cb31bd9b1caf389ecefdc8a6d8f8e34292c38f31",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000768",
+      "decision": "ready",
+      "subject": "penis, testes, and epididymis",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "male reproductive system",
+      "canonical_fact": "The penis, testes, and epididymis are organs in the male reproductive system.",
+      "prompt_en": "What body system do the penis, testes, and epididymis belong to?",
+      "evidence_quotes": [
+        "Penis, testes, and epididymis are organs in what system?",
+        "male reproductive system"
+      ],
+      "reason": "Existing relation part_to_whole fits exactly: the named organs are stated parts of a body system (the whole). Answer 'male reproductive system' is a literal substring of source_answer. Both model annotations agree on extraction.",
+      "english": {
+        "prompt_en": "What body system do the penis, testes, and epididymis belong to?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer": "male reproductive system",
+        "canonical_fact": "The penis, testes, and epididymis are organs in the male reproductive system.",
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "subject": "penis, testes, and epididymis",
+        "answer_aliases_en": [
+          "male reproductive system"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "16902aabf3f61fa3c35765cdd35e1069e8c64ad54bfc8c6d2e03f9f8d3333812",
+      "input_sha256": "98875bd31086eacb416e321bf63eedb5aa4b97a601cd042f9a6ff5e1abb18e04",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000769",
+      "decision": "ready",
+      "subject": "energy source that can be used to eject electrons from a solid material under the right conditions",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "light",
+      "canonical_fact": "Light is the energy source that can be used to eject electrons from a solid material under the right conditions.",
+      "prompt_en": "Under the right conditions, what energy source can be used to eject electrons from a solid material?",
+      "evidence_quotes": [
+        "Under the right conditions, what energy source can be used to eject electrons from a solid material?",
+        "light"
+      ],
+      "reason": "Existing relation description_to_entity fits: the qualified description (a specific energy source capable of ejecting electrons from a solid under the right conditions) uniquely identifies 'light' (photons/photoelectric effect). Answer 'light' is a literal substring of source_answer. Both model annotations agree on extraction.",
+      "english": {
+        "prompt_en": "Under the right conditions, what energy source can be used to eject electrons from a solid material?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "light",
+        "canonical_fact": "Light is the energy source that can be used to eject electrons from a solid material under the right conditions.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "energy source that can be used to eject electrons from a solid material under the right conditions",
+        "answer_aliases_en": [
+          "light"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "86396898d671a1ecd8ea86b5efb1480f8d0f4d7fafcd9b6a17902608a9f84a99",
+      "input_sha256": "ff0afad6b19cf6dff6de9ebb8657271622565f19a9f231b68d1ee46334e2e74f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0e8b7db4932f01c456d06a54855e785549c8352b349a3873f9b0fc3d7efc3012",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.326
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0e8b7db4932f01c456d06a54855e785549c8352b349a3873f9b0fc3d7efc3012",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.537
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0e8b7db4932f01c456d06a54855e785549c8352b349a3873f9b0fc3d7efc3012",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2131,
+      "first_chunk_seconds": 62.285,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2232,
+        "prompt_tokens": 1834,
+        "total_tokens": 4066,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1713,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8ef9ed622c2da144b136236ff5a62be6d92ecd6c35e4cc8c14fb3fee860913f7",
+      "status": "completed",
+      "latency_seconds": 99.195
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad5b844beac2683ce119597d1d19f772dd5053be7ea7c7668040ce7f113923c6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 89.874
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ad5b844beac2683ce119597d1d19f772dd5053be7ea7c7668040ce7f113923c6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 42.401
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000768",
+        "historical:raw_sciq_000769"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ad5b844beac2683ce119597d1d19f772dd5053be7ea7c7668040ce7f113923c6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 47.575
+    }
+  ],
+  "status": "failed"
+}

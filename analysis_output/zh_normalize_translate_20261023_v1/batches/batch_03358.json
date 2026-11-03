@@ -1,0 +1,168 @@
+{
+  "input_sha256": "10355f61fd9618638fcb0f77cadcb137f83fd0a49c2787bc58bc673cd947e134",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000466",
+      "decision": "ready",
+      "subject": "using a ball to knock things down",
+      "relation_id": "activity_to_typical_location",
+      "relation_definition": "The conventional or typical physical location where a specified activity is performed; not a regulatory or legal jurisdiction.",
+      "direction": "activity -> location",
+      "answer": "bowling alley",
+      "canonical_fact": "Using a ball to knock things down is done in a bowling alley.",
+      "prompt_en": "Where is the typical place where you use a ball to knock things down?",
+      "evidence_quotes": [
+        "Where do you use a ball to knock things down?",
+        "bowling alley"
+      ],
+      "reason": "The source QA pair directly links the activity 'using a ball to knock things down' to the location 'bowling alley.' No existing catalog relation covers activity-to-typical-location; proposing 'activity_to_typical_location' rather than forcing the pair into entity_to_containing_location (which explicitly excludes process locations). Both the question and answer are literal substrings of the source fields.",
+      "english": {
+        "prompt_en": "Where is the typical place where you use a ball to knock things down?",
+        "relation_definition": "The conventional or typical physical location where a specified activity is performed; not a regulatory or legal jurisdiction.",
+        "answer": "bowling alley",
+        "canonical_fact": "Using a ball to knock things down is done in a bowling alley.",
+        "direction": "activity -> location",
+        "relation_id": "activity_to_typical_location",
+        "subject": "using a ball to knock things down",
+        "answer_aliases_en": [
+          "bowling alley"
+        ],
+        "relation_spec": {
+          "id": "activity_to_typical_location",
+          "definition": "The conventional or typical physical location where a specified activity is performed; not a regulatory or legal jurisdiction.",
+          "direction": "activity -> location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2b97ba595a06a214d296c3eeb4b9f4caca879385a8a01d79da6b7a5e3be78fa0",
+      "input_sha256": "b25e195d8293f0b0dd0a9c1bdad3fee7ba0d89eb4c0409584de0b719ca47a7c4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000556",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question asks for the 'goal of working hard to achieve something,' a normative/subjective framing. The two annotators disagree: Qwen-3.8-Max extracted it while sensenova-6.7-flash-lite marked it subjective_or_normative. The answer 'accomplishment' is a vague conceptual restatement of the goal rather than a verifiable factual claim, and no catalog relation cleanly captures 'activity -> normative goal.' Insufficient source support for a reusable factual candidate; deferring.",
+      "input_sha256": "5464d8275abfca0a1c8be47d1941a0e0bbfd8c07b9fc70afcd6ebd52fb74f1f4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000466",
+        "historical:raw_commonsense_qa_000556"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3fd7c9027a40df5b5bf177b498b53cdd50b8ab21f9e138b056ee87d1b895b6d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.825
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000466",
+        "historical:raw_commonsense_qa_000556"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3fd7c9027a40df5b5bf177b498b53cdd50b8ab21f9e138b056ee87d1b895b6d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2246,
+      "first_chunk_seconds": 62.481,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2334,
+        "prompt_tokens": 1598,
+        "total_tokens": 3932,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1848,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5eb5b761b0a16ffb6040c48263a60fa62c20074098df556c63fe06bc4a09c8d2",
+      "status": "completed",
+      "latency_seconds": 109.124
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000466"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "844b6b1ca92b7a191366ea38f3db99cfe0c63867a25db65f64c0eba011839d21",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.285,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000466"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "844b6b1ca92b7a191366ea38f3db99cfe0c63867a25db65f64c0eba011839d21",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.137,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000466"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "844b6b1ca92b7a191366ea38f3db99cfe0c63867a25db65f64c0eba011839d21",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 91.362
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "046f02496ef80756d111e20456ef1575428bc12b4e25e9c3189d60a24c3d3caf",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008141",
+      "decision": "ready",
+      "subject": "high altitude (mountain top)",
+      "relation_id": "altitude_to_thin_substance",
+      "relation_definition": "The atmospheric substance that becomes thin (reduced density) at a specified high altitude or elevated location; not a general material-composition claim about the location itself.",
+      "direction": "specified altitude/elevated location -> substance that is thin there",
+      "answer": "air",
+      "canonical_fact": "At the top of a mountain (high altitude), the air is thin (low density).",
+      "prompt_en": "What is thin at the top of a mountain, making it hard to breathe?",
+      "evidence_quotes": [
+        "on top of the mountain it was thin what?",
+        "air"
+      ],
+      "reason": "Source unambiguously states the answer is 'air' in the context of thinness at mountain-top altitude. No catalog relation covers 'substance that is thin at a specified altitude'; proposing precise new relation 'altitude_to_thin_substance' rather than forcing entity_to_material (which concerns composition, not density property).",
+      "english": {
+        "direction": "specified altitude/elevated location -> substance that is thin there",
+        "relation_id": "altitude_to_thin_substance",
+        "answer": "air",
+        "canonical_fact": "At the top of a mountain (high altitude), the air is thin (low density).",
+        "subject": "high altitude (mountain top)",
+        "prompt_en": "What is thin at the top of a mountain, making it hard to breathe?",
+        "relation_definition": "The atmospheric substance that becomes thin (reduced density) at a specified high altitude or elevated location; not a general material-composition claim about the location itself.",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "altitude_to_thin_substance",
+          "definition": "The atmospheric substance that becomes thin (reduced density) at a specified high altitude or elevated location; not a general material-composition claim about the location itself.",
+          "direction": "specified altitude/elevated location -> substance that is thin there"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9c2a138f17678e966aa45740b427c849a2243de9a8aed3b2a2563c17b066ca49",
+      "input_sha256": "a74a5004af55e35c0d34751899b5ba7f0dab2a37be08c2ffba1da63055ef33a6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008142",
+      "decision": "ready",
+      "subject": "Humans",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "two eyes",
+      "canonical_fact": "Humans have two eyes, which are round and dart around (move quickly).",
+      "prompt_en": "What round body parts do humans have that move quickly from side to side?",
+      "evidence_quotes": [
+        "Humans tend to have what round things that dart around?",
+        "two eyes"
+      ],
+      "reason": "Source question describes eyes as 'round things that dart around' and the answer is 'two eyes'. This is a whole-to-part relation (Humans -> two eyes as constituent body parts). The existing catalog relation 'whole_to_part' fits exactly in direction and definition.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "two eyes",
+        "canonical_fact": "Humans have two eyes, which are round and dart around (move quickly).",
+        "subject": "Humans",
+        "prompt_en": "What round body parts do humans have that move quickly from side to side?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "two eyes"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1d58cf37a9f6b2641248d8d3d4b8314b394bce77a232ff2975624282648a0be5",
+      "input_sha256": "2d8fbed7d3ac19ace7e6983ed09836319aafffad06c16be85cf36436bfea1e63",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008141",
+      "input_sha256": "a74a5004af55e35c0d34751899b5ba7f0dab2a37be08c2ffba1da63055ef33a6",
+      "english": {
+        "direction": "specified altitude/elevated location -> substance that is thin there",
+        "relation_id": "altitude_to_thin_substance",
+        "answer": "air",
+        "canonical_fact": "At the top of a mountain (high altitude), the air is thin (low density).",
+        "subject": "high altitude (mountain top)",
+        "prompt_en": "What is thin at the top of a mountain, making it hard to breathe?",
+        "relation_definition": "The atmospheric substance that becomes thin (reduced density) at a specified high altitude or elevated location; not a general material-composition claim about the location itself.",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "altitude_to_thin_substance",
+          "definition": "The atmospheric substance that becomes thin (reduced density) at a specified high altitude or elevated location; not a general material-composition claim about the location itself.",
+          "direction": "specified altitude/elevated location -> substance that is thin there"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9c2a138f17678e966aa45740b427c849a2243de9a8aed3b2a2563c17b066ca49",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008141",
+        "subject_zh": "高海拔（山顶）",
+        "prompt_zh": "山顶上什么东西是稀薄的，让人难以呼吸？",
+        "canonical_fact_zh": "在山顶（高海拔处），空气是稀薄的（密度低）。",
+        "answer_zh": "空气",
+        "answer_aliases_zh": [
+          "空气"
+        ]
+      },
+      "translation_sha256": "a21a2d6d26e6694cfc923889c6a4ed6e2a7c5b861076ca1ad9d4b6ebfb4de7d8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008142",
+      "input_sha256": "2d8fbed7d3ac19ace7e6983ed09836319aafffad06c16be85cf36436bfea1e63",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "two eyes",
+        "canonical_fact": "Humans have two eyes, which are round and dart around (move quickly).",
+        "subject": "Humans",
+        "prompt_en": "What round body parts do humans have that move quickly from side to side?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "two eyes"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1d58cf37a9f6b2641248d8d3d4b8314b394bce77a232ff2975624282648a0be5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008142",
+        "subject_zh": "人类",
+        "prompt_zh": "人类有哪些圆形的身体部位会快速左右转动？",
+        "canonical_fact_zh": "人类有两只眼睛，呈圆形，会快速转动。",
+        "answer_zh": "两只眼睛",
+        "answer_aliases_zh": [
+          "两只眼睛"
+        ]
+      },
+      "translation_sha256": "e8b905912849384eb93d4f261c3b872a68a52b7ae32edca149a7400b5d231984"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008141",
+        "historical:raw_commonsense_qa_008142"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d3a457311d5a0814a466f514931c3672392ae03b47248d0464fb34c3cfc436d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3357,
+      "first_chunk_seconds": 11.662,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3425,
+        "prompt_tokens": 1622,
+        "total_tokens": 5047,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2903,
+          "text_tokens": 522
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d4d6086f355c9d1c45a8a87fb70555731dfb23a701e2974335ff63e4efbb8c59",
+      "status": "completed",
+      "latency_seconds": 72.843
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008141",
+        "historical:raw_commonsense_qa_008142"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2b0a5561453939e5381a790c2480144df99517c285ad6600b7a53ee06b837f42",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1032,
+      "first_chunk_seconds": 45.389,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1149,
+        "prompt_tokens": 869,
+        "total_tokens": 2018,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 923,
+          "text_tokens": 226
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6508d86c19c00a89f8721500e0c71161f61f0a3cd012593a743c1425164813f1",
+      "status": "completed",
+      "latency_seconds": 60.808
+    }
+  ],
+  "status": "completed"
+}

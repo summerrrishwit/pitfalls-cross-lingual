@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8a0855a83e02e0512cf769704deead978174cd1de21a5fa67c23a5eb50d10fc1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008906",
+      "decision": "ready",
+      "subject": "cat",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "feline",
+      "canonical_fact": "Another name for cat is feline.",
+      "prompt_en": "What is another name for a cat?",
+      "evidence_quotes": [
+        "another name for cat",
+        "feline"
+      ],
+      "reason": "Catalog relation entity_to_alias fits exactly: 'feline' is an equivalent name for 'cat'. Both model annotations independently confirmed extraction. Answer 'feline' is a literal substring of source_answer. Prompt contains no mention of the answer.",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "feline",
+        "canonical_fact": "Another name for cat is feline.",
+        "subject": "cat",
+        "prompt_en": "What is another name for a cat?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "feline"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ed1e725a8391a9f5d05f7e2eaa560d94f246f8dfd112d634dcd0138e3c76ff24",
+      "input_sha256": "ceaada7a9e8e6469df2afcc2a6920b27e08c0be7ea0cbc78751d87ac34a59818",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008912",
+      "decision": "ready",
+      "subject": "bathing",
+      "relation_id": "process_to_typical_effect",
+      "relation_definition": "The standard or typical result/outcome directly produced by a specified process.",
+      "direction": "process -> typical effect",
+      "answer": "cleanliness",
+      "canonical_fact": "Bathing leads to cleanliness.",
+      "prompt_en": "What does bathing lead to?",
+      "evidence_quotes": [
+        "led to what",
+        "cleanliness"
+      ],
+      "reason": "No existing catalog relation covers a causal/functional 'leads to' link. Proposing precise new relation process_to_typical_effect (process -> typical effect) to capture the stated outcome. Source explicitly states bathing 'led to' cleanliness; answer is a literal substring of source_answer. One model annotation marked not_extractable but the other confirmed; source support is sufficient.",
+      "english": {
+        "direction": "process -> typical effect",
+        "relation_id": "process_to_typical_effect",
+        "answer": "cleanliness",
+        "canonical_fact": "Bathing leads to cleanliness.",
+        "subject": "bathing",
+        "prompt_en": "What does bathing lead to?",
+        "relation_definition": "The standard or typical result/outcome directly produced by a specified process.",
+        "answer_aliases_en": [
+          "cleanliness"
+        ],
+        "relation_spec": {
+          "id": "process_to_typical_effect",
+          "definition": "The standard or typical result/outcome directly produced by a specified process.",
+          "direction": "process -> typical effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8df503f0fe3c7efa96917c0cdc41e4e8d2dae65d081b61063ab1335786e56e4",
+      "input_sha256": "a0fae815469c79690bf91979b96c082c6d7b2b6cbac5757b5bcd5e34a93b75f7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008906",
+      "input_sha256": "ceaada7a9e8e6469df2afcc2a6920b27e08c0be7ea0cbc78751d87ac34a59818",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "feline",
+        "canonical_fact": "Another name for cat is feline.",
+        "subject": "cat",
+        "prompt_en": "What is another name for a cat?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "feline"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ed1e725a8391a9f5d05f7e2eaa560d94f246f8dfd112d634dcd0138e3c76ff24",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008906",
+        "subject_zh": "猫",
+        "prompt_zh": "猫的另一个名称是什么？",
+        "canonical_fact_zh": "猫的另一个名称是猫科。",
+        "answer_zh": "猫科",
+        "answer_aliases_zh": [
+          "猫科"
+        ]
+      },
+      "translation_sha256": "8cca8d7407f9274a788c48f90ecbc43c7e09f9ff8562e2a495b8b984dbe9527f"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008912",
+      "input_sha256": "a0fae815469c79690bf91979b96c082c6d7b2b6cbac5757b5bcd5e34a93b75f7",
+      "english": {
+        "direction": "process -> typical effect",
+        "relation_id": "process_to_typical_effect",
+        "answer": "cleanliness",
+        "canonical_fact": "Bathing leads to cleanliness.",
+        "subject": "bathing",
+        "prompt_en": "What does bathing lead to?",
+        "relation_definition": "The standard or typical result/outcome directly produced by a specified process.",
+        "answer_aliases_en": [
+          "cleanliness"
+        ],
+        "relation_spec": {
+          "id": "process_to_typical_effect",
+          "definition": "The standard or typical result/outcome directly produced by a specified process.",
+          "direction": "process -> typical effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8df503f0fe3c7efa96917c0cdc41e4e8d2dae65d081b61063ab1335786e56e4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008912",
+        "subject_zh": "沐浴",
+        "prompt_zh": "沐浴会带来什么？",
+        "canonical_fact_zh": "沐浴会带来清洁。",
+        "answer_zh": "清洁",
+        "answer_aliases_zh": [
+          "清洁"
+        ]
+      },
+      "translation_sha256": "136ff0d8b362c51e3bcbcf7eae145b2e506decfb920900fab43549cf284f39aa"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008906",
+        "historical:raw_commonsense_qa_008912"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "460ab0247aa078ae52f97c77b2ee95e7e1bb7797e9cd000eb78f36cd6c40f78a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1724,
+      "first_chunk_seconds": 7.514,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1810,
+        "prompt_tokens": 1616,
+        "total_tokens": 3426,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1365,
+          "text_tokens": 445
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "69745f7a4dca4f3c896856e9634ad2857d80f04cb066955664be6e50ec58a2db",
+      "status": "completed",
+      "latency_seconds": 39.968
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008906",
+        "historical:raw_commonsense_qa_008912"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "aee094e3db56672436e4e8780bd6a0ea62a5bb54a350ca3f6f6a264b812cb1f1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1235,
+      "first_chunk_seconds": 29.192,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1320,
+        "prompt_tokens": 771,
+        "total_tokens": 2091,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1194,
+          "text_tokens": 126
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a9292a35bcaeddf2919bf33fc0f8a60348b6bbaab517f6444f8aa687f28db77",
+      "status": "completed",
+      "latency_seconds": 67.818
+    }
+  ],
+  "status": "completed"
+}

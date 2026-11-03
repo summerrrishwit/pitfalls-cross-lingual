@@ -1,0 +1,114 @@
+{
+  "at": "2026-10-26T08:04:25.108784+00:00",
+  "status_snapshot": {
+    "updated_at": "2026-10-26T08:03:07.715531+00:00",
+    "state": "running_qwen",
+    "input_count": 7250,
+    "normalized_records": 5156,
+    "normalization_decisions": {
+      "ready": 5060,
+      "defer": 93,
+      "reject": 3
+    },
+    "translated_records": 4737,
+    "batch_status_counts": {
+      "completed": 2416,
+      "failed": 686,
+      "normalized": 1
+    },
+    "review_packets": 241,
+    "reviewed_outcomes": {
+      "zh_translation_accepted": 4564,
+      "zh_translation_rejected": 167,
+      "zh_translation_deferred": 6
+    },
+    "human_gold": false,
+    "formal_experiment_eligible": false
+  },
+  "binding_checks": {
+    "manifest.json": true,
+    "operations_tools.json": true,
+    "active_worker_runtime.json": true
+  },
+  "attempt_id": "auto_20261026T075915976880",
+  "worker_pid": 24455,
+  "probe_results": {
+    "1": {
+      "concurrency": 1,
+      "requests": 1,
+      "peak_in_flight": 1,
+      "completed": 1,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 1
+      },
+      "identity_stable": true,
+      "wall_seconds": 74.748,
+      "p50_seconds": 74.747,
+      "p95_seconds": 74.747,
+      "requests_per_minute": 0.803,
+      "semantic_case_matches": 4,
+      "semantic_cases_total": 4,
+      "bounded_probe_passed": true
+    },
+    "8": {
+      "concurrency": 8,
+      "requests": 8,
+      "peak_in_flight": 8,
+      "completed": 8,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 8
+      },
+      "identity_stable": true,
+      "wall_seconds": 90.371,
+      "p50_seconds": 72.161,
+      "p95_seconds": 90.369,
+      "requests_per_minute": 5.311,
+      "semantic_case_matches": 32,
+      "semantic_cases_total": 32,
+      "bounded_probe_passed": true
+    }
+  },
+  "growth_since_recovery": {
+    "normalized": 0,
+    "translated": 0
+  },
+  "last_real_success_at": "2026-10-26T08:04:12.141274+00:00",
+  "fatal_present": true,
+  "worker_error_present": false,
+  "review_or_export_performed": false,
+  "automation_retained": true,
+  "production_growth_verified": false,
+  "decision": "NOTIFY",
+  "state": "probes_passed_then_new_production403_no_persisted_growth",
+  "fatal": {
+    "stage": "normalize",
+    "record_ids": [
+      "historical:raw_sciq_000668",
+      "historical:raw_sciq_000669"
+    ],
+    "attempt": 1,
+    "prompt_sha256": "21ce75f15b9f3a63984edb3582fabe6f241b0f35acb6af8fd0d8adf7784f5867",
+    "requested_model": "qwen-3.8-max",
+    "worker_policy": "transport_stream_v1",
+    "status": "failed",
+    "error_type": "PermissionDeniedError",
+    "http_status": 403,
+    "latency_seconds": 62.082,
+    "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+    "provider_error_body_redacted": "{\"message\": \"\u7f51\u7edc\u8fde\u63a5\u4e0d\u7a33\u5b9a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5\u3002\", \"type\": \"server_error\"}",
+    "provider_error_body_truncated": false,
+    "provider_error_type": "server_error",
+    "provider_error_message": "\u7f51\u7edc\u8fde\u63a5\u4e0d\u7a33\u5b9a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5\u3002",
+    "provider_error_headers": {
+      "server": "nginx",
+      "content-type": "application/json"
+    },
+    "at": "2026-10-26T08:03:07.337023+00:00",
+    "error_code": "api_access_or_model_unavailable"
+  },
+  "next_attempt_not_before": "2026-10-26T08:59:15.976980+00:00"
+}

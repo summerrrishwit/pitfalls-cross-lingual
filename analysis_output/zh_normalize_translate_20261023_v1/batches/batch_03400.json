@@ -1,0 +1,171 @@
+{
+  "input_sha256": "1ebfd1f4cdcb372c44d24420b3c91e8a042481853bcd6ca02d378d55dd53cc80",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002272",
+      "decision": "ready",
+      "subject": "battle",
+      "relation_id": "activity_to_primary_goal",
+      "relation_definition": "The stated primary or ultimate goal of a specified activity, contest, or endeavor.",
+      "direction": "activity -> goal",
+      "answer": "victory",
+      "canonical_fact": "The ultimate goal in a battle where one fights an enemy is victory.",
+      "prompt_en": "What is the ultimate goal in a battle where you fight an enemy?",
+      "evidence_quotes": [
+        "their only goal was ultimate",
+        "victory"
+      ],
+      "reason": "Source question asks about the ultimate goal in a battle; source answer is 'victory.' No catalog relation precisely captures 'goal/objective of an activity,' so a new precise relation activity_to_primary_goal is proposed. Both model annotations agree on the extraction; fact is commonsense-stable.",
+      "english": {
+        "prompt_en": "What is the ultimate goal in a battle where you fight an enemy?",
+        "relation_definition": "The stated primary or ultimate goal of a specified activity, contest, or endeavor.",
+        "answer": "victory",
+        "canonical_fact": "The ultimate goal in a battle where one fights an enemy is victory.",
+        "direction": "activity -> goal",
+        "relation_id": "activity_to_primary_goal",
+        "subject": "battle",
+        "answer_aliases_en": [
+          "victory"
+        ],
+        "relation_spec": {
+          "id": "activity_to_primary_goal",
+          "definition": "The stated primary or ultimate goal of a specified activity, contest, or endeavor.",
+          "direction": "activity -> goal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d5229aafdccdb0bfadfdc426e382bfbf2374ddc113eb1f6862194cf5d16bfd73",
+      "input_sha256": "978ab4b1a6374daaf5074b946902253c26874f12302490c0402ae547b9baa112",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002289",
+      "decision": "ready",
+      "subject": "cat",
+      "relation_id": "organism_to_visible_feature_in_condition",
+      "relation_definition": "A physical feature of a specified organism that is characteristically or most likely visible under a stated observing condition.",
+      "direction": "organism -> feature visible under stated condition",
+      "answer": "eyes",
+      "canonical_fact": "The most likely feature of a cat that can be seen in the dark is its eyes.",
+      "prompt_en": "What is the most likely feature of a cat that you can see in the dark?",
+      "evidence_quotes": [
+        "most likely feature of a cat that you can see in the dark",
+        "eyes"
+      ],
+      "reason": "Source question asks about the most likely feature of a cat visible in the dark; source answer is 'eyes.' No catalog relation precisely fits 'feature visible under a stated condition,' so a new precise relation organism_to_visible_feature_in_condition is proposed. The qualifier 'most likely' is preserved per instructions.",
+      "english": {
+        "prompt_en": "What is the most likely feature of a cat that you can see in the dark?",
+        "relation_definition": "A physical feature of a specified organism that is characteristically or most likely visible under a stated observing condition.",
+        "answer": "eyes",
+        "canonical_fact": "The most likely feature of a cat that can be seen in the dark is its eyes.",
+        "direction": "organism -> feature visible under stated condition",
+        "relation_id": "organism_to_visible_feature_in_condition",
+        "subject": "cat",
+        "answer_aliases_en": [
+          "eyes"
+        ],
+        "relation_spec": {
+          "id": "organism_to_visible_feature_in_condition",
+          "definition": "A physical feature of a specified organism that is characteristically or most likely visible under a stated observing condition.",
+          "direction": "organism -> feature visible under stated condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c0c7d059f3b2a7bcd5bfa30132165c81da68d2c07f2d052343f3db44c868d322",
+      "input_sha256": "ee6ed7a8eef90083ab86a104705915594798126d04c99c499f1ab60ff85c524b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002272",
+        "historical:raw_commonsense_qa_002289"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1d1a60e8fdb53b5ac61327f30be267a6c50541bbb2af21c98b0774032d0abe48",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.318
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002272",
+        "historical:raw_commonsense_qa_002289"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1d1a60e8fdb53b5ac61327f30be267a6c50541bbb2af21c98b0774032d0abe48",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2723,
+      "first_chunk_seconds": 1.991,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2773,
+        "prompt_tokens": 1595,
+        "total_tokens": 4368,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2270,
+          "text_tokens": 503
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7140755ad5275ca4c77b11ca2c019484f0481cd7ed5a9a9dee8ece5804baa3c6",
+      "status": "completed",
+      "latency_seconds": 39.532
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002272",
+        "historical:raw_commonsense_qa_002289"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "61fd997b70fc2445cc4b2d1f3d93f086586c833c9d1fed02f4ab0748b18e53f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.952
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002272",
+        "historical:raw_commonsense_qa_002289"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "61fd997b70fc2445cc4b2d1f3d93f086586c833c9d1fed02f4ab0748b18e53f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.926
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002272",
+        "historical:raw_commonsense_qa_002289"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "61fd997b70fc2445cc4b2d1f3d93f086586c833c9d1fed02f4ab0748b18e53f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 72.709
+    }
+  ],
+  "status": "failed"
+}

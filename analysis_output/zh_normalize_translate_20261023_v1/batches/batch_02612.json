@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5f04c2a76e2163ebb57d9d440cdb17a80f1bea730c6851ef3c8c4ef79e23c1a9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005385",
+      "decision": "ready",
+      "subject": "Hammers",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "wooden",
+      "canonical_fact": "Hammers are made of metal and wooden.",
+      "prompt_en": "Besides metal, what other material are hammers made of?",
+      "evidence_quotes": [
+        "Hammers are made of metal and what other item?",
+        "wooden"
+      ],
+      "reason": "Source QA directly states hammers are made of metal and wooden. The entity_to_material relation fits: hammers (entity) → wooden (material constituent, e.g., handle). One model flagged non_unique_answer, but the source provides a single definitive answer; the fact is well-supported and reusable.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "wooden",
+        "canonical_fact": "Hammers are made of metal and wooden.",
+        "subject": "Hammers",
+        "prompt_en": "Besides metal, what other material are hammers made of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "wooden"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69781dbbceb16310e1403c90583edc4a26859b707fbae486ae6b7679fa1c874e",
+      "input_sha256": "bc5a782b637b94ba8dcb3264c9673aec466a70ee067a0d8752d078c6309c5bbe",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005395",
+      "decision": "ready",
+      "subject": "skin",
+      "relation_id": "body_part_to_covered_entity",
+      "relation_definition": "A specified body part or anatomical surface that covers or encloses a named structure or the whole body.",
+      "direction": "body part -> covered entity",
+      "answer": "body",
+      "canonical_fact": "Skin covers the body.",
+      "prompt_en": "What does skin cover?",
+      "evidence_quotes": [
+        "what does skin cover?",
+        "body"
+      ],
+      "reason": "Source QA states skin covers the body. No existing catalog relation captures the spatial/functional 'covers' relationship between a body part and the structure it encloses. Proposing new relation body_part_to_covered_entity (direction: body part → covered entity). Both models extracted this fact consistently.",
+      "english": {
+        "direction": "body part -> covered entity",
+        "relation_id": "body_part_to_covered_entity",
+        "answer": "body",
+        "canonical_fact": "Skin covers the body.",
+        "subject": "skin",
+        "prompt_en": "What does skin cover?",
+        "relation_definition": "A specified body part or anatomical surface that covers or encloses a named structure or the whole body.",
+        "answer_aliases_en": [
+          "body"
+        ],
+        "relation_spec": {
+          "id": "body_part_to_covered_entity",
+          "definition": "A specified body part or anatomical surface that covers or encloses a named structure or the whole body.",
+          "direction": "body part -> covered entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a75629658ebf39771520e2448dfd4eabab14d33655f40333538c4094b21c1809",
+      "input_sha256": "84f0f3864e06c9fe8e6e5899bef5fb1d9cb9d1894d6a7fdb460eeaccc214d2ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005385",
+      "input_sha256": "bc5a782b637b94ba8dcb3264c9673aec466a70ee067a0d8752d078c6309c5bbe",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "wooden",
+        "canonical_fact": "Hammers are made of metal and wooden.",
+        "subject": "Hammers",
+        "prompt_en": "Besides metal, what other material are hammers made of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "wooden"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69781dbbceb16310e1403c90583edc4a26859b707fbae486ae6b7679fa1c874e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005385",
+        "subject_zh": "锤子",
+        "prompt_zh": "除了金属，锤子还用什么材料制作？",
+        "canonical_fact_zh": "锤子由金属和木质材料制成。",
+        "answer_zh": "木质",
+        "answer_aliases_zh": [
+          "木质"
+        ]
+      },
+      "translation_sha256": "bfc3b86f91ed58fe7a322efc484e7699baef4fa1df3f2a70d1c8b0bb2aeb8219"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005395",
+      "input_sha256": "84f0f3864e06c9fe8e6e5899bef5fb1d9cb9d1894d6a7fdb460eeaccc214d2ac",
+      "english": {
+        "direction": "body part -> covered entity",
+        "relation_id": "body_part_to_covered_entity",
+        "answer": "body",
+        "canonical_fact": "Skin covers the body.",
+        "subject": "skin",
+        "prompt_en": "What does skin cover?",
+        "relation_definition": "A specified body part or anatomical surface that covers or encloses a named structure or the whole body.",
+        "answer_aliases_en": [
+          "body"
+        ],
+        "relation_spec": {
+          "id": "body_part_to_covered_entity",
+          "definition": "A specified body part or anatomical surface that covers or encloses a named structure or the whole body.",
+          "direction": "body part -> covered entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a75629658ebf39771520e2448dfd4eabab14d33655f40333538c4094b21c1809",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005395",
+        "subject_zh": "皮肤",
+        "prompt_zh": "皮肤覆盖什么？",
+        "canonical_fact_zh": "皮肤覆盖身体。",
+        "answer_zh": "身体",
+        "answer_aliases_zh": [
+          "身体"
+        ]
+      },
+      "translation_sha256": "51193cdee2cbcec4029fb08279ff9a2260549d4d2858aef505a9f2ef494f75e6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005385",
+        "historical:raw_commonsense_qa_005395"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "560dceeed23824872fb6d3d67cec0e8e28e3c00ff60e486f83d36428e60949f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2505,
+      "first_chunk_seconds": 28.956,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2564,
+        "prompt_tokens": 1593,
+        "total_tokens": 4157,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2222,
+          "text_tokens": 342
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5c58b6f2c79fa47fa0902464a5bc03995b41a0b217d438e3e8fe07e0b2bf4aff",
+      "status": "completed",
+      "latency_seconds": 58.062
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005385",
+        "historical:raw_commonsense_qa_005395"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a9e1d161fac87140743b6456224df4ee79162905c4b757ca978a855fca570998",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 924,
+      "first_chunk_seconds": 10.951,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 921,
+        "prompt_tokens": 798,
+        "total_tokens": 1719,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 731,
+          "text_tokens": 190
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6d83caef52513d5c33051f923f4d8d43546029e50eeac727c0cfb4cb681ede2e",
+      "status": "completed",
+      "latency_seconds": 20.984
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,161 @@
+{
+  "input_sha256": "f5f55d14201e99cbe4fd99e9db452c1681ba97bb57b6e38e123212cdf7548774",
+  "normalized": [
+    {
+      "record_id": "public:pbf_fe9dcbbbaa9391ff215c",
+      "decision": "ready",
+      "subject": "lowest ERA in MLB history",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Tim Keefe",
+      "canonical_fact": "Tim Keefe has the lowest ERA in MLB history.",
+      "prompt_en": "Who has the lowest ERA in MLB history?",
+      "evidence_quotes": [
+        "lowest era in mlb history",
+        "Tim Keefe"
+      ],
+      "reason": "Source QA states Tim Keefe holds the lowest ERA record in MLB history. The superlative description 'lowest ERA in MLB history' uniquely identifies the entity Tim Keefe, fitting description_to_entity exactly. No sports-record-specific relation exists in the catalog, and forcing entity_to_class or similar would be imprecise.",
+      "english": {
+        "answer": "Tim Keefe",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who has the lowest ERA in MLB history?",
+        "direction": "identifying description -> entity",
+        "subject": "lowest ERA in MLB history",
+        "canonical_fact": "Tim Keefe has the lowest ERA in MLB history.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Tim Keefe",
+          "Sir Timothy",
+          "Timothy Keefe",
+          "Timothy John Keefe",
+          "Smiling Tim"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "906d25c37a88baa009727d0fc95bf93629f5f12c71e8d35e19d458a19754b264",
+      "input_sha256": "6fcdf93bc41768e2a912ce03a4a341a57408991fac9f342e1c16f9d05b5c2d21",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_fea5b69db04dea4356b1",
+      "decision": "ready",
+      "subject": "You and Me Against the World",
+      "relation_id": "song_to_writer",
+      "relation_definition": "Songwriter or writer of a specified song or composition; retain lyricist/composer distinction where applicable.",
+      "direction": "song -> writer",
+      "answer": "Paul Williams",
+      "canonical_fact": "Paul Williams wrote the song You and Me Against the World.",
+      "prompt_en": "Who wrote the song You and Me Against the World?",
+      "evidence_quotes": [
+        "you and me against the world",
+        "Paul Williams"
+      ],
+      "reason": "Source QA directly identifies Paul Williams as the writer of the song. No existing catalog relation precisely covers song-to-songwriter (written_work_to_author is scoped to written works such as books/articles; song_to_performer covers performers only). A new precise relation song_to_writer is proposed to avoid forcing a broad category.",
+      "english": {
+        "answer": "Paul Williams",
+        "relation_id": "song_to_writer",
+        "prompt_en": "Who wrote the song You and Me Against the World?",
+        "direction": "song -> writer",
+        "subject": "You and Me Against the World",
+        "canonical_fact": "Paul Williams wrote the song You and Me Against the World.",
+        "relation_definition": "Songwriter or writer of a specified song or composition; retain lyricist/composer distinction where applicable.",
+        "answer_aliases_en": [
+          "Paul Williams"
+        ],
+        "relation_spec": {
+          "id": "song_to_writer",
+          "definition": "Songwriter or writer of a specified song or composition; retain lyricist/composer distinction where applicable.",
+          "direction": "song -> writer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "764b8e89dbf17df4f2d0c1b937fd2bfa25a716b67efb5cd1fe495db7f18cbec7",
+      "input_sha256": "2b548b4ae616d361702474293afa01a59430f2f4d5d120fbcc1c100565c525bd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fe9dcbbbaa9391ff215c",
+        "public:pbf_fea5b69db04dea4356b1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0d8e259f05602b4b855093fcb83830aefc5be760d27d44f61f1431d1e29eebc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2383,
+      "first_chunk_seconds": 23.569,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2657,
+        "prompt_tokens": 1588,
+        "total_tokens": 4245,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2168,
+          "text_tokens": 489
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a7bc071ef1e233bb9560a632b7eba4e08198f3c895d7b69d13099489275707dd",
+      "status": "completed",
+      "latency_seconds": 60.214
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fe9dcbbbaa9391ff215c",
+        "public:pbf_fea5b69db04dea4356b1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "37765de78b955feb370c228bdac891b3768046653c849135156bb92de866585b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.537
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fe9dcbbbaa9391ff215c",
+        "public:pbf_fea5b69db04dea4356b1"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "37765de78b955feb370c228bdac891b3768046653c849135156bb92de866585b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.546
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fe9dcbbbaa9391ff215c",
+        "public:pbf_fea5b69db04dea4356b1"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "37765de78b955feb370c228bdac891b3768046653c849135156bb92de866585b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.157
+    }
+  ],
+  "status": "failed"
+}

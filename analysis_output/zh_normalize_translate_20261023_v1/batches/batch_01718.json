@@ -1,0 +1,217 @@
+{
+  "input_sha256": "2d8aae2287497d146f610a849a2b787a06f763043099210c1c01055732f9d47e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c4c200381343b881bafe",
+      "decision": "ready",
+      "subject": "Mohair",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "goat",
+      "canonical_fact": "Mohair is made from the fleece of a goat.",
+      "prompt_en": "Mohair is made from the fleece of a",
+      "evidence_quotes": [
+        "Mohair is made from the fleece of what animal?",
+        "goat"
+      ],
+      "reason": "Source explicitly states mohair is made from the fleece of a goat. entity_to_material fits: Mohair (fabric entity) → goat (production source of the fiber). Answer 'goat' is a literal substring of source_answer; prompt_en is option-free and omits the answer.",
+      "english": {
+        "answer": "goat",
+        "relation_id": "entity_to_material",
+        "prompt_en": "Mohair is made from the fleece of a",
+        "direction": "entity -> material",
+        "subject": "Mohair",
+        "canonical_fact": "Mohair is made from the fleece of a goat.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "goat"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bf9301925e7afad5ad52402b4e177576d114a8f12ed272a57821a81431b6c448",
+      "input_sha256": "8ccdcbb180708a69af994914ff2c8c3b2f5d3d32fe76b5c95e1e5f3a849d2e60",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c4d0553bd8d5e4e9f84a",
+      "decision": "ready",
+      "subject": "Earthworms",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "dirt",
+      "canonical_fact": "Earthworms create tunnels in dirt.",
+      "prompt_en": "Earthworms create tunnels in",
+      "evidence_quotes": [
+        "Earthworms create tunnels in",
+        "dirt"
+      ],
+      "reason": "Source states earthworms create tunnels in dirt, which describes their natural habitat medium (soil/dirt). organism_to_habitat is the closest catalog relation; dirt is the habitat descriptor, and the claim retains scope (tunnel-creating context) without asserting exclusivity. Answer 'dirt' is a literal substring of source_answer; prompt_en is option-free and omits the answer.",
+      "english": {
+        "answer": "dirt",
+        "relation_id": "organism_to_habitat",
+        "prompt_en": "Earthworms create tunnels in",
+        "direction": "organism -> habitat",
+        "subject": "Earthworms",
+        "canonical_fact": "Earthworms create tunnels in dirt.",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "dirt"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e6ec45bb2ec041d3b1dbcea3731913485f4e14d8e3bcb2b843c8b9c55be62e86",
+      "input_sha256": "60626d822ece09c3253b88581329a293bd797de72f4f33cdfa2696b754db6b5e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c4c200381343b881bafe",
+      "input_sha256": "8ccdcbb180708a69af994914ff2c8c3b2f5d3d32fe76b5c95e1e5f3a849d2e60",
+      "english": {
+        "answer": "goat",
+        "relation_id": "entity_to_material",
+        "prompt_en": "Mohair is made from the fleece of a",
+        "direction": "entity -> material",
+        "subject": "Mohair",
+        "canonical_fact": "Mohair is made from the fleece of a goat.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "goat"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bf9301925e7afad5ad52402b4e177576d114a8f12ed272a57821a81431b6c448",
+      "translation": {
+        "record_id": "public:pbf_c4c200381343b881bafe",
+        "subject_zh": "马海毛",
+        "prompt_zh": "马海毛是由___的绒毛制成的",
+        "canonical_fact_zh": "马海毛是由山羊的绒毛制成的。",
+        "answer_zh": "山羊",
+        "answer_aliases_zh": [
+          "山羊"
+        ]
+      },
+      "translation_sha256": "8d360e5f460268668b57e8e18f5e18d1cdd1807ca85ef8072560d0d8648b08ea"
+    },
+    {
+      "record_id": "public:pbf_c4d0553bd8d5e4e9f84a",
+      "input_sha256": "60626d822ece09c3253b88581329a293bd797de72f4f33cdfa2696b754db6b5e",
+      "english": {
+        "answer": "dirt",
+        "relation_id": "organism_to_habitat",
+        "prompt_en": "Earthworms create tunnels in",
+        "direction": "organism -> habitat",
+        "subject": "Earthworms",
+        "canonical_fact": "Earthworms create tunnels in dirt.",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "dirt"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e6ec45bb2ec041d3b1dbcea3731913485f4e14d8e3bcb2b843c8b9c55be62e86",
+      "translation": {
+        "record_id": "public:pbf_c4d0553bd8d5e4e9f84a",
+        "subject_zh": "蚯蚓",
+        "prompt_zh": "蚯蚓在___中打洞",
+        "canonical_fact_zh": "蚯蚓在泥土中打洞。",
+        "answer_zh": "泥土",
+        "answer_aliases_zh": [
+          "泥土"
+        ]
+      },
+      "translation_sha256": "2e11eee07194dcbc82d3a55fc1f9b69231a91a8b120c63cfd76af4450e3adc78"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c4c200381343b881bafe",
+        "public:pbf_c4d0553bd8d5e4e9f84a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d1e7d409c2ede668edbea7265e53fb21bcb86274f24e4959ff3c58412dce4bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2405,
+      "first_chunk_seconds": 1.979,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2448,
+        "prompt_tokens": 1543,
+        "total_tokens": 3991,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1948,
+          "text_tokens": 500
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "32d6c5bbb89b3d4964f840d9b483660af3fb28bd5bea5990f358c94b686f1358",
+      "status": "completed",
+      "latency_seconds": 25.232
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c4c200381343b881bafe",
+        "public:pbf_c4d0553bd8d5e4e9f84a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c582e83843c36e207fa5f72dabf305f486ccc0ccb20aec32266ee2fbe5e90609",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1496,
+      "first_chunk_seconds": 6.086,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1494,
+        "prompt_tokens": 814,
+        "total_tokens": 2308,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1278,
+          "text_tokens": 216
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d112e3ae9d4da515c19d7776fe0ed5bcdedb53e606fbc0dfce54990d6a3960b6",
+      "status": "completed",
+      "latency_seconds": 19.464
+    }
+  ],
+  "status": "completed"
+}

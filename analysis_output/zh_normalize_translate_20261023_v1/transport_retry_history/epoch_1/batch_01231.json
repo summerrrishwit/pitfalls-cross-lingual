@@ -1,0 +1,159 @@
+{
+  "input_sha256": "cfc90011d205d38ae454349680318f2dade4d7782e775943772f26970963b230",
+  "normalized": [
+    {
+      "record_id": "public:pbf_74c541ee8a92f03ab261",
+      "decision": "ready",
+      "subject": "parents of independent self-confident adolescents",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "authoritative",
+      "canonical_fact": "In the parenting style taxonomy identified by Baumrind and her colleagues (1991), parents of independent self-confident adolescents belong to the authoritative class.",
+      "prompt_en": "In terms of the parenting styles identified by Baumrind and her colleagues (1991), independent self-confident adolescents are most likely to have parents who are classified as ____.",
+      "evidence_quotes": [
+        "In terms of the parenting styles identified by Baumrind and her colleagues (1991), independent self-confident adolescents are most likely to have parents who are",
+        "authoritative."
+      ],
+      "reason": "The source question explicitly frames classification within Baumrind et al. (1991) parenting-style taxonomy and asks for the parent class associated with independent self-confident adolescents. entity_to_class (entity -> class) fits: the entity is the specified parent group, the class is 'authoritative', and the taxonomy level is stated. The existing answer 'authoritative' is a literal substring of source_answer and is retained. No conflict with source.",
+      "english": {
+        "answer": "authoritative",
+        "relation_id": "entity_to_class",
+        "prompt_en": "In terms of the parenting styles identified by Baumrind and her colleagues (1991), independent self-confident adolescents are most likely to have parents who are classified as ____.",
+        "direction": "entity -> class",
+        "subject": "parents of independent self-confident adolescents",
+        "canonical_fact": "In the parenting style taxonomy identified by Baumrind and her colleagues (1991), parents of independent self-confident adolescents belong to the authoritative class.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "authoritative",
+          "authoritative."
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4e7bcd40fa3bdcd02e0b9c4de7b59a3c77b2c9c0fb8c54a8128a56ec1cc56639",
+      "input_sha256": "95e947674c563e622e0e347756657c44ecc7bbd3b834bf2ec1b042ea6e7143d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_74ca3e2f4aefbfec8867",
+      "decision": "ready",
+      "subject": "North Nazimabad Block S, Karachi",
+      "relation_id": "location_to_postal_code",
+      "relation_definition": "The postal code assigned to a specified geographic area at the stated granularity; direction: location -> postal code.",
+      "direction": "location -> postal code",
+      "answer": "75400",
+      "canonical_fact": "The postal code of North Nazimabad Block S, Karachi is 75400.",
+      "prompt_en": "What is the postal code of North Nazimabad Block S, Karachi?",
+      "evidence_quotes": [
+        "postal code of karachi north nazimabad block s",
+        "75400.0"
+      ],
+      "reason": "The source question asks for the postal code of a specific location. No existing catalog relation covers postal codes, so a new precise relation location_to_postal_code is proposed. The source answer '75400.0' is a floating-point representation; '75400' is the faithful numeric value and matches the existing extraction. The prompt_en is option-free and does not contain the answer. Insufficient source for city disambiguation beyond 'Karachi' as stated in the question, so subject is kept at that granularity.",
+      "english": {
+        "answer": "75400",
+        "relation_id": "location_to_postal_code",
+        "prompt_en": "What is the postal code of North Nazimabad Block S, Karachi?",
+        "direction": "location -> postal code",
+        "subject": "North Nazimabad Block S, Karachi",
+        "canonical_fact": "The postal code of North Nazimabad Block S, Karachi is 75400.",
+        "relation_definition": "The postal code assigned to a specified geographic area at the stated granularity; direction: location -> postal code.",
+        "answer_aliases_en": [
+          "75400",
+          "75400.0"
+        ],
+        "relation_spec": {
+          "id": "location_to_postal_code",
+          "definition": "The postal code assigned to a specified geographic area at the stated granularity; direction: location -> postal code.",
+          "direction": "location -> postal code"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "86a654da83fb389d845cbfac9f0645589eb8c571175bc7a2b43819e8747147a3",
+      "input_sha256": "1ca1d7aaf2facb7f4d0afcca8745cc4426edc1fad3e6334bc23e4c394eaa6fb8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_74c541ee8a92f03ab261",
+        "public:pbf_74ca3e2f4aefbfec8867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7a993d5a0a104a18ab54b87aeb2184cc362e39d120b33665bb3cc8d30952878",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2926,
+      "first_chunk_seconds": 33.135,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2924,
+        "prompt_tokens": 1680,
+        "total_tokens": 4604,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2243,
+          "text_tokens": 681
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a13d52d5921c9a41e69ff8372e0266629a3ba0c3a7c3c72c731a5ee925c770b4",
+      "status": "completed",
+      "latency_seconds": 56.373
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74c541ee8a92f03ab261",
+        "public:pbf_74ca3e2f4aefbfec8867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3e00f50afc34dfd28f5ca084dfb45cc0c5d1278daf7f52926a88a8a1eb1735cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.941
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74c541ee8a92f03ab261",
+        "public:pbf_74ca3e2f4aefbfec8867"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3e00f50afc34dfd28f5ca084dfb45cc0c5d1278daf7f52926a88a8a1eb1735cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_74c541ee8a92f03ab261",
+        "public:pbf_74ca3e2f4aefbfec8867"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3e00f50afc34dfd28f5ca084dfb45cc0c5d1278daf7f52926a88a8a1eb1735cf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.975
+    }
+  ],
+  "status": "failed"
+}

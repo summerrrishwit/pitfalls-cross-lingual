@@ -1,0 +1,211 @@
+{
+  "input_sha256": "f0eb1ce6c1bd1f03586ba2fea33cc522c99aab79289be9d7ecfbddb19ce3b5ea",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004783",
+      "decision": "ready",
+      "subject": "someone planning to kill",
+      "relation_id": "actor_to_goal",
+      "relation_definition": "The stated goal or intended outcome of a specified actor's action or plan.",
+      "direction": "described actor -> goal",
+      "answer": "take life",
+      "canonical_fact": "The goal of someone planning to kill is to take life.",
+      "prompt_en": "What is the goal of someone planning to kill?",
+      "evidence_quotes": [
+        "the goal of someone planning to kill",
+        "take life"
+      ],
+      "reason": "Source question explicitly asks for the goal; source answer 'take life' is a concise literal substring. No catalog relation captures an actor's stated goal/intent; proposed precise new relation 'actor_to_goal'. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "described actor -> goal",
+        "relation_id": "actor_to_goal",
+        "answer": "take life",
+        "canonical_fact": "The goal of someone planning to kill is to take life.",
+        "subject": "someone planning to kill",
+        "prompt_en": "What is the goal of someone planning to kill?",
+        "relation_definition": "The stated goal or intended outcome of a specified actor's action or plan.",
+        "answer_aliases_en": [
+          "take life"
+        ],
+        "relation_spec": {
+          "id": "actor_to_goal",
+          "definition": "The stated goal or intended outcome of a specified actor's action or plan.",
+          "direction": "described actor -> goal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6dcbabecdc33581d45c4d8fa6deaafa964c21ef9d7ca3ef99a4d8261b7c0e136",
+      "input_sha256": "abc9b70328ed78b7be30f7a79c3926d467fe23c0fc43a712f11e6e2fcda625e8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004817",
+      "decision": "ready",
+      "subject": "billfold",
+      "relation_id": "container_to_typical_content",
+      "relation_definition": "The item or material typically kept within a specified container object; 'typically' scope retained to avoid asserting exclusivity.",
+      "direction": "container object -> typical content",
+      "answer": "money",
+      "canonical_fact": "A billfold typically contains money.",
+      "prompt_en": "What do you typically keep in a billfold?",
+      "evidence_quotes": [
+        "keep in a billfold",
+        "money"
+      ],
+      "reason": "Source asks what is kept in a billfold; source answer 'money' is a literal substring. Catalog relations (whole_to_part, entity_to_material, entity_to_containing_location) do not fit container-to-typical-content. Proposed new precise relation 'container_to_typical_content'. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "container object -> typical content",
+        "relation_id": "container_to_typical_content",
+        "answer": "money",
+        "canonical_fact": "A billfold typically contains money.",
+        "subject": "billfold",
+        "prompt_en": "What do you typically keep in a billfold?",
+        "relation_definition": "The item or material typically kept within a specified container object; 'typically' scope retained to avoid asserting exclusivity.",
+        "answer_aliases_en": [
+          "money"
+        ],
+        "relation_spec": {
+          "id": "container_to_typical_content",
+          "definition": "The item or material typically kept within a specified container object; 'typically' scope retained to avoid asserting exclusivity.",
+          "direction": "container object -> typical content"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5ef2dd777214558014ca64c1b152364c83f3bd3147e5a098904867b0f6487076",
+      "input_sha256": "94caef8b492589df28bfac9e686c8e471793ad6d4a196d0899dae61b4fa6741f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004783",
+        "historical:raw_commonsense_qa_004817"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "909a4a2911206115e80bdf5110e11bbf80870b4c0f4c4502630be8d6d69b1903",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2473,
+      "first_chunk_seconds": 31.977,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2514,
+        "prompt_tokens": 1617,
+        "total_tokens": 4131,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2046,
+          "text_tokens": 468
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6a082d294230e456b36587968155296958cf470397657a47f15645bf839f8176",
+      "status": "completed",
+      "latency_seconds": 63.646
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004783",
+        "historical:raw_commonsense_qa_004817"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da9729a48e1fc9a27132d3952da050ec18d5c6739c2bdcdf57e4583db6b3404b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1041,
+      "first_chunk_seconds": 15.55,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1087,
+        "prompt_tokens": 812,
+        "total_tokens": 1899,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 876,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b4bb30c83eca2bc5708e924cb2d06d37e0f3f6cbba35d60826e1c778684a08b1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 36.199,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004783",
+        "historical:raw_commonsense_qa_004817"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fe81588f5024b7fca5931b2a2b6844b07fb91d02e3fa3dce08798f8226b5f7e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 570,
+      "first_chunk_seconds": 25.718,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 584,
+        "prompt_tokens": 830,
+        "total_tokens": 1414,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 447,
+          "text_tokens": 137
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "85569545998b62e8f03899989831cb875150f1c25a46f74baa2a2ce515ce56b2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 32.498,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004783",
+        "historical:raw_commonsense_qa_004817"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fe81588f5024b7fca5931b2a2b6844b07fb91d02e3fa3dce08798f8226b5f7e7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 571,
+      "first_chunk_seconds": 23.248,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 669,
+        "prompt_tokens": 830,
+        "total_tokens": 1499,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 467,
+          "text_tokens": 202
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e79a0e710fa96caf63508688a973649b816b6aad32b40c9658e019bceb603afe",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 31.03,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-24T15:28:50.371606+00:00",
+  "automation_id": "automation",
+  "role": "Qwen monitoring and allowed recovery only",
+  "guard": {
+    "at": "2026-10-24T15:28:50.488183+00:00",
+    "fingerprint": "41a78df9e61f95a67bf30f4d8ad0c6d708708f7c9ab37acf3f81e79cd9bfda29",
+    "pid": 73156,
+    "eligible_repair": false,
+    "last_activity_age_seconds": 2319.4007370471954,
+    "state": "manual_fatal_error",
+    "retryable_technical_batches": 114,
+    "policy_sha256": "46b610f900eadec38d1b672f20c4a2c4c8c3ddd756986838fe8558da2cc1f4f3",
+    "recovery_budget_available": true,
+    "budget_reason": "recovery_budget_available",
+    "repair_applied": false
+  },
+  "status": {
+    "updated_at": "2026-10-24T15:01:15.949408+00:00",
+    "state": "blocked_api",
+    "input_count": 7250,
+    "normalized_records": 1616,
+    "normalization_decisions": {
+      "ready": 1599,
+      "defer": 17
+    },
+    "translated_records": 1549,
+    "batch_status_counts": {
+      "completed": 783,
+      "failed": 137
+    },
+    "review_packets": 80,
+    "reviewed_outcomes": {
+      "zh_translation_accepted": 1495,
+      "zh_translation_rejected": 52,
+      "zh_translation_deferred": 2
+    },
+    "human_gold": false,
+    "formal_experiment_eligible": false
+  },
+  "fatal": {
+    "stage": "normalize",
+    "record_ids": [
+      "public:pbf_3fb7abaa3d1336f78ad9",
+      "public:pbf_3fc1fd834831e6a05006"
+    ],
+    "attempt": 2,
+    "prompt_sha256": "33ec47b447246a38616d16482febc57c535e2c88a25ced229906bf4f50a39ffd",
+    "requested_model": "qwen-3.8-max",
+    "worker_policy": "transport_stream_v1",
+    "status": "failed",
+    "error_type": "PermissionDeniedError",
+    "http_status": 403,
+    "latency_seconds": 7.662,
+    "at": "2026-10-24T14:49:16.149069+00:00",
+    "error_code": "api_access_or_model_unavailable"
+  },
+  "fatal_sha256": "5947db788f66262f5168298e58fb80bdbe6ac132a86a4e9facb0736173946cdd",
+  "last_production_success_at": "2026-10-24T14:50:11.087446+00:00",
+  "minutes_since_last_success": 38.65,
+  "all_frozen_operations_active_runtime_and_recovery_attempt_exposure_bindings_valid": true,
+  "recovery_archives": [
+    {
+      "recovery_id": "access_restored_20261024_v1",
+      "manifest_sha256": "c7a41cbae8ff717902c9bf4b8ce44d858f0232136624929462bb8669b763a9c6"
+    },
+    {
+      "recovery_id": "gateway_20261024_v1",
+      "manifest_sha256": "0b6eaf51b77df5fd8c2013305936bf126cf11d690565a4a13ff4412d2c53a9d7"
+    },
+    {
+      "recovery_id": "stream_transport_20261024_v1",
+      "manifest_sha256": "20aac28a47374ccc158c319f84290381a43bd23f7c8209e780c554a49a3e0c45"
+    },
+    {
+      "recovery_id": "transport_continue_20261024_v1",
+      "manifest_sha256": "f9c8eaa9578012ad468dada78523c06015c0c22e58a0112aaf4261c003c3ac66"
+    }
+  ],
+  "new_worker_launches": 0,
+  "new_api_probe_requests": 0,
+  "new_review_assignments": 0,
+  "review_exports_written": false,
+  "generation_complete": false,
+  "tail_retry_complete": false,
+  "audit_error_corrected": "Observation JSON omits repair_applied; captured actual guard command return instead. No worker/API action resulted.",
+  "notification": "DONT_NOTIFY",
+  "reason": "Same HTTP403 access refusal already reported to user; current policy excludes automatic access restoration. No new actionable change."
+}

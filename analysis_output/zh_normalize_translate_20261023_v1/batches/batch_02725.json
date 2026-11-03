@@ -1,0 +1,157 @@
+{
+  "input_sha256": "a01092fd8a6d88177f4515e85846392e5ba3c91d3e73d89927a304b6a49c3438",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009111",
+      "decision": "ready",
+      "subject": "Upper West Side",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Manhattan",
+      "canonical_fact": "The Upper West Side is located in Manhattan.",
+      "prompt_en": "The Upper West Side is a neighborhood located in which larger geographic area?",
+      "evidence_quotes": [
+        "upper west side of where",
+        "manhattan"
+      ],
+      "reason": "The source question explicitly asks what the Upper West Side is 'on' or 'in', and the source answer is 'manhattan'. This is a straightforward geographic containment (neighborhood within a borough) that maps directly to entity_to_containing_location. Both model annotations agree on the subject/answer; sensenova flagged ambiguity but the source text unambiguously supports the containment reading.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Manhattan",
+        "canonical_fact": "The Upper West Side is located in Manhattan.",
+        "subject": "Upper West Side",
+        "prompt_en": "The Upper West Side is a neighborhood located in which larger geographic area?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Manhattan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a5b93bcfdd2dc54c030debdc6eb2a77c3c9ce834f1251de551568f1980d7f90f",
+      "input_sha256": "a70e6bf8800a6dc479bc98cbabe6561a3fb14da28ec1cb01216f46a78cf26e48",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009136",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source uses hedged language ('You might hear someone say'), making this a soft probabilistic cultural-linguistic association rather than a definitive factual claim. No catalog relation captures 'phrase -> region of conventional use'; forcing a new relation for a single hedged commonsense item is insufficiently supported. Qwen-3.8-Max also excluded it as 'typical_action_or_location'. Deferred.",
+      "input_sha256": "b7948aec05220cd20e582c626653fae2bd96dd33478089873692881452b2cf71",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009111",
+      "input_sha256": "a70e6bf8800a6dc479bc98cbabe6561a3fb14da28ec1cb01216f46a78cf26e48",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Manhattan",
+        "canonical_fact": "The Upper West Side is located in Manhattan.",
+        "subject": "Upper West Side",
+        "prompt_en": "The Upper West Side is a neighborhood located in which larger geographic area?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Manhattan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a5b93bcfdd2dc54c030debdc6eb2a77c3c9ce834f1251de551568f1980d7f90f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009111",
+        "subject_zh": "上西区",
+        "prompt_zh": "上西区是一个位于哪个更大地理区域的社区？",
+        "canonical_fact_zh": "上西区位于曼哈顿。",
+        "answer_zh": "曼哈顿",
+        "answer_aliases_zh": [
+          "曼哈顿"
+        ]
+      },
+      "translation_sha256": "dd20fc92858eeda4fd4690411984f3bcfbdb4ed0f23617f4c009437eea2fe2e3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009111",
+        "historical:raw_commonsense_qa_009136"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e9cbc5a2b9cbbd9a111968cf7d927d1c2352a1887b5fe1dc73594f9357c26178",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1930,
+      "first_chunk_seconds": 13.568,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1990,
+        "prompt_tokens": 1657,
+        "total_tokens": 3647,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1542,
+          "text_tokens": 448
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6f2e43d80fc39bff98d7df3bfe7cd7a1480f9370edd7f167f7d82f0fc291c69e",
+      "status": "completed",
+      "latency_seconds": 44.521
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009111"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "faa18e18ac44fd55ab7fea5223647e447733854c9f4b7a659a13aca24fe5d517",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 604,
+      "first_chunk_seconds": 30.052,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 636,
+        "prompt_tokens": 507,
+        "total_tokens": 1143,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 560,
+          "text_tokens": 76
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5aea0ef3070a103c5d9bb6a18857a52c91740e9acca53a0e4c69822d6fdaca49",
+      "status": "completed",
+      "latency_seconds": 39.309
+    }
+  ],
+  "status": "completed"
+}

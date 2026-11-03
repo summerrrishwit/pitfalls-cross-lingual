@@ -1,0 +1,157 @@
+{
+  "input_sha256": "b24394345f84b5e2b4b8641fd572d6c0aee23f32867169d38dd6bce5aed81db8",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001524",
+      "decision": "ready",
+      "subject": "adaptation that allows an animal to deceive its predator",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "protective coloration",
+      "canonical_fact": "Protective coloration is the type of adaptation that allows an animal to deceive its predator.",
+      "prompt_en": "What type of adaptation allows an animal to deceive its predator?",
+      "evidence_quotes": [
+        "Which type of adaptation allows an animal to deceive its predator?",
+        "protective coloration"
+      ],
+      "reason": "The source directly identifies protective coloration as the type of adaptation for deceiving predators. entity_to_class fits: the functional description of an adaptation maps to its taxonomic class (protective coloration is a recognized type within the taxonomy of adaptations).",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "protective coloration",
+        "canonical_fact": "Protective coloration is the type of adaptation that allows an animal to deceive its predator.",
+        "subject": "adaptation that allows an animal to deceive its predator",
+        "prompt_en": "What type of adaptation allows an animal to deceive its predator?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "protective coloration"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1fad23499304fd23302b9206c8679536aa9f028be38fbf9553eb96d324560cc8",
+      "input_sha256": "429e7e94a5873a267baf741cd6eb8fd26690fd01516e7ad7c42073356a0afab5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001525",
+      "decision": "ready",
+      "subject": "acid rain",
+      "relation_id": "phenomenon_to_largest_contributing_activity",
+      "relation_definition": "The largest human activity contributing to a specified environmental phenomenon; retains the 'largest' qualifier and is scoped to human activity and environmental phenomena; does not assert sole causation.",
+      "direction": "phenomenon -> largest contributing activity",
+      "answer": "burning fossil fuels in power plants",
+      "canonical_fact": "The largest human contributor to acid rain is burning fossil fuels in power plants.",
+      "prompt_en": "What is the largest human activity that contributes to acid rain?",
+      "evidence_quotes": [
+        "Which human activity is most likely the largest contributor to acid rain?",
+        "burning fossil fuels in power plants"
+      ],
+      "reason": "No existing catalog relation covers a contributory/causal link between a phenomenon and its largest contributing activity. Proposing phenomenon_to_largest_contributing_activity as a precise new relation. Source clearly and directly identifies the answer; the 'most likely' qualifier in the question is preserved in the canonical fact's phrasing as 'largest contributor'.",
+      "english": {
+        "direction": "phenomenon -> largest contributing activity",
+        "relation_id": "phenomenon_to_largest_contributing_activity",
+        "answer": "burning fossil fuels in power plants",
+        "canonical_fact": "The largest human contributor to acid rain is burning fossil fuels in power plants.",
+        "subject": "acid rain",
+        "prompt_en": "What is the largest human activity that contributes to acid rain?",
+        "relation_definition": "The largest human activity contributing to a specified environmental phenomenon; retains the 'largest' qualifier and is scoped to human activity and environmental phenomena; does not assert sole causation.",
+        "answer_aliases_en": [
+          "burning fossil fuels in power plants"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_largest_contributing_activity",
+          "definition": "The largest human activity contributing to a specified environmental phenomenon; retains the 'largest' qualifier and is scoped to human activity and environmental phenomena; does not assert sole causation.",
+          "direction": "phenomenon -> largest contributing activity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "382ec7a2937fbda47d980d977937410e12fef880541da89195247f835ef08551",
+      "input_sha256": "b4927f2d449c42555bba3e85a99d93f6f212a9421a3b1c1ac8608572d5fc54cd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001524",
+        "historical:raw_ai2_arc_easy_001525"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e6e82515cddf6305879fde47b184f8599023b128f33f73b2e76eccb12c40b872",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2850,
+      "first_chunk_seconds": 3.834,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3039,
+        "prompt_tokens": 1714,
+        "total_tokens": 4753,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2578,
+          "text_tokens": 461
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6634a05620d5205b595bbb4fa37cfd94a2fda226ca2e41a6d2cace35b5d4d7ca",
+      "status": "completed",
+      "latency_seconds": 60.473
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001524",
+        "historical:raw_ai2_arc_easy_001525"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7ecad672d763f4043a57b28e75ad81f3dd20da0346e791804b3a5aa868570107",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.971
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001524",
+        "historical:raw_ai2_arc_easy_001525"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7ecad672d763f4043a57b28e75ad81f3dd20da0346e791804b3a5aa868570107",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.38
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001524",
+        "historical:raw_ai2_arc_easy_001525"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7ecad672d763f4043a57b28e75ad81f3dd20da0346e791804b3a5aa868570107",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.217
+    }
+  ],
+  "status": "failed"
+}

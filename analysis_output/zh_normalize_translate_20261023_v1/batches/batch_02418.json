@@ -1,0 +1,157 @@
+{
+  "input_sha256": "753a6bc16adda9f4979fd3dd10e5714e17191d202afac1ee20f22b958cd2491d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001756",
+      "decision": "ready",
+      "subject": "physical property that determines an object's inertia",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "mass",
+      "canonical_fact": "Mass is the physical property that determines an object's inertia.",
+      "prompt_en": "Which physical property determines an object's inertia?",
+      "evidence_quotes": [
+        "Which physical property is most likely being compared?",
+        "mass"
+      ],
+      "reason": "The source question and answer establish that mass is the physical property being compared when discussing inertia. description_to_entity fits: the identifying description is 'physical property that determines an object's inertia' and the unique entity is 'mass'.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "mass",
+        "canonical_fact": "Mass is the physical property that determines an object's inertia.",
+        "subject": "physical property that determines an object's inertia",
+        "prompt_en": "Which physical property determines an object's inertia?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "mass"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5086cbdf2ee2a368cc36d38bde06948e507d2098ff5ec3b56218274a9a7fdf20",
+      "input_sha256": "c19cb67905006eb9a32296238de40a5bd358e928e8752b3da1e98561256e241e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001760",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The description 'event occurring only twice each year' does not uniquely identify equinox, because solstices also occur twice each year. description_to_entity requires a unique entity satisfying the description, which is not met here. No other catalog relation fits precisely, and proposing a new relation (e.g., event_to_annual_occurrence_count) would be forced given the imprecise framing. Deferring.",
+      "input_sha256": "8e8dbbddef2f6b44518c303679dd09721a8c657295690e50de204fed5744272b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001756",
+      "input_sha256": "c19cb67905006eb9a32296238de40a5bd358e928e8752b3da1e98561256e241e",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "mass",
+        "canonical_fact": "Mass is the physical property that determines an object's inertia.",
+        "subject": "physical property that determines an object's inertia",
+        "prompt_en": "Which physical property determines an object's inertia?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "mass"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5086cbdf2ee2a368cc36d38bde06948e507d2098ff5ec3b56218274a9a7fdf20",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001756",
+        "subject_zh": "决定物体惯性的物理属性",
+        "prompt_zh": "哪个物理属性决定了物体的惯性？",
+        "canonical_fact_zh": "质量是决定物体惯性的物理属性。",
+        "answer_zh": "质量",
+        "answer_aliases_zh": [
+          "质量"
+        ]
+      },
+      "translation_sha256": "5bff55cdc2efef7652970ca14bff8a08d6c8698a470a5043825d60465494cf4a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001756",
+        "historical:raw_ai2_arc_easy_001760"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "356d3d1fc1bfb563844e90c311f7d6e5e7a1afd68459bd09e5d8fbcda38af95b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3040,
+      "first_chunk_seconds": 23.579,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3711,
+        "prompt_tokens": 1637,
+        "total_tokens": 5348,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3299,
+          "text_tokens": 412
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "80a5fa8404c05bd243e27bf493573cf773b04646adcde45a7e7dfeea054576bd",
+      "status": "completed",
+      "latency_seconds": 71.653
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001756"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ae660d5d4ae9be13f9ded9cf5e54f5ef6dd8e25b03ac7da6c80a80232e9ff3ee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 571,
+      "first_chunk_seconds": 28.256,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 608,
+        "prompt_tokens": 496,
+        "total_tokens": 1104,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 495,
+          "text_tokens": 113
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1f7c9601d34ba9d3b1c0d9d33614e0b2362ba902afc16632c238063d7a07201d",
+      "status": "completed",
+      "latency_seconds": 37.281
+    }
+  ],
+  "status": "completed"
+}

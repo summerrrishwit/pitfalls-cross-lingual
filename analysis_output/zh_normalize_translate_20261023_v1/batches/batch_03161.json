@@ -1,0 +1,158 @@
+{
+  "input_sha256": "e3d9f2b48244393e932cd8651891bb1b8cc3038cdc38f9880fc48633c9335629",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000786",
+      "decision": "ready",
+      "subject": "invention of the wheel",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "technology",
+      "canonical_fact": "The invention of the wheel is an example of technology, which has the goal of solving human problems.",
+      "prompt_en": "The invention of the wheel is an example of what concept, which has the goal of solving human problems?",
+      "evidence_quotes": [
+        "The invention of the wheel is an example of what",
+        "which has the goal of solving human problems",
+        "technology"
+      ],
+      "reason": "The source question asks what the invention of the wheel is an example of, with the qualifier 'which has the goal of solving human problems' attached to the class. The source answer 'technology' is the class/concept. entity_to_class fits: the entity 'invention of the wheel' has stable class membership in 'technology'. The qualifier about solving human problems is preserved as it appears in the source question.",
+      "english": {
+        "prompt_en": "The invention of the wheel is an example of what concept, which has the goal of solving human problems?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "technology",
+        "canonical_fact": "The invention of the wheel is an example of technology, which has the goal of solving human problems.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "invention of the wheel",
+        "answer_aliases_en": [
+          "technology"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1c15af3061bb56c9eb7a4ae52f01144dc00da138d1440cacf39b5d24b52263f6",
+      "input_sha256": "4d0a77b63e4f325aa851a6ada9ce3bd3098ef23fa3b7885afd3ff2b368d4cf3d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000787",
+      "decision": "ready",
+      "subject": "cycle that is part of cellular respiration and makes ATP and NADPH",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "Krebs",
+      "canonical_fact": "The Krebs cycle is part of cellular respiration and makes ATP and NADPH.",
+      "prompt_en": "What cycle is part of cellular respiration and makes ATP and NADPH?",
+      "evidence_quotes": [
+        "What cycle is part of cellular respiration and makes atp and naph",
+        "krebs"
+      ],
+      "reason": "The source question supplies a defining description ('cycle that is part of cellular respiration and makes atp and naph') and the source answer 'krebs' is the conventional term (Krebs cycle) that uniquely fits that description. description_to_term fits: the identifying description maps to the conventional term 'Krebs'. The source 'naph' is interpreted as NADPH consistent with the pre-existing subject and canonical_fact in the input record.",
+      "english": {
+        "prompt_en": "What cycle is part of cellular respiration and makes ATP and NADPH?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "Krebs",
+        "canonical_fact": "The Krebs cycle is part of cellular respiration and makes ATP and NADPH.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "cycle that is part of cellular respiration and makes ATP and NADPH",
+        "answer_aliases_en": [
+          "Krebs"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9ef79827ad1eb2be905b3e1a29404e1ecb19d8f0069cbd66499a6d665b7c0a5a",
+      "input_sha256": "0b41ce7b0b6b1d9c4385beb38e286d04d326508686278127d950eab084cfbbd3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000786",
+        "historical:raw_sciq_000787"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "771a91565ac964fbc6c57d3e9f548e6d9529086e13fb6765f1bebb229351d158",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2574,
+      "first_chunk_seconds": 66.644,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2663,
+        "prompt_tokens": 1733,
+        "total_tokens": 4396,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2073,
+          "text_tokens": 590
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bc8aaf6fe55028a99be5cc59ce81e633bd6384a68fad9d408595797a85857bd3",
+      "status": "completed",
+      "latency_seconds": 103.287
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000786",
+        "historical:raw_sciq_000787"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1c1ee81dac6138f996531807b84ba16ef1b14ab0b20511e6abdfb0c6ec695705",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.633
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000786",
+        "historical:raw_sciq_000787"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1c1ee81dac6138f996531807b84ba16ef1b14ab0b20511e6abdfb0c6ec695705",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 78.897
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000786",
+        "historical:raw_sciq_000787"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1c1ee81dac6138f996531807b84ba16ef1b14ab0b20511e6abdfb0c6ec695705",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.03
+    }
+  ],
+  "status": "failed"
+}

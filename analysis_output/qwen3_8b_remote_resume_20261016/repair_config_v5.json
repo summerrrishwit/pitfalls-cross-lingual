@@ -1,0 +1,66 @@
+{
+  "protocol_version": "qwen3-open-prefill-paired-v5-20261016",
+  "remote_root": "/root/autodl-tmp/pnt-open-development-20261016",
+  "output_dir": "/root/autodl-tmp/pnt-open-development-20261016/repair-v5",
+  "candidate_layers": [
+    12,
+    20,
+    28,
+    32
+  ],
+  "candidate_scales": [
+    0.01,
+    0.03
+  ],
+  "source_estimator": "paired_Neutral_minus_Targeted_ZH_all_source_facts; centered_ICL_minus_zero_shot_recall",
+  "hook": "prefill_last_prompt_token_only; cached_answer_tokens_unmodified",
+  "coarse_screen": "No auxiliary score screening; layer from declared local recovery diagnostic, then all four rules use full generated-answer evaluation.",
+  "generation_candidates": "two_direction_families_x_rho_0.01_0.03_at_best_diagnostic_layer; four_candidates_total_no_additional_search",
+  "generation_scope": "all_480_ZH_inputs_and_4x13_ZH_controls; EN_trigger_disabled",
+  "generation_correctness": "frozen_answer_groups_exact_or_literal_question_completion; prior_identical_fact_language_generation_semantics; explicit_blinded_Codex_proxy_review_for_remaining",
+  "candidate_selection": "retention_first_then_maximize_fact_balanced_actual_generated_ZH_Targeted_accuracy_gain_on_directed_subset; require_positive_gain_on_all_evaluable_facts_and_margin; ties_smaller_absolute_scale_then_lower_layer_then_task_difference_combined",
+  "deferrals": "missing_never_negative; original_3_natural_semantic_deferred_facts_excluded_from_repair_selection; report_all_96; unresolved_retention_on_baseline_correct_inputs_cannot_pass",
+  "retention": {
+    "original_accuracy_drop_max": 0.05,
+    "neutral_accuracy_drop_max": 0.05,
+    "english_accuracy_drop_max": 0.05,
+    "resistant_harm_rate_max": 0.05,
+    "unrelated_newly_harmed_facts_max": 0
+  },
+  "random_replicates": 5,
+  "random_seed_policy": "sha256_protocol_partition_config_layer_replicate",
+  "random_scope": "all_ZH_conditions_plus_unrelated_controls_for_generation_eligible_candidates_only",
+  "random_gate": "selected_rule_actual_generated_targeted_gain_greater_than_noop_and_mean_of_five_norm_matched_randoms; positive_paired_gold_margin_gain",
+  "final_source": "all_96_Development_same_fact_paired_states_and_centered_ICL_sources; only_after_G2_random_gate",
+  "independent_mode": "open_induced_confirmation_plus_MCQs_for_phenotype_only",
+  "independent_gate": {
+    "all_assigned_facts_required": 32,
+    "min_induced_facts_for_directional_pilot_confirmation": 4,
+    "all_fact_targeted_generation_gain_positive": true,
+    "directed_generation_gain_above_noop_and_random_mean": true,
+    "all_fact_targeted_gold_margin_gain_positive": true,
+    "attribution_directed_vs_resistant_contrast_same_direction_as_Development": true,
+    "same_retention_constraints": true
+  },
+  "independent_uncertainty": "report_component_paired_bootstrap_95pct_interval_and_event_counts; n32_is_pilot_not_powered_population_proof",
+  "validation_policy": "run_once_only_after_G2_rule_and_final_vector_SHA_freeze; never_tune_from_outputs",
+  "sealed_policy": "open_once_only_if_fixed_Validation_gate_passes; same_rule_vector_and_scorer",
+  "futility": "if_no_Development_candidate_passes_G2_or_Validation_fails_stop_without_consuming_further_holdout; report_negative_or_insufficient_evidence",
+  "max_new_tokens": 64,
+  "statistical_unit": "base_fact_id; variants_equal_weight_within_fact",
+  "development_revision_reason": "User authorizes proposed repair: causal local recovery diagnosis, centered/paired directions, norm-calibrated prefill-only intervention, then conditional source-size diagnosis.",
+  "diagnostic_layers": [
+    12,
+    20,
+    28,
+    32
+  ],
+  "diagnostic_modes": [
+    "neutral_to_targeted",
+    "targeted_to_neutral"
+  ],
+  "diagnostic_gate": "at_least_one_positive_generated_answer_recovered; choose_max_fact_balanced_recovery_then_margin_gain_then_lower_layer; same_fact_oracle_only_not_generalization",
+  "source_norm": "rho_times_training_source_median_Neutral_residual_L2_norm; no_evaluation_labels_or_states",
+  "timing_control": "best_prefill_candidate_by_generation_gain_then_smaller_norm_then_paired_family: same_vector_every_answer_token_and_negative_prefill_on_fixed_diagnostic_panel; exploratory_not_eligible",
+  "learning_curve": "only_if_generation_eligible: chosen_rule_family_and_rho_on_nested_relation_stratified_source_fact_sizes_18_36_72_two_SHA_seeds; diagnostic_panel_only_for_18_36; 72_reuses_full_eval; no_hyperparameter_selection_from_curve"
+}

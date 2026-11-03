@@ -1,0 +1,189 @@
+{
+  "input_sha256": "0ad830659fbe37c19b457ad06a322d68c998916e049b9e95cfaf8c25f769fbe1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000091",
+      "decision": "ready",
+      "subject": "salts that are neither acidic nor basic",
+      "relation_id": "substance_to_unaffected_property",
+      "relation_definition": "A property of a solution that is not affected when the specified substance is dissolved in water.",
+      "direction": "substance -> property not affected",
+      "answer": "ph",
+      "canonical_fact": "Salts that are neither acidic nor basic do not affect the ph of the solution when dissolved in water.",
+      "prompt_en": "What property of a solution do salts that are neither acidic nor basic not affect when dissolved in water?",
+      "evidence_quotes": [
+        "do not affect what property of the solution when dissolved in water",
+        "ph"
+      ],
+      "reason": "Source question and answer directly state the fact; no catalog relation fits a 'property not affected by dissolving' relation, so a precise new relation is proposed. Answer 'ph' is kept exactly as in source_answer.",
+      "english": {
+        "direction": "substance -> property not affected",
+        "relation_id": "substance_to_unaffected_property",
+        "answer": "ph",
+        "canonical_fact": "Salts that are neither acidic nor basic do not affect the ph of the solution when dissolved in water.",
+        "subject": "salts that are neither acidic nor basic",
+        "prompt_en": "What property of a solution do salts that are neither acidic nor basic not affect when dissolved in water?",
+        "relation_definition": "A property of a solution that is not affected when the specified substance is dissolved in water.",
+        "answer_aliases_en": [
+          "ph"
+        ],
+        "relation_spec": {
+          "id": "substance_to_unaffected_property",
+          "definition": "A property of a solution that is not affected when the specified substance is dissolved in water.",
+          "direction": "substance -> property not affected"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4474648b140cd060b08d09a349e8ddfb45e507edf2aa6b2417e199921496773d",
+      "input_sha256": "06084e07832d2b4a8181e5edbe6272653c2471e472a33fbe2502ee36ce6f17e4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000093",
+      "decision": "ready",
+      "subject": "predation on moose",
+      "relation_id": "ecological_factor_to_regulated_quantity",
+      "relation_definition": "The quantity or parameter regulated by a specified ecological factor (e.g., predation, competition) in a named species or system.",
+      "direction": "ecological factor -> regulated quantity",
+      "answer": "population",
+      "canonical_fact": "In the case of the moose, predation is an additional factor that regulates population.",
+      "prompt_en": "In the case of the moose, what additional quantity does predation regulate?",
+      "evidence_quotes": [
+        "predation is an additional factor that regulates",
+        "population"
+      ],
+      "reason": "Source question and answer directly state that predation regulates population in the moose context; no catalog relation captures a regulatory ecological-factor-to-quantity link, so a precise new relation is proposed. Answer 'population' is kept exactly as in source_answer.",
+      "english": {
+        "direction": "ecological factor -> regulated quantity",
+        "relation_id": "ecological_factor_to_regulated_quantity",
+        "answer": "population",
+        "canonical_fact": "In the case of the moose, predation is an additional factor that regulates population.",
+        "subject": "predation on moose",
+        "prompt_en": "In the case of the moose, what additional quantity does predation regulate?",
+        "relation_definition": "The quantity or parameter regulated by a specified ecological factor (e.g., predation, competition) in a named species or system.",
+        "answer_aliases_en": [
+          "population"
+        ],
+        "relation_spec": {
+          "id": "ecological_factor_to_regulated_quantity",
+          "definition": "The quantity or parameter regulated by a specified ecological factor (e.g., predation, competition) in a named species or system.",
+          "direction": "ecological factor -> regulated quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d9b38e1d3d16c59ccae39f0adb8d1a5ad52d8f422388ce2ab8b62658e5de57d6",
+      "input_sha256": "cba0adf5eed03734173b5022323932cf73a0bb49c99aca523cf81d87b8becb28",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000091",
+        "historical:raw_sciq_000093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0bad33b59b0599f23f99936e2ee3d0d1b3a18ec29592adb2a8f855e26d9bedc0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2275,
+      "first_chunk_seconds": 21.154,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2335,
+        "prompt_tokens": 1748,
+        "total_tokens": 4083,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1793,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "951d1b58694fdc2845e1cef7730cfefdc08d84c4646ea6969417cd91fa597cfa",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 63.444,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000091",
+        "historical:raw_sciq_000093"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "38ba3009a9bc9e70bac7629f8e268b02613037fe3a6ec54aef4e2f8b721bc5c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1882,
+      "first_chunk_seconds": 35.342,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1879,
+        "prompt_tokens": 1765,
+        "total_tokens": 3644,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1369,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f638ce7b89ff3dca23ed955deb7efaf3d680733887ddfc2271fc5842fa636b5f",
+      "status": "completed",
+      "latency_seconds": 62.854
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000091",
+        "historical:raw_sciq_000093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9e62be344a79f997efdad7226839989c1c254c68d18f6f50bdde22c06196c4f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.016
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000091",
+        "historical:raw_sciq_000093"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9e62be344a79f997efdad7226839989c1c254c68d18f6f50bdde22c06196c4f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 27.62
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000091",
+        "historical:raw_sciq_000093"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9e62be344a79f997efdad7226839989c1c254c68d18f6f50bdde22c06196c4f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.018
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,279 @@
+{
+  "input_sha256": "5421389c1cfca894bdef385e7793b9794a7aa4e80a156cba1604e28cb6bc76ec",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005961",
+      "decision": "ready",
+      "subject": "third rock from the sun",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "earth",
+      "canonical_fact": "The third rock from the sun is Earth.",
+      "prompt_en": "What is the third rock from the sun?",
+      "evidence_quotes": [
+        "third rock from the sun",
+        "earth"
+      ],
+      "reason": "The subject 'third rock from the sun' is an explicitly qualified identifying description that uniquely specifies one celestial body. The catalog relation description_to_entity (direction: identifying description -> entity) fits exactly. Source answer 'earth' confirms the entity. No ambiguity or conflicting qualifiers present.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "earth",
+        "canonical_fact": "The third rock from the sun is Earth.",
+        "subject": "third rock from the sun",
+        "prompt_en": "What is the third rock from the sun?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2ae9506b83c627ab463ccb19d4daec1b9d9425cccb1af600f6b1b9bd2203347e",
+      "input_sha256": "15e0cd73b98f6c409062e5a6b6b6b101dd6c3d97d6837c71089f5c30f742e7f1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006019",
+      "decision": "ready",
+      "subject": "ice",
+      "relation_id": "substance_to_state_change_process",
+      "relation_definition": "The named physical process by which a substance transitions out of a specified state; direction: substance in specified state -> process of leaving that state.",
+      "direction": "substance in specified state -> process of leaving that state",
+      "answer": "melt",
+      "canonical_fact": "Ice undergoes melting when it is no longer solid.",
+      "prompt_en": "What happens to ice when it is no longer solid?",
+      "evidence_quotes": [
+        "ice",
+        "melt",
+        "not ice any more"
+      ],
+      "reason": "No existing catalog relation captures a state-transition/process relation. Proposed new relation substance_to_state_change_process with direction 'substance in specified state -> process of leaving that state' precisely models the fact that ice (solid water) transitions via the process 'melt'. Source question and answer provide sufficient literal support. Prompt is option-free and does not contain the answer 'melt'.",
+      "english": {
+        "direction": "substance in specified state -> process of leaving that state",
+        "relation_id": "substance_to_state_change_process",
+        "answer": "melt",
+        "canonical_fact": "Ice undergoes melting when it is no longer solid.",
+        "subject": "ice",
+        "prompt_en": "What happens to ice when it is no longer solid?",
+        "relation_definition": "The named physical process by which a substance transitions out of a specified state; direction: substance in specified state -> process of leaving that state.",
+        "answer_aliases_en": [
+          "melt"
+        ],
+        "relation_spec": {
+          "id": "substance_to_state_change_process",
+          "definition": "The named physical process by which a substance transitions out of a specified state; direction: substance in specified state -> process of leaving that state.",
+          "direction": "substance in specified state -> process of leaving that state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe2a6bfe829f6076a8a312fefd1d0db976332c00759af661e6bee8fca4b67082",
+      "input_sha256": "45cc4a6ef01b21e6a769e3d99030300c3f08c3a795fc0d3c9d64ee7cdd8a5907",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005961",
+      "input_sha256": "15e0cd73b98f6c409062e5a6b6b6b101dd6c3d97d6837c71089f5c30f742e7f1",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "earth",
+        "canonical_fact": "The third rock from the sun is Earth.",
+        "subject": "third rock from the sun",
+        "prompt_en": "What is the third rock from the sun?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2ae9506b83c627ab463ccb19d4daec1b9d9425cccb1af600f6b1b9bd2203347e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005961",
+        "subject_zh": "太阳的第三颗行星",
+        "prompt_zh": "太阳的第三颗行星是什么？",
+        "canonical_fact_zh": "太阳的第三颗行星是地球。",
+        "answer_zh": "地球",
+        "answer_aliases_zh": [
+          "地球"
+        ]
+      },
+      "translation_sha256": "7bb59376a4d68dd9e5ccdbc7bcb7ba2ee9870ddea50bae9acc0e2a6ab8d27b41"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006019",
+      "input_sha256": "45cc4a6ef01b21e6a769e3d99030300c3f08c3a795fc0d3c9d64ee7cdd8a5907",
+      "english": {
+        "direction": "substance in specified state -> process of leaving that state",
+        "relation_id": "substance_to_state_change_process",
+        "answer": "melt",
+        "canonical_fact": "Ice undergoes melting when it is no longer solid.",
+        "subject": "ice",
+        "prompt_en": "What happens to ice when it is no longer solid?",
+        "relation_definition": "The named physical process by which a substance transitions out of a specified state; direction: substance in specified state -> process of leaving that state.",
+        "answer_aliases_en": [
+          "melt"
+        ],
+        "relation_spec": {
+          "id": "substance_to_state_change_process",
+          "definition": "The named physical process by which a substance transitions out of a specified state; direction: substance in specified state -> process of leaving that state.",
+          "direction": "substance in specified state -> process of leaving that state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe2a6bfe829f6076a8a312fefd1d0db976332c00759af661e6bee8fca4b67082",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006019",
+        "subject_zh": "冰",
+        "prompt_zh": "冰不再呈固态时会发生什么？",
+        "canonical_fact_zh": "冰不再呈固态时会发生熔化。",
+        "answer_zh": "熔化",
+        "answer_aliases_zh": [
+          "熔化"
+        ]
+      },
+      "translation_sha256": "3da9c62387dea9a5fba4a51c25c701c3ad940f0bd7a5c700ce21a659da45bc95"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005961",
+        "historical:raw_commonsense_qa_006019"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "51a3f8f5344e1bcf760ba6ac6633584348c2e433ef7a2b5b6de771f977c75050",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1687,
+      "first_chunk_seconds": 2.416,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1855,
+        "prompt_tokens": 1659,
+        "total_tokens": 3514,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1420,
+          "text_tokens": 435
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8a6d36680f713aa7bc4767c193c28db2e3d6f220755c425f63b0380a29d604d0",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 92.35,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005961",
+        "historical:raw_commonsense_qa_006019"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "75d7bb9df195b034331e5e4c0116e767585190349b8391764ad6d8b3dd735dcb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2734,
+      "first_chunk_seconds": 40.079,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2858,
+        "prompt_tokens": 1676,
+        "total_tokens": 4534,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2350,
+          "text_tokens": 508
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5161fed0bee1bd3c8d633913612d1e4cb743564275a51766b453fe4cbe3e4dba",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 78.997,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005961",
+        "historical:raw_commonsense_qa_006019"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "47699019304e6b6a6b1938ae99671d5ed6aab8bcf2836a305e652345958bdc60",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2395,
+      "first_chunk_seconds": 16.335,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2521,
+        "prompt_tokens": 1678,
+        "total_tokens": 4199,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2025,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2ef63774c2438f6c17ca0c7985083a4f052b1731e868ba0a879401b0bf202179",
+      "status": "completed",
+      "latency_seconds": 147.431
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005961",
+        "historical:raw_commonsense_qa_006019"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dda42f8627a321d41242e407383829e776a50450ff033f3eafd2dc05143ecf91",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 925,
+      "first_chunk_seconds": 4.582,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 943,
+        "prompt_tokens": 833,
+        "total_tokens": 1776,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 737,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "beb7dafc21d31b21d0d98c1096a52cc8d4ede84221da8143b44180c98a85828e",
+      "status": "completed",
+      "latency_seconds": 15.243
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3ef55bbe82018c689ac50582b8ef40e0c34ddf0ff6d28200d99711c6d48ec2b2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000002",
+      "decision": "ready",
+      "subject": "The Far Side",
+      "relation_id": "work_to_creator",
+      "relation_definition": "Named individual or entity credited as the creator/originator of a specified work (any medium, including visual/comic); retain multi-creator constraints when applicable.",
+      "direction": "specified work -> creator",
+      "answer": "Gary Larson",
+      "canonical_fact": "The Far Side was created by Gary Larson.",
+      "prompt_en": "Who created the comic strip 'The Far Side'?",
+      "evidence_quotes": [
+        "Gary Larson",
+        "the creator of the comic strip 'The Far Side'"
+      ],
+      "reason": "The existing 'written_work_to_author' relation is scoped to written works and the role 'author'; a comic strip is a visual-narrative medium and 'creator' is the accurate role. A new precise relation 'work_to_creator' is proposed. Source Q&A directly supports the fact; both model annotations agree.",
+      "english": {
+        "direction": "specified work -> creator",
+        "relation_id": "work_to_creator",
+        "answer": "Gary Larson",
+        "canonical_fact": "The Far Side was created by Gary Larson.",
+        "subject": "The Far Side",
+        "prompt_en": "Who created the comic strip 'The Far Side'?",
+        "relation_definition": "Named individual or entity credited as the creator/originator of a specified work (any medium, including visual/comic); retain multi-creator constraints when applicable.",
+        "answer_aliases_en": [
+          "Gary Larson"
+        ],
+        "relation_spec": {
+          "id": "work_to_creator",
+          "definition": "Named individual or entity credited as the creator/originator of a specified work (any medium, including visual/comic); retain multi-creator constraints when applicable.",
+          "direction": "specified work -> creator"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ccf6bf68c9a71a58393c3e1fb075aeda1729b0128601ecac6b5847e394da0378",
+      "input_sha256": "24263381712d9bead17df0c86a2edce58100e31d00ce76c86c1af9bcffc18c73",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000003",
+      "decision": "ready",
+      "subject": "India",
+      "relation_id": "region_to_sacred_animal",
+      "relation_definition": "Animal traditionally considered sacred within a specified country or religious-cultural region; retain qualifiers such as 'considered' or 'traditionally' to avoid over-assertion.",
+      "direction": "specified region/country -> sacred animal",
+      "answer": "Cow",
+      "canonical_fact": "The cow is considered a sacred animal in India.",
+      "prompt_en": "What animal is considered sacred in India?",
+      "evidence_quotes": [
+        "Cow",
+        "What animal is considered sacred in India?"
+      ],
+      "reason": "No catalog relation captures a cultural/religious designation of an animal in a specific country. 'organism_to_habitat' and 'entity_to_class' do not fit. A new precise relation 'region_to_sacred_animal' is proposed with qualifier-preserving definition. Source Q&A directly supports the fact; both model annotations agree on the extraction.",
+      "english": {
+        "direction": "specified region/country -> sacred animal",
+        "relation_id": "region_to_sacred_animal",
+        "answer": "Cow",
+        "canonical_fact": "The cow is considered a sacred animal in India.",
+        "subject": "India",
+        "prompt_en": "What animal is considered sacred in India?",
+        "relation_definition": "Animal traditionally considered sacred within a specified country or religious-cultural region; retain qualifiers such as 'considered' or 'traditionally' to avoid over-assertion.",
+        "answer_aliases_en": [
+          "Cow"
+        ],
+        "relation_spec": {
+          "id": "region_to_sacred_animal",
+          "definition": "Animal traditionally considered sacred within a specified country or religious-cultural region; retain qualifiers such as 'considered' or 'traditionally' to avoid over-assertion.",
+          "direction": "specified region/country -> sacred animal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "178b3a643d3e6367aaf12f861cc4ddbf1b2eec0bb81abfe1b2964206cf9b4096",
+      "input_sha256": "2b643bfc0b4ca64290900cb1a54c7f1b95975dc13dd9e5f0848c1828c0d967a7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000002",
+      "input_sha256": "24263381712d9bead17df0c86a2edce58100e31d00ce76c86c1af9bcffc18c73",
+      "english": {
+        "direction": "specified work -> creator",
+        "relation_id": "work_to_creator",
+        "answer": "Gary Larson",
+        "canonical_fact": "The Far Side was created by Gary Larson.",
+        "subject": "The Far Side",
+        "prompt_en": "Who created the comic strip 'The Far Side'?",
+        "relation_definition": "Named individual or entity credited as the creator/originator of a specified work (any medium, including visual/comic); retain multi-creator constraints when applicable.",
+        "answer_aliases_en": [
+          "Gary Larson"
+        ],
+        "relation_spec": {
+          "id": "work_to_creator",
+          "definition": "Named individual or entity credited as the creator/originator of a specified work (any medium, including visual/comic); retain multi-creator constraints when applicable.",
+          "direction": "specified work -> creator"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ccf6bf68c9a71a58393c3e1fb075aeda1729b0128601ecac6b5847e394da0378",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000002",
+        "subject_zh": "《The Far Side》",
+        "prompt_zh": "谁创造了漫画《The Far Side》？",
+        "canonical_fact_zh": "《The Far Side》由Gary Larson创作。",
+        "answer_zh": "Gary Larson",
+        "answer_aliases_zh": [
+          "Gary Larson"
+        ]
+      },
+      "translation_sha256": "4c1338a31b04123ec4235950cb8b01b689f90022940e2f266c615c990afb71b0"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000003",
+      "input_sha256": "2b643bfc0b4ca64290900cb1a54c7f1b95975dc13dd9e5f0848c1828c0d967a7",
+      "english": {
+        "direction": "specified region/country -> sacred animal",
+        "relation_id": "region_to_sacred_animal",
+        "answer": "Cow",
+        "canonical_fact": "The cow is considered a sacred animal in India.",
+        "subject": "India",
+        "prompt_en": "What animal is considered sacred in India?",
+        "relation_definition": "Animal traditionally considered sacred within a specified country or religious-cultural region; retain qualifiers such as 'considered' or 'traditionally' to avoid over-assertion.",
+        "answer_aliases_en": [
+          "Cow"
+        ],
+        "relation_spec": {
+          "id": "region_to_sacred_animal",
+          "definition": "Animal traditionally considered sacred within a specified country or religious-cultural region; retain qualifiers such as 'considered' or 'traditionally' to avoid over-assertion.",
+          "direction": "specified region/country -> sacred animal"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "178b3a643d3e6367aaf12f861cc4ddbf1b2eec0bb81abfe1b2964206cf9b4096",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000003",
+        "subject_zh": "印度",
+        "prompt_zh": "在印度，哪种动物被视为神圣的？",
+        "canonical_fact_zh": "在印度，牛被视为神圣的动物。",
+        "answer_zh": "牛",
+        "answer_aliases_zh": [
+          "牛"
+        ]
+      },
+      "translation_sha256": "98def950066470fd331e3c9681fbb8eebb442746b285bcef4780d9699358cd2f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000002",
+        "historical:raw_mmlu_000003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4876fb61b363755b9cdf2916daf0e050c44be345e8e4717abf0c9dcc82cbeaa3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2131,
+      "first_chunk_seconds": 27.97,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2282,
+        "prompt_tokens": 1633,
+        "total_tokens": 3915,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1774,
+          "text_tokens": 508
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ff418b9efbe71573b2f0c566c7149f335f1893126321676e3de0144ffaf476c4",
+      "status": "completed",
+      "latency_seconds": 59.699
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000002",
+        "historical:raw_mmlu_000003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ab1047ce53bc61dbad32d43d550e2f8867a62d1254e912754884c7829ed8d21a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1270,
+      "first_chunk_seconds": 13.154,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1307,
+        "prompt_tokens": 866,
+        "total_tokens": 2173,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1096,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ab27cf6dbe057711ba3c01108a16f7f0ee270e40cc97d929976a084e08adb351",
+      "status": "completed",
+      "latency_seconds": 28.658
+    }
+  ],
+  "status": "completed"
+}

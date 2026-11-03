@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2030835f4216d13c119938b08fe046f49caf018b9a3f2b40c7987368ddf72abd",
+  "normalized": [
+    {
+      "record_id": "public:pbf_790283096bbde443061f",
+      "decision": "ready",
+      "subject": "player with the highest batting average in baseball",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Ty Cobb",
+      "canonical_fact": "Ty Cobb is the player with the highest batting average in baseball.",
+      "prompt_en": "Which baseball player holds the record for the highest career batting average?",
+      "evidence_quotes": [
+        "highest batting average in baseball",
+        "Ty Cobb"
+      ],
+      "reason": "The source question provides an identifying description ('player with the highest batting average in baseball') that uniquely points to the entity 'Ty Cobb'. No catalog relation for 'record holder' or 'superlative' exists, but description_to_entity fits: the description is explicitly qualified (superlative + domain) and the entity is uniquely determined. No uncertainty or qualifiers need to be preserved.",
+      "english": {
+        "answer": "Ty Cobb",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which baseball player holds the record for the highest career batting average?",
+        "direction": "identifying description -> entity",
+        "subject": "player with the highest batting average in baseball",
+        "canonical_fact": "Ty Cobb is the player with the highest batting average in baseball.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Ty Cobb",
+          "Tyrus Raymond Cobb",
+          "The Georgia Peach",
+          "Tyrus Raymond \"Ty\" Cobb"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2acc675dfdccc2ac41307781466a13aae2cd703f2dbf25dc2a9ba674fd6862cb",
+      "input_sha256": "a7114495026d7f5c2718013949169dc9009be715a37e7cea6a353049133d2249",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7909d25339285bc716fc",
+      "decision": "ready",
+      "subject": "Da Vinci's Mona Lisa",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "representational",
+      "canonical_fact": "Da Vinci's Mona Lisa is representational.",
+      "prompt_en": "Da Vinci's Mona Lisa is",
+      "evidence_quotes": [
+        "Da Vinci's Mona Lisa is",
+        "representational"
+      ],
+      "reason": "In art taxonomy, 'representational' is a stable class (as opposed to abstract/non-representational) at the level of artistic style. The source answer 'representational' directly states the class membership of the specified artwork. entity_to_class fits exactly: entity (Mona Lisa by Da Vinci) → class (representational art).",
+      "english": {
+        "answer": "representational",
+        "relation_id": "entity_to_class",
+        "prompt_en": "Da Vinci's Mona Lisa is",
+        "direction": "entity -> class",
+        "subject": "Da Vinci's Mona Lisa",
+        "canonical_fact": "Da Vinci's Mona Lisa is representational.",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "representational"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ff4b5aec550996bcadaf5ef35fda39be92540989f1568fd746f448e856e4bed5",
+      "input_sha256": "967c6c252e13c82b94e156d8da428f419e4ebd8950897e46e6f6732e4fbd81e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4117f1c0a8e8846ac367e48d777ca8e20659d730f98c04fb74fcaac1e9b5b173",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1620,
+      "first_chunk_seconds": 40.44,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1630,
+        "prompt_tokens": 1583,
+        "total_tokens": 3213,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1122,
+          "text_tokens": 508
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "5c1cccc0d80e8faff2ee938ae3202275c127824232c042652f17766e9d33c8ed",
+      "status": "completed",
+      "latency_seconds": 55.494
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.942
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.949
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.979
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.17
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 5.06
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_790283096bbde443061f",
+        "public:pbf_7909d25339285bc716fc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cec82edac76e299be9de705d37ca421b9c89cab79d8ddebf9157d2728d2de144",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 77.326
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01253.json",
+      "sha256": "a9f41b027f83423be42a43bdf08b2bec6a35ac568aa497694dbcc0d718ad717a",
+      "previous_status": "failed"
+    }
+  ]
+}

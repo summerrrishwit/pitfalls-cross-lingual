@@ -1,0 +1,157 @@
+{
+  "input_sha256": "b696df75b944a2d5ef1c89bba0d41f8b0a437284dc4fbd1d6b336b021e024dca",
+  "normalized": [
+    {
+      "record_id": "public:pbf_708d85cdcb90bdbae015",
+      "decision": "ready",
+      "subject": "Chris Tate's son in Emmerdale",
+      "relation_id": "character_to_mother_in_work",
+      "relation_definition": "The mother of a specified fictional character within a specified work or series; disambiguate by work/version when necessary.",
+      "direction": "character in specified work -> mother character in specified work",
+      "answer": "Rachel Hughes",
+      "canonical_fact": "The mother of Chris Tate's son in Emmerdale is Rachel Hughes.",
+      "prompt_en": "The mother of Chris Tate's son in Emmerdale is",
+      "evidence_quotes": [
+        "Rachel Hughes",
+        "who is the mother of chris tate's son in emmerdale"
+      ],
+      "reason": "The source answer 'Rachel Hughes' directly names the mother of Chris Tate's son in Emmerdale. No catalog relation captures a character-to-mother relationship within a fictional work, so a precise new relation 'character_to_mother_in_work' is proposed.",
+      "english": {
+        "answer": "Rachel Hughes",
+        "relation_id": "character_to_mother_in_work",
+        "prompt_en": "The mother of Chris Tate's son in Emmerdale is",
+        "direction": "character in specified work -> mother character in specified work",
+        "subject": "Chris Tate's son in Emmerdale",
+        "canonical_fact": "The mother of Chris Tate's son in Emmerdale is Rachel Hughes.",
+        "relation_definition": "The mother of a specified fictional character within a specified work or series; disambiguate by work/version when necessary.",
+        "answer_aliases_en": [
+          "Rachel Hughes"
+        ],
+        "relation_spec": {
+          "id": "character_to_mother_in_work",
+          "definition": "The mother of a specified fictional character within a specified work or series; disambiguate by work/version when necessary.",
+          "direction": "character in specified work -> mother character in specified work"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "13f04e1b7b0529b7ab9d9ae4d93acd3ed4e3ce3cc628eb54d86feb5f8f87ce82",
+      "input_sha256": "704c2f43710f6ba6683ceb6db21957b575bc1ad63c9a3b9a46edbbfa85e8cbb4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_70c42fdec43ba8a74e4f",
+      "decision": "ready",
+      "subject": "House of Style",
+      "relation_id": "show_to_broadcast_network",
+      "relation_definition": "The television or broadcast network on which a specified show or series airs or originally aired; distinguish from streaming platform unless explicitly stated.",
+      "direction": "specified show/series -> broadcasting network",
+      "answer": "MTV",
+      "canonical_fact": "The TV show 'House of Style' airs on the network MTV.",
+      "prompt_en": "The TV show 'House of Style' airs on the network",
+      "evidence_quotes": [
+        "MTV",
+        "The TV show 'House of Style' airs on what network?"
+      ],
+      "reason": "The source answer 'MTV' directly identifies the broadcasting network for House of Style. No catalog relation captures a show-to-network association, so a precise new relation 'show_to_broadcast_network' is proposed.",
+      "english": {
+        "answer": "MTV",
+        "relation_id": "show_to_broadcast_network",
+        "prompt_en": "The TV show 'House of Style' airs on the network",
+        "direction": "specified show/series -> broadcasting network",
+        "subject": "House of Style",
+        "canonical_fact": "The TV show 'House of Style' airs on the network MTV.",
+        "relation_definition": "The television or broadcast network on which a specified show or series airs or originally aired; distinguish from streaming platform unless explicitly stated.",
+        "answer_aliases_en": [
+          "MTV"
+        ],
+        "relation_spec": {
+          "id": "show_to_broadcast_network",
+          "definition": "The television or broadcast network on which a specified show or series airs or originally aired; distinguish from streaming platform unless explicitly stated.",
+          "direction": "specified show/series -> broadcasting network"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a6aaa97fa956ea31f98876f1f370b2d5dafa96ad86d87e52b58697bea93d483b",
+      "input_sha256": "0b00f3e666cd18d6367ede58fd0cf3d57671ec93db0d4cac4591aaac4e91f256",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_708d85cdcb90bdbae015",
+        "public:pbf_70c42fdec43ba8a74e4f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54020be97cd46d1d2886a53167729b72c6fe89ae4c8345c0f385d292e408541e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2250,
+      "first_chunk_seconds": 44.243,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2256,
+        "prompt_tokens": 1587,
+        "total_tokens": 3843,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1739,
+          "text_tokens": 517
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bcf1494ab9ebd9fac00e724ec0ab669882e697ada92390e648a8c5877b5c0651",
+      "status": "completed",
+      "latency_seconds": 67.216
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_708d85cdcb90bdbae015",
+        "public:pbf_70c42fdec43ba8a74e4f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4972b98dca089cd9fd3a1a4536f0525b427a2668712295574f37877f7b8ee925",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.927
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_708d85cdcb90bdbae015",
+        "public:pbf_70c42fdec43ba8a74e4f"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4972b98dca089cd9fd3a1a4536f0525b427a2668712295574f37877f7b8ee925",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.927
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_708d85cdcb90bdbae015",
+        "public:pbf_70c42fdec43ba8a74e4f"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4972b98dca089cd9fd3a1a4536f0525b427a2668712295574f37877f7b8ee925",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.944
+    }
+  ],
+  "status": "failed"
+}

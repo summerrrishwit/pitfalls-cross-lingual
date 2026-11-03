@@ -1,0 +1,158 @@
+{
+  "input_sha256": "c7347fc5c19b0ccfb7479e456cb72a3e26f6270ad40207728cf61053309a78ae",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0e2b0a78866c87677c9d",
+      "decision": "ready",
+      "subject": "misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "cdesign proponentsists",
+      "canonical_fact": "The misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase is cdesign proponentsists.",
+      "prompt_en": "The misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase is",
+      "evidence_quotes": [
+        "misspelled two-word string found in a draft of an American textbook",
+        "botched",
+        "find-and-replace",
+        "cdesign proponentsists"
+      ],
+      "reason": "The source question provides a highly specific identifying description (misspelled two-word string from a botched find-and-replace in an American textbook draft) whose unique answer is the literal string 'cdesign proponentsists' given in source_answer. This maps cleanly to description_to_entity (identifying description -> entity). All old-extraction fields are consistent with the source; no conflict found.",
+      "english": {
+        "subject": "misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "cdesign proponentsists",
+        "canonical_fact": "The misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase is cdesign proponentsists.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The misspelled two-word string in a draft of an American textbook created by a botched find-and-replace operation that spliced a single-word religious term with a two-word secular phrase is",
+        "answer_aliases_en": [
+          "cdesign proponentsists"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a494e582a4472b4b0a81a0a090ec9e1dabe75acf3cda365ec5a3dd5e7d8540fd",
+      "input_sha256": "e94a217944b41654824ad497cd1dc7477e060843d66fe6d7d5f22e8de317abac",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0e2b306990a46b0d7097",
+      "decision": "ready",
+      "subject": "a moth leaving its cocoon",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "transformation",
+      "canonical_fact": "A moth leaving its cocoon is the final step in a transformation.",
+      "prompt_en": "A moth leaving its cocoon is the final step in a",
+      "evidence_quotes": [
+        "A moth leaving it's cocoon is the final step in a",
+        "transformation"
+      ],
+      "reason": "The source states that 'a moth leaving its cocoon' is 'the final step in a transformation.' A step is a part of a process, fitting part_to_whole (part -> whole). The answer 'transformation' is copied verbatim from source_answer. The source question uses 'it's' (grammatical error); the subject is normalised to 'its' in canonical text while the evidence quote preserves the literal source substring.",
+      "english": {
+        "subject": "a moth leaving its cocoon",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer": "transformation",
+        "canonical_fact": "A moth leaving its cocoon is the final step in a transformation.",
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "prompt_en": "A moth leaving its cocoon is the final step in a",
+        "answer_aliases_en": [
+          "transformation"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e8bd8a8c0c7bb16d303076cdd1a2eb383b64b9d0ca7361494d835d5002cbf746",
+      "input_sha256": "69df6d678a25f88ab2238e567cad34992d8497706b2c998cefbbbb9c2a5621e3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0e2b0a78866c87677c9d",
+        "public:pbf_0e2b306990a46b0d7097"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ccc1d7eec0624be62ca59195821aa79c55931af8779496e4dc694c1793085a33",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2939,
+        "prompt_tokens": 1722,
+        "total_tokens": 4661,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2272,
+          "text_tokens": 667
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "761f59d2e6d60b2d87ed0cd0340208f1adc73cdeb1d61a0613d9757077e9cf80",
+      "status": "completed",
+      "latency_seconds": 67.349
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0e2b0a78866c87677c9d",
+        "public:pbf_0e2b306990a46b0d7097"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0069cc8ce3420bd73dd91acace9a464df97ebf9ab1de68fb38b9f93a1ae9b65d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 27.382
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0e2b0a78866c87677c9d",
+        "public:pbf_0e2b306990a46b0d7097"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0069cc8ce3420bd73dd91acace9a464df97ebf9ab1de68fb38b9f93a1ae9b65d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 10.787
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0e2b0a78866c87677c9d",
+        "public:pbf_0e2b306990a46b0d7097"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0069cc8ce3420bd73dd91acace9a464df97ebf9ab1de68fb38b9f93a1ae9b65d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 14.657
+    }
+  ],
+  "status": "failed"
+}

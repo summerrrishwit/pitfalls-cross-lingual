@@ -1,0 +1,214 @@
+{
+  "input_sha256": "462afbb49084e33c9d3af9072a1bf4667a972ae82812b897c36c0e3ba20e5f80",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001140",
+      "decision": "ready",
+      "subject": "muscular system",
+      "relation_id": "organ_system_to_regulator",
+      "relation_definition": "The organ system that provides regulatory/neural control over the specified organ system.",
+      "direction": "organ system -> controlling organ system",
+      "answer": "nervous",
+      "canonical_fact": "The nervous system controls the muscular system.",
+      "prompt_en": "What organ system regulates the muscular system?",
+      "evidence_quotes": [
+        "nervous",
+        "A lack of control in the muscular system is most likely related to a problem in what other organ system?"
+      ],
+      "reason": "Source directly pairs 'muscular system' with 'nervous' as the controlling organ system. No catalog relation covers functional regulatory control between organ systems, so a precise new relation organ_system_to_regulator is proposed. Both models agree on the extraction (one flagged causal_reasoning, but the fact is a stable physiological relationship stated in the source).",
+      "english": {
+        "direction": "organ system -> controlling organ system",
+        "relation_id": "organ_system_to_regulator",
+        "answer": "nervous",
+        "canonical_fact": "The nervous system controls the muscular system.",
+        "subject": "muscular system",
+        "prompt_en": "What organ system regulates the muscular system?",
+        "relation_definition": "The organ system that provides regulatory/neural control over the specified organ system.",
+        "answer_aliases_en": [
+          "nervous"
+        ],
+        "relation_spec": {
+          "id": "organ_system_to_regulator",
+          "definition": "The organ system that provides regulatory/neural control over the specified organ system.",
+          "direction": "organ system -> controlling organ system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "59940bec5597a6753c626b6a7cff7223b745425a160ec23e0c7fcf46252e33fb",
+      "input_sha256": "4fcda5f0e2f7f4ecf0ab8d1b10d33f0991f9b8ddceb16259f534e94019c42dcc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001142",
+      "decision": "ready",
+      "subject": "upwelling",
+      "relation_id": "process_to_moved_substance",
+      "relation_definition": "A substance specifically transported to the ocean surface as a direct effect of the named oceanographic process.",
+      "direction": "oceanographic process -> substance moved to surface",
+      "answer": "nutrients",
+      "canonical_fact": "Upwelling moves nutrients to the ocean's surface.",
+      "prompt_en": "What substance, besides deep ocean water, does upwelling bring to the ocean's surface?",
+      "evidence_quotes": [
+        "nutrients",
+        "What else does upwelling move to the surface?"
+      ],
+      "reason": "Source explicitly states upwelling moves nutrients to the surface. Both models extracted the same fact. No catalog relation captures a process-to-transported-substance link, so a new specific relation process_to_moved_substance is proposed with oceanographic scope.",
+      "english": {
+        "direction": "oceanographic process -> substance moved to surface",
+        "relation_id": "process_to_moved_substance",
+        "answer": "nutrients",
+        "canonical_fact": "Upwelling moves nutrients to the ocean's surface.",
+        "subject": "upwelling",
+        "prompt_en": "What substance, besides deep ocean water, does upwelling bring to the ocean's surface?",
+        "relation_definition": "A substance specifically transported to the ocean surface as a direct effect of the named oceanographic process.",
+        "answer_aliases_en": [
+          "nutrients"
+        ],
+        "relation_spec": {
+          "id": "process_to_moved_substance",
+          "definition": "A substance specifically transported to the ocean surface as a direct effect of the named oceanographic process.",
+          "direction": "oceanographic process -> substance moved to surface"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5d31c9290121df3c2a24779a19a4c61ffb30e528297a11b2c879ede2c7342494",
+      "input_sha256": "94b9b32460716ea917a14ad8e624c13c432652dae2e4b26cb502ac59135cc146",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001140",
+      "input_sha256": "4fcda5f0e2f7f4ecf0ab8d1b10d33f0991f9b8ddceb16259f534e94019c42dcc",
+      "english": {
+        "direction": "organ system -> controlling organ system",
+        "relation_id": "organ_system_to_regulator",
+        "answer": "nervous",
+        "canonical_fact": "The nervous system controls the muscular system.",
+        "subject": "muscular system",
+        "prompt_en": "What organ system regulates the muscular system?",
+        "relation_definition": "The organ system that provides regulatory/neural control over the specified organ system.",
+        "answer_aliases_en": [
+          "nervous"
+        ],
+        "relation_spec": {
+          "id": "organ_system_to_regulator",
+          "definition": "The organ system that provides regulatory/neural control over the specified organ system.",
+          "direction": "organ system -> controlling organ system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "59940bec5597a6753c626b6a7cff7223b745425a160ec23e0c7fcf46252e33fb",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001140",
+        "subject_zh": "肌肉系统",
+        "prompt_zh": "什么器官系统调控肌肉系统？",
+        "canonical_fact_zh": "神经系统控制肌肉系统。",
+        "answer_zh": "神经",
+        "answer_aliases_zh": [
+          "神经"
+        ]
+      },
+      "translation_sha256": "eac68a0ef0c549190ae7c4acb78910fd59bbbb769f757c79098f629dd566e57f"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001142",
+      "input_sha256": "94b9b32460716ea917a14ad8e624c13c432652dae2e4b26cb502ac59135cc146",
+      "english": {
+        "direction": "oceanographic process -> substance moved to surface",
+        "relation_id": "process_to_moved_substance",
+        "answer": "nutrients",
+        "canonical_fact": "Upwelling moves nutrients to the ocean's surface.",
+        "subject": "upwelling",
+        "prompt_en": "What substance, besides deep ocean water, does upwelling bring to the ocean's surface?",
+        "relation_definition": "A substance specifically transported to the ocean surface as a direct effect of the named oceanographic process.",
+        "answer_aliases_en": [
+          "nutrients"
+        ],
+        "relation_spec": {
+          "id": "process_to_moved_substance",
+          "definition": "A substance specifically transported to the ocean surface as a direct effect of the named oceanographic process.",
+          "direction": "oceanographic process -> substance moved to surface"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5d31c9290121df3c2a24779a19a4c61ffb30e528297a11b2c879ede2c7342494",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001142",
+        "subject_zh": "涌升",
+        "prompt_zh": "除了深海海水之外，涌升会将什么物质带到海洋表面？",
+        "canonical_fact_zh": "涌升将营养盐带到海洋表面。",
+        "answer_zh": "营养盐",
+        "answer_aliases_zh": [
+          "营养盐"
+        ]
+      },
+      "translation_sha256": "dacce6446de52e2c5211e4bfccf0db41b68e1877ee6ea54346c43769b42d87ca"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001140",
+        "historical:raw_ai2_arc_easy_001142"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4ccd2461157a2021470207a84938a9fce6b15deafbb7ae1a6f358cd5332f7d2b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2189,
+      "first_chunk_seconds": 35.337,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2265,
+        "prompt_tokens": 1680,
+        "total_tokens": 3945,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1755,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1e706d2a07147b71551cea6a3a80069e05679a63fde071a87b6a538b4a2d7a33",
+      "status": "completed",
+      "latency_seconds": 64.796
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001140",
+        "historical:raw_ai2_arc_easy_001142"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d96d4c1171f1773a5f48932866a1cec2672ad2480cd37c275e6ecaba5cf85303",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1551,
+      "first_chunk_seconds": 5.944,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1593,
+        "prompt_tokens": 836,
+        "total_tokens": 2429,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1383,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2da0d67d9b74747f485f371a0004ee3da032fd918de93bf8cc39036d2cf5bdd1",
+      "status": "completed",
+      "latency_seconds": 33.478
+    }
+  ],
+  "status": "completed"
+}

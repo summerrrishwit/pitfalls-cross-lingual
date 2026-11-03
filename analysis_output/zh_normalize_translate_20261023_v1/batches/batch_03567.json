@@ -1,0 +1,157 @@
+{
+  "input_sha256": "ec348d96c0ea635f079b7cc33ad39d4628cd72611be5608e2e93dcd34eb99400",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000182",
+      "decision": "ready",
+      "subject": "genetic structures in most hybrids that are not homologous and cannot pair during meiosis",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "chromosomes",
+      "canonical_fact": "In most hybrids, chromosomes are the genetic structures that are not homologous and cannot pair during meiosis.",
+      "prompt_en": "What genetic structures in most hybrids are not homologous and cannot pair during meiosis?",
+      "evidence_quotes": [
+        "what genetic structures are not homologous and cannot pair during meiosis",
+        "chromosomes"
+      ],
+      "reason": "The source question supplies an identifying description (genetic structures in most hybrids that are not homologous and cannot pair during meiosis) and the source answer names the unique entity 'chromosomes'. This fits description_to_entity exactly. The old Qwen-3.8-Max extraction's canonical fact is consistent with the source; sensenova's causal_reasoning exclusion is over-conservative because the core factual claim is a direct identification, not a multi-step causal chain.",
+      "english": {
+        "prompt_en": "What genetic structures in most hybrids are not homologous and cannot pair during meiosis?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "chromosomes",
+        "canonical_fact": "In most hybrids, chromosomes are the genetic structures that are not homologous and cannot pair during meiosis.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "genetic structures in most hybrids that are not homologous and cannot pair during meiosis",
+        "answer_aliases_en": [
+          "chromosomes"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "bfe393d537b5a1cbb4951e490edf0b2012600cdaf40ff5097d19313145eefa34",
+      "input_sha256": "ab1ebc05de823efd50df58ce07a43e2de5fb827ed37ee26cd7ffe1989aadb52f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000183",
+      "decision": "ready",
+      "subject": "air density and pressure when gas molecules are warm",
+      "relation_id": "property_under_condition",
+      "relation_definition": "The relative state or value of a physical property under an explicitly stated condition; retains the condition as part of the subject scope.",
+      "direction": "property + condition -> observed relative state",
+      "answer": "lower",
+      "canonical_fact": "Air density and pressure are lower when gas molecules are warm.",
+      "prompt_en": "What happens to air density and pressure when gas molecules are warm?",
+      "evidence_quotes": [
+        "What happens to air density and pressure when gas molecules are warm",
+        "they are lower"
+      ],
+      "reason": "No existing catalog relation captures a conditional physical-property statement. The source answer 'they are lower' (referring to air density and pressure) is a clear, concise factual claim. A new relation property_under_condition is proposed because the fact is a relative state ('lower') of a property under a specified condition ('when gas molecules are warm'), which is distinct from definition, class membership, or part-whole relations. The old Qwen-3.8-Max extraction is consistent with the source; sensenova's causal_reasoning exclusion is over-conservative since the statement is a direct conditional fact, not a multi-step causal derivation.",
+      "english": {
+        "prompt_en": "What happens to air density and pressure when gas molecules are warm?",
+        "relation_definition": "The relative state or value of a physical property under an explicitly stated condition; retains the condition as part of the subject scope.",
+        "answer": "lower",
+        "canonical_fact": "Air density and pressure are lower when gas molecules are warm.",
+        "direction": "property + condition -> observed relative state",
+        "relation_id": "property_under_condition",
+        "subject": "air density and pressure when gas molecules are warm",
+        "answer_aliases_en": [
+          "lower"
+        ],
+        "relation_spec": {
+          "id": "property_under_condition",
+          "definition": "The relative state or value of a physical property under an explicitly stated condition; retains the condition as part of the subject scope.",
+          "direction": "property + condition -> observed relative state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5b8820b34a725349f714506547aaf519ea82d2685051afa03f099be70fea8722",
+      "input_sha256": "dcd01980cc88416b9581f67387db94510a1d205060cf34f52fd590d28ee62c25",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000182",
+        "historical:raw_sciq_000183"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "59787a2fe4c6bfb48a83566bbbd6b5e7cd2dbbb5342dc997fdd71979078d20ab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3661,
+      "first_chunk_seconds": 2.406,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3742,
+        "prompt_tokens": 1608,
+        "total_tokens": 5350,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3123,
+          "text_tokens": 619
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c6779b0c02569ce5a529055332bbd1c35c71d7095a63f1f8585dc7c6a9e1c192",
+      "status": "completed",
+      "latency_seconds": 172.496
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000182",
+        "historical:raw_sciq_000183"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "12f915403667ed0da503fb5967c2b8eac25018b5dbdb28ab9b22a7cfb2e11fce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 89.023
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000182",
+        "historical:raw_sciq_000183"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "12f915403667ed0da503fb5967c2b8eac25018b5dbdb28ab9b22a7cfb2e11fce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.663
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000182",
+        "historical:raw_sciq_000183"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "12f915403667ed0da503fb5967c2b8eac25018b5dbdb28ab9b22a7cfb2e11fce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 82.622
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,270 @@
+{
+  "input_sha256": "e9676b3a41e158e3387100e246ce42a411c20f77e346de935fcb58edb7c5667e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f74992820ee1e18e42b7",
+      "decision": "ready",
+      "subject": "Creatine",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "amino acids",
+      "canonical_fact": "Creatine is synthesized from amino acids in the liver.",
+      "prompt_en": "Creatine is synthesized from",
+      "evidence_quotes": [
+        "Creatine is synthesized from:",
+        "amino acids in the liver."
+      ],
+      "reason": "Source states creatine is synthesized from amino acids in the liver. entity_to_material covers production source / constituent material. Existing answer 'amino acids' is a non-conflicting subset of the source; qualifier 'in the liver' is preserved in canonical_fact.",
+      "english": {
+        "answer": "amino acids",
+        "relation_id": "entity_to_material",
+        "prompt_en": "Creatine is synthesized from",
+        "direction": "entity -> material",
+        "subject": "Creatine",
+        "canonical_fact": "Creatine is synthesized from amino acids in the liver.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "amino acids",
+          "amino acids in the liver."
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5d529bdd565f8f568b03d6ca2b6140ba8d932c4895751850afdc77a779656127",
+      "input_sha256": "58920660adf374b6e126182ad40118c29715f62ac1ea60e9ebf84f6b2646ccc4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f75a32a7c1f5c227d4a3",
+      "decision": "ready",
+      "subject": "What's Eating Gilbert Grape",
+      "relation_id": "work_to_story_setting",
+      "relation_definition": "Geographic location where the narrative or plot of a specified work takes place; distinct from filming location and production country.",
+      "direction": "work -> story setting location",
+      "answer": "United States of America",
+      "canonical_fact": "What's Eating Gilbert Grape takes place in the United States of America.",
+      "prompt_en": "What's Eating Gilbert Grape takes place in the",
+      "evidence_quotes": [
+        "where does what's eating gilbert grape take place",
+        "United States of America"
+      ],
+      "reason": "Source states the story takes place in the United States of America. No existing catalog relation fits: work_to_filming_location explicitly excludes story setting, and entity_to_containing_location addresses geographic containment of a physical entity rather than a narrative's setting. Proposed new relation work_to_story_setting to capture narrative location.",
+      "english": {
+        "answer": "United States of America",
+        "relation_id": "work_to_story_setting",
+        "prompt_en": "What's Eating Gilbert Grape takes place in the",
+        "direction": "work -> story setting location",
+        "subject": "What's Eating Gilbert Grape",
+        "canonical_fact": "What's Eating Gilbert Grape takes place in the United States of America.",
+        "relation_definition": "Geographic location where the narrative or plot of a specified work takes place; distinct from filming location and production country.",
+        "answer_aliases_en": [
+          "United States of America",
+          "U.S.A.",
+          "the USA",
+          "the United States",
+          "U. S. A.",
+          "USA",
+          "US of A",
+          "the US",
+          "United States",
+          "U. S.",
+          "U.S.",
+          "America",
+          "the United States of America",
+          "US"
+        ],
+        "relation_spec": {
+          "id": "work_to_story_setting",
+          "definition": "Geographic location where the narrative or plot of a specified work takes place; distinct from filming location and production country.",
+          "direction": "work -> story setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9480de2ad89b424f39d4434e8560dfc83b1ea0ffc68074a18c454860ea33e121",
+      "input_sha256": "9173009f7f3f52498701ea1ef15aa55092c98eaa0cabdcc0b0984f2830282ff7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f74992820ee1e18e42b7",
+      "input_sha256": "58920660adf374b6e126182ad40118c29715f62ac1ea60e9ebf84f6b2646ccc4",
+      "english": {
+        "answer": "amino acids",
+        "relation_id": "entity_to_material",
+        "prompt_en": "Creatine is synthesized from",
+        "direction": "entity -> material",
+        "subject": "Creatine",
+        "canonical_fact": "Creatine is synthesized from amino acids in the liver.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "amino acids",
+          "amino acids in the liver."
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5d529bdd565f8f568b03d6ca2b6140ba8d932c4895751850afdc77a779656127",
+      "translation": {
+        "record_id": "public:pbf_f74992820ee1e18e42b7",
+        "subject_zh": "肌酸",
+        "prompt_zh": "肌酸由什么合成",
+        "canonical_fact_zh": "肌酸在肝脏中由氨基酸合成。",
+        "answer_zh": "氨基酸",
+        "answer_aliases_zh": [
+          "氨基酸",
+          "肝脏中的氨基酸"
+        ]
+      },
+      "translation_sha256": "f25109974d559b2c239f90a795981fec4d149f56651e4d4898f059399250976b"
+    },
+    {
+      "record_id": "public:pbf_f75a32a7c1f5c227d4a3",
+      "input_sha256": "9173009f7f3f52498701ea1ef15aa55092c98eaa0cabdcc0b0984f2830282ff7",
+      "english": {
+        "answer": "United States of America",
+        "relation_id": "work_to_story_setting",
+        "prompt_en": "What's Eating Gilbert Grape takes place in the",
+        "direction": "work -> story setting location",
+        "subject": "What's Eating Gilbert Grape",
+        "canonical_fact": "What's Eating Gilbert Grape takes place in the United States of America.",
+        "relation_definition": "Geographic location where the narrative or plot of a specified work takes place; distinct from filming location and production country.",
+        "answer_aliases_en": [
+          "United States of America",
+          "U.S.A.",
+          "the USA",
+          "the United States",
+          "U. S. A.",
+          "USA",
+          "US of A",
+          "the US",
+          "United States",
+          "U. S.",
+          "U.S.",
+          "America",
+          "the United States of America",
+          "US"
+        ],
+        "relation_spec": {
+          "id": "work_to_story_setting",
+          "definition": "Geographic location where the narrative or plot of a specified work takes place; distinct from filming location and production country.",
+          "direction": "work -> story setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9480de2ad89b424f39d4434e8560dfc83b1ea0ffc68074a18c454860ea33e121",
+      "translation": {
+        "record_id": "public:pbf_f75a32a7c1f5c227d4a3",
+        "subject_zh": "《吉尔伯特·葛雷普》",
+        "prompt_zh": "《吉尔伯特·葛雷普》的故事发生在",
+        "canonical_fact_zh": "《吉尔伯特·葛雷普》的故事发生在美利坚合众国。",
+        "answer_zh": "美利坚合众国",
+        "answer_aliases_zh": [
+          "美利坚合众国",
+          "美利坚合众国",
+          "美国",
+          "美利坚合众国",
+          "美利坚合众国",
+          "美国",
+          "美利坚合众国",
+          "美国",
+          "美利坚合众国",
+          "美利坚合众国",
+          "美利坚合众国",
+          "美国",
+          "美利坚合众国",
+          "美国"
+        ]
+      },
+      "translation_sha256": "7782369c7137e0f91f904eb2af53b8b7adf285f3dfced87661d93dcadc076090"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f74992820ee1e18e42b7",
+        "public:pbf_f75a32a7c1f5c227d4a3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d8dbab54a9d8f22fcf82b176405630e57dc87622412b9f8c11f1d9d3af8d62ee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.97
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f74992820ee1e18e42b7",
+        "public:pbf_f75a32a7c1f5c227d4a3"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d8dbab54a9d8f22fcf82b176405630e57dc87622412b9f8c11f1d9d3af8d62ee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3452,
+      "first_chunk_seconds": 29.509,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3564,
+        "prompt_tokens": 1629,
+        "total_tokens": 5193,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3066,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "683128784ef3d8f05704cca1431ef22f8ccf9cd4b86dc8fcd8ac1ac7cf62f95d",
+      "status": "completed",
+      "latency_seconds": 94.037
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f74992820ee1e18e42b7",
+        "public:pbf_f75a32a7c1f5c227d4a3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c1fcdaeb9b8374938ce22d2cdac11d86fb6ca7e876ad64ad866ef18d6aec314a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2501,
+      "first_chunk_seconds": 27.939,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2544,
+        "prompt_tokens": 904,
+        "total_tokens": 3448,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2175,
+          "text_tokens": 369
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4f00572042be512af63ccd32b9d9113e54954a9589e26d3f8026fc57ec103dba",
+      "status": "completed",
+      "latency_seconds": 69.583
+    }
+  ],
+  "status": "completed"
+}

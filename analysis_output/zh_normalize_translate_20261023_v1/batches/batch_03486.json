@@ -1,0 +1,171 @@
+{
+  "input_sha256": "768ca7d487f54a04c946ec84e128844b9e012deb0147d2f1499784c9c240bd08",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006816",
+      "decision": "ready",
+      "subject": "shelf holding things you eat that need to be kept cold",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "refrigerator",
+      "canonical_fact": "A shelf holding things you eat that need to be kept cold is a component part of a refrigerator.",
+      "prompt_en": "A shelf holding things you eat that need to be kept cold would be inside what?",
+      "evidence_quotes": [
+        "A shelf holding things you eat that need to be kept cold would be inside what?",
+        "refrigerator"
+      ],
+      "reason": "The source question describes a shelf for cold food and asks what it is inside; the source answer 'refrigerator' is a literal substring. The shelf is a physical component housed within the refrigerator, fitting part_to_whole (shelf → refrigerator). entity_to_containing_location is inapplicable because its definition is limited to geographic containment. No other catalog relation captures object-level component containment.",
+      "english": {
+        "prompt_en": "A shelf holding things you eat that need to be kept cold would be inside what?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer": "refrigerator",
+        "canonical_fact": "A shelf holding things you eat that need to be kept cold is a component part of a refrigerator.",
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "subject": "shelf holding things you eat that need to be kept cold",
+        "answer_aliases_en": [
+          "refrigerator"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "86d551e119bc307145ce94a58ffb731f5cd449a10506e09aac5c1716e893a420",
+      "input_sha256": "295b44a0ba1734e416d9fc2841178decad55ef545dfb8f13b9eae11c2e24cc6e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006853",
+      "decision": "ready",
+      "subject": "killing",
+      "relation_id": "action_to_trial_type",
+      "relation_definition": "The specific type of legal trial that follows a specified criminal act; retains jurisdiction and statutory scope implied by context.",
+      "direction": "criminal act -> trial type",
+      "answer": "criminal trial",
+      "canonical_fact": "Killing results in a criminal trial.",
+      "prompt_en": "Killing will result in what kind of trial?",
+      "evidence_quotes": [
+        "Killing will result in what kind of trial?",
+        "criminal trial"
+      ],
+      "reason": "The source question asks which trial type results from the act of killing; the source answer 'criminal trial' is a literal substring. No existing catalog relation covers a causal mapping from a criminal act to its corresponding trial type. entity_to_class does not fit because the relation is 'results in', not 'is a member of'. A new relation action_to_trial_type is proposed to capture this act-to-legal-consequence mapping without forcing a broad category.",
+      "english": {
+        "prompt_en": "Killing will result in what kind of trial?",
+        "relation_definition": "The specific type of legal trial that follows a specified criminal act; retains jurisdiction and statutory scope implied by context.",
+        "answer": "criminal trial",
+        "canonical_fact": "Killing results in a criminal trial.",
+        "direction": "criminal act -> trial type",
+        "relation_id": "action_to_trial_type",
+        "subject": "killing",
+        "answer_aliases_en": [
+          "criminal trial"
+        ],
+        "relation_spec": {
+          "id": "action_to_trial_type",
+          "definition": "The specific type of legal trial that follows a specified criminal act; retains jurisdiction and statutory scope implied by context.",
+          "direction": "criminal act -> trial type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3d80587443b2a9fc7551ff965befb2b125ce68fecdb67a1e91beafb4e45fdc31",
+      "input_sha256": "c9f20d681f5966f6f2edd3c6824945427329b54d97b241bd38dc4647fd99ad40",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006816",
+        "historical:raw_commonsense_qa_006853"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "40ba5a3ed6d21a3ead6d85068016d1a8aa7c7e7f1b33179c57ce326649dd7ba0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.538
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006816",
+        "historical:raw_commonsense_qa_006853"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "40ba5a3ed6d21a3ead6d85068016d1a8aa7c7e7f1b33179c57ce326649dd7ba0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2700,
+      "first_chunk_seconds": 8.577,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2787,
+        "prompt_tokens": 1605,
+        "total_tokens": 4392,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2227,
+          "text_tokens": 560
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e3a730ed5969287ed1b4e78afd68655317ed0a2ee4b7b37154653e65817ec3c6",
+      "status": "completed",
+      "latency_seconds": 52.497
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006816",
+        "historical:raw_commonsense_qa_006853"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cfc53f68369536c47015d9bc41aa6794809e672682f55dbefc8eb1e51b27a385",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.826
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006816",
+        "historical:raw_commonsense_qa_006853"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cfc53f68369536c47015d9bc41aa6794809e672682f55dbefc8eb1e51b27a385",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 27.193
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006816",
+        "historical:raw_commonsense_qa_006853"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cfc53f68369536c47015d9bc41aa6794809e672682f55dbefc8eb1e51b27a385",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.108
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,217 @@
+{
+  "input_sha256": "535f2a553da8cd9a0544b555f43322c5e930f079126912fe96f70cc6541d7899",
+  "normalized": [
+    {
+      "record_id": "public:pbf_962d2d4d2bb86838170f",
+      "decision": "ready",
+      "subject": "Natalie Portman",
+      "relation_id": "person_to_award_work",
+      "relation_definition": "A specified work (film, book, performance) for which a named person won a specified award; retain the award name and qualifier.",
+      "direction": "person -> work",
+      "answer": "Black Swan",
+      "canonical_fact": "Natalie Portman won an Oscar for the movie Black Swan.",
+      "prompt_en": "Natalie Portman won an Oscar for the movie",
+      "evidence_quotes": [
+        "what movie did natalie portman win an oscar for",
+        "Black Swan"
+      ],
+      "reason": "The source question asks which movie Natalie Portman won an Oscar for, and the source answer is 'Black Swan.' No existing catalog relation captures a person-to-work link qualified by a specific award; the closest entries (song_to_performer, character_to_actor, written_work_to_author) do not fit the direction or semantics. A new relation person_to_award_work (person -> work) is proposed to express that a named person won a specified award for a specified work. The answer 'Black Swan' is copied verbatim from the source answer; the prompt_en omits the answer and contains no multiple-choice options.",
+      "english": {
+        "answer": "Black Swan",
+        "relation_id": "person_to_award_work",
+        "prompt_en": "Natalie Portman won an Oscar for the movie",
+        "direction": "person -> work",
+        "subject": "Natalie Portman",
+        "canonical_fact": "Natalie Portman won an Oscar for the movie Black Swan.",
+        "relation_definition": "A specified work (film, book, performance) for which a named person won a specified award; retain the award name and qualifier.",
+        "answer_aliases_en": [
+          "Black Swan"
+        ],
+        "relation_spec": {
+          "id": "person_to_award_work",
+          "definition": "A specified work (film, book, performance) for which a named person won a specified award; retain the award name and qualifier.",
+          "direction": "person -> work"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fd4b2c8a4a41237e40e6a4cf7d27100b98d515ab50bfae21980d56fc6cddbf8d",
+      "input_sha256": "f1db05ddf78c90899274253dac02571d3af6918f19b6918ee0b555442666444b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_963a4804ad99ec2a7c34",
+      "decision": "ready",
+      "subject": "natural defense against free radicals in the human body",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "SOD",
+      "canonical_fact": "The natural defense against free radicals in the human body is referred to as SOD.",
+      "prompt_en": "The natural defense against free radicals in the human body is referred to as",
+      "evidence_quotes": [
+        "Our bodies have a natural, built in defense against free radicals that is referred to as",
+        "SOD"
+      ],
+      "reason": "The source question supplies a defining description ('natural, built in defense against free radicals') and asks for the term it is referred to as; the source answer is 'SOD.' This maps exactly to the catalog relation description_to_term (description -> term). The answer 'SOD' is kept verbatim from the source. The prompt_en reproduces the description without including the answer token and contains no options.",
+      "english": {
+        "answer": "SOD",
+        "relation_id": "description_to_term",
+        "prompt_en": "The natural defense against free radicals in the human body is referred to as",
+        "direction": "description -> term",
+        "subject": "natural defense against free radicals in the human body",
+        "canonical_fact": "The natural defense against free radicals in the human body is referred to as SOD.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "SOD"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a82ce8722cf517cbd225bb4cd67550360124449daff7370d349b22a5e877f784",
+      "input_sha256": "7f2611bf69ec0385473ad745ceef37f56689caa7ebe41bbf485b2f8fe00489fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_962d2d4d2bb86838170f",
+      "input_sha256": "f1db05ddf78c90899274253dac02571d3af6918f19b6918ee0b555442666444b",
+      "english": {
+        "answer": "Black Swan",
+        "relation_id": "person_to_award_work",
+        "prompt_en": "Natalie Portman won an Oscar for the movie",
+        "direction": "person -> work",
+        "subject": "Natalie Portman",
+        "canonical_fact": "Natalie Portman won an Oscar for the movie Black Swan.",
+        "relation_definition": "A specified work (film, book, performance) for which a named person won a specified award; retain the award name and qualifier.",
+        "answer_aliases_en": [
+          "Black Swan"
+        ],
+        "relation_spec": {
+          "id": "person_to_award_work",
+          "definition": "A specified work (film, book, performance) for which a named person won a specified award; retain the award name and qualifier.",
+          "direction": "person -> work"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fd4b2c8a4a41237e40e6a4cf7d27100b98d515ab50bfae21980d56fc6cddbf8d",
+      "translation": {
+        "record_id": "public:pbf_962d2d4d2bb86838170f",
+        "subject_zh": "娜塔莉·波特曼",
+        "prompt_zh": "娜塔莉·波特曼因电影获得了奥斯卡奖",
+        "canonical_fact_zh": "娜塔莉·波特曼因电影《黑天鹅》获得了奥斯卡奖。",
+        "answer_zh": "黑天鹅",
+        "answer_aliases_zh": [
+          "黑天鹅"
+        ]
+      },
+      "translation_sha256": "9b982d6e9c6b9f0f73fdb6e7c5b14939a1d74877de005458b230bb55a75cc866"
+    },
+    {
+      "record_id": "public:pbf_963a4804ad99ec2a7c34",
+      "input_sha256": "7f2611bf69ec0385473ad745ceef37f56689caa7ebe41bbf485b2f8fe00489fe",
+      "english": {
+        "answer": "SOD",
+        "relation_id": "description_to_term",
+        "prompt_en": "The natural defense against free radicals in the human body is referred to as",
+        "direction": "description -> term",
+        "subject": "natural defense against free radicals in the human body",
+        "canonical_fact": "The natural defense against free radicals in the human body is referred to as SOD.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "SOD"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a82ce8722cf517cbd225bb4cd67550360124449daff7370d349b22a5e877f784",
+      "translation": {
+        "record_id": "public:pbf_963a4804ad99ec2a7c34",
+        "subject_zh": "人体对抗自由基的天然防御",
+        "prompt_zh": "人体对抗自由基的天然防御被称为",
+        "canonical_fact_zh": "人体对抗自由基的天然防御被称为SOD。",
+        "answer_zh": "SOD",
+        "answer_aliases_zh": [
+          "SOD"
+        ]
+      },
+      "translation_sha256": "f0aac08ef13afdac6883fa496943321a4fcf1c66cf45be1f780940f95477090b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_962d2d4d2bb86838170f",
+        "public:pbf_963a4804ad99ec2a7c34"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "002c14150e3cd765046054105064a708672876a78664577b4246e037400f649d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1877,
+      "first_chunk_seconds": 13.363,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1874,
+        "prompt_tokens": 1612,
+        "total_tokens": 3486,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1248,
+          "text_tokens": 626
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "5592d2deef4381589d62c42172bb3b80d1488613a922dee1eadbfb079d0db807",
+      "status": "completed",
+      "latency_seconds": 28.056
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_962d2d4d2bb86838170f",
+        "public:pbf_963a4804ad99ec2a7c34"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e6378ee66bcdbb9f4191aa9e248ba3e6cf3a6c8160924a24dc30a9fa088ed232",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1345,
+      "first_chunk_seconds": 38.68,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1343,
+        "prompt_tokens": 862,
+        "total_tokens": 2205,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1090,
+          "text_tokens": 253
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "90aa9c1f46a44d8caf337f804ffcf386f7883a5606b8e2ba6e14a9be3e3e2ff4",
+      "status": "completed",
+      "latency_seconds": 51.744
+    }
+  ],
+  "status": "completed"
+}

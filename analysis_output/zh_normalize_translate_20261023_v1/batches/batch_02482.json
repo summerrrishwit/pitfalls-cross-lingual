@@ -1,0 +1,214 @@
+{
+  "input_sha256": "6a88173a68e13ac7e8654ce7e527490756427775752d0d7ab6768aaf6cf888b4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001381",
+      "decision": "ready",
+      "subject": "rook",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "castle",
+      "canonical_fact": "A rook is commonly called a castle by children.",
+      "prompt_en": "What alternative name do children commonly use for a rook in chess?",
+      "evidence_quotes": [
+        "a child is calling it a what?",
+        "castle"
+      ],
+      "reason": "Source question explicitly asks what a child calls a rook; source answer is 'castle'. entity_to_alias fits: rook (chess piece) -> castle (equivalent name). The qualifier 'used by children' is retained in the canonical fact as a descriptive property of the alias.",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "castle",
+        "canonical_fact": "A rook is commonly called a castle by children.",
+        "subject": "rook",
+        "prompt_en": "What alternative name do children commonly use for a rook in chess?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "castle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0454a4fae7cfea8487c33304f2bb905c65c08652a423b88f6144532341dcb1e4",
+      "input_sha256": "ac06e444e64171701a20f55ab14265fcc3f8f64b873c57fd5a5427bdb1f0b5e3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001413",
+      "decision": "ready",
+      "subject": "steam",
+      "relation_id": "substance_to_phase_on_cooling",
+      "relation_definition": "The physical phase a substance transitions to when cooled, retaining substance identity and not conflating with chemical transformation.",
+      "direction": "substance -> phase when cooled",
+      "answer": "liquid water",
+      "canonical_fact": "Steam becomes liquid water when cooled.",
+      "prompt_en": "What does steam become when it is cooled?",
+      "evidence_quotes": [
+        "What did the steam become?",
+        "liquid water"
+      ],
+      "reason": "Source question states steam was cooled and asks what it became; source answer is 'liquid water'. No existing catalog relation captures a phase-change-on-cooling relationship, so a new relation is proposed. The fact is directly and unambiguously supported by the source.",
+      "english": {
+        "direction": "substance -> phase when cooled",
+        "relation_id": "substance_to_phase_on_cooling",
+        "answer": "liquid water",
+        "canonical_fact": "Steam becomes liquid water when cooled.",
+        "subject": "steam",
+        "prompt_en": "What does steam become when it is cooled?",
+        "relation_definition": "The physical phase a substance transitions to when cooled, retaining substance identity and not conflating with chemical transformation.",
+        "answer_aliases_en": [
+          "liquid water"
+        ],
+        "relation_spec": {
+          "id": "substance_to_phase_on_cooling",
+          "definition": "The physical phase a substance transitions to when cooled, retaining substance identity and not conflating with chemical transformation.",
+          "direction": "substance -> phase when cooled"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a4a7770564f4cf821d15331e15fdcedfbfb320667e172fdcb9cfe643f1129c6f",
+      "input_sha256": "2305f63a21f5fd5b95df6d13a91dacecbce79ccff81c13b7ac5dcc5c128b5f7d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001381",
+      "input_sha256": "ac06e444e64171701a20f55ab14265fcc3f8f64b873c57fd5a5427bdb1f0b5e3",
+      "english": {
+        "direction": "entity -> alias",
+        "relation_id": "entity_to_alias",
+        "answer": "castle",
+        "canonical_fact": "A rook is commonly called a castle by children.",
+        "subject": "rook",
+        "prompt_en": "What alternative name do children commonly use for a rook in chess?",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "castle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0454a4fae7cfea8487c33304f2bb905c65c08652a423b88f6144532341dcb1e4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001381",
+        "subject_zh": "车",
+        "prompt_zh": "孩子们通常用哪个替代名称来称呼国际象棋中的车？",
+        "canonical_fact_zh": "孩子们通常把车称为城堡。",
+        "answer_zh": "城堡",
+        "answer_aliases_zh": [
+          "城堡"
+        ]
+      },
+      "translation_sha256": "2dfc6f831f03db9d4cc1285f62625ccbb1e50543723be3765025a7de2a81c7b5"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001413",
+      "input_sha256": "2305f63a21f5fd5b95df6d13a91dacecbce79ccff81c13b7ac5dcc5c128b5f7d",
+      "english": {
+        "direction": "substance -> phase when cooled",
+        "relation_id": "substance_to_phase_on_cooling",
+        "answer": "liquid water",
+        "canonical_fact": "Steam becomes liquid water when cooled.",
+        "subject": "steam",
+        "prompt_en": "What does steam become when it is cooled?",
+        "relation_definition": "The physical phase a substance transitions to when cooled, retaining substance identity and not conflating with chemical transformation.",
+        "answer_aliases_en": [
+          "liquid water"
+        ],
+        "relation_spec": {
+          "id": "substance_to_phase_on_cooling",
+          "definition": "The physical phase a substance transitions to when cooled, retaining substance identity and not conflating with chemical transformation.",
+          "direction": "substance -> phase when cooled"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a4a7770564f4cf821d15331e15fdcedfbfb320667e172fdcb9cfe643f1129c6f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001413",
+        "subject_zh": "蒸汽",
+        "prompt_zh": "蒸汽冷却后会变成什么？",
+        "canonical_fact_zh": "蒸汽冷却后会变成液态水。",
+        "answer_zh": "液态水",
+        "answer_aliases_zh": [
+          "液态水"
+        ]
+      },
+      "translation_sha256": "5be8fc7df9fb96fe7529e09396d0650fef092d3467e4ffd9630ed61e1dc968f8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001381",
+        "historical:raw_commonsense_qa_001413"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "32db1280e07025f102c9282dd04bc8190b7862fc8febf27037584cd41ea80235",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2323,
+      "first_chunk_seconds": 11.655,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2388,
+        "prompt_tokens": 1645,
+        "total_tokens": 4033,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1925,
+          "text_tokens": 463
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "35050ddef2686b39c64150d9a71482962fa0c82efe9e8eb9f810e46d7bd9095b",
+      "status": "completed",
+      "latency_seconds": 46.908
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001381",
+        "historical:raw_commonsense_qa_001413"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "77caf3d3f9a15c15a7ab63baa182ff5e733d39bf1e663c41b102b0eac8e9c46d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1116,
+      "first_chunk_seconds": 31.745,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1196,
+        "prompt_tokens": 807,
+        "total_tokens": 2003,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 990,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6fcc4c8ae290bbfd3420964d86fc50771bb23c2292b0a09969f4a21de5c4860",
+      "status": "completed",
+      "latency_seconds": 45.328
+    }
+  ],
+  "status": "completed"
+}

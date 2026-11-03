@@ -1,0 +1,182 @@
+{
+  "input_sha256": "99f7241b1e7c6f7d1721dfe14bb8b4fe60ab76c6c12c718b0ec6fc506bd33dca",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000919",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits the pathological consequence relation (plaque rupture causing fragments to embolize to other arteries). The QA structure inverts subject/answer (the answer 'plaque' is the subject of the fact, not a relation target). Proposing a new relation would be overly specific to a single medical trivia fact with minimal source support; defer.",
+      "input_sha256": "4e216a513bc659f4033dd61525160999e8f952accde4ef0d6dad74948f48ac56",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000963",
+      "decision": "ready",
+      "subject": "male reproductive system",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "the testes",
+      "canonical_fact": "The testes are the part of the male reproductive system involved with the most common disorders.",
+      "prompt_en": "What part of the male reproductive system is involved with the most common disorders?",
+      "evidence_quotes": [
+        "What part of the male reproductive system is involved with the most common disorders",
+        "the testes"
+      ],
+      "reason": "Source question asks for a specific part (constituent) of the male reproductive system qualified by 'involved with the most common disorders.' Source answer 'the testes' is a literal part of the whole organ system. whole_to_part fits exactly: the male reproductive system (whole) has the testes as a specified part under the given qualifier.",
+      "english": {
+        "prompt_en": "What part of the male reproductive system is involved with the most common disorders?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "the testes",
+        "canonical_fact": "The testes are the part of the male reproductive system involved with the most common disorders.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "male reproductive system",
+        "answer_aliases_en": [
+          "the testes"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0ddf3e9e7dc4e83cabfa815680c5a80cbfad51907c33b857c1c9b74b128c79c8",
+      "input_sha256": "d184e0a56042247fb8e3ff6d31ce3b49e95d6a7d35517afe169b902ba8c452d4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000963",
+      "input_sha256": "d184e0a56042247fb8e3ff6d31ce3b49e95d6a7d35517afe169b902ba8c452d4",
+      "english": {
+        "prompt_en": "What part of the male reproductive system is involved with the most common disorders?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "the testes",
+        "canonical_fact": "The testes are the part of the male reproductive system involved with the most common disorders.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "male reproductive system",
+        "answer_aliases_en": [
+          "the testes"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0ddf3e9e7dc4e83cabfa815680c5a80cbfad51907c33b857c1c9b74b128c79c8",
+      "translation": {
+        "record_id": "historical:raw_sciq_000963",
+        "subject_zh": "男性生殖系统",
+        "prompt_zh": "男性生殖系统中，哪个部分与最常见的疾病相关？",
+        "canonical_fact_zh": "睾丸是男性生殖系统中与最常见疾病相关的部分。",
+        "answer_zh": "睾丸",
+        "answer_aliases_zh": [
+          "睾丸"
+        ]
+      },
+      "translation_sha256": "5b5efd874afe2a6a6b66b498f5f430b3dac3cf6c0b14e495999302b23a57bb16"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000919",
+        "historical:raw_sciq_000963"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "616f93f0377371a7514d5f100953d7584f94430912e8e61c90d5c136567fbc41",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 14.429,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000919",
+        "historical:raw_sciq_000963"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "616f93f0377371a7514d5f100953d7584f94430912e8e61c90d5c136567fbc41",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2683,
+      "first_chunk_seconds": 3.715,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2791,
+        "prompt_tokens": 1688,
+        "total_tokens": 4479,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2422,
+          "text_tokens": 369
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cc7df4c72a4ec792e1be94161ba196157ed0262cac931ce3f52fa13debef6c2b",
+      "status": "completed",
+      "latency_seconds": 62.744
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000963"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e8fdd4e64ed771f7064145121e74b1c9133efc5ac8ea42380b165d11f21f66e3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 532,
+      "first_chunk_seconds": 3.163,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 571,
+        "prompt_tokens": 573,
+        "total_tokens": 1144,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 456,
+          "text_tokens": 115
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1e04cd62b8a7ffec2e9b5435c86cd6677c2e5b617d0c18ceab3776412c51c758",
+      "status": "completed",
+      "latency_seconds": 10.507
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,282 @@
+{
+  "input_sha256": "eccc77e58f1f5324cdca6a1f3df4e3d54da820d2c3ef4e72b225a6ddbd9b8ca2",
+  "normalized": [
+    {
+      "record_id": "public:pbf_231fea81b55f809285f0",
+      "decision": "ready",
+      "subject": "Corbin Bleu",
+      "relation_id": "actor_to_character",
+      "relation_definition": "The character portrayed by a named actor in a specified work and version.",
+      "direction": "actor in specified work -> character",
+      "answer": "Chad Danforth",
+      "canonical_fact": "Corbin Bleu plays the character Chad Danforth in High School Musical.",
+      "prompt_en": "Which character does Corbin Bleu play in High School Musical?",
+      "evidence_quotes": [
+        "who does corbin bleu play in high school musical",
+        "Chad Danforth"
+      ],
+      "reason": "Source answer directly states the character. Catalog has character_to_actor (character->actor), which is the inverse direction; no existing relation covers actor->character, so a new relation actor_to_character is proposed.",
+      "english": {
+        "direction": "actor in specified work -> character",
+        "prompt_en": "Which character does Corbin Bleu play in High School Musical?",
+        "relation_id": "actor_to_character",
+        "answer": "Chad Danforth",
+        "relation_definition": "The character portrayed by a named actor in a specified work and version.",
+        "subject": "Corbin Bleu",
+        "canonical_fact": "Corbin Bleu plays the character Chad Danforth in High School Musical.",
+        "answer_aliases_en": [
+          "Chad Danforth"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "The character portrayed by a named actor in a specified work and version.",
+          "direction": "actor in specified work -> character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "09fd9b8675be5e63db6f8b5a5f6927ab415f5e2acece6c2e4434063af584764b",
+      "input_sha256": "e6472ced6f854700265e9c6fa6a5512f8d960933700e46f74c5d0f1930647c12",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_23314b336ecc556b1935",
+      "decision": "ready",
+      "subject": "The Secret Life of Bees",
+      "relation_id": "work_to_story_setting",
+      "relation_definition": "The geographic location where the narrative of a specified work takes place; distinct from filming or production location.",
+      "direction": "specified work -> story setting location",
+      "answer": "United States of America",
+      "canonical_fact": "The Secret Life of Bees takes place in the United States of America.",
+      "prompt_en": "Where does the story of The Secret Life of Bees take place?",
+      "evidence_quotes": [
+        "where did the secret life of bees take place",
+        "United States of America"
+      ],
+      "reason": "Source answer gives the story setting (country). work_to_filming_location explicitly excludes story setting, and no other catalog relation fits; proposed new relation work_to_story_setting.",
+      "english": {
+        "direction": "specified work -> story setting location",
+        "prompt_en": "Where does the story of The Secret Life of Bees take place?",
+        "relation_id": "work_to_story_setting",
+        "answer": "United States of America",
+        "relation_definition": "The geographic location where the narrative of a specified work takes place; distinct from filming or production location.",
+        "subject": "The Secret Life of Bees",
+        "canonical_fact": "The Secret Life of Bees takes place in the United States of America.",
+        "answer_aliases_en": [
+          "United States of America",
+          "U.S.A.",
+          "the USA",
+          "the United States",
+          "U. S. A.",
+          "USA",
+          "US of A",
+          "the US",
+          "United States",
+          "U. S.",
+          "U.S.",
+          "America",
+          "the United States of America",
+          "US"
+        ],
+        "relation_spec": {
+          "id": "work_to_story_setting",
+          "definition": "The geographic location where the narrative of a specified work takes place; distinct from filming or production location.",
+          "direction": "specified work -> story setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e45367a358c2d250ab9c95cd8f9f180c16c16bcbad043cf567f00442b50ce593",
+      "input_sha256": "fb4726fab409826fe4472e78526349e5f6613a8a38777a8abf9387fb04874f25",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_231fea81b55f809285f0",
+      "input_sha256": "e6472ced6f854700265e9c6fa6a5512f8d960933700e46f74c5d0f1930647c12",
+      "english": {
+        "direction": "actor in specified work -> character",
+        "prompt_en": "Which character does Corbin Bleu play in High School Musical?",
+        "relation_id": "actor_to_character",
+        "answer": "Chad Danforth",
+        "relation_definition": "The character portrayed by a named actor in a specified work and version.",
+        "subject": "Corbin Bleu",
+        "canonical_fact": "Corbin Bleu plays the character Chad Danforth in High School Musical.",
+        "answer_aliases_en": [
+          "Chad Danforth"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "The character portrayed by a named actor in a specified work and version.",
+          "direction": "actor in specified work -> character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "09fd9b8675be5e63db6f8b5a5f6927ab415f5e2acece6c2e4434063af584764b",
+      "translation": {
+        "record_id": "public:pbf_231fea81b55f809285f0",
+        "subject_zh": "科宾·布鲁",
+        "prompt_zh": "科宾·布鲁在《歌舞青春》中扮演哪个角色？",
+        "canonical_fact_zh": "科宾·布鲁在《歌舞青春》中饰演查德·丹弗斯。",
+        "answer_zh": "查德·丹弗斯",
+        "answer_aliases_zh": [
+          "查德·丹弗斯"
+        ]
+      },
+      "translation_sha256": "12ebb81ec51ff16925b4f9a21518e44ec05dc905d2fd038342a7db3aef6bca2d"
+    },
+    {
+      "record_id": "public:pbf_23314b336ecc556b1935",
+      "input_sha256": "fb4726fab409826fe4472e78526349e5f6613a8a38777a8abf9387fb04874f25",
+      "english": {
+        "direction": "specified work -> story setting location",
+        "prompt_en": "Where does the story of The Secret Life of Bees take place?",
+        "relation_id": "work_to_story_setting",
+        "answer": "United States of America",
+        "relation_definition": "The geographic location where the narrative of a specified work takes place; distinct from filming or production location.",
+        "subject": "The Secret Life of Bees",
+        "canonical_fact": "The Secret Life of Bees takes place in the United States of America.",
+        "answer_aliases_en": [
+          "United States of America",
+          "U.S.A.",
+          "the USA",
+          "the United States",
+          "U. S. A.",
+          "USA",
+          "US of A",
+          "the US",
+          "United States",
+          "U. S.",
+          "U.S.",
+          "America",
+          "the United States of America",
+          "US"
+        ],
+        "relation_spec": {
+          "id": "work_to_story_setting",
+          "definition": "The geographic location where the narrative of a specified work takes place; distinct from filming or production location.",
+          "direction": "specified work -> story setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e45367a358c2d250ab9c95cd8f9f180c16c16bcbad043cf567f00442b50ce593",
+      "translation": {
+        "record_id": "public:pbf_23314b336ecc556b1935",
+        "subject_zh": "《蜜蜂的秘密生活》",
+        "prompt_zh": "《蜜蜂的秘密生活》的故事发生在哪里？",
+        "canonical_fact_zh": "《蜜蜂的秘密生活》的故事发生在美国。",
+        "answer_zh": "美利坚合众国",
+        "answer_aliases_zh": [
+          "美利坚合众国",
+          "U.S.A.",
+          "USA",
+          "美国",
+          "U. S. A.",
+          "USA",
+          "US of A",
+          "US",
+          "美国",
+          "U. S.",
+          "U.S.",
+          "美国",
+          "美利坚合众国",
+          "US"
+        ]
+      },
+      "translation_sha256": "b3d76c7450b7b3bb2223dd972b2a30f1393044ed4382d5c43bf717544511581e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_231fea81b55f809285f0",
+        "public:pbf_23314b336ecc556b1935"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5e209556b6a4f53672198be08fc04eee96bc2539c3f9ae8eb0341300669c8dfe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1697,
+      "first_chunk_seconds": 33.873,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1809,
+        "prompt_tokens": 1656,
+        "total_tokens": 3465,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1331,
+          "text_tokens": 478
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a494986648956025167c4926203561ad0af246a21b0f1ae5d24b1ec5292addb",
+      "status": "completed",
+      "latency_seconds": 59.679
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_231fea81b55f809285f0",
+        "public:pbf_23314b336ecc556b1935"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3126bf3e508e8f66c8f185e37c343fad563722adddafad0162cdf42c437acc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 10.242
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_231fea81b55f809285f0",
+        "public:pbf_23314b336ecc556b1935"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a3126bf3e508e8f66c8f185e37c343fad563722adddafad0162cdf42c437acc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 70.441
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_231fea81b55f809285f0",
+        "public:pbf_23314b336ecc556b1935"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a3126bf3e508e8f66c8f185e37c343fad563722adddafad0162cdf42c437acc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1953,
+      "first_chunk_seconds": 25.767,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2175,
+        "prompt_tokens": 918,
+        "total_tokens": 3093,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1938,
+          "text_tokens": 237
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fce790121b2b4b81dd63f016e9a814c9a6595b256c0f0ad025fa75e8633bc45b",
+      "status": "completed",
+      "latency_seconds": 63.229
+    }
+  ],
+  "status": "completed"
+}

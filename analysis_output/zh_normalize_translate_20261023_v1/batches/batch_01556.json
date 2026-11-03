@@ -1,0 +1,223 @@
+{
+  "input_sha256": "86ab6d98f3f707b05aad315a2be05347f639433918c4d4dba966d5dc382ae4dc",
+  "normalized": [
+    {
+      "record_id": "public:pbf_a9f283d98a61e0c4f930",
+      "decision": "ready",
+      "subject": "trade balance",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "current account",
+      "canonical_fact": "The trade balance is a constituent part of the current account of the balance of payments.",
+      "prompt_en": "In the balance of payments, the trade balance is a part of the",
+      "evidence_quotes": [
+        "appears in the current account",
+        "In the balance of payments the trade balance"
+      ],
+      "reason": "The trade balance is a stated constituent line-item within the current account of the balance of payments, matching part_to_whole direction (part -> whole) exactly. Answer 'current account' is a literal substring of the source answer.",
+      "english": {
+        "answer": "current account",
+        "relation_id": "part_to_whole",
+        "prompt_en": "In the balance of payments, the trade balance is a part of the",
+        "direction": "part -> whole",
+        "subject": "trade balance",
+        "canonical_fact": "The trade balance is a constituent part of the current account of the balance of payments.",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "current account",
+          "appears in the current account"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d38a3869c6a9a4c85ffa7706996eeec1ffd67cee2b71267ede06adf49d4e476d",
+      "input_sha256": "a0b024fc546f10ef4282d3bd87cdfcec0dcb7aee451c497133c4033005ef5be8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_a9fde6cdb31eabdc0689",
+      "decision": "ready",
+      "subject": "blastomere with the gray crescent in an amphibian zygote",
+      "relation_id": "cell_to_developmental_fate",
+      "relation_definition": "The expected developmental outcome of a specified cell or cellular component under stated organismal and/or experimental conditions.",
+      "direction": "specified cell in stated organism/condition -> developmental fate",
+      "answer": "complete, but small, embryo",
+      "canonical_fact": "The blastomere with the gray crescent in an amphibian zygote will form a complete, but small, embryo.",
+      "prompt_en": "In an amphibian zygote, the blastomere containing the gray crescent will form a",
+      "evidence_quotes": [
+        "The blastomere with the gray crescent will form a complete, but small, embryo.",
+        "the gray crescent was contained in only one of the two blastomeres"
+      ],
+      "reason": "No catalog relation covers a specific cell's developmental fate under stated conditions. Proposed cell_to_developmental_fate as a precise new relation. Answer 'complete, but small, embryo' is a literal substring of the source answer; the qualifier 'but small' is preserved.",
+      "english": {
+        "answer": "complete, but small, embryo",
+        "relation_id": "cell_to_developmental_fate",
+        "prompt_en": "In an amphibian zygote, the blastomere containing the gray crescent will form a",
+        "direction": "specified cell in stated organism/condition -> developmental fate",
+        "subject": "blastomere with the gray crescent in an amphibian zygote",
+        "canonical_fact": "The blastomere with the gray crescent in an amphibian zygote will form a complete, but small, embryo.",
+        "relation_definition": "The expected developmental outcome of a specified cell or cellular component under stated organismal and/or experimental conditions.",
+        "answer_aliases_en": [
+          "complete, but small, embryo",
+          "The blastomere with the gray crescent will form a complete, but small, embryo."
+        ],
+        "relation_spec": {
+          "id": "cell_to_developmental_fate",
+          "definition": "The expected developmental outcome of a specified cell or cellular component under stated organismal and/or experimental conditions.",
+          "direction": "specified cell in stated organism/condition -> developmental fate"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19384dd379b0f89026e0c3199710f0f00b4ca20556040662f81e6288c24cc94d",
+      "input_sha256": "36b00942f92595bd252ccfe2d682d648dcdf531a04c8a68e2b2ff8fa402b7eb4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_a9f283d98a61e0c4f930",
+      "input_sha256": "a0b024fc546f10ef4282d3bd87cdfcec0dcb7aee451c497133c4033005ef5be8",
+      "english": {
+        "answer": "current account",
+        "relation_id": "part_to_whole",
+        "prompt_en": "In the balance of payments, the trade balance is a part of the",
+        "direction": "part -> whole",
+        "subject": "trade balance",
+        "canonical_fact": "The trade balance is a constituent part of the current account of the balance of payments.",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "current account",
+          "appears in the current account"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d38a3869c6a9a4c85ffa7706996eeec1ffd67cee2b71267ede06adf49d4e476d",
+      "translation": {
+        "record_id": "public:pbf_a9f283d98a61e0c4f930",
+        "subject_zh": "贸易收支",
+        "prompt_zh": "在国际收支中，贸易收支是____的组成部分。",
+        "canonical_fact_zh": "贸易收支是国际收支中经常账户的组成部分。",
+        "answer_zh": "经常账户",
+        "answer_aliases_zh": [
+          "经常账户",
+          "出现在经常账户中"
+        ]
+      },
+      "translation_sha256": "515179631d13a89c858e461eb22d302d51e8849095232bcb6f50f0d47211b561"
+    },
+    {
+      "record_id": "public:pbf_a9fde6cdb31eabdc0689",
+      "input_sha256": "36b00942f92595bd252ccfe2d682d648dcdf531a04c8a68e2b2ff8fa402b7eb4",
+      "english": {
+        "answer": "complete, but small, embryo",
+        "relation_id": "cell_to_developmental_fate",
+        "prompt_en": "In an amphibian zygote, the blastomere containing the gray crescent will form a",
+        "direction": "specified cell in stated organism/condition -> developmental fate",
+        "subject": "blastomere with the gray crescent in an amphibian zygote",
+        "canonical_fact": "The blastomere with the gray crescent in an amphibian zygote will form a complete, but small, embryo.",
+        "relation_definition": "The expected developmental outcome of a specified cell or cellular component under stated organismal and/or experimental conditions.",
+        "answer_aliases_en": [
+          "complete, but small, embryo",
+          "The blastomere with the gray crescent will form a complete, but small, embryo."
+        ],
+        "relation_spec": {
+          "id": "cell_to_developmental_fate",
+          "definition": "The expected developmental outcome of a specified cell or cellular component under stated organismal and/or experimental conditions.",
+          "direction": "specified cell in stated organism/condition -> developmental fate"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19384dd379b0f89026e0c3199710f0f00b4ca20556040662f81e6288c24cc94d",
+      "translation": {
+        "record_id": "public:pbf_a9fde6cdb31eabdc0689",
+        "subject_zh": "两栖类受精卵中含灰色新月形的卵裂球",
+        "prompt_zh": "在两栖类受精卵中，含有灰色新月形的卵裂球将发育形成一个____。",
+        "canonical_fact_zh": "两栖类受精卵中含灰色新月形的卵裂球将发育形成一个完整的但较小的胚胎。",
+        "answer_zh": "完整的但较小的胚胎",
+        "answer_aliases_zh": [
+          "完整的但较小的胚胎",
+          "含灰色新月形的卵裂球将发育形成一个完整的但较小的胚胎。"
+        ]
+      },
+      "translation_sha256": "e2f87c18ee18c433a43033af742c6ebfa9593a5dd0293ffc850f66a1a6618d0b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a9f283d98a61e0c4f930",
+        "public:pbf_a9fde6cdb31eabdc0689"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "84bb8596fa33542a8744085556f7c8688f3ee35d31cf2b75226c57784a93269f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2442,
+      "first_chunk_seconds": 33.04,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2459,
+        "prompt_tokens": 1743,
+        "total_tokens": 4202,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1901,
+          "text_tokens": 558
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "f0f51799008d5bbdcf9852a687a4b6a6a45cc8917de3b79f913278f3904edfa7",
+      "status": "completed",
+      "latency_seconds": 52.88
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_a9f283d98a61e0c4f930",
+        "public:pbf_a9fde6cdb31eabdc0689"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f1e2742dce2d4d2d8b88d62d92d767795335a3b64efe65d50c2d8845192412be",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1011,
+      "first_chunk_seconds": 35.389,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1103,
+        "prompt_tokens": 917,
+        "total_tokens": 2020,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 804,
+          "text_tokens": 299
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c41f55fa2b4c0ecbec1535d83f0e45844dc8aefc6d25d08c07384a6cbce820c4",
+      "status": "completed",
+      "latency_seconds": 49.238
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,174 @@
+{
+  "input_sha256": "b780954c22ebbf0100f1371a95bbbbff04eb64e947343dba027f0bac4eb010e5",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c12bd004df4a7d369e8a",
+      "decision": "ready",
+      "subject": "Colin Sweeney (The Good Wife)",
+      "relation_id": "character_to_actor",
+      "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "character in specified work/version -> actor",
+      "answer": "Dylan Baker",
+      "canonical_fact": "Colin Sweeney is portrayed by Dylan Baker in The Good Wife.",
+      "prompt_en": "Which actor plays Colin Sweeney in The Good Wife?",
+      "evidence_quotes": [
+        "who plays colin sweeney in the good wife",
+        "Dylan Baker"
+      ],
+      "reason": "source_answer 'Dylan Baker' directly answers the question about who portrays Colin Sweeney in The Good Wife; relation character_to_actor fits exactly with the specified work disambiguation.",
+      "english": {
+        "relation_id": "character_to_actor",
+        "canonical_fact": "Colin Sweeney is portrayed by Dylan Baker in The Good Wife.",
+        "answer": "Dylan Baker",
+        "prompt_en": "Which actor plays Colin Sweeney in The Good Wife?",
+        "subject": "Colin Sweeney (The Good Wife)",
+        "direction": "character in specified work/version -> actor",
+        "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Dylan Baker"
+        ],
+        "relation_spec": {
+          "id": "character_to_actor",
+          "direction": "character in specified work/version -> actor",
+          "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ff82f04e11ef4f53ed76a8530fb5f121d6aa7058f3377dfb8be96e0e4dba0bf5",
+      "input_sha256": "823564e54b3d465464758b0c02747cf68a752d34b223af23ad860d0c6731f0c6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c1570a6e3751a2dc8b00",
+      "decision": "ready",
+      "subject": "Fox on the Run",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "The Sweet",
+      "canonical_fact": "The Sweet is the performer of the song Fox on the Run.",
+      "prompt_en": "Which band performed the song Fox on the Run?",
+      "evidence_quotes": [
+        "who sang the song fox on the run",
+        "The Sweet"
+      ],
+      "reason": "source_answer 'The Sweet' is the performing band for the song Fox on the Run; relation song_to_performer fits exactly with direction song -> performer.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "The Sweet is the performer of the song Fox on the Run.",
+        "answer": "The Sweet",
+        "prompt_en": "Which band performed the song Fox on the Run?",
+        "subject": "Fox on the Run",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "The Sweet",
+          "Sweetshop",
+          "Sweet"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4fae58d48597028bc5217cdde2b54445fb9057664a948fdf3c5db727c0cd424a",
+      "input_sha256": "44066d37b04a5595278dcfa67bfa877eef1b2d16f81ee4232f355e0023816d35",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c12bd004df4a7d369e8a",
+        "public:pbf_c1570a6e3751a2dc8b00"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "43e512a7d2a0ba3d1a6e54937fe7810c671250716c91eba538c540666c43afd7",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1318,
+        "prompt_tokens": 1584,
+        "total_tokens": 2902,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 857,
+          "text_tokens": 461
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2125f94cb0fa68f688c9351e3ab3baa1ab87c5744a352a506f8cafb4662e0ff2",
+      "status": "completed",
+      "latency_seconds": 30.092
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c12bd004df4a7d369e8a",
+        "public:pbf_c1570a6e3751a2dc8b00"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1ed3951dba23c6835d2617dc5a23ab59bb37c4a0faebc154235a338bc87d684e",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 47.174
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c12bd004df4a7d369e8a",
+        "public:pbf_c1570a6e3751a2dc8b00"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1ed3951dba23c6835d2617dc5a23ab59bb37c4a0faebc154235a338bc87d684e",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.22
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c12bd004df4a7d369e8a",
+        "public:pbf_c1570a6e3751a2dc8b00"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1ed3951dba23c6835d2617dc5a23ab59bb37c4a0faebc154235a338bc87d684e",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.028
+    }
+  ],
+  "status": "failed"
+}

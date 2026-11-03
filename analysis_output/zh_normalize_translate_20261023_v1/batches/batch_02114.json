@@ -1,0 +1,222 @@
+{
+  "input_sha256": "c1adaa5e89a047ff978a5dd60318d02c3b60c77b89da56aa1ed8c51ef9646ea1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000100",
+      "decision": "ready",
+      "subject": "water at 100 °C under standard atmospheric pressure",
+      "relation_id": "substance_at_temperature_to_phase_point",
+      "relation_definition": "The thermodynamic phase-transition point (e.g., boiling point, melting point) reached by a specified substance at a specified temperature under stated pressure conditions.",
+      "direction": "substance at specified temperature -> phase-transition point",
+      "answer": "boiling",
+      "canonical_fact": "Water at 100 °C under standard atmospheric pressure has reached its boiling point.",
+      "prompt_en": "At standard atmospheric pressure, what phase-transition point does water reach when its temperature is 100 °C?",
+      "evidence_quotes": [
+        "which point has the water reached?",
+        "boiling"
+      ],
+      "reason": "The source question asks which point water has reached at 100 °C and the source answer is 'boiling'. No catalog relation covers a substance reaching a specific phase-transition point at a given temperature, so a new precise relation 'substance_at_temperature_to_phase_point' is proposed. The answer is copied verbatim from source_answer.",
+      "english": {
+        "answer": "boiling",
+        "relation_id": "substance_at_temperature_to_phase_point",
+        "prompt_en": "At standard atmospheric pressure, what phase-transition point does water reach when its temperature is 100 °C?",
+        "direction": "substance at specified temperature -> phase-transition point",
+        "subject": "water at 100 °C under standard atmospheric pressure",
+        "canonical_fact": "Water at 100 °C under standard atmospheric pressure has reached its boiling point.",
+        "relation_definition": "The thermodynamic phase-transition point (e.g., boiling point, melting point) reached by a specified substance at a specified temperature under stated pressure conditions.",
+        "answer_aliases_en": [
+          "boiling"
+        ],
+        "relation_spec": {
+          "id": "substance_at_temperature_to_phase_point",
+          "definition": "The thermodynamic phase-transition point (e.g., boiling point, melting point) reached by a specified substance at a specified temperature under stated pressure conditions.",
+          "direction": "substance at specified temperature -> phase-transition point"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "22085ba0bdd0505739bace90ba6b75eb71e363ade53bf49ad1aea6b4064bf2e5",
+      "input_sha256": "97d674531273e52edc2cc15ce29a195e7e795ff4d78b72c14181c32053b0881f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000103",
+      "decision": "ready",
+      "subject": "the fourth planet from the Sun in the Solar System",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Mars",
+      "canonical_fact": "Mars is the fourth planet from the Sun in our solar system.",
+      "prompt_en": "What is the name of the fourth planet from the Sun in our solar system?",
+      "evidence_quotes": [
+        "fourth from the Sun in our solar system",
+        "Mars"
+      ],
+      "reason": "The source question provides an ordinal positional description ('fourth from the Sun in our solar system') that uniquely identifies a planet, and the source answer is 'Mars'. This maps exactly to the existing catalog relation 'description_to_entity' (identifying description -> entity). The answer is copied verbatim from source_answer.",
+      "english": {
+        "answer": "Mars",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the fourth planet from the Sun in our solar system?",
+        "direction": "identifying description -> entity",
+        "subject": "the fourth planet from the Sun in the Solar System",
+        "canonical_fact": "Mars is the fourth planet from the Sun in our solar system.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Mars"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "465828637d9d64c5b6a54da78e83389a10ae45804df0ceee66bebef4d80d0969",
+      "input_sha256": "552552f7f10b29663a6bc8d7805e83387daf34963e265e22e351bd468afc7da9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3c1789c60778c392e636dec247d9dc2d0ced634e929dfd365769270fc504463d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.561
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3c1789c60778c392e636dec247d9dc2d0ced634e929dfd365769270fc504463d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2353,
+      "first_chunk_seconds": 22.696,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2575,
+        "prompt_tokens": 1702,
+        "total_tokens": 4277,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2026,
+          "text_tokens": 549
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "57ccc64ede6981418ec82e32b1d6fdd83dade8f79ec41c6329da69dd8d4fac76",
+      "status": "completed",
+      "latency_seconds": 78.382
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.602
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.077
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.909
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.87
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 23.66
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000100",
+        "historical:raw_ai2_arc_easy_000103"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "54164afb5de611b6d597ed4654d61aa4443a8b9d0e185f4ec08f43fddf95a1db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.298
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02114.json",
+      "sha256": "c10228a047accc1faff7b9005db3690c3b9adc5380df8910e765abf018a96d07",
+      "previous_status": "failed"
+    }
+  ]
+}

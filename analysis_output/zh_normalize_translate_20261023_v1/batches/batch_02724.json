@@ -1,0 +1,215 @@
+{
+  "input_sha256": "0ae170fbe186f44369d5fdebdfdaeac93d8d572c206c2677bd141f5cf1508094",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009076",
+      "decision": "ready",
+      "subject": "world",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "universe",
+      "canonical_fact": "The world is a part of the universe.",
+      "prompt_en": "What is the world known to be a part of?",
+      "evidence_quotes": [
+        "the world",
+        "a part of",
+        "universe"
+      ],
+      "reason": "Source question explicitly frames the world as a part of something, and source_answer supplies 'universe'. The catalog relation part_to_whole (part -> whole) fits exactly: world is the part, universe is the whole. No qualifier or uncertainty present in the source.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "universe",
+        "canonical_fact": "The world is a part of the universe.",
+        "subject": "world",
+        "prompt_en": "What is the world known to be a part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "universe"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7bb6fb8c1831a2c7f9c9870e510e84842b20ae85b5a2e64e89ecef01ebec42b8",
+      "input_sha256": "94a6dc64f72d1fc8b48d7c05a203d6b522604ca14b5a6e42590956b4373c2085",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009095",
+      "decision": "ready",
+      "subject": "heat source that can be obtained for free",
+      "relation_id": "description_to_instance",
+      "relation_definition": "A concrete entity that satisfies a stated qualifying property or description; non-unique, one of potentially multiple valid instances; not an exhaustive or exclusive mapping.",
+      "direction": "qualifying description -> concrete instance",
+      "answer": "solar energy",
+      "canonical_fact": "Solar energy is a heat source that can be obtained for free.",
+      "prompt_en": "What is an example of a heat source that can be obtained for free?",
+      "evidence_quotes": [
+        "a heat source that can be obtained for free",
+        "solar energy"
+      ],
+      "reason": "No catalog relation captures the 'example / instance-of-description' relationship. Proposed new relation description_to_instance (qualifying description -> concrete instance) to express that 'solar energy' is one valid instance of 'a heat source that can be obtained for free'. The source question and answer directly support this; the relationship is non-unique (other free heat sources exist) which is preserved in the relation definition. One legacy annotation flagged non-uniqueness, but the source still supports the stated fact.",
+      "english": {
+        "direction": "qualifying description -> concrete instance",
+        "relation_id": "description_to_instance",
+        "answer": "solar energy",
+        "canonical_fact": "Solar energy is a heat source that can be obtained for free.",
+        "subject": "heat source that can be obtained for free",
+        "prompt_en": "What is an example of a heat source that can be obtained for free?",
+        "relation_definition": "A concrete entity that satisfies a stated qualifying property or description; non-unique, one of potentially multiple valid instances; not an exhaustive or exclusive mapping.",
+        "answer_aliases_en": [
+          "solar energy"
+        ],
+        "relation_spec": {
+          "id": "description_to_instance",
+          "definition": "A concrete entity that satisfies a stated qualifying property or description; non-unique, one of potentially multiple valid instances; not an exhaustive or exclusive mapping.",
+          "direction": "qualifying description -> concrete instance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "40635f544a953e0df958badb8addb17255fb569b0d5362323180f78be8a4d0a9",
+      "input_sha256": "72b6498808986d8dd603226c7f3cbebc3f47cdbd6060550dc98871e76606143b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009076",
+      "input_sha256": "94a6dc64f72d1fc8b48d7c05a203d6b522604ca14b5a6e42590956b4373c2085",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "universe",
+        "canonical_fact": "The world is a part of the universe.",
+        "subject": "world",
+        "prompt_en": "What is the world known to be a part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "universe"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7bb6fb8c1831a2c7f9c9870e510e84842b20ae85b5a2e64e89ecef01ebec42b8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009076",
+        "subject_zh": "世界",
+        "prompt_zh": "众所周知，世界是什么的一部分？",
+        "canonical_fact_zh": "世界是宇宙的一部分。",
+        "answer_zh": "宇宙",
+        "answer_aliases_zh": [
+          "宇宙"
+        ]
+      },
+      "translation_sha256": "d4b603dcb33151426a17674709c4737a3f34244fe350a217c382117c48e2b742"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009095",
+      "input_sha256": "72b6498808986d8dd603226c7f3cbebc3f47cdbd6060550dc98871e76606143b",
+      "english": {
+        "direction": "qualifying description -> concrete instance",
+        "relation_id": "description_to_instance",
+        "answer": "solar energy",
+        "canonical_fact": "Solar energy is a heat source that can be obtained for free.",
+        "subject": "heat source that can be obtained for free",
+        "prompt_en": "What is an example of a heat source that can be obtained for free?",
+        "relation_definition": "A concrete entity that satisfies a stated qualifying property or description; non-unique, one of potentially multiple valid instances; not an exhaustive or exclusive mapping.",
+        "answer_aliases_en": [
+          "solar energy"
+        ],
+        "relation_spec": {
+          "id": "description_to_instance",
+          "definition": "A concrete entity that satisfies a stated qualifying property or description; non-unique, one of potentially multiple valid instances; not an exhaustive or exclusive mapping.",
+          "direction": "qualifying description -> concrete instance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "40635f544a953e0df958badb8addb17255fb569b0d5362323180f78be8a4d0a9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009095",
+        "subject_zh": "可以免费获得的热源",
+        "prompt_zh": "可以免费获得的热源有哪些例子？",
+        "canonical_fact_zh": "太阳能是一种可以免费获得的热源。",
+        "answer_zh": "太阳能",
+        "answer_aliases_zh": [
+          "太阳能"
+        ]
+      },
+      "translation_sha256": "5399cd6d07af11f5fb1f702f7f5ba88050b8d98196afb1e23e2c63054e415fe1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009076",
+        "historical:raw_commonsense_qa_009095"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "551681cd3b106cdb09885e32e968338d7310815274dcbf679d6ffffd49203c2d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2699,
+      "first_chunk_seconds": 8.901,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2789,
+        "prompt_tokens": 1639,
+        "total_tokens": 4428,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2253,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "13eed08bae9252ef8941164be3b95d309815e3331da3fbf7226bed774a648065",
+      "status": "completed",
+      "latency_seconds": 44.849
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009076",
+        "historical:raw_commonsense_qa_009095"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6cec8b95bb56f2214b2074dadbe4ed1134fbb1335c8a9a49b8db89d4bfbe372e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 880,
+      "first_chunk_seconds": 24.079,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 898,
+        "prompt_tokens": 847,
+        "total_tokens": 1745,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 694,
+          "text_tokens": 204
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ad8effa8139fc2650775956f33377953d42a129fdc6e4f0400559d386aee9437",
+      "status": "completed",
+      "latency_seconds": 34.46
+    }
+  ],
+  "status": "completed"
+}

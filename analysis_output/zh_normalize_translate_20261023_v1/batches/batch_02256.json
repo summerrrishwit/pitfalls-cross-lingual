@@ -1,0 +1,212 @@
+{
+  "input_sha256": "9a00059e1184797d64ed4904c3fd04157d0af9248f05652236061b881d6f58eb",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000917",
+      "decision": "ready",
+      "subject": "two individuals being members of the same species",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "mate and produce fertile offspring",
+      "canonical_fact": "Two individuals are members of the same species if they mate and produce fertile offspring.",
+      "prompt_en": "What criterion determines whether two individuals are members of the same biological species?",
+      "evidence_quotes": [
+        "mate and produce fertile offspring"
+      ],
+      "reason": "The source QA pair directly states the biological species-concept criterion. The answer 'mate and produce fertile offspring' is a literal substring of the source answer 'They mate and produce fertile offspring.' The term_to_definition relation fits: the term is the concept of species membership between two individuals, and the answer provides the defining criterion. The sensenova 'not_extractable' flag is overridden because the source answer is unambiguous and specific.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "mate and produce fertile offspring",
+        "canonical_fact": "Two individuals are members of the same species if they mate and produce fertile offspring.",
+        "subject": "two individuals being members of the same species",
+        "prompt_en": "What criterion determines whether two individuals are members of the same biological species?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "mate and produce fertile offspring"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "af44f40955a3ab829bfd5a6fc875387c98b206e850df708f57bf00b60b09ae91",
+      "input_sha256": "0a642a4691aa4adcc357d72ea2f6db4db2ae254f5c58821263f3168e5f9046a8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000918",
+      "decision": "ready",
+      "subject": "nucleases",
+      "relation_id": "entity_to_function",
+      "relation_definition": "A specific biological or chemical activity/role performed by a specified entity (molecule, enzyme, organism, etc.); retain scope qualifiers (important, primary, main) when present in the source.",
+      "direction": "entity -> function",
+      "answer": "repairing the double strand of DNA",
+      "canonical_fact": "An important function of nucleases is repairing the double strand of DNA.",
+      "prompt_en": "What is an important function performed by nucleases?",
+      "evidence_quotes": [
+        "repairing the double strand of DNA"
+      ],
+      "reason": "The source QA pair states a specific important function of nucleases. No existing catalog relation captures an entity-to-functional-activity relationship; proposing 'entity_to_function' as a precise new relation. The answer 'repairing the double strand of DNA' is the entire source answer and thus a literal substring. The sensenova 'non_unique_answer' flag is noted but does not block extraction because the source question asks for 'an important function' (singular, non-exhaustive) and the source answer provides one specific function.",
+      "english": {
+        "direction": "entity -> function",
+        "relation_id": "entity_to_function",
+        "answer": "repairing the double strand of DNA",
+        "canonical_fact": "An important function of nucleases is repairing the double strand of DNA.",
+        "subject": "nucleases",
+        "prompt_en": "What is an important function performed by nucleases?",
+        "relation_definition": "A specific biological or chemical activity/role performed by a specified entity (molecule, enzyme, organism, etc.); retain scope qualifiers (important, primary, main) when present in the source.",
+        "answer_aliases_en": [
+          "repairing the double strand of DNA"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "A specific biological or chemical activity/role performed by a specified entity (molecule, enzyme, organism, etc.); retain scope qualifiers (important, primary, main) when present in the source.",
+          "direction": "entity -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b2cc7f544dc650cf8f83158266ac7ff0252c9a6500affd40dfd9f0026823527e",
+      "input_sha256": "ee1bf2f0ef8d044c30bd995a5ea6f77a797f45fa4c79ccb9131921b1491793ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000917",
+      "input_sha256": "0a642a4691aa4adcc357d72ea2f6db4db2ae254f5c58821263f3168e5f9046a8",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "mate and produce fertile offspring",
+        "canonical_fact": "Two individuals are members of the same species if they mate and produce fertile offspring.",
+        "subject": "two individuals being members of the same species",
+        "prompt_en": "What criterion determines whether two individuals are members of the same biological species?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "mate and produce fertile offspring"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "af44f40955a3ab829bfd5a6fc875387c98b206e850df708f57bf00b60b09ae91",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000917",
+        "subject_zh": "两个个体属于同一物种",
+        "prompt_zh": "判断两个个体是否属于同一生物物种的标准是什么？",
+        "canonical_fact_zh": "如果两个个体能够交配并产生可育后代，则它们属于同一物种。",
+        "answer_zh": "交配并产生可育后代",
+        "answer_aliases_zh": [
+          "交配并产生可育后代"
+        ]
+      },
+      "translation_sha256": "97bb1cb76a2cd112b5ae890818b3788e0b38b0208c347ea9e7bf0a765bc31601"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000918",
+      "input_sha256": "ee1bf2f0ef8d044c30bd995a5ea6f77a797f45fa4c79ccb9131921b1491793ac",
+      "english": {
+        "direction": "entity -> function",
+        "relation_id": "entity_to_function",
+        "answer": "repairing the double strand of DNA",
+        "canonical_fact": "An important function of nucleases is repairing the double strand of DNA.",
+        "subject": "nucleases",
+        "prompt_en": "What is an important function performed by nucleases?",
+        "relation_definition": "A specific biological or chemical activity/role performed by a specified entity (molecule, enzyme, organism, etc.); retain scope qualifiers (important, primary, main) when present in the source.",
+        "answer_aliases_en": [
+          "repairing the double strand of DNA"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "A specific biological or chemical activity/role performed by a specified entity (molecule, enzyme, organism, etc.); retain scope qualifiers (important, primary, main) when present in the source.",
+          "direction": "entity -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b2cc7f544dc650cf8f83158266ac7ff0252c9a6500affd40dfd9f0026823527e",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000918",
+        "subject_zh": "核酸酶",
+        "prompt_zh": "核酸酶执行的一项重要功能是什么？",
+        "canonical_fact_zh": "核酸酶的一项重要功能是修复DNA双链。",
+        "answer_zh": "修复DNA双链",
+        "answer_aliases_zh": [
+          "修复DNA双链"
+        ]
+      },
+      "translation_sha256": "ab737e9819b47c50473e88595afe34bd786b4d10fe8a5bd3c78e512b31bba513"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000917",
+        "historical:raw_ai2_arc_easy_000918"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9607d9e78925a81a54995a6771b6b7c64eb8bb13d7ff27a73bdc5cf22c2d0084",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2843,
+      "first_chunk_seconds": 24.909,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3048,
+        "prompt_tokens": 1683,
+        "total_tokens": 4731,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2482,
+          "text_tokens": 566
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "df563970f38d2cdeeb7e2adc8d6f26914c0d52b3b764dddcee0df6bd53bb7aa2",
+      "status": "completed",
+      "latency_seconds": 122.538
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000917",
+        "historical:raw_ai2_arc_easy_000918"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "95b0b109fb8b2f754a1642a42aa79a209e48b93393f47dd24c62d6cb0245af45",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 649,
+      "first_chunk_seconds": 15.025,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 718,
+        "prompt_tokens": 875,
+        "total_tokens": 1593,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 479,
+          "text_tokens": 239
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0ef717da0a9a8281137dfc403b8f78678f816f70c02c25267adbd3628c810f64",
+      "status": "completed",
+      "latency_seconds": 30.586
+    }
+  ],
+  "status": "completed"
+}

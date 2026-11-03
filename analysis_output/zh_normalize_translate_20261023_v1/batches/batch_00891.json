@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3bc7f4ba61b259449474c62b903a35528c7b56c5a9380519cf40ae9cb93829be",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3c08e631545b0bf102c4",
+      "decision": "ready",
+      "subject": "iron nails",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "metal",
+      "canonical_fact": "Iron nails are made out of metal.",
+      "prompt_en": "Iron nails are made out of",
+      "evidence_quotes": [
+        "What are iron nails made out of?",
+        "metal"
+      ],
+      "reason": "Catalog relation entity_to_material fits exactly: iron nails (entity) are composed of metal (material). The existing answer 'metal' is a literal substring of source_answer and does not conflict. prompt_en is option-free and omits the answer.",
+      "english": {
+        "relation_id": "entity_to_material",
+        "canonical_fact": "Iron nails are made out of metal.",
+        "prompt_en": "Iron nails are made out of",
+        "answer": "metal",
+        "direction": "entity -> material",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "subject": "iron nails",
+        "answer_aliases_en": [
+          "metal"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b687347846937b3c0b41d3ecbe841b6c22cc485d1ca6c1c754a31c55d019156c",
+      "input_sha256": "cea69b56290e2eb3471214cbb325dc0264fdce6c7da78f328e96dde50e9095dd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3c0c02881bce3324d648",
+      "decision": "ready",
+      "subject": "vegan diet",
+      "relation_id": "diet_to_most_likely_deficient_nutrient",
+      "relation_definition": "The nutrient most likely to be deficient or lacking in a specified diet type; retains 'most likely' qualifier and does not assert exclusivity.",
+      "direction": "diet -> nutrient",
+      "answer": "Vitamin B12",
+      "canonical_fact": "Vitamin B12 is the vitamin most likely to be lacking in a vegan diet.",
+      "prompt_en": "Which vitamins are most likely to be lacking in a vegan diet?",
+      "evidence_quotes": [
+        "Which vitamins are most likely to be lacking in a vegan diet?",
+        "Vitamin B12"
+      ],
+      "reason": "No catalog relation covers a dietary-nutrient deficiency relationship. Proposed new snake_case ID diet_to_most_likely_deficient_nutrient with direction diet -> nutrient. The existing answer 'Vitamin B12' is a literal substring of source_answer. The qualifier 'most likely' is preserved in both the definition and canonical_fact. prompt_en is option-free and does not contain the answer string 'Vitamin B12'.",
+      "english": {
+        "relation_id": "diet_to_most_likely_deficient_nutrient",
+        "canonical_fact": "Vitamin B12 is the vitamin most likely to be lacking in a vegan diet.",
+        "prompt_en": "Which vitamins are most likely to be lacking in a vegan diet?",
+        "answer": "Vitamin B12",
+        "direction": "diet -> nutrient",
+        "relation_definition": "The nutrient most likely to be deficient or lacking in a specified diet type; retains 'most likely' qualifier and does not assert exclusivity.",
+        "subject": "vegan diet",
+        "answer_aliases_en": [
+          "Vitamin B12"
+        ],
+        "relation_spec": {
+          "id": "diet_to_most_likely_deficient_nutrient",
+          "definition": "The nutrient most likely to be deficient or lacking in a specified diet type; retains 'most likely' qualifier and does not assert exclusivity.",
+          "direction": "diet -> nutrient"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "006063aba1bcb9539c973e4dde03367eb92961413d0e966372efa1d50bb345f3",
+      "input_sha256": "3092c3b8707ce0cd834ff753e6a44b12c0bbb999e3d46be0cb8eae1e870d9aa0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3c08e631545b0bf102c4",
+      "input_sha256": "cea69b56290e2eb3471214cbb325dc0264fdce6c7da78f328e96dde50e9095dd",
+      "english": {
+        "relation_id": "entity_to_material",
+        "canonical_fact": "Iron nails are made out of metal.",
+        "prompt_en": "Iron nails are made out of",
+        "answer": "metal",
+        "direction": "entity -> material",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "subject": "iron nails",
+        "answer_aliases_en": [
+          "metal"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b687347846937b3c0b41d3ecbe841b6c22cc485d1ca6c1c754a31c55d019156c",
+      "translation": {
+        "record_id": "public:pbf_3c08e631545b0bf102c4",
+        "subject_zh": "铁钉",
+        "prompt_zh": "铁钉是用什么材料制成的？",
+        "canonical_fact_zh": "铁钉是由金属制成的。",
+        "answer_zh": "金属",
+        "answer_aliases_zh": [
+          "金属"
+        ]
+      },
+      "translation_sha256": "14d2781b2ad962e4017679a0eb0dcb5601984f98388163f5e1571e645eca7df2"
+    },
+    {
+      "record_id": "public:pbf_3c0c02881bce3324d648",
+      "input_sha256": "3092c3b8707ce0cd834ff753e6a44b12c0bbb999e3d46be0cb8eae1e870d9aa0",
+      "english": {
+        "relation_id": "diet_to_most_likely_deficient_nutrient",
+        "canonical_fact": "Vitamin B12 is the vitamin most likely to be lacking in a vegan diet.",
+        "prompt_en": "Which vitamins are most likely to be lacking in a vegan diet?",
+        "answer": "Vitamin B12",
+        "direction": "diet -> nutrient",
+        "relation_definition": "The nutrient most likely to be deficient or lacking in a specified diet type; retains 'most likely' qualifier and does not assert exclusivity.",
+        "subject": "vegan diet",
+        "answer_aliases_en": [
+          "Vitamin B12"
+        ],
+        "relation_spec": {
+          "id": "diet_to_most_likely_deficient_nutrient",
+          "definition": "The nutrient most likely to be deficient or lacking in a specified diet type; retains 'most likely' qualifier and does not assert exclusivity.",
+          "direction": "diet -> nutrient"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "006063aba1bcb9539c973e4dde03367eb92961413d0e966372efa1d50bb345f3",
+      "translation": {
+        "record_id": "public:pbf_3c0c02881bce3324d648",
+        "subject_zh": "纯素食饮食",
+        "prompt_zh": "纯素食饮食中最可能缺乏哪种维生素？",
+        "canonical_fact_zh": "维生素B12是最可能缺乏于纯素食饮食中的维生素。",
+        "answer_zh": "维生素B12",
+        "answer_aliases_zh": [
+          "维生素B12"
+        ]
+      },
+      "translation_sha256": "046f5737ff09bcb881fe8531e344b2a163b453dce096dd2ea731c4f570aa17a9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3c08e631545b0bf102c4",
+        "public:pbf_3c0c02881bce3324d648"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b2c8629d73564e7b34c6691c51582ff9b1df24622b6878cd4e93db48a73f0f52",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1894,
+      "first_chunk_seconds": 7.088,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2215,
+        "prompt_tokens": 1587,
+        "total_tokens": 3802,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1682,
+          "text_tokens": 533
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a666c90912dcee6625d29329e1f54b2eac9c229ef64f919e9ad5b2e76881c481",
+      "status": "completed",
+      "latency_seconds": 135.993
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3c08e631545b0bf102c4",
+        "public:pbf_3c0c02881bce3324d648"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a66e93af9a81ada342ca9353eb3b841af152c60a4fa7eb03868b3988029196b5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 765,
+      "first_chunk_seconds": 11.057,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 762,
+        "prompt_tokens": 853,
+        "total_tokens": 1615,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 530,
+          "text_tokens": 232
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0ca394d9030da52b29ad86ce5a2f997f5412d6b1756ff7f884c03af2bc5c6801",
+      "status": "completed",
+      "latency_seconds": 26.61
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,281 @@
+{
+  "input_sha256": "eed932ab7c23041a14710fd72f8f65633e4b9aab614bf0054a709ebd0bac9155",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3aeb716e2fe71013c9cc",
+      "decision": "ready",
+      "subject": "wait states in 8086/8088 bus cycle",
+      "relation_id": "sequence_element_to_insertion_position",
+      "relation_definition": "The position within a specified ordered sequence where a stated element is always inserted, expressed as the adjacent elements it falls between.",
+      "direction": "element in specified sequence -> insertion position (adjacent elements)",
+      "answer": "T3 & T4",
+      "canonical_fact": "In the 8086/8088 bus cycle, wait states are always inserted between T3 and T4.",
+      "prompt_en": "In the 8086/8088 bus cycle consisting of T1, T2, T3, T4 and an indeterminate number of wait states (Tw), between which two clock cycles are wait states always inserted?",
+      "evidence_quotes": [
+        "The wait states are always inserted between",
+        "T3 & T4"
+      ],
+      "reason": "Source explicitly states wait states are inserted between T3 & T4. No existing catalog relation captures a sequential insertion-position fact; a new precise relation is proposed rather than forcing a broad category.",
+      "english": {
+        "relation_id": "sequence_element_to_insertion_position",
+        "canonical_fact": "In the 8086/8088 bus cycle, wait states are always inserted between T3 and T4.",
+        "prompt_en": "In the 8086/8088 bus cycle consisting of T1, T2, T3, T4 and an indeterminate number of wait states (Tw), between which two clock cycles are wait states always inserted?",
+        "answer": "T3 & T4",
+        "direction": "element in specified sequence -> insertion position (adjacent elements)",
+        "relation_definition": "The position within a specified ordered sequence where a stated element is always inserted, expressed as the adjacent elements it falls between.",
+        "subject": "wait states in 8086/8088 bus cycle",
+        "answer_aliases_en": [
+          "T3 & T4"
+        ],
+        "relation_spec": {
+          "id": "sequence_element_to_insertion_position",
+          "definition": "The position within a specified ordered sequence where a stated element is always inserted, expressed as the adjacent elements it falls between.",
+          "direction": "element in specified sequence -> insertion position (adjacent elements)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0a87686609817a4ac8c0492c9d59afd15d2ada726da3fc9f7687a9e75eda9b5a",
+      "input_sha256": "b1b94815729f5d911c0975b68c3c6bee38954282169ed63f55b001c412b31797",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3af0949b2c60cbe92b7e",
+      "decision": "ready",
+      "subject": "Hypothetical-deductive reasoning",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "formal operational stage",
+      "canonical_fact": "Hypothetical-deductive reasoning is a concept belonging to the formal operational stage in Piaget's theory of cognitive development.",
+      "prompt_en": "According to Piaget's theory of cognitive development, to which stage does hypothetical-deductive reasoning belong?",
+      "evidence_quotes": [
+        "appropriately matched according to",
+        "formal operational stage"
+      ],
+      "reason": "Source answer directly pairs hypothetical-deductive reasoning with the formal operational stage. entity_to_class fits: a concept (entity) has stable membership at a stated taxonomy level (stage in Piaget's theory).",
+      "english": {
+        "relation_id": "entity_to_class",
+        "canonical_fact": "Hypothetical-deductive reasoning is a concept belonging to the formal operational stage in Piaget's theory of cognitive development.",
+        "prompt_en": "According to Piaget's theory of cognitive development, to which stage does hypothetical-deductive reasoning belong?",
+        "answer": "formal operational stage",
+        "direction": "entity -> class",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "subject": "Hypothetical-deductive reasoning",
+        "answer_aliases_en": [
+          "formal operational stage",
+          "Hypothetical-deductive reasoning—formal operational stage"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c48745f3acd8334b23badfb4b1261fb482ffa6a0087f6425c887d0fe70d17d2f",
+      "input_sha256": "94122445f3001c91063f7a3359d073e46479caa574cd1ffb8d1411ac24805c9a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3aeb716e2fe71013c9cc",
+      "input_sha256": "b1b94815729f5d911c0975b68c3c6bee38954282169ed63f55b001c412b31797",
+      "english": {
+        "relation_id": "sequence_element_to_insertion_position",
+        "canonical_fact": "In the 8086/8088 bus cycle, wait states are always inserted between T3 and T4.",
+        "prompt_en": "In the 8086/8088 bus cycle consisting of T1, T2, T3, T4 and an indeterminate number of wait states (Tw), between which two clock cycles are wait states always inserted?",
+        "answer": "T3 & T4",
+        "direction": "element in specified sequence -> insertion position (adjacent elements)",
+        "relation_definition": "The position within a specified ordered sequence where a stated element is always inserted, expressed as the adjacent elements it falls between.",
+        "subject": "wait states in 8086/8088 bus cycle",
+        "answer_aliases_en": [
+          "T3 & T4"
+        ],
+        "relation_spec": {
+          "id": "sequence_element_to_insertion_position",
+          "definition": "The position within a specified ordered sequence where a stated element is always inserted, expressed as the adjacent elements it falls between.",
+          "direction": "element in specified sequence -> insertion position (adjacent elements)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0a87686609817a4ac8c0492c9d59afd15d2ada726da3fc9f7687a9e75eda9b5a",
+      "translation": {
+        "record_id": "public:pbf_3aeb716e2fe71013c9cc",
+        "subject_zh": "8086/8088总线周期中的等待状态",
+        "prompt_zh": "在由T1、T2、T3、T4和不确定数量的等待状态（Tw）组成的8086/8088总线周期中，等待状态总是插入在哪两个时钟周期之间？",
+        "canonical_fact_zh": "在8086/8088总线周期中，等待状态总是插入在T3和T4之间。",
+        "answer_zh": "T3与T4",
+        "answer_aliases_zh": [
+          "T3与T4"
+        ]
+      },
+      "translation_sha256": "a0977f5b84e3b4f1cb9376ed12da4ff641e445b443cb7804d184b3508e776bf5"
+    },
+    {
+      "record_id": "public:pbf_3af0949b2c60cbe92b7e",
+      "input_sha256": "94122445f3001c91063f7a3359d073e46479caa574cd1ffb8d1411ac24805c9a",
+      "english": {
+        "relation_id": "entity_to_class",
+        "canonical_fact": "Hypothetical-deductive reasoning is a concept belonging to the formal operational stage in Piaget's theory of cognitive development.",
+        "prompt_en": "According to Piaget's theory of cognitive development, to which stage does hypothetical-deductive reasoning belong?",
+        "answer": "formal operational stage",
+        "direction": "entity -> class",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "subject": "Hypothetical-deductive reasoning",
+        "answer_aliases_en": [
+          "formal operational stage",
+          "Hypothetical-deductive reasoning—formal operational stage"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c48745f3acd8334b23badfb4b1261fb482ffa6a0087f6425c887d0fe70d17d2f",
+      "translation": {
+        "record_id": "public:pbf_3af0949b2c60cbe92b7e",
+        "subject_zh": "假设演绎推理",
+        "prompt_zh": "根据皮亚杰的认知发展理论，假设演绎推理属于哪个阶段？",
+        "canonical_fact_zh": "假设演绎推理是皮亚杰认知发展理论中形式运算阶段的一个概念。",
+        "answer_zh": "形式运算阶段",
+        "answer_aliases_zh": [
+          "形式运算阶段",
+          "假设演绎推理—形式运算阶段"
+        ]
+      },
+      "translation_sha256": "f77f5a579f700a1348ab87ee9c8dda0b38b3ede47e90c70b20ec31965963ce11"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3aeb716e2fe71013c9cc",
+        "public:pbf_3af0949b2c60cbe92b7e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "763ae2443ac58a2e66d43be7a8a31b05b2776ee19af1db411f98f71614094881",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3821,
+      "first_chunk_seconds": 4.89,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4085,
+        "prompt_tokens": 1821,
+        "total_tokens": 5906,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3356,
+          "text_tokens": 729
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a1d5d75a60825034720bf609d58fa251dd354c9e27f8aaa5733fed04d65e2c2d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 83.389,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3aeb716e2fe71013c9cc",
+        "public:pbf_3af0949b2c60cbe92b7e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "69c1514f30d98f881f9eedbc79ca1b641f4ebc193409e53d96fa25d96330194f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2695,
+      "first_chunk_seconds": 14.888,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2901,
+        "prompt_tokens": 1839,
+        "total_tokens": 4740,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2311,
+          "text_tokens": 590
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "47f29be81fceaae2ff1223c9eff71fba96fa5a868b66d57efcd0b823e228ac2a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 116.626,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3aeb716e2fe71013c9cc",
+        "public:pbf_3af0949b2c60cbe92b7e"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "69c1514f30d98f881f9eedbc79ca1b641f4ebc193409e53d96fa25d96330194f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2091,
+      "first_chunk_seconds": 3.046,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2390,
+        "prompt_tokens": 1839,
+        "total_tokens": 4229,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1823,
+          "text_tokens": 567
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9585b65f73c6238af971cb68d7c3ac0fa997a97a05231914f394cd2a191b296f",
+      "status": "completed",
+      "latency_seconds": 51.653
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3aeb716e2fe71013c9cc",
+        "public:pbf_3af0949b2c60cbe92b7e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9fcd1dc5606348255418bd4e9a97af52e56c5c576da3535e23a01430863a698f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1082,
+      "first_chunk_seconds": 19.664,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1082,
+        "prompt_tokens": 973,
+        "total_tokens": 2055,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 759,
+          "text_tokens": 323
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c4578230eb6150c29a605a73b2fb9375019d8a79f0e250511dee11ff44505e88",
+      "status": "completed",
+      "latency_seconds": 37.316
+    }
+  ],
+  "status": "completed"
+}

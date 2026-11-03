@@ -1,0 +1,171 @@
+{
+  "input_sha256": "56800c2ea94eb4c1aa0a857bd6f8e6290e8b4887309fc491a58f69b9c0e0a61f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000033",
+      "decision": "ready",
+      "subject": "Barack Obama",
+      "relation_id": "entity_to_birth_country",
+      "relation_definition": "The country in which a specified entity (typically a person) was born; distinct from nationality, citizenship, residence, or ancestral origin.",
+      "direction": "entity -> birth country",
+      "answer": "US",
+      "canonical_fact": "Barack Obama was born in the US.",
+      "prompt_en": "In what country was Barack Obama born?",
+      "evidence_quotes": [
+        "In what country was Barack Obama born?",
+        "Obama was born in Hawaii, which is a US state"
+      ],
+      "reason": "Source answer explicitly states Obama was born in Hawaii, a US state, so the country of birth is the US. No catalog relation captures birth country exactly; entity_to_containing_location is about geographic containment, not birth. New relation entity_to_birth_country proposed with precise scope.",
+      "english": {
+        "prompt_en": "In what country was Barack Obama born?",
+        "relation_definition": "The country in which a specified entity (typically a person) was born; distinct from nationality, citizenship, residence, or ancestral origin.",
+        "answer": "US",
+        "canonical_fact": "Barack Obama was born in the US.",
+        "direction": "entity -> birth country",
+        "relation_id": "entity_to_birth_country",
+        "subject": "Barack Obama",
+        "answer_aliases_en": [
+          "US"
+        ],
+        "relation_spec": {
+          "id": "entity_to_birth_country",
+          "definition": "The country in which a specified entity (typically a person) was born; distinct from nationality, citizenship, residence, or ancestral origin.",
+          "direction": "entity -> birth country"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b358d46e6081bdb2b93682e03a4cc524f27a0fe03bbd121932ddc221f2b67591",
+      "input_sha256": "cca51a75d852b23508d86145133f2a1d29a1f9edc45e3f5b28a1f4a2d293bf31",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000038",
+      "decision": "ready",
+      "subject": "immaculate conception",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "the belief that Mary was conceived without the stain of origin sin",
+      "canonical_fact": "Immaculate conception is the belief that Mary was conceived without the stain of origin sin.",
+      "prompt_en": "What is the meaning of immaculate conception?",
+      "evidence_quotes": [
+        "What is immaculate conception?",
+        "Immaculate conception is the belief that Mary was conceived without the stain of origin sin"
+      ],
+      "reason": "Source answer provides a direct definition of the term 'immaculate conception'. The term_to_definition relation fits exactly: an explicit term mapped to its defining description. Answer is a literal substring of the source answer.",
+      "english": {
+        "prompt_en": "What is the meaning of immaculate conception?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "the belief that Mary was conceived without the stain of origin sin",
+        "canonical_fact": "Immaculate conception is the belief that Mary was conceived without the stain of origin sin.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "immaculate conception",
+        "answer_aliases_en": [
+          "the belief that Mary was conceived without the stain of origin sin"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a5ad8de7679949f18905ecc44060fb7bf69a542287665d31ae33be2eaf60c516",
+      "input_sha256": "1c2970f9075568ee44224396f74e1b186cf30d4abb81b2e178f535758012457f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000033",
+        "historical:raw_truthful_qa_000038"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "620ffc8619b949ea1928d47dc25733a30dc92f73614c6318cda6d5d565af43a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 44.341
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000033",
+        "historical:raw_truthful_qa_000038"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "620ffc8619b949ea1928d47dc25733a30dc92f73614c6318cda6d5d565af43a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1562,
+      "first_chunk_seconds": 62.404,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1581,
+        "prompt_tokens": 1709,
+        "total_tokens": 3290,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1085,
+          "text_tokens": 496
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6a24dfdfd63db88a194e799e188e7adffbb7f96c7dc8f06b78d291ad21d5e68f",
+      "status": "completed",
+      "latency_seconds": 82.575
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000033",
+        "historical:raw_truthful_qa_000038"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6ad834d7a10a9a8353659da9ba803d425fb39ad1e0586094c6e797f3e230b5e9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 163.039
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000033",
+        "historical:raw_truthful_qa_000038"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6ad834d7a10a9a8353659da9ba803d425fb39ad1e0586094c6e797f3e230b5e9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.891
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000033",
+        "historical:raw_truthful_qa_000038"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6ad834d7a10a9a8353659da9ba803d425fb39ad1e0586094c6e797f3e230b5e9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.89
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,212 @@
+{
+  "input_sha256": "307779e82763cb23da76ca9ce3fb1ad349184d88a132996135bc70dab20c42d6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001145",
+      "decision": "ready",
+      "subject": "Earth's weather",
+      "relation_id": "phenomenon_to_atmospheric_layer",
+      "relation_definition": "The atmospheric layer in which a specified natural phenomenon primarily or mostly occurs.",
+      "direction": "phenomenon -> atmospheric layer",
+      "answer": "the troposphere",
+      "canonical_fact": "Most of Earth's weather occurs in the troposphere.",
+      "prompt_en": "In which layer of the atmosphere does most of Earth's weather occur?",
+      "evidence_quotes": [
+        "the troposphere, which is the lowest layer"
+      ],
+      "reason": "No existing catalog relation covers 'layer where a phenomenon occurs.' entity_to_containing_location explicitly excludes process locations, and organism_to_habitat is limited to organisms. A new precise relation phenomenon_to_atmospheric_layer is proposed. The answer 'the troposphere' is a literal substring of the source answer; the qualifier 'most' is preserved in the canonical fact.",
+      "english": {
+        "direction": "phenomenon -> atmospheric layer",
+        "relation_id": "phenomenon_to_atmospheric_layer",
+        "answer": "the troposphere",
+        "canonical_fact": "Most of Earth's weather occurs in the troposphere.",
+        "subject": "Earth's weather",
+        "prompt_en": "In which layer of the atmosphere does most of Earth's weather occur?",
+        "relation_definition": "The atmospheric layer in which a specified natural phenomenon primarily or mostly occurs.",
+        "answer_aliases_en": [
+          "the troposphere"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_atmospheric_layer",
+          "definition": "The atmospheric layer in which a specified natural phenomenon primarily or mostly occurs.",
+          "direction": "phenomenon -> atmospheric layer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5b5bfc4d787f3e613648975a03a114b25bb73278f38345c572448a0e7b982f8",
+      "input_sha256": "e340e0a583f66bd0196a8a8e640a7924c78505aa6b518833bf1fed401490b3b2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001146",
+      "decision": "ready",
+      "subject": "iron oxide",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "compound",
+      "canonical_fact": "Iron oxide is classified as a compound.",
+      "prompt_en": "Which chemical term best describes iron oxide?",
+      "evidence_quotes": [
+        "compound"
+      ],
+      "reason": "entity_to_class fits exactly: iron oxide (a chemical substance) is assigned its stable class membership 'compound' in the chemical taxonomy. The source answer is the single word 'compound', used verbatim. Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "compound",
+        "canonical_fact": "Iron oxide is classified as a compound.",
+        "subject": "iron oxide",
+        "prompt_en": "Which chemical term best describes iron oxide?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "compound"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "68d50fbda1da39f9144c4c957b79326b031513ffa2732dc084251a0cb09cebb8",
+      "input_sha256": "1c79b05d1fedb3c5285cf2e24f9f4e36966cd44ccd784c1c6a1997224982ff68",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001145",
+      "input_sha256": "e340e0a583f66bd0196a8a8e640a7924c78505aa6b518833bf1fed401490b3b2",
+      "english": {
+        "direction": "phenomenon -> atmospheric layer",
+        "relation_id": "phenomenon_to_atmospheric_layer",
+        "answer": "the troposphere",
+        "canonical_fact": "Most of Earth's weather occurs in the troposphere.",
+        "subject": "Earth's weather",
+        "prompt_en": "In which layer of the atmosphere does most of Earth's weather occur?",
+        "relation_definition": "The atmospheric layer in which a specified natural phenomenon primarily or mostly occurs.",
+        "answer_aliases_en": [
+          "the troposphere"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_atmospheric_layer",
+          "definition": "The atmospheric layer in which a specified natural phenomenon primarily or mostly occurs.",
+          "direction": "phenomenon -> atmospheric layer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5b5bfc4d787f3e613648975a03a114b25bb73278f38345c572448a0e7b982f8",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001145",
+        "subject_zh": "地球的天气",
+        "prompt_zh": "地球大部分天气现象发生在大气层的哪一层？",
+        "canonical_fact_zh": "地球的大部分天气现象发生在对流层。",
+        "answer_zh": "对流层",
+        "answer_aliases_zh": [
+          "对流层"
+        ]
+      },
+      "translation_sha256": "e16f03137c62a3bded1610daf05f7a16f50b4fbe532924fc136d85b0486f7e90"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001146",
+      "input_sha256": "1c79b05d1fedb3c5285cf2e24f9f4e36966cd44ccd784c1c6a1997224982ff68",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "compound",
+        "canonical_fact": "Iron oxide is classified as a compound.",
+        "subject": "iron oxide",
+        "prompt_en": "Which chemical term best describes iron oxide?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "compound"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "68d50fbda1da39f9144c4c957b79326b031513ffa2732dc084251a0cb09cebb8",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001146",
+        "subject_zh": "氧化铁",
+        "prompt_zh": "哪个化学术语最能描述氧化铁？",
+        "canonical_fact_zh": "氧化铁被归类为化合物。",
+        "answer_zh": "化合物",
+        "answer_aliases_zh": [
+          "化合物"
+        ]
+      },
+      "translation_sha256": "300d9bab944d6d079e9854523439704d5709bb3e864d3ec844ba63aee6d37dcd"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001145",
+        "historical:raw_ai2_arc_easy_001146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a79a24c5b72f1120a6b1551c360e5ea30ba18e1e1d392d6f8dc75f9df40af890",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2154,
+      "first_chunk_seconds": 35.186,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2327,
+        "prompt_tokens": 1677,
+        "total_tokens": 4004,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1864,
+          "text_tokens": 463
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a0501b0a55b59c9dabba5fc632a4970e4e0763c6fe4146cfd4918ee5ca032536",
+      "status": "completed",
+      "latency_seconds": 71.338
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001145",
+        "historical:raw_ai2_arc_easy_001146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ebd9937698ad277454a74ede93331a53e8c5503a716acd87bf34e7f43853a4ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 679,
+      "first_chunk_seconds": 20.235,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 676,
+        "prompt_tokens": 812,
+        "total_tokens": 1488,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 468,
+          "text_tokens": 208
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2f8d36a20af579869e0e12ec264b3ddebd65f2afbe7a0b0675c33180321ac599",
+      "status": "completed",
+      "latency_seconds": 28.22
+    }
+  ],
+  "status": "completed"
+}

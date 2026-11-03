@@ -1,0 +1,214 @@
+{
+  "input_sha256": "27dbdba133a478de39a1d6d504d346e594114daaa85a7786d9c695fa1cfcc8e3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007198",
+      "decision": "ready",
+      "subject": "garment popular with the flappers of the 1920's that has thin shoulder straps",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "chemise",
+      "canonical_fact": "The garment popular with the flappers of the 1920's that has thin shoulder straps is a chemise.",
+      "prompt_en": "What garment popular with the flappers of the 1920's has thin shoulder straps?",
+      "evidence_quotes": [
+        "What garment popular with the flappers of the 1920's has thin shoulder straps?",
+        "chemise"
+      ],
+      "reason": "The source question supplies a defining description (garment popular with the flappers of the 1920's, thin shoulder straps) and the answer is the conventional term 'chemise'. This is a classic description-to-term lookup. The description_to_term relation in the catalog fits exactly: subject is the identifying description, answer is the term. Evidence is directly from source_question and source_answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "chemise",
+        "canonical_fact": "The garment popular with the flappers of the 1920's that has thin shoulder straps is a chemise.",
+        "subject": "garment popular with the flappers of the 1920's that has thin shoulder straps",
+        "prompt_en": "What garment popular with the flappers of the 1920's has thin shoulder straps?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "chemise"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b938551d36dbcff92b81f808ac098ba4ee61438f1e2bab69db238d3150a19c8d",
+      "input_sha256": "c36cf5d3525bd2e9254ccdb92634c8b28bce23a38d7de83d92c7020681cfa186",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007202",
+      "decision": "ready",
+      "subject": "city with a courthouse",
+      "relation_id": "seat_of_government_to_jurisdiction",
+      "relation_definition": "The governmental/administrative jurisdiction (e.g., county) for which a specified place or city serves as the seat of government, indicated by a courthouse or equivalent institutional marker.",
+      "direction": "place serving as government seat -> jurisdiction governed",
+      "answer": "county",
+      "canonical_fact": "A city that has a courthouse is considered a government seat of a county.",
+      "prompt_en": "If a city has a courthouse, what is it considered a government seat of?",
+      "evidence_quotes": [
+        "If a city has a courthouse, what is it considered a government seat of?",
+        "county"
+      ],
+      "reason": "No existing catalog relation captures 'government seat of' as an administrative-functional relationship (entity_to_containing_location is geographic containment, not a governmental role). Proposed new relation 'seat_of_government_to_jurisdiction' with explicit direction from the seat (city with courthouse) to the jurisdiction it governs (county). The answer 'county' is a literal substring of source_answer. The prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "direction": "place serving as government seat -> jurisdiction governed",
+        "relation_id": "seat_of_government_to_jurisdiction",
+        "answer": "county",
+        "canonical_fact": "A city that has a courthouse is considered a government seat of a county.",
+        "subject": "city with a courthouse",
+        "prompt_en": "If a city has a courthouse, what is it considered a government seat of?",
+        "relation_definition": "The governmental/administrative jurisdiction (e.g., county) for which a specified place or city serves as the seat of government, indicated by a courthouse or equivalent institutional marker.",
+        "answer_aliases_en": [
+          "county"
+        ],
+        "relation_spec": {
+          "id": "seat_of_government_to_jurisdiction",
+          "definition": "The governmental/administrative jurisdiction (e.g., county) for which a specified place or city serves as the seat of government, indicated by a courthouse or equivalent institutional marker.",
+          "direction": "place serving as government seat -> jurisdiction governed"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "89bafcfa9001785b36f88fe1dc9a78e9e87774e24c2d7b3595baea65f3e57680",
+      "input_sha256": "ee26be240238a5dea967991fac198d1c2c35b88ce3560cd63e95c693e0c34dec",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007198",
+      "input_sha256": "c36cf5d3525bd2e9254ccdb92634c8b28bce23a38d7de83d92c7020681cfa186",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "chemise",
+        "canonical_fact": "The garment popular with the flappers of the 1920's that has thin shoulder straps is a chemise.",
+        "subject": "garment popular with the flappers of the 1920's that has thin shoulder straps",
+        "prompt_en": "What garment popular with the flappers of the 1920's has thin shoulder straps?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "chemise"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b938551d36dbcff92b81f808ac098ba4ee61438f1e2bab69db238d3150a19c8d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007198",
+        "subject_zh": "20世纪20年代摩登女郎流行的一种带有细肩带的服装",
+        "prompt_zh": "20世纪20年代摩登女郎流行的哪种服装带有细肩带？",
+        "canonical_fact_zh": "20世纪20年代摩登女郎流行的带有细肩带的服装是 chemise（吊带衬裙）。",
+        "answer_zh": "chemise（吊带衬裙）",
+        "answer_aliases_zh": [
+          "chemise（吊带衬裙）"
+        ]
+      },
+      "translation_sha256": "407f79400ffb5fc515c6f26616ef7add840638268974ca610c5032ef10439776"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007202",
+      "input_sha256": "ee26be240238a5dea967991fac198d1c2c35b88ce3560cd63e95c693e0c34dec",
+      "english": {
+        "direction": "place serving as government seat -> jurisdiction governed",
+        "relation_id": "seat_of_government_to_jurisdiction",
+        "answer": "county",
+        "canonical_fact": "A city that has a courthouse is considered a government seat of a county.",
+        "subject": "city with a courthouse",
+        "prompt_en": "If a city has a courthouse, what is it considered a government seat of?",
+        "relation_definition": "The governmental/administrative jurisdiction (e.g., county) for which a specified place or city serves as the seat of government, indicated by a courthouse or equivalent institutional marker.",
+        "answer_aliases_en": [
+          "county"
+        ],
+        "relation_spec": {
+          "id": "seat_of_government_to_jurisdiction",
+          "definition": "The governmental/administrative jurisdiction (e.g., county) for which a specified place or city serves as the seat of government, indicated by a courthouse or equivalent institutional marker.",
+          "direction": "place serving as government seat -> jurisdiction governed"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "89bafcfa9001785b36f88fe1dc9a78e9e87774e24c2d7b3595baea65f3e57680",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007202",
+        "subject_zh": "设有法院的城市",
+        "prompt_zh": "如果一座城市设有法院，它被视为什么的政府驻地？",
+        "canonical_fact_zh": "设有法院的城市被视为一个县的政府驻地。",
+        "answer_zh": "县",
+        "answer_aliases_zh": [
+          "县"
+        ]
+      },
+      "translation_sha256": "efb883d98103b1b9fe5170143ac9ca5d115bfd8995ba2f5c6d1376afa336d9e5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007198",
+        "historical:raw_commonsense_qa_007202"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b5400c4554d1cd1634704adb4971bed5908716059a12efcb68bec2086c23733e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1913,
+      "first_chunk_seconds": 16.35,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2032,
+        "prompt_tokens": 1771,
+        "total_tokens": 3803,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1411,
+          "text_tokens": 621
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "50493a2b34f4c06ae2dbb73d9b477b763354db350412d72a11deb0cd2656300a",
+      "status": "completed",
+      "latency_seconds": 44.518
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007198",
+        "historical:raw_commonsense_qa_007202"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "399bdc1796ca3c395a8289cc66309509cca197c7d05f7e3023dac67e1ad50172",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1575,
+      "first_chunk_seconds": 26.121,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1688,
+        "prompt_tokens": 906,
+        "total_tokens": 2594,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1497,
+          "text_tokens": 191
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "66253ec596f10cfc1f3829f681d9e3f83623c23998d12ec8abdb6cd3ef4cb083",
+      "status": "completed",
+      "latency_seconds": 86.29
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,263 @@
+{
+  "input_sha256": "59ffca6e435fdbe8eb876373b2fa17bf15e057312ee9b6528b7bd16a112be601",
+  "normalized": [
+    {
+      "record_id": "public:pbf_658fef17a790379f3e61",
+      "decision": "ready",
+      "subject": "female character played by Flip Wilson on his 1970s TV show",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Geraldine Jones",
+      "canonical_fact": "The female character played by Flip Wilson on his 1970s TV show is named Geraldine Jones.",
+      "prompt_en": "The female character played by Flip Wilson on his 1970s TV show is named",
+      "evidence_quotes": [
+        "female character played by comedian Flip Wilson on his 1970s TV show",
+        "Geraldine Jones"
+      ],
+      "reason": "The source question provides a uniquely identifying description (female character, played by Flip Wilson, 1970s TV show) that points to the named entity Geraldine Jones. description_to_entity fits exactly: the subject is an identifying description and the answer is the unique entity it names. No catalog relation for 'name of character' is needed; the description-to-entity link captures the same fact.",
+      "english": {
+        "answer": "Geraldine Jones",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The female character played by Flip Wilson on his 1970s TV show is named",
+        "direction": "identifying description -> entity",
+        "subject": "female character played by Flip Wilson on his 1970s TV show",
+        "canonical_fact": "The female character played by Flip Wilson on his 1970s TV show is named Geraldine Jones.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Geraldine Jones"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "24b4e77b42d5a625227f1cc22c128c6d4de0d6187c4ffdce84aedcf9dbe81960",
+      "input_sha256": "4e06135d26ee52594232f9df83524027354f82f2d58f21a9de7100de573d3e83",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_65a2bf1585e9799d354b",
+      "decision": "ready",
+      "subject": "variance",
+      "relation_id": "measure_response_to_parameter_change",
+      "relation_definition": "Directional response (increases/decreases) of a named statistical measure when a specified input parameter changes in a stated direction.",
+      "direction": "statistical measure -> directional response to stated parameter change",
+      "answer": "increases",
+      "canonical_fact": "When the spread of scores increases, the variance increases.",
+      "prompt_en": "When the spread of scores grows, the variance",
+      "evidence_quotes": [
+        "When the spread of scores increases, the variance",
+        "increases"
+      ],
+      "reason": "No catalog relation captures a statistical measure's directional response to a parameter change. Proposed new relation measure_response_to_parameter_change with explicit direction (measure -> response under stated condition). The source fill-in-the-blank question and its answer ('increases') provide direct support. Prompt rephrased to avoid embedding the answer string 'increases' while preserving meaning.",
+      "english": {
+        "answer": "increases",
+        "relation_id": "measure_response_to_parameter_change",
+        "prompt_en": "When the spread of scores grows, the variance",
+        "direction": "statistical measure -> directional response to stated parameter change",
+        "subject": "variance",
+        "canonical_fact": "When the spread of scores increases, the variance increases.",
+        "relation_definition": "Directional response (increases/decreases) of a named statistical measure when a specified input parameter changes in a stated direction.",
+        "answer_aliases_en": [
+          "increases"
+        ],
+        "relation_spec": {
+          "id": "measure_response_to_parameter_change",
+          "definition": "Directional response (increases/decreases) of a named statistical measure when a specified input parameter changes in a stated direction.",
+          "direction": "statistical measure -> directional response to stated parameter change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c8a796c4abbc6cc459fca5d471313e39c1a097a3ff67761ca713c99f3b6f7d87",
+      "input_sha256": "70b0f67c5e14fa6411dc3df2441a318789cd5f198a8f47c3fc6177dbe83726df",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_658fef17a790379f3e61",
+      "input_sha256": "4e06135d26ee52594232f9df83524027354f82f2d58f21a9de7100de573d3e83",
+      "english": {
+        "answer": "Geraldine Jones",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The female character played by Flip Wilson on his 1970s TV show is named",
+        "direction": "identifying description -> entity",
+        "subject": "female character played by Flip Wilson on his 1970s TV show",
+        "canonical_fact": "The female character played by Flip Wilson on his 1970s TV show is named Geraldine Jones.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Geraldine Jones"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "24b4e77b42d5a625227f1cc22c128c6d4de0d6187c4ffdce84aedcf9dbe81960",
+      "translation": {
+        "record_id": "public:pbf_658fef17a790379f3e61",
+        "subject_zh": "Flip Wilson 在其1970年代电视剧中饰演的女性角色",
+        "prompt_zh": "Flip Wilson 在其1970年代电视剧中饰演的女性角色名为",
+        "canonical_fact_zh": "Flip Wilson 在其1970年代电视剧中饰演的女性角色名为 Geraldine Jones。",
+        "answer_zh": "Geraldine Jones",
+        "answer_aliases_zh": [
+          "Geraldine Jones"
+        ]
+      },
+      "translation_sha256": "c76d7ac2af4efceb2107108c8deacfa5d6d5d5886213ddcb2e8c764fe3120126"
+    },
+    {
+      "record_id": "public:pbf_65a2bf1585e9799d354b",
+      "input_sha256": "70b0f67c5e14fa6411dc3df2441a318789cd5f198a8f47c3fc6177dbe83726df",
+      "english": {
+        "answer": "increases",
+        "relation_id": "measure_response_to_parameter_change",
+        "prompt_en": "When the spread of scores grows, the variance",
+        "direction": "statistical measure -> directional response to stated parameter change",
+        "subject": "variance",
+        "canonical_fact": "When the spread of scores increases, the variance increases.",
+        "relation_definition": "Directional response (increases/decreases) of a named statistical measure when a specified input parameter changes in a stated direction.",
+        "answer_aliases_en": [
+          "increases"
+        ],
+        "relation_spec": {
+          "id": "measure_response_to_parameter_change",
+          "definition": "Directional response (increases/decreases) of a named statistical measure when a specified input parameter changes in a stated direction.",
+          "direction": "statistical measure -> directional response to stated parameter change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c8a796c4abbc6cc459fca5d471313e39c1a097a3ff67761ca713c99f3b6f7d87",
+      "translation": {
+        "record_id": "public:pbf_65a2bf1585e9799d354b",
+        "subject_zh": "方差",
+        "prompt_zh": "当分数的离散程度扩大时，方差",
+        "canonical_fact_zh": "当分数的离散程度扩大时，方差增大。",
+        "answer_zh": "增大",
+        "answer_aliases_zh": [
+          "增大"
+        ]
+      },
+      "translation_sha256": "df02ed4fccdc4101ff55478b14ece0148a175a8b856b189b3007cbeecfa43a5f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_658fef17a790379f3e61",
+        "public:pbf_65a2bf1585e9799d354b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "53c3f830cd17251e84d8d3c26ca7d76a454ee6bf2231e9aeebf9bd1347b9eb5e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2839,
+      "first_chunk_seconds": 41.829,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2839,
+        "prompt_tokens": 1644,
+        "total_tokens": 4483,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2257,
+          "text_tokens": 582
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e87080acd2776c0fb4bae7d1b428781ec22c800b1a55ce6a6d1fc3cd8c3cf6bd",
+      "status": "completed",
+      "latency_seconds": 64.256
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_658fef17a790379f3e61",
+        "public:pbf_65a2bf1585e9799d354b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0ca5387721f4e3cf0cf3f6c29a593cf43e23a758f0d38874572f6c678735be12",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1356,
+      "first_chunk_seconds": 32.373,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1353,
+        "prompt_tokens": 880,
+        "total_tokens": 2233,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1088,
+          "text_tokens": 265
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8ebced6b5fc4886bc0acf86c79a43c58e4c6df1852f7b09db640e19c00f1afa5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 42.942,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_658fef17a790379f3e61",
+        "public:pbf_65a2bf1585e9799d354b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7cdf92dc15f01f3347c3d4677f4f62a369babfaebf8b5550c566c0ae6e80e835",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.979
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_658fef17a790379f3e61",
+        "public:pbf_65a2bf1585e9799d354b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7cdf92dc15f01f3347c3d4677f4f62a369babfaebf8b5550c566c0ae6e80e835",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1760,
+      "first_chunk_seconds": 20.645,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1772,
+        "prompt_tokens": 898,
+        "total_tokens": 2670,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1580,
+          "text_tokens": 192
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        }
+      },
+      "content_sha256": "65bac942fe2f60ae83e28f165e7a5b71f732c5de7a8cb737889479218c6c5a5a",
+      "status": "completed",
+      "latency_seconds": 35.248
+    }
+  ],
+  "status": "completed"
+}

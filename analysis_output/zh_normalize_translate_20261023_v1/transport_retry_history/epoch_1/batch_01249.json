@@ -1,0 +1,172 @@
+{
+  "input_sha256": "bb64d7055564bec0e40d7043e33ed35322a11c7910125bfeb0f9ead51ef0db7e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7851d216bf75d5945464",
+      "decision": "ready",
+      "subject": "left cerebral hemisphere",
+      "relation_id": "structure_to_specialized_function",
+      "relation_definition": "Functions for which a specified anatomical or physical structure is specifically specialized or predominantly responsible; retain list format and any qualifiers.",
+      "direction": "anatomical/physical structure -> specialized function(s)",
+      "answer": "verbal, analytic, and mathematical",
+      "canonical_fact": "The left cerebral hemisphere is specialized for verbal, analytic, and mathematical functions.",
+      "prompt_en": "Factual question: The left cerebral hemisphere is specialized for which of the following functions?\nAnswer:",
+      "evidence_quotes": [
+        "The left cerebral hemisphere is specialized for which of the following functions?",
+        "verbal, analytic, and mathematical"
+      ],
+      "reason": "No catalog relation exactly captures 'structure -> its specialized functions.' entity_to_class is about taxonomy-level membership, not functional specialization. Proposed new relation structure_to_specialized_function with explicit direction. Answer is a literal substring of source_answer; canonical fact preserves the list format without adding unsupported qualifiers.",
+      "english": {
+        "answer": "verbal, analytic, and mathematical",
+        "relation_id": "structure_to_specialized_function",
+        "prompt_en": "Factual question: The left cerebral hemisphere is specialized for which of the following functions?\nAnswer:",
+        "direction": "anatomical/physical structure -> specialized function(s)",
+        "subject": "left cerebral hemisphere",
+        "canonical_fact": "The left cerebral hemisphere is specialized for verbal, analytic, and mathematical functions.",
+        "relation_definition": "Functions for which a specified anatomical or physical structure is specifically specialized or predominantly responsible; retain list format and any qualifiers.",
+        "answer_aliases_en": [
+          "verbal, analytic, and mathematical"
+        ],
+        "relation_spec": {
+          "id": "structure_to_specialized_function",
+          "definition": "Functions for which a specified anatomical or physical structure is specifically specialized or predominantly responsible; retain list format and any qualifiers.",
+          "direction": "anatomical/physical structure -> specialized function(s)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7a1836d8eb3279004fa9b5557a5abc45fa884b5e436a4b7b73a4daf241b0afb9",
+      "input_sha256": "764dbbda8ea27920c6ac1e63d87a4ae8c6c663713147aae41799a1771580f4f1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_785b18c1ecad841f3499",
+      "decision": "ready",
+      "subject": "Homo floresiensis",
+      "relation_id": "taxon_to_related_taxon",
+      "relation_definition": "Phylogenetic or taxonomic relatedness/similarity between two specified taxa or species; preserve uncertainty qualifiers such as 'according to some researchers.'",
+      "direction": "taxon/species -> phylogenetically related taxon/species",
+      "answer": "Homo erectus",
+      "canonical_fact": "Homo floresiensis is similar or related to Homo erectus according to some researchers.",
+      "prompt_en": "Factual question: Homo floresiensis from the island of Flores dates from around 35,000 to 14,000 years ago, and according to some researchers, is similar or related to:\nAnswer:",
+      "evidence_quotes": [
+        "Homo floresiensis from the island of Flores dates from around 35,000 to 14,000 years ago, and according to some researchers, is similar or related to:",
+        "Homo erectus"
+      ],
+      "reason": "No catalog relation exactly captures inter-species phylogenetic relatedness. entity_to_class is about class membership, not similarity/relatedness between two taxa. Proposed new relation taxon_to_related_taxon. Answer 'Homo erectus' is a literal substring of source_answer 'Homo erectus.' The qualifier 'according to some researchers' is preserved in the canonical fact.",
+      "english": {
+        "answer": "Homo erectus",
+        "relation_id": "taxon_to_related_taxon",
+        "prompt_en": "Factual question: Homo floresiensis from the island of Flores dates from around 35,000 to 14,000 years ago, and according to some researchers, is similar or related to:\nAnswer:",
+        "direction": "taxon/species -> phylogenetically related taxon/species",
+        "subject": "Homo floresiensis",
+        "canonical_fact": "Homo floresiensis is similar or related to Homo erectus according to some researchers.",
+        "relation_definition": "Phylogenetic or taxonomic relatedness/similarity between two specified taxa or species; preserve uncertainty qualifiers such as 'according to some researchers.'",
+        "answer_aliases_en": [
+          "Homo erectus",
+          "Homo erectus."
+        ],
+        "relation_spec": {
+          "id": "taxon_to_related_taxon",
+          "definition": "Phylogenetic or taxonomic relatedness/similarity between two specified taxa or species; preserve uncertainty qualifiers such as 'according to some researchers.'",
+          "direction": "taxon/species -> phylogenetically related taxon/species"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "915239989dc047a2bba6b4b08ecde2cc98ea6f8f4e4211166fa3e7bf9f654ab1",
+      "input_sha256": "02dccabca6f4fcaa23f974643508c4a7021c7a3f8cc931dd074fda09a07b8e52",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7851d216bf75d5945464",
+        "public:pbf_785b18c1ecad841f3499"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0e22353f83d6a6e732f87ea6b5d03c71120483f7b1a478ace5348f8716226be9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.959
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7851d216bf75d5945464",
+        "public:pbf_785b18c1ecad841f3499"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0e22353f83d6a6e732f87ea6b5d03c71120483f7b1a478ace5348f8716226be9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2139,
+      "first_chunk_seconds": 41.086,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2137,
+        "prompt_tokens": 1713,
+        "total_tokens": 3850,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1477,
+          "text_tokens": 660
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f8dfd4e13c02e37ea8a039dc8e92153eff49b4339e1316b5de6128654ad97958",
+      "status": "completed",
+      "latency_seconds": 58.809
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7851d216bf75d5945464",
+        "public:pbf_785b18c1ecad841f3499"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "19bf16632b3e5b3e84b93c728b4bd817b12e62ce724ef8b5899867dc1348cfe2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.947
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7851d216bf75d5945464",
+        "public:pbf_785b18c1ecad841f3499"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "19bf16632b3e5b3e84b93c728b4bd817b12e62ce724ef8b5899867dc1348cfe2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7851d216bf75d5945464",
+        "public:pbf_785b18c1ecad841f3499"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "19bf16632b3e5b3e84b93c728b4bd817b12e62ce724ef8b5899867dc1348cfe2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.241
+    }
+  ],
+  "status": "failed"
+}

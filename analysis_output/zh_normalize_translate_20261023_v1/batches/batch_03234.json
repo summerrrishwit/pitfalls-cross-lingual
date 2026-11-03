@@ -1,0 +1,157 @@
+{
+  "input_sha256": "5d0781598d5ed02c7576e05c7780a80be07c36f3e02da976f6f36a2040ece159",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000946",
+      "decision": "ready",
+      "subject": "atmospheric pressure",
+      "relation_id": "quantity_to_altitude_trend",
+      "relation_definition": "The direction (increases or decreases) in which a specified physical quantity changes as altitude increases.",
+      "direction": "physical quantity -> trend direction as altitude increases",
+      "answer": "decreases",
+      "canonical_fact": "Atmospheric pressure decreases as the altitude increases.",
+      "prompt_en": "What happens to atmospheric pressure as altitude increases?",
+      "evidence_quotes": [
+        "atmospheric pressure",
+        "decreases"
+      ],
+      "reason": "No catalog relation fits this physical-trend relationship exactly; a new precise ID is proposed. The source question and answer directly support the fact. The prompt_en is option-free and omits the answer 'decreases'.",
+      "english": {
+        "prompt_en": "What happens to atmospheric pressure as altitude increases?",
+        "relation_definition": "The direction (increases or decreases) in which a specified physical quantity changes as altitude increases.",
+        "answer": "decreases",
+        "canonical_fact": "Atmospheric pressure decreases as the altitude increases.",
+        "direction": "physical quantity -> trend direction as altitude increases",
+        "relation_id": "quantity_to_altitude_trend",
+        "subject": "atmospheric pressure",
+        "answer_aliases_en": [
+          "decreases"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_altitude_trend",
+          "definition": "The direction (increases or decreases) in which a specified physical quantity changes as altitude increases.",
+          "direction": "physical quantity -> trend direction as altitude increases"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7874ba24f01fce923b9d20d14d47a4fb2a5060c17a337245793a4b95a6b5be1d",
+      "input_sha256": "c0702824b6f21b789266e756d52e64c7254c09b205aba08788a4de307f04acb6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000947",
+      "decision": "ready",
+      "subject": "body system that breaks down food and absorbs nutrients",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "digestive system",
+      "canonical_fact": "The body system that breaks down food and absorbs nutrients is the digestive system.",
+      "prompt_en": "What body system breaks down food and absorbs nutrients?",
+      "evidence_quotes": [
+        "body system breaks down food and absorbs nutrients",
+        "digestive system"
+      ],
+      "reason": "The catalog relation description_to_term fits exactly: the source question supplies a defining description and the answer is the conventional term. The prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "What body system breaks down food and absorbs nutrients?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "digestive system",
+        "canonical_fact": "The body system that breaks down food and absorbs nutrients is the digestive system.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "body system that breaks down food and absorbs nutrients",
+        "answer_aliases_en": [
+          "digestive system"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04469bcbc31438014953c8aa388c5ee6356872a4bd5c582c6ff6f21a01cffa56",
+      "input_sha256": "c646169351a450e609e6e42aafc9f70cac3c9a19d836c591f99c60264b93a700",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000946",
+        "historical:raw_sciq_000947"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "496dad527c9b12b20736798cc8f5dd4a7540b7cd70c3244e5e7479daecf1903e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2313,
+      "first_chunk_seconds": 5.972,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2376,
+        "prompt_tokens": 1694,
+        "total_tokens": 4070,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1921,
+          "text_tokens": 455
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "069234182d196dcfd54b9b844cbdc33875b07f0c8df9effcb83f962b61f7a468",
+      "status": "completed",
+      "latency_seconds": 60.951
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000946",
+        "historical:raw_sciq_000947"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1766315132e763f1d6f66a4a70103b3106904519a450e4d1765b9049a15e98db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 18.69
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000946",
+        "historical:raw_sciq_000947"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1766315132e763f1d6f66a4a70103b3106904519a450e4d1765b9049a15e98db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.845
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000946",
+        "historical:raw_sciq_000947"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1766315132e763f1d6f66a4a70103b3106904519a450e4d1765b9049a15e98db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.313
+    }
+  ],
+  "status": "failed"
+}

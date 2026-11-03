@@ -1,0 +1,220 @@
+{
+  "input_sha256": "8c65f313f1a0d9287a43645454cbf7dbf1cfc823dd6d17a9cdfa125e57356838",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e3839650a0fcaa427aa0",
+      "decision": "ready",
+      "subject": "river that runs through southern siberia near china",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Amur",
+      "canonical_fact": "The river that runs through southern Siberia near China is the Amur.",
+      "prompt_en": "The river that runs through southern Siberia near China is the",
+      "evidence_quotes": [
+        "river that runs through southern siberia near china",
+        "Amur"
+      ],
+      "reason": "The source question provides a geographical description and the source answer is 'Amur', a river name. The existing answer matches the source exactly. description_to_entity fits precisely: a uniquely identifying description (river in southern Siberia near China) maps to the entity (Amur).",
+      "english": {
+        "answer": "Amur",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The river that runs through southern Siberia near China is the",
+        "direction": "identifying description -> entity",
+        "subject": "river that runs through southern siberia near china",
+        "canonical_fact": "The river that runs through southern Siberia near China is the Amur.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Amur",
+          "Amur River",
+          "Heilong Jiang"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8b67a4d4e140b67b167aa5db8a7248e0780022662505d1a2450bb69f698724ba",
+      "input_sha256": "6dea3977416caef53ffce6d487aaeecfda0cafee82fc21c4ea4abf715d568dcf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e38b8351443bb4d39704",
+      "decision": "ready",
+      "subject": "Deep nucleotide sequencing (NGS)",
+      "relation_id": "technique_to_primary_application",
+      "relation_definition": "The main or primary use case of a specified technique or method; retains qualifiers such as 'mainly' or 'primarily' and does not conflate with secondary or all possible uses.",
+      "direction": "specified technique -> its stated primary application",
+      "answer": "Quickly identifying new viruses",
+      "canonical_fact": "Deep nucleotide sequencing (NGS) is mainly useful for quickly identifying new viruses.",
+      "prompt_en": "Deep nucleotide sequencing (NGS) is mainly useful for",
+      "evidence_quotes": [
+        "What will the technique mainly be useful for?",
+        "Quickly identifying new viruses"
+      ],
+      "reason": "No existing catalog relation captures a technique-to-primary-use mapping exactly. term_to_definition defines what a term IS, not what it is used for; entity_to_class is taxonomy membership. A new relation technique_to_primary_application is proposed to precisely capture the stated main application with the 'mainly' qualifier. The answer 'Quickly identifying new viruses' is a literal substring of the source answer and the prompt is option-free.",
+      "english": {
+        "answer": "Quickly identifying new viruses",
+        "relation_id": "technique_to_primary_application",
+        "prompt_en": "Deep nucleotide sequencing (NGS) is mainly useful for",
+        "direction": "specified technique -> its stated primary application",
+        "subject": "Deep nucleotide sequencing (NGS)",
+        "canonical_fact": "Deep nucleotide sequencing (NGS) is mainly useful for quickly identifying new viruses.",
+        "relation_definition": "The main or primary use case of a specified technique or method; retains qualifiers such as 'mainly' or 'primarily' and does not conflate with secondary or all possible uses.",
+        "answer_aliases_en": [
+          "Quickly identifying new viruses"
+        ],
+        "relation_spec": {
+          "id": "technique_to_primary_application",
+          "definition": "The main or primary use case of a specified technique or method; retains qualifiers such as 'mainly' or 'primarily' and does not conflate with secondary or all possible uses.",
+          "direction": "specified technique -> its stated primary application"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "679d1adbc10e8f71ce88fc5c07e9ff0459d9a1aff2469b0198e77afd95a2453c",
+      "input_sha256": "6939608a8cdf70b4d400c319059548cf6fa54472c89936cc75dccd36e66961d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_e3839650a0fcaa427aa0",
+      "input_sha256": "6dea3977416caef53ffce6d487aaeecfda0cafee82fc21c4ea4abf715d568dcf",
+      "english": {
+        "answer": "Amur",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The river that runs through southern Siberia near China is the",
+        "direction": "identifying description -> entity",
+        "subject": "river that runs through southern siberia near china",
+        "canonical_fact": "The river that runs through southern Siberia near China is the Amur.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Amur",
+          "Amur River",
+          "Heilong Jiang"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8b67a4d4e140b67b167aa5db8a7248e0780022662505d1a2450bb69f698724ba",
+      "translation": {
+        "record_id": "public:pbf_e3839650a0fcaa427aa0",
+        "subject_zh": "流经西伯利亚南部、靠近中国的河流",
+        "prompt_zh": "流经西伯利亚南部、靠近中国的那条河流是",
+        "canonical_fact_zh": "流经西伯利亚南部、靠近中国的那条河流是阿穆尔河。",
+        "answer_zh": "阿穆尔",
+        "answer_aliases_zh": [
+          "阿穆尔",
+          "阿穆尔河",
+          "黑龙江"
+        ]
+      },
+      "translation_sha256": "b99e160da8411c44ef558f7fc8f1b6d39249a80a7eb78672b389ab3ffc8d19b0"
+    },
+    {
+      "record_id": "public:pbf_e38b8351443bb4d39704",
+      "input_sha256": "6939608a8cdf70b4d400c319059548cf6fa54472c89936cc75dccd36e66961d1",
+      "english": {
+        "answer": "Quickly identifying new viruses",
+        "relation_id": "technique_to_primary_application",
+        "prompt_en": "Deep nucleotide sequencing (NGS) is mainly useful for",
+        "direction": "specified technique -> its stated primary application",
+        "subject": "Deep nucleotide sequencing (NGS)",
+        "canonical_fact": "Deep nucleotide sequencing (NGS) is mainly useful for quickly identifying new viruses.",
+        "relation_definition": "The main or primary use case of a specified technique or method; retains qualifiers such as 'mainly' or 'primarily' and does not conflate with secondary or all possible uses.",
+        "answer_aliases_en": [
+          "Quickly identifying new viruses"
+        ],
+        "relation_spec": {
+          "id": "technique_to_primary_application",
+          "definition": "The main or primary use case of a specified technique or method; retains qualifiers such as 'mainly' or 'primarily' and does not conflate with secondary or all possible uses.",
+          "direction": "specified technique -> its stated primary application"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "679d1adbc10e8f71ce88fc5c07e9ff0459d9a1aff2469b0198e77afd95a2453c",
+      "translation": {
+        "record_id": "public:pbf_e38b8351443bb4d39704",
+        "subject_zh": "深度核苷酸测序（NGS）",
+        "prompt_zh": "深度核苷酸测序（NGS）主要用于",
+        "canonical_fact_zh": "深度核苷酸测序（NGS）主要用于快速识别新病毒。",
+        "answer_zh": "快速识别新病毒",
+        "answer_aliases_zh": [
+          "快速识别新病毒"
+        ]
+      },
+      "translation_sha256": "918a7ca295c9baa582b378b6f4ddf655a6cd1e5825ad0fb23e13c2fcd5d7e12a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e3839650a0fcaa427aa0",
+        "public:pbf_e38b8351443bb4d39704"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2c13de2b72e93f56673dc97a0db717697fd5ab88eeb79768968dd3dccf0d084e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1468,
+      "first_chunk_seconds": 26.797,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1543,
+        "prompt_tokens": 1638,
+        "total_tokens": 3181,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 981,
+          "text_tokens": 562
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "55e5d39edc2f5824ea3ce3178e6d75f1a2c59bfcb5e48510148521c1fff2c9b5",
+      "status": "completed",
+      "latency_seconds": 47.87
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e3839650a0fcaa427aa0",
+        "public:pbf_e38b8351443bb4d39704"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "57d45ae703f9b3e1ca8532e26787f1bc9d1eae7dad88fb431826659743baa173",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1302,
+      "first_chunk_seconds": 15.077,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1439,
+        "prompt_tokens": 892,
+        "total_tokens": 2331,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1170,
+          "text_tokens": 269
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "66dd39705136937ad56b0373fb9b1f16550715ad1886b8826e8dc421e5f49d64",
+      "status": "completed",
+      "latency_seconds": 32.715
+    }
+  ],
+  "status": "completed"
+}

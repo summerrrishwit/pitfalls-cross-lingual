@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b6d0936274a415972bc785bafa28b929bb63e777ed74d13fee5745b0f50cfaf2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006924",
+      "decision": "ready",
+      "subject": "writing",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "communication",
+      "canonical_fact": "Writing is a form of communication.",
+      "prompt_en": "What broader category is writing a form of?",
+      "evidence_quotes": [
+        "What is writing a form of?",
+        "communication"
+      ],
+      "reason": "The source question asks what writing is a form of and the source answer is 'communication'. entity_to_class captures this as a stable class membership (writing belongs to the class of communication). Both model annotations agree on the extraction. The relation fits exactly: writing (entity) -> communication (class).",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Writing is a form of communication.",
+        "subject": "writing",
+        "prompt_en": "What broader category is writing a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1620a15ff8961261121694b86e6928dc36e03b88f2df15efa4994da3ffeef304",
+      "input_sha256": "3cffcf1a7ab968c13edd6ca7bb50e353e0640d8dd10033356e989706232650be",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006943",
+      "decision": "ready",
+      "subject": "Paris",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "france",
+      "canonical_fact": "Paris is in France.",
+      "prompt_en": "In which country is Paris located?",
+      "evidence_quotes": [
+        "Paris",
+        "france"
+      ],
+      "reason": "The source question places Sam in Paris and the source answer is 'france', establishing that Paris is geographically contained in France at the country level. entity_to_containing_location fits exactly: Paris (entity) -> France (containing location at country level). One model flagged multi-step reasoning, but the factual containment relationship between Paris and France is directly stated in the answer without requiring inference beyond the location fact.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "france",
+        "canonical_fact": "Paris is in France.",
+        "subject": "Paris",
+        "prompt_en": "In which country is Paris located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "france"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1420267a9ab0830b724d0e580266bfb7aefa33f15ce2d0ecd8e606c64ddf9d90",
+      "input_sha256": "22dafd24a1e63ee9bf3ebddc892b83b6d2e86eb685922ec5155b424b93560c27",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006924",
+      "input_sha256": "3cffcf1a7ab968c13edd6ca7bb50e353e0640d8dd10033356e989706232650be",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Writing is a form of communication.",
+        "subject": "writing",
+        "prompt_en": "What broader category is writing a form of?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1620a15ff8961261121694b86e6928dc36e03b88f2df15efa4994da3ffeef304",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006924",
+        "subject_zh": "写作",
+        "prompt_zh": "写作属于哪个更大的类别？",
+        "canonical_fact_zh": "写作是交流的一种形式。",
+        "answer_zh": "交流",
+        "answer_aliases_zh": [
+          "交流"
+        ]
+      },
+      "translation_sha256": "5d6c1edecf1300abb21c2e049b5c7460d76d2c4190596d65d331ecb3ab7f1707"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006943",
+      "input_sha256": "22dafd24a1e63ee9bf3ebddc892b83b6d2e86eb685922ec5155b424b93560c27",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "france",
+        "canonical_fact": "Paris is in France.",
+        "subject": "Paris",
+        "prompt_en": "In which country is Paris located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "france"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1420267a9ab0830b724d0e580266bfb7aefa33f15ce2d0ecd8e606c64ddf9d90",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006943",
+        "subject_zh": "巴黎",
+        "prompt_zh": "巴黎位于哪个国家？",
+        "canonical_fact_zh": "巴黎位于法国。",
+        "answer_zh": "法国",
+        "answer_aliases_zh": [
+          "法国"
+        ]
+      },
+      "translation_sha256": "e9e6e2fae92f3b42a775e75d6ebe2482b261c1613cff5707558acdbc826aab14"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006924",
+        "historical:raw_commonsense_qa_006943"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "488ff4f056ce159494d6f9f2f63db2155f67893b5076c0637f6c2f313baa01c1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1778,
+      "first_chunk_seconds": 7.675,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1821,
+        "prompt_tokens": 1604,
+        "total_tokens": 3425,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1353,
+          "text_tokens": 468
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4cb700e4643391ac69a6e0bacab2f436c78d373bb99f6ea98cea673db436a07b",
+      "status": "completed",
+      "latency_seconds": 30.461
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006924",
+        "historical:raw_commonsense_qa_006943"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7a048c3283e63f329c632072a987c7fb925b024aecb207c157151ab185d66b11",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 416,
+      "first_chunk_seconds": 37.267,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 440,
+        "prompt_tokens": 778,
+        "total_tokens": 1218,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 315,
+          "text_tokens": 125
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ad5472c40278c85528203fd123b320e4dd98ad30aa16aa3419f902bea675bef",
+      "status": "completed",
+      "latency_seconds": 44.433
+    }
+  ],
+  "status": "completed"
+}

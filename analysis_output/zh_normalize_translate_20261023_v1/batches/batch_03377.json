@@ -1,0 +1,185 @@
+{
+  "input_sha256": "1145edd7b1f9c5e56211d2acb46be0310dce1c7434bec1910eab6534650c6492",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001438",
+      "decision": "ready",
+      "subject": "large rectangular storage container used to store old clothes and keep moths away",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "trunk",
+      "canonical_fact": "A large rectangular storage container used to store old clothes and keep moths away is called a trunk.",
+      "prompt_en": "What is the conventional term for a large rectangular storage container used to store old clothes and keep moths away?",
+      "evidence_quotes": [
+        "large rectangular storage container",
+        "trunk"
+      ],
+      "reason": "The source question supplies a defining description (large rectangular storage container for old clothes, moths) and asks for the conventional term that fits it; this matches description_to_term exactly. The extracted answer 'trunk' is a literal substring of source_answer and is consistent.",
+      "english": {
+        "prompt_en": "What is the conventional term for a large rectangular storage container used to store old clothes and keep moths away?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "trunk",
+        "canonical_fact": "A large rectangular storage container used to store old clothes and keep moths away is called a trunk.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "large rectangular storage container used to store old clothes and keep moths away",
+        "answer_aliases_en": [
+          "trunk"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f0d8ac5998c46d92fd0d59729601ff378d9fde6b23ed8112ad4ea472e9ddb53",
+      "input_sha256": "d01180d1b565fdae4615fbac84ea7517afce3aa246e8920b33c5bae9c84ea411",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001450",
+      "decision": "ready",
+      "subject": "honor killing",
+      "relation_id": "act_to_intended_outcome",
+      "relation_definition": "The commonly understood intended outcome or purpose that a specified act or social practice is understood to aim for.",
+      "direction": "act -> intended outcome",
+      "answer": "retribution",
+      "canonical_fact": "An honor killing might attempt to achieve retribution.",
+      "prompt_en": "What might an honor killing attempt to achieve?",
+      "evidence_quotes": [
+        "What might an honor killing attempt to achieve",
+        "retribution"
+      ],
+      "reason": "The source question asks about the commonly understood purpose/outcome of the act 'honor killing.' No existing catalog relation covers an act-to-intended-outcome mapping, so a new relation 'act_to_intended_outcome' is proposed. The answer 'retribution' is a literal substring of source_answer. The modal 'might' is preserved in the canonical fact to reflect uncertainty.",
+      "english": {
+        "prompt_en": "What might an honor killing attempt to achieve?",
+        "relation_definition": "The commonly understood intended outcome or purpose that a specified act or social practice is understood to aim for.",
+        "answer": "retribution",
+        "canonical_fact": "An honor killing might attempt to achieve retribution.",
+        "direction": "act -> intended outcome",
+        "relation_id": "act_to_intended_outcome",
+        "subject": "honor killing",
+        "answer_aliases_en": [
+          "retribution"
+        ],
+        "relation_spec": {
+          "id": "act_to_intended_outcome",
+          "definition": "The commonly understood intended outcome or purpose that a specified act or social practice is understood to aim for.",
+          "direction": "act -> intended outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7adf453fb3940b9d24c64e5def70022ab04744441cca2c9ff518f2d40ba16c3a",
+      "input_sha256": "a710e7e9491ef1753870ee20337500c40fbf38eafe16145e94761a51c270f787",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0f8fa96cd1d2dcf580ba38737d2c60d25afdf4512afd8843685232cd3779ccd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.723
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0f8fa96cd1d2dcf580ba38737d2c60d25afdf4512afd8843685232cd3779ccd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.817
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0f8fa96cd1d2dcf580ba38737d2c60d25afdf4512afd8843685232cd3779ccd9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2040,
+      "first_chunk_seconds": 4.161,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2154,
+        "prompt_tokens": 1617,
+        "total_tokens": 3771,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1634,
+          "text_tokens": 520
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a061476a3d78387cd47bc5734711c638faddc520996fcafd21c8c3f177777da9",
+      "status": "completed",
+      "latency_seconds": 48.676
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "025b312f20d90be893df0713d310d7fabee6ccb996c546e2b313be4ec0e56424",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.423
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "025b312f20d90be893df0713d310d7fabee6ccb996c546e2b313be4ec0e56424",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 27.839
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001438",
+        "historical:raw_commonsense_qa_001450"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "025b312f20d90be893df0713d310d7fabee6ccb996c546e2b313be4ec0e56424",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.644
+    }
+  ],
+  "status": "failed"
+}

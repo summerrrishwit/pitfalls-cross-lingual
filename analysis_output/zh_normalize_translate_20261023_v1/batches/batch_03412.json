@@ -1,0 +1,157 @@
+{
+  "input_sha256": "2759ab3419c286a3fbd77a463de40fcf8d6e173cf05c9f6ae7cca15467f4c688",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002785",
+      "decision": "ready",
+      "subject": "politicians in London",
+      "relation_id": "entity_to_typical_location",
+      "relation_definition": "The conventional or most prominent location where a specified group or entity is found; not asserting exclusivity. Direction: entity/group -> location.",
+      "direction": "entity -> typical location",
+      "answer": "parliament",
+      "canonical_fact": "Politicians in London are found in parliament.",
+      "prompt_en": "Where would you find politicians in London?",
+      "evidence_quotes": [
+        "parliament",
+        "Where would you find politicians in London?"
+      ],
+      "reason": "The source answer 'parliament' is a literal, concise substring supported by the question 'Where would you find politicians in London?'. No existing catalog relation captures 'typical location where a group is found'; entity_to_containing_location is about geographic containment hierarchy, and organism_to_habitat is restricted to organisms. A new relation entity_to_typical_location is proposed with explicit direction and scope.",
+      "english": {
+        "prompt_en": "Where would you find politicians in London?",
+        "relation_definition": "The conventional or most prominent location where a specified group or entity is found; not asserting exclusivity. Direction: entity/group -> location.",
+        "answer": "parliament",
+        "canonical_fact": "Politicians in London are found in parliament.",
+        "direction": "entity -> typical location",
+        "relation_id": "entity_to_typical_location",
+        "subject": "politicians in London",
+        "answer_aliases_en": [
+          "parliament"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_location",
+          "definition": "The conventional or most prominent location where a specified group or entity is found; not asserting exclusivity. Direction: entity/group -> location.",
+          "direction": "entity -> typical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b073375a800e811e718fc2173de18a794e07d6b0410114fbdf0d9d9814fe137f",
+      "input_sha256": "7cbc09580421dd29a8e9c1ef2648e2254897036b95f103dcc687af35fb8134bf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002794",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits exactly. The closest candidate description_to_term requires the term to 'uniquely fit' the description, but 'a device on which you can watch a program without leaving your home' is satisfied by multiple devices (computer, phone, tablet, streaming stick, etc.), so 'television' is not a uniquely fitting term. Forcing it into description_to_term would violate the uniqueness criterion. No other listed relation captures 'one valid example device for a function'. Deferring rather than inventing a too-broad new relation.",
+      "input_sha256": "07e82ec0f7946b3f0cc46beecf35f54a7c3dbaea44ea1dbde5d07655fb481132",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002785",
+      "input_sha256": "7cbc09580421dd29a8e9c1ef2648e2254897036b95f103dcc687af35fb8134bf",
+      "english": {
+        "prompt_en": "Where would you find politicians in London?",
+        "relation_definition": "The conventional or most prominent location where a specified group or entity is found; not asserting exclusivity. Direction: entity/group -> location.",
+        "answer": "parliament",
+        "canonical_fact": "Politicians in London are found in parliament.",
+        "direction": "entity -> typical location",
+        "relation_id": "entity_to_typical_location",
+        "subject": "politicians in London",
+        "answer_aliases_en": [
+          "parliament"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_location",
+          "definition": "The conventional or most prominent location where a specified group or entity is found; not asserting exclusivity. Direction: entity/group -> location.",
+          "direction": "entity -> typical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b073375a800e811e718fc2173de18a794e07d6b0410114fbdf0d9d9814fe137f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002785",
+        "subject_zh": "伦敦的政治家",
+        "prompt_zh": "在伦敦哪里能找到政治家？",
+        "canonical_fact_zh": "伦敦的政治家可以在议会中找到。",
+        "answer_zh": "议会",
+        "answer_aliases_zh": [
+          "议会"
+        ]
+      },
+      "translation_sha256": "0377977c2736ef19e546ffc2fd93e3be77dd37b859c8861a66726a0081cfe709"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002785",
+        "historical:raw_commonsense_qa_002794"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ef225934f8213b01f3c33e835d15433d2866adbbe64a24f01f2a787dbd1a3cc3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2153,
+      "first_chunk_seconds": 62.035,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2239,
+        "prompt_tokens": 1596,
+        "total_tokens": 3835,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1759,
+          "text_tokens": 480
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b5728e7f6613d5d5e764d4bab684be0c5611f22b15e6b8b0daaf8d99d3c4f30d",
+      "status": "completed",
+      "latency_seconds": 114.3
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002785"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "637f32c80a8726247439041be1c682e777295b3d728eac682e86433c508c19ff",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 433,
+      "first_chunk_seconds": 4.032,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 452,
+        "prompt_tokens": 527,
+        "total_tokens": 979,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 383,
+          "text_tokens": 69
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22eb85e6bf5bed6a31e4a0d8c3d3fc66fea079941a2d11fbfb6d75767c3e37f9",
+      "status": "completed",
+      "latency_seconds": 62.417
+    }
+  ],
+  "status": "completed"
+}

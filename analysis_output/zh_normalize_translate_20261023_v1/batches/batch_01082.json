@@ -1,0 +1,157 @@
+{
+  "input_sha256": "e9980e6728002c0414b262912c22024e9cc340429bb73541bb822e060e8d4158",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5c50df2d1d14ea076ab2",
+      "decision": "ready",
+      "subject": "largest increase in peacetime defense spending in American history",
+      "relation_id": "event_to_president_in_office",
+      "relation_definition": "The sitting president of the relevant country during the specified historical event or record.",
+      "direction": "historical event/record -> president in office",
+      "answer": "Ronald Reagan",
+      "canonical_fact": "The largest increase in peacetime defense spending in American history occurred under President Ronald Reagan.",
+      "prompt_en": "The largest increase in peacetime defense spending in American history occurred under which president?",
+      "evidence_quotes": [
+        "The largest increase in peacetime defense spending in American history occurred under which president?",
+        "Ronald Reagan"
+      ],
+      "reason": "Source clearly identifies Ronald Reagan as the president during the largest peacetime defense spending increase. No existing catalog relation captures 'event/record -> president in office during it'; proposing event_to_president_in_office. Answer kept exactly as source. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "Ronald Reagan",
+        "relation_id": "event_to_president_in_office",
+        "prompt_en": "The largest increase in peacetime defense spending in American history occurred under which president?",
+        "direction": "historical event/record -> president in office",
+        "subject": "largest increase in peacetime defense spending in American history",
+        "canonical_fact": "The largest increase in peacetime defense spending in American history occurred under President Ronald Reagan.",
+        "relation_definition": "The sitting president of the relevant country during the specified historical event or record.",
+        "answer_aliases_en": [
+          "Ronald Reagan"
+        ],
+        "relation_spec": {
+          "id": "event_to_president_in_office",
+          "definition": "The sitting president of the relevant country during the specified historical event or record.",
+          "direction": "historical event/record -> president in office"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "260e0d488d7c65aa8f3ff390c7e4e9d955fa642022fb264d3261481ee937c14f",
+      "input_sha256": "5a42ddd1e9c6bf811a209a758925ff43673d5723ac2ef24065d39c8f57b0ec35",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5c7a1fdf6df9b21aa01d",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Source question asks 'where was the first battle fought in the civil war' (expecting a location), but source answer is 'Battle of Fort Sumter' (a battle/event name, not a location). The answer does not properly satisfy the 'where' query; the location (e.g., Fort Sumter, Charleston Harbor) is not explicitly stated. Insufficient source support for a clean location-based fact; deferring.",
+      "input_sha256": "689c1af0c4d0098875573311dfda226a11de849d0b3381c3b0b27714f79b048f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_5c50df2d1d14ea076ab2",
+      "input_sha256": "5a42ddd1e9c6bf811a209a758925ff43673d5723ac2ef24065d39c8f57b0ec35",
+      "english": {
+        "answer": "Ronald Reagan",
+        "relation_id": "event_to_president_in_office",
+        "prompt_en": "The largest increase in peacetime defense spending in American history occurred under which president?",
+        "direction": "historical event/record -> president in office",
+        "subject": "largest increase in peacetime defense spending in American history",
+        "canonical_fact": "The largest increase in peacetime defense spending in American history occurred under President Ronald Reagan.",
+        "relation_definition": "The sitting president of the relevant country during the specified historical event or record.",
+        "answer_aliases_en": [
+          "Ronald Reagan"
+        ],
+        "relation_spec": {
+          "id": "event_to_president_in_office",
+          "definition": "The sitting president of the relevant country during the specified historical event or record.",
+          "direction": "historical event/record -> president in office"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "260e0d488d7c65aa8f3ff390c7e4e9d955fa642022fb264d3261481ee937c14f",
+      "translation": {
+        "record_id": "public:pbf_5c50df2d1d14ea076ab2",
+        "subject_zh": "美国历史上和平时期的国防开支最大增幅",
+        "prompt_zh": "美国历史上和平时期的国防开支最大增幅发生在哪位总统任内？",
+        "canonical_fact_zh": "美国历史上和平时期的国防开支最大增幅发生在罗纳德·里根总统任内。",
+        "answer_zh": "罗纳德·里根",
+        "answer_aliases_zh": [
+          "罗纳德·里根"
+        ]
+      },
+      "translation_sha256": "84944dbd49de5ada353161df5fd385fbd0f04d2d3007f5db42ac53c55bcdcae3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5c50df2d1d14ea076ab2",
+        "public:pbf_5c7a1fdf6df9b21aa01d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d8a7ef6b93fe216ef5b1f4c6c9254501db4b8183ed6fccc18b4eb061a748982",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2080,
+      "first_chunk_seconds": 30.011,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2164,
+        "prompt_tokens": 1630,
+        "total_tokens": 3794,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1750,
+          "text_tokens": 414
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8f25eba8305566d97c9f5e2ca51f028216688956eaa9c80c17ea735ae9af520d",
+      "status": "completed",
+      "latency_seconds": 55.438
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5c50df2d1d14ea076ab2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08f7b4549bb6e60c6e490514f5c6b6cdf661edb0b5a4838a464f99ded5642168",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 675,
+      "first_chunk_seconds": 29.743,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 677,
+        "prompt_tokens": 551,
+        "total_tokens": 1228,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 529,
+          "text_tokens": 148
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "47708b1280687961da5d1fe10d64381ede9f26ac36dba8e73020ac36d5bb1d72",
+      "status": "completed",
+      "latency_seconds": 39.077
+    }
+  ],
+  "status": "completed"
+}

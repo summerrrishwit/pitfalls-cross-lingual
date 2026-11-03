@@ -1,0 +1,189 @@
+{
+  "input_sha256": "6b0f055e7953cf49925c2ec061f274532be13bf4913aa57541cade7cd37dc9bd",
+  "normalized": [
+    {
+      "record_id": "public:pbf_2e46a29c20748777bb7e",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer '4' is literally embedded in the subject expression max([1, 2, 3, 4]); any prompt stating the subject necessarily contains the string '4', violating the answer_leaked_in_prompt constraint. Deferring because a non-leaking prompt cannot be constructed without altering the source fact.",
+      "input_sha256": "f128a8698c75d38c53d2579e480ffa3476ff8a9232679066dce8e1632b767143",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_2e4bf5ace11e0b510d37",
+      "decision": "ready",
+      "subject": "somatoform disorders",
+      "relation_id": "condition_to_common_symptom",
+      "relation_definition": "A symptom shared by all members of a specified diagnostic category; retains the scope 'among all' and the symptom's descriptive content.",
+      "direction": "diagnostic condition/category -> shared symptom description",
+      "answer": "experiencing a physical problem without a physical cause",
+      "canonical_fact": "A common symptom among all somatoform disorders is experiencing a physical problem without a physical cause.",
+      "prompt_en": "A common symptom among all somatoform disorders is",
+      "evidence_quotes": [
+        "symptom is common among all the somatoform disorders",
+        "experiencing a physical problem without a physical cause"
+      ],
+      "reason": "Source answer is a concise literal description of the shared symptom. No catalog relation fits; proposing 'condition_to_common_symptom' with explicit direction and scope. Prompt does not contain the answer string.",
+      "english": {
+        "direction": "diagnostic condition/category -> shared symptom description",
+        "prompt_en": "A common symptom among all somatoform disorders is",
+        "relation_id": "condition_to_common_symptom",
+        "answer": "experiencing a physical problem without a physical cause",
+        "relation_definition": "A symptom shared by all members of a specified diagnostic category; retains the scope 'among all' and the symptom's descriptive content.",
+        "subject": "somatoform disorders",
+        "canonical_fact": "A common symptom among all somatoform disorders is experiencing a physical problem without a physical cause.",
+        "answer_aliases_en": [
+          "experiencing a physical problem without a physical cause"
+        ],
+        "relation_spec": {
+          "id": "condition_to_common_symptom",
+          "definition": "A symptom shared by all members of a specified diagnostic category; retains the scope 'among all' and the symptom's descriptive content.",
+          "direction": "diagnostic condition/category -> shared symptom description"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "30762e292c198f5d70b14d1320843e713005e7ca3bf6c632bca4b388cb9c1fdd",
+      "input_sha256": "639d0eba5513fefb32d1bb2c733f13419ba641a69fae54d68a396d904e02024a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_2e4bf5ace11e0b510d37",
+      "input_sha256": "639d0eba5513fefb32d1bb2c733f13419ba641a69fae54d68a396d904e02024a",
+      "english": {
+        "direction": "diagnostic condition/category -> shared symptom description",
+        "prompt_en": "A common symptom among all somatoform disorders is",
+        "relation_id": "condition_to_common_symptom",
+        "answer": "experiencing a physical problem without a physical cause",
+        "relation_definition": "A symptom shared by all members of a specified diagnostic category; retains the scope 'among all' and the symptom's descriptive content.",
+        "subject": "somatoform disorders",
+        "canonical_fact": "A common symptom among all somatoform disorders is experiencing a physical problem without a physical cause.",
+        "answer_aliases_en": [
+          "experiencing a physical problem without a physical cause"
+        ],
+        "relation_spec": {
+          "id": "condition_to_common_symptom",
+          "definition": "A symptom shared by all members of a specified diagnostic category; retains the scope 'among all' and the symptom's descriptive content.",
+          "direction": "diagnostic condition/category -> shared symptom description"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "30762e292c198f5d70b14d1320843e713005e7ca3bf6c632bca4b388cb9c1fdd",
+      "translation": {
+        "record_id": "public:pbf_2e4bf5ace11e0b510d37",
+        "subject_zh": "躯体形式障碍",
+        "prompt_zh": "所有躯体形式障碍中常见的症状是",
+        "canonical_fact_zh": "所有躯体形式障碍中常见的症状是在没有躯体性病因的情况下出现躯体问题。",
+        "answer_zh": "在没有躯体性病因的情况下出现躯体问题",
+        "answer_aliases_zh": [
+          "在没有躯体性病因的情况下出现躯体问题"
+        ]
+      },
+      "translation_sha256": "b3bb747b9de35996840160f0d17e42d2af430417106fd2ba8530624872bfab2e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2e46a29c20748777bb7e",
+        "public:pbf_2e4bf5ace11e0b510d37"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7622696db42cfa3c33a13665655e739254cb80dc1bee36ba9fdedf0a406d5928",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2328,
+      "first_chunk_seconds": 188.169,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2469,
+        "prompt_tokens": 1680,
+        "total_tokens": 4149,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1913,
+          "text_tokens": 556
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ef4c772347c38a8be707107607cb0286cd005921e8b1ad0cac8515f9bcf284c3",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 240.345,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2e46a29c20748777bb7e",
+        "public:pbf_2e4bf5ace11e0b510d37"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9c062ccba3a4dd48a6c0a1aad07428713b71823a7270f2915e7476a7be75d624",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2040,
+      "first_chunk_seconds": 12.261,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2264,
+        "prompt_tokens": 1699,
+        "total_tokens": 3963,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1815,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dde9eb903764d7137c92090ab8aee2a17e6a558a8c4a658b1b3725ce10330bf2",
+      "status": "completed",
+      "latency_seconds": 53.812
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_2e4bf5ace11e0b510d37"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "474ebd7c6f2c4701b848bd796f0cc31d945a72de300369321dadd62bb0df9407",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 770,
+      "first_chunk_seconds": 25.031,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 768,
+        "prompt_tokens": 570,
+        "total_tokens": 1338,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 667,
+          "text_tokens": 101
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "68eea2f8197498e06f2507bf0fe7ccd329745343963685255cd61134103d5a40",
+      "status": "completed",
+      "latency_seconds": 35.008
+    }
+  ],
+  "status": "completed"
+}

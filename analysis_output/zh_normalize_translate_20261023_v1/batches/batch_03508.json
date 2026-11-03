@@ -1,0 +1,171 @@
+{
+  "input_sha256": "7e21dc5261702db4946a80c6d2d36e798701cdb6a4b0e75b8eaebce768e8f3a6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007923",
+      "decision": "ready",
+      "subject": "lights used for a safe landing",
+      "relation_id": "entity_to_installation_location",
+      "relation_definition": "The physical surface, structure, or system on which a specified entity is mounted or installed.",
+      "direction": "entity -> installation location/surface",
+      "answer": "plane",
+      "canonical_fact": "Lights used for a safe landing are installed on a plane.",
+      "prompt_en": "Where are lights used for a safe landing installed?",
+      "evidence_quotes": [
+        "The lights were used for a safe landing, so where were they installed?",
+        "plane"
+      ],
+      "reason": "The source question directly asks where landing lights are installed and the answer is 'plane.' No catalog relation precisely captures 'installed on / mounted on a surface'; 'part_to_whole' implies component membership rather than installation location, and 'entity_to_containing_location' is restricted to geographic containment. A new relation 'entity_to_installation_location' is proposed to avoid forcing a broad category.",
+      "english": {
+        "prompt_en": "Where are lights used for a safe landing installed?",
+        "relation_definition": "The physical surface, structure, or system on which a specified entity is mounted or installed.",
+        "answer": "plane",
+        "canonical_fact": "Lights used for a safe landing are installed on a plane.",
+        "direction": "entity -> installation location/surface",
+        "relation_id": "entity_to_installation_location",
+        "subject": "lights used for a safe landing",
+        "answer_aliases_en": [
+          "plane"
+        ],
+        "relation_spec": {
+          "id": "entity_to_installation_location",
+          "definition": "The physical surface, structure, or system on which a specified entity is mounted or installed.",
+          "direction": "entity -> installation location/surface"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9d87300c9ac25c45f18e3a6ea4711c32aa1eefcef2925597536bd855b8cf30bc",
+      "input_sha256": "b32717fd241df97c2af7bcf93405be563094a8e7e8762683e1dd996e21f3662d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007985",
+      "decision": "ready",
+      "subject": "eggs brought home from the store",
+      "relation_id": "entity_to_container",
+      "relation_definition": "The typical container or receptacle in which a specified entity is held or stored in common usage.",
+      "direction": "entity -> container",
+      "answer": "egg carton",
+      "canonical_fact": "Eggs brought home from the store are held in an egg carton.",
+      "prompt_en": "After bringing eggs home from the store, in what are they held?",
+      "evidence_quotes": [
+        "After bringing eggs home from the store in what are they held?",
+        "egg carton"
+      ],
+      "reason": "The source question asks what eggs are held in after being brought home from the store, and the answer is 'egg carton.' No catalog relation captures 'held in a container'; 'entity_to_containing_location' is geographic, 'entity_to_material' is about composition, and 'part_to_whole' implies structural membership rather than containment in a receptacle. A new relation 'entity_to_container' is proposed for precision.",
+      "english": {
+        "prompt_en": "After bringing eggs home from the store, in what are they held?",
+        "relation_definition": "The typical container or receptacle in which a specified entity is held or stored in common usage.",
+        "answer": "egg carton",
+        "canonical_fact": "Eggs brought home from the store are held in an egg carton.",
+        "direction": "entity -> container",
+        "relation_id": "entity_to_container",
+        "subject": "eggs brought home from the store",
+        "answer_aliases_en": [
+          "egg carton"
+        ],
+        "relation_spec": {
+          "id": "entity_to_container",
+          "definition": "The typical container or receptacle in which a specified entity is held or stored in common usage.",
+          "direction": "entity -> container"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "21697537ca65026231185023948d1d1dd8779118597c1575b88a21bd97a67ff0",
+      "input_sha256": "45275a402cf8d5b007546485464fb50a56829e027d5b98d5b394a379ecda32c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007923",
+        "historical:raw_commonsense_qa_007985"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c9a7f380e3b381e9351480380aef4baa5942a7fedac3b613f39b2f009f3bc2bf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.839
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007923",
+        "historical:raw_commonsense_qa_007985"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c9a7f380e3b381e9351480380aef4baa5942a7fedac3b613f39b2f009f3bc2bf",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2545,
+      "first_chunk_seconds": 2.473,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2636,
+        "prompt_tokens": 1602,
+        "total_tokens": 4238,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2086,
+          "text_tokens": 550
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1c346a20cc79286426137098f887bf6249bc983ea4b7e096642e9ee45ff7fc9d",
+      "status": "completed",
+      "latency_seconds": 41.287
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007923",
+        "historical:raw_commonsense_qa_007985"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "49d7e72fe472aa08a4ce15c1d39193ab003bd5d9e656747f2837f499abda2d01",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.503
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007923",
+        "historical:raw_commonsense_qa_007985"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "49d7e72fe472aa08a4ce15c1d39193ab003bd5d9e656747f2837f499abda2d01",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.745
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007923",
+        "historical:raw_commonsense_qa_007985"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "49d7e72fe472aa08a4ce15c1d39193ab003bd5d9e656747f2837f499abda2d01",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.913
+    }
+  ],
+  "status": "failed"
+}

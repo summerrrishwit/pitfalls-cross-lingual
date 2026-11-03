@@ -1,0 +1,191 @@
+{
+  "input_sha256": "b2470895624fe7c3fd9d6f550e4a00a82107b6ee247b7a592ed2e5271cd4e70e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_edf2b4732af833a7a701",
+      "decision": "ready",
+      "subject": "Nigeria",
+      "relation_id": "entity_to_namer",
+      "relation_definition": "The specific person credited with giving the name to a specified entity (place, work, etc.).",
+      "direction": "entity -> namer",
+      "answer": "flora louise shaw",
+      "canonical_fact": "Flora Louise Shaw named Nigeria.",
+      "prompt_en": "Who is the person that gave Nigeria its name?",
+      "evidence_quotes": [
+        "who is the person that give nigeria name",
+        "flora louise shaw, the lady lugard"
+      ],
+      "reason": "Source explicitly attributes the naming of Nigeria to Flora Louise Shaw (the Lady Lugard). No existing catalog relation covers naming-attribution; propose entity_to_namer with direction entity->namer. Answer kept from prior extraction as a literal substring of source_answer; no conflict.",
+      "english": {
+        "answer": "flora louise shaw",
+        "relation_id": "entity_to_namer",
+        "prompt_en": "Who is the person that gave Nigeria its name?",
+        "direction": "entity -> namer",
+        "subject": "Nigeria",
+        "canonical_fact": "Flora Louise Shaw named Nigeria.",
+        "relation_definition": "The specific person credited with giving the name to a specified entity (place, work, etc.).",
+        "answer_aliases_en": [
+          "flora louise shaw",
+          "flora louise shaw, the lady lugard"
+        ],
+        "relation_spec": {
+          "id": "entity_to_namer",
+          "definition": "The specific person credited with giving the name to a specified entity (place, work, etc.).",
+          "direction": "entity -> namer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dfb3a4032acf051745cf6fd6f88fb9d258b14e3bdc3c1ef3da09eebff2831dcb",
+      "input_sha256": "89be6a4b0ab228c1bc4ba4780cde627b6ff33d370b59123322d6684d28a99447",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ee15ee2b4e4e08f966e0",
+      "decision": "ready",
+      "subject": "Nazca geoglyphs",
+      "relation_id": "symbol_to_meaning",
+      "relation_definition": "Meaning of a symbol in its explicit domain/context.",
+      "direction": "symbol -> meaning",
+      "answer": "ceremonial pathways and effigies of spirits and gods",
+      "canonical_fact": "The Nazca geoglyphs represent ceremonial pathways and effigies of spirits and gods.",
+      "prompt_en": "What do the Nazca geoglyphs represent?",
+      "evidence_quotes": [
+        "The Nazca geoglyphs extend over miles and represent:",
+        "ceremonial pathways and effigies of spirits and gods."
+      ],
+      "reason": "Source states the Nazca geoglyphs represent ceremonial pathways and effigies of spirits and gods. symbol_to_meaning fits: geoglyphs are symbolic ground representations and 'represent' denotes their symbolic content/meaning in the archaeological domain. Answer retained from prior extraction; no conflict with source.",
+      "english": {
+        "answer": "ceremonial pathways and effigies of spirits and gods",
+        "relation_id": "symbol_to_meaning",
+        "prompt_en": "What do the Nazca geoglyphs represent?",
+        "direction": "symbol -> meaning",
+        "subject": "Nazca geoglyphs",
+        "canonical_fact": "The Nazca geoglyphs represent ceremonial pathways and effigies of spirits and gods.",
+        "relation_definition": "Meaning of a symbol in its explicit domain/context.",
+        "answer_aliases_en": [
+          "ceremonial pathways and effigies of spirits and gods",
+          "ceremonial pathways and effigies of spirits and gods."
+        ],
+        "relation_spec": {
+          "id": "symbol_to_meaning",
+          "direction": "symbol -> meaning",
+          "definition": "Meaning of a symbol in its explicit domain/context."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6878002f81e6c25008261745697565961960568eb8611e763abc1120417d6ef6",
+      "input_sha256": "1e090b8d07c8b574e2e0442e94aef71d918dcd8ff93c8439713f49b814635404",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_edf2b4732af833a7a701",
+        "public:pbf_ee15ee2b4e4e08f966e0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1a10a0ce2f4a67a557b64ba8c0f23fa64e6024ef49989b616d6aa35f10d4065e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2970,
+      "first_chunk_seconds": 48.625,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3153,
+        "prompt_tokens": 1656,
+        "total_tokens": 4809,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2614,
+          "text_tokens": 539
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "89f224f8ac9d3f998145ba678eece3ee43b014cc04d85749d586db74e7007068",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 96.836,
+      "validation_code": "record_id_coverage_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_edf2b4732af833a7a701",
+        "public:pbf_ee15ee2b4e4e08f966e0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cb7938b16c7beee6728dd88fadd86599ed892825cd2c21972f701fabcc251cfe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2646,
+      "first_chunk_seconds": 42.839,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2843,
+        "prompt_tokens": 1675,
+        "total_tokens": 4518,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2316,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "87efd6f1484ed72682723fa1b21e73feae118d4682265dbbecf3af1a248dbf7a",
+      "status": "completed",
+      "latency_seconds": 98.376
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_edf2b4732af833a7a701",
+        "public:pbf_ee15ee2b4e4e08f966e0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fc75a58929f8f9b015fd93d6e8544c084c16e3d5027ca5ad67657313d553cecd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.011
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_edf2b4732af833a7a701",
+        "public:pbf_ee15ee2b4e4e08f966e0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fc75a58929f8f9b015fd93d6e8544c084c16e3d5027ca5ad67657313d553cecd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.495
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_edf2b4732af833a7a701",
+        "public:pbf_ee15ee2b4e4e08f966e0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fc75a58929f8f9b015fd93d6e8544c084c16e3d5027ca5ad67657313d553cecd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.474
+    }
+  ],
+  "status": "failed"
+}

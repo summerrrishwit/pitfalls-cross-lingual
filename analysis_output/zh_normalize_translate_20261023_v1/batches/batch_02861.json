@@ -1,0 +1,196 @@
+{
+  "input_sha256": "3660c1449f35f5d26cc3173e173017262125a28f8b5e7d0036863a31ab7261a4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000115",
+      "decision": "ready",
+      "subject": "Haversian canals",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "nerve fibers",
+      "canonical_fact": "Haversian canals contain blood vessels and nerve fibers.",
+      "prompt_en": "What anatomical structures do Haversian canals contain in addition to blood vessels?",
+      "evidence_quotes": [
+        "Haversian canals contain blood vessels",
+        "nerve fibers"
+      ],
+      "reason": "Source question asks what Haversian canals contain besides blood vessels; source answer is 'nerve fibers'. The whole_to_part relation fits: Haversian canals (whole) contain nerve fibers (constituent, alongside blood vessels). Answer is a concise literal substring of source_answer.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "nerve fibers",
+        "canonical_fact": "Haversian canals contain blood vessels and nerve fibers.",
+        "subject": "Haversian canals",
+        "prompt_en": "What anatomical structures do Haversian canals contain in addition to blood vessels?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "nerve fibers"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "dc4213e2a5a16366cf402681dd6fc42c969d8cda0303abb0cf348687b4c0bd00",
+      "input_sha256": "fe8136e36614cf31a7330335f15230e1b07ed634d86e2d8c9cd8b50e612afaf9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000116",
+      "decision": "ready",
+      "subject": "sternocleidomastoid",
+      "relation_id": "muscle_to_moved_body_part",
+      "relation_definition": "The specific body part or region that a named muscle moves during its stated action (e.g., lateral flexion, rotation), retaining the action descriptor in the fact.",
+      "direction": "muscle -> body part moved",
+      "answer": "head",
+      "canonical_fact": "The sternocleidomastoid laterally flexes and rotates the head.",
+      "prompt_en": "What body part does the sternocleidomastoid laterally flex and rotate?",
+      "evidence_quotes": [
+        "laterally flexes and rotates",
+        "head"
+      ],
+      "reason": "Source states the sternocleidomastoid is the major muscle that laterally flexes and rotates the head. No existing catalog relation captures a muscle's functional action on a target body part; proposing new relation muscle_to_moved_body_part with explicit definition. Answer 'head' is a literal substring of source_answer.",
+      "english": {
+        "direction": "muscle -> body part moved",
+        "relation_id": "muscle_to_moved_body_part",
+        "answer": "head",
+        "canonical_fact": "The sternocleidomastoid laterally flexes and rotates the head.",
+        "subject": "sternocleidomastoid",
+        "prompt_en": "What body part does the sternocleidomastoid laterally flex and rotate?",
+        "relation_definition": "The specific body part or region that a named muscle moves during its stated action (e.g., lateral flexion, rotation), retaining the action descriptor in the fact.",
+        "answer_aliases_en": [
+          "head"
+        ],
+        "relation_spec": {
+          "id": "muscle_to_moved_body_part",
+          "definition": "The specific body part or region that a named muscle moves during its stated action (e.g., lateral flexion, rotation), retaining the action descriptor in the fact.",
+          "direction": "muscle -> body part moved"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ec5c3d5769f8ced65360ab78094615148ce64d1aba59b27059fe284fbfaca03d",
+      "input_sha256": "4dfb1871f906746ec0c3977ccb5d5c570a7b379d49dee9852be24f6d4e85db88",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "835eb529dae35e3590ff90dfd38a4c5ad8897a357eacb2e2771c1c3fccc5efeb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 4.128,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "835eb529dae35e3590ff90dfd38a4c5ad8897a357eacb2e2771c1c3fccc5efeb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.114
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "835eb529dae35e3590ff90dfd38a4c5ad8897a357eacb2e2771c1c3fccc5efeb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1962,
+      "first_chunk_seconds": 6.421,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2362,
+        "prompt_tokens": 1720,
+        "total_tokens": 4082,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1843,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "06bc254038636a66096eb85bec3def013999965e18f1705b8b27e38900606056",
+      "status": "completed",
+      "latency_seconds": 37.871
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c5a5e10368ead1bb2103eab6f8c8fd1eab1d7fdecf5a981ded3b5413b4086267",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.986
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c5a5e10368ead1bb2103eab6f8c8fd1eab1d7fdecf5a981ded3b5413b4086267",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.357
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000115",
+        "historical:raw_sciq_000116"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c5a5e10368ead1bb2103eab6f8c8fd1eab1d7fdecf5a981ded3b5413b4086267",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.441
+    }
+  ],
+  "status": "failed"
+}

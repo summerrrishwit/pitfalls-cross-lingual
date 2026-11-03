@@ -1,0 +1,178 @@
+{
+  "input_sha256": "5381e852ac1bc9df1bf502974c7c36cc890bdadbf80cfe77c8df31f6075c808e",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5b58ccdbcf09a3583987",
+      "decision": "ready",
+      "subject": "Red Cross",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "International Red Cross and Red Crescent Movement",
+      "canonical_fact": "The other name of the Red Cross is the International Red Cross and Red Crescent Movement.",
+      "prompt_en": "The other name of the Red Cross is the",
+      "evidence_quotes": [
+        "other name of red cross",
+        "International Red Cross and Red Crescent Movement"
+      ],
+      "reason": "The catalog relation entity_to_alias (entity -> alias) fits exactly: the source question asks for the 'other name' of the Red Cross, and the source answer provides 'International Red Cross and Red Crescent Movement' as that equivalent name. The existing answer matches the source verbatim; no conflict, so it is retained.",
+      "english": {
+        "answer": "International Red Cross and Red Crescent Movement",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The other name of the Red Cross is the",
+        "direction": "entity -> alias",
+        "subject": "Red Cross",
+        "canonical_fact": "The other name of the Red Cross is the International Red Cross and Red Crescent Movement.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "International Red Cross and Red Crescent Movement",
+          "Red Cross and Red Crescent"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f86a929b66a543df9d813cc9f34b225fb0df8968b1c0ae88438488429e7f00d5",
+      "input_sha256": "8e466e87782f0fce88aeec26720e539a1c98c616fe223e62dfd87d90ee5d3370",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5b5d80a2210d7ec5c6a0",
+      "decision": "ready",
+      "subject": "Richard III (protagonist, Shakespeare's play 'Richard III')",
+      "relation_id": "character_to_phrase_referent",
+      "relation_definition": "A specific phrase or term a character in a specified work uses to refer to a stated entity or concept; retain the referent and the work context.",
+      "direction": "character in specified work -> phrase used for referent",
+      "answer": "Dissembling nature",
+      "canonical_fact": "In Shakespeare's Richard III, the protagonist Richard III uses the phrase 'Dissembling nature' to refer to God.",
+      "prompt_en": "In Shakespeare's Richard III, what negative term does the protagonist use to refer to God?",
+      "evidence_quotes": [
+        "negative term does Richard III's protagonist use to refer to God",
+        "Dissembling nature"
+      ],
+      "reason": "No catalog relation captures 'a character's specific phrase used to denote a referent within a given work.' The nearest relations (term_to_definition, symbol_to_meaning, entity_to_alias) do not fit exactly. A new relation character_to_phrase_referent is proposed with the explicit direction character-in-work -> phrase-for-referent. The source question and answer support the extraction; the existing answer 'Dissembling nature' matches the source (minus terminal period, which is punctuation, not a semantic difference). The prompt is option-free and does not embed the answer.",
+      "english": {
+        "answer": "Dissembling nature",
+        "relation_id": "character_to_phrase_referent",
+        "prompt_en": "In Shakespeare's Richard III, what negative term does the protagonist use to refer to God?",
+        "direction": "character in specified work -> phrase used for referent",
+        "subject": "Richard III (protagonist, Shakespeare's play 'Richard III')",
+        "canonical_fact": "In Shakespeare's Richard III, the protagonist Richard III uses the phrase 'Dissembling nature' to refer to God.",
+        "relation_definition": "A specific phrase or term a character in a specified work uses to refer to a stated entity or concept; retain the referent and the work context.",
+        "answer_aliases_en": [
+          "Dissembling nature",
+          "Dissembling nature."
+        ],
+        "relation_spec": {
+          "id": "character_to_phrase_referent",
+          "definition": "A specific phrase or term a character in a specified work uses to refer to a stated entity or concept; retain the referent and the work context.",
+          "direction": "character in specified work -> phrase used for referent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f59c65d6ecdfd7ba29e44dadcfe0a28767f27f7bb0ff250c118614c1074f4e98",
+      "input_sha256": "922ee78eba77d8b411b68f028a59f4831282794d9bd81f12d01d96d5d910b1e7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5b58ccdbcf09a3583987",
+        "public:pbf_5b5d80a2210d7ec5c6a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a60f3b39203f6c2e17744b6db5b2e7e78f192485232f2060c8064222a3be0a4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2067,
+      "first_chunk_seconds": 29.657,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2289,
+        "prompt_tokens": 1627,
+        "total_tokens": 3916,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1676,
+          "text_tokens": 613
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7d0ae4e364c14864ad06c20110347d1793607eed09001ee234a8aeabef475b0f",
+      "status": "completed",
+      "latency_seconds": 76.203
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5b58ccdbcf09a3583987",
+        "public:pbf_5b5d80a2210d7ec5c6a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d7c7cf61142fba358c76e26269d523a582cc41e79b21e395cfb2c85203e4ac7e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 133.961,
+      "validation_code": "stream_output_truncated"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5b58ccdbcf09a3583987",
+        "public:pbf_5b5d80a2210d7ec5c6a0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f6c96946ccc56054dbc08712be7cc6099551c9727e8b54b6cb5602dd90395ecc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1498,
+      "first_chunk_seconds": 44.846,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1546,
+        "prompt_tokens": 932,
+        "total_tokens": 2478,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1289,
+          "text_tokens": 257
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8418b22a627f43691327b9879ecd2e6ac22e450a3497fcc53ee974d525dadfb2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 75.154,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5b58ccdbcf09a3583987",
+        "public:pbf_5b5d80a2210d7ec5c6a0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "79b248b49661d9fadf1a839f736f27b92520bb2d71350684d012db701200f443",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.961
+    }
+  ],
+  "status": "failed"
+}

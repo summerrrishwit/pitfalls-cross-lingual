@@ -1,0 +1,198 @@
+{
+  "input_sha256": "dffd9f380000c4a9759ded02917e42f7824960851dee40ee6f22b74397d4ff84",
+  "normalized": [
+    {
+      "record_id": "public:pbf_a115b8a72c3b92d672df",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer '2 A' appears literally within the source question as part of the stated condition ('if the current in one lamp is 2 A'). Any prompt_en that preserves the specific factual instance will necessarily contain the answer string '2 A', violating the constraint that prompt_en must not contain its answer. Deferring until the fact can be re-expressed at the principle level (current is uniform in a series circuit) with a different answer form that does not duplicate a value already in the prompt.",
+      "input_sha256": "2d4f8bb676996ddb9d4cfcf9ecaed1a56308340a451fdd17365b17a5a8cb44c7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_a11e7014aa197d0c75b4",
+      "decision": "ready",
+      "subject": "I Look to You (Whitney Houston)",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "R. Kelly",
+      "canonical_fact": "R. Kelly wrote the song I Look to You by Whitney Houston.",
+      "prompt_en": "Who wrote the song 'I Look to You' by Whitney Houston?",
+      "evidence_quotes": [
+        "who wrote i look to you by whitney houston",
+        "R. Kelly"
+      ],
+      "reason": "The source question explicitly asks for the writer of 'I Look to You' by Whitney Houston and the source answer is 'R. Kelly'. This is a named author of a specific song (a written work), fitting written_work_to_author exactly. The prompt_en rephrases the question without including the answer 'R. Kelly', and no option list is present.",
+      "english": {
+        "answer": "R. Kelly",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote the song 'I Look to You' by Whitney Houston?",
+        "direction": "written work -> author",
+        "subject": "I Look to You (Whitney Houston)",
+        "canonical_fact": "R. Kelly wrote the song I Look to You by Whitney Houston.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "R. Kelly",
+          "Robert Sylvester Kelly",
+          "Robert Kelly"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a1b60d004bb3631757e5551537a84026598bb5257be1c295d419c982b04cd9c2",
+      "input_sha256": "67c557500115a2a3a0a4e5cf7157f4abe4cd2502d811c143f02d1f645e2634e4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_a11e7014aa197d0c75b4",
+      "input_sha256": "67c557500115a2a3a0a4e5cf7157f4abe4cd2502d811c143f02d1f645e2634e4",
+      "english": {
+        "answer": "R. Kelly",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote the song 'I Look to You' by Whitney Houston?",
+        "direction": "written work -> author",
+        "subject": "I Look to You (Whitney Houston)",
+        "canonical_fact": "R. Kelly wrote the song I Look to You by Whitney Houston.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "R. Kelly",
+          "Robert Sylvester Kelly",
+          "Robert Kelly"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a1b60d004bb3631757e5551537a84026598bb5257be1c295d419c982b04cd9c2",
+      "translation": {
+        "record_id": "public:pbf_a11e7014aa197d0c75b4",
+        "subject_zh": "《I Look to You》（惠特尼·休斯顿）",
+        "prompt_zh": "惠特尼·休斯顿的歌曲《I Look to You》是谁创作的？",
+        "canonical_fact_zh": "R. Kelly 创作了惠特尼·休斯顿的歌曲《I Look to You》。",
+        "answer_zh": "R. Kelly",
+        "answer_aliases_zh": [
+          "R. Kelly",
+          "罗伯特·西尔维斯特·凯利",
+          "罗伯特·凯利"
+        ]
+      },
+      "translation_sha256": "1aa80f77b81bf3d8c482f086c54da2fd559987a7e99550c87130eb87c52dfca3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a115b8a72c3b92d672df",
+        "public:pbf_a11e7014aa197d0c75b4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0146a0d2cd366e3a432817f7a109fdc6992c5e816ea3a1f6b35ac2730d4154bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2935,
+      "first_chunk_seconds": 5.781,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2950,
+        "prompt_tokens": 1668,
+        "total_tokens": 4618,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2399,
+          "text_tokens": 551
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "352cc03baf4adeed93de30bede105965a83f70c674de837c4dab3a68c5a42fcc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 30.432,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a115b8a72c3b92d672df",
+        "public:pbf_a11e7014aa197d0c75b4"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f1039d19ea30fa0b68beb8e65694f4fa11f1495338cf4acacd6fb6552254dcd0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3416,
+      "first_chunk_seconds": 33.412,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3413,
+        "prompt_tokens": 1687,
+        "total_tokens": 5100,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2919,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8e3f7957bcbcb3aeae0341b3f3e07f2eeec155ef809111e23b42ad7d9699b1c4",
+      "status": "completed",
+      "latency_seconds": 60.768
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_a11e7014aa197d0c75b4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5ffa7c8bb22d21682970d3631a78cc93f6d2d398edd7b33b04813fa46f04c74a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 712,
+      "first_chunk_seconds": 32.473,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 720,
+        "prompt_tokens": 545,
+        "total_tokens": 1265,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 541,
+          "text_tokens": 179
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "96615ede2cd3ace85742007fa14e5ebd7c0c760ca1d2717a05ab7c6395529e5e",
+      "status": "completed",
+      "latency_seconds": 38.673
+    }
+  ],
+  "status": "completed"
+}

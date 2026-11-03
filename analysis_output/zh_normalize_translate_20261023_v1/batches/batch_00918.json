@@ -1,0 +1,182 @@
+{
+  "input_sha256": "93c3f36dfc31f22c725df24beae82ceb85ac68aefdeb60a97ecababeac503913",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3ffc67ee130a7be62d92",
+      "decision": "ready",
+      "subject": "sum of the angles inside a triangle",
+      "relation_id": "property_to_domain",
+      "relation_definition": "The specific domain, framework, or system in which a stated mathematical or scientific property holds as stated.",
+      "direction": "property -> domain",
+      "answer": "euclidean",
+      "canonical_fact": "The sum of the angles inside a triangle is exactly equal to 180 degrees in Euclidean geometry.",
+      "prompt_en": "In which kind of geometry is the sum of the angles inside a triangle exactly equal to 180 degrees?",
+      "evidence_quotes": [
+        "the sum of the angles inside a triangle exactly equal to 180 degrees",
+        "euclidean"
+      ],
+      "reason": "No catalog relation precisely captures 'a geometric property holds in a given geometry type.' The subject is a property (triangle-angle sum = 180°) and the answer is the geometry framework (Euclidean) in which it holds. Proposing property_to_domain as a new relation. Evidence is a direct literal match from source_answer and source_question.",
+      "english": {
+        "prompt_en": "In which kind of geometry is the sum of the angles inside a triangle exactly equal to 180 degrees?",
+        "relation_definition": "The specific domain, framework, or system in which a stated mathematical or scientific property holds as stated.",
+        "answer": "euclidean",
+        "canonical_fact": "The sum of the angles inside a triangle is exactly equal to 180 degrees in Euclidean geometry.",
+        "direction": "property -> domain",
+        "relation_id": "property_to_domain",
+        "subject": "sum of the angles inside a triangle",
+        "answer_aliases_en": [
+          "euclidean"
+        ],
+        "relation_spec": {
+          "id": "property_to_domain",
+          "definition": "The specific domain, framework, or system in which a stated mathematical or scientific property holds as stated.",
+          "direction": "property -> domain"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cab7ee13ede990cd8035ae4f40b123ad3a448911c6119c9dbe2a7e2934440592",
+      "input_sha256": "da3f688044a354689968cd76b0b390d413c60f9726cdbda6fea3ba580c5898bc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_4007788ab50641c8af04",
+      "decision": "ready",
+      "subject": "Monica and Chandler getting together in Friends",
+      "relation_id": "event_to_season_in_series",
+      "relation_definition": "The season number within a named series in which a specified plot event or character development occurs.",
+      "direction": "stated event in a specified series -> season number",
+      "answer": "season 4",
+      "canonical_fact": "Monica and Chandler get together in season 4 of Friends.",
+      "prompt_en": "In which season of Friends do Monica and Chandler get together?",
+      "evidence_quotes": [
+        "monica and chandler get together",
+        "Friends, season 4"
+      ],
+      "reason": "No catalog relation covers 'which season a plot event occurs in a specific series.' work_to_release_date concerns release dates, series_or_season_to_episode_count concerns episode counts—neither fits. Proposing event_to_season_in_series. Evidence is literal from source_question and source_answer.",
+      "english": {
+        "prompt_en": "In which season of Friends do Monica and Chandler get together?",
+        "relation_definition": "The season number within a named series in which a specified plot event or character development occurs.",
+        "answer": "season 4",
+        "canonical_fact": "Monica and Chandler get together in season 4 of Friends.",
+        "direction": "stated event in a specified series -> season number",
+        "relation_id": "event_to_season_in_series",
+        "subject": "Monica and Chandler getting together in Friends",
+        "answer_aliases_en": [
+          "season 4",
+          "Friends, season 4"
+        ],
+        "relation_spec": {
+          "id": "event_to_season_in_series",
+          "definition": "The season number within a named series in which a specified plot event or character development occurs.",
+          "direction": "stated event in a specified series -> season number"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "25cbef0f6ab2ef04fe445d7128435f44e68658cc0c84f56fa3937e0b80ed30c3",
+      "input_sha256": "7b4af2313904d950a272bd6edb160bd731075602c6c89edd3b8c9becab9d48f2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3ffc67ee130a7be62d92",
+        "public:pbf_4007788ab50641c8af04"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7a696466179a7630f02fba073bbac290073b8f2a6c04128612ed2cffbd3eb01",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 15.184
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3ffc67ee130a7be62d92",
+        "public:pbf_4007788ab50641c8af04"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7a696466179a7630f02fba073bbac290073b8f2a6c04128612ed2cffbd3eb01",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2595,
+      "first_chunk_seconds": 1.791,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2765,
+        "prompt_tokens": 1671,
+        "total_tokens": 4436,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2210,
+          "text_tokens": 555
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ef3d597f2da715fca6ec883decbf0f7fe6ced34456cebd3ed9f6b7e99b22ed7",
+      "status": "completed",
+      "latency_seconds": 103.579
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3ffc67ee130a7be62d92",
+        "public:pbf_4007788ab50641c8af04"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "678a588457c92ea4225e18ecf32ce6dfa3c8ef4396138f4402b8ff411f64f24c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.17
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3ffc67ee130a7be62d92",
+        "public:pbf_4007788ab50641c8af04"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "678a588457c92ea4225e18ecf32ce6dfa3c8ef4396138f4402b8ff411f64f24c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.671
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3ffc67ee130a7be62d92",
+        "public:pbf_4007788ab50641c8af04"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "678a588457c92ea4225e18ecf32ce6dfa3c8ef4396138f4402b8ff411f64f24c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 75.998
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00918.json",
+      "sha256": "9af19aecbdcf8df5b1ad1e9483a0ab59a56809f6a7616937ebbfc434a908674d",
+      "previous_status": "failed"
+    }
+  ]
+}

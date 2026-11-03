@@ -1,0 +1,238 @@
+{
+  "input_sha256": "bfd99a0316d219ca397a93dbe6ff5d6d44b10184c999d956e81b29ea944e4f6c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_1a96a476adeead173cb9",
+      "decision": "ready",
+      "subject": "William Penn",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "Quakers",
+      "canonical_fact": "William Penn's religious affiliation was the Quakers.",
+      "prompt_en": "William Penn's religious affiliation was the",
+      "evidence_quotes": [
+        "Quakers",
+        "William Penn was a member of which of the following persecuted religious groups?"
+      ],
+      "reason": "Source question explicitly asks for William Penn's persecuted religious group; source answer 'Quakers' is a literal substring. entity_to_class fits as stable membership in the religious-group taxonomy (Quaker/Religious Society of Friends).",
+      "english": {
+        "prompt_en": "William Penn's religious affiliation was the",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "Quakers",
+        "canonical_fact": "William Penn's religious affiliation was the Quakers.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "William Penn",
+        "answer_aliases_en": [
+          "Quakers"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "25ef68d210fd873c4067bdac08b941490b089a8f940d5a2a35179a3dfa5038c8",
+      "input_sha256": "cb11ef5aea52c0d9cabce68a25679eabc7567400abad3c43ec735183fb80a29f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_1ab124d6a1020d618d27",
+      "decision": "ready",
+      "subject": "feelings in the moral life",
+      "relation_id": "concept_to_attribute",
+      "relation_definition": "A stated attribute or characterization of a specified concept within a named domain; retains the domain qualifier and scope.",
+      "direction": "concept in specified domain -> attribute",
+      "answer": "essential and inevitable",
+      "canonical_fact": "In the moral life, feelings are essential and inevitable.",
+      "prompt_en": "In the moral life, feelings are",
+      "evidence_quotes": [
+        "essential and inevitable",
+        "In the moral life, feelings are"
+      ],
+      "reason": "No catalog relation precisely covers a concept-attribute characterization within a named domain. Proposing concept_to_attribute (domain-scoped). Answer is a literal substring of source_answer; subject retains the 'moral life' domain qualifier.",
+      "english": {
+        "prompt_en": "In the moral life, feelings are",
+        "relation_definition": "A stated attribute or characterization of a specified concept within a named domain; retains the domain qualifier and scope.",
+        "answer": "essential and inevitable",
+        "canonical_fact": "In the moral life, feelings are essential and inevitable.",
+        "direction": "concept in specified domain -> attribute",
+        "relation_id": "concept_to_attribute",
+        "subject": "feelings in the moral life",
+        "answer_aliases_en": [
+          "essential and inevitable"
+        ],
+        "relation_spec": {
+          "id": "concept_to_attribute",
+          "definition": "A stated attribute or characterization of a specified concept within a named domain; retains the domain qualifier and scope.",
+          "direction": "concept in specified domain -> attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1952d8ffd259c294df06af14fded1f345a99b261df1a3fdcb18fa67d16ba618b",
+      "input_sha256": "6a0038a3791b5388364ece67fc3cf4f290b12f4a671576db13a47e4da31f8cca",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 100.992
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 144.339
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.369
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.493
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.601
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "68931e1a55ea3ee73ea0a7428f5e2a3e25f1e5ea484e67d02dd71fcf708ced6b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2445,
+      "first_chunk_seconds": 2.358,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2526,
+        "prompt_tokens": 1801,
+        "total_tokens": 4327,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2184,
+          "text_tokens": 342
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "59c9d0bc655a9b9799d62ac3c2684fe791428551fff6d0915ebcd8c55a1d5361",
+      "status": "completed",
+      "latency_seconds": 37.834
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54e18af1568f8e31571408200e5aa90d34e3ff991dd098b42d2ac0a54a0c7d34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.537
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "54e18af1568f8e31571408200e5aa90d34e3ff991dd098b42d2ac0a54a0c7d34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 21.877
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1a96a476adeead173cb9",
+        "public:pbf_1ab124d6a1020d618d27"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "54e18af1568f8e31571408200e5aa90d34e3ff991dd098b42d2ac0a54a0c7d34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.02
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00701.json",
+      "sha256": "fb47f4712b9ccb1ab752bd06c038b9b8e043837f9e667eb803ccc38859526b76",
+      "previous_status": "failed"
+    }
+  ]
+}

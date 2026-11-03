@@ -1,0 +1,216 @@
+{
+  "input_sha256": "c5a4c929f71c3221dad52fcf88eb340dc73504b41a80f8edd54a7e23572c579b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005490",
+      "decision": "ready",
+      "subject": "chef",
+      "relation_id": "occupation_to_primary_duty",
+      "relation_definition": "The core responsibility or main task associated with a specified occupation or role.",
+      "direction": "occupation -> primary duty",
+      "answer": "prepare food",
+      "canonical_fact": "The primary duty of a chef is to prepare food.",
+      "prompt_en": "What is the primary duty of a chef?",
+      "evidence_quotes": [
+        "prepare food",
+        "primary duty",
+        "chef"
+      ],
+      "reason": "Source question and answer directly support that the primary duty of a chef is to prepare food. No catalog relation matches 'primary duty' as an attribute of an occupation; proposed new relation occupation_to_primary_duty with explicit direction.",
+      "english": {
+        "direction": "occupation -> primary duty",
+        "relation_id": "occupation_to_primary_duty",
+        "answer": "prepare food",
+        "canonical_fact": "The primary duty of a chef is to prepare food.",
+        "subject": "chef",
+        "prompt_en": "What is the primary duty of a chef?",
+        "relation_definition": "The core responsibility or main task associated with a specified occupation or role.",
+        "answer_aliases_en": [
+          "prepare food"
+        ],
+        "relation_spec": {
+          "id": "occupation_to_primary_duty",
+          "definition": "The core responsibility or main task associated with a specified occupation or role.",
+          "direction": "occupation -> primary duty"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "674e92ad8e765494e8cfd0be44dc52053e482da3a5cd3ac7c87af196cf808c98",
+      "input_sha256": "8189222aa4c57cd2b3d719f4a2becbc668c3df30503aa72d69301938e97f9cf3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005528",
+      "decision": "ready",
+      "subject": "cats",
+      "relation_id": "organism_to_body_part_count",
+      "relation_definition": "The number of a specified body part or appendage in a given organism or animal species, at the granularity asked.",
+      "direction": "organism/species -> count of specified body part",
+      "answer": "four",
+      "canonical_fact": "Cats have four appendages.",
+      "prompt_en": "How many appendages do cats have?",
+      "evidence_quotes": [
+        "four legs",
+        "apendages",
+        "cats"
+      ],
+      "reason": "Source states cats have 'four legs' as appendages; the answer 'four' is a literal substring of source_answer 'four legs'. No catalog relation fits a body-part count; proposed new relation organism_to_body_part_count with explicit direction. Sensenova flagged ambiguity but the source is unambiguous on the count.",
+      "english": {
+        "direction": "organism/species -> count of specified body part",
+        "relation_id": "organism_to_body_part_count",
+        "answer": "four",
+        "canonical_fact": "Cats have four appendages.",
+        "subject": "cats",
+        "prompt_en": "How many appendages do cats have?",
+        "relation_definition": "The number of a specified body part or appendage in a given organism or animal species, at the granularity asked.",
+        "answer_aliases_en": [
+          "four"
+        ],
+        "relation_spec": {
+          "id": "organism_to_body_part_count",
+          "definition": "The number of a specified body part or appendage in a given organism or animal species, at the granularity asked.",
+          "direction": "organism/species -> count of specified body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4760e1433b4b249eccec96387cbe7de3277f4775159d3541d0ffa31b9bdb6592",
+      "input_sha256": "47ce3f874238b1e083a6fc8b7199ee9d6be5ad6f187212d42d26607499524dec",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005490",
+      "input_sha256": "8189222aa4c57cd2b3d719f4a2becbc668c3df30503aa72d69301938e97f9cf3",
+      "english": {
+        "direction": "occupation -> primary duty",
+        "relation_id": "occupation_to_primary_duty",
+        "answer": "prepare food",
+        "canonical_fact": "The primary duty of a chef is to prepare food.",
+        "subject": "chef",
+        "prompt_en": "What is the primary duty of a chef?",
+        "relation_definition": "The core responsibility or main task associated with a specified occupation or role.",
+        "answer_aliases_en": [
+          "prepare food"
+        ],
+        "relation_spec": {
+          "id": "occupation_to_primary_duty",
+          "definition": "The core responsibility or main task associated with a specified occupation or role.",
+          "direction": "occupation -> primary duty"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "674e92ad8e765494e8cfd0be44dc52053e482da3a5cd3ac7c87af196cf808c98",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005490",
+        "subject_zh": "厨师",
+        "prompt_zh": "厨师的主要职责是什么？",
+        "canonical_fact_zh": "厨师的主要职责是准备食物。",
+        "answer_zh": "准备食物",
+        "answer_aliases_zh": [
+          "准备食物"
+        ]
+      },
+      "translation_sha256": "f057aef012e349f2eb51db9e6f3c3ff63c2c9ece6c2bc4b7dcf06c60c20ae379"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005528",
+      "input_sha256": "47ce3f874238b1e083a6fc8b7199ee9d6be5ad6f187212d42d26607499524dec",
+      "english": {
+        "direction": "organism/species -> count of specified body part",
+        "relation_id": "organism_to_body_part_count",
+        "answer": "four",
+        "canonical_fact": "Cats have four appendages.",
+        "subject": "cats",
+        "prompt_en": "How many appendages do cats have?",
+        "relation_definition": "The number of a specified body part or appendage in a given organism or animal species, at the granularity asked.",
+        "answer_aliases_en": [
+          "four"
+        ],
+        "relation_spec": {
+          "id": "organism_to_body_part_count",
+          "definition": "The number of a specified body part or appendage in a given organism or animal species, at the granularity asked.",
+          "direction": "organism/species -> count of specified body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4760e1433b4b249eccec96387cbe7de3277f4775159d3541d0ffa31b9bdb6592",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005528",
+        "subject_zh": "猫",
+        "prompt_zh": "猫有几条附肢？",
+        "canonical_fact_zh": "猫有四条附肢。",
+        "answer_zh": "四",
+        "answer_aliases_zh": [
+          "四"
+        ]
+      },
+      "translation_sha256": "11d8a64837de4f7652af2b20a00fe87a8d8a9ff77a6edc06768554474ad0fb54"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005490",
+        "historical:raw_commonsense_qa_005528"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4c96d9a07f3847a81b235178f9df6f2a3e69fa279d100a8c85ccbb41156c7307",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3022,
+      "first_chunk_seconds": 19.364,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3145,
+        "prompt_tokens": 1613,
+        "total_tokens": 4758,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2698,
+          "text_tokens": 447
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "61c8a4ea2a3de0f03e7486bad75db192ee8453e434917fd0891a9d5ec7258fa1",
+      "status": "completed",
+      "latency_seconds": 81.507
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005490",
+        "historical:raw_commonsense_qa_005528"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "60974c05ea79bdc9811abe97af32bf1d2c685a89d94d77932be083f49da7989a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 553,
+      "first_chunk_seconds": 24.878,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 573,
+        "prompt_tokens": 816,
+        "total_tokens": 1389,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 376,
+          "text_tokens": 197
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "84d79d26759ac2bef1575d21ac42ff40084760ab2fb8db7488155afe5c55857a",
+      "status": "completed",
+      "latency_seconds": 31.711
+    }
+  ],
+  "status": "completed"
+}

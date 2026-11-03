@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b230e6a2750d692fcf87e780ca5213adfe1c75d6a08c0403b802cbe725b22d36",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004205",
+      "decision": "ready",
+      "subject": "main artery in the neck",
+      "relation_id": "anatomical_structure_to_blood_supply_target",
+      "relation_definition": "Target organ or structure that receives blood supply from the specified anatomical structure (e.g., artery, vein).",
+      "direction": "anatomical_structure -> blood_supply_target",
+      "answer": "brain",
+      "canonical_fact": "The main artery in the neck provides blood to the brain.",
+      "prompt_en": "Which organ does the main artery in the neck supply blood to?",
+      "evidence_quotes": [
+        "the main artery in his neck provided blood to his",
+        "own brain"
+      ],
+      "reason": "Both model annotations agree on extraction. Source question and answer confirm the carotid artery's blood supply to the brain. No catalog relation captures a biological supply relationship between two anatomical structures, so a new precise relation is proposed. Answer 'brain' is a faithful substring of source answer 'own brain' and does not conflict.",
+      "english": {
+        "direction": "anatomical_structure -> blood_supply_target",
+        "relation_id": "anatomical_structure_to_blood_supply_target",
+        "answer": "brain",
+        "canonical_fact": "The main artery in the neck provides blood to the brain.",
+        "subject": "main artery in the neck",
+        "prompt_en": "Which organ does the main artery in the neck supply blood to?",
+        "relation_definition": "Target organ or structure that receives blood supply from the specified anatomical structure (e.g., artery, vein).",
+        "answer_aliases_en": [
+          "brain"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_blood_supply_target",
+          "definition": "Target organ or structure that receives blood supply from the specified anatomical structure (e.g., artery, vein).",
+          "direction": "anatomical_structure -> blood_supply_target"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "03b6f7512eeee8545bb2f3b110c1f59b811f6b5f16b8404cfeba29331117ce9e",
+      "input_sha256": "2e21d23a85fbccafb6aabd53a677313cf0d53d2a4de8ca68ab99ed74ea15703b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004274",
+      "decision": "ready",
+      "subject": "plant opening up in the sunlight",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "bloom",
+      "canonical_fact": "The term for a plant opening up in the sunlight is 'bloom'.",
+      "prompt_en": "What is it called when a plant opens up in the sunlight?",
+      "evidence_quotes": [
+        "What is it called when a plant opens up in the sunlight?",
+        "bloom"
+      ],
+      "reason": "Both model annotations agree. The source question supplies a defining description ('a plant opens up in the sunlight') and the source answer gives the conventional term 'bloom'. This maps directly to the catalog relation description_to_term. Answer matches source exactly.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "bloom",
+        "canonical_fact": "The term for a plant opening up in the sunlight is 'bloom'.",
+        "subject": "plant opening up in the sunlight",
+        "prompt_en": "What is it called when a plant opens up in the sunlight?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "bloom"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69a0cc82d8322f3f3fa8a8f5eba09032812621781397f59718cc3fc9cc3a3044",
+      "input_sha256": "1ab34d2696c636f31462fd041969b2374cae46a8bed65e2f0f274d35c5e4157e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004205",
+      "input_sha256": "2e21d23a85fbccafb6aabd53a677313cf0d53d2a4de8ca68ab99ed74ea15703b",
+      "english": {
+        "direction": "anatomical_structure -> blood_supply_target",
+        "relation_id": "anatomical_structure_to_blood_supply_target",
+        "answer": "brain",
+        "canonical_fact": "The main artery in the neck provides blood to the brain.",
+        "subject": "main artery in the neck",
+        "prompt_en": "Which organ does the main artery in the neck supply blood to?",
+        "relation_definition": "Target organ or structure that receives blood supply from the specified anatomical structure (e.g., artery, vein).",
+        "answer_aliases_en": [
+          "brain"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_blood_supply_target",
+          "definition": "Target organ or structure that receives blood supply from the specified anatomical structure (e.g., artery, vein).",
+          "direction": "anatomical_structure -> blood_supply_target"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "03b6f7512eeee8545bb2f3b110c1f59b811f6b5f16b8404cfeba29331117ce9e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004205",
+        "subject_zh": "颈部主动脉",
+        "prompt_zh": "颈部主动脉为哪个器官供血？",
+        "canonical_fact_zh": "颈部主动脉为大脑供血。",
+        "answer_zh": "大脑",
+        "answer_aliases_zh": [
+          "大脑"
+        ]
+      },
+      "translation_sha256": "bbba264a75cf9ae8db097112ddcaa983e9c65b8ab4dfa9591ab5cbc22a715483"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004274",
+      "input_sha256": "1ab34d2696c636f31462fd041969b2374cae46a8bed65e2f0f274d35c5e4157e",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "bloom",
+        "canonical_fact": "The term for a plant opening up in the sunlight is 'bloom'.",
+        "subject": "plant opening up in the sunlight",
+        "prompt_en": "What is it called when a plant opens up in the sunlight?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "bloom"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69a0cc82d8322f3f3fa8a8f5eba09032812621781397f59718cc3fc9cc3a3044",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004274",
+        "subject_zh": "植物在阳光下开放",
+        "prompt_zh": "植物在阳光下开放叫什么？",
+        "canonical_fact_zh": "植物在阳光下开放称为'开花'。",
+        "answer_zh": "开花",
+        "answer_aliases_zh": [
+          "开花"
+        ]
+      },
+      "translation_sha256": "78defc9e2dc640d2766486f6f53bdb289346dd592b9dc5444168b5962ef4fb08"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004205",
+        "historical:raw_commonsense_qa_004274"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bed1f7e98054c6574dad3b34f830f2a7ee5efdbc3d1f85b26acce3808e033d0b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2325,
+      "first_chunk_seconds": 9.862,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2575,
+        "prompt_tokens": 1693,
+        "total_tokens": 4268,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2065,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c91d69dc121b46320e65a4272594e6f7c22bbe06f5ef1c175cf4e34e2224761e",
+      "status": "completed",
+      "latency_seconds": 45.379
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004205",
+        "historical:raw_commonsense_qa_004274"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1f35f29de46f3221d23336ea3ccf5725382d1d7bd102c1be0e368b52d9953a08",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 634,
+      "first_chunk_seconds": 23.932,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 666,
+        "prompt_tokens": 850,
+        "total_tokens": 1516,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 463,
+          "text_tokens": 203
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dff5db7e85e66b54b0e0cb4ce3a890632dd884ab56a1e5f1a1d391f995dd12cb",
+      "status": "completed",
+      "latency_seconds": 32.216
+    }
+  ],
+  "status": "completed"
+}

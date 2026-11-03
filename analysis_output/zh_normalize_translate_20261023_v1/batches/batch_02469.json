@@ -1,0 +1,158 @@
+{
+  "input_sha256": "fef6b3680eda6746f51b57a56f846fdf844efe8795db226a135053fd16d9654c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000958",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'sunk by unseen torpedo fired by' describes a situational/typical causal association (what kind of vessel can fire an unseen torpedo to sink a battleship) rather than a stable, reusable factual relation. No catalog relation fits, and the association is too scenario-specific to justify a precise new snake_case relation without forcing a broad category. The sensenova annotation correctly flagged this as 'typical_action_or_location'.",
+      "input_sha256": "3aff38eff67c9ff04815411103e7cd6fddb0add5e295cca8478f0bf6f1356e30",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000959",
+      "decision": "ready",
+      "subject": "person accused of committing murder",
+      "relation_id": "criminal_defendant_to_prosecution",
+      "relation_definition": "The prosecuting legal party that an accused person must face in court during a criminal trial.",
+      "direction": "accused person in criminal proceeding -> prosecuting legal party",
+      "answer": "prosecution",
+      "canonical_fact": "A person accused of committing murder must face the prosecution in court.",
+      "prompt_en": "In court, who must a person accused of committing murder face?",
+      "evidence_quotes": [
+        "a person is accused of committing murder",
+        "who must they face in court?",
+        "prosecution"
+      ],
+      "reason": "Both source models extracted this as a clear legal-procedure fact. The catalog has no fitting relation, so a precise new ID 'criminal_defendant_to_prosecution' is proposed. The source question and answer unambiguously support that the accused faces the prosecution in court; no uncertainty or qualifier is present beyond the 'murder' scope, which is preserved from the source.",
+      "english": {
+        "direction": "accused person in criminal proceeding -> prosecuting legal party",
+        "relation_id": "criminal_defendant_to_prosecution",
+        "answer": "prosecution",
+        "canonical_fact": "A person accused of committing murder must face the prosecution in court.",
+        "subject": "person accused of committing murder",
+        "prompt_en": "In court, who must a person accused of committing murder face?",
+        "relation_definition": "The prosecuting legal party that an accused person must face in court during a criminal trial.",
+        "answer_aliases_en": [
+          "prosecution"
+        ],
+        "relation_spec": {
+          "id": "criminal_defendant_to_prosecution",
+          "definition": "The prosecuting legal party that an accused person must face in court during a criminal trial.",
+          "direction": "accused person in criminal proceeding -> prosecuting legal party"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19adba58292136e659ce17a9115e7bc922c9e208a6e76a421117bf2ddd2fc08b",
+      "input_sha256": "5d0a907c8bde85aadcb72503547c2e1c89cfc1b1dcbd987a340e5c1b273ca74e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000959",
+      "input_sha256": "5d0a907c8bde85aadcb72503547c2e1c89cfc1b1dcbd987a340e5c1b273ca74e",
+      "english": {
+        "direction": "accused person in criminal proceeding -> prosecuting legal party",
+        "relation_id": "criminal_defendant_to_prosecution",
+        "answer": "prosecution",
+        "canonical_fact": "A person accused of committing murder must face the prosecution in court.",
+        "subject": "person accused of committing murder",
+        "prompt_en": "In court, who must a person accused of committing murder face?",
+        "relation_definition": "The prosecuting legal party that an accused person must face in court during a criminal trial.",
+        "answer_aliases_en": [
+          "prosecution"
+        ],
+        "relation_spec": {
+          "id": "criminal_defendant_to_prosecution",
+          "definition": "The prosecuting legal party that an accused person must face in court during a criminal trial.",
+          "direction": "accused person in criminal proceeding -> prosecuting legal party"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "19adba58292136e659ce17a9115e7bc922c9e208a6e76a421117bf2ddd2fc08b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000959",
+        "subject_zh": "被指控犯有谋杀罪的人",
+        "prompt_zh": "在法庭上，被指控犯有谋杀罪的人必须面对谁？",
+        "canonical_fact_zh": "被指控犯有谋杀罪的人必须在法庭上面对控方。",
+        "answer_zh": "控方",
+        "answer_aliases_zh": [
+          "控方"
+        ]
+      },
+      "translation_sha256": "0230493104bcebc0abd1d57d16e0ddc8cb75c73dc1cd91a4dac6c471bc27d70f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000958",
+        "historical:raw_commonsense_qa_000959"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "35e26d78b4b2a1f5839e81be507d1103879bfe8f9389536c4a97a9d2a474eb16",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2887,
+      "first_chunk_seconds": 27.09,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2976,
+        "prompt_tokens": 1687,
+        "total_tokens": 4663,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2566,
+          "text_tokens": 410
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3116801a7dc75e4fb9123a43aa265250408bb7cff61e5a101fafdd4e91cd320e",
+      "status": "completed",
+      "latency_seconds": 65.044
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000959"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2dc261e9a3d39148fd754841d90ba5a43758eda778284feabc4fa43cde80a1b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 561,
+      "first_chunk_seconds": 3.59,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 561,
+        "prompt_tokens": 533,
+        "total_tokens": 1094,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 470,
+          "text_tokens": 91
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4a4da5f0d3832a497548993ee7e48612865a4f7f22d7cf085db1ebc0878ff2e3",
+      "status": "completed",
+      "latency_seconds": 10.712
+    }
+  ],
+  "status": "completed"
+}

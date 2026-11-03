@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b87a54fc25a3e60107b7d0740f36953bfe459ae6822284b846321f73b2892c57",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000218",
+      "decision": "ready",
+      "subject": "water turns turbines",
+      "relation_id": "process_to_structure_type",
+      "relation_definition": "The type of structure in which a specified physical process or mechanism occurs; retains the specific process and structural type asked.",
+      "direction": "process -> structure type",
+      "answer": "hydroelectric dam",
+      "canonical_fact": "Water turns turbines in a hydroelectric dam.",
+      "prompt_en": "What type of structure is it where water turns turbines?",
+      "evidence_quotes": [
+        "Water turns turbines in what type of structure?",
+        "hydroelectric dam"
+      ],
+      "reason": "No existing catalog relation captures 'the structure type in which a process occurs.' entity_to_containing_location explicitly excludes process locations; entity_to_class is taxonomy, not mechanism. A new snake_case relation process_to_structure_type is proposed with a precise definition. The answer 'hydroelectric dam' is a literal substring of source_answer.",
+      "english": {
+        "direction": "process -> structure type",
+        "relation_id": "process_to_structure_type",
+        "answer": "hydroelectric dam",
+        "canonical_fact": "Water turns turbines in a hydroelectric dam.",
+        "subject": "water turns turbines",
+        "prompt_en": "What type of structure is it where water turns turbines?",
+        "relation_definition": "The type of structure in which a specified physical process or mechanism occurs; retains the specific process and structural type asked.",
+        "answer_aliases_en": [
+          "hydroelectric dam"
+        ],
+        "relation_spec": {
+          "id": "process_to_structure_type",
+          "definition": "The type of structure in which a specified physical process or mechanism occurs; retains the specific process and structural type asked.",
+          "direction": "process -> structure type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9365823ad00c9895fd5ac90471ead96e57a7cb368c72c0b67967bb5883610945",
+      "input_sha256": "0611536fda75fd38ce048fa70177dafd415a43d2c6ea1d3136823308a80a142a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000286",
+      "decision": "ready",
+      "subject": "adage: 'you should not mix business with ___'",
+      "relation_id": "proverb_to_complement",
+      "relation_definition": "The specific word or concept that completes a well-known adage, proverb, or fixed saying when one element is withheld; retains the exact wording of the saying.",
+      "direction": "proverb/adage -> complement",
+      "answer": "pleasure",
+      "canonical_fact": "The well-known adage states that you should not mix business with pleasure.",
+      "prompt_en": "In the well-known adage, what should you not mix business with?",
+      "evidence_quotes": [
+        "It is a well known adage that you should not mix business with what?",
+        "pleasure"
+      ],
+      "reason": "No existing catalog relation captures the complement of a specific adage/proverb. term_to_definition is for explicit terms, symbol_to_meaning is for symbols. A new relation proverb_to_complement is proposed. The answer 'pleasure' is a literal substring of source_answer; the canonical fact preserves the source's qualifier 'well known'.",
+      "english": {
+        "direction": "proverb/adage -> complement",
+        "relation_id": "proverb_to_complement",
+        "answer": "pleasure",
+        "canonical_fact": "The well-known adage states that you should not mix business with pleasure.",
+        "subject": "adage: 'you should not mix business with ___'",
+        "prompt_en": "In the well-known adage, what should you not mix business with?",
+        "relation_definition": "The specific word or concept that completes a well-known adage, proverb, or fixed saying when one element is withheld; retains the exact wording of the saying.",
+        "answer_aliases_en": [
+          "pleasure"
+        ],
+        "relation_spec": {
+          "id": "proverb_to_complement",
+          "definition": "The specific word or concept that completes a well-known adage, proverb, or fixed saying when one element is withheld; retains the exact wording of the saying.",
+          "direction": "proverb/adage -> complement"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c5bd308839419d8183e4776a08bcf909400f57958efac6530fdc968297403ef9",
+      "input_sha256": "26626b3951073a0b6d8cb5f275bd354f4ca64d22c90d6566655282661a30496e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000218",
+      "input_sha256": "0611536fda75fd38ce048fa70177dafd415a43d2c6ea1d3136823308a80a142a",
+      "english": {
+        "direction": "process -> structure type",
+        "relation_id": "process_to_structure_type",
+        "answer": "hydroelectric dam",
+        "canonical_fact": "Water turns turbines in a hydroelectric dam.",
+        "subject": "water turns turbines",
+        "prompt_en": "What type of structure is it where water turns turbines?",
+        "relation_definition": "The type of structure in which a specified physical process or mechanism occurs; retains the specific process and structural type asked.",
+        "answer_aliases_en": [
+          "hydroelectric dam"
+        ],
+        "relation_spec": {
+          "id": "process_to_structure_type",
+          "definition": "The type of structure in which a specified physical process or mechanism occurs; retains the specific process and structural type asked.",
+          "direction": "process -> structure type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9365823ad00c9895fd5ac90471ead96e57a7cb368c72c0b67967bb5883610945",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000218",
+        "subject_zh": "水驱动涡轮机",
+        "prompt_zh": "水驱动涡轮机的是什么类型的结构？",
+        "canonical_fact_zh": "水在水电站大坝中驱动涡轮机。",
+        "answer_zh": "水电站大坝",
+        "answer_aliases_zh": [
+          "水电站大坝"
+        ]
+      },
+      "translation_sha256": "fc063d53c63bdf25cd807e13002a4fdb660b1e527e8c7f12554242593562dffd"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000286",
+      "input_sha256": "26626b3951073a0b6d8cb5f275bd354f4ca64d22c90d6566655282661a30496e",
+      "english": {
+        "direction": "proverb/adage -> complement",
+        "relation_id": "proverb_to_complement",
+        "answer": "pleasure",
+        "canonical_fact": "The well-known adage states that you should not mix business with pleasure.",
+        "subject": "adage: 'you should not mix business with ___'",
+        "prompt_en": "In the well-known adage, what should you not mix business with?",
+        "relation_definition": "The specific word or concept that completes a well-known adage, proverb, or fixed saying when one element is withheld; retains the exact wording of the saying.",
+        "answer_aliases_en": [
+          "pleasure"
+        ],
+        "relation_spec": {
+          "id": "proverb_to_complement",
+          "definition": "The specific word or concept that completes a well-known adage, proverb, or fixed saying when one element is withheld; retains the exact wording of the saying.",
+          "direction": "proverb/adage -> complement"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c5bd308839419d8183e4776a08bcf909400f57958efac6530fdc968297403ef9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000286",
+        "subject_zh": "谚语：'不要把工作与___混为一谈'",
+        "prompt_zh": "在这句广为流传的谚语中，你不应该把工作与什么混为一谈？",
+        "canonical_fact_zh": "这句广为流传的谚语说，你不应该把工作与娱乐混为一谈。",
+        "answer_zh": "娱乐",
+        "answer_aliases_zh": [
+          "娱乐"
+        ]
+      },
+      "translation_sha256": "988686f8a7b89513734d0950597b41ed97c5e1614324c38b9b334f5d8d4229c3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000218",
+        "historical:raw_commonsense_qa_000286"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d993d7d9b3730ffafb7c683af188be28233c27df6713737c13a1d08bd8617e81",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2284,
+      "first_chunk_seconds": 29.966,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2292,
+        "prompt_tokens": 1698,
+        "total_tokens": 3990,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1751,
+          "text_tokens": 541
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bb3945d082e64cac1ed18dfc3b2ec00f5a64d65e671e0ae9285d7439857ec1a8",
+      "status": "completed",
+      "latency_seconds": 55.592
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000218",
+        "historical:raw_commonsense_qa_000286"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39623406c88f16d50a99d1f781ac34f5ec97202e3135e5a013ec21518e9db661",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1217,
+      "first_chunk_seconds": 2.631,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1332,
+        "prompt_tokens": 880,
+        "total_tokens": 2212,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1098,
+          "text_tokens": 234
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1710ff46fdd29b4d6a7803d4c7c6dfe3aa02a02918eb5b49a34e56623e5eef6e",
+      "status": "completed",
+      "latency_seconds": 27.425
+    }
+  ],
+  "status": "completed"
+}

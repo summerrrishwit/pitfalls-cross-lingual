@@ -1,0 +1,157 @@
+{
+  "input_sha256": "47580e7614b236ff2152da26926f898a6a76a8ed9d149a267c1f21a032404551",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000320",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source is a fill-in-the-blank question where the answer 'cell' completes the statement 'the variety of cell shapes reflects the functions that each cell has.' No catalog relation cleanly maps this functional-explanation relationship (a biological phenomenon to the entity whose property explains it). Forcing a new snake_case relation would be overly specific to this single principle and not clearly reusable. Deferred.",
+      "input_sha256": "50b2a007fa99bb7634bf67f616133aeace782952738ae9c5cdae909e90933448",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000321",
+      "decision": "ready",
+      "subject": "heart",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "cardiac muscle",
+      "canonical_fact": "The heart is mainly composed of cardiac muscle.",
+      "prompt_en": "What is the heart mainly composed of?",
+      "evidence_quotes": [
+        "the heart mainly composed of",
+        "cardiac muscle"
+      ],
+      "reason": "The source Q&A directly states the heart is mainly composed of cardiac muscle. The catalog relation entity_to_material (entity -> material) fits exactly: cardiac muscle is the constituent tissue/material of the heart, with the qualifier 'mainly' preserved.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "cardiac muscle",
+        "canonical_fact": "The heart is mainly composed of cardiac muscle.",
+        "subject": "heart",
+        "prompt_en": "What is the heart mainly composed of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "cardiac muscle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a7c9a1896688d5e943628f7b21e2fd0bb8ca8f15215a2e3c39e5179d26b52684",
+      "input_sha256": "495b6b257fdf83eae196615f62664f1300c3c54ca2e37927c28b071f485e0a6b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000321",
+      "input_sha256": "495b6b257fdf83eae196615f62664f1300c3c54ca2e37927c28b071f485e0a6b",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "cardiac muscle",
+        "canonical_fact": "The heart is mainly composed of cardiac muscle.",
+        "subject": "heart",
+        "prompt_en": "What is the heart mainly composed of?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "cardiac muscle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a7c9a1896688d5e943628f7b21e2fd0bb8ca8f15215a2e3c39e5179d26b52684",
+      "translation": {
+        "record_id": "historical:raw_sciq_000321",
+        "subject_zh": "心脏",
+        "prompt_zh": "心脏主要由什么组成？",
+        "canonical_fact_zh": "心脏主要由心肌组成。",
+        "answer_zh": "心肌",
+        "answer_aliases_zh": [
+          "心肌"
+        ]
+      },
+      "translation_sha256": "a874dfa286fafcd97e7400c828c9f4edc1d02bd7242b2213a2385a673fb8cde3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000320",
+        "historical:raw_sciq_000321"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "524b72d109767777fccb10f533304972cea6351925ba9e095633b0bcdffe32a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2336,
+      "first_chunk_seconds": 1.753,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2466,
+        "prompt_tokens": 1749,
+        "total_tokens": 4215,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2169,
+          "text_tokens": 297
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a6ba503e65e476b04cdc9d7e448c571f42c79065e399037f0e11ec57d3df03fb",
+      "status": "completed",
+      "latency_seconds": 73.224
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000321"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0e391756de648b60efd9b801659366bc7905ce6239365ba070f95bf6b4f5a88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 486,
+      "first_chunk_seconds": 3.695,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 495,
+        "prompt_tokens": 503,
+        "total_tokens": 998,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 432,
+          "text_tokens": 63
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7208bb665e31d05746e9eda852c1c4cb5ad4bb0ebe3369263e688bc8f4349fe4",
+      "status": "completed",
+      "latency_seconds": 10.988
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,71 @@
+{
+  "input_sha256": "f918147d1505b8ddd13a557ae84fb02139dd8f21678053cf0bfdc69553853c81",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002795",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits. The question is a trichotomous price-category inference (free / cheap / expensive). 'expensive' is a transient attribute, not a stable class membership (entity_to_class explicitly excludes 'arbitrary attribute'). The source sentence is a common-sense default, not a universally true fact about diamonds (synthetic or low-carat diamonds can be inexpensive). No listed relation captures an entity's price-level attribute; proposing a new 'entity_to_price_category' would be too narrow and the underlying claim is not sufficiently factual to warrant a standing relation. Defer without forcing.",
+      "input_sha256": "33a219f578450c4e36d0c153a1ef7d34819a6e298bf314ea165684fb14d179ee",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002800",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation fits. The source states that a toddling child is 'gaining' greater mobility — a progressive developmental process, not a static class, containment, material, or symbol relationship. 'greater mobility' is a transient developmental attribute, not a stable class (entity_to_class excludes arbitrary attributes) nor a habitat, part-whole, or location relation. A new 'entity_to_developmental_attribute' relation would be overly specific and the claim is a common-sense developmental observation rather than a hard, disambiguated fact. Defer without forcing.",
+      "input_sha256": "bc166962994fbf3e06091d22015ff7b8267123037f91c91907cba0ff35bf4664",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002795",
+        "historical:raw_commonsense_qa_002800"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "beb46e825617da22ecc951392d8f1e7242b756109755f3bb5c963e4dd6d2ac62",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1394,
+      "first_chunk_seconds": 64.118,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1503,
+        "prompt_tokens": 1575,
+        "total_tokens": 3078,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1047,
+          "text_tokens": 456
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9efdf79e460b2717580d848576f6d8e65d8e67a68be4f277d3651c26a6f38c10",
+      "status": "completed",
+      "latency_seconds": 88.784
+    }
+  ],
+  "status": "completed"
+}

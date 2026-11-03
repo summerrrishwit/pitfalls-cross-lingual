@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2d0b71d2ba70f6afb0f77414df35fc6f654670c1e21dd44ce177479be33a051d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001058",
+      "decision": "ready",
+      "subject": "missing a swing in baseball",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "strikes",
+      "canonical_fact": "Missing a swing in baseball is called strikes.",
+      "prompt_en": "What is the term used in baseball when a batter misses a swing?",
+      "evidence_quotes": [
+        "you miss a swing it is called what",
+        "strikes"
+      ],
+      "reason": "The source question asks for the term applied when a swing is missed in baseball and the source answer is 'strikes'. The catalog relation description_to_term fits exactly: the subject is a defining description of an event and the answer is the conventional term for it. Answer 'strikes' is copied verbatim from source_answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "strikes",
+        "canonical_fact": "Missing a swing in baseball is called strikes.",
+        "subject": "missing a swing in baseball",
+        "prompt_en": "What is the term used in baseball when a batter misses a swing?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "strikes"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "807bcca4e2245fa2a2b85d6c4595e80857d024c1cd227a6a59973cabff469d3d",
+      "input_sha256": "bd487abf6df7c5142cfebfc9be4b69be695894a517688d8914ece357c6fb7927",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001119",
+      "decision": "ready",
+      "subject": "Coca-Cola after New Coke was discontinued",
+      "relation_id": "product_to_formula_version",
+      "relation_definition": "The formula or recipe version in use for a product in a specified historical context; direction: product/context -> formula version identifier.",
+      "direction": "product/context -> formula version",
+      "answer": "original",
+      "canonical_fact": "After New Coke was discontinued, the original formula was used for Coca-Cola.",
+      "prompt_en": "After New Coke was discontinued, what formula was used for Coca-Cola?",
+      "evidence_quotes": [
+        "After new coke was discontinued what formula was used",
+        "original"
+      ],
+      "reason": "The source question and answer establish that after New Coke was discontinued the 'original' formula was used. No existing catalog relation precisely captures 'formula version in use for a product in a historical context', so a new relation product_to_formula_version is proposed. Answer 'original' is copied verbatim from source_answer; no dates, markets, or versions are invented.",
+      "english": {
+        "direction": "product/context -> formula version",
+        "relation_id": "product_to_formula_version",
+        "answer": "original",
+        "canonical_fact": "After New Coke was discontinued, the original formula was used for Coca-Cola.",
+        "subject": "Coca-Cola after New Coke was discontinued",
+        "prompt_en": "After New Coke was discontinued, what formula was used for Coca-Cola?",
+        "relation_definition": "The formula or recipe version in use for a product in a specified historical context; direction: product/context -> formula version identifier.",
+        "answer_aliases_en": [
+          "original"
+        ],
+        "relation_spec": {
+          "id": "product_to_formula_version",
+          "definition": "The formula or recipe version in use for a product in a specified historical context; direction: product/context -> formula version identifier.",
+          "direction": "product/context -> formula version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fdac35c2a6c4922765f16576bee8b23cb5695f66239b58c2998a8a803164d8d1",
+      "input_sha256": "00f613084b188a74822bd283a0e635178b979ec86021ccd359d73e696a15d852",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001058",
+      "input_sha256": "bd487abf6df7c5142cfebfc9be4b69be695894a517688d8914ece357c6fb7927",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "strikes",
+        "canonical_fact": "Missing a swing in baseball is called strikes.",
+        "subject": "missing a swing in baseball",
+        "prompt_en": "What is the term used in baseball when a batter misses a swing?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "strikes"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "807bcca4e2245fa2a2b85d6c4595e80857d024c1cd227a6a59973cabff469d3d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001058",
+        "subject_zh": "棒球中挥棒落空",
+        "prompt_zh": "棒球中击球手挥棒落空时使用什么术语？",
+        "canonical_fact_zh": "棒球中挥棒落空被称为好球。",
+        "answer_zh": "好球",
+        "answer_aliases_zh": [
+          "好球"
+        ]
+      },
+      "translation_sha256": "1c642515927f479da1d023096d479dea4fb967cfae842a072f9a585f9f149239"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001119",
+      "input_sha256": "00f613084b188a74822bd283a0e635178b979ec86021ccd359d73e696a15d852",
+      "english": {
+        "direction": "product/context -> formula version",
+        "relation_id": "product_to_formula_version",
+        "answer": "original",
+        "canonical_fact": "After New Coke was discontinued, the original formula was used for Coca-Cola.",
+        "subject": "Coca-Cola after New Coke was discontinued",
+        "prompt_en": "After New Coke was discontinued, what formula was used for Coca-Cola?",
+        "relation_definition": "The formula or recipe version in use for a product in a specified historical context; direction: product/context -> formula version identifier.",
+        "answer_aliases_en": [
+          "original"
+        ],
+        "relation_spec": {
+          "id": "product_to_formula_version",
+          "definition": "The formula or recipe version in use for a product in a specified historical context; direction: product/context -> formula version identifier.",
+          "direction": "product/context -> formula version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fdac35c2a6c4922765f16576bee8b23cb5695f66239b58c2998a8a803164d8d1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001119",
+        "subject_zh": "新可乐（New Coke）停产后，可口可乐",
+        "prompt_zh": "新可乐（New Coke）停产后，可口可乐使用的是什么配方？",
+        "canonical_fact_zh": "新可乐（New Coke）停产后，可口可乐使用的是原始配方。",
+        "answer_zh": "原始",
+        "answer_aliases_zh": [
+          "原始"
+        ]
+      },
+      "translation_sha256": "77ca3c0be1ada56c4b86302b8b098e8876658d4da55afc7960fe2daa274438bc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001058",
+        "historical:raw_commonsense_qa_001119"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d74bdfd83c360659791ac0cf831a9678f4cf4b3e11feac2abfb4f42680e7bba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2551,
+      "first_chunk_seconds": 35.866,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2817,
+        "prompt_tokens": 1663,
+        "total_tokens": 4480,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2297,
+          "text_tokens": 520
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7aafe4d15700c4c55804fe04a24d0ef38e0ad23965eea0ff4d41cde5ef74066c",
+      "status": "completed",
+      "latency_seconds": 72.418
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001058",
+        "historical:raw_commonsense_qa_001119"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "79ea2cb69bd30aed7208424eee801962c7b11bdfe3a571bfbe5675adf395192e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 922,
+      "first_chunk_seconds": 60.387,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1000,
+        "prompt_tokens": 843,
+        "total_tokens": 1843,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 762,
+          "text_tokens": 238
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8dfdb53821dc2eeb22a31208ed6103593f0bda16e99238bcd0ae33ec111d377a",
+      "status": "completed",
+      "latency_seconds": 72.262
+    }
+  ],
+  "status": "completed"
+}

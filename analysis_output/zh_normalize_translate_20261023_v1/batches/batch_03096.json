@@ -1,0 +1,129 @@
+{
+  "input_sha256": "a4d5edeba3c70d39169144b108e3a7495f55e3d0571b81abcf4aefc85d4a102c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000646",
+      "decision": "ready",
+      "subject": "AC",
+      "relation_id": "entity_to_comparative_application",
+      "relation_definition": "The specific application or task where a named entity is stated to have an advantage over a specified comparator entity; the comparator must be named in the canonical fact.",
+      "direction": "entity -> application domain (comparator stated)",
+      "answer": "transporting electrcal energy",
+      "canonical_fact": "AC is better than DC for transporting electrical energy.",
+      "prompt_en": "For what application is AC considered better than DC?",
+      "evidence_quotes": [
+        "Ac is better than dc for doing what?",
+        "transporting electrcal energy"
+      ],
+      "reason": "Source is a direct open-ended Q&A stating AC's comparative advantage over DC for a specific application. Both models agree on the core fact (one flagged option_dependent, but the source is not multiple-choice). Answer preserved verbatim including the source typo 'electrcal'; canonical_fact normalises spelling.",
+      "english": {
+        "relation_definition": "The specific application or task where a named entity is stated to have an advantage over a specified comparator entity; the comparator must be named in the canonical fact.",
+        "direction": "entity -> application domain (comparator stated)",
+        "subject": "AC",
+        "relation_id": "entity_to_comparative_application",
+        "prompt_en": "For what application is AC considered better than DC?",
+        "answer": "transporting electrcal energy",
+        "canonical_fact": "AC is better than DC for transporting electrical energy.",
+        "answer_aliases_en": [
+          "transporting electrcal energy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_comparative_application",
+          "definition": "The specific application or task where a named entity is stated to have an advantage over a specified comparator entity; the comparator must be named in the canonical fact.",
+          "direction": "entity -> application domain (comparator stated)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "23f951ad80403eb7325f8a454fa6e499c3b73265dbd5ae389aab5e6aa0951733",
+      "input_sha256": "c25ad21616a0cb20afc473cdc5016f7f4f79f86440ebd5bc841be740525c90e2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000647",
+      "decision": "ready",
+      "subject": "bird ancestor that lived in trees",
+      "relation_id": "organism_to_developed_feature",
+      "relation_definition": "An anatomical or morphological feature that a specified organism or evolutionary ancestor is stated to have developed, retaining the developmental or evolutionary context.",
+      "direction": "specified organism / evolutionary ancestor -> developed anatomical or morphological feature",
+      "answer": "wings",
+      "canonical_fact": "The bird ancestor that lived in trees developed wings, a feature commonly associated with birds.",
+      "prompt_en": "What feature commonly associated with birds did the tree-dwelling bird ancestor develop?",
+      "evidence_quotes": [
+        "The bird ancestor that lived in trees developed what feature commonly associated with birds?",
+        "wings"
+      ],
+      "reason": "Source directly states the developed feature; both models extracted consistently. No catalog relation captures 'evolutionary development of a feature'; proposed organism_to_developed_feature with explicit direction and definition.",
+      "english": {
+        "relation_definition": "An anatomical or morphological feature that a specified organism or evolutionary ancestor is stated to have developed, retaining the developmental or evolutionary context.",
+        "direction": "specified organism / evolutionary ancestor -> developed anatomical or morphological feature",
+        "subject": "bird ancestor that lived in trees",
+        "relation_id": "organism_to_developed_feature",
+        "prompt_en": "What feature commonly associated with birds did the tree-dwelling bird ancestor develop?",
+        "answer": "wings",
+        "canonical_fact": "The bird ancestor that lived in trees developed wings, a feature commonly associated with birds.",
+        "answer_aliases_en": [
+          "wings"
+        ],
+        "relation_spec": {
+          "id": "organism_to_developed_feature",
+          "definition": "An anatomical or morphological feature that a specified organism or evolutionary ancestor is stated to have developed, retaining the developmental or evolutionary context.",
+          "direction": "specified organism / evolutionary ancestor -> developed anatomical or morphological feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "90cbf76bc4c0f1938440df48584a5c648deceb3ede720dc76f0c86df4f37a12d",
+      "input_sha256": "cb281642e609ea3b72834242df6bd0f63ce9b30401597c6babc575e1b97e4dd7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000646",
+        "historical:raw_sciq_000647"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d0897cc9d675222f976ee8700c3493a60245039abcfe324c8118c97ccd33d10",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2790,
+      "first_chunk_seconds": 1.67,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2842,
+        "prompt_tokens": 1690,
+        "total_tokens": 4532,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2438,
+          "text_tokens": 404
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "85a714b2400bd614fc00833671efaec3c0d8d682f2724b0d7efbebc63753b906",
+      "status": "completed",
+      "latency_seconds": 110.419
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000646",
+        "historical:raw_sciq_000647"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d7d9503e1994feaeeccd7b83d5b0dd185fa130177ef011e7a220107c1bbf9d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 187.014
+    }
+  ],
+  "status": "failed"
+}

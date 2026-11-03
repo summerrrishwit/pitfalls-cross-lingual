@@ -1,0 +1,246 @@
+{
+  "input_sha256": "04390598725ef8774c60f5e9187f75541767b44bef2d53be10c9346f1265878a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001086",
+      "decision": "ready",
+      "subject": "skin",
+      "relation_id": "body_part_to_sensory_cell",
+      "relation_definition": "The specific cell type within a given body part that provides a stated sensory modality (e.g., heat, pressure, pain); scoped to the part and sensation named in the question.",
+      "direction": "body part -> cell type providing specified sensation in that part",
+      "answer": "nerve cells",
+      "canonical_fact": "Nerve cells help skin feel heat and pressure.",
+      "prompt_en": "What type of cells in the skin are responsible for feeling heat and pressure?",
+      "evidence_quotes": [
+        "What helps skin feel heat and pressure?",
+        "nerve cells"
+      ],
+      "reason": "The source asks which cells in skin detect heat and pressure and gives 'nerve cells' as the answer. No catalog relation captures a part-to-function (sensory role) link precisely; whole_to_part is close but its definition does not carry the sensory-modality constraint, so a new precise relation is proposed.",
+      "english": {
+        "direction": "body part -> cell type providing specified sensation in that part",
+        "relation_id": "body_part_to_sensory_cell",
+        "answer": "nerve cells",
+        "canonical_fact": "Nerve cells help skin feel heat and pressure.",
+        "subject": "skin",
+        "prompt_en": "What type of cells in the skin are responsible for feeling heat and pressure?",
+        "relation_definition": "The specific cell type within a given body part that provides a stated sensory modality (e.g., heat, pressure, pain); scoped to the part and sensation named in the question.",
+        "answer_aliases_en": [
+          "nerve cells"
+        ],
+        "relation_spec": {
+          "id": "body_part_to_sensory_cell",
+          "definition": "The specific cell type within a given body part that provides a stated sensory modality (e.g., heat, pressure, pain); scoped to the part and sensation named in the question.",
+          "direction": "body part -> cell type providing specified sensation in that part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5726a827686bf948cd0a23b9ceccf0e24381391285383663b0ea0b80163d3b91",
+      "input_sha256": "611f6141358f7ce5c7459083f63d7634444a22ad414c49951d95dda9227c8a4d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001089",
+      "decision": "ready",
+      "subject": "levels of organization in the bodies of many organisms",
+      "relation_id": "biological_structure_to_organizational_sequence",
+      "relation_definition": "The ordered list of structural levels from simplest to most complex that compose the body of many organisms, used to carry out life processes.",
+      "direction": "biological structural concept -> ordered sequence of levels (simplest to most complex)",
+      "answer": "cell, tissue, organ, organ system",
+      "canonical_fact": "The levels of organization in the bodies of many organisms, from simplest to most complex, are cell, tissue, organ, organ system.",
+      "prompt_en": "What is the correct order of the structural levels of organization in the bodies of many organisms, from the simplest to the most complex?",
+      "evidence_quotes": [
+        "Which list correctly shows how these levels are organized from the simplest to the most complex?",
+        "cell, tissue, organ, organ system"
+      ],
+      "reason": "The source asks for the correct ordering of biological organizational levels and the answer is the fixed sequence 'cell, tissue, organ, organ system.' No catalog relation captures an ordered-sequence fact; a new relation is proposed to avoid forcing term_to_definition or entity_to_class, which do not preserve the ordinal constraint.",
+      "english": {
+        "direction": "biological structural concept -> ordered sequence of levels (simplest to most complex)",
+        "relation_id": "biological_structure_to_organizational_sequence",
+        "answer": "cell, tissue, organ, organ system",
+        "canonical_fact": "The levels of organization in the bodies of many organisms, from simplest to most complex, are cell, tissue, organ, organ system.",
+        "subject": "levels of organization in the bodies of many organisms",
+        "prompt_en": "What is the correct order of the structural levels of organization in the bodies of many organisms, from the simplest to the most complex?",
+        "relation_definition": "The ordered list of structural levels from simplest to most complex that compose the body of many organisms, used to carry out life processes.",
+        "answer_aliases_en": [
+          "cell, tissue, organ, organ system"
+        ],
+        "relation_spec": {
+          "id": "biological_structure_to_organizational_sequence",
+          "definition": "The ordered list of structural levels from simplest to most complex that compose the body of many organisms, used to carry out life processes.",
+          "direction": "biological structural concept -> ordered sequence of levels (simplest to most complex)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8f48a49258afa4a1d28e26a4823ef2567b1455fcd6da805401442598af8a4477",
+      "input_sha256": "3b6741c51b0e087638f4af37ecf493764f36cc66ca737735434670ea2552204d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001086",
+      "input_sha256": "611f6141358f7ce5c7459083f63d7634444a22ad414c49951d95dda9227c8a4d",
+      "english": {
+        "direction": "body part -> cell type providing specified sensation in that part",
+        "relation_id": "body_part_to_sensory_cell",
+        "answer": "nerve cells",
+        "canonical_fact": "Nerve cells help skin feel heat and pressure.",
+        "subject": "skin",
+        "prompt_en": "What type of cells in the skin are responsible for feeling heat and pressure?",
+        "relation_definition": "The specific cell type within a given body part that provides a stated sensory modality (e.g., heat, pressure, pain); scoped to the part and sensation named in the question.",
+        "answer_aliases_en": [
+          "nerve cells"
+        ],
+        "relation_spec": {
+          "id": "body_part_to_sensory_cell",
+          "definition": "The specific cell type within a given body part that provides a stated sensory modality (e.g., heat, pressure, pain); scoped to the part and sensation named in the question.",
+          "direction": "body part -> cell type providing specified sensation in that part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5726a827686bf948cd0a23b9ceccf0e24381391285383663b0ea0b80163d3b91",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001086",
+        "subject_zh": "皮肤",
+        "prompt_zh": "皮肤中负责感知热和压力的细胞是什么类型？",
+        "canonical_fact_zh": "神经细胞帮助皮肤感知热和压力。",
+        "answer_zh": "神经细胞",
+        "answer_aliases_zh": [
+          "神经细胞"
+        ]
+      },
+      "translation_sha256": "f5606c49441bb299ab02b59b9d17025107149fc765741a132f0ef51cf2a2f897"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001089",
+      "input_sha256": "3b6741c51b0e087638f4af37ecf493764f36cc66ca737735434670ea2552204d",
+      "english": {
+        "direction": "biological structural concept -> ordered sequence of levels (simplest to most complex)",
+        "relation_id": "biological_structure_to_organizational_sequence",
+        "answer": "cell, tissue, organ, organ system",
+        "canonical_fact": "The levels of organization in the bodies of many organisms, from simplest to most complex, are cell, tissue, organ, organ system.",
+        "subject": "levels of organization in the bodies of many organisms",
+        "prompt_en": "What is the correct order of the structural levels of organization in the bodies of many organisms, from the simplest to the most complex?",
+        "relation_definition": "The ordered list of structural levels from simplest to most complex that compose the body of many organisms, used to carry out life processes.",
+        "answer_aliases_en": [
+          "cell, tissue, organ, organ system"
+        ],
+        "relation_spec": {
+          "id": "biological_structure_to_organizational_sequence",
+          "definition": "The ordered list of structural levels from simplest to most complex that compose the body of many organisms, used to carry out life processes.",
+          "direction": "biological structural concept -> ordered sequence of levels (simplest to most complex)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8f48a49258afa4a1d28e26a4823ef2567b1455fcd6da805401442598af8a4477",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001089",
+        "subject_zh": "许多生物体内的组织层次",
+        "prompt_zh": "许多生物体内的结构组织层次从最简单到最复杂的正确顺序是什么？",
+        "canonical_fact_zh": "许多生物体内的组织层次，从最简单到最复杂，依次为细胞、组织、器官、器官系统。",
+        "answer_zh": "细胞、组织、器官、器官系统",
+        "answer_aliases_zh": [
+          "细胞、组织、器官、器官系统"
+        ]
+      },
+      "translation_sha256": "54b59b3f5df6a5cea0726eb6a13bbe573cba017df6c74ab47806a317a0833812"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001086",
+        "historical:raw_ai2_arc_easy_001089"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d6bde69b2c035c33296135e12a6fca4dab44905453e153f902743284cdd4c189",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2982,
+      "first_chunk_seconds": 17.579,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3151,
+        "prompt_tokens": 1790,
+        "total_tokens": 4941,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2581,
+          "text_tokens": 570
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6c667748ab18475ec1662bbbc379315c542954ebf9963a4a3608d217c2ca110f",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 63.655,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001086",
+        "historical:raw_ai2_arc_easy_001089"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6f732b30d1f192b7e35c1b5044a343b5b2d5aec8d77d046a3ef0daa238da9d5a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2537,
+      "first_chunk_seconds": 6.655,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2750,
+        "prompt_tokens": 1809,
+        "total_tokens": 4559,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2151,
+          "text_tokens": 599
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8e2e3ded6ca2cd879b82774b1fec53185169256f35ca20dcdedbf82b8752fb02",
+      "status": "completed",
+      "latency_seconds": 55.141
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001086",
+        "historical:raw_ai2_arc_easy_001089"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a08597a7b46242a5df7a15fd2b0227bad7d99a37a360748929e4a31356a54043",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 949,
+      "first_chunk_seconds": 12.701,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 951,
+        "prompt_tokens": 981,
+        "total_tokens": 1932,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 703,
+          "text_tokens": 248
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c2e492accd9079d339163e9f67b420cd98b7b4ec671f434b44ecccbfa6fccc76",
+      "status": "completed",
+      "latency_seconds": 24.2
+    }
+  ],
+  "status": "completed"
+}

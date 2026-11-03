@@ -1,0 +1,185 @@
+{
+  "input_sha256": "f4cabd25450e45da27cb91a4902caa88d5fc960667ea4304663ff900ec147b94",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000898",
+      "decision": "ready",
+      "subject": "cell membrane",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "phospholipids",
+      "canonical_fact": "The cell membrane consists of two layers of phospholipids.",
+      "prompt_en": "What material forms the two layers of the cell membrane?",
+      "evidence_quotes": [
+        "cell membrane consists of two layers of",
+        "phospholipids"
+      ],
+      "reason": "The source question asks what material the cell membrane is composed of (two layers of what), and the source answer is 'phospholipids'. This is a straightforward material-composition fact, matching entity_to_material (entity -> material). No existing extraction conflicted; answer preserved verbatim.",
+      "english": {
+        "prompt_en": "What material forms the two layers of the cell membrane?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer": "phospholipids",
+        "canonical_fact": "The cell membrane consists of two layers of phospholipids.",
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "subject": "cell membrane",
+        "answer_aliases_en": [
+          "phospholipids"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7569ba299f37b4089ef11d047b0428825940a17e1eded712eb01447970aa6e69",
+      "input_sha256": "ce0b889c1b45c9deeb08be1c92783548bb8e0bb1504cb6021583b2da0c3095b7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000899",
+      "decision": "ready",
+      "subject": "cell phase in which the cell makes final preparations to divide",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "growth phase 2",
+      "canonical_fact": "The phase in which the cell makes final preparations to divide is growth phase 2.",
+      "prompt_en": "What is the name of the cell phase during which the cell makes final preparations to divide?",
+      "evidence_quotes": [
+        "What phase does the cell make final preparations to divide",
+        "growth phase 2"
+      ],
+      "reason": "The source question supplies a defining description of a specific cell-cycle phase and asks for its conventional term; the source answer is 'growth phase 2'. This matches description_to_term (description -> term). Both model annotations agreed on the extraction; answer preserved verbatim from source.",
+      "english": {
+        "prompt_en": "What is the name of the cell phase during which the cell makes final preparations to divide?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "growth phase 2",
+        "canonical_fact": "The phase in which the cell makes final preparations to divide is growth phase 2.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "cell phase in which the cell makes final preparations to divide",
+        "answer_aliases_en": [
+          "growth phase 2"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "427eebd637a5a8cbca6511dbbb1078f0f9f1be5641e6a3f1023a22ed5c6a0e91",
+      "input_sha256": "59b542fcdafb816b75bb97fe71a17e4e3213538ad965f69958b1b52276e03adf",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "82a310976e60834a74da7593f8e6ded9085d5d562589f64ba76f556d55cf8146",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 38.802
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "82a310976e60834a74da7593f8e6ded9085d5d562589f64ba76f556d55cf8146",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 94.865
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "82a310976e60834a74da7593f8e6ded9085d5d562589f64ba76f556d55cf8146",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1783,
+      "first_chunk_seconds": 7.071,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1898,
+        "prompt_tokens": 1721,
+        "total_tokens": 3619,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1397,
+          "text_tokens": 501
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3e92349aa4d2ac2487fe21ad0f5c9ce3679df0c37038251b465dbe01b5900de8",
+      "status": "completed",
+      "latency_seconds": 38.976
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8860b31689520e702a3226eea70f1bc9678f1d3856a7a2df85d4784571e3aa7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.3
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8860b31689520e702a3226eea70f1bc9678f1d3856a7a2df85d4784571e3aa7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.64
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000898",
+        "historical:raw_sciq_000899"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "8860b31689520e702a3226eea70f1bc9678f1d3856a7a2df85d4784571e3aa7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 93.01
+    }
+  ],
+  "status": "failed"
+}

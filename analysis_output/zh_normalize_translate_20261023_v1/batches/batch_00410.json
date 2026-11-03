@@ -1,0 +1,282 @@
+{
+  "input_sha256": "a27c0bb7cbbaa94f1cce9534a8f940e6f766257b98e58617244f0f76313b296c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c228d290cc1040d7e7f3",
+      "decision": "ready",
+      "subject": "Jack Hyde in Fifty Shades Darker",
+      "relation_id": "character_to_actor",
+      "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "character in specified work/version -> actor",
+      "answer": "Eric Johnson",
+      "canonical_fact": "Eric Johnson played Jack Hyde in Fifty Shades Darker.",
+      "prompt_en": "Factual question: who played jack hyde in fifty shades darker\nAnswer:",
+      "evidence_quotes": [
+        "who played jack hyde in fifty shades darker",
+        "Eric Johnson"
+      ],
+      "reason": "Source explicitly states Eric Johnson played Jack Hyde in Fifty Shades Darker. The catalog relation character_to_actor (character in specified work/version -> actor) fits exactly; no new relation needed.",
+      "english": {
+        "relation_id": "character_to_actor",
+        "canonical_fact": "Eric Johnson played Jack Hyde in Fifty Shades Darker.",
+        "answer": "Eric Johnson",
+        "prompt_en": "Factual question: who played jack hyde in fifty shades darker\nAnswer:",
+        "subject": "Jack Hyde in Fifty Shades Darker",
+        "direction": "character in specified work/version -> actor",
+        "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Eric Johnson",
+          "Eric Johann Johnson",
+          "Johnson, Eric"
+        ],
+        "relation_spec": {
+          "id": "character_to_actor",
+          "direction": "character in specified work/version -> actor",
+          "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "666fd72937e3053aa3363db4e77bac24e82453e0cea79d37635462fe9d30f7b7",
+      "input_sha256": "435014e8dd915fa7828ae755333f16c521a1c778cbf158ab7f43b85738ce450b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c23d822195af87552522",
+      "decision": "ready",
+      "subject": "Take This Job and Shove It",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Johnny Paycheck",
+      "canonical_fact": "Johnny Paycheck sings the song Take This Job and Shove It.",
+      "prompt_en": "Factual question: who sings take this job and shove it\nAnswer:",
+      "evidence_quotes": [
+        "who sings take this job and shove it",
+        "Johnny Paycheck"
+      ],
+      "reason": "Source explicitly states Johnny Paycheck is the singer of Take This Job and Shove It. The catalog relation song_to_performer (song -> performer) fits exactly; no new relation needed.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Johnny Paycheck sings the song Take This Job and Shove It.",
+        "answer": "Johnny Paycheck",
+        "prompt_en": "Factual question: who sings take this job and shove it\nAnswer:",
+        "subject": "Take This Job and Shove It",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Johnny Paycheck"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ebb01629e3c7321f9a16177bf05682a3bf968e4d13255a1a2f4dcb43013047a1",
+      "input_sha256": "948e50ee5510b5a142602a9f0ef3001789ab6a0691327f7eed4603c2413d4f08",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bff01715a3d42ca503596f65ae118478d4a63ad68b8abdd116cd49879710aba5",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 32.385
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bff01715a3d42ca503596f65ae118478d4a63ad68b8abdd116cd49879710aba5",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1540,
+        "prompt_tokens": 1600,
+        "total_tokens": 3140,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1062,
+          "text_tokens": 478
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "adda56b01035476a9822695b6e33000635b08617a9fa9c00984cf507f79b18de",
+      "status": "completed",
+      "latency_seconds": 68.876
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 46.84
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.851
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 48.807
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 19.649,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 43.508,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c228d290cc1040d7e7f3",
+        "public:pbf_c23d822195af87552522"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0a71179b7dfccde97c7ff8ecc5fd32a067487b3dbfb42ecc07c2f5f30359d809",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 26.154,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00410.json",
+      "sha256": "46516cc1ee919936098ecd31ff4f37e7c24bf11abf7a114860da37e8904a9975",
+      "previous_status": "failed"
+    }
+  ]
+}

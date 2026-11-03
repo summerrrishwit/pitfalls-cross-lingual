@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d1e029299ec03279536a828af266243e5f1f29f030a6f0c703535ba83fb88996",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004890",
+      "decision": "ready",
+      "subject": "small screen",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "television",
+      "canonical_fact": "The colloquial term 'small screen' refers to television.",
+      "prompt_en": "In what medium would you see an actor perform if they are said to be on the 'small screen'?",
+      "evidence_quotes": [
+        "small screen",
+        "television"
+      ],
+      "reason": "Source question explicitly frames 'small screen' as a term and asks where you'd see the actor; answer 'television' is a literal substring of source_answer. Both model annotations agree on extraction. term_to_definition captures the 'refers to' relation_raw precisely without forcing a broader category.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "television",
+        "canonical_fact": "The colloquial term 'small screen' refers to television.",
+        "subject": "small screen",
+        "prompt_en": "In what medium would you see an actor perform if they are said to be on the 'small screen'?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "television"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9b138ec29e8bcc17a3a9d886354034f89a0b9880336635cbd4c21d510eab81d5",
+      "input_sha256": "a2827b1ad330a857ebdb5a06e0c4f7d635041792f7cf63ccca96adf7fbfe10a3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004893",
+      "decision": "ready",
+      "subject": "device with a lens used to take photos",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "camera",
+      "canonical_fact": "A device with a lens used to take photos is called a camera.",
+      "prompt_en": "What is the conventional term for a device with a lens used to take photos?",
+      "evidence_quotes": [
+        "device with a lens",
+        "camera"
+      ],
+      "reason": "Source asks for the term matching the description 'device with a lens used to take photos'; answer 'camera' is a literal substring of source_answer. Both model annotations agree. description_to_term fits the direction (description -> term) exactly; no need for a new relation ID.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "camera",
+        "canonical_fact": "A device with a lens used to take photos is called a camera.",
+        "subject": "device with a lens used to take photos",
+        "prompt_en": "What is the conventional term for a device with a lens used to take photos?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "camera"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "dbff6102cd0d81d399bddeaf5b59f9ee255ecff75a83934c72e849bf4ae1b8a4",
+      "input_sha256": "7428ae692c10c43c93cd34b1ae2184ceaa49cd427d9fb6252233a718ef6903c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004890",
+      "input_sha256": "a2827b1ad330a857ebdb5a06e0c4f7d635041792f7cf63ccca96adf7fbfe10a3",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "television",
+        "canonical_fact": "The colloquial term 'small screen' refers to television.",
+        "subject": "small screen",
+        "prompt_en": "In what medium would you see an actor perform if they are said to be on the 'small screen'?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "television"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9b138ec29e8bcc17a3a9d886354034f89a0b9880336635cbd4c21d510eab81d5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004890",
+        "subject_zh": "小屏幕",
+        "prompt_zh": "如果一个演员被说是在\"小屏幕\"上表演，你会在什么媒介中看到他们的表演？",
+        "canonical_fact_zh": "俗语\"小屏幕\"指的是电视。",
+        "answer_zh": "电视",
+        "answer_aliases_zh": [
+          "电视"
+        ]
+      },
+      "translation_sha256": "f8ac405064c8cdf6e92993f07d7b4e75921987957a3945cec0de626e34251973"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004893",
+      "input_sha256": "7428ae692c10c43c93cd34b1ae2184ceaa49cd427d9fb6252233a718ef6903c5",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "camera",
+        "canonical_fact": "A device with a lens used to take photos is called a camera.",
+        "subject": "device with a lens used to take photos",
+        "prompt_en": "What is the conventional term for a device with a lens used to take photos?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "camera"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "dbff6102cd0d81d399bddeaf5b59f9ee255ecff75a83934c72e849bf4ae1b8a4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004893",
+        "subject_zh": "带镜头用于拍照的装置",
+        "prompt_zh": "带镜头用于拍照的装置，其惯用术语是什么？",
+        "canonical_fact_zh": "带镜头用于拍照的装置称为照相机。",
+        "answer_zh": "照相机",
+        "answer_aliases_zh": [
+          "照相机"
+        ]
+      },
+      "translation_sha256": "627d79a7a36ceadc48568c8bcc7746047f457bb9a5073537958aaee047f842da"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004890",
+        "historical:raw_commonsense_qa_004893"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "207894850680e4e2785d3a43ad0d1539e58870599d207f0ca6f954c6de919e13",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2111,
+      "first_chunk_seconds": 9.685,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2361,
+        "prompt_tokens": 1677,
+        "total_tokens": 4038,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1891,
+          "text_tokens": 470
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "95cebbeb8c96249214c106a72c6137d63da2691c927eaa4a2cf75ecf1aa08cf5",
+      "status": "completed",
+      "latency_seconds": 38.371
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004890",
+        "historical:raw_commonsense_qa_004893"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "840cd25b45576c79024a3817779359f6da2956acc8ade7486c093b76009ebeca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 703,
+      "first_chunk_seconds": 13.708,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 713,
+        "prompt_tokens": 824,
+        "total_tokens": 1537,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 483,
+          "text_tokens": 230
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7a338f9ea6e6de2c9c2c7d0e85621574beb5687cd95ee6b1eade7b9cc62a1f8c",
+      "status": "completed",
+      "latency_seconds": 21.668
+    }
+  ],
+  "status": "completed"
+}

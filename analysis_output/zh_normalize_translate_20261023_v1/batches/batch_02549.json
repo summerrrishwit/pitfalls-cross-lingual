@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8aa556f62cdba05470ef650a5eebe03dcad729a8ed7268800fa7d24ef5d8afe6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003524",
+      "decision": "ready",
+      "subject": "helm",
+      "relation_id": "mechanism_to_operating_platform",
+      "relation_definition": "The type of vessel or platform on which a specific mechanical component (steering mechanism, mast control, etc.) functions; not a generic containment or part-whole claim.",
+      "direction": "mechanism/component -> operating platform (vessel type)",
+      "answer": "sailing vessel",
+      "canonical_fact": "The helm moves the masts on a sailing vessel.",
+      "prompt_en": "The helm is a steering mechanism that is not something you wear on your head. On what type of vessel does it move the masts?",
+      "evidence_quotes": [
+        "it moves the masts on what",
+        "sailing vessel"
+      ],
+      "reason": "Source question explicitly asks what the helm moves the masts on; source answer is 'sailing vessel'. No catalog relation captures the functional 'operates on' relationship between a steering mechanism and its vessel platform; part_to_whole would misrepresent the question (which is not about membership but about the functional domain). New relation proposed to avoid forcing a broad category.",
+      "english": {
+        "direction": "mechanism/component -> operating platform (vessel type)",
+        "relation_id": "mechanism_to_operating_platform",
+        "answer": "sailing vessel",
+        "canonical_fact": "The helm moves the masts on a sailing vessel.",
+        "subject": "helm",
+        "prompt_en": "The helm is a steering mechanism that is not something you wear on your head. On what type of vessel does it move the masts?",
+        "relation_definition": "The type of vessel or platform on which a specific mechanical component (steering mechanism, mast control, etc.) functions; not a generic containment or part-whole claim.",
+        "answer_aliases_en": [
+          "sailing vessel"
+        ],
+        "relation_spec": {
+          "id": "mechanism_to_operating_platform",
+          "definition": "The type of vessel or platform on which a specific mechanical component (steering mechanism, mast control, etc.) functions; not a generic containment or part-whole claim.",
+          "direction": "mechanism/component -> operating platform (vessel type)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "877b1a0e8c908342d4efe60bd365ee4ea9af54e4ddf9f5d42f808dd3ed6bb582",
+      "input_sha256": "5963eaef58c30c504fc8d9fb8e3f3414d29e7e67464f5116da93712992a9fd47",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003546",
+      "decision": "ready",
+      "subject": "playing guitar",
+      "relation_id": "activity_to_typical_outcome",
+      "relation_definition": "The characteristic or expected result that follows from performing a specified activity; a causal/functional link, not a classification or composition relation.",
+      "direction": "activity -> typical outcome",
+      "answer": "making music",
+      "canonical_fact": "Playing guitar causes a person to make music.",
+      "prompt_en": "What is a typical outcome for a person who plays guitar?",
+      "evidence_quotes": [
+        "What does playing guitar cause a person to do",
+        "making music"
+      ],
+      "reason": "Source question asks what playing guitar causes a person to do; source answer is 'making music'. This is a causal/functional relationship (activity → expected outcome) not covered by any catalog relation. One model flagged it as typical_action, but the source clearly supports it as a stated causal link. New relation proposed to capture the functional causality without forcing a broad category.",
+      "english": {
+        "direction": "activity -> typical outcome",
+        "relation_id": "activity_to_typical_outcome",
+        "answer": "making music",
+        "canonical_fact": "Playing guitar causes a person to make music.",
+        "subject": "playing guitar",
+        "prompt_en": "What is a typical outcome for a person who plays guitar?",
+        "relation_definition": "The characteristic or expected result that follows from performing a specified activity; a causal/functional link, not a classification or composition relation.",
+        "answer_aliases_en": [
+          "making music"
+        ],
+        "relation_spec": {
+          "id": "activity_to_typical_outcome",
+          "definition": "The characteristic or expected result that follows from performing a specified activity; a causal/functional link, not a classification or composition relation.",
+          "direction": "activity -> typical outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0f43e6a9e4fd379ab32068b8f71ad93df047bc1ebf2e44a24bd19377de7c9811",
+      "input_sha256": "dc9087f799688c98424349ccd8a9b0e069249139d42c8e29eef1f85336ea9598",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003524",
+      "input_sha256": "5963eaef58c30c504fc8d9fb8e3f3414d29e7e67464f5116da93712992a9fd47",
+      "english": {
+        "direction": "mechanism/component -> operating platform (vessel type)",
+        "relation_id": "mechanism_to_operating_platform",
+        "answer": "sailing vessel",
+        "canonical_fact": "The helm moves the masts on a sailing vessel.",
+        "subject": "helm",
+        "prompt_en": "The helm is a steering mechanism that is not something you wear on your head. On what type of vessel does it move the masts?",
+        "relation_definition": "The type of vessel or platform on which a specific mechanical component (steering mechanism, mast control, etc.) functions; not a generic containment or part-whole claim.",
+        "answer_aliases_en": [
+          "sailing vessel"
+        ],
+        "relation_spec": {
+          "id": "mechanism_to_operating_platform",
+          "definition": "The type of vessel or platform on which a specific mechanical component (steering mechanism, mast control, etc.) functions; not a generic containment or part-whole claim.",
+          "direction": "mechanism/component -> operating platform (vessel type)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "877b1a0e8c908342d4efe60bd365ee4ea9af54e4ddf9f5d42f808dd3ed6bb582",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003524",
+        "subject_zh": "舵",
+        "prompt_zh": "舵是一种转向机构，并非戴在头上的物件。它在哪种类型的船上用于移动桅杆？",
+        "canonical_fact_zh": "舵可以移动帆船上的桅杆。",
+        "answer_zh": "帆船",
+        "answer_aliases_zh": [
+          "帆船"
+        ]
+      },
+      "translation_sha256": "6ecdc28e3560f531caf3e3e03ae77cc393635c950360ee5c01bf326220de53a5"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003546",
+      "input_sha256": "dc9087f799688c98424349ccd8a9b0e069249139d42c8e29eef1f85336ea9598",
+      "english": {
+        "direction": "activity -> typical outcome",
+        "relation_id": "activity_to_typical_outcome",
+        "answer": "making music",
+        "canonical_fact": "Playing guitar causes a person to make music.",
+        "subject": "playing guitar",
+        "prompt_en": "What is a typical outcome for a person who plays guitar?",
+        "relation_definition": "The characteristic or expected result that follows from performing a specified activity; a causal/functional link, not a classification or composition relation.",
+        "answer_aliases_en": [
+          "making music"
+        ],
+        "relation_spec": {
+          "id": "activity_to_typical_outcome",
+          "definition": "The characteristic or expected result that follows from performing a specified activity; a causal/functional link, not a classification or composition relation.",
+          "direction": "activity -> typical outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0f43e6a9e4fd379ab32068b8f71ad93df047bc1ebf2e44a24bd19377de7c9811",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003546",
+        "subject_zh": "弹吉他",
+        "prompt_zh": "一个人弹吉他通常会带来什么结果？",
+        "canonical_fact_zh": "弹吉他使人创作音乐。",
+        "answer_zh": "创作音乐",
+        "answer_aliases_zh": [
+          "创作音乐"
+        ]
+      },
+      "translation_sha256": "71bd2625db2288992ff9309318e96c01d4483dd4a22b632e54e76b6d4d3ceed4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003524",
+        "historical:raw_commonsense_qa_003546"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8338743ff9b391d7ba0ae26791a08897a5434b74a0f6f4635ae45b49d7aee54d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2451,
+      "first_chunk_seconds": 30.011,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2582,
+        "prompt_tokens": 1649,
+        "total_tokens": 4231,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2023,
+          "text_tokens": 559
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "819aafaa28c68ef97c14cb576d91327e74ec4e20801a0df0354eb88f72e4f505",
+      "status": "completed",
+      "latency_seconds": 65.256
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003524",
+        "historical:raw_commonsense_qa_003546"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4ca6fb04136e3e8e21a8db102a77d14c9faa936b3719538415d40939cbfbf310",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1329,
+      "first_chunk_seconds": 10.697,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1414,
+        "prompt_tokens": 898,
+        "total_tokens": 2312,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1197,
+          "text_tokens": 217
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "edf1a3aaa3ee069ad7e370474cfdef252aa0153713db9143661e832fa199126b",
+      "status": "completed",
+      "latency_seconds": 31.631
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,343 @@
+{
+  "input_sha256": "9cdc84e7e60949651ba9a7d081a8945710b3df779183ce4adf5fec617cb6c36f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_13ecef124f6a69f7464c",
+      "decision": "ready",
+      "subject": "shortest player in the NFL",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Jack Shapiro",
+      "canonical_fact": "Jack Shapiro is the shortest player in the NFL.",
+      "prompt_en": "What is the shortest player in the NFL?",
+      "evidence_quotes": [
+        "Jack Shapiro"
+      ],
+      "reason": "The question asks for the entity satisfying the superlative identifying description 'shortest player in the NFL'. source_answer provides 'Jack Shapiro' as that unique entity. description_to_entity (identifying description -> entity) fits exactly; no existing catalog relation better captures a superlative-to-entity mapping.",
+      "english": {
+        "subject": "shortest player in the NFL",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Jack Shapiro",
+        "canonical_fact": "Jack Shapiro is the shortest player in the NFL.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the shortest player in the NFL?",
+        "answer_aliases_en": [
+          "Jack Shapiro"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ca16b62a36153f0bb1fbf8aff4866bf07b0df61666e5b8f46e6e440e6a1afe7c",
+      "input_sha256": "c1c595181b3ebe5ed379ea8a162319c83ecfa3a9351308e8c3ad5edee9574e48",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_13fe5f2b86fb5215a95d",
+      "decision": "ready",
+      "subject": "Garcia being shot in Criminal Minds",
+      "relation_id": "event_to_episode",
+      "relation_definition": "The episode of a specified television series in which a particular character event or action takes place.",
+      "direction": "specific character event in a named series -> episode identifier where it occurs",
+      "answer": "Lucky",
+      "canonical_fact": "Penelope Garcia is shot in the Criminal Minds episode 'Lucky'.",
+      "prompt_en": "In which Criminal Minds episode does Garcia get shot?",
+      "evidence_quotes": [
+        "in the episode \"lucky,\""
+      ],
+      "reason": "The question asks which episode of Criminal Minds the shooting of Garcia occurs in. No existing catalog relation covers event-to-episode mapping (work_to_release_date is for release dates; series_or_season_to_episode_count is for episode totals). Proposing new precise relation event_to_episode with direction 'specific character event in a named series -> episode identifier where it occurs'. Source supports 'Lucky' as the episode; answer capitalized as proper noun.",
+      "english": {
+        "subject": "Garcia being shot in Criminal Minds",
+        "relation_definition": "The episode of a specified television series in which a particular character event or action takes place.",
+        "answer": "Lucky",
+        "canonical_fact": "Penelope Garcia is shot in the Criminal Minds episode 'Lucky'.",
+        "direction": "specific character event in a named series -> episode identifier where it occurs",
+        "relation_id": "event_to_episode",
+        "prompt_en": "In which Criminal Minds episode does Garcia get shot?",
+        "answer_aliases_en": [
+          "Lucky",
+          "in the episode \"lucky,\""
+        ],
+        "relation_spec": {
+          "id": "event_to_episode",
+          "definition": "The episode of a specified television series in which a particular character event or action takes place.",
+          "direction": "specific character event in a named series -> episode identifier where it occurs"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5c7ba8e0e4ba0b59f7080e9aa148cae0e0156d8a00c79a1977bae0b820c9f5c",
+      "input_sha256": "97fc9094aab8386b5d0b09a9b18c2a4c2968955ea33ecb8919a1272aaa9fdbf9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_13ecef124f6a69f7464c",
+      "input_sha256": "c1c595181b3ebe5ed379ea8a162319c83ecfa3a9351308e8c3ad5edee9574e48",
+      "english": {
+        "subject": "shortest player in the NFL",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Jack Shapiro",
+        "canonical_fact": "Jack Shapiro is the shortest player in the NFL.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the shortest player in the NFL?",
+        "answer_aliases_en": [
+          "Jack Shapiro"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ca16b62a36153f0bb1fbf8aff4866bf07b0df61666e5b8f46e6e440e6a1afe7c",
+      "translation": {
+        "record_id": "public:pbf_13ecef124f6a69f7464c",
+        "subject_zh": "NFL中最矮的球员",
+        "prompt_zh": "NFL中最矮的球员是谁？",
+        "canonical_fact_zh": "Jack Shapiro 是 NFL 中最矮的球员。",
+        "answer_zh": "Jack Shapiro",
+        "answer_aliases_zh": [
+          "Jack Shapiro"
+        ]
+      },
+      "translation_sha256": "04e1f6623dcbeb81d754cceabe8b576d04a3a8be4cc38d2491ec272762f6cb3c"
+    },
+    {
+      "record_id": "public:pbf_13fe5f2b86fb5215a95d",
+      "input_sha256": "97fc9094aab8386b5d0b09a9b18c2a4c2968955ea33ecb8919a1272aaa9fdbf9",
+      "english": {
+        "subject": "Garcia being shot in Criminal Minds",
+        "relation_definition": "The episode of a specified television series in which a particular character event or action takes place.",
+        "answer": "Lucky",
+        "canonical_fact": "Penelope Garcia is shot in the Criminal Minds episode 'Lucky'.",
+        "direction": "specific character event in a named series -> episode identifier where it occurs",
+        "relation_id": "event_to_episode",
+        "prompt_en": "In which Criminal Minds episode does Garcia get shot?",
+        "answer_aliases_en": [
+          "Lucky",
+          "in the episode \"lucky,\""
+        ],
+        "relation_spec": {
+          "id": "event_to_episode",
+          "definition": "The episode of a specified television series in which a particular character event or action takes place.",
+          "direction": "specific character event in a named series -> episode identifier where it occurs"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b5c7ba8e0e4ba0b59f7080e9aa148cae0e0156d8a00c79a1977bae0b820c9f5c",
+      "translation": {
+        "record_id": "public:pbf_13fe5f2b86fb5215a95d",
+        "subject_zh": "《犯罪心理》中Garcia中枪",
+        "prompt_zh": "《犯罪心理》中Garcia中枪是在哪一集？",
+        "canonical_fact_zh": "Penelope Garcia 在《犯罪心理》第'Lucky'一集中中枪。",
+        "answer_zh": "Lucky",
+        "answer_aliases_zh": [
+          "Lucky",
+          "在《Lucky》一集中"
+        ]
+      },
+      "translation_sha256": "f587e6ddafe9efc4002f24111c02f24cc4bb76a0650be1adf3e7e149d44a0f8c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e0138a6f57f03fa3e59fc696fb816e01647b292c65d523ffa788d95a785f5966",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2604,
+        "prompt_tokens": 1600,
+        "total_tokens": 4204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2125,
+          "text_tokens": 479
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8a0369675cf89e40d34d8c42871a6c1418da5d2895ce7bd7b43682dfd70c7b99",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 107.711,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fa79449da34052ed55ded11db54e1c5dd21beaf9b671841b9fb9f503b7d5a51b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2601,
+        "prompt_tokens": 1619,
+        "total_tokens": 4220,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2163,
+          "text_tokens": 438
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4aaee3cf4221c9a5a8b881ac1ecd66fe74df2ff49d41fc2d71dba1a08f3d507f",
+      "status": "completed",
+      "latency_seconds": 82.917
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 24.422
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 32.932
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 72.661
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 40.559,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.493,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_13ecef124f6a69f7464c",
+        "public:pbf_13fe5f2b86fb5215a95d"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "20dd383099a5233b00f7df2c925fd62306204d6b6cc7fb0ad8fcfe6102dff1ce",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 824,
+      "first_chunk_seconds": 5.499,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 839,
+        "prompt_tokens": 841,
+        "total_tokens": 1680,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 580,
+          "text_tokens": 259
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "367b2b1613e840d488074120f54929ae92f0ce41aa52b5d0399333a3550684f6",
+      "status": "completed",
+      "latency_seconds": 16.286
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00664.json",
+      "sha256": "45084f10e22605bc3c0722fd2d68ac6e563c8c44838204d91ced19398924c98e",
+      "previous_status": "failed"
+    }
+  ]
+}

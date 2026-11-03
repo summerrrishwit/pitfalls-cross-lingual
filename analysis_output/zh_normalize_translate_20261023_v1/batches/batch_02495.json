@@ -1,0 +1,246 @@
+{
+  "input_sha256": "c4974d7914bf64f3fb71006247917fd80598fc53637096bf4ed32de5aab8bdb6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001868",
+      "decision": "ready",
+      "subject": "chatting with friends",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "communication",
+      "canonical_fact": "Chatting with friends is a type of communication.",
+      "prompt_en": "What type is chatting with friends?",
+      "evidence_quotes": [
+        "What is chatting with friends a type of?",
+        "communication"
+      ],
+      "reason": "The source question explicitly asks for the type/supercategory of 'chatting with friends' and the answer is 'communication'. This maps precisely to entity_to_class: the activity (entity) is a stable member of the broader class 'communication'. Direction entity->class is correct (subject is the specific activity, answer is the category).",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Chatting with friends is a type of communication.",
+        "subject": "chatting with friends",
+        "prompt_en": "What type is chatting with friends?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "404bd06870a52cfd8e1ad1363e63279d4619d526d6cc556d84fd6f52c5e91a0e",
+      "input_sha256": "582e4a2077c1c1c60676b1c59b36daea089d9bcc479bb06813acbba88ad4d567",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001889",
+      "decision": "ready",
+      "subject": "handsome prince",
+      "relation_id": "character_to_associated_genre",
+      "relation_definition": "The specific genre or narrative tradition in which a named stock character archetype is conventionally and commonly found as a recurring element; not a taxonomic subclass relationship.",
+      "direction": "stock character archetype -> associated genre",
+      "answer": "fairy tale",
+      "canonical_fact": "A handsome prince is a stock character common to fairy tale.",
+      "prompt_en": "What genre is the stock character 'handsome prince' commonly found in?",
+      "evidence_quotes": [
+        "A handsome prince is a stock character common to what?",
+        "fairy tale"
+      ],
+      "reason": "The source question asks which genre the stock character 'handsome prince' is common to, with answer 'fairy tale'. No existing catalog relation captures 'stock character commonly associated with a genre'; entity_to_class would imply taxonomy membership (a character is not a subclass of a genre). A new precise relation character_to_associated_genre is proposed with explicit direction from archetype to genre to avoid forcing a broader category.",
+      "english": {
+        "direction": "stock character archetype -> associated genre",
+        "relation_id": "character_to_associated_genre",
+        "answer": "fairy tale",
+        "canonical_fact": "A handsome prince is a stock character common to fairy tale.",
+        "subject": "handsome prince",
+        "prompt_en": "What genre is the stock character 'handsome prince' commonly found in?",
+        "relation_definition": "The specific genre or narrative tradition in which a named stock character archetype is conventionally and commonly found as a recurring element; not a taxonomic subclass relationship.",
+        "answer_aliases_en": [
+          "fairy tale"
+        ],
+        "relation_spec": {
+          "id": "character_to_associated_genre",
+          "definition": "The specific genre or narrative tradition in which a named stock character archetype is conventionally and commonly found as a recurring element; not a taxonomic subclass relationship.",
+          "direction": "stock character archetype -> associated genre"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a93ba791423cc5f6afc226b72c8472878703887b48a1dd1f799ca111fc7027d1",
+      "input_sha256": "46d7342010ed4babf40aae8cad8cf92d3aa29eb6a899910fbce108200e458de8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001868",
+      "input_sha256": "582e4a2077c1c1c60676b1c59b36daea089d9bcc479bb06813acbba88ad4d567",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "communication",
+        "canonical_fact": "Chatting with friends is a type of communication.",
+        "subject": "chatting with friends",
+        "prompt_en": "What type is chatting with friends?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "communication"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "404bd06870a52cfd8e1ad1363e63279d4619d526d6cc556d84fd6f52c5e91a0e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001868",
+        "subject_zh": "和朋友聊天",
+        "prompt_zh": "和朋友聊天属于什么类型？",
+        "canonical_fact_zh": "和朋友聊天是交流的一种形式。",
+        "answer_zh": "交流",
+        "answer_aliases_zh": [
+          "交流"
+        ]
+      },
+      "translation_sha256": "1198e899acfefe3940b9d884fb1d8d1aad641e5fc0f3c56ebc9772d95c88305f"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001889",
+      "input_sha256": "46d7342010ed4babf40aae8cad8cf92d3aa29eb6a899910fbce108200e458de8",
+      "english": {
+        "direction": "stock character archetype -> associated genre",
+        "relation_id": "character_to_associated_genre",
+        "answer": "fairy tale",
+        "canonical_fact": "A handsome prince is a stock character common to fairy tale.",
+        "subject": "handsome prince",
+        "prompt_en": "What genre is the stock character 'handsome prince' commonly found in?",
+        "relation_definition": "The specific genre or narrative tradition in which a named stock character archetype is conventionally and commonly found as a recurring element; not a taxonomic subclass relationship.",
+        "answer_aliases_en": [
+          "fairy tale"
+        ],
+        "relation_spec": {
+          "id": "character_to_associated_genre",
+          "definition": "The specific genre or narrative tradition in which a named stock character archetype is conventionally and commonly found as a recurring element; not a taxonomic subclass relationship.",
+          "direction": "stock character archetype -> associated genre"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a93ba791423cc5f6afc226b72c8472878703887b48a1dd1f799ca111fc7027d1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001889",
+        "subject_zh": "英俊王子",
+        "prompt_zh": "刻板角色\"英俊王子\"通常出现在什么类型的文学作品中？",
+        "canonical_fact_zh": "英俊王子是童话中常见的刻板角色。",
+        "answer_zh": "童话",
+        "answer_aliases_zh": [
+          "童话"
+        ]
+      },
+      "translation_sha256": "345acbd6d7b48cd324df252d98455ad0f326de2faa7c95e2e01f3e5433f7599c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001868",
+        "historical:raw_commonsense_qa_001889"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7672297656bc569e466792546707093f59420c980f35d82cc50d81ab963396f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2370,
+      "first_chunk_seconds": 15.459,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2479,
+        "prompt_tokens": 1656,
+        "total_tokens": 4135,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2008,
+          "text_tokens": 471
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "42752b2c30ff58f8e84dd9c5e109c896fc484857d4d068ffc44880f377138474",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 48.612,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001868",
+        "historical:raw_commonsense_qa_001889"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "582679bf72380af0652a658376e41a86e46f09ec03a449f701ed2a1231c1c459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2549,
+      "first_chunk_seconds": 44.929,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2707,
+        "prompt_tokens": 1675,
+        "total_tokens": 4382,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2180,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9685fa36cad983037e8082f30a0953d7e96c714f508e23abdf06b34354549754",
+      "status": "completed",
+      "latency_seconds": 131.61
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001868",
+        "historical:raw_commonsense_qa_001889"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "195c861851ec2184b548f25aca95cdcd2828a0e2104faaec2cad44009463ee1e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 616,
+      "first_chunk_seconds": 13.717,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 684,
+        "prompt_tokens": 835,
+        "total_tokens": 1519,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 543,
+          "text_tokens": 141
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fb38ab0562cc34f2dcbf671deab7ab548a0f0fc29f5640813b4c4290ea657d91",
+      "status": "completed",
+      "latency_seconds": 24.988
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,165 @@
+{
+  "input_sha256": "db03a2b87445b02f86c23a3a43abb7b150b28e36f8b076996bc0de7aaac57994",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000995",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'septa' is ambiguous without specifying the organism, tissue, or structural context (fungal septa, insect wing septa, placental septa, etc.). No catalog relation cleanly captures 'biological process occurring at the site of a given structure.' Deferring until a more specific entity and relation can be established.",
+      "input_sha256": "67409b904011d9b7a494ace0464695f81ece16bb188403683873768299f671e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000004",
+      "decision": "ready",
+      "subject": "absolute pitch",
+      "relation_id": "trait_to_estimated_prevalence",
+      "relation_definition": "Statistical estimate of how frequently a trait or condition occurs in a stated population, preserving uncertainty qualifiers such as 'estimated'.",
+      "direction": "trait/condition -> estimated population prevalence",
+      "answer": "It is estimated that more than 1 in 10,000 people have absolute pitch",
+      "canonical_fact": "It is estimated that more than 1 in 10,000 people have absolute pitch.",
+      "prompt_en": "What is the estimated prevalence of absolute pitch in the general population?",
+      "evidence_quotes": [
+        "How many people have absolute pitch?",
+        "It is estimated that more than 1 in 10,000 people have absolute pitch"
+      ],
+      "reason": "Source provides a clear prevalence estimate with an uncertainty qualifier ('It is estimated that'). No catalog relation covers statistical prevalence of a trait in a population, so a precise new relation trait_to_estimated_prevalence is proposed. The answer preserves the original qualifier and is a verbatim substring of the source answer.",
+      "english": {
+        "prompt_en": "What is the estimated prevalence of absolute pitch in the general population?",
+        "relation_definition": "Statistical estimate of how frequently a trait or condition occurs in a stated population, preserving uncertainty qualifiers such as 'estimated'.",
+        "answer": "It is estimated that more than 1 in 10,000 people have absolute pitch",
+        "canonical_fact": "It is estimated that more than 1 in 10,000 people have absolute pitch.",
+        "direction": "trait/condition -> estimated population prevalence",
+        "relation_id": "trait_to_estimated_prevalence",
+        "subject": "absolute pitch",
+        "answer_aliases_en": [
+          "It is estimated that more than 1 in 10,000 people have absolute pitch"
+        ],
+        "relation_spec": {
+          "id": "trait_to_estimated_prevalence",
+          "definition": "Statistical estimate of how frequently a trait or condition occurs in a stated population, preserving uncertainty qualifiers such as 'estimated'.",
+          "direction": "trait/condition -> estimated population prevalence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b0e8d8b33135e77cf4814c81df7b25675cf68cba38cef3bce2812a9f0de4dd83",
+      "input_sha256": "5b1e5beb4dcedfd08a21f41e14f07fb4f080b43fd582e3a0d288b4ba7dc47f9c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000995",
+        "historical:raw_truthful_qa_000004"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8acaeadb649a90f06d79aebb98aad4b6fcee43ed09db8ad2261fec403bf016e3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2442,
+      "first_chunk_seconds": 2.425,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2486,
+        "prompt_tokens": 1623,
+        "total_tokens": 4109,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2009,
+          "text_tokens": 477
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e5a17933b8044d879b32889896f6548c77ff80237d4050e330d2cfd4d8ca9178",
+      "status": "completed",
+      "latency_seconds": 37.519
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000004"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "85c242d2e8f473a25307a29f2e05570daf5bf49f5bc77da2ee05f25d19ced7d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 20.592,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000004"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "85c242d2e8f473a25307a29f2e05570daf5bf49f5bc77da2ee05f25d19ced7d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 15.957,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000004"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "85c242d2e8f473a25307a29f2e05570daf5bf49f5bc77da2ee05f25d19ced7d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 20.697,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

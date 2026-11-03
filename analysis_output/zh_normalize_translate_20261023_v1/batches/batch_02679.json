@@ -1,0 +1,228 @@
+{
+  "input_sha256": "d1696183ac453d594ad289ce1e39878df0cc4af4972be16986c122cbe1af3a56",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007451",
+      "decision": "ready",
+      "subject": "estuary in Maryland and Virginia known for its crab",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Chesapeake Bay",
+      "canonical_fact": "The estuary in Maryland and Virginia known for its crab is the Chesapeake Bay.",
+      "prompt_en": "What estuary in Maryland and Virginia is known for its crab?",
+      "evidence_quotes": [
+        "estuary in Maryland and Virginia",
+        "chesapeake bay"
+      ],
+      "reason": "The source question identifies a specific estuary by its location (Maryland and Virginia) and characteristic (known for crab). The source answer 'chesapeake bay' uniquely maps to that description. The catalog relation description_to_entity fits exactly: an explicitly qualified identifying description resolves to a single entity. The existing answer 'Chesapeake Bay' is a proper-noun capitalization of the source 'chesapeake bay' and does not conflict with it.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Chesapeake Bay",
+        "canonical_fact": "The estuary in Maryland and Virginia known for its crab is the Chesapeake Bay.",
+        "subject": "estuary in Maryland and Virginia known for its crab",
+        "prompt_en": "What estuary in Maryland and Virginia is known for its crab?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Chesapeake Bay"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cf226269be18c824d8ed5c196f1bfd532c569a748c4f426ea14c8a2819c12fbd",
+      "input_sha256": "310a85dad6a4b27f9a86f7170cd2fb98394220aa1a8c18ad0a1abca494522ca1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007465",
+      "decision": "ready",
+      "subject": "shadow",
+      "relation_id": "phenomenon_to_necessary_condition",
+      "relation_definition": "A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest.",
+      "direction": "phenomenon -> necessary condition",
+      "answer": "bright light",
+      "canonical_fact": "A shadow requires bright light to appear.",
+      "prompt_en": "What must be present for a shadow to appear?",
+      "evidence_quotes": [
+        "for a shadow to appear",
+        "bright light"
+      ],
+      "reason": "The source question asks what is needed for a shadow to appear; the source answer is 'bright light.' No existing catalog relation precisely captures a necessary-condition relation for a physical phenomenon. A new relation phenomenon_to_necessary_condition is proposed with the explicit definition 'A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest' and direction 'phenomenon -> necessary condition.' The answer is kept as the literal source substring 'bright light'.",
+      "english": {
+        "direction": "phenomenon -> necessary condition",
+        "relation_id": "phenomenon_to_necessary_condition",
+        "answer": "bright light",
+        "canonical_fact": "A shadow requires bright light to appear.",
+        "subject": "shadow",
+        "prompt_en": "What must be present for a shadow to appear?",
+        "relation_definition": "A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest.",
+        "answer_aliases_en": [
+          "bright light"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_necessary_condition",
+          "definition": "A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest.",
+          "direction": "phenomenon -> necessary condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2f251927c57b40be225879ac14edbe49f8b55aad7c524f9162cd7c595bdb8e52",
+      "input_sha256": "c380fc0f1825857f0750661083f5fe26c578eb2255339f000ec9999efeeca8bd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007451",
+      "input_sha256": "310a85dad6a4b27f9a86f7170cd2fb98394220aa1a8c18ad0a1abca494522ca1",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Chesapeake Bay",
+        "canonical_fact": "The estuary in Maryland and Virginia known for its crab is the Chesapeake Bay.",
+        "subject": "estuary in Maryland and Virginia known for its crab",
+        "prompt_en": "What estuary in Maryland and Virginia is known for its crab?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Chesapeake Bay"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cf226269be18c824d8ed5c196f1bfd532c569a748c4f426ea14c8a2819c12fbd",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007451",
+        "subject_zh": "马里兰州和弗吉尼亚州以螃蟹闻名的河口",
+        "prompt_zh": "马里兰州和弗吉尼亚州哪个河口以螃蟹闻名？",
+        "canonical_fact_zh": "马里兰州和弗吉尼亚州以螃蟹闻名的河口是切萨皮克湾。",
+        "answer_zh": "切萨皮克湾",
+        "answer_aliases_zh": [
+          "切萨皮克湾"
+        ]
+      },
+      "translation_sha256": "64c6df4d7b212645438b368a449579b923321f9176fa2da74afc46ddd725d52d"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007465",
+      "input_sha256": "c380fc0f1825857f0750661083f5fe26c578eb2255339f000ec9999efeeca8bd",
+      "english": {
+        "direction": "phenomenon -> necessary condition",
+        "relation_id": "phenomenon_to_necessary_condition",
+        "answer": "bright light",
+        "canonical_fact": "A shadow requires bright light to appear.",
+        "subject": "shadow",
+        "prompt_en": "What must be present for a shadow to appear?",
+        "relation_definition": "A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest.",
+        "answer_aliases_en": [
+          "bright light"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_necessary_condition",
+          "definition": "A stated necessary condition or prerequisite for a specified phenomenon to occur or manifest.",
+          "direction": "phenomenon -> necessary condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2f251927c57b40be225879ac14edbe49f8b55aad7c524f9162cd7c595bdb8e52",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007465",
+        "subject_zh": "影子",
+        "prompt_zh": "影子出现需要什么条件？",
+        "canonical_fact_zh": "影子的出现需要强光。",
+        "answer_zh": "强光",
+        "answer_aliases_zh": [
+          "强光"
+        ]
+      },
+      "translation_sha256": "14054a5b44bf122f4554011a3e2ae03abcf0b2b949d1bac9b512b42d43abfbd9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007451",
+        "historical:raw_commonsense_qa_007465"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "703b8b81f6fb57c132641c97e0e48c61612983093601e239eab9a3ca76fd472d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.692
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007451",
+        "historical:raw_commonsense_qa_007465"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "703b8b81f6fb57c132641c97e0e48c61612983093601e239eab9a3ca76fd472d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2093,
+      "first_chunk_seconds": 2.641,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2287,
+        "prompt_tokens": 1679,
+        "total_tokens": 3966,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1745,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8e2c66e6e85da583ba160a28cfcc9742c08e95dd6014ff8cde374e1c64e4bb17",
+      "status": "completed",
+      "latency_seconds": 33.497
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007451",
+        "historical:raw_commonsense_qa_007465"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e95ce091ad9d84aedd05c6530b6a8af3a54485391b89750b57e11353451cd1c0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 910,
+      "first_chunk_seconds": 2.7,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 946,
+        "prompt_tokens": 810,
+        "total_tokens": 1756,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 715,
+          "text_tokens": 231
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b9f78b9f8ff8ccc832761d17a5f35255d52b1d9daa259dc6e5b9e47c236d9d2e",
+      "status": "completed",
+      "latency_seconds": 16.355
+    }
+  ],
+  "status": "completed"
+}

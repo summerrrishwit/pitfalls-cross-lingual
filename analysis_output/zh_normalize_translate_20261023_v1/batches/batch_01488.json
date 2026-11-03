@@ -1,0 +1,214 @@
+{
+  "input_sha256": "ca47e4725439f3b7448d76a301fc417a4db8be279619af0e9975b04ef18fe363",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9f83af8748f4f3bc5a4d",
+      "decision": "ready",
+      "subject": "tiger in Jungle Book",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Shere Khan",
+      "canonical_fact": "The tiger in Jungle Book is named Shere Khan.",
+      "prompt_en": "What is the name of the tiger in the Jungle Book?",
+      "evidence_quotes": [
+        "what was the tiger's name in jungle book",
+        "Shere Khan"
+      ],
+      "reason": "The source asks for the name of the tiger character in Jungle Book and gives 'Shere Khan'. 'tiger in Jungle Book' is an identifying description that uniquely picks out the character Shere Khan, matching description_to_entity exactly. No existing catalog relation better captures 'the proper name a descriptive subject resolves to'.",
+      "english": {
+        "answer": "Shere Khan",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the tiger in the Jungle Book?",
+        "direction": "identifying description -> entity",
+        "subject": "tiger in Jungle Book",
+        "canonical_fact": "The tiger in Jungle Book is named Shere Khan.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Shere Khan"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3a041a3c627bf1e316bb35f28e2f74f75f4bd489e1a85a3c780c35bfd9018f37",
+      "input_sha256": "b8aa6df692c0f2564f01184695e0db0d9382edd22355b132f6ee9f4ae945e6b1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9fc8e86c286d320519a9",
+      "decision": "ready",
+      "subject": "some dinosaurs",
+      "relation_id": "taxon_to_descendant_taxon",
+      "relation_definition": "Evolutionary descent: the descendant taxon or group that evolved from the specified ancestor taxon; retain scope qualifiers (e.g. 'some') and uncertainty markers stated in the source.",
+      "direction": "ancestor taxon -> descendant taxon",
+      "answer": "birds",
+      "canonical_fact": "Many scientists think that some dinosaurs evolved into birds.",
+      "prompt_en": "What kind of creature do many scientists think some dinosaurs evolved into instead of going extinct?",
+      "evidence_quotes": [
+        "some of the dinosaurs did not go extinct but rather evolved into what kind of creature",
+        "birds"
+      ],
+      "reason": "No catalog relation captures a specific evolutionary-descent link between two taxa. entity_to_class is about taxonomic membership, not descent. A new precise relation taxon_to_descendant_taxon is proposed to express 'evolved into' at the clade level, preserving the 'some' scope and the 'many scientists think' uncertainty from the source.",
+      "english": {
+        "answer": "birds",
+        "relation_id": "taxon_to_descendant_taxon",
+        "prompt_en": "What kind of creature do many scientists think some dinosaurs evolved into instead of going extinct?",
+        "direction": "ancestor taxon -> descendant taxon",
+        "subject": "some dinosaurs",
+        "canonical_fact": "Many scientists think that some dinosaurs evolved into birds.",
+        "relation_definition": "Evolutionary descent: the descendant taxon or group that evolved from the specified ancestor taxon; retain scope qualifiers (e.g. 'some') and uncertainty markers stated in the source.",
+        "answer_aliases_en": [
+          "birds"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_descendant_taxon",
+          "definition": "Evolutionary descent: the descendant taxon or group that evolved from the specified ancestor taxon; retain scope qualifiers (e.g. 'some') and uncertainty markers stated in the source.",
+          "direction": "ancestor taxon -> descendant taxon"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "69a65b24b3e19878421b98523e4d5aa9fa8a65f47ce34c924434d45996ddda3d",
+      "input_sha256": "abcb45f75dcb86193b691662706f311865c78b1df390dbedc76955df972f7bdb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9f83af8748f4f3bc5a4d",
+      "input_sha256": "b8aa6df692c0f2564f01184695e0db0d9382edd22355b132f6ee9f4ae945e6b1",
+      "english": {
+        "answer": "Shere Khan",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the tiger in the Jungle Book?",
+        "direction": "identifying description -> entity",
+        "subject": "tiger in Jungle Book",
+        "canonical_fact": "The tiger in Jungle Book is named Shere Khan.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Shere Khan"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3a041a3c627bf1e316bb35f28e2f74f75f4bd489e1a85a3c780c35bfd9018f37",
+      "translation": {
+        "record_id": "public:pbf_9f83af8748f4f3bc5a4d",
+        "subject_zh": "《森林王子》中的老虎",
+        "prompt_zh": "《森林王子》中老虎的名字是什么？",
+        "canonical_fact_zh": "《森林王子》中的老虎名叫谢利·可汗。",
+        "answer_zh": "谢利·可汗",
+        "answer_aliases_zh": [
+          "谢利·可汗"
+        ]
+      },
+      "translation_sha256": "997695742b163dca41490768ce3ba289d4819a27f0688d6bdf646ae6a441c201"
+    },
+    {
+      "record_id": "public:pbf_9fc8e86c286d320519a9",
+      "input_sha256": "abcb45f75dcb86193b691662706f311865c78b1df390dbedc76955df972f7bdb",
+      "english": {
+        "answer": "birds",
+        "relation_id": "taxon_to_descendant_taxon",
+        "prompt_en": "What kind of creature do many scientists think some dinosaurs evolved into instead of going extinct?",
+        "direction": "ancestor taxon -> descendant taxon",
+        "subject": "some dinosaurs",
+        "canonical_fact": "Many scientists think that some dinosaurs evolved into birds.",
+        "relation_definition": "Evolutionary descent: the descendant taxon or group that evolved from the specified ancestor taxon; retain scope qualifiers (e.g. 'some') and uncertainty markers stated in the source.",
+        "answer_aliases_en": [
+          "birds"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_descendant_taxon",
+          "definition": "Evolutionary descent: the descendant taxon or group that evolved from the specified ancestor taxon; retain scope qualifiers (e.g. 'some') and uncertainty markers stated in the source.",
+          "direction": "ancestor taxon -> descendant taxon"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "69a65b24b3e19878421b98523e4d5aa9fa8a65f47ce34c924434d45996ddda3d",
+      "translation": {
+        "record_id": "public:pbf_9fc8e86c286d320519a9",
+        "subject_zh": "某些恐龙",
+        "prompt_zh": "许多科学家认为，某些恐龙没有灭绝，而是进化成了什么生物？",
+        "canonical_fact_zh": "许多科学家认为，某些恐龙进化成了鸟类。",
+        "answer_zh": "鸟类",
+        "answer_aliases_zh": [
+          "鸟类"
+        ]
+      },
+      "translation_sha256": "c7a8ba781c49dbfabff53a725bbf6d0ccca7cc2dd73754625ef91bcf3f3cb269"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9f83af8748f4f3bc5a4d",
+        "public:pbf_9fc8e86c286d320519a9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ca5b6b48d6547ae87dd34e0ada47de00ba63104a5213826288ad1748656d70a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2214,
+      "first_chunk_seconds": 32.19,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2216,
+        "prompt_tokens": 1550,
+        "total_tokens": 3766,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1673,
+          "text_tokens": 543
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f102abd4c3700d15d1e4c6e7493213b0e5e31f572cf72319180bbb38c5f7ffa6",
+      "status": "completed",
+      "latency_seconds": 50.577
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9f83af8748f4f3bc5a4d",
+        "public:pbf_9fc8e86c286d320519a9"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "510edefacdf8beab8f7f8a88b3bf40536e79be1301b4a109599d7746ce0e5ee2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1117,
+      "first_chunk_seconds": 34.894,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1114,
+        "prompt_tokens": 874,
+        "total_tokens": 1988,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 867,
+          "text_tokens": 247
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ae8de65e505a21a037bd248b7db86fd168a1ae832cc21e5d1e4e8f9656ba9d7f",
+      "status": "completed",
+      "latency_seconds": 43.553
+    }
+  ],
+  "status": "completed"
+}

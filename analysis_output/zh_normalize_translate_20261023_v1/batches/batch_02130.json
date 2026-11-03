@@ -1,0 +1,171 @@
+{
+  "input_sha256": "493b630452570de398c3469a25694494df710bfb7b980d6f48304f4e6a187d46",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000198",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The description 'has a definite volume but takes the shape of the container at room temperature' is a general property of all liquids, not a uniquely identifying description of water. No catalog relation captures 'example-of' or 'one instance of a property class.' Forcing this into description_to_entity would be incorrect because the description does not uniquely identify water. Insufficient source support for a precise, reusable factual relation.",
+      "input_sha256": "ff5689fef7a8f4e725f72102e6b4c2120d1ada26157541948fc9e2e71cc8c292",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000200",
+      "decision": "ready",
+      "subject": "sound wave",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "amplitude",
+      "canonical_fact": "The part of a sound wave that measures loudness is amplitude.",
+      "prompt_en": "Which part of a sound wave measures loudness?",
+      "evidence_quotes": [
+        "Which part of a sound wave measures loudness?",
+        "amplitude"
+      ],
+      "reason": "The source question explicitly asks which part of a sound wave measures loudness, and the answer is amplitude. The whole_to_part relation (whole -> part) fits exactly: sound wave is the whole, amplitude is the specified constituent/property. Both model annotations independently extracted this. The prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "amplitude",
+        "relation_id": "whole_to_part",
+        "prompt_en": "Which part of a sound wave measures loudness?",
+        "direction": "whole -> part",
+        "subject": "sound wave",
+        "canonical_fact": "The part of a sound wave that measures loudness is amplitude.",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "amplitude"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7e638991c2ed8f0847562398e4affd41145c542ea9aefbac10e7c5627b424141",
+      "input_sha256": "d32ca634c1ae83c668745e1ad2195637964f1131be40d2161cdb0fb92d0a4622",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000200",
+      "input_sha256": "d32ca634c1ae83c668745e1ad2195637964f1131be40d2161cdb0fb92d0a4622",
+      "english": {
+        "answer": "amplitude",
+        "relation_id": "whole_to_part",
+        "prompt_en": "Which part of a sound wave measures loudness?",
+        "direction": "whole -> part",
+        "subject": "sound wave",
+        "canonical_fact": "The part of a sound wave that measures loudness is amplitude.",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "amplitude"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7e638991c2ed8f0847562398e4affd41145c542ea9aefbac10e7c5627b424141",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000200",
+        "subject_zh": "声波",
+        "prompt_zh": "声波的哪个部分衡量响度？",
+        "canonical_fact_zh": "衡量响度的声波部分是振幅。",
+        "answer_zh": "振幅",
+        "answer_aliases_zh": [
+          "振幅"
+        ]
+      },
+      "translation_sha256": "c0036648564e122e371b984dcb472722da5a760500e46471a239ab68d7b6f982"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000198",
+        "historical:raw_ai2_arc_easy_000200"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c9bec55ef06180fed5c09da729df164f274dfb74c8579a2443ee7aac706fd1af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.498
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000198",
+        "historical:raw_ai2_arc_easy_000200"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c9bec55ef06180fed5c09da729df164f274dfb74c8579a2443ee7aac706fd1af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2776,
+      "first_chunk_seconds": 41.911,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2829,
+        "prompt_tokens": 1703,
+        "total_tokens": 4532,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2393,
+          "text_tokens": 436
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f4fc71b95199c2b9a94137cc817aa5ceab3aaca16071457513b902fee9fcca05",
+      "status": "completed",
+      "latency_seconds": 83.053
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000200"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "93a624b3f7f1e7c1d99c3036a86030b53070cbcb7f5abe8671450ad00a4f7137",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 569,
+      "first_chunk_seconds": 25.88,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 578,
+        "prompt_tokens": 498,
+        "total_tokens": 1076,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 471,
+          "text_tokens": 107
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8859c97b08ec02e724ca5ec22cdc25e83fb93d7676d80fa5ca4b356c7d26f5b2",
+      "status": "completed",
+      "latency_seconds": 33.207
+    }
+  ],
+  "status": "completed"
+}

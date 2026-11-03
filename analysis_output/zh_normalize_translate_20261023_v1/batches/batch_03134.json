@@ -1,0 +1,256 @@
+{
+  "input_sha256": "2c2e83c80d44b115093e08ac7ab53fa40ea793dc24611795cee40fcc023365f0",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000725",
+      "decision": "ready",
+      "subject": "the least specific grouping into which all organisms are classified into three",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "domains",
+      "canonical_fact": "All organisms can be classified into one of three domains, the least specific grouping.",
+      "prompt_en": "What is the least specific taxonomic grouping into which all organisms are classified?",
+      "evidence_quotes": [
+        "least specific grouping",
+        "domains"
+      ],
+      "reason": "The source question supplies a defining description (least specific grouping with three categories) and asks for the conventional term. This maps exactly to description_to_term (direction: description -> term). Answer 'domains' is a verbatim substring of source_answer. Qualifier 'one of three' preserved in canonical_fact.",
+      "english": {
+        "prompt_en": "What is the least specific taxonomic grouping into which all organisms are classified?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "domains",
+        "canonical_fact": "All organisms can be classified into one of three domains, the least specific grouping.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the least specific grouping into which all organisms are classified into three",
+        "answer_aliases_en": [
+          "domains"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b61e07b512ae9f8d34c9ebc1e2cff0cb9d5258900560150138bcbb710d07a50e",
+      "input_sha256": "57b18673609cb37379f6c4f118b85793668de1afbf4e7b5c8ec91fc1399478a5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000726",
+      "decision": "ready",
+      "subject": "hydrophilic molecules",
+      "relation_id": "molecule_type_to_avoided_molecule_type",
+      "relation_definition": "In aqueous or biological contexts, the type of molecule that a specified molecule type tends to avoid or is repelled by; retains scope qualifiers such as 'generally'.",
+      "direction": "molecule type -> avoided molecule type",
+      "answer": "hydrophobic",
+      "canonical_fact": "Hydrophilic molecules generally avoid hydrophobic molecules.",
+      "prompt_en": "What type of molecules do hydrophilic molecules generally avoid?",
+      "evidence_quotes": [
+        "generally avoid",
+        "hydrophobic"
+      ],
+      "reason": "No existing catalog relation covers a molecular avoidance/repulsion interaction. Proposed precise new relation molecule_type_to_avoided_molecule_type with explicit aqueous/biological scope and retention of qualifiers. Answer 'hydrophobic' is a verbatim substring of source_answer. Qualifier 'generally' preserved in both canonical_fact and prompt.",
+      "english": {
+        "prompt_en": "What type of molecules do hydrophilic molecules generally avoid?",
+        "relation_definition": "In aqueous or biological contexts, the type of molecule that a specified molecule type tends to avoid or is repelled by; retains scope qualifiers such as 'generally'.",
+        "answer": "hydrophobic",
+        "canonical_fact": "Hydrophilic molecules generally avoid hydrophobic molecules.",
+        "direction": "molecule type -> avoided molecule type",
+        "relation_id": "molecule_type_to_avoided_molecule_type",
+        "subject": "hydrophilic molecules",
+        "answer_aliases_en": [
+          "hydrophobic"
+        ],
+        "relation_spec": {
+          "id": "molecule_type_to_avoided_molecule_type",
+          "definition": "In aqueous or biological contexts, the type of molecule that a specified molecule type tends to avoid or is repelled by; retains scope qualifiers such as 'generally'.",
+          "direction": "molecule type -> avoided molecule type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0f458f8507b7566391e5693d4ea483e13873d985868c46f9d5a16924e9643e2b",
+      "input_sha256": "652d72a736cc7ecd1595b02d1e216cfdee0c562ba577a5c8fd22c1f16dd6c3d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000725",
+      "input_sha256": "57b18673609cb37379f6c4f118b85793668de1afbf4e7b5c8ec91fc1399478a5",
+      "english": {
+        "prompt_en": "What is the least specific taxonomic grouping into which all organisms are classified?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "domains",
+        "canonical_fact": "All organisms can be classified into one of three domains, the least specific grouping.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the least specific grouping into which all organisms are classified into three",
+        "answer_aliases_en": [
+          "domains"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b61e07b512ae9f8d34c9ebc1e2cff0cb9d5258900560150138bcbb710d07a50e",
+      "translation": {
+        "record_id": "historical:raw_sciq_000725",
+        "subject_zh": "所有生物被归入的三个分组中最不具体的那个",
+        "prompt_zh": "所有生物被归入的最不具体的分类学等级是什么？",
+        "canonical_fact_zh": "所有生物可以被归入三个域之一，这是最不具体的分组。",
+        "answer_zh": "域",
+        "answer_aliases_zh": [
+          "域"
+        ]
+      },
+      "translation_sha256": "4df079825136d65218f9cf583efb1252b3bbabb1adbb9769006bf1e32fc7c8fe"
+    },
+    {
+      "record_id": "historical:raw_sciq_000726",
+      "input_sha256": "652d72a736cc7ecd1595b02d1e216cfdee0c562ba577a5c8fd22c1f16dd6c3d1",
+      "english": {
+        "prompt_en": "What type of molecules do hydrophilic molecules generally avoid?",
+        "relation_definition": "In aqueous or biological contexts, the type of molecule that a specified molecule type tends to avoid or is repelled by; retains scope qualifiers such as 'generally'.",
+        "answer": "hydrophobic",
+        "canonical_fact": "Hydrophilic molecules generally avoid hydrophobic molecules.",
+        "direction": "molecule type -> avoided molecule type",
+        "relation_id": "molecule_type_to_avoided_molecule_type",
+        "subject": "hydrophilic molecules",
+        "answer_aliases_en": [
+          "hydrophobic"
+        ],
+        "relation_spec": {
+          "id": "molecule_type_to_avoided_molecule_type",
+          "definition": "In aqueous or biological contexts, the type of molecule that a specified molecule type tends to avoid or is repelled by; retains scope qualifiers such as 'generally'.",
+          "direction": "molecule type -> avoided molecule type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0f458f8507b7566391e5693d4ea483e13873d985868c46f9d5a16924e9643e2b",
+      "translation": {
+        "record_id": "historical:raw_sciq_000726",
+        "subject_zh": "亲水分子",
+        "prompt_zh": "亲水分子通常避免什么类型的分子？",
+        "canonical_fact_zh": "亲水分子通常避免疏水分子。",
+        "answer_zh": "疏水",
+        "answer_aliases_zh": [
+          "疏水"
+        ]
+      },
+      "translation_sha256": "fb56e18a4446b733b0cf3fdd5958ddadd44d666b7c976bcf837965a2530c966d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000725",
+        "historical:raw_sciq_000726"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3e9d259f5038bbae13719c584127de096bbf3ded7863a8a73d1f4811ed70c9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.234
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000725",
+        "historical:raw_sciq_000726"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a3e9d259f5038bbae13719c584127de096bbf3ded7863a8a73d1f4811ed70c9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 77.915
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000725",
+        "historical:raw_sciq_000726"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a3e9d259f5038bbae13719c584127de096bbf3ded7863a8a73d1f4811ed70c9a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2949,
+      "first_chunk_seconds": 15.138,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3186,
+        "prompt_tokens": 1677,
+        "total_tokens": 4863,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2662,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "daba130b9b8fccaa244a4fc50b2003119735770b81ea9dc024bfbbd4d276c4fb",
+      "status": "completed",
+      "latency_seconds": 139.552
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000725",
+        "historical:raw_sciq_000726"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7127e8fbae22b44e426089a19acf8e6cb36b8439b8fceac69f8c6f82dbec8b99",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.99
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000725",
+        "historical:raw_sciq_000726"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7127e8fbae22b44e426089a19acf8e6cb36b8439b8fceac69f8c6f82dbec8b99",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1290,
+      "first_chunk_seconds": 64.032,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1355,
+        "prompt_tokens": 889,
+        "total_tokens": 2244,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1194,
+          "text_tokens": 161
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2397630e333b06959f67db705f8d8fbdfbfe0497babcd8e09b3fc5ee9f7a72fb",
+      "status": "completed",
+      "latency_seconds": 97.464
+    }
+  ],
+  "status": "completed"
+}

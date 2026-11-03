@@ -1,0 +1,150 @@
+{
+  "input_sha256": "90ed9daaaeb19b2d142f35f3a01bbc049617700f862cb7d931b14f06eec4d1f5",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ae962439db2ab94849cd",
+      "decision": "ready",
+      "subject": "All I Wanna Do Is Have Some Fun",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Sheryl Crow",
+      "canonical_fact": "Sheryl Crow is the performer of the song All I Wanna Do Is Have Some Fun.",
+      "prompt_en": "Who sings the song All I Wanna Do Is Have Some Fun?",
+      "evidence_quotes": [
+        "who sings all i wanna do is have some fun",
+        "Sheryl Crow"
+      ],
+      "reason": "Source question and answer clearly establish Sheryl Crow as the performer of the song titled in the question. Relation song_to_performer fits exactly in direction song -> performer. No conflict between existing answer and source; answer 'Sheryl Crow' is a direct match to source_answer.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Sheryl Crow is the performer of the song All I Wanna Do Is Have Some Fun.",
+        "answer": "Sheryl Crow",
+        "prompt_en": "Who sings the song All I Wanna Do Is Have Some Fun?",
+        "subject": "All I Wanna Do Is Have Some Fun",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Sheryl Crow",
+          "Sheryl Suzanne Crow"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9625ebff04f027fab1dc5fb8997e6797ad66c6ef7bd07fcff02e1b510afd21be",
+      "input_sha256": "7252dcd8c07bb5c8049d9d9fbec669dcfe44f64c1e7988e30ee02781bf14e800",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ae9cb22e3a656135930d",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Source answer is 'Lucas minas till', which appears corrupted or garbled and is not a valid name string. The old extraction's normalized answer 'Lucas Daniel Till' conflicts with the literal source text. Per instructions, an existing answer that conflicts with the source must be deferred, and I cannot supply a name from memory. Insufficient source support to produce a clean, verifiable fact.",
+      "input_sha256": "48ab48460e0dba10d00de7339fad57e1efb9c3f4487377708f85f6dba7b8a013",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ae962439db2ab94849cd",
+      "input_sha256": "7252dcd8c07bb5c8049d9d9fbec669dcfe44f64c1e7988e30ee02781bf14e800",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Sheryl Crow is the performer of the song All I Wanna Do Is Have Some Fun.",
+        "answer": "Sheryl Crow",
+        "prompt_en": "Who sings the song All I Wanna Do Is Have Some Fun?",
+        "subject": "All I Wanna Do Is Have Some Fun",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Sheryl Crow",
+          "Sheryl Suzanne Crow"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9625ebff04f027fab1dc5fb8997e6797ad66c6ef7bd07fcff02e1b510afd21be",
+      "translation": {
+        "record_id": "public:pbf_ae962439db2ab94849cd",
+        "subject_zh": "我只想寻点乐子",
+        "prompt_zh": "歌曲《我只想寻点乐子》是谁演唱的？",
+        "canonical_fact_zh": "谢丽尔·柯罗是歌曲《我只想寻点乐子》的演唱者。",
+        "answer_zh": "谢丽尔·柯罗",
+        "answer_aliases_zh": [
+          "谢丽尔·柯罗",
+          "谢丽尔·苏珊·柯罗"
+        ]
+      },
+      "translation_sha256": "98f5d398bb53e8f6b41316fe332ffb3dd170b13e52de261d77a38208807a99a5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ae962439db2ab94849cd",
+        "public:pbf_ae9cb22e3a656135930d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1f7052504322fc5692b23a2ef4b08602e986b8edd2adb3ff22cbd547d0eb3b38",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2802,
+        "prompt_tokens": 1589,
+        "total_tokens": 4391,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2345,
+          "text_tokens": 457
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2f215b2ff6ff213db547ef006f1a3711c071ea88699e74b48a72473936ffadd8",
+      "status": "completed",
+      "latency_seconds": 75.785
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ae962439db2ab94849cd"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0621066f29b4f4995c26e27c26b57c0103616bc0e58548102390ad962baf1dd8",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 934,
+        "prompt_tokens": 531,
+        "total_tokens": 1465,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 773,
+          "text_tokens": 161
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f1219692300dc1442c87dc2b5283d2c651d57f37b653a6c8e7073304e2bdda9a",
+      "status": "completed",
+      "latency_seconds": 66.06
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,233 @@
+{
+  "input_sha256": "29b36261df20f4519ee0871ad8c430da479543aaf217b0c37b2d6154ecb95a2f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007590",
+      "decision": "ready",
+      "subject": "hands",
+      "relation_id": "entity_to_opposite",
+      "relation_definition": "The conventional or natural opposite of the specified entity in its given context or domain.",
+      "direction": "entity -> opposite entity",
+      "answer": "feet",
+      "canonical_fact": "The opposite of hands is feet.",
+      "prompt_en": "What is the opposite of hands?",
+      "evidence_quotes": [
+        "What is the opposite of hands?",
+        "feet"
+      ],
+      "reason": "Source question explicitly asks for the opposite of hands; source answer is 'feet'. No catalog relation covers an antonym/opposite relationship, so proposing entity_to_opposite with direction entity->opposite entity.",
+      "english": {
+        "prompt_en": "What is the opposite of hands?",
+        "relation_definition": "The conventional or natural opposite of the specified entity in its given context or domain.",
+        "answer": "feet",
+        "canonical_fact": "The opposite of hands is feet.",
+        "direction": "entity -> opposite entity",
+        "relation_id": "entity_to_opposite",
+        "subject": "hands",
+        "answer_aliases_en": [
+          "feet"
+        ],
+        "relation_spec": {
+          "id": "entity_to_opposite",
+          "definition": "The conventional or natural opposite of the specified entity in its given context or domain.",
+          "direction": "entity -> opposite entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "212cdca2be68cff9ee46532d9e7c2c05e4049e417880d8b2f6d4712f721084c3",
+      "input_sha256": "1283441d11ae62a3594a117c7b794e1ce4f77648987f4c5db40b2867f490ec89",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007598",
+      "decision": "ready",
+      "subject": "Businesses giving assistance to those in need",
+      "relation_id": "entity_to_built_effect",
+      "relation_definition": "The specific intangible effect or output that the stated entity or class of entities builds or produces through a specified action.",
+      "direction": "entity -> built effect/output",
+      "answer": "good will",
+      "canonical_fact": "Businesses giving assistance to those in need build good will.",
+      "prompt_en": "What do businesses giving assistance to those in need build?",
+      "evidence_quotes": [
+        "Businesses giving assistance to those in need build what?",
+        "good will"
+      ],
+      "reason": "Source question asks what the specified class of businesses builds; source answer is 'good will'. No catalog relation fits a build/produce-effect relationship, so proposing entity_to_built_effect with direction entity->built effect/output.",
+      "english": {
+        "prompt_en": "What do businesses giving assistance to those in need build?",
+        "relation_definition": "The specific intangible effect or output that the stated entity or class of entities builds or produces through a specified action.",
+        "answer": "good will",
+        "canonical_fact": "Businesses giving assistance to those in need build good will.",
+        "direction": "entity -> built effect/output",
+        "relation_id": "entity_to_built_effect",
+        "subject": "Businesses giving assistance to those in need",
+        "answer_aliases_en": [
+          "good will"
+        ],
+        "relation_spec": {
+          "id": "entity_to_built_effect",
+          "definition": "The specific intangible effect or output that the stated entity or class of entities builds or produces through a specified action.",
+          "direction": "entity -> built effect/output"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5f744734000943b4163b7d11cb5e0e42943e0bae467662c82a6657ff39efecc8",
+      "input_sha256": "92ca555971a0d4e192cb383dcec6c4bcd9a61927d1718e49dfcfda03797eac01",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.188
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.013
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 3.184,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.084
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6df7059f1851402d1c6fa128c1548dad6ed501890bb6c21347f77ca6ba8c9d65",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2309,
+      "first_chunk_seconds": 5.375,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2310,
+        "prompt_tokens": 1575,
+        "total_tokens": 3885,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1860,
+          "text_tokens": 450
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fc9a9a73ac49efe031bc080a2154b1ce15f061b72c86929979bae6b199f3b9e0",
+      "status": "completed",
+      "latency_seconds": 28.012
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b761cf83fa98dfab50d1c86fe82bb3a2478503527128dbb75a737923d4791206",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.826
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b761cf83fa98dfab50d1c86fe82bb3a2478503527128dbb75a737923d4791206",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.949
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007590",
+        "historical:raw_commonsense_qa_007598"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b761cf83fa98dfab50d1c86fe82bb3a2478503527128dbb75a737923d4791206",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.093
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03500.json",
+      "sha256": "25fe39881057cfe1d4207f325ef0f78cf8f50379342ddc6c7219a00ec23eff2f",
+      "previous_status": "failed"
+    }
+  ]
+}

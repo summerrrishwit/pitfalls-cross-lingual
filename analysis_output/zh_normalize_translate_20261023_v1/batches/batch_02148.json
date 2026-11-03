@@ -1,0 +1,222 @@
+{
+  "input_sha256": "eff7922bd75e79d8293431e2f14fb88ead1f4e96e2592a69279df105c6174b9b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000293",
+      "decision": "ready",
+      "subject": "star",
+      "relation_id": "entity_to_dominant_lifecycle_stage",
+      "relation_definition": "The evolutionary/lifecycle stage during which a specified entity spends the majority of its existence; retains the 'most of its life' qualifier; not a taxonomy class or arbitrary attribute.",
+      "direction": "entity -> dominant lifecycle stage",
+      "answer": "main sequence",
+      "canonical_fact": "A star spends most of its life in the main sequence stage.",
+      "prompt_en": "During its lifetime, a star will evolve through several stages. In which stage does a star spend most of its life?",
+      "evidence_quotes": [
+        "In which stage does a star spend most of its life?",
+        "main sequence"
+      ],
+      "reason": "Source question explicitly asks for the stage in which a star spends most of its life; source_answer is 'main sequence'. Both models extracted the fact. No existing catalog relation captures 'dominant lifecycle stage'; proposing entity_to_dominant_lifecycle_stage with the qualifier 'most of its life' retained to avoid asserting exclusivity.",
+      "english": {
+        "answer": "main sequence",
+        "relation_id": "entity_to_dominant_lifecycle_stage",
+        "prompt_en": "During its lifetime, a star will evolve through several stages. In which stage does a star spend most of its life?",
+        "direction": "entity -> dominant lifecycle stage",
+        "subject": "star",
+        "canonical_fact": "A star spends most of its life in the main sequence stage.",
+        "relation_definition": "The evolutionary/lifecycle stage during which a specified entity spends the majority of its existence; retains the 'most of its life' qualifier; not a taxonomy class or arbitrary attribute.",
+        "answer_aliases_en": [
+          "main sequence"
+        ],
+        "relation_spec": {
+          "id": "entity_to_dominant_lifecycle_stage",
+          "definition": "The evolutionary/lifecycle stage during which a specified entity spends the majority of its existence; retains the 'most of its life' qualifier; not a taxonomy class or arbitrary attribute.",
+          "direction": "entity -> dominant lifecycle stage"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0726dd86f604a841a8feb39ecdf2784c393baf4354ac3d1f0ec721d7d6f9da99",
+      "input_sha256": "ea6f84b167bcc12f11fd26bb5d3f0c17aa30abf1c5d052ff64d5821c2fe83ab1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000297",
+      "decision": "ready",
+      "subject": "crustal movement along transform boundaries",
+      "relation_id": "process_to_likely_consequence",
+      "relation_definition": "The most likely physical event or outcome resulting from a specified geological or natural process; retains the 'most likely' qualifier and does not assert certainty or exclusivity of consequences.",
+      "direction": "process/event -> likely consequence",
+      "answer": "earthquakes",
+      "canonical_fact": "Crustal movement along transform boundaries most likely results in earthquakes.",
+      "prompt_en": "Which event most likely takes place as the result of crustal movement along transform boundaries?",
+      "evidence_quotes": [
+        "Which event most likely takes place as the result of crustal movement along transform boundaries?",
+        "earthquakes"
+      ],
+      "reason": "Source question asks for the most likely result of crustal movement along transform boundaries; source_answer is 'earthquakes'. No existing catalog relation captures a qualified causal-consequence link ('most likely result'); proposing process_to_likely_consequence with the 'most likely' qualifier preserved. One old annotation flagged causal_reasoning, but per instructions old reviews are not gold and source support is clear.",
+      "english": {
+        "answer": "earthquakes",
+        "relation_id": "process_to_likely_consequence",
+        "prompt_en": "Which event most likely takes place as the result of crustal movement along transform boundaries?",
+        "direction": "process/event -> likely consequence",
+        "subject": "crustal movement along transform boundaries",
+        "canonical_fact": "Crustal movement along transform boundaries most likely results in earthquakes.",
+        "relation_definition": "The most likely physical event or outcome resulting from a specified geological or natural process; retains the 'most likely' qualifier and does not assert certainty or exclusivity of consequences.",
+        "answer_aliases_en": [
+          "earthquakes"
+        ],
+        "relation_spec": {
+          "id": "process_to_likely_consequence",
+          "definition": "The most likely physical event or outcome resulting from a specified geological or natural process; retains the 'most likely' qualifier and does not assert certainty or exclusivity of consequences.",
+          "direction": "process/event -> likely consequence"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fb1d12b3f096c23642aa12f4c5c2f6f9dc59a9e72f6c883c1c930c8c96a37bbc",
+      "input_sha256": "2537e326ff13a39a1a0c467ccde3f58629d80b8217a5144cba9dfa99de6c2cb1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f22028ef4874d354d32ffc4ab3f5ce0f2dc255be3e700840fe1c85010ec42fc9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.503
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f22028ef4874d354d32ffc4ab3f5ce0f2dc255be3e700840fe1c85010ec42fc9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2080,
+      "first_chunk_seconds": 42.509,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2164,
+        "prompt_tokens": 1697,
+        "total_tokens": 3861,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1578,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d4ff86c9266f8bbd9d1447cd8626eabd67509dd279cbc7aede9c18c0ef1624d8",
+      "status": "completed",
+      "latency_seconds": 69.067
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.719
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.04
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.415
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.783
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.09
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000293",
+        "historical:raw_ai2_arc_easy_000297"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bf400786d616e056eeff24e7f102555d8df19f7aa024a0cc52b0a74b24ede7d5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.57
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02148.json",
+      "sha256": "a182d515abf4213a23717da3c8757ec9e69533722a4ef995c36092f9882224b8",
+      "previous_status": "failed"
+    }
+  ]
+}

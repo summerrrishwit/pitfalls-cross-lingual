@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e5277b704770ed1ad37683134097899ade7905bdb05193bbabe45defacb18731",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003141",
+      "decision": "ready",
+      "subject": "spending time with friends and acquaintances",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "socialize",
+      "canonical_fact": "Spending time with friends and acquaintances is called socialize.",
+      "prompt_en": "What is the conventional term for spending time with friends and acquaintances?",
+      "evidence_quotes": [
+        "What is it called when you spend time with friends and acquaintances?",
+        "socialize"
+      ],
+      "reason": "Source question asks for the term that describes the activity of spending time with friends and acquaintances; source answer is 'socialize'. Both models extracted this. Fits description_to_term exactly: a supplied description (the activity) maps to the conventional term. No existing catalog relation fits better.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "socialize",
+        "canonical_fact": "Spending time with friends and acquaintances is called socialize.",
+        "subject": "spending time with friends and acquaintances",
+        "prompt_en": "What is the conventional term for spending time with friends and acquaintances?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "socialize"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3f4f4df5869aa7e2ad1592fe334f3d14b6d467dec7a4239aaee3d3bc6a35d179",
+      "input_sha256": "95989af5b134c7265c49bef7c852fc4c9de374694352d130923e08e72cab61c1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003146",
+      "decision": "ready",
+      "subject": "yard",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "property",
+      "canonical_fact": "A yard is usually part of a property.",
+      "prompt_en": "What is a yard usually part of?",
+      "evidence_quotes": [
+        "What is a yard usually part of?",
+        "property"
+      ],
+      "reason": "Source question explicitly asks the part-whole relationship (what a yard is part of) and source answer is 'property'. The qualifier 'usually' is preserved in the canonical fact. Fits part_to_whole (part -> whole). One old model flagged it as not extractable (typical_action_or_location), but old reviews are not gold; the source question is a direct part-whole query, not a typical-location query.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "property",
+        "canonical_fact": "A yard is usually part of a property.",
+        "subject": "yard",
+        "prompt_en": "What is a yard usually part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "property"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "30db4edff86477abcbf380e0615180d1f2073b67fe391d88ffd6c8c08634b994",
+      "input_sha256": "ad129dcb44c5a791f4adeb5f06484022b1c394934b3a2f97c5dad44bc113d77b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003141",
+      "input_sha256": "95989af5b134c7265c49bef7c852fc4c9de374694352d130923e08e72cab61c1",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "socialize",
+        "canonical_fact": "Spending time with friends and acquaintances is called socialize.",
+        "subject": "spending time with friends and acquaintances",
+        "prompt_en": "What is the conventional term for spending time with friends and acquaintances?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "socialize"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3f4f4df5869aa7e2ad1592fe334f3d14b6d467dec7a4239aaee3d3bc6a35d179",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003141",
+        "subject_zh": "与朋友和熟人共度时光",
+        "prompt_zh": "与朋友和熟人共度时光的通常术语是什么？",
+        "canonical_fact_zh": "与朋友和熟人共度时光被称为社交。",
+        "answer_zh": "社交",
+        "answer_aliases_zh": [
+          "社交"
+        ]
+      },
+      "translation_sha256": "39acf22fbef5e8a934dae5cbfa61df2acafeb236c3d0ef41f396bf56fe1d6c04"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003146",
+      "input_sha256": "ad129dcb44c5a791f4adeb5f06484022b1c394934b3a2f97c5dad44bc113d77b",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "property",
+        "canonical_fact": "A yard is usually part of a property.",
+        "subject": "yard",
+        "prompt_en": "What is a yard usually part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "property"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "30db4edff86477abcbf380e0615180d1f2073b67fe391d88ffd6c8c08634b994",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003146",
+        "subject_zh": "院子",
+        "prompt_zh": "院子通常是什么的组成部分？",
+        "canonical_fact_zh": "院子通常是房产的一部分。",
+        "answer_zh": "房产",
+        "answer_aliases_zh": [
+          "房产"
+        ]
+      },
+      "translation_sha256": "c9d2e52af5edb1bfaf87396806186a208c51fb3001498ccdce87395270dd1469"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003141",
+        "historical:raw_commonsense_qa_003146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0e7fe9dde9bba813e6412346c0faa25a62c7043a941893372cf9762eaf43959",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1625,
+      "first_chunk_seconds": 17.28,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1809,
+        "prompt_tokens": 1650,
+        "total_tokens": 3459,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1305,
+          "text_tokens": 504
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "101493b781b9887775b9321128a2d69aad278b798bf11adaa9ead162b622eddb",
+      "status": "completed",
+      "latency_seconds": 49.146
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003141",
+        "historical:raw_commonsense_qa_003146"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4726c538258543b5acabf8a5b3e288bc8daf1b8fd5b4d4631929f56909cf2da8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1206,
+      "first_chunk_seconds": 55.466,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1218,
+        "prompt_tokens": 802,
+        "total_tokens": 2020,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1012,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "96a11887032b579ca9b895ab8a9c379b41b400851b2fe3474f984a84327c6488",
+      "status": "completed",
+      "latency_seconds": 69.89
+    }
+  ],
+  "status": "completed"
+}

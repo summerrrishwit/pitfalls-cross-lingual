@@ -1,0 +1,223 @@
+{
+  "input_sha256": "1c359e82d01a0f827b9d3439c9590347f9383ee2a59cfc1c36f2fee33f0bdf06",
+  "normalized": [
+    {
+      "record_id": "public:pbf_22c32631c2b8f65759b0",
+      "decision": "ready",
+      "subject": "Deer Park water",
+      "relation_id": "entity_to_geographic_source",
+      "relation_definition": "The geographic origin or source location from which a specified entity or product is obtained or drawn; distinct from containment, habitat, or manufacturing site.",
+      "direction": "entity -> geographic source location",
+      "answer": "Florida",
+      "canonical_fact": "Deer Park water comes from Florida.",
+      "prompt_en": "Deer Park water comes from",
+      "evidence_quotes": [
+        "deer park water where does it come from",
+        "Florida"
+      ],
+      "reason": "No catalog relation captures geographic sourcing/origin of a product. entity_to_containing_location explicitly excludes origin; entity_to_material covers composition not source location. Proposed new relation entity_to_geographic_source precisely fits: a product (Deer Park water) and the place it is drawn from (Florida). Answer 'Florida' is a literal substring of source_answer.",
+      "english": {
+        "direction": "entity -> geographic source location",
+        "prompt_en": "Deer Park water comes from",
+        "relation_id": "entity_to_geographic_source",
+        "answer": "Florida",
+        "relation_definition": "The geographic origin or source location from which a specified entity or product is obtained or drawn; distinct from containment, habitat, or manufacturing site.",
+        "subject": "Deer Park water",
+        "canonical_fact": "Deer Park water comes from Florida.",
+        "answer_aliases_en": [
+          "Florida",
+          "State of Florida",
+          "FL"
+        ],
+        "relation_spec": {
+          "id": "entity_to_geographic_source",
+          "definition": "The geographic origin or source location from which a specified entity or product is obtained or drawn; distinct from containment, habitat, or manufacturing site.",
+          "direction": "entity -> geographic source location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "71c1f488f646ee3defd166d916df7938de297c058f52587cc02d372345897cd4",
+      "input_sha256": "e65525f667b7f5014fc6e73ee7bf4e8987fda82a2b548dad1ee9c6d138929cae",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_22e056603bc9a9e6a3a8",
+      "decision": "ready",
+      "subject": "stoma",
+      "relation_id": "medical_concept_to_anatomical_site",
+      "relation_definition": "The recommended or standard anatomical location for situating a specified medical concept, procedure, or device; not a general body region or geographic location.",
+      "direction": "medical concept/procedure -> recommended anatomical site",
+      "answer": "rectus sheath abdominus",
+      "canonical_fact": "A stoma should be sited in the rectus sheath abdominus.",
+      "prompt_en": "A stoma should be sited in the",
+      "evidence_quotes": [
+        "Where should a stoma be sited?",
+        "The rectus sheath abdominus."
+      ],
+      "reason": "No catalog relation covers a recommended anatomical site for a medical concept. entity_to_containing_location is for geographic containment; organism_to_habitat is for natural habitats. Proposed medical_concept_to_anatomical_site precisely captures the direction from a medical concept (stoma) to its recommended surgical site (rectus sheath abdominus). Answer is a literal substring of source_answer.",
+      "english": {
+        "direction": "medical concept/procedure -> recommended anatomical site",
+        "prompt_en": "A stoma should be sited in the",
+        "relation_id": "medical_concept_to_anatomical_site",
+        "answer": "rectus sheath abdominus",
+        "relation_definition": "The recommended or standard anatomical location for situating a specified medical concept, procedure, or device; not a general body region or geographic location.",
+        "subject": "stoma",
+        "canonical_fact": "A stoma should be sited in the rectus sheath abdominus.",
+        "answer_aliases_en": [
+          "rectus sheath abdominus",
+          "The rectus sheath abdominus."
+        ],
+        "relation_spec": {
+          "id": "medical_concept_to_anatomical_site",
+          "definition": "The recommended or standard anatomical location for situating a specified medical concept, procedure, or device; not a general body region or geographic location.",
+          "direction": "medical concept/procedure -> recommended anatomical site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b86f005ec962b52893fdc703b07bf3af1c009c864b54b93464d5958ad4a01bdc",
+      "input_sha256": "51d2142bb4643eeb09129d41a79120f892d79ccd99b312ed5e1e52d448dc6784",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_22c32631c2b8f65759b0",
+      "input_sha256": "e65525f667b7f5014fc6e73ee7bf4e8987fda82a2b548dad1ee9c6d138929cae",
+      "english": {
+        "direction": "entity -> geographic source location",
+        "prompt_en": "Deer Park water comes from",
+        "relation_id": "entity_to_geographic_source",
+        "answer": "Florida",
+        "relation_definition": "The geographic origin or source location from which a specified entity or product is obtained or drawn; distinct from containment, habitat, or manufacturing site.",
+        "subject": "Deer Park water",
+        "canonical_fact": "Deer Park water comes from Florida.",
+        "answer_aliases_en": [
+          "Florida",
+          "State of Florida",
+          "FL"
+        ],
+        "relation_spec": {
+          "id": "entity_to_geographic_source",
+          "definition": "The geographic origin or source location from which a specified entity or product is obtained or drawn; distinct from containment, habitat, or manufacturing site.",
+          "direction": "entity -> geographic source location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "71c1f488f646ee3defd166d916df7938de297c058f52587cc02d372345897cd4",
+      "translation": {
+        "record_id": "public:pbf_22c32631c2b8f65759b0",
+        "subject_zh": "Deer Park 水",
+        "prompt_zh": "Deer Park 水产自",
+        "canonical_fact_zh": "Deer Park 水产自佛罗里达。",
+        "answer_zh": "佛罗里达",
+        "answer_aliases_zh": [
+          "佛罗里达",
+          "佛罗里达州",
+          "FL"
+        ]
+      },
+      "translation_sha256": "c2d51ddf6c73dfc1b1035489608126354b5b3ddd64557223a945b7236810d8ac"
+    },
+    {
+      "record_id": "public:pbf_22e056603bc9a9e6a3a8",
+      "input_sha256": "51d2142bb4643eeb09129d41a79120f892d79ccd99b312ed5e1e52d448dc6784",
+      "english": {
+        "direction": "medical concept/procedure -> recommended anatomical site",
+        "prompt_en": "A stoma should be sited in the",
+        "relation_id": "medical_concept_to_anatomical_site",
+        "answer": "rectus sheath abdominus",
+        "relation_definition": "The recommended or standard anatomical location for situating a specified medical concept, procedure, or device; not a general body region or geographic location.",
+        "subject": "stoma",
+        "canonical_fact": "A stoma should be sited in the rectus sheath abdominus.",
+        "answer_aliases_en": [
+          "rectus sheath abdominus",
+          "The rectus sheath abdominus."
+        ],
+        "relation_spec": {
+          "id": "medical_concept_to_anatomical_site",
+          "definition": "The recommended or standard anatomical location for situating a specified medical concept, procedure, or device; not a general body region or geographic location.",
+          "direction": "medical concept/procedure -> recommended anatomical site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b86f005ec962b52893fdc703b07bf3af1c009c864b54b93464d5958ad4a01bdc",
+      "translation": {
+        "record_id": "public:pbf_22e056603bc9a9e6a3a8",
+        "subject_zh": "造口",
+        "prompt_zh": "造口应放置于",
+        "canonical_fact_zh": "造口应放置于腹直肌鞘。",
+        "answer_zh": "腹直肌鞘",
+        "answer_aliases_zh": [
+          "腹直肌鞘",
+          "腹直肌鞘。"
+        ]
+      },
+      "translation_sha256": "72cbb0c786542d5fe5c5e75605d167fb01d6e4067d1a4250557531b50070dbc0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_22c32631c2b8f65759b0",
+        "public:pbf_22e056603bc9a9e6a3a8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c7cbd4d6770511bcd46f7dbb3a68f06249348777062e8718afb474f7d8f8ff7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1672,
+      "first_chunk_seconds": 9.304,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1756,
+        "prompt_tokens": 1585,
+        "total_tokens": 3341,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1192,
+          "text_tokens": 564
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "303f10b078e615b0636ae678914c8e87bb19de39dc8f0de6e3a146849e2c7b69",
+      "status": "completed",
+      "latency_seconds": 42.342
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_22c32631c2b8f65759b0",
+        "public:pbf_22e056603bc9a9e6a3a8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fcbe6cfbeea8eab1705a0113ecdece55814d722fe2e804cd8450e63814ec3282",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1505,
+      "first_chunk_seconds": 11.895,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1690,
+        "prompt_tokens": 917,
+        "total_tokens": 2607,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1441,
+          "text_tokens": 249
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d0f5778faed4b734708e3fd4f649a4bdf54abc73d3352a113606a49e537167e9",
+      "status": "completed",
+      "latency_seconds": 41.613
+    }
+  ],
+  "status": "completed"
+}

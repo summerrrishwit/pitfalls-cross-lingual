@@ -1,0 +1,171 @@
+{
+  "input_sha256": "80adab1579fd0d8971db149a9e7b784776e219af1b12e48992ec744b70847ab7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000500",
+      "decision": "ready",
+      "subject": "polar amino acid side chains",
+      "relation_id": "chemical_structure_to_bonding_type",
+      "relation_definition": "The characteristic type of chemical bonding formed within or by a specified chemical structure or class of chemical structures; retain the specific bonding type name and its context.",
+      "direction": "specified chemical structure/class -> bonding type",
+      "answer": "hydrogen bonding",
+      "canonical_fact": "Polar amino acid side chains form hydrogen bonding.",
+      "prompt_en": "What type of bonding is formed in polar amino acid side chains?",
+      "evidence_quotes": [
+        "What bonding is formed in polar amino acid side chains?",
+        "hydrogen bonding"
+      ],
+      "reason": "No catalog relation covers 'bonding formed in a chemical structure.' Proposed chemical_structure_to_bonding_type with explicit direction from the structure/class to the bonding type. Answer 'hydrogen bonding' is a verbatim substring of source_answer.",
+      "english": {
+        "relation_definition": "The characteristic type of chemical bonding formed within or by a specified chemical structure or class of chemical structures; retain the specific bonding type name and its context.",
+        "direction": "specified chemical structure/class -> bonding type",
+        "subject": "polar amino acid side chains",
+        "relation_id": "chemical_structure_to_bonding_type",
+        "prompt_en": "What type of bonding is formed in polar amino acid side chains?",
+        "answer": "hydrogen bonding",
+        "canonical_fact": "Polar amino acid side chains form hydrogen bonding.",
+        "answer_aliases_en": [
+          "hydrogen bonding"
+        ],
+        "relation_spec": {
+          "id": "chemical_structure_to_bonding_type",
+          "definition": "The characteristic type of chemical bonding formed within or by a specified chemical structure or class of chemical structures; retain the specific bonding type name and its context.",
+          "direction": "specified chemical structure/class -> bonding type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b3398ebb15771f969cbecb1aaee29ce6ebf5013b94574c7d090ed6af33ea0ca9",
+      "input_sha256": "3daf6694f137b08c036242176af30772f82b8ff55472fa12ca2d7cfce4761f02",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000501",
+      "decision": "ready",
+      "subject": "positive protons and neutral neutrons",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "nucleus",
+      "canonical_fact": "Positive protons and neutral neutrons are contained in the nucleus.",
+      "prompt_en": "What sub-atomic structure contains protons and neutrons?",
+      "evidence_quotes": [
+        "positive protons and neutral neutrons",
+        "nucleus"
+      ],
+      "reason": "Protons and neutrons are constituent parts (nucleons) of the nucleus; part_to_whole (part -> whole) fits exactly. Qualifiers 'positive' and 'neutral' preserved from source. Answer 'nucleus' is a verbatim substring of source_answer. Prompt avoids the answer word.",
+      "english": {
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "direction": "part -> whole",
+        "subject": "positive protons and neutral neutrons",
+        "relation_id": "part_to_whole",
+        "prompt_en": "What sub-atomic structure contains protons and neutrons?",
+        "answer": "nucleus",
+        "canonical_fact": "Positive protons and neutral neutrons are contained in the nucleus.",
+        "answer_aliases_en": [
+          "nucleus"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ef0e30e7d72f78de631d3482f1dc95512bb3e9f98f8d6236aeabb34e56b7af9e",
+      "input_sha256": "639c36955433d1d5eba3d5ab059b37c5078cf5d47b9e7adf6e118bdaa546d679",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000500",
+        "historical:raw_sciq_000501"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "87897577f554763307910b6329a6f1b7a5f91e8114f19d012430488d97f7aa1a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 20.733
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000500",
+        "historical:raw_sciq_000501"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "87897577f554763307910b6329a6f1b7a5f91e8114f19d012430488d97f7aa1a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2612,
+      "first_chunk_seconds": 1.294,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2638,
+        "prompt_tokens": 1691,
+        "total_tokens": 4329,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2137,
+          "text_tokens": 501
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1a55a22fdadf797e694fbb695a0d708b547df48d8ab7ea20a0677a4fab00461b",
+      "status": "completed",
+      "latency_seconds": 61.441
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000500",
+        "historical:raw_sciq_000501"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ead3c8dbdd8f38e19c3416c992c7a29b2532c8e77d08bd8879cf3a52b0d56b26",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.008
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000500",
+        "historical:raw_sciq_000501"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ead3c8dbdd8f38e19c3416c992c7a29b2532c8e77d08bd8879cf3a52b0d56b26",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.995
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000500",
+        "historical:raw_sciq_000501"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ead3c8dbdd8f38e19c3416c992c7a29b2532c8e77d08bd8879cf3a52b0d56b26",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.011
+    }
+  ],
+  "status": "failed"
+}

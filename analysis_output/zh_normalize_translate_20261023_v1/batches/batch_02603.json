@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2dca1ca5c3cc3e1a002bb36397c825bd3303e5092f68a51ac080446f308a41e5",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005152",
+      "decision": "ready",
+      "subject": "one who wants to give assistance",
+      "relation_id": "entity_to_characteristic",
+      "relation_definition": "A stated characteristic or attribute that describes a specified entity type or persona; not a class membership or definition.",
+      "direction": "entity -> characteristic",
+      "answer": "helpful",
+      "canonical_fact": "A characteristic of one who wants to give assistance is helpful.",
+      "prompt_en": "What characteristic describes one who wants to give assistance?",
+      "evidence_quotes": [
+        "what is a characteristic of one who want to give assistance?",
+        "helpful"
+      ],
+      "reason": "Source question asks for a characteristic of a person who wants to give assistance; source answer is 'helpful'. No existing catalog relation captures an attribute/characteristic (entity_to_class explicitly excludes arbitrary attributes). Proposing entity_to_characteristic with direction entity->characteristic.",
+      "english": {
+        "direction": "entity -> characteristic",
+        "relation_id": "entity_to_characteristic",
+        "answer": "helpful",
+        "canonical_fact": "A characteristic of one who wants to give assistance is helpful.",
+        "subject": "one who wants to give assistance",
+        "prompt_en": "What characteristic describes one who wants to give assistance?",
+        "relation_definition": "A stated characteristic or attribute that describes a specified entity type or persona; not a class membership or definition.",
+        "answer_aliases_en": [
+          "helpful"
+        ],
+        "relation_spec": {
+          "id": "entity_to_characteristic",
+          "definition": "A stated characteristic or attribute that describes a specified entity type or persona; not a class membership or definition.",
+          "direction": "entity -> characteristic"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f8683727e0435d04d54726bcbcaabcdf81aef5631c631f3ea613dbf8016a3cc7",
+      "input_sha256": "e2bc0d407ab9ca1cc1acf770496e7c6ba0fc7c15b9a40e74f75ff737eb54a46d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005156",
+      "decision": "ready",
+      "subject": "bugle",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "brass band",
+      "canonical_fact": "A bugle is used in a brass band.",
+      "prompt_en": "What type of group is a bugle used in?",
+      "evidence_quotes": [
+        "What type of group is a bugle used in?",
+        "brass band"
+      ],
+      "reason": "A bugle is a constituent instrument (part) of a brass band (whole ensemble). The part_to_whole relation fits: bugle (part) -> brass band (whole). Source answer is 'brass band'. The Qwen-3.8-Max annotation flagged non_unique_answer, but the source provides a definitive answer and we defer to it; the fact states one valid ensemble context.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "brass band",
+        "canonical_fact": "A bugle is used in a brass band.",
+        "subject": "bugle",
+        "prompt_en": "What type of group is a bugle used in?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "brass band"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f0c55ce9cc2d46e38f0078a9677abcb3e15212a6d81fb1580b94d38318d773bd",
+      "input_sha256": "0e49e7d3f9dd498406cbf3568205b34883213411eb8a62e3c11d487d1bb44461",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005152",
+      "input_sha256": "e2bc0d407ab9ca1cc1acf770496e7c6ba0fc7c15b9a40e74f75ff737eb54a46d",
+      "english": {
+        "direction": "entity -> characteristic",
+        "relation_id": "entity_to_characteristic",
+        "answer": "helpful",
+        "canonical_fact": "A characteristic of one who wants to give assistance is helpful.",
+        "subject": "one who wants to give assistance",
+        "prompt_en": "What characteristic describes one who wants to give assistance?",
+        "relation_definition": "A stated characteristic or attribute that describes a specified entity type or persona; not a class membership or definition.",
+        "answer_aliases_en": [
+          "helpful"
+        ],
+        "relation_spec": {
+          "id": "entity_to_characteristic",
+          "definition": "A stated characteristic or attribute that describes a specified entity type or persona; not a class membership or definition.",
+          "direction": "entity -> characteristic"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f8683727e0435d04d54726bcbcaabcdf81aef5631c631f3ea613dbf8016a3cc7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005152",
+        "subject_zh": "想要给予帮助的人",
+        "prompt_zh": "什么特征描述了想要给予帮助的人？",
+        "canonical_fact_zh": "想要给予帮助的人的一个特征是乐于助人的。",
+        "answer_zh": "乐于助人的",
+        "answer_aliases_zh": [
+          "乐于助人的"
+        ]
+      },
+      "translation_sha256": "4b23efcd2f83b3170063a3fed241857bd6e3d571e0141c39b1e7f9af8d4400c9"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005156",
+      "input_sha256": "0e49e7d3f9dd498406cbf3568205b34883213411eb8a62e3c11d487d1bb44461",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "brass band",
+        "canonical_fact": "A bugle is used in a brass band.",
+        "subject": "bugle",
+        "prompt_en": "What type of group is a bugle used in?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "brass band"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f0c55ce9cc2d46e38f0078a9677abcb3e15212a6d81fb1580b94d38318d773bd",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005156",
+        "subject_zh": "号",
+        "prompt_zh": "号被使用在什么类型的群体中？",
+        "canonical_fact_zh": "号在铜管乐队中使用。",
+        "answer_zh": "铜管乐队",
+        "answer_aliases_zh": [
+          "铜管乐队"
+        ]
+      },
+      "translation_sha256": "e3ae41d1b4e7115e5f5edd25fcee4c41790cca1c70002ea620defa142dd9d7d0"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005152",
+        "historical:raw_commonsense_qa_005156"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f7a9a45dcb81edf485662f9e0d78f509b985cb4aae675b420657326206ee22db",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2214,
+      "first_chunk_seconds": 22.761,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2274,
+        "prompt_tokens": 1655,
+        "total_tokens": 3929,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1777,
+          "text_tokens": 497
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec17036b4c634b9b0fa16c5dfe9fc2be90648b7e17e88d3e6206d3474cc20c7f",
+      "status": "completed",
+      "latency_seconds": 51.818
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005152",
+        "historical:raw_commonsense_qa_005156"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ef3b1785becea72baaf97c25c77b57ac5b925bf3a0262dbab765db979da1bb70",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 906,
+      "first_chunk_seconds": 1.887,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 928,
+        "prompt_tokens": 813,
+        "total_tokens": 1741,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 715,
+          "text_tokens": 213
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "24cc866566a66600d0c38bf91fd4b3d6f83a724f76b2ff9a325d7869c83acdf7",
+      "status": "completed",
+      "latency_seconds": 13.044
+    }
+  ],
+  "status": "completed"
+}

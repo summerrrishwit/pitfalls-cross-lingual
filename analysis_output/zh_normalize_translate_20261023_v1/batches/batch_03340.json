@@ -1,0 +1,183 @@
+{
+  "input_sha256": "7d664606b2a93749803c1320f42621db65771be11b36ca9ae34cf5422ae62faf",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001280",
+      "decision": "ready",
+      "subject": "a light controlled by a wall switch",
+      "relation_id": "device_to_power_source",
+      "relation_definition": "The energy medium or power source that operates a specified device or apparatus; stable physics/engineering fact, not a single-use scenario detail.",
+      "direction": "device -> power source",
+      "answer": "electricity",
+      "canonical_fact": "A light controlled by a wall switch is powered by electricity.",
+      "prompt_en": "What energy source powers a light when its wall switch is pushed to turn it on?",
+      "evidence_quotes": [
+        "pushed the switch on the wall to turn on the light",
+        "electricity"
+      ],
+      "reason": "The source QA states that pushing the switch turns on the light and the cause is electricity. No catalog relation covers 'power source of a device', so a precise new ID is proposed. The fact is a stable physics statement, not a one-off scenario detail.",
+      "english": {
+        "prompt_en": "What energy source powers a light when its wall switch is pushed to turn it on?",
+        "relation_definition": "The energy medium or power source that operates a specified device or apparatus; stable physics/engineering fact, not a single-use scenario detail.",
+        "answer": "electricity",
+        "canonical_fact": "A light controlled by a wall switch is powered by electricity.",
+        "direction": "device -> power source",
+        "relation_id": "device_to_power_source",
+        "subject": "a light controlled by a wall switch",
+        "answer_aliases_en": [
+          "electricity"
+        ],
+        "relation_spec": {
+          "id": "device_to_power_source",
+          "definition": "The energy medium or power source that operates a specified device or apparatus; stable physics/engineering fact, not a single-use scenario detail.",
+          "direction": "device -> power source"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a8d632efec407d131bb007abe4b84f5e2cfe0f7f8a15ee7f4124e7529f05ad89",
+      "input_sha256": "25aff9522b4390e968eda55dd029d789ba1f7d3bd1d4cb92c3bdcd8334eae8f4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001291",
+      "decision": "ready",
+      "subject": "the property used to sort mineral samples into dull and shiny groups",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "luster",
+      "canonical_fact": "The mineral property used to sort samples into dull and shiny groups is luster.",
+      "prompt_en": "In mineralogy, what is the name of the property used to classify mineral samples as dull or shiny?",
+      "evidence_quotes": [
+        "dull and shiny",
+        "sort the mineral samples into groups",
+        "luster"
+      ],
+      "reason": "The source QA explicitly links the description (sorting minerals into dull vs shiny groups) to the term 'luster'. This is a clean description-to-term mapping with a unique conventional answer. The catalog relation description_to_term fits exactly.",
+      "english": {
+        "prompt_en": "In mineralogy, what is the name of the property used to classify mineral samples as dull or shiny?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "luster",
+        "canonical_fact": "The mineral property used to sort samples into dull and shiny groups is luster.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the property used to sort mineral samples into dull and shiny groups",
+        "answer_aliases_en": [
+          "luster"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "582c701abe2a780951acfee2b41ff3f2478468956c672fba2937aad99c35f1d7",
+      "input_sha256": "21d32530508476f784c7eb76285333804b3948f28079a9b585206720e60d9c63",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001280",
+        "historical:raw_ai2_arc_easy_001291"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "73d1e8ed94f57260999b7ddd2974fe08ebb9b09ba6098ebfbb10bdffa851ecc8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 10.131
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001280",
+        "historical:raw_ai2_arc_easy_001291"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "73d1e8ed94f57260999b7ddd2974fe08ebb9b09ba6098ebfbb10bdffa851ecc8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2760,
+      "first_chunk_seconds": 3.185,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3002,
+        "prompt_tokens": 1647,
+        "total_tokens": 4649,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2489,
+          "text_tokens": 513
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "442dd5a928a0d1b24a5470df3055940b777f624b2e6b90d391a4351cd1e52bb2",
+      "status": "completed",
+      "latency_seconds": 50.519
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001280",
+        "historical:raw_ai2_arc_easy_001291"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0e8b2a969ff9c77305b4a48e2d2315168f4f3352df6adf19897754395410c1a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.699
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001280",
+        "historical:raw_ai2_arc_easy_001291"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0e8b2a969ff9c77305b4a48e2d2315168f4f3352df6adf19897754395410c1a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.088,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001280",
+        "historical:raw_ai2_arc_easy_001291"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0e8b2a969ff9c77305b4a48e2d2315168f4f3352df6adf19897754395410c1a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.698
+    }
+  ],
+  "status": "failed"
+}

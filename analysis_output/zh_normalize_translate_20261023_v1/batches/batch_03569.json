@@ -1,0 +1,71 @@
+{
+  "input_sha256": "97b89417b44753b844db80856c6702ec889ae09e6ad254f4b4c83aa71655b35e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000284",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question asks about a conditional physical process (what happens to water vapor *as it rises*), which is a causal/conditional statement rather than a stable entity-attribute or entity-relation fact. No catalog relation (entity_to_class, entity_to_material, organism_to_habitat, etc.) captures a process-conditional behavior. Proposing a new relation like 'entity_to_conditional_physical_behavior' would be overly broad and non-reusable. Defer without forcing.",
+      "input_sha256": "3f5c6b35b160c7ad4b43c138b24b7d9239cc4830cad6310c4768ea539d7c7f2b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000290",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question 'What do humans and bats have physically in common?' admits multiple valid answers (body hair, skeletal structure, lungs, etc.), making the source answer 'body hair' non-unique. No catalog relation models a shared-attribute-between-two-entities query. A new relation like 'entities_to_shared_physical_trait' would be imprecise and the answer lacks the uniqueness required for a clean factual record. Defer without forcing.",
+      "input_sha256": "9d35414d9f3a11df55e5ff78b4e9b98c6e926351b203c40d604d47ea4a7e8235",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000284",
+        "historical:raw_sciq_000290"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dc308335bae4a17d5d080b589e57bee48493049eb727ab3d0379089b3ca4b517",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1328,
+      "first_chunk_seconds": 47.277,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1381,
+        "prompt_tokens": 1582,
+        "total_tokens": 2963,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1042,
+          "text_tokens": 339
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0e5e189b5a90c2153c25c966fab1c9d7a3e0b90f15f2d136839e21698a9c5fe0",
+      "status": "completed",
+      "latency_seconds": 143.815
+    }
+  ],
+  "status": "completed"
+}

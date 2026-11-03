@@ -1,0 +1,212 @@
+{
+  "input_sha256": "f471f4907abf6ce15d8dde4f09e8fa672709ce70d828cb085bc1d1f84130a821",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ffe3792af918d65465db",
+      "decision": "ready",
+      "subject": "I've Never Been to Me",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Charlene",
+      "canonical_fact": "Charlene sang the song I've Never Been to Me.",
+      "prompt_en": "Who sang the song I've Never Been to Me?",
+      "evidence_quotes": [
+        "who sang i've never been to me",
+        "Charlene"
+      ],
+      "reason": "The source question asks for the singer of 'I've Never Been to Me' and the answer is 'Charlene'. The catalog relation song_to_performer (song -> performer) fits exactly: the subject is a specific song and the answer is its performer. All fields are supported by the source pair.",
+      "english": {
+        "subject": "I've Never Been to Me",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer": "Charlene",
+        "canonical_fact": "Charlene sang the song I've Never Been to Me.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song I've Never Been to Me?",
+        "answer_aliases_en": [
+          "Charlene",
+          "Charlene Marilynn Oliver"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b8a7807b09a9b4a0df9c206c48b2ff6e3a0944005f1bb708bf8573222bba58ab",
+      "input_sha256": "658cf02186385bbee0d76f833de1b5fb1c2f6c7dd7e81f578b788d9ccb414a10",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_00174fd0f0ff663e96c2",
+      "decision": "ready",
+      "subject": "wealth required for a good life according to Epicurus",
+      "relation_id": "concept_to_attribute",
+      "relation_definition": "A stated characterizing property or attribute of a specified concept, retaining source attribution and scope; direction is concept -> attribute.",
+      "direction": "specified concept -> attribute",
+      "answer": "easily procured",
+      "canonical_fact": "According to Epicurus, the wealth required for a good life is easily procured.",
+      "prompt_en": "According to Epicurus, the wealth required for a good life is",
+      "evidence_quotes": [
+        "According to Epicurus, the wealth required for a good life is:",
+        "easily procured."
+      ],
+      "reason": "No existing catalog relation fits exactly: term_to_definition requires a full definition rather than a single characterizing property, and entity_to_class implies taxonomy membership. The source attributes the property 'easily procured' to the concept 'wealth required for a good life according to Epicurus', which is best captured by a new relation concept_to_attribute (concept -> attribute). The answer is a literal substring of the source answer; the prompt is option-free and omits the answer.",
+      "english": {
+        "subject": "wealth required for a good life according to Epicurus",
+        "relation_definition": "A stated characterizing property or attribute of a specified concept, retaining source attribution and scope; direction is concept -> attribute.",
+        "answer": "easily procured",
+        "canonical_fact": "According to Epicurus, the wealth required for a good life is easily procured.",
+        "direction": "specified concept -> attribute",
+        "relation_id": "concept_to_attribute",
+        "prompt_en": "According to Epicurus, the wealth required for a good life is",
+        "answer_aliases_en": [
+          "easily procured",
+          "easily procured."
+        ],
+        "relation_spec": {
+          "id": "concept_to_attribute",
+          "definition": "A stated characterizing property or attribute of a specified concept, retaining source attribution and scope; direction is concept -> attribute.",
+          "direction": "specified concept -> attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cee01e024d5875d71997fb3f64b642632d5d9a92b268b62589e1e97967ddbc55",
+      "input_sha256": "838dac755fd4994cabb9d1465e8c1da25d26a303342549f904ae91f2f6b43a07",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ffe3792af918d65465db",
+      "input_sha256": "658cf02186385bbee0d76f833de1b5fb1c2f6c7dd7e81f578b788d9ccb414a10",
+      "english": {
+        "subject": "I've Never Been to Me",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer": "Charlene",
+        "canonical_fact": "Charlene sang the song I've Never Been to Me.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song I've Never Been to Me?",
+        "answer_aliases_en": [
+          "Charlene",
+          "Charlene Marilynn Oliver"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b8a7807b09a9b4a0df9c206c48b2ff6e3a0944005f1bb708bf8573222bba58ab",
+      "translation": {
+        "record_id": "public:pbf_ffe3792af918d65465db",
+        "subject_zh": "I've Never Been to Me",
+        "prompt_zh": "谁演唱了歌曲 I've Never Been to Me？",
+        "canonical_fact_zh": "Charlene 演唱了歌曲 I've Never Been to Me。",
+        "answer_zh": "Charlene",
+        "answer_aliases_zh": [
+          "Charlene",
+          "Charlene Marilynn Oliver"
+        ]
+      },
+      "translation_sha256": "a25cd3e439a96d8dba06db94ec1c884543845070dcb55353d73cb0cc004b2884"
+    },
+    {
+      "record_id": "public:pbf_00174fd0f0ff663e96c2",
+      "input_sha256": "838dac755fd4994cabb9d1465e8c1da25d26a303342549f904ae91f2f6b43a07",
+      "english": {
+        "subject": "wealth required for a good life according to Epicurus",
+        "relation_definition": "A stated characterizing property or attribute of a specified concept, retaining source attribution and scope; direction is concept -> attribute.",
+        "answer": "easily procured",
+        "canonical_fact": "According to Epicurus, the wealth required for a good life is easily procured.",
+        "direction": "specified concept -> attribute",
+        "relation_id": "concept_to_attribute",
+        "prompt_en": "According to Epicurus, the wealth required for a good life is",
+        "answer_aliases_en": [
+          "easily procured",
+          "easily procured."
+        ],
+        "relation_spec": {
+          "id": "concept_to_attribute",
+          "definition": "A stated characterizing property or attribute of a specified concept, retaining source attribution and scope; direction is concept -> attribute.",
+          "direction": "specified concept -> attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cee01e024d5875d71997fb3f64b642632d5d9a92b268b62589e1e97967ddbc55",
+      "translation": {
+        "record_id": "public:pbf_00174fd0f0ff663e96c2",
+        "subject_zh": "根据伊壁鸠鲁的观点，美好生活所需的财富",
+        "prompt_zh": "根据伊壁鸠鲁的观点，美好生活所需的财富是",
+        "canonical_fact_zh": "根据伊壁鸠鲁的观点，美好生活所需的财富是容易获得的。",
+        "answer_zh": "容易获得的",
+        "answer_aliases_zh": [
+          "容易获得的",
+          "容易获得的。"
+        ]
+      },
+      "translation_sha256": "e191f9a5327c6d9af6270eff65b8473b74458f4536c8db8c9ed23353a642dfbf"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ffe3792af918d65465db",
+        "public:pbf_00174fd0f0ff663e96c2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e947eba44a291e8dc2c8352a057dbeaf58e3cce5e5a439ff0b2c31ff2c967e02",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2039,
+        "prompt_tokens": 1620,
+        "total_tokens": 3659,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1475,
+          "text_tokens": 564
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "835d2163145ff3dd12cae7d08110086aa85fd0218a79cbd3ffaeba7cd6f9019c",
+      "status": "completed",
+      "latency_seconds": 66.837
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ffe3792af918d65465db",
+        "public:pbf_00174fd0f0ff663e96c2"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "76321733d59e6fca121e4dd9e94c7e6137603d86ae307e9b0487311a6eb36d82",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1643,
+        "prompt_tokens": 880,
+        "total_tokens": 2523,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1380,
+          "text_tokens": 263
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9c7298a2dc70b937666285b7e7a2a9d3135642f9c89b01ede00993e832e53f58",
+      "status": "completed",
+      "latency_seconds": 40.506
+    }
+  ],
+  "status": "completed"
+}

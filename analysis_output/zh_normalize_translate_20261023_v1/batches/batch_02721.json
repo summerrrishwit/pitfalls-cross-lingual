@@ -1,0 +1,157 @@
+{
+  "input_sha256": "9b7cabb2cbaa8cd705ab347c95966b63d33ad4c563c00b5f88020fdae793f71f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008983",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation covers 'typical wearing location on a body part.' The source question asks a commonsense/typical-usage association ('Where does a hat go when you wear it?'), not a stable reference fact. The Qwen-3.8-Max annotation also flags it as typical_action_or_location. Deferring rather than forcing a new relation for a non-reference common-sense association.",
+      "input_sha256": "61823bf67e68db3e2060502b81496f3e2eab295781bfdb06f3e7c2e783ac2835",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008986",
+      "decision": "ready",
+      "subject": "Cincinnati",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Ohio",
+      "canonical_fact": "Cincinnati is located in Ohio.",
+      "prompt_en": "In which U.S. state is the city of Cincinnati located?",
+      "evidence_quotes": [
+        "Cincinnati",
+        "ohio"
+      ],
+      "reason": "entity_to_containing_location fits exactly: Cincinnati (city) is geographically contained within Ohio (state). Both model extractions agree. The existing answer 'Ohio' matches source_answer 'ohio' (same entity, canonical capitalization). Prompt is option-free and does not reveal the answer.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Ohio",
+        "canonical_fact": "Cincinnati is located in Ohio.",
+        "subject": "Cincinnati",
+        "prompt_en": "In which U.S. state is the city of Cincinnati located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Ohio"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84bff66c82ae8ea74ed58b1f784238229bbd48d18760c902a56d65edc43efbdb",
+      "input_sha256": "557d3906b6c52aa6e86a5931cb23ab25281f0e22401a40b78b5789b5fb43554d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008986",
+      "input_sha256": "557d3906b6c52aa6e86a5931cb23ab25281f0e22401a40b78b5789b5fb43554d",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Ohio",
+        "canonical_fact": "Cincinnati is located in Ohio.",
+        "subject": "Cincinnati",
+        "prompt_en": "In which U.S. state is the city of Cincinnati located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Ohio"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84bff66c82ae8ea74ed58b1f784238229bbd48d18760c902a56d65edc43efbdb",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008986",
+        "subject_zh": "辛辛那提",
+        "prompt_zh": "辛辛那提市位于美国哪个州？",
+        "canonical_fact_zh": "辛辛那提位于俄亥俄州。",
+        "answer_zh": "俄亥俄州",
+        "answer_aliases_zh": [
+          "俄亥俄州"
+        ]
+      },
+      "translation_sha256": "cd95e19efc4f34216911b4e41f3eb4ff9a8bdd727b806d31a21e77ade23a021b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008983",
+        "historical:raw_commonsense_qa_008986"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4bdd5689c3adf5e712859699ec8108441d8f0371815f04047dbe9ef915b9d6e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1539,
+      "first_chunk_seconds": 33.08,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1617,
+        "prompt_tokens": 1610,
+        "total_tokens": 3227,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1201,
+          "text_tokens": 416
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "650ee1749b92c3535d4195ee5648faf11ccbdc1ca099a59a7a2698a9d070091b",
+      "status": "completed",
+      "latency_seconds": 52.665
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008986"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "adc25f89ebcebc5f44167c128381669ba393c346bac0ed6f84b7c4b12821aaab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 425,
+      "first_chunk_seconds": 2.86,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 422,
+        "prompt_tokens": 507,
+        "total_tokens": 929,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 339,
+          "text_tokens": 83
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "59d75ddc69f39400f79e643b3352dceb2d09f92dfd9546f5160fafbb54566db3",
+      "status": "completed",
+      "latency_seconds": 8.111
+    }
+  ],
+  "status": "completed"
+}

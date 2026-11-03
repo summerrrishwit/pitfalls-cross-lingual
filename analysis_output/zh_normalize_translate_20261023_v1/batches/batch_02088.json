@@ -1,0 +1,214 @@
+{
+  "input_sha256": "aecb54ffab52ee359aa1bd63a01b0c6fb51580ca69564b56d91f1df782377b6c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_fe7954b7364e3d7d99ef",
+      "decision": "ready",
+      "subject": "The turtle from Finding Nemo",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Crush",
+      "canonical_fact": "The turtle from Finding Nemo is named Crush.",
+      "prompt_en": "The turtle character in the film Finding Nemo is called",
+      "evidence_quotes": [
+        "what's the turtles name from finding nemo",
+        "crush"
+      ],
+      "reason": "The subject 'the turtle from Finding Nemo' is an identifying description that uniquely resolves to the character named Crush. description_to_entity fits: the description points to a unique entity. The answer 'Crush' is a literal substring of source_answer 'crush' (case-normalised). No existing relation in the catalog captures 'name of a described character' more precisely than description_to_entity.",
+      "english": {
+        "answer": "Crush",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The turtle character in the film Finding Nemo is called",
+        "direction": "identifying description -> entity",
+        "subject": "The turtle from Finding Nemo",
+        "canonical_fact": "The turtle from Finding Nemo is named Crush.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Crush"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8c0e21e9bea70448fff01d01b286084569ee96f9011742ba534b5f1d7a8cdd53",
+      "input_sha256": "85092019b0b350d6ae73d5ce2f1b8f42d1deaff3877c268c0de6a94bbdaf1a03",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_fe9d2b711c7335ab3e0b",
+      "decision": "ready",
+      "subject": "AH Protocol",
+      "relation_id": "entity_to_excluded_property",
+      "relation_definition": "A specific property, guarantee, or capability that the specified entity explicitly does not provide, stated in contrast to properties it does provide.",
+      "direction": "entity -> excluded property",
+      "answer": "Privacy",
+      "canonical_fact": "The AH Protocol provides source authentication and data integrity, but not Privacy.",
+      "prompt_en": "The AH Protocol provides source authentication and data integrity, but not",
+      "evidence_quotes": [
+        "The AH Protocol provides source authentication and data integrity, but not",
+        "Privacy"
+      ],
+      "reason": "No existing catalog relation captures a negative property (what a protocol does NOT provide). Proposed new relation entity_to_excluded_property with precise direction 'entity -> excluded property' to avoid forcing a broad category like entity_to_class. The answer 'Privacy' is a literal substring of source_answer. The qualifier 'but not' is preserved in the canonical fact and prompt.",
+      "english": {
+        "answer": "Privacy",
+        "relation_id": "entity_to_excluded_property",
+        "prompt_en": "The AH Protocol provides source authentication and data integrity, but not",
+        "direction": "entity -> excluded property",
+        "subject": "AH Protocol",
+        "canonical_fact": "The AH Protocol provides source authentication and data integrity, but not Privacy.",
+        "relation_definition": "A specific property, guarantee, or capability that the specified entity explicitly does not provide, stated in contrast to properties it does provide.",
+        "answer_aliases_en": [
+          "Privacy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_excluded_property",
+          "definition": "A specific property, guarantee, or capability that the specified entity explicitly does not provide, stated in contrast to properties it does provide.",
+          "direction": "entity -> excluded property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "33f13a688461ef3cddbebabd962eb1e1c75aff6b53ee906de7076b8c3fd9ea9e",
+      "input_sha256": "988076f251d0d6df9c98fd6b0373e38022d187f4cccfe7c648a74ab5fff9d4bc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_fe7954b7364e3d7d99ef",
+      "input_sha256": "85092019b0b350d6ae73d5ce2f1b8f42d1deaff3877c268c0de6a94bbdaf1a03",
+      "english": {
+        "answer": "Crush",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The turtle character in the film Finding Nemo is called",
+        "direction": "identifying description -> entity",
+        "subject": "The turtle from Finding Nemo",
+        "canonical_fact": "The turtle from Finding Nemo is named Crush.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Crush"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8c0e21e9bea70448fff01d01b286084569ee96f9011742ba534b5f1d7a8cdd53",
+      "translation": {
+        "record_id": "public:pbf_fe7954b7364e3d7d99ef",
+        "subject_zh": "《海底总动员》中的海龟",
+        "prompt_zh": "电影《海底总动员》中的海龟角色名叫",
+        "canonical_fact_zh": "《海底总动员》中的海龟名叫Crush。",
+        "answer_zh": "Crush",
+        "answer_aliases_zh": [
+          "Crush"
+        ]
+      },
+      "translation_sha256": "c5df9ee572cf168388caf4de9eee807eb1d8e503ac4c6da63feba95db974fc17"
+    },
+    {
+      "record_id": "public:pbf_fe9d2b711c7335ab3e0b",
+      "input_sha256": "988076f251d0d6df9c98fd6b0373e38022d187f4cccfe7c648a74ab5fff9d4bc",
+      "english": {
+        "answer": "Privacy",
+        "relation_id": "entity_to_excluded_property",
+        "prompt_en": "The AH Protocol provides source authentication and data integrity, but not",
+        "direction": "entity -> excluded property",
+        "subject": "AH Protocol",
+        "canonical_fact": "The AH Protocol provides source authentication and data integrity, but not Privacy.",
+        "relation_definition": "A specific property, guarantee, or capability that the specified entity explicitly does not provide, stated in contrast to properties it does provide.",
+        "answer_aliases_en": [
+          "Privacy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_excluded_property",
+          "definition": "A specific property, guarantee, or capability that the specified entity explicitly does not provide, stated in contrast to properties it does provide.",
+          "direction": "entity -> excluded property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "33f13a688461ef3cddbebabd962eb1e1c75aff6b53ee906de7076b8c3fd9ea9e",
+      "translation": {
+        "record_id": "public:pbf_fe9d2b711c7335ab3e0b",
+        "subject_zh": "AH协议",
+        "prompt_zh": "AH协议提供源认证和数据完整性，但不提供",
+        "canonical_fact_zh": "AH协议提供源认证和数据完整性，但不提供隐私。",
+        "answer_zh": "隐私",
+        "answer_aliases_zh": [
+          "隐私"
+        ]
+      },
+      "translation_sha256": "e765901a95d8cba18014159a6d92f2b3d1e70edb960cf22cb3d3355bc829bea7"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fe7954b7364e3d7d99ef",
+        "public:pbf_fe9d2b711c7335ab3e0b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7e902938e7b6c22a3cca830eaa7bd0da11554607bb7d5941f0deea247dae93af",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2354,
+      "first_chunk_seconds": 39.73,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2353,
+        "prompt_tokens": 1556,
+        "total_tokens": 3909,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1817,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8aa4107571776c87e2f4cafe22bd5135b02bf7c4916b3cde58d4b79579d77924",
+      "status": "completed",
+      "latency_seconds": 67.436
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fe7954b7364e3d7d99ef",
+        "public:pbf_fe9d2b711c7335ab3e0b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "044987d2c3236d9eacc5c2cd93e46049263ec38e441f4eac49507598004f72c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1292,
+      "first_chunk_seconds": 46.185,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1315,
+        "prompt_tokens": 826,
+        "total_tokens": 2141,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1144,
+          "text_tokens": 171
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "674c7e079a16ebfb85579c0c68f806c57096c1ecf0ac282f9e8003029d7c9908",
+      "status": "completed",
+      "latency_seconds": 62.937
+    }
+  ],
+  "status": "completed"
+}

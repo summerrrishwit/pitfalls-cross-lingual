@@ -1,0 +1,193 @@
+{
+  "input_sha256": "344de0b9e7b439ff2bcfb3df512081626f66a3ca819cb515b4ea28e4d161f32d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000193",
+      "decision": "ready",
+      "subject": "Traits (genetics)",
+      "relation_id": "trait_to_determining_factor",
+      "relation_definition": "Genetic or molecular factors that control or determine the expression of a specified trait; retains qualifiers such as 'multiple' when stated.",
+      "direction": "trait -> determining factor",
+      "answer": "genes",
+      "canonical_fact": "Traits may be controlled by multiple alleles or multiple genes.",
+      "prompt_en": "Besides multiple alleles, traits may also be controlled by multiple what?",
+      "evidence_quotes": [
+        "Traits may also be controlled by multiple alleles or multiple what?",
+        "genes"
+      ],
+      "reason": "Source question and answer clearly establish that traits are controlled by multiple alleles or multiple genes. No existing catalog relation precisely captures 'what determines/controls a trait'; proposing the new relation 'trait_to_determining_factor' to avoid forcing a broad category. Answer 'genes' is taken verbatim from source_answer.",
+      "english": {
+        "prompt_en": "Besides multiple alleles, traits may also be controlled by multiple what?",
+        "relation_definition": "Genetic or molecular factors that control or determine the expression of a specified trait; retains qualifiers such as 'multiple' when stated.",
+        "answer": "genes",
+        "canonical_fact": "Traits may be controlled by multiple alleles or multiple genes.",
+        "direction": "trait -> determining factor",
+        "relation_id": "trait_to_determining_factor",
+        "subject": "Traits (genetics)",
+        "answer_aliases_en": [
+          "genes"
+        ],
+        "relation_spec": {
+          "id": "trait_to_determining_factor",
+          "definition": "Genetic or molecular factors that control or determine the expression of a specified trait; retains qualifiers such as 'multiple' when stated.",
+          "direction": "trait -> determining factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "527a63c7c2e3ef5cdd94817de91c864b0ef14954c7f56ad0a0316b1ec48f3b4b",
+      "input_sha256": "e0529bc0f1071dcaaf9c5b727d185f3287861bf416fbfef08f1f6d32fb25a7c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000209",
+      "decision": "ready",
+      "subject": "Formal charge (chemistry)",
+      "relation_id": "concept_to_scope_limitation",
+      "relation_definition": "Aspect or quantity that a given scientific concept explicitly does not represent, indicate, or capture; retains the stated negation and scope.",
+      "direction": "concept -> aspect it does not indicate",
+      "answer": "actual charges",
+      "canonical_fact": "Formal charge is only a useful bookkeeping procedure; it does not indicate the presence of actual charges.",
+      "prompt_en": "Formal charge is only a bookkeeping procedure; what does it not indicate the presence of?",
+      "evidence_quotes": [
+        "formal charge is only a useful bookkeeping procedure; it does not indicate the presence of these?",
+        "actual charges"
+      ],
+      "reason": "Source explicitly states that formal charge does not indicate the presence of actual charges. No existing catalog relation captures 'what a concept does NOT represent'; proposing the new relation 'concept_to_scope_limitation' for precision. Answer 'actual charges' is taken verbatim from source_answer.",
+      "english": {
+        "prompt_en": "Formal charge is only a bookkeeping procedure; what does it not indicate the presence of?",
+        "relation_definition": "Aspect or quantity that a given scientific concept explicitly does not represent, indicate, or capture; retains the stated negation and scope.",
+        "answer": "actual charges",
+        "canonical_fact": "Formal charge is only a useful bookkeeping procedure; it does not indicate the presence of actual charges.",
+        "direction": "concept -> aspect it does not indicate",
+        "relation_id": "concept_to_scope_limitation",
+        "subject": "Formal charge (chemistry)",
+        "answer_aliases_en": [
+          "actual charges"
+        ],
+        "relation_spec": {
+          "id": "concept_to_scope_limitation",
+          "definition": "Aspect or quantity that a given scientific concept explicitly does not represent, indicate, or capture; retains the stated negation and scope.",
+          "direction": "concept -> aspect it does not indicate"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cc3d2bac6372e2d94031fc8d228ad0523d981e287e5ae49fd06d242c9566fcb3",
+      "input_sha256": "b3c633818e5f027f70ef3237f1b4d219a15c0b90b867954870654589b7f2cf99",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000193",
+        "historical:raw_sciq_000209"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fb6108aa3afe8711ddf5491c7058215b9110adaf68e2ec99365b5e3d78a49ccd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2570,
+      "first_chunk_seconds": 66.556,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2723,
+        "prompt_tokens": 1614,
+        "total_tokens": 4337,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2188,
+          "text_tokens": 535
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "781772a26659d8a8d83ff3d902a011e61bec813aa84353a269461782046bd1bc",
+      "status": "completed",
+      "latency_seconds": 114.388
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000193",
+        "historical:raw_sciq_000209"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5b2413c9fe8b62e0e688e43b9e05f51fa31af34990bfd6faa1a70859257dab09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 76.673
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000193",
+        "historical:raw_sciq_000209"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5b2413c9fe8b62e0e688e43b9e05f51fa31af34990bfd6faa1a70859257dab09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 761,
+      "first_chunk_seconds": 62.799,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 776,
+        "prompt_tokens": 883,
+        "total_tokens": 1659,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 545,
+          "text_tokens": 231
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a84293e59be820e1b62e8994ee0aeb55ef708f1e617459c0cd7939b381bd71a8",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 74.606,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000193",
+        "historical:raw_sciq_000209"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3bd255847bb5956d57f131bb0d91f1b2963c434ebb94b97923182a33f876aa2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 971,
+      "first_chunk_seconds": 62.448,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 997,
+        "prompt_tokens": 901,
+        "total_tokens": 1898,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 766,
+          "text_tokens": 231
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ed700c9068bdcb5a36a867ec90f56aaa7123805097ad217ab3a7efdf23cb5967",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 86.589,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,234 @@
+{
+  "input_sha256": "3171f219d4cad24211aee0484c782c284ba6ccc248d6d02163ae034c55fd7973",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f76b72373291ddbd859f",
+      "decision": "ready",
+      "subject": "NBA player who received the most technical fouls",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Rasheed Wallace",
+      "canonical_fact": "Rasheed Wallace is the NBA player who received the most technical fouls.",
+      "prompt_en": "Who received the most technical fouls in the NBA?",
+      "evidence_quotes": [
+        "who got the most technical fouls in the nba",
+        "Rasheed Wallace"
+      ],
+      "reason": "The source question poses an identifying description (NBA player with the most technical fouls) that uniquely maps to an entity. description_to_entity fits exactly: the subject is re-expressed as the qualifying description rather than the bare group 'NBA players' to match the relation's direction (description → entity). The answer 'Rasheed Wallace' is a literal match to source_answer.",
+      "english": {
+        "answer": "Rasheed Wallace",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who received the most technical fouls in the NBA?",
+        "direction": "identifying description -> entity",
+        "subject": "NBA player who received the most technical fouls",
+        "canonical_fact": "Rasheed Wallace is the NBA player who received the most technical fouls.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Rasheed Wallace",
+          "Rasheed Abdul Wallace"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "92c8a4541a8e778954c28e4685bd294d3462af015b5dae00d9362bf94a0ba401",
+      "input_sha256": "dd7d96a29538ae24ecb4427fc860a94e1d58b811e3d8f84e98598d354f37c160",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f780fdbf43777102910e",
+      "decision": "ready",
+      "subject": "enlarged submandibular salivary gland",
+      "relation_id": "entity_to_clinical_property",
+      "relation_definition": "A physical or observable clinical property expected of a specified medical entity in a stated context; excludes diagnosis, treatment, etiology, or arbitrary adjectives.",
+      "direction": "specified medical entity -> expected clinical property",
+      "answer": "palpable both intra- and extraorally",
+      "canonical_fact": "An enlarged submandibular salivary gland is expected to be palpable both intra- and extraorally.",
+      "prompt_en": "What is the expected palpability of an enlarged submandibular salivary gland?",
+      "evidence_quotes": [
+        "You expect the enlarged gland",
+        "to be palpable both intra- and extraorally."
+      ],
+      "reason": "No catalog relation captures a clinical/physical property of a specified medical entity; entity_to_class explicitly excludes arbitrary attributes. A new precise relation entity_to_clinical_property is proposed. The answer 'palpable both intra- and extraorally' is a concise literal substring of the source answer 'to be palpable both intra- and extraorally.'",
+      "english": {
+        "answer": "palpable both intra- and extraorally",
+        "relation_id": "entity_to_clinical_property",
+        "prompt_en": "What is the expected palpability of an enlarged submandibular salivary gland?",
+        "direction": "specified medical entity -> expected clinical property",
+        "subject": "enlarged submandibular salivary gland",
+        "canonical_fact": "An enlarged submandibular salivary gland is expected to be palpable both intra- and extraorally.",
+        "relation_definition": "A physical or observable clinical property expected of a specified medical entity in a stated context; excludes diagnosis, treatment, etiology, or arbitrary adjectives.",
+        "answer_aliases_en": [
+          "palpable both intra- and extraorally",
+          "to be palpable both intra- and extraorally."
+        ],
+        "relation_spec": {
+          "id": "entity_to_clinical_property",
+          "definition": "A physical or observable clinical property expected of a specified medical entity in a stated context; excludes diagnosis, treatment, etiology, or arbitrary adjectives.",
+          "direction": "specified medical entity -> expected clinical property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a2e238845e41f31bf9a00f032b64e9a3773359adf2ac0bb4d90adc989b56f76",
+      "input_sha256": "5f89fcd99d083d2c64a4216f12f11166723882f5004a3dd29038081a25ccb944",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f76b72373291ddbd859f",
+      "input_sha256": "dd7d96a29538ae24ecb4427fc860a94e1d58b811e3d8f84e98598d354f37c160",
+      "english": {
+        "answer": "Rasheed Wallace",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who received the most technical fouls in the NBA?",
+        "direction": "identifying description -> entity",
+        "subject": "NBA player who received the most technical fouls",
+        "canonical_fact": "Rasheed Wallace is the NBA player who received the most technical fouls.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Rasheed Wallace",
+          "Rasheed Abdul Wallace"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "92c8a4541a8e778954c28e4685bd294d3462af015b5dae00d9362bf94a0ba401",
+      "translation": {
+        "record_id": "public:pbf_f76b72373291ddbd859f",
+        "subject_zh": "NBA中受到技术犯规最多的球员",
+        "prompt_zh": "NBA中谁受到的技术犯规最多？",
+        "canonical_fact_zh": "拉希德·华莱士是NBA中受到技术犯规最多的球员。",
+        "answer_zh": "拉希德·华莱士",
+        "answer_aliases_zh": [
+          "拉希德·华莱士",
+          "拉希德·阿卜杜勒·华莱士"
+        ]
+      },
+      "translation_sha256": "443d5c86d44a7ad4d499d159e1e2b29aaeeb4cda93626d37a25d72750146a67f"
+    },
+    {
+      "record_id": "public:pbf_f780fdbf43777102910e",
+      "input_sha256": "5f89fcd99d083d2c64a4216f12f11166723882f5004a3dd29038081a25ccb944",
+      "english": {
+        "answer": "palpable both intra- and extraorally",
+        "relation_id": "entity_to_clinical_property",
+        "prompt_en": "What is the expected palpability of an enlarged submandibular salivary gland?",
+        "direction": "specified medical entity -> expected clinical property",
+        "subject": "enlarged submandibular salivary gland",
+        "canonical_fact": "An enlarged submandibular salivary gland is expected to be palpable both intra- and extraorally.",
+        "relation_definition": "A physical or observable clinical property expected of a specified medical entity in a stated context; excludes diagnosis, treatment, etiology, or arbitrary adjectives.",
+        "answer_aliases_en": [
+          "palpable both intra- and extraorally",
+          "to be palpable both intra- and extraorally."
+        ],
+        "relation_spec": {
+          "id": "entity_to_clinical_property",
+          "definition": "A physical or observable clinical property expected of a specified medical entity in a stated context; excludes diagnosis, treatment, etiology, or arbitrary adjectives.",
+          "direction": "specified medical entity -> expected clinical property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2a2e238845e41f31bf9a00f032b64e9a3773359adf2ac0bb4d90adc989b56f76",
+      "translation": {
+        "record_id": "public:pbf_f780fdbf43777102910e",
+        "subject_zh": "肿大的下颌下唾液腺",
+        "prompt_zh": "肿大的下颌下唾液腺预期具有怎样的可触及性？",
+        "canonical_fact_zh": "肿大的下颌下唾液腺预期在口内和口外均可触及。",
+        "answer_zh": "口内和口外均可触及",
+        "answer_aliases_zh": [
+          "口内和口外均可触及",
+          "可在口内和口外触及。"
+        ]
+      },
+      "translation_sha256": "6506d5f830e2737318d7940356648bfff0752d788fc1aecdc43d54df368a5372"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f76b72373291ddbd859f",
+        "public:pbf_f780fdbf43777102910e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9c172eec2e06a355dd8dfda4d9369a3e374cef1b312f55d9d1d4bbc1cff7a945",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.176
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f76b72373291ddbd859f",
+        "public:pbf_f780fdbf43777102910e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9c172eec2e06a355dd8dfda4d9369a3e374cef1b312f55d9d1d4bbc1cff7a945",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3147,
+      "first_chunk_seconds": 15.313,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3407,
+        "prompt_tokens": 1691,
+        "total_tokens": 5098,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2813,
+          "text_tokens": 594
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "345a54c872a84d883e70bfea41fbcd4c77775d5a32db064e4ab4892a94f4e478",
+      "status": "completed",
+      "latency_seconds": 56.005
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f76b72373291ddbd859f",
+        "public:pbf_f780fdbf43777102910e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b741d96c89fe274fc261f30b12f45177ebea6b2d12b6adaf18407eb59ee28f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1391,
+      "first_chunk_seconds": 12.624,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1487,
+        "prompt_tokens": 933,
+        "total_tokens": 2420,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1189,
+          "text_tokens": 298
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "15f084e1c8710fc631a3dd8550c5705b488678f279ed0cdf9bb244367cf34760",
+      "status": "completed",
+      "latency_seconds": 35.062
+    }
+  ],
+  "status": "completed"
+}

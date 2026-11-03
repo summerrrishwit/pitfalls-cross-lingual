@@ -1,0 +1,215 @@
+{
+  "input_sha256": "9e04befc3fb466bb0b491073318646b743e64b501e9357fe175cf72c43fd2fdb",
+  "normalized": [
+    {
+      "record_id": "public:pbf_aa7867b020900c1256fa",
+      "decision": "ready",
+      "subject": "antibiotics prior to catheterization",
+      "relation_id": "treatment_to_indicated_condition",
+      "relation_definition": "A specific patient condition, implanted device, or characteristic that constitutes a standard medical indication for a specified treatment or procedure.",
+      "direction": "medical treatment/procedure -> patient condition making it indicated",
+      "answer": "artificial heart valve",
+      "canonical_fact": "Antibiotics prior to catheterization are indicated for patients with an artificial heart valve.",
+      "prompt_en": "Antibiotics prior to catheterization are indicated for patients with an",
+      "evidence_quotes": [
+        "If patient has an artificial heart valve."
+      ],
+      "reason": "Source answer explicitly states the indication; no existing catalog relation captures a treatment-to-indication link, so a precise new relation is proposed. The fact is a single necessary condition, not an exhaustive list, so the canonical fact uses 'indicated for' without claiming exclusivity.",
+      "english": {
+        "answer": "artificial heart valve",
+        "relation_id": "treatment_to_indicated_condition",
+        "prompt_en": "Antibiotics prior to catheterization are indicated for patients with an",
+        "direction": "medical treatment/procedure -> patient condition making it indicated",
+        "subject": "antibiotics prior to catheterization",
+        "canonical_fact": "Antibiotics prior to catheterization are indicated for patients with an artificial heart valve.",
+        "relation_definition": "A specific patient condition, implanted device, or characteristic that constitutes a standard medical indication for a specified treatment or procedure.",
+        "answer_aliases_en": [
+          "artificial heart valve",
+          "If patient has an artificial heart valve."
+        ],
+        "relation_spec": {
+          "id": "treatment_to_indicated_condition",
+          "definition": "A specific patient condition, implanted device, or characteristic that constitutes a standard medical indication for a specified treatment or procedure.",
+          "direction": "medical treatment/procedure -> patient condition making it indicated"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8a3ca8ff63aa9ee70116407c2375174422283c990c7482ae68c67fa751863ee4",
+      "input_sha256": "87eb5926076fbb74d106ba2a63684681c242a63b9a9e68b9b8703ea6d45821ca",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_aa7d7352654a48e5eb60",
+      "decision": "ready",
+      "subject": "every man in a body politic under one government according to Locke",
+      "relation_id": "principle_to_decision_body",
+      "relation_definition": "The specific body or mechanism whose determination a subject is obligated to submit to, as specified by a named political or legal theorist or framework.",
+      "direction": "political/legal principle (attributed to theorist) -> decision-making body",
+      "answer": "the majority",
+      "canonical_fact": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of the majority.",
+      "prompt_en": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of",
+      "evidence_quotes": [
+        "the majority"
+      ],
+      "reason": "No existing catalog relation fits a theorist-attributed obligation-to-authority link. Proposed a precise new relation. The source question and answer together confirm Locke's specific claim that the binding determination belongs to the majority; the prompt is option-free and omits the answer.",
+      "english": {
+        "answer": "the majority",
+        "relation_id": "principle_to_decision_body",
+        "prompt_en": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of",
+        "direction": "political/legal principle (attributed to theorist) -> decision-making body",
+        "subject": "every man in a body politic under one government according to Locke",
+        "canonical_fact": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of the majority.",
+        "relation_definition": "The specific body or mechanism whose determination a subject is obligated to submit to, as specified by a named political or legal theorist or framework.",
+        "answer_aliases_en": [
+          "the majority"
+        ],
+        "relation_spec": {
+          "id": "principle_to_decision_body",
+          "definition": "The specific body or mechanism whose determination a subject is obligated to submit to, as specified by a named political or legal theorist or framework.",
+          "direction": "political/legal principle (attributed to theorist) -> decision-making body"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2334e4beda4e56f58b37ae6866a528086952f4fcaec562fddb9c53b8107d589a",
+      "input_sha256": "424ecc626996353be0692fd09b2470e1134b8c4109dfe4e8cfd9ef847496f30b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_aa7867b020900c1256fa",
+      "input_sha256": "87eb5926076fbb74d106ba2a63684681c242a63b9a9e68b9b8703ea6d45821ca",
+      "english": {
+        "answer": "artificial heart valve",
+        "relation_id": "treatment_to_indicated_condition",
+        "prompt_en": "Antibiotics prior to catheterization are indicated for patients with an",
+        "direction": "medical treatment/procedure -> patient condition making it indicated",
+        "subject": "antibiotics prior to catheterization",
+        "canonical_fact": "Antibiotics prior to catheterization are indicated for patients with an artificial heart valve.",
+        "relation_definition": "A specific patient condition, implanted device, or characteristic that constitutes a standard medical indication for a specified treatment or procedure.",
+        "answer_aliases_en": [
+          "artificial heart valve",
+          "If patient has an artificial heart valve."
+        ],
+        "relation_spec": {
+          "id": "treatment_to_indicated_condition",
+          "definition": "A specific patient condition, implanted device, or characteristic that constitutes a standard medical indication for a specified treatment or procedure.",
+          "direction": "medical treatment/procedure -> patient condition making it indicated"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8a3ca8ff63aa9ee70116407c2375174422283c990c7482ae68c67fa751863ee4",
+      "translation": {
+        "record_id": "public:pbf_aa7867b020900c1256fa",
+        "subject_zh": "导管术前使用抗生素",
+        "prompt_zh": "导管术前使用抗生素适用于患有____的患者",
+        "canonical_fact_zh": "导管术前使用抗生素适用于患有人工心脏瓣膜的患者。",
+        "answer_zh": "人工心脏瓣膜",
+        "answer_aliases_zh": [
+          "人工心脏瓣膜",
+          "如果患者有人工心脏瓣膜。"
+        ]
+      },
+      "translation_sha256": "9a93ead165cc961b80589595470768e8ad63cf44e0a6341149b9c751df292811"
+    },
+    {
+      "record_id": "public:pbf_aa7d7352654a48e5eb60",
+      "input_sha256": "424ecc626996353be0692fd09b2470e1134b8c4109dfe4e8cfd9ef847496f30b",
+      "english": {
+        "answer": "the majority",
+        "relation_id": "principle_to_decision_body",
+        "prompt_en": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of",
+        "direction": "political/legal principle (attributed to theorist) -> decision-making body",
+        "subject": "every man in a body politic under one government according to Locke",
+        "canonical_fact": "According to Locke, every man in a body politic under one government is obligated to submit to the determination of the majority.",
+        "relation_definition": "The specific body or mechanism whose determination a subject is obligated to submit to, as specified by a named political or legal theorist or framework.",
+        "answer_aliases_en": [
+          "the majority"
+        ],
+        "relation_spec": {
+          "id": "principle_to_decision_body",
+          "definition": "The specific body or mechanism whose determination a subject is obligated to submit to, as specified by a named political or legal theorist or framework.",
+          "direction": "political/legal principle (attributed to theorist) -> decision-making body"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2334e4beda4e56f58b37ae6866a528086952f4fcaec562fddb9c53b8107d589a",
+      "translation": {
+        "record_id": "public:pbf_aa7d7352654a48e5eb60",
+        "subject_zh": "根据洛克的观点，同一政府下政治体中的每个人",
+        "prompt_zh": "根据洛克的观点，同一政府下政治体中的每个人有义务服从____的决定",
+        "canonical_fact_zh": "根据洛克的观点，同一政府下政治体中的每个人有义务服从多数的决定。",
+        "answer_zh": "多数",
+        "answer_aliases_zh": [
+          "多数"
+        ]
+      },
+      "translation_sha256": "8d20a0789ca9c21a0b0c565e0dc52fc7af94f58d236fa46cdad794efe8374fb5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_aa7867b020900c1256fa",
+        "public:pbf_aa7d7352654a48e5eb60"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0c201773b7cab5a78827b068855733b1e452c85e1abf8c1311a73a51396600ab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2117,
+      "first_chunk_seconds": 34.475,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2177,
+        "prompt_tokens": 1704,
+        "total_tokens": 3881,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1627,
+          "text_tokens": 550
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ff77a1562185a8fd14e6008026afb5e1e876cccc0d1f7834939475b2085b3984",
+      "status": "completed",
+      "latency_seconds": 56.597
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_aa7867b020900c1256fa",
+        "public:pbf_aa7d7352654a48e5eb60"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5802e9ae4ffc2665e5bc03478db03833e690cfbf21576707607bd345700d60bc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1358,
+      "first_chunk_seconds": 29.051,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1355,
+        "prompt_tokens": 960,
+        "total_tokens": 2315,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1085,
+          "text_tokens": 270
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f7ffd1ea9dfe097e4c475c129c343188d05041fc1cbc0543a0f8115331fa0496",
+      "status": "completed",
+      "latency_seconds": 39.7
+    }
+  ],
+  "status": "completed"
+}

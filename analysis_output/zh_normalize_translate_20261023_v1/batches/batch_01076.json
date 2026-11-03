@@ -1,0 +1,157 @@
+{
+  "input_sha256": "b05570e27e64bfcd65a2d63e0e1300e7f08350c190d2f17a1692e5ba9a71cf96",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5b4b4067ea05fb7c4a36",
+      "decision": "ready",
+      "subject": "Pirates of the Caribbean score",
+      "relation_id": "work_to_composer",
+      "relation_definition": "Named composer of a specified musical composition or film score; disambiguate specific work or version when necessary.",
+      "direction": "specified musical work/score -> composer",
+      "answer": "Klaus Badelt",
+      "canonical_fact": "Klaus Badelt composed the Pirates of the Caribbean score.",
+      "prompt_en": "Who wrote the Pirates of the Caribbean score?",
+      "evidence_quotes": [
+        "who wrote the pirates of the caribbean score",
+        "Klaus Badelt"
+      ],
+      "reason": "The source Q&A directly states Klaus Badelt as the composer of the Pirates of the Caribbean score. No existing catalog relation covers musical composition authorship (written_work_to_author is for textual works), so a precise new relation 'work_to_composer' is proposed with explicit direction and definition.",
+      "english": {
+        "answer": "Klaus Badelt",
+        "relation_id": "work_to_composer",
+        "prompt_en": "Who wrote the Pirates of the Caribbean score?",
+        "direction": "specified musical work/score -> composer",
+        "subject": "Pirates of the Caribbean score",
+        "canonical_fact": "Klaus Badelt composed the Pirates of the Caribbean score.",
+        "relation_definition": "Named composer of a specified musical composition or film score; disambiguate specific work or version when necessary.",
+        "answer_aliases_en": [
+          "Klaus Badelt"
+        ],
+        "relation_spec": {
+          "id": "work_to_composer",
+          "definition": "Named composer of a specified musical composition or film score; disambiguate specific work or version when necessary.",
+          "direction": "specified musical work/score -> composer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da5fe79d740f4f1dea8d3e5caecce8466fed5e11f203fff4b7cf72bea03c4d99",
+      "input_sha256": "fb9513f88e8463c1de270297395694daa73e1ee747bf43292cd786d7994e5cca",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5b515f61b6734cb2b308",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation precisely fits 'entity has a moral/philosophical property' (direct moral standing). The subject 'Mary' is a hypothetical placeholder in a specific ethics thought experiment, making the claim context-dependent rather than a stable reusable fact. Proposing a new relation would be too narrow and not generalizable; deferring without forcing a broad category.",
+      "input_sha256": "992642676ec8df02d5b8ca6880055e2379891f30db93798ed8b917c0422b442b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_5b4b4067ea05fb7c4a36",
+      "input_sha256": "fb9513f88e8463c1de270297395694daa73e1ee747bf43292cd786d7994e5cca",
+      "english": {
+        "answer": "Klaus Badelt",
+        "relation_id": "work_to_composer",
+        "prompt_en": "Who wrote the Pirates of the Caribbean score?",
+        "direction": "specified musical work/score -> composer",
+        "subject": "Pirates of the Caribbean score",
+        "canonical_fact": "Klaus Badelt composed the Pirates of the Caribbean score.",
+        "relation_definition": "Named composer of a specified musical composition or film score; disambiguate specific work or version when necessary.",
+        "answer_aliases_en": [
+          "Klaus Badelt"
+        ],
+        "relation_spec": {
+          "id": "work_to_composer",
+          "definition": "Named composer of a specified musical composition or film score; disambiguate specific work or version when necessary.",
+          "direction": "specified musical work/score -> composer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da5fe79d740f4f1dea8d3e5caecce8466fed5e11f203fff4b7cf72bea03c4d99",
+      "translation": {
+        "record_id": "public:pbf_5b4b4067ea05fb7c4a36",
+        "subject_zh": "《加勒比海盗》配乐",
+        "prompt_zh": "《加勒比海盗》的配乐是由谁创作的？",
+        "canonical_fact_zh": "克劳斯·巴德尔创作了《加勒比海盗》的配乐。",
+        "answer_zh": "克劳斯·巴德尔",
+        "answer_aliases_zh": [
+          "克劳斯·巴德尔"
+        ]
+      },
+      "translation_sha256": "812ae004e450e1bff6e030d9e8bba1e19a31160bcb1e5ce24784ec9517be3351"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5b4b4067ea05fb7c4a36",
+        "public:pbf_5b515f61b6734cb2b308"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7479cd951356d21dc75ae4bd0ff4ad64d2599d7b675f1e2e4e0bf7edcbf3707c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2021,
+      "first_chunk_seconds": 38.353,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2102,
+        "prompt_tokens": 1583,
+        "total_tokens": 3685,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1652,
+          "text_tokens": 450
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "439b31526c5d9b0cfe3828fdd3435e75720227f74e7051a5f841a871685aed10",
+      "status": "completed",
+      "latency_seconds": 75.498
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5b4b4067ea05fb7c4a36"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4eff115023ad5b740225381bd3e5de43cc20805c814c98db60e74a15f902f575",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1103,
+      "first_chunk_seconds": 25.197,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1132,
+        "prompt_tokens": 531,
+        "total_tokens": 1663,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1035,
+          "text_tokens": 97
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1680d06be3e461f93786caf766527381c855436e2a26a0ef8d9ef66be31851e4",
+      "status": "completed",
+      "latency_seconds": 51.409
+    }
+  ],
+  "status": "completed"
+}

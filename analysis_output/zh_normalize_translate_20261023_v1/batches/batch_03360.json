@@ -1,0 +1,157 @@
+{
+  "input_sha256": "77b7cf71e6e12987596038097616a4716f6d575fbf9ff87a207ed6dbb0f29ad1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000632",
+      "decision": "ready",
+      "subject": "a container whose top you press down and twist to get a pill out",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "medicine bottle",
+      "canonical_fact": "A container whose top you press down and twist to get a pill out is called a medicine bottle.",
+      "prompt_en": "What do you call a container whose top you press down and twist to get a pill out?",
+      "evidence_quotes": [
+        "press down and twist the top of this to get your pill out",
+        "medicine bottle"
+      ],
+      "reason": "The question supplies an identifying description (press-down-and-twist cap for pill access) and asks for the conventional term; the source answer is the term 'medicine bottle.' This maps precisely to description_to_term in the catalog.",
+      "english": {
+        "prompt_en": "What do you call a container whose top you press down and twist to get a pill out?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "medicine bottle",
+        "canonical_fact": "A container whose top you press down and twist to get a pill out is called a medicine bottle.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "a container whose top you press down and twist to get a pill out",
+        "answer_aliases_en": [
+          "medicine bottle"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "942cc10d548edf14ad0b3e75db3e075d0f001698fc3c7ed9c56bf012101d7f7b",
+      "input_sha256": "c6e084d5f93d1197c4de60be78169df4816b85feb13b4e01d7abe8d764cfe8de",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000652",
+      "decision": "ready",
+      "subject": "flirting (at the primal/basic level)",
+      "relation_id": "action_to_causal_outcome",
+      "relation_definition": "The stated outcome or effect caused by a specified action or behavior, retaining any scope or qualifier on the cause.",
+      "direction": "action -> outcome",
+      "answer": "sexual excitement",
+      "canonical_fact": "At the primal basics, flirting causes sexual excitement.",
+      "prompt_en": "At the primal basics, what does flirting cause?",
+      "evidence_quotes": [
+        "When you get down to the primal basics, flirting causes what?",
+        "sexual excitement"
+      ],
+      "reason": "No existing catalog relation captures a causal 'action → effect' link. A new precise relation 'action_to_causal_outcome' is proposed with the qualifier 'at the primal basics' preserved from the source question. The source answer 'sexual excitement' is a direct literal substring and is retained exactly.",
+      "english": {
+        "prompt_en": "At the primal basics, what does flirting cause?",
+        "relation_definition": "The stated outcome or effect caused by a specified action or behavior, retaining any scope or qualifier on the cause.",
+        "answer": "sexual excitement",
+        "canonical_fact": "At the primal basics, flirting causes sexual excitement.",
+        "direction": "action -> outcome",
+        "relation_id": "action_to_causal_outcome",
+        "subject": "flirting (at the primal/basic level)",
+        "answer_aliases_en": [
+          "sexual excitement"
+        ],
+        "relation_spec": {
+          "id": "action_to_causal_outcome",
+          "definition": "The stated outcome or effect caused by a specified action or behavior, retaining any scope or qualifier on the cause.",
+          "direction": "action -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7ddfcf640a638f571a8710dbb55be678059afb814f369bc09e034151a37948c4",
+      "input_sha256": "08ffe00d74bcd053b3397952fc8397dbbde5574010967f455616a7ed509e8185",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000632",
+        "historical:raw_commonsense_qa_000652"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f86531ccf908ead2fb52427c04253d6298fa12511438a56223e9e7799a8c9a1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1532,
+      "first_chunk_seconds": 62.477,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1658,
+        "prompt_tokens": 1610,
+        "total_tokens": 3268,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1268,
+          "text_tokens": 390
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81a09cbc6fafcbb078afc2318e637e9743610d0a2d84b2974534591536be6cf0",
+      "status": "completed",
+      "latency_seconds": 93.076
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000632",
+        "historical:raw_commonsense_qa_000652"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e903bbd98ac661c87bebfc127e3ee9db1322b215800fdfa0dabf72b77c73f0f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.939
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000632",
+        "historical:raw_commonsense_qa_000652"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e903bbd98ac661c87bebfc127e3ee9db1322b215800fdfa0dabf72b77c73f0f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.829
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000632",
+        "historical:raw_commonsense_qa_000652"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e903bbd98ac661c87bebfc127e3ee9db1322b215800fdfa0dabf72b77c73f0f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.54
+    }
+  ],
+  "status": "failed"
+}

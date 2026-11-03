@@ -1,0 +1,286 @@
+{
+  "input_sha256": "0de659eca6a80811cd50a79243eb76d47275da168d3c613124f37aa225c5965d",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f8974e9b367711e53e9f",
+      "decision": "ready",
+      "subject": "Finn Wolfhard",
+      "relation_id": "actor_to_character",
+      "relation_definition": "Character portrayed by a named actor in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "actor -> character in specified work/version",
+      "answer": "Mike Wheeler",
+      "canonical_fact": "Finn Wolfhard plays Mike Wheeler in Stranger Things.",
+      "prompt_en": "In the TV series Stranger Things, which character does Finn Wolfhard portray?",
+      "evidence_quotes": [
+        "who does finn wolfhard play in stranger things",
+        "Mike Wheeler"
+      ],
+      "reason": "Source question and answer directly state that Finn Wolfhard plays Mike Wheeler in Stranger Things. The catalog's character_to_actor relation has direction 'character -> actor', which is the inverse of our data (actor -> character). No existing relation matches this direction, so I propose actor_to_character with an explicit definition. Evidence is a literal substring from both source fields.",
+      "english": {
+        "answer": "Mike Wheeler",
+        "relation_id": "actor_to_character",
+        "prompt_en": "In the TV series Stranger Things, which character does Finn Wolfhard portray?",
+        "direction": "actor -> character in specified work/version",
+        "subject": "Finn Wolfhard",
+        "canonical_fact": "Finn Wolfhard plays Mike Wheeler in Stranger Things.",
+        "relation_definition": "Character portrayed by a named actor in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Mike Wheeler",
+          "Mike Wheeler (Stranger Things character)"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a named actor in a specified work and version; not a voice actor unless explicitly separated.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "903e1af7ea96d6eecf72f246e252dec8800cf42fc79e282734237dc4f902df39",
+      "input_sha256": "432b04b0a9e96e2f8283fbf6f3b60265ea4700e243eb6d5c61c5500968bde86e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f8bcbfec299cedc7cc94",
+      "decision": "ready",
+      "subject": "Louisiana Territory",
+      "relation_id": "territory_to_prior_sovereign",
+      "relation_definition": "The sovereign power that held a specified territory before a named successor state acquired or assumed control of it.",
+      "direction": "territory -> prior sovereign state/power (before a specified successor)",
+      "answer": "France",
+      "canonical_fact": "France owned the Louisiana Territory before the United States.",
+      "prompt_en": "Which country owned the Louisiana Territory before the United States?",
+      "evidence_quotes": [
+        "who owned the louisiana territory before the united states",
+        "France"
+      ],
+      "reason": "Source question and answer clearly establish that France owned the Louisiana Territory before the United States. No existing catalog relation captures prior sovereignty/ownership of a territory; entity_to_containing_location is about geographic containment, not sovereignty. I propose territory_to_prior_sovereign with an explicit definition scoped to a named successor state. Evidence is a literal substring from both source fields.",
+      "english": {
+        "answer": "France",
+        "relation_id": "territory_to_prior_sovereign",
+        "prompt_en": "Which country owned the Louisiana Territory before the United States?",
+        "direction": "territory -> prior sovereign state/power (before a specified successor)",
+        "subject": "Louisiana Territory",
+        "canonical_fact": "France owned the Louisiana Territory before the United States.",
+        "relation_definition": "The sovereign power that held a specified territory before a named successor state acquired or assumed control of it.",
+        "answer_aliases_en": [
+          "France",
+          "Republic of France",
+          "FR",
+          "République française",
+          "FRA",
+          "French Republic",
+          "La France"
+        ],
+        "relation_spec": {
+          "id": "territory_to_prior_sovereign",
+          "definition": "The sovereign power that held a specified territory before a named successor state acquired or assumed control of it.",
+          "direction": "territory -> prior sovereign state/power (before a specified successor)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3eb994b45170fa454de71d0b3541714570eaad912359c32459c64d128cc06e43",
+      "input_sha256": "7e07dfcd97afac6d2cecf2e22d0e93d5131bb4a8e937807ae2e6b035850956ca",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f8974e9b367711e53e9f",
+      "input_sha256": "432b04b0a9e96e2f8283fbf6f3b60265ea4700e243eb6d5c61c5500968bde86e",
+      "english": {
+        "answer": "Mike Wheeler",
+        "relation_id": "actor_to_character",
+        "prompt_en": "In the TV series Stranger Things, which character does Finn Wolfhard portray?",
+        "direction": "actor -> character in specified work/version",
+        "subject": "Finn Wolfhard",
+        "canonical_fact": "Finn Wolfhard plays Mike Wheeler in Stranger Things.",
+        "relation_definition": "Character portrayed by a named actor in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Mike Wheeler",
+          "Mike Wheeler (Stranger Things character)"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a named actor in a specified work and version; not a voice actor unless explicitly separated.",
+          "direction": "actor -> character in specified work/version"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "903e1af7ea96d6eecf72f246e252dec8800cf42fc79e282734237dc4f902df39",
+      "translation": {
+        "record_id": "public:pbf_f8974e9b367711e53e9f",
+        "subject_zh": "芬恩·沃尔法德",
+        "prompt_zh": "在美剧《怪奇物语》中，芬恩·沃尔法德饰演了哪个角色？",
+        "canonical_fact_zh": "芬恩·沃尔法德在《怪奇物语》中饰演迈克·惠勒。",
+        "answer_zh": "迈克·惠勒",
+        "answer_aliases_zh": [
+          "迈克·惠勒",
+          "迈克·惠勒（《怪奇物语》角色）"
+        ]
+      },
+      "translation_sha256": "2072fe06c021c419bcce0b08b3d12f7bf1aa54063099d7bab787ed0bf229f1e1"
+    },
+    {
+      "record_id": "public:pbf_f8bcbfec299cedc7cc94",
+      "input_sha256": "7e07dfcd97afac6d2cecf2e22d0e93d5131bb4a8e937807ae2e6b035850956ca",
+      "english": {
+        "answer": "France",
+        "relation_id": "territory_to_prior_sovereign",
+        "prompt_en": "Which country owned the Louisiana Territory before the United States?",
+        "direction": "territory -> prior sovereign state/power (before a specified successor)",
+        "subject": "Louisiana Territory",
+        "canonical_fact": "France owned the Louisiana Territory before the United States.",
+        "relation_definition": "The sovereign power that held a specified territory before a named successor state acquired or assumed control of it.",
+        "answer_aliases_en": [
+          "France",
+          "Republic of France",
+          "FR",
+          "République française",
+          "FRA",
+          "French Republic",
+          "La France"
+        ],
+        "relation_spec": {
+          "id": "territory_to_prior_sovereign",
+          "definition": "The sovereign power that held a specified territory before a named successor state acquired or assumed control of it.",
+          "direction": "territory -> prior sovereign state/power (before a specified successor)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3eb994b45170fa454de71d0b3541714570eaad912359c32459c64d128cc06e43",
+      "translation": {
+        "record_id": "public:pbf_f8bcbfec299cedc7cc94",
+        "subject_zh": "路易斯安那领地",
+        "prompt_zh": "在美国之前，哪个国家拥有路易斯安那领地？",
+        "canonical_fact_zh": "法国在美国之前拥有路易斯安那领地。",
+        "answer_zh": "法国",
+        "answer_aliases_zh": [
+          "法国",
+          "法兰西共和国",
+          "FR",
+          "République française",
+          "FRA",
+          "法兰西共和国",
+          "La France"
+        ]
+      },
+      "translation_sha256": "708b01c268947472706c25631bb2b8fc4c07e4ee3c327432ce9bdf95bde41a72"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f8974e9b367711e53e9f",
+        "public:pbf_f8bcbfec299cedc7cc94"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6276c6d206748d4f5fc1ed8ad857fe491bb7a6c4dd9bddfbb55b25cf9306108a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1844,
+      "first_chunk_seconds": 37.463,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1958,
+        "prompt_tokens": 1607,
+        "total_tokens": 3565,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1419,
+          "text_tokens": 539
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3177bec5c996ce5c8b6d5bf473dc23ef3de3ad08d351fcf4dfe77e1ed40ccdd5",
+      "status": "completed",
+      "latency_seconds": 60.372
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8974e9b367711e53e9f",
+        "public:pbf_f8bcbfec299cedc7cc94"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08514fc1222c9ef8edac465a2b3429c64329884b21296539d3be7ccb34374ed5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.855
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8974e9b367711e53e9f",
+        "public:pbf_f8bcbfec299cedc7cc94"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "08514fc1222c9ef8edac465a2b3429c64329884b21296539d3be7ccb34374ed5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 168.233
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8974e9b367711e53e9f",
+        "public:pbf_f8bcbfec299cedc7cc94"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "08514fc1222c9ef8edac465a2b3429c64329884b21296539d3be7ccb34374ed5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.093
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f8974e9b367711e53e9f",
+        "public:pbf_f8bcbfec299cedc7cc94"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08514fc1222c9ef8edac465a2b3429c64329884b21296539d3be7ccb34374ed5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1349,
+      "first_chunk_seconds": 1.656,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1377,
+        "prompt_tokens": 900,
+        "total_tokens": 2277,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1152,
+          "text_tokens": 225
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ca4463eaa784ba929c5b44ddc2336773b2985674c5a9296e73ab52f7eefc9dec",
+      "status": "completed",
+      "latency_seconds": 17.863
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02054.json",
+      "sha256": "95ee6762dcadce9ed4d93dbf71af536817f4178bba5018db9d0809f699c345e8",
+      "previous_status": "failed"
+    }
+  ]
+}

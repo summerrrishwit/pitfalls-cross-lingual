@@ -1,0 +1,247 @@
+{
+  "input_sha256": "f45e68d6842f1ece49003bab60f4716e10209d44e18dae591d4ef3bfbb4a2d64",
+  "normalized": [
+    {
+      "record_id": "public:pbf_4241a550fc62250c4fa4",
+      "decision": "ready",
+      "subject": "US Army",
+      "relation_id": "organization_to_motto",
+      "relation_definition": "Official motto or watchword of a specified organization; retain exact wording and any qualifiers.",
+      "direction": "organization -> motto",
+      "answer": "this we'll defend",
+      "canonical_fact": "The motto of the US Army is 'this we'll defend'.",
+      "prompt_en": "What is the motto of the US Army?",
+      "evidence_quotes": [
+        "this we'll defend",
+        "the motto of the us army"
+      ],
+      "reason": "Source answer 'this we'll defend' directly answers the motto question with no ambiguity. No catalog relation fits 'organization -> motto' precisely, so a new snake_case relation is proposed. The answer is a concise literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What is the motto of the US Army?",
+        "relation_definition": "Official motto or watchword of a specified organization; retain exact wording and any qualifiers.",
+        "answer": "this we'll defend",
+        "canonical_fact": "The motto of the US Army is 'this we'll defend'.",
+        "direction": "organization -> motto",
+        "relation_id": "organization_to_motto",
+        "subject": "US Army",
+        "answer_aliases_en": [
+          "this we'll defend"
+        ],
+        "relation_spec": {
+          "id": "organization_to_motto",
+          "definition": "Official motto or watchword of a specified organization; retain exact wording and any qualifiers.",
+          "direction": "organization -> motto"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f68667695413d46a42e35023a31f899dd9cb8dd27f51d1bfbe8cfef8dffd1e5b",
+      "input_sha256": "b47fa1ab8527f775495160ae957ea654bbdc8c646604c43a261d663587fc80f0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_906c99a8ad2a5ad7b8cc",
+      "decision": "ready",
+      "subject": "Toronto Raptors",
+      "relation_id": "team_to_general_manager",
+      "relation_definition": "Person serving as general manager of a specified sports team or organization; retain temporal qualifiers if present in the source.",
+      "direction": "team/organization -> general manager",
+      "answer": "Bobby Webster",
+      "canonical_fact": "Bobby Webster is the general manager of the Toronto Raptors.",
+      "prompt_en": "Who is the general manager of the Toronto Raptors?",
+      "evidence_quotes": [
+        "Bobby Webster",
+        "the gm of the toronto raptors"
+      ],
+      "reason": "Source answer 'Bobby Webster' directly answers the GM question. No catalog relation captures 'sports team -> general manager' precisely, so a new snake_case relation is proposed. The answer is a concise literal substring of source_answer.",
+      "english": {
+        "prompt_en": "Who is the general manager of the Toronto Raptors?",
+        "relation_definition": "Person serving as general manager of a specified sports team or organization; retain temporal qualifiers if present in the source.",
+        "answer": "Bobby Webster",
+        "canonical_fact": "Bobby Webster is the general manager of the Toronto Raptors.",
+        "direction": "team/organization -> general manager",
+        "relation_id": "team_to_general_manager",
+        "subject": "Toronto Raptors",
+        "answer_aliases_en": [
+          "Bobby Webster"
+        ],
+        "relation_spec": {
+          "id": "team_to_general_manager",
+          "definition": "Person serving as general manager of a specified sports team or organization; retain temporal qualifiers if present in the source.",
+          "direction": "team/organization -> general manager"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66721caa71489b90dc9a189ff8a1f231b511a31351359556f8a55b63ef6554e1",
+      "input_sha256": "0c9fb0d7af0de987e7eef6c6ca4de685fcaddb7f18152e0c9ed82dbe14c52655",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.488
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 21.271,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 37.633
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.791
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.793
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e9d023a67e86374e2c53063e5af1817d663348d1b74add9200e73e97da20722c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1958,
+      "first_chunk_seconds": 1.816,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1967,
+        "prompt_tokens": 1579,
+        "total_tokens": 3546,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1506,
+          "text_tokens": 461
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6fd53393782942e00cb4079b3fcd2e18a82b4198b09cea90f5d3b37fb8566283",
+      "status": "completed",
+      "latency_seconds": 23.094
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d4b1829e091e6ca9259e2368455c3086f14cc0941b322f28af34213b3c204d03",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.08
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d4b1829e091e6ca9259e2368455c3086f14cc0941b322f28af34213b3c204d03",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.779
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_4241a550fc62250c4fa4",
+        "public:pbf_906c99a8ad2a5ad7b8cc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d4b1829e091e6ca9259e2368455c3086f14cc0941b322f28af34213b3c204d03",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.795
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03613.json",
+      "sha256": "9271431ce727555b5b739d625f7a794b8088be209c36b803e63262be4ff991c3",
+      "previous_status": "failed"
+    }
+  ]
+}

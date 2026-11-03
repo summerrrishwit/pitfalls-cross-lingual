@@ -1,0 +1,215 @@
+{
+  "input_sha256": "4d15fe636c630203866e8bf771931604d23a159d9db06ef58df222685ec28d63",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003771",
+      "decision": "ready",
+      "subject": "planets like earth",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "universe",
+      "canonical_fact": "There are more than 1 trillion planets like earth in the universe.",
+      "prompt_en": "Where are there more than 1 trillion planets like earth?",
+      "evidence_quotes": [
+        "more than 1 trillion planets like earth",
+        "universe"
+      ],
+      "reason": "The source question asks for the location where more than 1 trillion Earth-like planets exist, and the source answer is 'universe.' The existing catalog relation entity_to_containing_location (entity -> containing location, geographic containment at a specified level) fits exactly: the universe is the spatial container for these planets. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "universe",
+        "canonical_fact": "There are more than 1 trillion planets like earth in the universe.",
+        "subject": "planets like earth",
+        "prompt_en": "Where are there more than 1 trillion planets like earth?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "universe"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f1481bcb0044e209f4bf475795f03cdce77301b404d25144b24c5ce18d3b3884",
+      "input_sha256": "191824a6a1d8a4c7727c69711545c0ac8d60610d160db87f509042aa8d8d8b90",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003784",
+      "decision": "ready",
+      "subject": "Meningitis",
+      "relation_id": "condition_to_affected_body_part",
+      "relation_definition": "The specific body part or organ that a specified medical condition or disease primarily affects; retains the stated scope from the source.",
+      "direction": "medical condition -> affected body part",
+      "answer": "brain",
+      "canonical_fact": "Meningitis is an illness that affects the brain.",
+      "prompt_en": "Meningitis is an illness that affects what body part?",
+      "evidence_quotes": [
+        "Meningitis",
+        "an illness that affects the what",
+        "brain"
+      ],
+      "reason": "The source question explicitly asks which body part Meningitis affects; the source answer is 'brain.' No existing catalog relation captures a disease-to-affected-organ link (entity_to_class is taxonomy membership, organism_to_habitat is ecology), so a precise new relation condition_to_affected_body_part is proposed. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "medical condition -> affected body part",
+        "relation_id": "condition_to_affected_body_part",
+        "answer": "brain",
+        "canonical_fact": "Meningitis is an illness that affects the brain.",
+        "subject": "Meningitis",
+        "prompt_en": "Meningitis is an illness that affects what body part?",
+        "relation_definition": "The specific body part or organ that a specified medical condition or disease primarily affects; retains the stated scope from the source.",
+        "answer_aliases_en": [
+          "brain"
+        ],
+        "relation_spec": {
+          "id": "condition_to_affected_body_part",
+          "definition": "The specific body part or organ that a specified medical condition or disease primarily affects; retains the stated scope from the source.",
+          "direction": "medical condition -> affected body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a3a88e9c3f978a3a8bc689435325c3c7cf0923c36456b1b0b8c5210a2ea610c6",
+      "input_sha256": "a40e9a5df5bead0cb53fc21285edb3be2e9d829c12264e9229107676747c1189",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003771",
+      "input_sha256": "191824a6a1d8a4c7727c69711545c0ac8d60610d160db87f509042aa8d8d8b90",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "universe",
+        "canonical_fact": "There are more than 1 trillion planets like earth in the universe.",
+        "subject": "planets like earth",
+        "prompt_en": "Where are there more than 1 trillion planets like earth?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "universe"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f1481bcb0044e209f4bf475795f03cdce77301b404d25144b24c5ce18d3b3884",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003771",
+        "subject_zh": "像地球一样的行星",
+        "prompt_zh": "超过一万亿颗像地球一样的行星存在于哪里？",
+        "canonical_fact_zh": "宇宙中有超过一万亿颗像地球一样的行星。",
+        "answer_zh": "宇宙",
+        "answer_aliases_zh": [
+          "宇宙"
+        ]
+      },
+      "translation_sha256": "e7572318b58a257f42b3a3905aa1a2b72eba0749e1b3e1fe6017a657ef51ab14"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003784",
+      "input_sha256": "a40e9a5df5bead0cb53fc21285edb3be2e9d829c12264e9229107676747c1189",
+      "english": {
+        "direction": "medical condition -> affected body part",
+        "relation_id": "condition_to_affected_body_part",
+        "answer": "brain",
+        "canonical_fact": "Meningitis is an illness that affects the brain.",
+        "subject": "Meningitis",
+        "prompt_en": "Meningitis is an illness that affects what body part?",
+        "relation_definition": "The specific body part or organ that a specified medical condition or disease primarily affects; retains the stated scope from the source.",
+        "answer_aliases_en": [
+          "brain"
+        ],
+        "relation_spec": {
+          "id": "condition_to_affected_body_part",
+          "definition": "The specific body part or organ that a specified medical condition or disease primarily affects; retains the stated scope from the source.",
+          "direction": "medical condition -> affected body part"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a3a88e9c3f978a3a8bc689435325c3c7cf0923c36456b1b0b8c5210a2ea610c6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003784",
+        "subject_zh": "脑膜炎",
+        "prompt_zh": "脑膜炎是一种影响哪个身体部位的疾病？",
+        "canonical_fact_zh": "脑膜炎是一种影响大脑的疾病。",
+        "answer_zh": "大脑",
+        "answer_aliases_zh": [
+          "大脑"
+        ]
+      },
+      "translation_sha256": "d05276143426619545bb2c53575b43054d0d40e0685195e72e838b314688b251"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003771",
+        "historical:raw_commonsense_qa_003784"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f29ff7ca136939529d69cf68a3f366bd63c3293fa1ca693888cebcc60f7ef936",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2313,
+      "first_chunk_seconds": 23.21,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2520,
+        "prompt_tokens": 1645,
+        "total_tokens": 4165,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2000,
+          "text_tokens": 520
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a8797aadf5653e7513da15b941a8e4685b5df32a6e275987f7a864d3e45d8f77",
+      "status": "completed",
+      "latency_seconds": 53.368
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003771",
+        "historical:raw_commonsense_qa_003784"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8916742486863043f07078518bcb2d83accaf6797c341bdf0fbcf53da9fa281a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 995,
+      "first_chunk_seconds": 16.629,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1022,
+        "prompt_tokens": 850,
+        "total_tokens": 1872,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 809,
+          "text_tokens": 213
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7a336835aa1413ddd06386cf8573bda2c20526d2e316d025a6a9ea64eb526b9c",
+      "status": "completed",
+      "latency_seconds": 30.833
+    }
+  ],
+  "status": "completed"
+}

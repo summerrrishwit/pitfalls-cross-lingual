@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4fa357992d29c30e6eab6a6f35895e8b4cf32b0bf01c63f3580c3f8811296f41",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001544",
+      "decision": "ready",
+      "subject": "kicking black and white balls with feet",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "soccer game",
+      "canonical_fact": "Kicking black and white balls with feet is the defining description of a soccer game.",
+      "prompt_en": "What game is described by kicking black and white balls with feet?",
+      "evidence_quotes": [
+        "black and white balls are kicked with feet",
+        "soccer game"
+      ],
+      "reason": "The source question supplies a defining description (kicking black and white balls with feet) and the source answer gives the conventional term (soccer game). This maps cleanly to description_to_term with direction description -> term. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "soccer game",
+        "canonical_fact": "Kicking black and white balls with feet is the defining description of a soccer game.",
+        "subject": "kicking black and white balls with feet",
+        "prompt_en": "What game is described by kicking black and white balls with feet?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "soccer game"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69205d10e9a2b809e55488da0d6aa8b69da256b51a1a1e3b09d6dbedb57b9dd8",
+      "input_sha256": "e9df25ef9cb7d65355c89e5be6313d66dace5eb6675aca95615c58bdf6f53a84",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001579",
+      "decision": "ready",
+      "subject": "some days",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "week",
+      "canonical_fact": "Some days can be combined to form a week.",
+      "prompt_en": "What can some days be combined to form?",
+      "evidence_quotes": [
+        "some day be combined to form",
+        "week"
+      ],
+      "reason": "The source states that some days (parts) are combined to form a week (whole). This is a part-to-whole relation. The qualifier 'some' is preserved from the source. One model flagged ambiguous subject, but the source answer 'week' makes the whole unambiguous; the part is clearly days. The qualifier 'some' avoids asserting exclusivity (7 days specifically), which the source does not specify.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "week",
+        "canonical_fact": "Some days can be combined to form a week.",
+        "subject": "some days",
+        "prompt_en": "What can some days be combined to form?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "week"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2f315523856cdac50a6983beebf1604823026c4ab83cfe3bbf77446883e5bbd7",
+      "input_sha256": "d839da07c06c9895802188e00a8417a0c6409c832290b17e17421b4025e0d53c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001544",
+      "input_sha256": "e9df25ef9cb7d65355c89e5be6313d66dace5eb6675aca95615c58bdf6f53a84",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "soccer game",
+        "canonical_fact": "Kicking black and white balls with feet is the defining description of a soccer game.",
+        "subject": "kicking black and white balls with feet",
+        "prompt_en": "What game is described by kicking black and white balls with feet?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "soccer game"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "69205d10e9a2b809e55488da0d6aa8b69da256b51a1a1e3b09d6dbedb57b9dd8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001544",
+        "subject_zh": "用脚踢黑白球",
+        "prompt_zh": "用脚踢黑白球描述的是什么游戏？",
+        "canonical_fact_zh": "用脚踢黑白球是足球比赛的定义性描述。",
+        "answer_zh": "足球比赛",
+        "answer_aliases_zh": [
+          "足球比赛"
+        ]
+      },
+      "translation_sha256": "3c747fcdf72599d723bbf9573b244667b4ce942cf1b2e9b5dd20187ecad938e9"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001579",
+      "input_sha256": "d839da07c06c9895802188e00a8417a0c6409c832290b17e17421b4025e0d53c",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "week",
+        "canonical_fact": "Some days can be combined to form a week.",
+        "subject": "some days",
+        "prompt_en": "What can some days be combined to form?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "week"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2f315523856cdac50a6983beebf1604823026c4ab83cfe3bbf77446883e5bbd7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001579",
+        "subject_zh": "一些日子",
+        "prompt_zh": "一些日子可以组合成什么？",
+        "canonical_fact_zh": "一些日子可以组合成一个星期。",
+        "answer_zh": "星期",
+        "answer_aliases_zh": [
+          "星期"
+        ]
+      },
+      "translation_sha256": "9658b33941efbfc481c20895fc4ab5d2d456ea4b5933a6370a4ba100be297a6e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001544",
+        "historical:raw_commonsense_qa_001579"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cb323830c41cc7ec118ae74c7d2815fb0b80e1b3a79cd46b2e5f3fb0f8184b58",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2091,
+      "first_chunk_seconds": 30.048,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2247,
+        "prompt_tokens": 1669,
+        "total_tokens": 3916,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1750,
+          "text_tokens": 497
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2321353fe378eacc17e0cda38a81193b44d47bf2b34ede2274bd182798c4b6f7",
+      "status": "completed",
+      "latency_seconds": 71.856
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001544",
+        "historical:raw_commonsense_qa_001579"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2190be6f6b17e3962bd8fcd1463c10716c8d69484fb67711d1efcc82fcc55730",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 624,
+      "first_chunk_seconds": 17.941,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 644,
+        "prompt_tokens": 815,
+        "total_tokens": 1459,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 431,
+          "text_tokens": 213
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "83487865115ae4f636bf1e45272e92aea8ea18e3a4c60b2e34e3e71b9b413b55",
+      "status": "completed",
+      "latency_seconds": 25.776
+    }
+  ],
+  "status": "completed"
+}

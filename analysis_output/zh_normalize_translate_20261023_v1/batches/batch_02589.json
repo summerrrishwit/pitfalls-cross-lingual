@@ -1,0 +1,171 @@
+{
+  "input_sha256": "317da2d298dab5f8f0cb2e4615e6c700f577404dbeb3a36704d32f5e642c9ad1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004721",
+      "decision": "ready",
+      "subject": "divider that stores papers for work or school",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "binder",
+      "canonical_fact": "The conventional term for a divider that stores papers for work or school is 'binder'.",
+      "prompt_en": "What is the conventional term for a divider that stores papers for work or school?",
+      "evidence_quotes": [
+        "What divider stores papers for work or school?",
+        "binder"
+      ],
+      "reason": "Both models extracted the same subject/relation/answer. The source question supplies an identifying description ('divider that stores papers for work or school') and the source answer is the conventional term 'binder'. The catalog relation description_to_term (description -> term) fits exactly. No conflicts with the source answer; no qualifiers dropped.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "binder",
+        "canonical_fact": "The conventional term for a divider that stores papers for work or school is 'binder'.",
+        "subject": "divider that stores papers for work or school",
+        "prompt_en": "What is the conventional term for a divider that stores papers for work or school?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "binder"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "63414056d7953575f3a5a05c2725328edc63ef6b399d8d40abbff369d4fe12bc",
+      "input_sha256": "70e56e1b799baa069ea3c5fe908b00b4b49777a32d9a1a09d0bfd51c35ff1518",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004724",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Source answer is 'one mouth' but the existing extraction answer is 'mouth', dropping the quantity qualifier 'one'. Per the instruction to preserve qualifiers and defer on conflict with source, the candidate cannot be finalized. Additionally, one model annotation flags 'non_unique_answer' (humans have one mouth, but the question could be read as asking for any speaking organ). Deferring to avoid losing the 'one' qualifier.",
+      "input_sha256": "7b3e0fc70c4bd40b6db9c5edeae779443f63be9323ca62820ba61603dca5d794",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004721",
+      "input_sha256": "70e56e1b799baa069ea3c5fe908b00b4b49777a32d9a1a09d0bfd51c35ff1518",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "binder",
+        "canonical_fact": "The conventional term for a divider that stores papers for work or school is 'binder'.",
+        "subject": "divider that stores papers for work or school",
+        "prompt_en": "What is the conventional term for a divider that stores papers for work or school?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "binder"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "63414056d7953575f3a5a05c2725328edc63ef6b399d8d40abbff369d4fe12bc",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004721",
+        "subject_zh": "用于存放工作或学校文件的隔页",
+        "prompt_zh": "用于存放工作或学校文件的隔页的惯用术语是什么？",
+        "canonical_fact_zh": "用于存放工作或学校文件的隔页的惯用术语是'活页夹'。",
+        "answer_zh": "活页夹",
+        "answer_aliases_zh": [
+          "活页夹"
+        ]
+      },
+      "translation_sha256": "72770aa79fa386e00b863d007ba8b9ddc3f1c7512b5f97ec8ad9b2783831eb8a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004721",
+        "historical:raw_commonsense_qa_004724"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "504ff9181a68e2c216d5214e214785f42fdb2a08f2f01a46a23db0955de33ec9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2304,
+      "first_chunk_seconds": 38.375,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2352,
+        "prompt_tokens": 1646,
+        "total_tokens": 3998,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1895,
+          "text_tokens": 457
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0df3d15321329abc933c08517598dffa9882fc627331967cdecd15a1867201e2",
+      "status": "completed",
+      "latency_seconds": 95.881
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004721"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "74c4be78f7c35903397321f8c434c655d1ca02f7b2f35c23ea07701e8e0bcf03",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 174.793,
+      "validation_code": "stream_output_truncated"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004721"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1e288c3e03541a63114910a04c2d58a8ac1c5e7eec3102b9e5f75c6948f3614b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1012,
+      "first_chunk_seconds": 12.79,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1130,
+        "prompt_tokens": 545,
+        "total_tokens": 1675,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 997,
+          "text_tokens": 133
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2a4f40a3949c263569aac9090cd290303e7c6a4a48f3aba829ee824562a6728e",
+      "status": "completed",
+      "latency_seconds": 33.309
+    }
+  ],
+  "status": "completed"
+}

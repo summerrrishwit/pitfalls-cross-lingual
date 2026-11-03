@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-24T16:08:52.379765+00:00",
+  "automation_id": "automation",
+  "role": "Qwen-only monitoring and autonomous operational recovery",
+  "policy_version": "zh-operations-v5-autorepair-20261024",
+  "guard_observation": {
+    "at": "2026-10-24T16:05:28.402807+00:00",
+    "fingerprint": "a97960ddf8771aed8025758fd7bd6c077ad2693aefbc4ed0cea21bfd5ae33e84",
+    "pid": 28785,
+    "eligible_repair": false,
+    "last_activity_age_seconds": 2.059238910675049,
+    "unchanged_since": "2026-10-24T16:05:28.402807+00:00",
+    "state": "healthy_active",
+    "retryable_technical_batches": 114,
+    "policy_sha256": "20004d0b6db1ae5f3a8bc08136406e569a2bed441aa149f012962a1d33b899bd"
+  },
+  "status_snapshot": {
+    "updated_at": "2026-10-24T16:04:50.312906+00:00",
+    "state": "running_qwen",
+    "input_count": 7250,
+    "normalized_records": 1792,
+    "normalization_decisions": {
+      "ready": 1774,
+      "defer": 18
+    },
+    "translated_records": 1726,
+    "batch_status_counts": {
+      "completed": 872,
+      "failed": 139
+    },
+    "review_packets": 88,
+    "reviewed_outcomes": {
+      "zh_translation_accepted": 1571,
+      "zh_translation_rejected": 56,
+      "zh_translation_deferred": 2
+    },
+    "human_gold": false,
+    "formal_experiment_eligible": false
+  },
+  "last_real_success_at": "2026-10-24T16:05:29.333792+00:00",
+  "minutes_since_last_success": 3.38,
+  "growth_since_previous_monitor": {
+    "normalized": 74,
+    "translated": 79
+  },
+  "recent_finished_requests": 132,
+  "recent_request_status_counts": {
+    "completed": 111,
+    "failed": 21
+  },
+  "recent_http_status_counts": {
+    "503": 1
+  },
+  "all_frozen_operations_active_runtime_recovery_attempt_and_exposure_bindings_valid": true,
+  "recovery_archives": [
+    {
+      "recovery_id": "access_restored_20261024_v1",
+      "manifest_sha256": "c7a41cbae8ff717902c9bf4b8ce44d858f0232136624929462bb8669b763a9c6"
+    },
+    {
+      "recovery_id": "access_restored_20261024_v2",
+      "manifest_sha256": "a2f2f308b122808febf593147ea1bb858d3693d2c4407bd0cbe3618a70c05100"
+    },
+    {
+      "recovery_id": "gateway_20261024_v1",
+      "manifest_sha256": "0b6eaf51b77df5fd8c2013305936bf126cf11d690565a4a13ff4412d2c53a9d7"
+    },
+    {
+      "recovery_id": "stream_transport_20261024_v1",
+      "manifest_sha256": "20aac28a47374ccc158c319f84290381a43bd23f7c8209e780c554a49a3e0c45"
+    },
+    {
+      "recovery_id": "transport_continue_20261024_v1",
+      "manifest_sha256": "f9c8eaa9578012ad468dada78523c06015c0c22e58a0112aaf4261c003c3ac66"
+    }
+  ],
+  "new_worker_launches": 0,
+  "new_api_probes": 0,
+  "new_review_assignments": 0,
+  "review_exports_written": false,
+  "generation_complete": false,
+  "tail_retry_archive_count": 0,
+  "notification": "DONT_NOTIFY",
+  "reason": "Healthy existing worker, regular real production growth; v5 ready but no repair needed."
+}

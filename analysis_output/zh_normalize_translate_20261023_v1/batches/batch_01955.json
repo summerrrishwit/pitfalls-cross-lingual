@@ -1,0 +1,285 @@
+{
+  "input_sha256": "4ef70ec1fcdaef6dbfb49b28ae533496c7f1389690c17b722aa759340a095b6c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e7f1a5073946ba864296",
+      "decision": "ready",
+      "subject": "Samuel L. Jackson",
+      "relation_id": "actor_to_character",
+      "relation_definition": "Character portrayed by a specified actor in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "actor in specified work/version -> character",
+      "answer": "Mace Windu",
+      "canonical_fact": "Samuel L. Jackson played Mace Windu in Star Wars.",
+      "prompt_en": "Which character did Samuel L. Jackson play in Star Wars?",
+      "evidence_quotes": [
+        "who did samuel l jackson play in star wars",
+        "Mace Windu"
+      ],
+      "reason": "The catalog only lists character_to_actor (character -> actor). Our fact is the inverse: actor -> character. No existing relation fits the direction, so a new precise relation actor_to_character is proposed. The answer 'Mace Windu' is a literal substring of source_answer and matches the existing extraction.",
+      "english": {
+        "answer": "Mace Windu",
+        "relation_id": "actor_to_character",
+        "prompt_en": "Which character did Samuel L. Jackson play in Star Wars?",
+        "direction": "actor in specified work/version -> character",
+        "subject": "Samuel L. Jackson",
+        "canonical_fact": "Samuel L. Jackson played Mace Windu in Star Wars.",
+        "relation_definition": "Character portrayed by a specified actor in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Mace Windu",
+          "Mamberroi Jr"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a specified actor in a specified work and version; not a voice actor unless explicitly separated.",
+          "direction": "actor in specified work/version -> character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f6a52ba9efb411a1fe1d4a187b244f0b94e945b3546d1808041fe48917bd630a",
+      "input_sha256": "fa0e15777f60cd0a5092927dfacff711e0311f48b47ae896cf7da46eac7181d9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e80a67160e8742a70386",
+      "decision": "ready",
+      "subject": "Hume's Inquiry",
+      "relation_id": "work_to_claimed_conclusion",
+      "relation_definition": "The specific conclusion or answer explicitly asserted by the author for a named topic within a specified work, retaining all scope qualifiers.",
+      "direction": "specified work + named topic -> claimed conclusion",
+      "answer": "a moral sense that is universal in our species",
+      "canonical_fact": "In Hume's Inquiry, Hume claims that our final verdicts on moral matters are derived from a moral sense that is universal in our species.",
+      "prompt_en": "In Hume's Inquiry, what does Hume claim our final verdicts on moral matters are derived from?",
+      "evidence_quotes": [
+        "In the Inquiry, Hume claims that our final verdicts on moral matters are derived from:",
+        "a moral sense that is universal in our species."
+      ],
+      "reason": "No catalog relation captures a specific philosophical claim/conclusion asserted within a named work. Proposed work_to_claimed_conclusion precisely: the subject is the work plus the named topic (moral verdicts), and the answer is the asserted source. The answer is a concise literal substring of source_answer (period dropped to match existing extraction). Prompt_en is option-free and does not reveal the answer.",
+      "english": {
+        "answer": "a moral sense that is universal in our species",
+        "relation_id": "work_to_claimed_conclusion",
+        "prompt_en": "In Hume's Inquiry, what does Hume claim our final verdicts on moral matters are derived from?",
+        "direction": "specified work + named topic -> claimed conclusion",
+        "subject": "Hume's Inquiry",
+        "canonical_fact": "In Hume's Inquiry, Hume claims that our final verdicts on moral matters are derived from a moral sense that is universal in our species.",
+        "relation_definition": "The specific conclusion or answer explicitly asserted by the author for a named topic within a specified work, retaining all scope qualifiers.",
+        "answer_aliases_en": [
+          "a moral sense that is universal in our species",
+          "a moral sense that is universal in our species."
+        ],
+        "relation_spec": {
+          "id": "work_to_claimed_conclusion",
+          "definition": "The specific conclusion or answer explicitly asserted by the author for a named topic within a specified work, retaining all scope qualifiers.",
+          "direction": "specified work + named topic -> claimed conclusion"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "70075317117fd831192f98a4bece5572f046dd21b15c588b51561c43955e1579",
+      "input_sha256": "a5b267af5231bdf8dfaca0c9829250852d122cc2a0087e900dd7fe634778f62c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_e7f1a5073946ba864296",
+      "input_sha256": "fa0e15777f60cd0a5092927dfacff711e0311f48b47ae896cf7da46eac7181d9",
+      "english": {
+        "answer": "Mace Windu",
+        "relation_id": "actor_to_character",
+        "prompt_en": "Which character did Samuel L. Jackson play in Star Wars?",
+        "direction": "actor in specified work/version -> character",
+        "subject": "Samuel L. Jackson",
+        "canonical_fact": "Samuel L. Jackson played Mace Windu in Star Wars.",
+        "relation_definition": "Character portrayed by a specified actor in a specified work and version; not a voice actor unless explicitly separated.",
+        "answer_aliases_en": [
+          "Mace Windu",
+          "Mamberroi Jr"
+        ],
+        "relation_spec": {
+          "id": "actor_to_character",
+          "definition": "Character portrayed by a specified actor in a specified work and version; not a voice actor unless explicitly separated.",
+          "direction": "actor in specified work/version -> character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f6a52ba9efb411a1fe1d4a187b244f0b94e945b3546d1808041fe48917bd630a",
+      "translation": {
+        "record_id": "public:pbf_e7f1a5073946ba864296",
+        "subject_zh": "塞缪尔·杰克逊",
+        "prompt_zh": "塞缪尔·杰克逊在《星球大战》中饰演了哪个角色？",
+        "canonical_fact_zh": "塞缪尔·杰克逊在《星球大战》中饰演了梅斯·温杜。",
+        "answer_zh": "梅斯·温杜",
+        "answer_aliases_zh": [
+          "梅斯·温杜",
+          "曼伯罗伊·乔"
+        ]
+      },
+      "translation_sha256": "bb93b62236cfbaf21da5e4cbfc383abf8465c51517279df96ad4c17f16dca162"
+    },
+    {
+      "record_id": "public:pbf_e80a67160e8742a70386",
+      "input_sha256": "a5b267af5231bdf8dfaca0c9829250852d122cc2a0087e900dd7fe634778f62c",
+      "english": {
+        "answer": "a moral sense that is universal in our species",
+        "relation_id": "work_to_claimed_conclusion",
+        "prompt_en": "In Hume's Inquiry, what does Hume claim our final verdicts on moral matters are derived from?",
+        "direction": "specified work + named topic -> claimed conclusion",
+        "subject": "Hume's Inquiry",
+        "canonical_fact": "In Hume's Inquiry, Hume claims that our final verdicts on moral matters are derived from a moral sense that is universal in our species.",
+        "relation_definition": "The specific conclusion or answer explicitly asserted by the author for a named topic within a specified work, retaining all scope qualifiers.",
+        "answer_aliases_en": [
+          "a moral sense that is universal in our species",
+          "a moral sense that is universal in our species."
+        ],
+        "relation_spec": {
+          "id": "work_to_claimed_conclusion",
+          "definition": "The specific conclusion or answer explicitly asserted by the author for a named topic within a specified work, retaining all scope qualifiers.",
+          "direction": "specified work + named topic -> claimed conclusion"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "70075317117fd831192f98a4bece5572f046dd21b15c588b51561c43955e1579",
+      "translation": {
+        "record_id": "public:pbf_e80a67160e8742a70386",
+        "subject_zh": "休谟的《探究》",
+        "prompt_zh": "在休谟的《探究》中，休谟认为我们对道德问题的最终判断源自什么？",
+        "canonical_fact_zh": "在休谟的《探究》中，休谟认为我们对道德问题的最终判断源自一种我们物种中普遍存在的道德感。",
+        "answer_zh": "一种我们物种中普遍存在的道德感",
+        "answer_aliases_zh": [
+          "一种我们物种中普遍存在的道德感",
+          "一种我们物种中普遍存在的道德感。"
+        ]
+      },
+      "translation_sha256": "c31d9cce3caa39cb069ec2823285527f3df4e41d495f66db8b298c3f4005a915"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "497eea92f954e0d56f1ba2711e5c67a6c7f7d060cbb578150d272d1b4ddaa5f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2568,
+      "first_chunk_seconds": 22.223,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2653,
+        "prompt_tokens": 1709,
+        "total_tokens": 4362,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2051,
+          "text_tokens": 602
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f6d041f9c30862aff51b87fe0dde817b447bef6ebc9dd47ce4c389576397cfe5",
+      "status": "completed",
+      "latency_seconds": 51.755
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d42dc2fed1e4086007f2ba1e0eb37db852b361f81ce7a08e6a91d4402bd3e1fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.003
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d42dc2fed1e4086007f2ba1e0eb37db852b361f81ce7a08e6a91d4402bd3e1fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.269
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d42dc2fed1e4086007f2ba1e0eb37db852b361f81ce7a08e6a91d4402bd3e1fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.168
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d42dc2fed1e4086007f2ba1e0eb37db852b361f81ce7a08e6a91d4402bd3e1fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.917
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e7f1a5073946ba864296",
+        "public:pbf_e80a67160e8742a70386"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d42dc2fed1e4086007f2ba1e0eb37db852b361f81ce7a08e6a91d4402bd3e1fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1549,
+      "first_chunk_seconds": 2.252,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1670,
+        "prompt_tokens": 940,
+        "total_tokens": 2610,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1344,
+          "text_tokens": 326
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cb7bad3473ba9ddd53ec5a74d07b65194bb2cfa5a95563746621b52e484f02c3",
+      "status": "completed",
+      "latency_seconds": 22.535
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01955.json",
+      "sha256": "d30b6f28086159bf79132b182693cef76e6317d9063d7e3ec1ab05e3191fb147",
+      "previous_status": "failed"
+    }
+  ]
+}

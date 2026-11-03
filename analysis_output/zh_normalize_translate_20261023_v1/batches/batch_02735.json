@@ -1,0 +1,157 @@
+{
+  "input_sha256": "437c72acc32f6c3a04cb309d0169dd27942bb1a3b98d42f52a1f9ccbee0e3d1a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009426",
+      "decision": "ready",
+      "subject": "place where many merchants have their stores under one roof",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "mall",
+      "canonical_fact": "A place where many merchants have their stores under one roof is called a mall.",
+      "prompt_en": "What is the conventional term for a place where many merchants have their stores under one roof?",
+      "evidence_quotes": [
+        "Where can many merchants have their stores under one roof?",
+        "mall"
+      ],
+      "reason": "The source question supplies a defining description ('many merchants have their stores under one roof') and the answer 'mall' is the unique conventional term matching that description. This fits description_to_term exactly: the description uniquely identifies the term, and 'mall' is not an inverse definition of the word itself. Both evidence quotes are literal substrings of the source question and answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "mall",
+        "canonical_fact": "A place where many merchants have their stores under one roof is called a mall.",
+        "subject": "place where many merchants have their stores under one roof",
+        "prompt_en": "What is the conventional term for a place where many merchants have their stores under one roof?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "mall"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a96d8f112fc40b65ed7bdef5d888955b5e1dc4c81db4504973bbc59df2fb429c",
+      "input_sha256": "4d7e506b2127d4108fcaf564b2100d308d4da8bd6b4cd20e56ea45dbfc55fa14",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009428",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact 'after getting a divorce, marital status is being single' describes a resulting social/legal status after a specific life event. No catalog relation cleanly captures 'status resulting from a transitional event.' entity_to_class requires stable taxonomy membership, not a state change; term_to_definition and description_to_term map definitions to terms, not events to statuses. Per the unknown_relation policy (defer_without_forcing), this is deferred rather than forced into a broad category.",
+      "input_sha256": "4d2a82f5108a44d54cb50d7e64cdd10848919634a75663cb977530ce1bd16151",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009426",
+      "input_sha256": "4d7e506b2127d4108fcaf564b2100d308d4da8bd6b4cd20e56ea45dbfc55fa14",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "mall",
+        "canonical_fact": "A place where many merchants have their stores under one roof is called a mall.",
+        "subject": "place where many merchants have their stores under one roof",
+        "prompt_en": "What is the conventional term for a place where many merchants have their stores under one roof?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "mall"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a96d8f112fc40b65ed7bdef5d888955b5e1dc4c81db4504973bbc59df2fb429c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009426",
+        "subject_zh": "许多商家在同一屋檐下开设店铺的地点",
+        "prompt_zh": "许多商家在同一屋檐下开设店铺的地点，其约定俗成的术语是什么？",
+        "canonical_fact_zh": "许多商家在同一屋檐下开设店铺的地点被称为商场。",
+        "answer_zh": "商场",
+        "answer_aliases_zh": [
+          "商场"
+        ]
+      },
+      "translation_sha256": "15aa73131012dd37723f6a401c4bbc46e9be65e9d6ca506fbc22d72688c77d84"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009426",
+        "historical:raw_commonsense_qa_009428"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "602fb40e7d6d4eccbef38c6bb54b45b5a062c2827d392b98e717d446d415aedc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1671,
+      "first_chunk_seconds": 34.383,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1774,
+        "prompt_tokens": 1675,
+        "total_tokens": 3449,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1300,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a06daa45eed349c7421c45c97a77d1d499122eabe09edb59ab8cc3d69ffe9cca",
+      "status": "completed",
+      "latency_seconds": 55.503
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009426"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "89002e3d52a343581ab1204b420099890077cb9ed8cc4c20fd773e93a93a9e98",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 467,
+      "first_chunk_seconds": 17.136,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 464,
+        "prompt_tokens": 520,
+        "total_tokens": 984,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 338,
+          "text_tokens": 126
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "346b849a5213978406dc9200c611ed2e112705ac1d1e6a47222963420883a79a",
+      "status": "completed",
+      "latency_seconds": 22.248
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,217 @@
+{
+  "input_sha256": "a0eb77062b3367cf6a9015e8e8d6491c27530911ab7bcd6521d7c7c878b480af",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5b012230476e5aa217ca",
+      "decision": "ready",
+      "subject": "Buffer-overflow",
+      "relation_id": "vulnerability_to_mitigation",
+      "relation_definition": "A specific security measure or check that, if fully performed, prevents a named software vulnerability from persisting as a bug.",
+      "direction": "vulnerability -> preventive measure",
+      "answer": "boundary checks",
+      "canonical_fact": "Buffer-overflow may remain as a bug in apps if boundary checks are not done fully.",
+      "prompt_en": "Buffer-overflow may remain as a bug in apps if __________ are not done fully.",
+      "evidence_quotes": [
+        "boundary checks",
+        "Buffer-overflow may remain as a bug in apps if"
+      ],
+      "reason": "No catalog relation captures a vulnerability-to-mitigation-prevention link. Proposed new relation 'vulnerability_to_mitigation' with explicit direction and definition. The source fill-in-the-blank directly supports 'boundary checks' as the preventive measure; answer is a concise literal substring of source_answer. Qualifier 'may remain' and conditionality preserved in canonical_fact.",
+      "english": {
+        "answer": "boundary checks",
+        "relation_id": "vulnerability_to_mitigation",
+        "prompt_en": "Buffer-overflow may remain as a bug in apps if __________ are not done fully.",
+        "direction": "vulnerability -> preventive measure",
+        "subject": "Buffer-overflow",
+        "canonical_fact": "Buffer-overflow may remain as a bug in apps if boundary checks are not done fully.",
+        "relation_definition": "A specific security measure or check that, if fully performed, prevents a named software vulnerability from persisting as a bug.",
+        "answer_aliases_en": [
+          "boundary checks"
+        ],
+        "relation_spec": {
+          "id": "vulnerability_to_mitigation",
+          "definition": "A specific security measure or check that, if fully performed, prevents a named software vulnerability from persisting as a bug.",
+          "direction": "vulnerability -> preventive measure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e84c1e76248f315edd58ce4253b2d6828341ff6a052f7c1af7ae7bc7a8917031",
+      "input_sha256": "cbe524ea57fafa87b5f0208b9207daed1338f0341bda543b213882edef088288",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_5b3ce2873168fd960dc8",
+      "decision": "ready",
+      "subject": "Schwarzschild radius",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "black holes",
+      "canonical_fact": "The term Schwarzschild radius usually describes properties of black holes.",
+      "prompt_en": "The term Schwarzschild radius usually describes properties of what?",
+      "evidence_quotes": [
+        "black holes.",
+        "The term Schwarzschild radius usually describes properties of"
+      ],
+      "reason": "The source states the term 'Schwarzschild radius' is associated with 'black holes' via 'usually describes properties of.' This fits term_to_definition (term -> its referent/sense) with the qualifier 'usually' preserved. Answer 'black holes' is a concise literal substring of source_answer 'black holes.' Prompt is option-free and does not contain the answer string.",
+      "english": {
+        "answer": "black holes",
+        "relation_id": "term_to_definition",
+        "prompt_en": "The term Schwarzschild radius usually describes properties of what?",
+        "direction": "term -> definition",
+        "subject": "Schwarzschild radius",
+        "canonical_fact": "The term Schwarzschild radius usually describes properties of black holes.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "black holes",
+          "black holes."
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f7cd0c9501df896075f970f5d4beb9a7491b4b2e93b808455f78510f2e2cec0",
+      "input_sha256": "042f91c591572e00d0ee786da4c136aeb98a76419a7bc5b89be9f71b8795d35b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_5b012230476e5aa217ca",
+      "input_sha256": "cbe524ea57fafa87b5f0208b9207daed1338f0341bda543b213882edef088288",
+      "english": {
+        "answer": "boundary checks",
+        "relation_id": "vulnerability_to_mitigation",
+        "prompt_en": "Buffer-overflow may remain as a bug in apps if __________ are not done fully.",
+        "direction": "vulnerability -> preventive measure",
+        "subject": "Buffer-overflow",
+        "canonical_fact": "Buffer-overflow may remain as a bug in apps if boundary checks are not done fully.",
+        "relation_definition": "A specific security measure or check that, if fully performed, prevents a named software vulnerability from persisting as a bug.",
+        "answer_aliases_en": [
+          "boundary checks"
+        ],
+        "relation_spec": {
+          "id": "vulnerability_to_mitigation",
+          "definition": "A specific security measure or check that, if fully performed, prevents a named software vulnerability from persisting as a bug.",
+          "direction": "vulnerability -> preventive measure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e84c1e76248f315edd58ce4253b2d6828341ff6a052f7c1af7ae7bc7a8917031",
+      "translation": {
+        "record_id": "public:pbf_5b012230476e5aa217ca",
+        "subject_zh": "缓冲区溢出",
+        "prompt_zh": "如果未完全执行__________，缓冲区溢出可能仍作为应用中的缺陷存在。",
+        "canonical_fact_zh": "如果未完全执行边界检查，缓冲区溢出可能仍作为应用中的缺陷存在。",
+        "answer_zh": "边界检查",
+        "answer_aliases_zh": [
+          "边界检查"
+        ]
+      },
+      "translation_sha256": "120560e7a0eb2d3a9bb96f0ead35d1bbd8c0c005075a5a979e78a8c1f89f78d7"
+    },
+    {
+      "record_id": "public:pbf_5b3ce2873168fd960dc8",
+      "input_sha256": "042f91c591572e00d0ee786da4c136aeb98a76419a7bc5b89be9f71b8795d35b",
+      "english": {
+        "answer": "black holes",
+        "relation_id": "term_to_definition",
+        "prompt_en": "The term Schwarzschild radius usually describes properties of what?",
+        "direction": "term -> definition",
+        "subject": "Schwarzschild radius",
+        "canonical_fact": "The term Schwarzschild radius usually describes properties of black holes.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "black holes",
+          "black holes."
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f7cd0c9501df896075f970f5d4beb9a7491b4b2e93b808455f78510f2e2cec0",
+      "translation": {
+        "record_id": "public:pbf_5b3ce2873168fd960dc8",
+        "subject_zh": "史瓦西半径",
+        "prompt_zh": "史瓦西半径这一术语通常描述的是什么的性质？",
+        "canonical_fact_zh": "史瓦西半径这一术语通常描述的是黑洞的性质。",
+        "answer_zh": "黑洞",
+        "answer_aliases_zh": [
+          "黑洞",
+          "黑洞。"
+        ]
+      },
+      "translation_sha256": "65cfe18cc49f1970246f3a48a1663a91d2d39b46acb9411dc8918c32b667f2ae"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5b012230476e5aa217ca",
+        "public:pbf_5b3ce2873168fd960dc8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "701e892f641e780127ef0a74bfc24d705d95808d482b1135e2664e98e787d0e4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2555,
+      "first_chunk_seconds": 27.521,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2657,
+        "prompt_tokens": 1612,
+        "total_tokens": 4269,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2098,
+          "text_tokens": 559
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1299106e1ef1cace49d1f397f38b27177abc3122484edd5d1543b08b93fd5ad1",
+      "status": "completed",
+      "latency_seconds": 60.42
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5b012230476e5aa217ca",
+        "public:pbf_5b3ce2873168fd960dc8"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "367d23c61c27c15223538ed5c98c1384b4c8757ec8ba808c4f24b8266007faa7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 991,
+      "first_chunk_seconds": 38.809,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1041,
+        "prompt_tokens": 870,
+        "total_tokens": 1911,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 858,
+          "text_tokens": 183
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c804d5fd8eefdecbd71918990420fa22bfea1925d6d6ee8f60612c5dbc6c2271",
+      "status": "completed",
+      "latency_seconds": 54.056
+    }
+  ],
+  "status": "completed"
+}

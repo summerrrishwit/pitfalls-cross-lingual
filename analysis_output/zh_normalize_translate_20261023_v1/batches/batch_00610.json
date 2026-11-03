@@ -1,0 +1,238 @@
+{
+  "input_sha256": "67d97166c7ff339c18aa881e0472d52e9fc564b9b2a51ebf1d5e68e8de22c5ad",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0a6d39ee413e1f42ef31",
+      "decision": "ready",
+      "subject": "Raggedy Ann's doll brother",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Andy",
+      "canonical_fact": "The name of Raggedy Ann's doll brother is Andy.",
+      "prompt_en": "The name of Raggedy Ann's doll brother is",
+      "evidence_quotes": [
+        "What is the name of Raggedy Ann's doll brother?",
+        "Andy"
+      ],
+      "reason": "The source question identifies a specific fictional character by the description 'Raggedy Ann's doll brother' and asks for its name. The answer 'Andy' is the unique entity that satisfies that identifying description. This maps exactly to the catalog relation description_to_entity (identifying description -> entity). The prompt is option-free and does not leak the answer.",
+      "english": {
+        "subject": "Raggedy Ann's doll brother",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Andy",
+        "canonical_fact": "The name of Raggedy Ann's doll brother is Andy.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The name of Raggedy Ann's doll brother is",
+        "answer_aliases_en": [
+          "Andy"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7c2f3f75c0cef121a1e33654cc11d53d37adfa70461050acef6e3b1f30d96d37",
+      "input_sha256": "8e88a446bcabd428475a28af25d7c0a20597e97627e1ef57f6513a698326696f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0aaa1b8e7851712e6185",
+      "decision": "ready",
+      "subject": "Canada",
+      "relation_id": "country_to_census_population",
+      "relation_definition": "Population figure recorded by a specified national census in a stated year; preserve 'approximately' qualifier when present in source.",
+      "direction": "country + census year -> recorded population count",
+      "answer": "30007094.0",
+      "canonical_fact": "The 2001 Canadian census revealed a population of approximately 30007094.0.",
+      "prompt_en": "The 2001 Canadian census revealed a population of approximately",
+      "evidence_quotes": [
+        "in 2001 the canadian census revealed a population of approximately",
+        "30007094.0"
+      ],
+      "reason": "No existing catalog relation covers a country's census-recorded population count. Proposed a new precise relation country_to_census_population (country + census year -> recorded population count). The source question and answer jointly state the 2001 Canadian census figure as approximately 30007094.0. The prompt is option-free and does not contain the numeric answer. The 'approximately' qualifier from the source is preserved in the canonical fact.",
+      "english": {
+        "subject": "Canada",
+        "relation_definition": "Population figure recorded by a specified national census in a stated year; preserve 'approximately' qualifier when present in source.",
+        "answer": "30007094.0",
+        "canonical_fact": "The 2001 Canadian census revealed a population of approximately 30007094.0.",
+        "direction": "country + census year -> recorded population count",
+        "relation_id": "country_to_census_population",
+        "prompt_en": "The 2001 Canadian census revealed a population of approximately",
+        "answer_aliases_en": [
+          "30007094.0",
+          "30007094"
+        ],
+        "relation_spec": {
+          "id": "country_to_census_population",
+          "definition": "Population figure recorded by a specified national census in a stated year; preserve 'approximately' qualifier when present in source.",
+          "direction": "country + census year -> recorded population count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66adec154f4bfbc9b2d748dc6565b372e50d045eb243d1d9905e7dc2eca0aeb6",
+      "input_sha256": "0b3f838d8b9f2f013b776fb8ff89d025222bef4ac4006e4d3bf2f385464ecfee",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_0a6d39ee413e1f42ef31",
+      "input_sha256": "8e88a446bcabd428475a28af25d7c0a20597e97627e1ef57f6513a698326696f",
+      "english": {
+        "subject": "Raggedy Ann's doll brother",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Andy",
+        "canonical_fact": "The name of Raggedy Ann's doll brother is Andy.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The name of Raggedy Ann's doll brother is",
+        "answer_aliases_en": [
+          "Andy"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7c2f3f75c0cef121a1e33654cc11d53d37adfa70461050acef6e3b1f30d96d37",
+      "translation": {
+        "record_id": "public:pbf_0a6d39ee413e1f42ef31",
+        "subject_zh": "拉格蒂·安的玩偶弟弟",
+        "prompt_zh": "拉格蒂·安的玩偶弟弟的名字是",
+        "canonical_fact_zh": "拉格蒂·安的玩偶弟弟的名字是安迪。",
+        "answer_zh": "安迪",
+        "answer_aliases_zh": [
+          "安迪"
+        ]
+      },
+      "translation_sha256": "75a27d2ed17064acf9f37b6b4e422b97c35fd9f7fce88cef8385b6cdb027c003"
+    },
+    {
+      "record_id": "public:pbf_0aaa1b8e7851712e6185",
+      "input_sha256": "0b3f838d8b9f2f013b776fb8ff89d025222bef4ac4006e4d3bf2f385464ecfee",
+      "english": {
+        "subject": "Canada",
+        "relation_definition": "Population figure recorded by a specified national census in a stated year; preserve 'approximately' qualifier when present in source.",
+        "answer": "30007094.0",
+        "canonical_fact": "The 2001 Canadian census revealed a population of approximately 30007094.0.",
+        "direction": "country + census year -> recorded population count",
+        "relation_id": "country_to_census_population",
+        "prompt_en": "The 2001 Canadian census revealed a population of approximately",
+        "answer_aliases_en": [
+          "30007094.0",
+          "30007094"
+        ],
+        "relation_spec": {
+          "id": "country_to_census_population",
+          "definition": "Population figure recorded by a specified national census in a stated year; preserve 'approximately' qualifier when present in source.",
+          "direction": "country + census year -> recorded population count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "66adec154f4bfbc9b2d748dc6565b372e50d045eb243d1d9905e7dc2eca0aeb6",
+      "translation": {
+        "record_id": "public:pbf_0aaa1b8e7851712e6185",
+        "subject_zh": "加拿大",
+        "prompt_zh": "2001年加拿大人口普查显示人口约为",
+        "canonical_fact_zh": "2001年加拿大人口普查显示人口约为30007094.0。",
+        "answer_zh": "30007094.0",
+        "answer_aliases_zh": [
+          "30007094.0",
+          "30007094"
+        ]
+      },
+      "translation_sha256": "45a7e81026099840fd8e3d057e13b6c1a783ee86bb2afa70fa5b5a22c6b29c4b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0a6d39ee413e1f42ef31",
+        "public:pbf_0aaa1b8e7851712e6185"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cc615ea44e6bdc66731c1ba862fda3d7258e094b841ab1cb933859c7137e9347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.009
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0a6d39ee413e1f42ef31",
+        "public:pbf_0aaa1b8e7851712e6185"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cc615ea44e6bdc66731c1ba862fda3d7258e094b841ab1cb933859c7137e9347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 40.114
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0a6d39ee413e1f42ef31",
+        "public:pbf_0aaa1b8e7851712e6185"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cc615ea44e6bdc66731c1ba862fda3d7258e094b841ab1cb933859c7137e9347",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2218,
+        "prompt_tokens": 1648,
+        "total_tokens": 3866,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1632,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "95987b3f4531034405cea98f0d45b302d1794cedd75c7f6751aab602f88e288c",
+      "status": "completed",
+      "latency_seconds": 63.001
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0a6d39ee413e1f42ef31",
+        "public:pbf_0aaa1b8e7851712e6185"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f5d1b0f7deaa98cbc5f38cd98ca6807a03ce7855f46df57ca26475e383fb6d2f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1389,
+        "prompt_tokens": 876,
+        "total_tokens": 2265,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1115,
+          "text_tokens": 274
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "99b6959a9bd34d19792812a4858b3abbde7a0d31cd3a9cc5ac916601794eadc4",
+      "status": "completed",
+      "latency_seconds": 33.61
+    }
+  ],
+  "status": "completed"
+}

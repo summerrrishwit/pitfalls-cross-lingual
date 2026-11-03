@@ -1,0 +1,250 @@
+{
+  "input_sha256": "95982e43ca67c3eefb9f0a17288cbe4343019822aa5ce4c05e8da5e5e0ea47ac",
+  "normalized": [
+    {
+      "record_id": "public:pbf_04d7cfb3c378c7da29c4",
+      "decision": "ready",
+      "subject": "Monica in Love & Basketball",
+      "relation_id": "character_to_educational_institution",
+      "relation_definition": "The college or university a fictional character is depicted as attending in a specified work/version; not a real-world biographical fact about an actor.",
+      "direction": "fictional character in specified work -> educational institution attended",
+      "answer": "University of Southern California",
+      "canonical_fact": "Monica in Love & Basketball attended the University of Southern California.",
+      "prompt_en": "Monica in Love & Basketball attended the",
+      "evidence_quotes": [
+        "what college did monica go to in love and basketball",
+        "University of Southern California"
+      ],
+      "reason": "Source question explicitly asks which college Monica attended in the film Love & Basketball, and the source answer is 'University of Southern California'. No catalog relation covers a fictional character's depicted educational institution, so a new precise relation is proposed.",
+      "english": {
+        "subject": "Monica in Love & Basketball",
+        "relation_definition": "The college or university a fictional character is depicted as attending in a specified work/version; not a real-world biographical fact about an actor.",
+        "answer": "University of Southern California",
+        "canonical_fact": "Monica in Love & Basketball attended the University of Southern California.",
+        "direction": "fictional character in specified work -> educational institution attended",
+        "relation_id": "character_to_educational_institution",
+        "prompt_en": "Monica in Love & Basketball attended the",
+        "answer_aliases_en": [
+          "University of Southern California",
+          "University of Southern CA",
+          "Keck School of Medicine of USC",
+          "USC"
+        ],
+        "relation_spec": {
+          "id": "character_to_educational_institution",
+          "definition": "The college or university a fictional character is depicted as attending in a specified work/version; not a real-world biographical fact about an actor.",
+          "direction": "fictional character in specified work -> educational institution attended"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a5f3d31fe6af1ca0ec3f38fd37e9fcf10506221fa5fa93e2e0d821e851828a3a",
+      "input_sha256": "d84f3e05b9d004093eb290525a3f044c0773a3620ab5f5e36d704e84515ba1f3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_04decef2aa421e2a6570",
+      "decision": "ready",
+      "subject": "gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "the Central Intelligence Agency (CIA)",
+      "canonical_fact": "The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to the Central Intelligence Agency (CIA).",
+      "prompt_en": "The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to",
+      "evidence_quotes": [
+        "The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to",
+        "the Central Intelligence Agency (CIA)."
+      ],
+      "reason": "The source question presents a uniquely qualified description of a role and asks which entity was assigned that role; the source answer is 'the Central Intelligence Agency (CIA)'. The description uniquely identifies the entity, fitting description_to_entity exactly.",
+      "english": {
+        "subject": "gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "the Central Intelligence Agency (CIA)",
+        "canonical_fact": "The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to the Central Intelligence Agency (CIA).",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to",
+        "answer_aliases_en": [
+          "the Central Intelligence Agency (CIA)",
+          "the Central Intelligence Agency (CIA)."
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "659e29d6d2debcba42258ef93e430dad5cdf182cded388cdab13ec8a7650baa6",
+      "input_sha256": "9dda93bc9b1fc37343d0fac6616939884761e7cea67e40e4e3051094fbb6be34",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "59c43440796078697d24d6077baeb28da5a7e6c8b58cd9deeaa11ca271fb8aa7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2893,
+        "prompt_tokens": 1718,
+        "total_tokens": 4611,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2331,
+          "text_tokens": 562
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "49545280a68f521dad4e88783ada8ee35a26d200744535a99cf5a858e8fc2cab",
+      "status": "completed",
+      "latency_seconds": 97.934
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 27.461
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.435
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.882
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 9.74,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 44.589,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_04d7cfb3c378c7da29c4",
+        "public:pbf_04decef2aa421e2a6570"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "06c80d7c54de6796a6c70238564604f7be5b161943eb2f03938bb301865cd6b7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2370,
+      "first_chunk_seconds": 1.999,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2511,
+        "prompt_tokens": 936,
+        "total_tokens": 3447,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2163,
+          "text_tokens": 348
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "41d42305c464df74b9d1cf4ac29d51614875547762470f711a4e7e9eab942bf0",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 35.535,
+      "validation_code": "duplicate_or_invalid_record_id"
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00571.json",
+      "sha256": "6819077c188ced36f3a88a1f20897fdcfc2cec2f1e2ddd0b099fe5ef6da1430b",
+      "previous_status": "failed"
+    }
+  ]
+}

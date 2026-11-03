@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5527f5604343a61d84976eadf3fb1d777f93a9a89ebd5ad5c56513ec8b3780af",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004345",
+      "decision": "ready",
+      "subject": "snake in the biblical temptation narrative",
+      "relation_id": "narrative_event_to_location",
+      "relation_definition": "The specific location where a stated event occurs within a narrative, scriptural, or literary work; distinct from the habitat, origin, or permanent residence of the agent.",
+      "direction": "narrative event -> location of that event",
+      "answer": "garden of eden",
+      "canonical_fact": "The snake in the biblical temptation narrative tempts people in the garden of Eden.",
+      "prompt_en": "In the biblical temptation narrative, where does the snake go to tempt people?",
+      "evidence_quotes": [
+        "where would I go tempt people",
+        "garden of eden"
+      ],
+      "reason": "The source question asks for the location of the temptation event in the biblical narrative and the source answer 'garden of eden' is a literal substring. No catalog relation fits exactly: entity_to_containing_location explicitly excludes process location, and organism_to_habitat refers to natural habitat rather than a narrative event setting. A new precise relation 'narrative_event_to_location' is proposed to capture the location of a specific event within a scriptural/literary work.",
+      "english": {
+        "direction": "narrative event -> location of that event",
+        "relation_id": "narrative_event_to_location",
+        "answer": "garden of eden",
+        "canonical_fact": "The snake in the biblical temptation narrative tempts people in the garden of Eden.",
+        "subject": "snake in the biblical temptation narrative",
+        "prompt_en": "In the biblical temptation narrative, where does the snake go to tempt people?",
+        "relation_definition": "The specific location where a stated event occurs within a narrative, scriptural, or literary work; distinct from the habitat, origin, or permanent residence of the agent.",
+        "answer_aliases_en": [
+          "garden of eden"
+        ],
+        "relation_spec": {
+          "id": "narrative_event_to_location",
+          "definition": "The specific location where a stated event occurs within a narrative, scriptural, or literary work; distinct from the habitat, origin, or permanent residence of the agent.",
+          "direction": "narrative event -> location of that event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "648045bc1043ee078bd39d68e8f44f121d1164c31f9015f81161ad34773701fb",
+      "input_sha256": "edace858ca8ed9c4ca8234ab411562da57358ec9f4b7caa68518efec73f6930d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004375",
+      "decision": "ready",
+      "subject": "Roanoke City in the Blue Ridge Mountains",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Virginia",
+      "canonical_fact": "Roanoke City in the Blue Ridge Mountains is located in Virginia.",
+      "prompt_en": "Which state contains Roanoke City in the Blue Ridge Mountains?",
+      "evidence_quotes": [
+        "Which state is the blue ridge mountains roanoke city in?",
+        "virginia"
+      ],
+      "reason": "The source question explicitly asks for the state containing Roanoke City (qualified by the Blue Ridge Mountains), and the source answer 'virginia' directly provides it. entity_to_containing_location fits exactly as geographic containment at the state level. The existing answer 'Virginia' (proper-noun capitalisation) does not conflict with the source.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Virginia",
+        "canonical_fact": "Roanoke City in the Blue Ridge Mountains is located in Virginia.",
+        "subject": "Roanoke City in the Blue Ridge Mountains",
+        "prompt_en": "Which state contains Roanoke City in the Blue Ridge Mountains?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Virginia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "665c2fc29aa79adecd776a5301dd86bf4b2a3e2742c1f24a36a20a9055b786d5",
+      "input_sha256": "19c9cc0c6d107d247f723382bed6237d9baee45cfff8f39e4ae1b632e7c92e14",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004345",
+      "input_sha256": "edace858ca8ed9c4ca8234ab411562da57358ec9f4b7caa68518efec73f6930d",
+      "english": {
+        "direction": "narrative event -> location of that event",
+        "relation_id": "narrative_event_to_location",
+        "answer": "garden of eden",
+        "canonical_fact": "The snake in the biblical temptation narrative tempts people in the garden of Eden.",
+        "subject": "snake in the biblical temptation narrative",
+        "prompt_en": "In the biblical temptation narrative, where does the snake go to tempt people?",
+        "relation_definition": "The specific location where a stated event occurs within a narrative, scriptural, or literary work; distinct from the habitat, origin, or permanent residence of the agent.",
+        "answer_aliases_en": [
+          "garden of eden"
+        ],
+        "relation_spec": {
+          "id": "narrative_event_to_location",
+          "definition": "The specific location where a stated event occurs within a narrative, scriptural, or literary work; distinct from the habitat, origin, or permanent residence of the agent.",
+          "direction": "narrative event -> location of that event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "648045bc1043ee078bd39d68e8f44f121d1164c31f9015f81161ad34773701fb",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004345",
+        "subject_zh": "《圣经》诱惑叙事中的蛇",
+        "prompt_zh": "在《圣经》的诱惑叙事中，蛇到何处引诱人类？",
+        "canonical_fact_zh": "《圣经》诱惑叙事中的蛇在伊甸园引诱人类。",
+        "answer_zh": "伊甸园",
+        "answer_aliases_zh": [
+          "伊甸园"
+        ]
+      },
+      "translation_sha256": "fa27980cf1cccfe20f7ab886296b0a1df57873b744bec9fe658e040934eac72f"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004375",
+      "input_sha256": "19c9cc0c6d107d247f723382bed6237d9baee45cfff8f39e4ae1b632e7c92e14",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Virginia",
+        "canonical_fact": "Roanoke City in the Blue Ridge Mountains is located in Virginia.",
+        "subject": "Roanoke City in the Blue Ridge Mountains",
+        "prompt_en": "Which state contains Roanoke City in the Blue Ridge Mountains?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Virginia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "665c2fc29aa79adecd776a5301dd86bf4b2a3e2742c1f24a36a20a9055b786d5",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004375",
+        "subject_zh": "蓝岭山脉中的罗阿诺克市",
+        "prompt_zh": "蓝岭山脉中的罗阿诺克市位于哪个州？",
+        "canonical_fact_zh": "蓝岭山脉中的罗阿诺克市位于弗吉尼亚州。",
+        "answer_zh": "弗吉尼亚州",
+        "answer_aliases_zh": [
+          "弗吉尼亚州"
+        ]
+      },
+      "translation_sha256": "d4c75ce91b2a54c7ee8ad839b985f8ee2d9cffa65a8039e67804f4a7071c3b3b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004345",
+        "historical:raw_commonsense_qa_004375"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8b69a95fc2ae50e5570e938fd439419cd2155b468aa9c90769b2d7a82eaeacf0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2613,
+      "first_chunk_seconds": 28.07,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2725,
+        "prompt_tokens": 1777,
+        "total_tokens": 4502,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2148,
+          "text_tokens": 577
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "25fa3c3a89cfa7170777a6b8e4fdcf36265eefed24fde55f797da4ad0271e351",
+      "status": "completed",
+      "latency_seconds": 64.401
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004345",
+        "historical:raw_commonsense_qa_004375"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "97506ca507f6d9da39d074b3c727a714cdf98945cbe16e5b5fe97ded9549baab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 890,
+      "first_chunk_seconds": 22.881,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 940,
+        "prompt_tokens": 881,
+        "total_tokens": 1821,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 688,
+          "text_tokens": 252
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "526b86ea4a1e19333d07b95068cb1a831d73cb294fcd7d4baa313c9ccf7ca728",
+      "status": "completed",
+      "latency_seconds": 65.259
+    }
+  ],
+  "status": "completed"
+}

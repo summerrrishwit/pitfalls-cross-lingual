@@ -1,0 +1,228 @@
+{
+  "input_sha256": "9a658b31228661ce83ce17ce7836500cd4c487749fe40c6ab0eabb2ab9d76085",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000109",
+      "decision": "ready",
+      "subject": "ionic end of a detergent",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "sulfonate",
+      "canonical_fact": "The ionic end of a detergent can be either a sulfate or a sulfonate.",
+      "prompt_en": "What are the two types of ionic groups that can form the ionic end of a detergent?",
+      "evidence_quotes": [
+        "The ionic end of a detergent can either be a sulfate or what?",
+        "sulfonate"
+      ],
+      "reason": "Source explicitly states the ionic end of a detergent can be sulfate or sulfonate. Sulfonate is a chemical-group class (a type of anion), so entity_to_class fits: the ionic end belongs to the class of sulfonate groups. The 'can be' qualifier is preserved in the canonical fact to avoid asserting exclusivity. No catalog relation more precisely captures 'possible anion type at the ionic end', so entity_to_class is the best available fit.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "sulfonate",
+        "canonical_fact": "The ionic end of a detergent can be either a sulfate or a sulfonate.",
+        "subject": "ionic end of a detergent",
+        "prompt_en": "What are the two types of ionic groups that can form the ionic end of a detergent?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "sulfonate"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "be6a5c14c1e6af44733d31a55197c9231188a8fe583b3460a6020542c75290e9",
+      "input_sha256": "2a496ccf1f0bd664c1943737e4b06383890c04df976c41a1ea91f6adc25e46c2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000110",
+      "decision": "ready",
+      "subject": "plant-like protists",
+      "relation_id": "organism_to_metabolic_process",
+      "relation_definition": "The specific biochemical process by which a specified organism or organism group produces food or energy; retains contextual qualifiers (e.g. presence of chloroplasts) as stated.",
+      "direction": "organism/group -> metabolic process",
+      "answer": "photosynthesis",
+      "canonical_fact": "Plant-like protists contain chloroplasts and make food by photosynthesis.",
+      "prompt_en": "What process do plant-like protists use to make food, given that they contain chloroplasts?",
+      "evidence_quotes": [
+        "Plant-like protists contains chloroplasts and make food by what process?",
+        "photosynthesis"
+      ],
+      "reason": "Source states plant-like protists make food by photosynthesis. No existing catalog relation covers an organism-to-metabolic-process link, so a new relation organism_to_metabolic_process is proposed with an explicit definition. The contextual qualifier 'contain chloroplasts' is preserved in the canonical fact. The prompt_en is option-free and does not contain the answer 'photosynthesis'.",
+      "english": {
+        "direction": "organism/group -> metabolic process",
+        "relation_id": "organism_to_metabolic_process",
+        "answer": "photosynthesis",
+        "canonical_fact": "Plant-like protists contain chloroplasts and make food by photosynthesis.",
+        "subject": "plant-like protists",
+        "prompt_en": "What process do plant-like protists use to make food, given that they contain chloroplasts?",
+        "relation_definition": "The specific biochemical process by which a specified organism or organism group produces food or energy; retains contextual qualifiers (e.g. presence of chloroplasts) as stated.",
+        "answer_aliases_en": [
+          "photosynthesis"
+        ],
+        "relation_spec": {
+          "id": "organism_to_metabolic_process",
+          "definition": "The specific biochemical process by which a specified organism or organism group produces food or energy; retains contextual qualifiers (e.g. presence of chloroplasts) as stated.",
+          "direction": "organism/group -> metabolic process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9e37849c32add219bac9fd0d476b4ba200f3c86df698700dc4b779680f12c513",
+      "input_sha256": "a6254c77d50dbc55778403e383ad7b8d5f3646e051a68098daead7e6c2f87f4c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000109",
+      "input_sha256": "2a496ccf1f0bd664c1943737e4b06383890c04df976c41a1ea91f6adc25e46c2",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "sulfonate",
+        "canonical_fact": "The ionic end of a detergent can be either a sulfate or a sulfonate.",
+        "subject": "ionic end of a detergent",
+        "prompt_en": "What are the two types of ionic groups that can form the ionic end of a detergent?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "sulfonate"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "be6a5c14c1e6af44733d31a55197c9231188a8fe583b3460a6020542c75290e9",
+      "translation": {
+        "record_id": "historical:raw_sciq_000109",
+        "subject_zh": "洗涤剂的离子端",
+        "prompt_zh": "洗涤剂的离子端可以由哪两种离子基团构成？",
+        "canonical_fact_zh": "洗涤剂的离子端可以是硫酸盐或磺酸盐。",
+        "answer_zh": "磺酸盐",
+        "answer_aliases_zh": [
+          "磺酸盐"
+        ]
+      },
+      "translation_sha256": "334f8094ce6f0886696521175a43093a40da2843f1f8d084950ed403425f3c0f"
+    },
+    {
+      "record_id": "historical:raw_sciq_000110",
+      "input_sha256": "a6254c77d50dbc55778403e383ad7b8d5f3646e051a68098daead7e6c2f87f4c",
+      "english": {
+        "direction": "organism/group -> metabolic process",
+        "relation_id": "organism_to_metabolic_process",
+        "answer": "photosynthesis",
+        "canonical_fact": "Plant-like protists contain chloroplasts and make food by photosynthesis.",
+        "subject": "plant-like protists",
+        "prompt_en": "What process do plant-like protists use to make food, given that they contain chloroplasts?",
+        "relation_definition": "The specific biochemical process by which a specified organism or organism group produces food or energy; retains contextual qualifiers (e.g. presence of chloroplasts) as stated.",
+        "answer_aliases_en": [
+          "photosynthesis"
+        ],
+        "relation_spec": {
+          "id": "organism_to_metabolic_process",
+          "definition": "The specific biochemical process by which a specified organism or organism group produces food or energy; retains contextual qualifiers (e.g. presence of chloroplasts) as stated.",
+          "direction": "organism/group -> metabolic process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9e37849c32add219bac9fd0d476b4ba200f3c86df698700dc4b779680f12c513",
+      "translation": {
+        "record_id": "historical:raw_sciq_000110",
+        "subject_zh": "类植物原生生物",
+        "prompt_zh": "已知类植物原生生物含有叶绿体，它们通过什么过程来制造食物？",
+        "canonical_fact_zh": "类植物原生生物含有叶绿体，并通过光合作用制造食物。",
+        "answer_zh": "光合作用",
+        "answer_aliases_zh": [
+          "光合作用"
+        ]
+      },
+      "translation_sha256": "51775a3379d6e32cd1ce77d3a8eddbe7ef020608d72c338d17b74c8d2687b9ed"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000109",
+        "historical:raw_sciq_000110"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "96e5ba385c561daf3e34d1b67502c964f49d4df02318cb021fc545eadbdf993c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3307,
+      "first_chunk_seconds": 2.593,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3522,
+        "prompt_tokens": 1694,
+        "total_tokens": 5216,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2925,
+          "text_tokens": 597
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec14dcd1ea14ee06bd0df3d326e1cde5ff243e84b14f5bd4fa0f4b66f4b1b1dd",
+      "status": "completed",
+      "latency_seconds": 48.798
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000109",
+        "historical:raw_sciq_000110"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "158154f48f31d10d93a05fc06123ab5de9cfa66c4de2ee40b24f7cafbb2ad7a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 38.847
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000109",
+        "historical:raw_sciq_000110"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "158154f48f31d10d93a05fc06123ab5de9cfa66c4de2ee40b24f7cafbb2ad7a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1111,
+      "first_chunk_seconds": 0.958,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1179,
+        "prompt_tokens": 884,
+        "total_tokens": 2063,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 949,
+          "text_tokens": 230
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fb49577f4642ec6333728c60ed218efc4710fb5e3b56b3f02d1cb79513137c7f",
+      "status": "completed",
+      "latency_seconds": 58.821
+    }
+  ],
+  "status": "completed"
+}

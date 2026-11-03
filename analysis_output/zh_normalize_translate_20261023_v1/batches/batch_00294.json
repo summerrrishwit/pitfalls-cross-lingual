@@ -1,0 +1,178 @@
+{
+  "input_sha256": "40ae2dc4cfc8cf634f2a397c90164a5876fca5900d518e8f36df6870c00b3aae",
+  "normalized": [
+    {
+      "record_id": "public:pbf_8cc6d139a6fcc514c250",
+      "decision": "ready",
+      "subject": "She Works Hard for the Money",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Donna Summer",
+      "canonical_fact": "Donna Summer sings the song She Works Hard for the Money.",
+      "prompt_en": "Which artist performs the song She Works Hard for the Money?",
+      "evidence_quotes": [
+        "she works hard for the money",
+        "Donna Summer"
+      ],
+      "reason": "The source QA pairs the song 'She Works Hard for the Money' with its performer 'Donna Summer'. The catalog relation song_to_performer (song -> performer) fits exactly: a specified song and its performing artist. No ambiguity or missing qualifier detected.",
+      "english": {
+        "relation_id": "song_to_performer",
+        "canonical_fact": "Donna Summer sings the song She Works Hard for the Money.",
+        "answer": "Donna Summer",
+        "prompt_en": "Which artist performs the song She Works Hard for the Money?",
+        "subject": "She Works Hard for the Money",
+        "direction": "song -> performer",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Donna Summer",
+          "LaDonna Adrian Gaines"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b502c026bc32818138d4866a396e998fd4c64958441375e1ffee8137f6bbd6ca",
+      "input_sha256": "7be8080e9b3b9c196c6433c407496491ed9dd54f0ae7f658f94d6bf95ce35394",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8cde0f83a0d2ca169518",
+      "decision": "ready",
+      "subject": "inter-generational mobility",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "movement into different occupational categories between generations",
+      "canonical_fact": "The term inter-generational mobility refers to movement into different occupational categories between generations.",
+      "prompt_en": "What does the term inter-generational mobility refer to?",
+      "evidence_quotes": [
+        "The term inter-generational mobility refers to:",
+        "movement into different occupational categories between generations"
+      ],
+      "reason": "The source QA explicitly defines the term 'inter-generational mobility' as 'movement into different occupational categories between generations'. The catalog relation term_to_definition (term -> definition) fits exactly: an explicit term and its defining sense. No conflicting qualifier or uncertainty in the source.",
+      "english": {
+        "relation_id": "term_to_definition",
+        "canonical_fact": "The term inter-generational mobility refers to movement into different occupational categories between generations.",
+        "answer": "movement into different occupational categories between generations",
+        "prompt_en": "What does the term inter-generational mobility refer to?",
+        "subject": "inter-generational mobility",
+        "direction": "term -> definition",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "movement into different occupational categories between generations"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b59af1439fe2c577d58d9d59d5641c01dca72085833324a88c3ffffa8b88ff61",
+      "input_sha256": "da7cf1107d0c8a7c88436e3b264e71026e59c9bff362dfc51b6c81f572aeaeb9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8cc6d139a6fcc514c250",
+        "public:pbf_8cde0f83a0d2ca169518"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e192c387a7f3edea8d513805dfaa40de99291856463471ed78d9cb2a29838f51",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1515,
+        "prompt_tokens": 1606,
+        "total_tokens": 3121,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1009,
+          "text_tokens": 506
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "91b57e368a492fb71fc79663e9049bfb2f5461f2076ec16d3fdcc3d04a98de9d",
+      "status": "completed",
+      "latency_seconds": 45.789
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8cc6d139a6fcc514c250",
+        "public:pbf_8cde0f83a0d2ca169518"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39513a6f41871b09081b0b053bffbf765e602835afb843ea98ee0e64149fda99",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 952,
+        "prompt_tokens": 859,
+        "total_tokens": 1811,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 735,
+          "text_tokens": 217
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "59dd4f55289e3bb3af1a426eef5600c56770d63719ce7eaf5db969b9388a937f",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 30.471,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8cc6d139a6fcc514c250",
+        "public:pbf_8cde0f83a0d2ca169518"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7608d8719f32683dcd57b38f97af916b3512298983853055c610a48c0172395b",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 123.905
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8cc6d139a6fcc514c250",
+        "public:pbf_8cde0f83a0d2ca169518"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7608d8719f32683dcd57b38f97af916b3512298983853055c610a48c0172395b",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 826,
+        "prompt_tokens": 878,
+        "total_tokens": 1704,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 611,
+          "text_tokens": 215
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "98d7d74628984bde32b05eae272e2ee10acb992406e58d10237219ebcfb8b9bb",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 34.202,
+      "validation_code": "duplicate_or_invalid_record_id"
+    }
+  ],
+  "status": "failed"
+}

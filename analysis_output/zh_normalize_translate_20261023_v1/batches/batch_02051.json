@@ -1,0 +1,160 @@
+{
+  "input_sha256": "01d85511931c026d8627a49667bf3309c2aa358fc79a7221610dc038ef243db6",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f829881e1b28d123d8c0",
+      "decision": "ready",
+      "subject": "mucosa of the upper larynx",
+      "relation_id": "anatomical_structure_to_innervating_nerve",
+      "relation_definition": "The specific named nerve providing sensory or motor innervation to a specified anatomical structure or region; retain sub-region and nerve subtype (afferent/efferent) where given.",
+      "direction": "anatomical structure -> innervating nerve",
+      "answer": "internal laryngeal nerve",
+      "canonical_fact": "The mucosa of the upper larynx is innervated by the internal laryngeal nerve.",
+      "prompt_en": "The mucosa of the upper larynx is innervated by the",
+      "evidence_quotes": [
+        "The mucosa of the upper larynx is innervated by the",
+        "internal laryngeal nerve which is the afferent limb of the cough reflex."
+      ],
+      "reason": "No existing catalog relation captures the specific 'innervated by' anatomical nerve-supply relationship; proposed a precise new relation. The answer 'internal laryngeal nerve' is a literal substring of the source answer and is kept as-is. The qualifier 'afferent limb of the cough reflex' is additional context not needed in the concise answer but is preserved in evidence.",
+      "english": {
+        "answer": "internal laryngeal nerve",
+        "relation_id": "anatomical_structure_to_innervating_nerve",
+        "prompt_en": "The mucosa of the upper larynx is innervated by the",
+        "direction": "anatomical structure -> innervating nerve",
+        "subject": "mucosa of the upper larynx",
+        "canonical_fact": "The mucosa of the upper larynx is innervated by the internal laryngeal nerve.",
+        "relation_definition": "The specific named nerve providing sensory or motor innervation to a specified anatomical structure or region; retain sub-region and nerve subtype (afferent/efferent) where given.",
+        "answer_aliases_en": [
+          "internal laryngeal nerve",
+          "internal laryngeal nerve which is the afferent limb of the cough reflex."
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_innervating_nerve",
+          "definition": "The specific named nerve providing sensory or motor innervation to a specified anatomical structure or region; retain sub-region and nerve subtype (afferent/efferent) where given.",
+          "direction": "anatomical structure -> innervating nerve"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "799006b039d29c13581d9c10b1031ab04321fef39d633177779d21eb6b86f4b2",
+      "input_sha256": "65254173654b0935636a6d321ae752ed578986f1b4275eede794f78266bb9e6b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f82d7fc3a73b8e921c80",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Circular/trivial extraction: the subject 'the hunger games series' already embeds the answer 'The Hunger Games', making the name-relation tautological. No independent factual value is added beyond restating the name contained in the question phrasing. Deferred rather than rejected because the source does technically support the literal match, but the fact is not a reusable independent knowledge claim.",
+      "input_sha256": "a8eb9f37140726d3f04f5a02f092915bb94b0037bf75e6234cbd6bf82816b85b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f829881e1b28d123d8c0",
+      "input_sha256": "65254173654b0935636a6d321ae752ed578986f1b4275eede794f78266bb9e6b",
+      "english": {
+        "answer": "internal laryngeal nerve",
+        "relation_id": "anatomical_structure_to_innervating_nerve",
+        "prompt_en": "The mucosa of the upper larynx is innervated by the",
+        "direction": "anatomical structure -> innervating nerve",
+        "subject": "mucosa of the upper larynx",
+        "canonical_fact": "The mucosa of the upper larynx is innervated by the internal laryngeal nerve.",
+        "relation_definition": "The specific named nerve providing sensory or motor innervation to a specified anatomical structure or region; retain sub-region and nerve subtype (afferent/efferent) where given.",
+        "answer_aliases_en": [
+          "internal laryngeal nerve",
+          "internal laryngeal nerve which is the afferent limb of the cough reflex."
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_innervating_nerve",
+          "definition": "The specific named nerve providing sensory or motor innervation to a specified anatomical structure or region; retain sub-region and nerve subtype (afferent/efferent) where given.",
+          "direction": "anatomical structure -> innervating nerve"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "799006b039d29c13581d9c10b1031ab04321fef39d633177779d21eb6b86f4b2",
+      "translation": {
+        "record_id": "public:pbf_f829881e1b28d123d8c0",
+        "subject_zh": "喉上部黏膜",
+        "prompt_zh": "喉上部黏膜由______支配。",
+        "canonical_fact_zh": "喉上部黏膜由内喉神经支配。",
+        "answer_zh": "内喉神经",
+        "answer_aliases_zh": [
+          "内喉神经",
+          "内喉神经，其为咳嗽反射的传入臂。"
+        ]
+      },
+      "translation_sha256": "1ca43b27c369303b3a00d9742634287c40af48a0243997daf5ded6beb70218c2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f829881e1b28d123d8c0",
+        "public:pbf_f82d7fc3a73b8e921c80"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "07565293c6ec7903396ddd6b7f8030b8dbd514ca4741f541b9ad7e32d1c14bbc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1943,
+      "first_chunk_seconds": 18.366,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2040,
+        "prompt_tokens": 1662,
+        "total_tokens": 3702,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1506,
+          "text_tokens": 534
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "938d7ce9e7292f9df3e2b5a8cc55f0d0c8541027a8281a13b4e14725f1b62bb0",
+      "status": "completed",
+      "latency_seconds": 44.651
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f829881e1b28d123d8c0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b8e6207103a5e922be5e8d6aecc7b5597fc4795266223c77e673f3a403a0a113",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 667,
+      "first_chunk_seconds": 47.037,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 709,
+        "prompt_tokens": 631,
+        "total_tokens": 1340,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 565,
+          "text_tokens": 144
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c74f8127683434c475e9ff0e42bd2182b2412970269b617c4a2a0023b54996e4",
+      "status": "completed",
+      "latency_seconds": 54.661
+    }
+  ],
+  "status": "completed"
+}

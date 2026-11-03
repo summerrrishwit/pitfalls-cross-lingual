@@ -1,0 +1,278 @@
+{
+  "input_sha256": "bf91a72c9626cac745b3ad6ad1585c4bd5a93cd020709aee816bd24277cdcad6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000087",
+      "decision": "ready",
+      "subject": "FDR in the 1932 presidential election",
+      "relation_id": "election_candidate_to_unwon_state_count",
+      "relation_definition": "The number of states a specified candidate did not carry (i.e., did not win) in a specified presidential election.",
+      "direction": "candidate in specified election -> count of states not carried",
+      "answer": "six",
+      "canonical_fact": "In the 1932 presidential election, FDR did not carry six states.",
+      "prompt_en": "How many states did FDR not carry in the 1932 presidential election?",
+      "evidence_quotes": [
+        "how many states did he not carry",
+        "six"
+      ],
+      "reason": "Source question asks for the count of states FDR did not carry in the 1932 election; source answer is 'six'. No existing catalog relation captures a per-candidate state-count for an election, so a precise new relation is proposed. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "direction": "candidate in specified election -> count of states not carried",
+        "relation_id": "election_candidate_to_unwon_state_count",
+        "answer": "six",
+        "canonical_fact": "In the 1932 presidential election, FDR did not carry six states.",
+        "subject": "FDR in the 1932 presidential election",
+        "prompt_en": "How many states did FDR not carry in the 1932 presidential election?",
+        "relation_definition": "The number of states a specified candidate did not carry (i.e., did not win) in a specified presidential election.",
+        "answer_aliases_en": [
+          "six"
+        ],
+        "relation_spec": {
+          "id": "election_candidate_to_unwon_state_count",
+          "definition": "The number of states a specified candidate did not carry (i.e., did not win) in a specified presidential election.",
+          "direction": "candidate in specified election -> count of states not carried"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d935992d2c66e782b472026d426c276933c3821e9fd807a2c634660a5cda16e5",
+      "input_sha256": "111bc0052008876407e6ce6b10a0baf82709cfb2e49271c78846c318465c5cff",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000089",
+      "decision": "ready",
+      "subject": "the initial position in Rawls's 'justice as fairness'",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "fair",
+      "canonical_fact": "According to Rawls, in 'justice as fairness,' the principles of justice are agreed to in an initial position that is fair.",
+      "prompt_en": "According to Rawls, in his concept 'justice as fairness,' the principles of justice are agreed to in an initial position that is what?",
+      "evidence_quotes": [
+        "an initial position that is",
+        "fair"
+      ],
+      "reason": "Source question and answer state that Rawls describes the initial position in 'justice as fairness' as 'fair.' The catalog relation term_to_definition fits: the term (the initial position within this named concept) is defined/described by the adjective 'fair,' retaining the scope of Rawls's specific framework. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "fair",
+        "canonical_fact": "According to Rawls, in 'justice as fairness,' the principles of justice are agreed to in an initial position that is fair.",
+        "subject": "the initial position in Rawls's 'justice as fairness'",
+        "prompt_en": "According to Rawls, in his concept 'justice as fairness,' the principles of justice are agreed to in an initial position that is what?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "fair"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c3416ce550eb259e6303b0e51114b4a1a7a852fe41d2a31ae2284dba46fb671d",
+      "input_sha256": "e483caaa2d37099c669684a4bfa984ffa24cd57a5b6f01b4b263715447d178b5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000087",
+      "input_sha256": "111bc0052008876407e6ce6b10a0baf82709cfb2e49271c78846c318465c5cff",
+      "english": {
+        "direction": "candidate in specified election -> count of states not carried",
+        "relation_id": "election_candidate_to_unwon_state_count",
+        "answer": "six",
+        "canonical_fact": "In the 1932 presidential election, FDR did not carry six states.",
+        "subject": "FDR in the 1932 presidential election",
+        "prompt_en": "How many states did FDR not carry in the 1932 presidential election?",
+        "relation_definition": "The number of states a specified candidate did not carry (i.e., did not win) in a specified presidential election.",
+        "answer_aliases_en": [
+          "six"
+        ],
+        "relation_spec": {
+          "id": "election_candidate_to_unwon_state_count",
+          "definition": "The number of states a specified candidate did not carry (i.e., did not win) in a specified presidential election.",
+          "direction": "candidate in specified election -> count of states not carried"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d935992d2c66e782b472026d426c276933c3821e9fd807a2c634660a5cda16e5",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000087",
+        "subject_zh": "1932年总统大选中的FDR",
+        "prompt_zh": "在1932年总统大选中，FDR未能赢得多少个州？",
+        "canonical_fact_zh": "在1932年总统大选中，FDR未能赢得六个州。",
+        "answer_zh": "六个",
+        "answer_aliases_zh": [
+          "六个"
+        ]
+      },
+      "translation_sha256": "7f65526f907e32cf8449be5f41176e118d7869eea2681c55b3e2def10aeb109d"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000089",
+      "input_sha256": "e483caaa2d37099c669684a4bfa984ffa24cd57a5b6f01b4b263715447d178b5",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "fair",
+        "canonical_fact": "According to Rawls, in 'justice as fairness,' the principles of justice are agreed to in an initial position that is fair.",
+        "subject": "the initial position in Rawls's 'justice as fairness'",
+        "prompt_en": "According to Rawls, in his concept 'justice as fairness,' the principles of justice are agreed to in an initial position that is what?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "fair"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c3416ce550eb259e6303b0e51114b4a1a7a852fe41d2a31ae2284dba46fb671d",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000089",
+        "subject_zh": "罗尔斯",
+        "prompt_zh": "根据罗尔斯，在其概念",
+        "canonical_fact_zh": "根据罗尔斯，在",
+        "answer_zh": "公平",
+        "answer_aliases_zh": [
+          "公平"
+        ]
+      },
+      "translation_sha256": "628190a878c4681594a1a69086fcaf60173264420361c41d0e96af363703f003"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000087",
+        "historical:raw_mmlu_000089"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8556c5277b263c749cbf4fe7b84c7424f3eaa038f791dd6111c6a8e99a2a1b08",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3009,
+      "first_chunk_seconds": 23.404,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3058,
+        "prompt_tokens": 1813,
+        "total_tokens": 4871,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2531,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "86fce8e3a2d95c5204537013f6495ec6d89618414c7b42472c177068cb3c5a04",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 59.753,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000087",
+        "historical:raw_mmlu_000089"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "841da81d571af2f135e1bdc463ef04e036d65e99e5ccd715442a51e486605427",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4090,
+      "first_chunk_seconds": 16.045,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4153,
+        "prompt_tokens": 1831,
+        "total_tokens": 5984,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3587,
+          "text_tokens": 566
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec99b098b3f57a3ae0713f648a4d4f88fa1889deb38ac891fc27ac23a4aa2e7d",
+      "status": "completed",
+      "latency_seconds": 78.813
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000087",
+        "historical:raw_mmlu_000089"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ded5a619dde99dcef9f2b366e24b24c18563a2595851eeb9342a9c8d40a706fc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1278,
+      "first_chunk_seconds": 12.064,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1404,
+        "prompt_tokens": 904,
+        "total_tokens": 2308,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1212,
+          "text_tokens": 192
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9ab1fa75145693dc8cc44d805c4d09bdb4a3e2d327c5ab5955d699a0a8bb95d9",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 29.9,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000087",
+        "historical:raw_mmlu_000089"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e865b92a19696a110fd43647484e29040968f12732bbc222e1207dc3cf69d8da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1412,
+      "first_chunk_seconds": 27.078,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1483,
+        "prompt_tokens": 922,
+        "total_tokens": 2405,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1255,
+          "text_tokens": 228
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "90470ee7623ee989469f5dc82f94519fcd6c3ebd658df4feb840a4cd1b03312d",
+      "status": "completed",
+      "latency_seconds": 53.101
+    }
+  ],
+  "status": "completed"
+}

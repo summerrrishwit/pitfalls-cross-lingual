@@ -1,0 +1,189 @@
+{
+  "input_sha256": "5bcda66ce7cbe9d40d8b57b6f3dad13a7b5bc665c796b3f03a905966508a9d7b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001372",
+      "decision": "ready",
+      "subject": "energy source that could involve a dam",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "hydroelectric power",
+      "canonical_fact": "Hydroelectric power is an energy source that could involve a dam.",
+      "prompt_en": "Which energy source could involve a dam?",
+      "evidence_quotes": [
+        "Which energy source could involve a dam?",
+        "hydroelectric power"
+      ],
+      "reason": "The source question asks to identify an energy source that could involve a dam; the source answer is 'hydroelectric power'. The catalog relation description_to_entity fits exactly: the identifying description 'energy source that could involve a dam' uniquely points to the entity 'hydroelectric power'. Direction is description -> entity as specified in the catalog.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "hydroelectric power",
+        "canonical_fact": "Hydroelectric power is an energy source that could involve a dam.",
+        "subject": "energy source that could involve a dam",
+        "prompt_en": "Which energy source could involve a dam?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "hydroelectric power"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "acbd5f727bd8b3f3137b38e76923f02d6938400d50fb6becd9168d118a516208",
+      "input_sha256": "4bf443f44b9f1ed624c484c1d624fc1ce12327f8cd1f24a764b3116d3b635109",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001374",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation matches the 'object -> physical property that quantifies energy absorbed from a source' direction without forcing a broad category. The subject 'the slide' is a narrative instance, not a stable reusable entity; generalizing it to 'a physical body' goes beyond the source. The fact 'temperature indicates absorbed solar energy' is a general physics principle embedded in a children's-scenario question and does not map cleanly to any listed relation (entity_to_class, entity_to_material, description_to_entity, etc.). Deferring rather than forcing.",
+      "input_sha256": "8bf3a121b199d7f1d236428175fc9abaa6fdfc1eef3f7c473a33ead2da94fe5e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001372",
+      "input_sha256": "4bf443f44b9f1ed624c484c1d624fc1ce12327f8cd1f24a764b3116d3b635109",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "hydroelectric power",
+        "canonical_fact": "Hydroelectric power is an energy source that could involve a dam.",
+        "subject": "energy source that could involve a dam",
+        "prompt_en": "Which energy source could involve a dam?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "hydroelectric power"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "acbd5f727bd8b3f3137b38e76923f02d6938400d50fb6becd9168d118a516208",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001372",
+        "subject_zh": "可能涉及水坝的能源",
+        "prompt_zh": "哪种能源可能涉及水坝？",
+        "canonical_fact_zh": "水力发电是一种可能涉及水坝的能源。",
+        "answer_zh": "水力发电",
+        "answer_aliases_zh": [
+          "水力发电"
+        ]
+      },
+      "translation_sha256": "5622afe4e5b5713fc4f2242fd1058f0269c15d2117338c6bc3f085733e9f1e5c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001372",
+        "historical:raw_ai2_arc_easy_001374"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7c6dfd6da2cc914226f00c2c2ef2e00a511d0d388dbfd0b47066f9f7f8430940",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2185,
+      "first_chunk_seconds": 29.797,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2411,
+        "prompt_tokens": 1695,
+        "total_tokens": 4106,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1893,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "11f974580577763fd5d7328ab17ef92a44a13c950bbdbd14a67daaa7959b6866",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 63.251,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001372",
+        "historical:raw_ai2_arc_easy_001374"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "8cd4cd1b1d1c2007a942a445c48084bb18622cae8a80be4fc59f488937ffaefd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3954,
+      "first_chunk_seconds": 17.93,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4073,
+        "prompt_tokens": 1714,
+        "total_tokens": 5787,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3715,
+          "text_tokens": 358
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7d4f5dae6c2751e0f1d7390e94d7a9b848eb8bb6a0b8a5d1ee4908f0bd5c7dfc",
+      "status": "completed",
+      "latency_seconds": 78.848
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001372"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "78a550283514502d967d562ddc781efe09a289d0a06203c53de72110947ff59c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 460,
+      "first_chunk_seconds": 31.455,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 482,
+        "prompt_tokens": 503,
+        "total_tokens": 985,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 404,
+          "text_tokens": 78
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "32fd2a81cc798387f0f83042e1f8bc405cf78ad1372519b14cf606a8d4884d57",
+      "status": "completed",
+      "latency_seconds": 38.386
+    }
+  ],
+  "status": "completed"
+}

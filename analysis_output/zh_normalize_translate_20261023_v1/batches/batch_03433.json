@@ -1,0 +1,132 @@
+{
+  "input_sha256": "42ef9240344c07c164c74d033750365fcdcd10b8f0cc93701992537da28093fc",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003745",
+      "decision": "ready",
+      "subject": "seeing things that do not exist in trance",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "hallucination",
+      "canonical_fact": "Seeing things that do not exist in a trance state is called hallucination.",
+      "prompt_en": "What is the term for seeing things that do not exist while in a trance?",
+      "evidence_quotes": [
+        "see things that do not exist",
+        "hallucination"
+      ],
+      "reason": "The source question describes the phenomenon (seeing things that do not exist in trance) and the source answer provides the conventional term 'hallucination'. This is a clean description-to-term mapping; no existing catalog relation is a better fit than description_to_term. Both models attempted extraction; Qwen-3.8-Max deemed it malformed but sensenova correctly identified the term-identification structure. The answer 'hallucination' is a literal substring of the source answer.",
+      "english": {
+        "prompt_en": "What is the term for seeing things that do not exist while in a trance?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "hallucination",
+        "canonical_fact": "Seeing things that do not exist in a trance state is called hallucination.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "seeing things that do not exist in trance",
+        "answer_aliases_en": [
+          "hallucination"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f1fd0b47135d2dfd07ba36e9dd32c31a995f16f53de8bd3e19ba7ef459f7566",
+      "input_sha256": "2f9cb6b1db1288e732ed121972f7342411d099303dc2e5caeabc0141ff58ce5d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003748",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation precisely captures the 'strives for / goal of' predicate between a practice and its intended outcome. The question is normative ('what does one strive for'), flagged subjective_or_normative by sensenova. Proposing a new relation (e.g., practice_to_objective) would be overly broad and not a stable factual predicate. Defer without forcing.",
+      "input_sha256": "343bf25aab17e3a774b0eadee7d014c14e4978906e12332dc530fe217249890e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003745",
+        "historical:raw_commonsense_qa_003748"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7799f8c8cf2f8456fe690523495823d6d92e98979989f24fd106eb84eb4e3c08",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1856,
+      "first_chunk_seconds": 2.162,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1908,
+        "prompt_tokens": 1607,
+        "total_tokens": 3515,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1543,
+          "text_tokens": 365
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "22ceae0371e27dccb1a1777164d70aaf2df23029b168d4e0f0ca56e4550207c2",
+      "status": "completed",
+      "latency_seconds": 111.891
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003745"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d6e0a723478b35e561555700323995a19e72bcf5a09599309f47a1818c04b504",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 34.64
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003745"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d6e0a723478b35e561555700323995a19e72bcf5a09599309f47a1818c04b504",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 93.155
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003745"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d6e0a723478b35e561555700323995a19e72bcf5a09599309f47a1818c04b504",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 94.567
+    }
+  ],
+  "status": "failed"
+}

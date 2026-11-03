@@ -1,0 +1,85 @@
+{
+  "input_sha256": "9346c3b649892685859699ba5a49a87337a0a9d960e994cc25f1d92a6ee1b918",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002736",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question 'What is covered in plants?' is grammatically ambiguous (could mean 'covered by plants' or 'covered within plants'), and the answer 'surface of earth' is a very general commonsense statement. No catalog relation fits cleanly: organism_to_habitat refers to where an organism lives, not the region it covers; entity_to_containing_location refers to geographic containment of an entity within a location, which is the inverse direction. A new relation (e.g. organism_to_region_covered) would overlap heavily with organism_to_habitat without a sharp definitional boundary, and the question phrasing does not give enough support for a precise, reusable fact. Deferring per 'insufficient source support' and 'do not force a broad category'.",
+      "input_sha256": "4b89e9925b7d769b0904b0b1e82151c3da64660bd34659970f90eb6e537dbba4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002761",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question asks where people say god is at all times, with answer 'everywhere'. This is a report of a theological belief (omnipresence), not an objective, verifiable factual claim. It is subjective and normative in nature. No catalog relation fits: entity_to_containing_location is about geographic containment of a physical entity, not a belief about the location of a deity. The sensenova annotation also flags this as 'subjective_or_normative'. Deferring because the source does not support a reusable objective fact.",
+      "input_sha256": "a2bb76a035b8768907c2fc7c01528fc77c9052aacc4444380099b473b12b7ee8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002736",
+        "historical:raw_commonsense_qa_002761"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c774d185c9d6cf06f2836da033f12233c373fec798a296a59de711c09407551d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 43.829
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002736",
+        "historical:raw_commonsense_qa_002761"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c774d185c9d6cf06f2836da033f12233c373fec798a296a59de711c09407551d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2267,
+      "first_chunk_seconds": 62.19,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2317,
+        "prompt_tokens": 1575,
+        "total_tokens": 3892,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1833,
+          "text_tokens": 484
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fb4cca5b4ab63aa31b61897f284273d4e5906cdfc05781f4f0124845b213ae99",
+      "status": "completed",
+      "latency_seconds": 98.918
+    }
+  ],
+  "status": "completed"
+}

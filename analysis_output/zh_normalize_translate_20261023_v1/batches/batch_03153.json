@@ -1,0 +1,185 @@
+{
+  "input_sha256": "4eab17a5137e0cb4fa8b46e89bc1c863f8419774f7b6421f9fa269944542d0ba",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000766",
+      "decision": "ready",
+      "subject": "basic sensory receptors",
+      "relation_id": "category_to_type_count",
+      "relation_definition": "The number of distinct types or subcategories within a specified biological, scientific, or taxonomic category; retain the stated scope and granularity.",
+      "direction": "specified category -> type count",
+      "answer": "five",
+      "canonical_fact": "There are five types of basic sensory receptors.",
+      "prompt_en": "How many types of basic sensory receptors are there?",
+      "evidence_quotes": [
+        "How many types of basic sensory receptors are there?",
+        "five"
+      ],
+      "reason": "No existing catalog relation captures a count-of-types quantity for a biological category. The closest (series_or_season_to_episode_count) is too narrow. Proposed category_to_type_count fits the source exactly: subject is a category, answer is a cardinal count of its types. Both model annotations agree; source answer 'five' is preserved verbatim.",
+      "english": {
+        "prompt_en": "How many types of basic sensory receptors are there?",
+        "relation_definition": "The number of distinct types or subcategories within a specified biological, scientific, or taxonomic category; retain the stated scope and granularity.",
+        "answer": "five",
+        "canonical_fact": "There are five types of basic sensory receptors.",
+        "direction": "specified category -> type count",
+        "relation_id": "category_to_type_count",
+        "subject": "basic sensory receptors",
+        "answer_aliases_en": [
+          "five"
+        ],
+        "relation_spec": {
+          "id": "category_to_type_count",
+          "definition": "The number of distinct types or subcategories within a specified biological, scientific, or taxonomic category; retain the stated scope and granularity.",
+          "direction": "specified category -> type count"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3d9cf65a897bb6effa8b6a16b2e318df32e0936f8510d70e4c1c92a28b13b5b5",
+      "input_sha256": "9cad21ecd814a6fb37d6c01c521caf7ec92ae23d844a1cbfcad08ee728cafc1d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000767",
+      "decision": "ready",
+      "subject": "light that people can see",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "visible light",
+      "canonical_fact": "The only light that people can see is visible light.",
+      "prompt_en": "What is the only light that people can see?",
+      "evidence_quotes": [
+        "What is the only light that people can see?",
+        "visible light"
+      ],
+      "reason": "The subject 'light that people can see' is a defining description and the answer 'visible light' is the conventional term that uniquely satisfies it. This maps directly to the existing description_to_term relation (description -> term). Both model annotations agree; source answer copied verbatim.",
+      "english": {
+        "prompt_en": "What is the only light that people can see?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "visible light",
+        "canonical_fact": "The only light that people can see is visible light.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "light that people can see",
+        "answer_aliases_en": [
+          "visible light"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "39897ceabfcf877d6b6c70f716cf69839a61900b353e18a078363a3c8eec56cb",
+      "input_sha256": "c64e252524569dcf30c4ded3b2e791855a591161e6944e4aed197465c5a053b4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f5df9b8fc670c17ec98040eb163a27fd279d2c61ff271d1573748e70132dd884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.503
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f5df9b8fc670c17ec98040eb163a27fd279d2c61ff271d1573748e70132dd884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.007
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f5df9b8fc670c17ec98040eb163a27fd279d2c61ff271d1573748e70132dd884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1666,
+      "first_chunk_seconds": 62.13,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1764,
+        "prompt_tokens": 1651,
+        "total_tokens": 3415,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1274,
+          "text_tokens": 490
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d2d5b42da3d2b74cac6353d37f3ebef6358df40f28d727049634359fb4720fcd",
+      "status": "completed",
+      "latency_seconds": 89.9
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f0e766f147c70932a78ffc7b4e1a388fffc8f2a1ea46976f1a774615f2d3cfd8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 53.235
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f0e766f147c70932a78ffc7b4e1a388fffc8f2a1ea46976f1a774615f2d3cfd8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 51.897
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000766",
+        "historical:raw_sciq_000767"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f0e766f147c70932a78ffc7b4e1a388fffc8f2a1ea46976f1a774615f2d3cfd8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 67.119
+    }
+  ],
+  "status": "failed"
+}

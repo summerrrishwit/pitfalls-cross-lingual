@@ -1,0 +1,108 @@
+{
+  "at": "2026-10-24T15:41:10.532181+00:00",
+  "tests_passed": 71,
+  "single_plus8_concurrent_synthetic_probes": [
+    {
+      "concurrency": 1,
+      "requests": 1,
+      "peak_in_flight": 1,
+      "completed": 1,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 1
+      },
+      "identity_stable": true,
+      "wall_seconds": 15.645,
+      "p50_seconds": 15.644,
+      "p95_seconds": 15.644,
+      "requests_per_minute": 3.835,
+      "semantic_case_matches": 4,
+      "semantic_cases_total": 4,
+      "bounded_probe_passed": true
+    },
+    {
+      "concurrency": 8,
+      "requests": 8,
+      "peak_in_flight": 8,
+      "completed": 8,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 8
+      },
+      "identity_stable": true,
+      "wall_seconds": 56.521,
+      "p50_seconds": 38.721,
+      "p95_seconds": 56.513,
+      "requests_per_minute": 8.492,
+      "semantic_case_matches": 32,
+      "semantic_cases_total": 32,
+      "bounded_probe_passed": true
+    }
+  ],
+  "old_worker_pid": 73156,
+  "new_worker_pid": 28785,
+  "current_status": {
+    "updated_at": "2026-10-24T15:41:05.877652+00:00",
+    "state": "running_qwen",
+    "input_count": 7250,
+    "normalized_records": 1642,
+    "normalization_decisions": {
+      "ready": 1625,
+      "defer": 17
+    },
+    "translated_records": 1571,
+    "batch_status_counts": {
+      "completed": 794,
+      "failed": 135,
+      "normalized": 3,
+      "recovery_pending": 1
+    },
+    "review_packets": 81,
+    "reviewed_outcomes": {
+      "zh_translation_accepted": 1495,
+      "zh_translation_rejected": 52,
+      "zh_translation_deferred": 2
+    },
+    "human_gold": false,
+    "formal_experiment_eligible": false
+  },
+  "before_normalized": 1616,
+  "before_translated": 1549,
+  "successful_production_requests_by_stage": {
+    "normalize": 13,
+    "translate": 11
+  },
+  "failed_production_requests": {
+    "unsupported_evidence_quote": 2,
+    "existing_answer_changed": 1,
+    "invalid_records_schema": 1
+  },
+  "old_reviews_source_runtime_attempt_and_exposure_bindings_valid": true,
+  "new_runtime_change": "sanitized HTTP error diagnostics only",
+  "credentials_model_route_prompts_schema_and_retry_policy_unchanged": true,
+  "original_403_internal_cause": "unknown; old log did not preserve provider response body",
+  "current_access_verified_restored": true,
+  "provider_error_permanently_fixed": false,
+  "automatic_403_policy_changed": false,
+  "review_exports_written": false,
+  "formal_experiment_eligible": false,
+  "human_gold": false,
+  "current_403_byte_identical_archive_verified": true,
+  "single_production_worker_verified": true,
+  "access_recovery_batch_outcomes": {
+    "batch_00916.json": {
+      "status": "failed",
+      "translated_rows": 0,
+      "last_http_status": null,
+      "last_validation_code": "unsupported_evidence_quote"
+    },
+    "batch_00919.json": {
+      "status": "completed",
+      "translated_rows": 2,
+      "last_http_status": null,
+      "last_validation_code": null
+    }
+  }
+}

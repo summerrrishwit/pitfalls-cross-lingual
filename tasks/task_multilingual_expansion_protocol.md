@@ -1,8 +1,9 @@
 # 五语扩展：恢复执行与实验输入口径
 
-更新：2026-09-29。本文是五语扩展的执行与设计补充，不改写已冻结的 160 条协议。
-当前用户授权：恢复五语翻译/独立审核、修复失败停止机制、明确后续实验输入与比较口径。
-已有 160 条 PNT 闭环暂停；本文不启动 HF、tokenizer、行为筛查、hidden states、向量或干预。
+更新：2026-10-20。新候选行为设计改用
+[`开放事实召回缺陷生成协议`](task_open_factual_discovery_protocol.md)，采用有限Development反馈和开放三臂判定。
+本文第2节保留2026-09的翻译恢复历史，不改写已冻结的160条或翻译结果。
+本次流程更新不启动新HF、tokenizer、hidden states、向量或干预；已有160条最新结果见tasks/README.md。
 
 ## 1. 固定范围与当前产物
 
@@ -12,7 +13,7 @@
 不作为转译中间语言，也不混入五语主比较。
 
 当前投影每事实只有一个已接受的 distractor 和一个 Neutral reference candidate。
-它是翻译与后续输入建设的起点，不等同于最终三臂 MCQ，更不等同于 PNT 准入。
+它是翻译与后续开放输入建设的起点，不等同于已确认缺陷或PNT准入。
 2,346 条 `broad_rule_candidate_partition` 与 2,167 条
 `existing_probe_relation_candidate_partition` 均不得自动升格为正式 `probe_relation_id`。
 
@@ -112,30 +113,29 @@ v3 支持从已退出进程的不可变 `interrupted_checkpoint_snapshot` 继续
 
 ## 3. 扩展版最终实验输入
 
-后续采用 **一个指定攻击目标、三选一、三臂**，不复制旧 160 的双攻击 variant：
+后续采用 **一个指定攻击目标、开放回答、三臂**，不复制旧160的双攻击variant：
 
 | 对象 | 扩展版定义 |
 |---|---|
 | `gold` | 同一事实的正确答案与各语 aliases |
 | `designated_distractor` | 继承当前投影已接受的那个 distractor，不按目标模型结果替换 |
-| `non_target_foil` | 另一个已验证错误且不与前两者 alias 重叠的答案，只作第三选项 |
-| Original | 无额外上下文的三选一 |
-| Neutral | 含已审核匹配 Neutral 上下文的同一个三选一 |
-| Targeted | 含指向 designated distractor 的真实干扰上下文的同一个三选一 |
-| Natural | 不含选项、不含扰动上下文的自然完成输入 |
+| `non_target_foil` | 可选MCQ比较才需要；不阻塞开放问题构建或缺陷准入 |
+| Original / Natural | 无选项、无额外上下文的同一个自然完成输入，共享生成 |
+| Neutral | 含已审核匹配Neutral上下文的开放问题 |
+| Targeted | 含指向designated distractor的扰动上下文的开放问题，保存manipulation_family |
 
-`non_target_foil` 和最终 Neutral/Targeted 上下文是明确待做项，不由当前翻译结果冒充完成。
-只对后续预先选定的行为 cohort 补齐，不要求先补齐全部 4,513 条；不回退到二选一。
-优先采用已审核 source wrong option，再采用已验证同 answer type 的候选；固定排序、来源与排除原因，
-禁止基于 HF 成败选 foil。补齐的 foil、上下文与最终渲染输入需独立语义审核。
+最终Neutral/Targeted上下文只对预先选定cohort补齐，不要求先补齐全部4,513条。
+优先采用已审核source wrong option，再采用已验证同answer type候选，并确认对改写后的开放问题仍为错误答案。
+不必生成第三foil。正确答案、别名、题意及质量标签不随行为反馈改写；新上下文和最终组合输入独立审核。
 
-各语言使用同一个 base fact、同一组答案身份、同一攻击目标和同一选项排列。
-选项排列在目标行为运行前按事实哈希固定；报告 gold slot 分布，不能按语言重新随机。
-Neutral 与 Targeted 在各语言内匹配主题、长度与风格；审核真实陈述、关系保持、唯一答案和翻译等价。
+各语言使用同一个base fact、正确答案身份和攻击目标。开放输入不展示选项。
+Neutral与Targeted在各语言内匹配主题、长度与风格；审核关系保持、唯一答案和翻译等价。
+扰动家族不限：真实误导或直接错误断言均记录家族，按各自语义合同审核；Neutral保持真实且不提示答案。
+显式错误断言不改写参考事实，任务仍询问现实事实；不将按虚构背景作答混作同一缺陷。
 翻译审核接受不自动替代新增上下文及最终组合输入的审核。
 
-EN + 五语共有六种语言。每事实每模型为 `6 × 3 = 18` 个 MCQ 输入，
-另有 `6` 个 Natural 输入；这是未来完整输入的数量合同，不是已生成或已执行的数量。
+EN+五语每事实每模型为 `6 × 3 = 18` 个开放输入；Natural与Original相同，不额外增加6次。
+这是未来完整输入数量合同，不是已执行数量。可选MCQ另记调用预算，不决定开放缺陷标签。
 五组 EN–目标语比较共用同一份 EN 输出，不为每个目标语重复调用或重复计样本。
 若以后报告中文参照，另列 EN–ZH 结果，不改变五语主分析分母。
 
@@ -154,6 +154,9 @@ EN + 五语共有六种语言。每事实每模型为 `6 × 3 = 18` 个 MCQ 输�
 | 最终行为集 B | C 中按行为盲态规则选定且六语最终输入均合格的事实；冻结后才执行 |
 | PNT 子集 | 在 B 内另满足正式 relation、exact-HF 与机制合同的事实，当前不执行 |
 
+Development允许按新协议首轮+最多一次汇总修订；候选级静态版本在测量前固定，反馈只生成新版本。
+Validation/Sealed在策略固定后评测完整预选名单，不用其成败修改生成器或替换事实。
+
 C 不足时不临时改主集合以追求显著结果；可以另报 EN–单语配对子集，但标作不同 estimand，
 不能直接比较不同样本上的准确率并称为语言效应。
 保留单语合格记录，即使另一语言失败也不全部丢弃。C/B 都报告 relation/source/split 分布，
@@ -163,7 +166,9 @@ C 不足时不临时改主集合以追求显著结果；可以另报 EN–单语
 以及 `C → 最终输入合格 → 行为终局 → directed/off-target/neutral-unstable`。
 缺失不是答错；提供完成率与可评估分母，不能静默删失败。
 
-行为主定义：Original=gold、Neutral=gold、Targeted=designated distractor。
+行为主定义依据实际开放生成：Original正确、Neutral正确、Targeted事实错误。
+命中designated distractor是定向标签，其他明确事实错误单列为非定向标签；拒答/格式/缺失分别保存。
+候选序列概率只作辅助指标，不代替生成成功。新候选不需要MCQ阳性。
 EN 三臂均正确只定义更窄的目标语特异子集，不否定其他 directed 事件。
 同时报告全体冻结事实的 Targeted−Neutral 正确率变化及 target-hit 变化，
 以及同事实 `(Targeted−Neutral)_lang − (Targeted−Neutral)_EN`。
@@ -179,12 +184,12 @@ EN 三臂均正确只定义更窄的目标语特异子集，不否定其他 dire
 当前中文筛选与关系筛选决定了研究适用范围，报告不能外推成原始 8,969 条的无偏总体估计。
 不为消除这一限制重建全部数据，也不追加全量人工复审。
 
-正式行为前仍需：选定 B 的成员与最终输入、补齐 foil/context 审核、完成相关历史曝光合同、
-输出绑定同一版本的 review/split freeze，之后才解析目标 HF 身份与 tokenizer。
+新Development执行前固定来源成员、目标HF身份、评分与有界策略；每候选上下文独立审核后才测量，修订另记版本。
+独立确认前固定B成员、最终输入、生成策略与repair规则，完成相关曝光合同并绑定review/split freeze。
+开放行为不以补齐第三foil或MCQ行为为前置。
 只在实际发现新增泄漏关系时处理 component；不因增加语言机械重做所有语义闭包。
 父级支持 donor 可以不属于最终 targets，但必须在已绑定的父 support cohort 内并符合既有 split 约束；
 不能把 support-only donor 自动变成行为目标、vector source 或独立样本。
 
 翻译辅助模型的静态文本接触单独记入曝光记录，与目标模型行为曝光区分。
-本次不打开 Validation/Sealed 行为，不运行任何旧 160 或新扩展 PNT。
-恢复 PNT 须等用户后续指示；不因五语翻译完成自动触发。
+本次文档与离线分析更新不打开新的Validation/Sealed行为，不因翻译或策略更新自动触发PNT。

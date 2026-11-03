@@ -1,0 +1,214 @@
+{
+  "input_sha256": "a9493f85448ee291740573bcc59a0d3f26fbf103af0ef58b634362cfd52e5f25",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001997",
+      "decision": "ready",
+      "subject": "bread",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "flour",
+      "canonical_fact": "The main ingredient in making bread is flour.",
+      "prompt_en": "What is the main ingredient in making bread?",
+      "evidence_quotes": [
+        "What is the main ingredient in making bread?",
+        "flour"
+      ],
+      "reason": "Source answer 'flour' is a literal substring of source_answer. The relation entity_to_material fits: bread (entity) -> flour (constituent/production source). Both model annotations agree on extraction. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "flour",
+        "canonical_fact": "The main ingredient in making bread is flour.",
+        "subject": "bread",
+        "prompt_en": "What is the main ingredient in making bread?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "flour"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b92c26d49809b057f1964e6695c05bf6ae13c5f934f2ba9a11e418caffdd2f32",
+      "input_sha256": "69aeda8cb943a6c12e775a029574af958afffdbf063c232cab793c082ea8110c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002003",
+      "decision": "ready",
+      "subject": "Mercury building up in the bodies of certain fish",
+      "relation_id": "condition_to_result_attribute",
+      "relation_definition": "A stated condition or process that results in a specific attribute or state for the affected entity; preserve qualifiers such as 'can' or 'may' and scope limits (e.g., 'certain fish').",
+      "direction": "condition/process -> result attribute",
+      "answer": "poisonous",
+      "canonical_fact": "Mercury building up in the bodies of certain fish can make them poisonous.",
+      "prompt_en": "What can mercury building up in the bodies of certain fish make them?",
+      "evidence_quotes": [
+        "Mercury building up in the bodies of certain fish can make them what?",
+        "poisonous"
+      ],
+      "reason": "Source answer 'poisonous' is a literal substring of source_answer. No existing catalog relation covers a causal condition-to-attribute mapping; proposed new relation condition_to_result_attribute with explicit definition and direction. Qualifier 'can' and scope 'certain fish' preserved. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "condition/process -> result attribute",
+        "relation_id": "condition_to_result_attribute",
+        "answer": "poisonous",
+        "canonical_fact": "Mercury building up in the bodies of certain fish can make them poisonous.",
+        "subject": "Mercury building up in the bodies of certain fish",
+        "prompt_en": "What can mercury building up in the bodies of certain fish make them?",
+        "relation_definition": "A stated condition or process that results in a specific attribute or state for the affected entity; preserve qualifiers such as 'can' or 'may' and scope limits (e.g., 'certain fish').",
+        "answer_aliases_en": [
+          "poisonous"
+        ],
+        "relation_spec": {
+          "id": "condition_to_result_attribute",
+          "definition": "A stated condition or process that results in a specific attribute or state for the affected entity; preserve qualifiers such as 'can' or 'may' and scope limits (e.g., 'certain fish').",
+          "direction": "condition/process -> result attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6acb897ce3e977f43366b1b8ada07aab6624c90902b47d15fd41266b4636beb9",
+      "input_sha256": "ff02b578794a877a61e9c6d8c1f9977e5ef1d1a5906146d549185b0112567a7b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001997",
+      "input_sha256": "69aeda8cb943a6c12e775a029574af958afffdbf063c232cab793c082ea8110c",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "flour",
+        "canonical_fact": "The main ingredient in making bread is flour.",
+        "subject": "bread",
+        "prompt_en": "What is the main ingredient in making bread?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "flour"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b92c26d49809b057f1964e6695c05bf6ae13c5f934f2ba9a11e418caffdd2f32",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001997",
+        "subject_zh": "面包",
+        "prompt_zh": "制作面包的主要原料是什么？",
+        "canonical_fact_zh": "制作面包的主要原料是面粉。",
+        "answer_zh": "面粉",
+        "answer_aliases_zh": [
+          "面粉"
+        ]
+      },
+      "translation_sha256": "445ac7ee60df98719af191614d86dfd0021ec515b5bfee149a4d771c850c016f"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002003",
+      "input_sha256": "ff02b578794a877a61e9c6d8c1f9977e5ef1d1a5906146d549185b0112567a7b",
+      "english": {
+        "direction": "condition/process -> result attribute",
+        "relation_id": "condition_to_result_attribute",
+        "answer": "poisonous",
+        "canonical_fact": "Mercury building up in the bodies of certain fish can make them poisonous.",
+        "subject": "Mercury building up in the bodies of certain fish",
+        "prompt_en": "What can mercury building up in the bodies of certain fish make them?",
+        "relation_definition": "A stated condition or process that results in a specific attribute or state for the affected entity; preserve qualifiers such as 'can' or 'may' and scope limits (e.g., 'certain fish').",
+        "answer_aliases_en": [
+          "poisonous"
+        ],
+        "relation_spec": {
+          "id": "condition_to_result_attribute",
+          "definition": "A stated condition or process that results in a specific attribute or state for the affected entity; preserve qualifiers such as 'can' or 'may' and scope limits (e.g., 'certain fish').",
+          "direction": "condition/process -> result attribute"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6acb897ce3e977f43366b1b8ada07aab6624c90902b47d15fd41266b4636beb9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002003",
+        "subject_zh": "某些鱼类体内汞的积累",
+        "prompt_zh": "某些鱼类体内汞的积累可能使它们变成什么？",
+        "canonical_fact_zh": "某些鱼类体内汞的积累可能使它们有毒。",
+        "answer_zh": "有毒",
+        "answer_aliases_zh": [
+          "有毒"
+        ]
+      },
+      "translation_sha256": "4e1ac0ac97cfe39fc4daeb62d7c153b0a84cb518d2452f119f9f1bbf14459871"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001997",
+        "historical:raw_commonsense_qa_002003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b10cc3a8181cfae4a0fd7718c518eee32d4122fda44dd6aee5244c4d0f25a75d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1739,
+      "first_chunk_seconds": 17.434,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1800,
+        "prompt_tokens": 1671,
+        "total_tokens": 3471,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1282,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a4ea600da0c2f0c6d09aeab327efbd4448e7c34095f129f9900ed45fe55d579e",
+      "status": "completed",
+      "latency_seconds": 38.471
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001997",
+        "historical:raw_commonsense_qa_002003"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ab652ed86c46f8b40b745f46361e598830c2a39b0185c240808cebf91eedb72f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 623,
+      "first_chunk_seconds": 26.323,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 628,
+        "prompt_tokens": 864,
+        "total_tokens": 1492,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 416,
+          "text_tokens": 212
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "daa7fc17cc1e66c9881213340693667d57284b6ead02c8c33da2889381a5ff83",
+      "status": "completed",
+      "latency_seconds": 35.611
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,228 @@
+{
+  "input_sha256": "8c4b89175e5b5d507e8ce099d652ff62e976c154682a1f5342a699c182792c05",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5003a7e62617bcc01d9b",
+      "decision": "ready",
+      "subject": "the dog from The Fox and the Hound",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Copper",
+      "canonical_fact": "The dog from The Fox and the Hound is named Copper.",
+      "prompt_en": "What is the name of the dog in The Fox and the Hound?",
+      "evidence_quotes": [
+        "what is the dogs name from fox and the hound",
+        "Copper"
+      ],
+      "reason": "The source question asks for the name of the dog in 'The Fox and the Hound' and the source answer is 'Copper'. The description 'the dog from The Fox and the Hound' uniquely identifies the fictional character Copper. description_to_entity fits because the descriptive phrase identifies a unique entity (the character name).",
+      "english": {
+        "answer": "Copper",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the dog in The Fox and the Hound?",
+        "direction": "identifying description -> entity",
+        "subject": "the dog from The Fox and the Hound",
+        "canonical_fact": "The dog from The Fox and the Hound is named Copper.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Copper"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "81ba52b9a3bb0b85c250ede44fd77006e9ae3d1a6a65cceca7c55dc9cb197940",
+      "input_sha256": "67605de91aff12a039ae84b73aa59170875ff7b772e29dc8add5ac800f087d7d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_50222cb9b22f435746ec",
+      "decision": "ready",
+      "subject": "conflict between a congressional act and a valid treaty",
+      "relation_id": "scenario_to_resolving_principle",
+      "relation_definition": "The specific principle, rule, or doctrine that determines the outcome of a clearly stated scenario; preserves qualifiers and scope stated in the source.",
+      "direction": "specified scenario -> resolving principle or rule",
+      "answer": "The last in time prevails",
+      "canonical_fact": "If there is a conflict between a congressional act and a valid treaty, the last in time prevails.",
+      "prompt_en": "How is a conflict between a congressional act and a valid treaty resolved?",
+      "evidence_quotes": [
+        "If there is a conflict between a congressional act and a valid treaty",
+        "The last in time prevails"
+      ],
+      "reason": "No existing catalog relation captures a scenario-to-resolving-rule relationship. term_to_definition would imply the answer defines the scenario itself rather than governing its resolution. A new precise relation scenario_to_resolving_principle is proposed: direction from the stated scenario to the principle that resolves it. The source directly states the resolution rule, so the fact is fully supported.",
+      "english": {
+        "answer": "The last in time prevails",
+        "relation_id": "scenario_to_resolving_principle",
+        "prompt_en": "How is a conflict between a congressional act and a valid treaty resolved?",
+        "direction": "specified scenario -> resolving principle or rule",
+        "subject": "conflict between a congressional act and a valid treaty",
+        "canonical_fact": "If there is a conflict between a congressional act and a valid treaty, the last in time prevails.",
+        "relation_definition": "The specific principle, rule, or doctrine that determines the outcome of a clearly stated scenario; preserves qualifiers and scope stated in the source.",
+        "answer_aliases_en": [
+          "The last in time prevails"
+        ],
+        "relation_spec": {
+          "id": "scenario_to_resolving_principle",
+          "definition": "The specific principle, rule, or doctrine that determines the outcome of a clearly stated scenario; preserves qualifiers and scope stated in the source.",
+          "direction": "specified scenario -> resolving principle or rule"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6e07d161a99e82bf4fd2429be518236330742763c93eefd04583ff10fffcaf96",
+      "input_sha256": "e63ad8187c7d4fa6a45ba77860f48e8cf633dab4b3661418c6202ad3b53ae98b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_5003a7e62617bcc01d9b",
+      "input_sha256": "67605de91aff12a039ae84b73aa59170875ff7b772e29dc8add5ac800f087d7d",
+      "english": {
+        "answer": "Copper",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the name of the dog in The Fox and the Hound?",
+        "direction": "identifying description -> entity",
+        "subject": "the dog from The Fox and the Hound",
+        "canonical_fact": "The dog from The Fox and the Hound is named Copper.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Copper"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "81ba52b9a3bb0b85c250ede44fd77006e9ae3d1a6a65cceca7c55dc9cb197940",
+      "translation": {
+        "record_id": "public:pbf_5003a7e62617bcc01d9b",
+        "subject_zh": "《狐狸与小猎犬》中的那只狗",
+        "prompt_zh": "《狐狸与小猎犬》中那只狗叫什么名字？",
+        "canonical_fact_zh": "《狐狸与小猎犬》中的那只狗名叫 Copper。",
+        "answer_zh": "Copper",
+        "answer_aliases_zh": [
+          "Copper"
+        ]
+      },
+      "translation_sha256": "3e0fb2f572d05d83dacc5d206909569ac45b8c39b62857b57ad42ab3c88dd180"
+    },
+    {
+      "record_id": "public:pbf_50222cb9b22f435746ec",
+      "input_sha256": "e63ad8187c7d4fa6a45ba77860f48e8cf633dab4b3661418c6202ad3b53ae98b",
+      "english": {
+        "answer": "The last in time prevails",
+        "relation_id": "scenario_to_resolving_principle",
+        "prompt_en": "How is a conflict between a congressional act and a valid treaty resolved?",
+        "direction": "specified scenario -> resolving principle or rule",
+        "subject": "conflict between a congressional act and a valid treaty",
+        "canonical_fact": "If there is a conflict between a congressional act and a valid treaty, the last in time prevails.",
+        "relation_definition": "The specific principle, rule, or doctrine that determines the outcome of a clearly stated scenario; preserves qualifiers and scope stated in the source.",
+        "answer_aliases_en": [
+          "The last in time prevails"
+        ],
+        "relation_spec": {
+          "id": "scenario_to_resolving_principle",
+          "definition": "The specific principle, rule, or doctrine that determines the outcome of a clearly stated scenario; preserves qualifiers and scope stated in the source.",
+          "direction": "specified scenario -> resolving principle or rule"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6e07d161a99e82bf4fd2429be518236330742763c93eefd04583ff10fffcaf96",
+      "translation": {
+        "record_id": "public:pbf_50222cb9b22f435746ec",
+        "subject_zh": "国会立法与有效条约之间的冲突",
+        "prompt_zh": "国会立法与有效条约之间的冲突如何解决？",
+        "canonical_fact_zh": "如果国会立法与有效条约之间存在冲突，则后出台的优先。",
+        "answer_zh": "后出台的优先",
+        "answer_aliases_zh": [
+          "后出台的优先"
+        ]
+      },
+      "translation_sha256": "bd035629dabfb1347891e3e22bfbf2669677acce15006591c70e6c3b0998a84f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5003a7e62617bcc01d9b",
+        "public:pbf_50222cb9b22f435746ec"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "deb74ede854dad27729cf895315dc418ac4111e45fed8ba82dbd943182f731cc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 162.614
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5003a7e62617bcc01d9b",
+        "public:pbf_50222cb9b22f435746ec"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "deb74ede854dad27729cf895315dc418ac4111e45fed8ba82dbd943182f731cc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2163,
+      "first_chunk_seconds": 43.108,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2336,
+        "prompt_tokens": 1633,
+        "total_tokens": 3969,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1771,
+          "text_tokens": 565
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dbe209a7cfedeca684c8aab50451b360faec7b1da0de8c4fb0488397b223787b",
+      "status": "completed",
+      "latency_seconds": 82.96
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5003a7e62617bcc01d9b",
+        "public:pbf_50222cb9b22f435746ec"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "47d9abe5020657f945da63be40b13183615f77764b3eb9fd741c849172c3439b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1326,
+      "first_chunk_seconds": 2.636,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1384,
+        "prompt_tokens": 871,
+        "total_tokens": 2255,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1131,
+          "text_tokens": 253
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ba4ee7ab60f2f058a5ce80e4df17739c1bb94d0759fc1eb5aa281678f380ed25",
+      "status": "completed",
+      "latency_seconds": 23.605
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b7e0c31217d0525b4e157bd114c305a4434e1a6a4f75d60e07341f1f23f42f33",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ee8a841c7617ad5ea5ff",
+      "decision": "ready",
+      "subject": "Māori English",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "Aotearoa English",
+      "canonical_fact": "Aotearoa English is a term used instead of Māori English, avoiding the controversy that Māori English can also be spoken by non-Māori people as an in-group code.",
+      "prompt_en": "Which term is used instead of Māori English, which avoids the controversy that Māori English can also be spoken by non-Māori people as an in-group code?",
+      "evidence_quotes": [
+        "Aotearoa English",
+        "Which term is used instead of Māori English"
+      ],
+      "reason": "The source question and answer establish that 'Aotearoa English' is the alternative name used in place of 'Māori English' to avoid the controversy of non-Māori speakers using the term. This is a clear alias/alternative-name relation that fits entity_to_alias (entity -> alias). The qualifier about non-Māori speakers is preserved in the canonical fact.",
+      "english": {
+        "answer": "Aotearoa English",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "Which term is used instead of Māori English, which avoids the controversy that Māori English can also be spoken by non-Māori people as an in-group code?",
+        "direction": "entity -> alias",
+        "subject": "Māori English",
+        "canonical_fact": "Aotearoa English is a term used instead of Māori English, avoiding the controversy that Māori English can also be spoken by non-Māori people as an in-group code.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "Aotearoa English"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fee20533656038e42072f905cc38253b9e736bb8b57494fbf10ad7f54f012e20",
+      "input_sha256": "f696a018f47a53ac04c04c151b400ca9c70878a5c7e26e3cc99f0b29f540500a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_eea5193881b917c8493f",
+      "decision": "ready",
+      "subject": "growth hormone releasing hormone",
+      "relation_id": "substance_to_secretion_site",
+      "relation_definition": "The specific anatomical structure or organ from which a named biochemical substance (hormone, neuropeptide, cytokine, etc.) is secreted or released.",
+      "direction": "biochemical substance -> anatomical secretion site",
+      "answer": "hypothalamus",
+      "canonical_fact": "Growth hormone releasing hormone is secreted from the hypothalamus.",
+      "prompt_en": "From which anatomical structure is growth hormone releasing hormone secreted?",
+      "evidence_quotes": [
+        "hypothalamus",
+        "where is growth hormone releasing hormone secreted from"
+      ],
+      "reason": "The source question directly asks for the secretion site of growth hormone releasing hormone; the answer is 'hypothalamus'. No existing catalog relation captures 'secreted from': entity_to_containing_location explicitly excludes origin, and organism_to_habitat applies to organisms, not biochemical substances. A new precise relation substance_to_secretion_site is proposed to capture anatomical secretion origin without forcing a broad category.",
+      "english": {
+        "answer": "hypothalamus",
+        "relation_id": "substance_to_secretion_site",
+        "prompt_en": "From which anatomical structure is growth hormone releasing hormone secreted?",
+        "direction": "biochemical substance -> anatomical secretion site",
+        "subject": "growth hormone releasing hormone",
+        "canonical_fact": "Growth hormone releasing hormone is secreted from the hypothalamus.",
+        "relation_definition": "The specific anatomical structure or organ from which a named biochemical substance (hormone, neuropeptide, cytokine, etc.) is secreted or released.",
+        "answer_aliases_en": [
+          "hypothalamus"
+        ],
+        "relation_spec": {
+          "id": "substance_to_secretion_site",
+          "definition": "The specific anatomical structure or organ from which a named biochemical substance (hormone, neuropeptide, cytokine, etc.) is secreted or released.",
+          "direction": "biochemical substance -> anatomical secretion site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "175584c852b9277481de277efd722d72c748f8c840f1614ac3cb663d2bd1cc4f",
+      "input_sha256": "455d55751bf6a04e133c33a32d0f5dcfd41944f06290db71ea8de030fcc28bfd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ee8a841c7617ad5ea5ff",
+      "input_sha256": "f696a018f47a53ac04c04c151b400ca9c70878a5c7e26e3cc99f0b29f540500a",
+      "english": {
+        "answer": "Aotearoa English",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "Which term is used instead of Māori English, which avoids the controversy that Māori English can also be spoken by non-Māori people as an in-group code?",
+        "direction": "entity -> alias",
+        "subject": "Māori English",
+        "canonical_fact": "Aotearoa English is a term used instead of Māori English, avoiding the controversy that Māori English can also be spoken by non-Māori people as an in-group code.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "Aotearoa English"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fee20533656038e42072f905cc38253b9e736bb8b57494fbf10ad7f54f012e20",
+      "translation": {
+        "record_id": "public:pbf_ee8a841c7617ad5ea5ff",
+        "subject_zh": "毛利英语",
+        "prompt_zh": "哪个术语被用来替代毛利英语，以避免毛利英语也可被非毛利人作为内部群体密码使用所引发的争议？",
+        "canonical_fact_zh": "奥特亚罗瓦英语是一个用来替代毛利英语的术语，以避免毛利英语也可被非毛利人作为内部群体密码使用所引发的争议。",
+        "answer_zh": "奥特亚罗瓦英语",
+        "answer_aliases_zh": [
+          "奥特亚罗瓦英语"
+        ]
+      },
+      "translation_sha256": "e64ccdd7764548bb2ddf951ab7f3ad68a306f0219d23d15162c4be0dd29f7dc7"
+    },
+    {
+      "record_id": "public:pbf_eea5193881b917c8493f",
+      "input_sha256": "455d55751bf6a04e133c33a32d0f5dcfd41944f06290db71ea8de030fcc28bfd",
+      "english": {
+        "answer": "hypothalamus",
+        "relation_id": "substance_to_secretion_site",
+        "prompt_en": "From which anatomical structure is growth hormone releasing hormone secreted?",
+        "direction": "biochemical substance -> anatomical secretion site",
+        "subject": "growth hormone releasing hormone",
+        "canonical_fact": "Growth hormone releasing hormone is secreted from the hypothalamus.",
+        "relation_definition": "The specific anatomical structure or organ from which a named biochemical substance (hormone, neuropeptide, cytokine, etc.) is secreted or released.",
+        "answer_aliases_en": [
+          "hypothalamus"
+        ],
+        "relation_spec": {
+          "id": "substance_to_secretion_site",
+          "definition": "The specific anatomical structure or organ from which a named biochemical substance (hormone, neuropeptide, cytokine, etc.) is secreted or released.",
+          "direction": "biochemical substance -> anatomical secretion site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "175584c852b9277481de277efd722d72c748f8c840f1614ac3cb663d2bd1cc4f",
+      "translation": {
+        "record_id": "public:pbf_eea5193881b917c8493f",
+        "subject_zh": "生长激素释放激素",
+        "prompt_zh": "生长激素释放激素由哪个解剖结构分泌？",
+        "canonical_fact_zh": "生长激素释放激素由下丘脑分泌。",
+        "answer_zh": "下丘脑",
+        "answer_aliases_zh": [
+          "下丘脑"
+        ]
+      },
+      "translation_sha256": "35eb45332631db9fb6e0e24182af9c471106723fc7a670ade7ba7ceeb6382734"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ee8a841c7617ad5ea5ff",
+        "public:pbf_eea5193881b917c8493f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c791de4cc256e6f2f7c761ea0cff0a15c57a66355a030f22c6204e0a1230b8d8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3494,
+      "first_chunk_seconds": 14.942,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3652,
+        "prompt_tokens": 1655,
+        "total_tokens": 5307,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3034,
+          "text_tokens": 618
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8b3a5fd8a7eb42b87523e0d3f16fc64ac50aa89c3f5d8d640b1ab8423994d76b",
+      "status": "completed",
+      "latency_seconds": 68.069
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ee8a841c7617ad5ea5ff",
+        "public:pbf_eea5193881b917c8493f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a0a5ca9a45a5f02067d405d84c98626011952ae05d151a4e055f2924e113079a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 881,
+      "first_chunk_seconds": 31.45,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 918,
+        "prompt_tokens": 928,
+        "total_tokens": 1846,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 644,
+          "text_tokens": 274
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2e556bd0dcba492512037d32db740122732dd6c8d52a1bf3b44e82d16d3396f6",
+      "status": "completed",
+      "latency_seconds": 41.209
+    }
+  ],
+  "status": "completed"
+}

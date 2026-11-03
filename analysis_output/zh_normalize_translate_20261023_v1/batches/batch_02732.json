@@ -1,0 +1,157 @@
+{
+  "input_sha256": "556a1ab12e360b2f51074cce7a84c8f96866787dd4b21b5506bedd534849a476",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009302",
+      "decision": "ready",
+      "subject": "person without work",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "unemployed",
+      "canonical_fact": "A person without work is unemployed.",
+      "prompt_en": "What is the conventional term for a person without work?",
+      "evidence_quotes": [
+        "if you do not have work",
+        "unemployed"
+      ],
+      "reason": "The source question supplies the description 'a person without work' and the answer 'unemployed' is the conventional term uniquely fitting that description. This maps exactly to description_to_term (direction: description -> term). No uncertainty or qualifier is lost.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "unemployed",
+        "canonical_fact": "A person without work is unemployed.",
+        "subject": "person without work",
+        "prompt_en": "What is the conventional term for a person without work?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "unemployed"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "99a9afb3b720a4beac76ef9f33722262af7fa5148f024c7afa7b134e6fe4bf56",
+      "input_sha256": "f5a5553e9d9ee9275e32e97b78bfa186381376b2844feb0d42f914afd35950f8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009326",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The trait 'cruel' is one of several plausible traits (malicious, vicious, ruthless, sadistic) that could describe purposefully harming others; the assignment is non-unique. No catalog relation precisely captures 'trait exhibited by a group' without forcing a broad category (entity_to_class excludes arbitrary attributes). Defer to avoid asserting a non-unique mapping as a reusable fact.",
+      "input_sha256": "43f6a0c78a8b8c0f34c50c1a6236c09365008500e59c694c59af06540e2b1bfc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009302",
+      "input_sha256": "f5a5553e9d9ee9275e32e97b78bfa186381376b2844feb0d42f914afd35950f8",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "unemployed",
+        "canonical_fact": "A person without work is unemployed.",
+        "subject": "person without work",
+        "prompt_en": "What is the conventional term for a person without work?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "unemployed"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "99a9afb3b720a4beac76ef9f33722262af7fa5148f024c7afa7b134e6fe4bf56",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009302",
+        "subject_zh": "没有工作的人",
+        "prompt_zh": "没有工作的人的惯用术语是什么？",
+        "canonical_fact_zh": "没有工作的人是失业的。",
+        "answer_zh": "失业",
+        "answer_aliases_zh": [
+          "失业"
+        ]
+      },
+      "translation_sha256": "5c5f6193a699813d55d5d3e1eda8f382f2d778bc94d197182d5bf372e66abca4"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009302",
+        "historical:raw_commonsense_qa_009326"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ce3038400210d8365db66a45abe3f9e995e2d5f2bf0ec21c465f14b9077724c2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2793,
+      "first_chunk_seconds": 14.47,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2899,
+        "prompt_tokens": 1628,
+        "total_tokens": 4527,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2487,
+          "text_tokens": 412
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9d11f25f43d51dd0a873d1cb41d597d500e4d29780946211ad09dfd2ae3c45f7",
+      "status": "completed",
+      "latency_seconds": 54.702
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009302"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fdbbb6e2c41db08c12cbb320723a0ec59c3848b808890d9e2329b1193bb5d700",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 960,
+      "first_chunk_seconds": 23.208,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1029,
+        "prompt_tokens": 501,
+        "total_tokens": 1530,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 920,
+          "text_tokens": 109
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c5601e7b326f03f8755cd4943392a385f6411f82274c19dfcb4b995737d8e72c",
+      "status": "completed",
+      "latency_seconds": 35.309
+    }
+  ],
+  "status": "completed"
+}

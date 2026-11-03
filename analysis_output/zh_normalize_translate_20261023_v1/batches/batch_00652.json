@@ -1,0 +1,220 @@
+{
+  "input_sha256": "66cd41b6503011572bbb40f7893482ff3eab5ff2f220167ead4e8e1a05e3d8e0",
+  "normalized": [
+    {
+      "record_id": "public:pbf_1166e8ac3e01449e3481",
+      "decision": "ready",
+      "subject": "most common functional psychiatric disorder of later life",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "depression",
+      "canonical_fact": "The most common functional psychiatric disorder of later life is depression.",
+      "prompt_en": "What is the most common functional psychiatric disorder of later life?",
+      "evidence_quotes": [
+        "The most common functional psychiatric disorder of later life is",
+        "depression"
+      ],
+      "reason": "Source directly states that depression is the most common functional psychiatric disorder of later life. The superlative 'most common' uniquely identifies a single entity, fitting description_to_entity (identifying description -> entity). Existing answer 'depression' matches source_answer exactly; retained verbatim.",
+      "english": {
+        "subject": "most common functional psychiatric disorder of later life",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "depression",
+        "canonical_fact": "The most common functional psychiatric disorder of later life is depression.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the most common functional psychiatric disorder of later life?",
+        "answer_aliases_en": [
+          "depression"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "264a98a80129da83f696a5eafdde5cad2920c8553e097481ac7ca554fb0ec64d",
+      "input_sha256": "69b63e522744968a52871826d44f12d693c826648eef25f3ef8f195b3bc886ce",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_1186f254f358e8fe0691",
+      "decision": "ready",
+      "subject": "Chodorow (1978)",
+      "relation_id": "theorist_to_argued_content",
+      "relation_definition": "The specific content of a proposition or mechanism argued by a named theorist in a specified work or year; preserves the theorist's stated formulation without paraphrase.",
+      "direction": "specified theorist (year/work) -> content of their argued proposition",
+      "answer": "both boys and girls being closely attached to their mothers, but then boys breaking away",
+      "canonical_fact": "Chodorow (1978) argued that gender socialization occurred through both boys and girls being closely attached to their mothers, but then boys breaking away.",
+      "prompt_en": "What did Chodorow (1978) argue was the process through which gender socialization occurred?",
+      "evidence_quotes": [
+        "Chodorow (1978) argued that gender socialization occurred through",
+        "both boys and girls being closely attached to their mothers, but then boys breaking away"
+      ],
+      "reason": "Source explicitly attributes the stated mechanism to Chodorow (1978). No existing catalog relation captures 'theorist argued that X'; forcing into written_work_to_author (inverse) or entity_to_class (stability, not argument content) would misrepresent the fact. New relation theorist_to_argued_content proposed with explicit direction. Existing answer matches source_answer verbatim; retained.",
+      "english": {
+        "subject": "Chodorow (1978)",
+        "relation_definition": "The specific content of a proposition or mechanism argued by a named theorist in a specified work or year; preserves the theorist's stated formulation without paraphrase.",
+        "answer": "both boys and girls being closely attached to their mothers, but then boys breaking away",
+        "canonical_fact": "Chodorow (1978) argued that gender socialization occurred through both boys and girls being closely attached to their mothers, but then boys breaking away.",
+        "direction": "specified theorist (year/work) -> content of their argued proposition",
+        "relation_id": "theorist_to_argued_content",
+        "prompt_en": "What did Chodorow (1978) argue was the process through which gender socialization occurred?",
+        "answer_aliases_en": [
+          "both boys and girls being closely attached to their mothers, but then boys breaking away"
+        ],
+        "relation_spec": {
+          "id": "theorist_to_argued_content",
+          "definition": "The specific content of a proposition or mechanism argued by a named theorist in a specified work or year; preserves the theorist's stated formulation without paraphrase.",
+          "direction": "specified theorist (year/work) -> content of their argued proposition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b705d30f38c24a348f30420ed0ba1cf3c73361c610370dfc744982e1077ad78b",
+      "input_sha256": "ad0c5c48a18d4164ff06ae884c9699e1e6159f5a74fdc47173fd441c0e42d15f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_1166e8ac3e01449e3481",
+      "input_sha256": "69b63e522744968a52871826d44f12d693c826648eef25f3ef8f195b3bc886ce",
+      "english": {
+        "subject": "most common functional psychiatric disorder of later life",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "depression",
+        "canonical_fact": "The most common functional psychiatric disorder of later life is depression.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the most common functional psychiatric disorder of later life?",
+        "answer_aliases_en": [
+          "depression"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "264a98a80129da83f696a5eafdde5cad2920c8553e097481ac7ca554fb0ec64d",
+      "translation": {
+        "record_id": "public:pbf_1166e8ac3e01449e3481",
+        "subject_zh": "晚年最常见的功能性精神障碍",
+        "prompt_zh": "晚年最常见的功能性精神障碍是什么？",
+        "canonical_fact_zh": "晚年最常见的功能性精神障碍是抑郁症。",
+        "answer_zh": "抑郁症",
+        "answer_aliases_zh": [
+          "抑郁症"
+        ]
+      },
+      "translation_sha256": "9ce3e8d0dd957668c33bb8f3b2f6511652d9a161c4bac1d7ff483b47840920e9"
+    },
+    {
+      "record_id": "public:pbf_1186f254f358e8fe0691",
+      "input_sha256": "ad0c5c48a18d4164ff06ae884c9699e1e6159f5a74fdc47173fd441c0e42d15f",
+      "english": {
+        "subject": "Chodorow (1978)",
+        "relation_definition": "The specific content of a proposition or mechanism argued by a named theorist in a specified work or year; preserves the theorist's stated formulation without paraphrase.",
+        "answer": "both boys and girls being closely attached to their mothers, but then boys breaking away",
+        "canonical_fact": "Chodorow (1978) argued that gender socialization occurred through both boys and girls being closely attached to their mothers, but then boys breaking away.",
+        "direction": "specified theorist (year/work) -> content of their argued proposition",
+        "relation_id": "theorist_to_argued_content",
+        "prompt_en": "What did Chodorow (1978) argue was the process through which gender socialization occurred?",
+        "answer_aliases_en": [
+          "both boys and girls being closely attached to their mothers, but then boys breaking away"
+        ],
+        "relation_spec": {
+          "id": "theorist_to_argued_content",
+          "definition": "The specific content of a proposition or mechanism argued by a named theorist in a specified work or year; preserves the theorist's stated formulation without paraphrase.",
+          "direction": "specified theorist (year/work) -> content of their argued proposition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b705d30f38c24a348f30420ed0ba1cf3c73361c610370dfc744982e1077ad78b",
+      "translation": {
+        "record_id": "public:pbf_1186f254f358e8fe0691",
+        "subject_zh": "Chodorow（1978）",
+        "prompt_zh": "Chodorow（1978）认为性别社会化是通过什么过程发生的？",
+        "canonical_fact_zh": "Chodorow（1978）认为性别社会化是通过男孩和女孩都与母亲保持密切依恋，但随后男孩分离出去的过程发生的。",
+        "answer_zh": "男孩和女孩都与母亲保持密切依恋，但随后男孩分离出去",
+        "answer_aliases_zh": [
+          "男孩和女孩都与母亲保持密切依恋，但随后男孩分离出去"
+        ]
+      },
+      "translation_sha256": "6e8954915a287393e34fd21bc6c9018934b4102a23e14d8435b6898d0de1cc48"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1166e8ac3e01449e3481",
+        "public:pbf_1186f254f358e8fe0691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "95cda9f1af40b9e151c41e843f862c750d80bd6cbe61e0a1c082f16f80594947",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.091
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_1166e8ac3e01449e3481",
+        "public:pbf_1186f254f358e8fe0691"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "95cda9f1af40b9e151c41e843f862c750d80bd6cbe61e0a1c082f16f80594947",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3332,
+        "prompt_tokens": 1705,
+        "total_tokens": 5037,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2718,
+          "text_tokens": 614
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b8110cb433e78c46329aaa1df514387a0bb622c1780dacdf1848f41bb2a7e99e",
+      "status": "completed",
+      "latency_seconds": 56.308
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_1166e8ac3e01449e3481",
+        "public:pbf_1186f254f358e8fe0691"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bff5987b8262941b6b5af46010fad337e3b0578a1bd2ae672deae9ffccbaccba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1211,
+        "prompt_tokens": 943,
+        "total_tokens": 2154,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 924,
+          "text_tokens": 287
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1e53372b836dcec08d7d64cb7a68b7a8485b5b9e108d18d6a79ab8ce5ee0d8b4",
+      "status": "completed",
+      "latency_seconds": 42.531
+    }
+  ],
+  "status": "completed"
+}

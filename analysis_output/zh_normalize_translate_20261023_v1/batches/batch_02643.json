@@ -1,0 +1,97 @@
+{
+  "input_sha256": "10ae1534fae7438a3dd6ef590e9d5d8f118951cd2e2f85422bebdba1d7219878",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006501",
+        "historical:raw_commonsense_qa_006504"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "56bf3e692cf7cf75c2d21278ac8b11292e49237c09d7fae3c4077d38c59c6944",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 19.935,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006501",
+        "historical:raw_commonsense_qa_006504"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "56bf3e692cf7cf75c2d21278ac8b11292e49237c09d7fae3c4077d38c59c6944",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1914,
+      "first_chunk_seconds": 9.839,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2084,
+        "prompt_tokens": 1669,
+        "total_tokens": 3753,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1591,
+          "text_tokens": 493
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a94544775197e550ce7aab306202a04ab61b9b9e2a3b5b9bc4cf3b85c04e6b2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 119.38,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006501",
+        "historical:raw_commonsense_qa_006504"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a93422ab65d1dd5603955cebcc232857fc13cfe24b2691801484ac5fab08a7ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2518,
+      "first_chunk_seconds": 20.138,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2663,
+        "prompt_tokens": 1688,
+        "total_tokens": 4351,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2127,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3fb4526ce7dc476ea83a5a45c8507ce6568c496481ae5bb85146e2c40c036f31",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 62.64,
+      "validation_code": "known_relation_spec_mismatch"
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "fa3eb20daf039d313ba4bb4c8d2d33bbec14b1b91eacb56476cc2ff0dac88c39",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000574",
+      "decision": "ready",
+      "subject": "television",
+      "relation_id": "device_to_conveyed_modality",
+      "relation_definition": "The information modality (e.g., visual, tactile, haptic) conveyed by a specified device or channel; state alongside another modality when the source question specifies exclusion of that other modality.",
+      "direction": "device -> information modality",
+      "answer": "visual",
+      "canonical_fact": "Using a television allows you to take in audio as well as visual information.",
+      "prompt_en": "What kind of information does using a television allow you to take in besides audio?",
+      "evidence_quotes": [
+        "Using a television allows you to take in audio as well as what kind of information?",
+        "visual"
+      ],
+      "reason": "No existing catalog relation captures 'the type of information modality a device conveys.' The closest candidates (entity_to_class, entity_to_material) do not fit because 'visual' is a modality/attribute of information conveyed, not a class or material. Proposing a precise new snake_case ID with explicit direction and definition. Answer 'visual' is copied verbatim from source_answer; prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "device -> information modality",
+        "relation_id": "device_to_conveyed_modality",
+        "answer": "visual",
+        "canonical_fact": "Using a television allows you to take in audio as well as visual information.",
+        "subject": "television",
+        "prompt_en": "What kind of information does using a television allow you to take in besides audio?",
+        "relation_definition": "The information modality (e.g., visual, tactile, haptic) conveyed by a specified device or channel; state alongside another modality when the source question specifies exclusion of that other modality.",
+        "answer_aliases_en": [
+          "visual"
+        ],
+        "relation_spec": {
+          "id": "device_to_conveyed_modality",
+          "definition": "The information modality (e.g., visual, tactile, haptic) conveyed by a specified device or channel; state alongside another modality when the source question specifies exclusion of that other modality.",
+          "direction": "device -> information modality"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "53d188f6a58fc07460b5ede8a6f88716bbe17a8584caf005989d66f4bb6e3b9b",
+      "input_sha256": "4a92bab797704b5d0487b3b3210211447c885e2823572f550b3798605a6097d9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000576",
+      "decision": "ready",
+      "subject": "area of land next to the ocean",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "beach",
+      "canonical_fact": "The area of land next to the ocean is called a beach.",
+      "prompt_en": "What is the conventional term for the area of land next to the ocean?",
+      "evidence_quotes": [
+        "The area of land next to the ocean is called what?",
+        "beach"
+      ],
+      "reason": "The source question supplies a defining description ('the area of land next to the ocean') and asks for the conventional term, which is 'beach.' This matches the catalog relation description_to_term exactly (description -> term). Answer copied verbatim from source_answer; prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "beach",
+        "canonical_fact": "The area of land next to the ocean is called a beach.",
+        "subject": "area of land next to the ocean",
+        "prompt_en": "What is the conventional term for the area of land next to the ocean?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "beach"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7f89c92c713e357101403813bc6130307d8b03d77144a42ed4196c0429df6a54",
+      "input_sha256": "aa3c0e38e5aaf6320f0f2e0bda1e585e3709246fdc24f5cd59564f995ca68d5e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000574",
+      "input_sha256": "4a92bab797704b5d0487b3b3210211447c885e2823572f550b3798605a6097d9",
+      "english": {
+        "direction": "device -> information modality",
+        "relation_id": "device_to_conveyed_modality",
+        "answer": "visual",
+        "canonical_fact": "Using a television allows you to take in audio as well as visual information.",
+        "subject": "television",
+        "prompt_en": "What kind of information does using a television allow you to take in besides audio?",
+        "relation_definition": "The information modality (e.g., visual, tactile, haptic) conveyed by a specified device or channel; state alongside another modality when the source question specifies exclusion of that other modality.",
+        "answer_aliases_en": [
+          "visual"
+        ],
+        "relation_spec": {
+          "id": "device_to_conveyed_modality",
+          "definition": "The information modality (e.g., visual, tactile, haptic) conveyed by a specified device or channel; state alongside another modality when the source question specifies exclusion of that other modality.",
+          "direction": "device -> information modality"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "53d188f6a58fc07460b5ede8a6f88716bbe17a8584caf005989d66f4bb6e3b9b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000574",
+        "subject_zh": "电视",
+        "prompt_zh": "使用电视除了接收声音信息外，还能接收什么类型的信息？",
+        "canonical_fact_zh": "使用电视可以让你接收声音信息和视觉信息。",
+        "answer_zh": "视觉",
+        "answer_aliases_zh": [
+          "视觉"
+        ]
+      },
+      "translation_sha256": "c75b165cc7ef9ffd8bfb23f0a4775d497d358ed5585026fa5960c959057c8bdb"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000576",
+      "input_sha256": "aa3c0e38e5aaf6320f0f2e0bda1e585e3709246fdc24f5cd59564f995ca68d5e",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "beach",
+        "canonical_fact": "The area of land next to the ocean is called a beach.",
+        "subject": "area of land next to the ocean",
+        "prompt_en": "What is the conventional term for the area of land next to the ocean?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "beach"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7f89c92c713e357101403813bc6130307d8b03d77144a42ed4196c0429df6a54",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000576",
+        "subject_zh": "海洋旁边的陆地区域",
+        "prompt_zh": "海洋旁边的那片陆地的惯用名称是什么？",
+        "canonical_fact_zh": "海洋旁边的陆地区域叫做海滩。",
+        "answer_zh": "海滩",
+        "answer_aliases_zh": [
+          "海滩"
+        ]
+      },
+      "translation_sha256": "edbdd30f7562f8db832c1fcc1277e04f0a87d3785c928a4056383671d0b96a60"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000574",
+        "historical:raw_commonsense_qa_000576"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "65c2077554084b6fc141d2faf1a5baea765945d7abd84e803fabfb51b7fcb087",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2065,
+      "first_chunk_seconds": 20.269,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2135,
+        "prompt_tokens": 1699,
+        "total_tokens": 3834,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1570,
+          "text_tokens": 565
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e789fc140e74c9f2a3d3189572d2e011e074c85fb38fc3bdfc19627d1c3980bb",
+      "status": "completed",
+      "latency_seconds": 45.448
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000574",
+        "historical:raw_commonsense_qa_000576"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "033ad5b55abc53be1aa4323bb110a57dafe377adea6adff2b90ebc2fe15b9f15",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 919,
+      "first_chunk_seconds": 23.151,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 978,
+        "prompt_tokens": 889,
+        "total_tokens": 1867,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 761,
+          "text_tokens": 217
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b0d46d8a5b54119ff26def08330b6698825ed51c6a0c30c762af4712fff775a5",
+      "status": "completed",
+      "latency_seconds": 35.388
+    }
+  ],
+  "status": "completed"
+}

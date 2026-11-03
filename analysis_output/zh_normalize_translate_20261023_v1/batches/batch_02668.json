@@ -1,0 +1,214 @@
+{
+  "input_sha256": "82a5ddea11137d892d4bccaf14516d8219d0df7342f26d1c328a2b8fd0a5ab3d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007137",
+      "decision": "ready",
+      "subject": "fish",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "gills",
+      "canonical_fact": "Fish have gills to aid in oxygen exchange.",
+      "prompt_en": "What organ do fish have that aids in oxygen exchange?",
+      "evidence_quotes": [
+        "What do fish have to aid in oxygen exchange?",
+        "gills"
+      ],
+      "reason": "The source question asks what fish have for oxygen exchange; the answer 'gills' is a constituent part of the whole organism 'fish'. The catalog relation whole_to_part (whole -> part) fits exactly: fish is the whole, gills is the specified part. The canonical fact and prompt preserve the functional context (oxygen exchange) without asserting exclusivity. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "gills",
+        "canonical_fact": "Fish have gills to aid in oxygen exchange.",
+        "subject": "fish",
+        "prompt_en": "What organ do fish have that aids in oxygen exchange?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "gills"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f58de11bd2200c0bcf4a98c77997f176eca0538a0f36f544cadb014e881888b",
+      "input_sha256": "a5cb6ab70da5d5ee748b6c2c5bfa81eda3246213006083b4d49f3af6fecebc01",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007174",
+      "decision": "ready",
+      "subject": "time of day after lunch",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "afternoon",
+      "canonical_fact": "The time of day after lunch is the afternoon.",
+      "prompt_en": "What is the conventional name for the time period that begins after lunch?",
+      "evidence_quotes": [
+        "Some people are morning people, others don't get going until after lunch in the what?",
+        "afternoon"
+      ],
+      "reason": "The subject 'time of day after lunch' is an identifying description; the source answer 'afternoon' is the conventional term that uniquely fits that description. This matches description_to_term (description -> term) exactly. One model annotation flagged ambiguous_subject, but the source question clearly scopes the description to 'after lunch', making 'afternoon' the unambiguous conventional term. Both model annotations otherwise agree on the extracted values.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "afternoon",
+        "canonical_fact": "The time of day after lunch is the afternoon.",
+        "subject": "time of day after lunch",
+        "prompt_en": "What is the conventional name for the time period that begins after lunch?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "afternoon"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "594277df970be06eb8b9cfe00b6382209a050715f2608d39a9f433ec02b715a7",
+      "input_sha256": "a024ea7c619dbbad1da779e2226ea357e70ba7bca22253d31e7e4de7d0044ce0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007137",
+      "input_sha256": "a5cb6ab70da5d5ee748b6c2c5bfa81eda3246213006083b4d49f3af6fecebc01",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "gills",
+        "canonical_fact": "Fish have gills to aid in oxygen exchange.",
+        "subject": "fish",
+        "prompt_en": "What organ do fish have that aids in oxygen exchange?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "gills"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0f58de11bd2200c0bcf4a98c77997f176eca0538a0f36f544cadb014e881888b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007137",
+        "subject_zh": "鱼",
+        "prompt_zh": "鱼有什么器官有助于氧气交换？",
+        "canonical_fact_zh": "鱼有鳃来辅助氧气交换。",
+        "answer_zh": "鳃",
+        "answer_aliases_zh": [
+          "鳃"
+        ]
+      },
+      "translation_sha256": "99e1c44be1adecf5ba26553792b1eb70c1d42d553d2c49307ea6b203ef33a04a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007174",
+      "input_sha256": "a024ea7c619dbbad1da779e2226ea357e70ba7bca22253d31e7e4de7d0044ce0",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "afternoon",
+        "canonical_fact": "The time of day after lunch is the afternoon.",
+        "subject": "time of day after lunch",
+        "prompt_en": "What is the conventional name for the time period that begins after lunch?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "afternoon"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "594277df970be06eb8b9cfe00b6382209a050715f2608d39a9f433ec02b715a7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007174",
+        "subject_zh": "午饭后的一日时段",
+        "prompt_zh": "午饭后开始的那个时间段通常叫什么？",
+        "canonical_fact_zh": "午饭后的一日时段是下午。",
+        "answer_zh": "下午",
+        "answer_aliases_zh": [
+          "下午"
+        ]
+      },
+      "translation_sha256": "e43c8262e3fac4418197f9d0d3bdade97797af2978e03d4785f09661b3f9e3a3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007137",
+        "historical:raw_commonsense_qa_007174"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "800f4352b347dc401129151c588cbad803db9d43ec43051515f63abdc3e684e1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1832,
+      "first_chunk_seconds": 23.216,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1868,
+        "prompt_tokens": 1638,
+        "total_tokens": 3506,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1339,
+          "text_tokens": 529
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2b99f2c4d952deb5182c9d41b529b5981e91d7aa0232e1bed42aec4aa8637712",
+      "status": "completed",
+      "latency_seconds": 47.049
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007137",
+        "historical:raw_commonsense_qa_007174"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c50cca8b63e3521f5b0ebcf45310d53bd186203c2c181b015ab91e1d029077a3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 726,
+      "first_chunk_seconds": 21.605,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 804,
+        "prompt_tokens": 796,
+        "total_tokens": 1600,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 662,
+          "text_tokens": 142
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "36e6257f4dcc922cc44fda64559623be52947f8e4462808cb9944a7246b85df7",
+      "status": "completed",
+      "latency_seconds": 32.24
+    }
+  ],
+  "status": "completed"
+}

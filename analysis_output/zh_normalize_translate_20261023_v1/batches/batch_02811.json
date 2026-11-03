@@ -1,0 +1,214 @@
+{
+  "input_sha256": "1303470242ef3789e0372254e744ff74576915342eab0d3b839473cbb9616066",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000006",
+      "decision": "ready",
+      "subject": "birds",
+      "relation_id": "taxon_to_evolved_from",
+      "relation_definition": "Phylogenetic ancestral taxon group from which a specified taxon is thought to have evolved; retains uncertainty qualifiers such as 'thought to have'.",
+      "direction": "taxon -> ancestral taxon group",
+      "answer": "therapods",
+      "canonical_fact": "Birds are thought to have evolved from a group of bipedal dinosaurs called therapods.",
+      "prompt_en": "From what group of bipedal dinosaurs are birds thought to have evolved?",
+      "evidence_quotes": [
+        "Birds are thought to have evolved from a group of bipedal dinosaurs called",
+        "therapods"
+      ],
+      "reason": "Source question and answer jointly state the evolutionary origin. No existing catalog relation captures a phylogenetic 'evolved from' link; entity_to_class is about taxonomic membership, not descent. A new precise relation taxon_to_evolved_from is proposed. Answer 'therapods' is copied verbatim from source_answer. Uncertainty qualifier 'thought to have' is preserved in canonical_fact.",
+      "english": {
+        "direction": "taxon -> ancestral taxon group",
+        "relation_id": "taxon_to_evolved_from",
+        "answer": "therapods",
+        "canonical_fact": "Birds are thought to have evolved from a group of bipedal dinosaurs called therapods.",
+        "subject": "birds",
+        "prompt_en": "From what group of bipedal dinosaurs are birds thought to have evolved?",
+        "relation_definition": "Phylogenetic ancestral taxon group from which a specified taxon is thought to have evolved; retains uncertainty qualifiers such as 'thought to have'.",
+        "answer_aliases_en": [
+          "therapods"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_evolved_from",
+          "definition": "Phylogenetic ancestral taxon group from which a specified taxon is thought to have evolved; retains uncertainty qualifiers such as 'thought to have'.",
+          "direction": "taxon -> ancestral taxon group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8e992f3fa43627291c7f46ca5c8a270adde8a4585e1541d2427fb9bb49f5fb78",
+      "input_sha256": "4661f89916c39684885298ba1d12be07b7d9726f864bc1a2bb87ac3e0560b082",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000007",
+      "decision": "ready",
+      "subject": "membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "mitochondria",
+      "canonical_fact": "Mitochondria are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration.",
+      "prompt_en": "What are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration?",
+      "evidence_quotes": [
+        "membranous organelles in a cell sequence enzyme and electron molecules for efficient cellular respiration",
+        "mitochondria"
+      ],
+      "reason": "The source question supplies a qualified identifying description and asks for the entity name; source_answer gives 'mitochondria'. The existing catalog relation description_to_entity fits exactly (identifying description -> unique entity). No new relation needed. Answer copied verbatim from source_answer.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "mitochondria",
+        "canonical_fact": "Mitochondria are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration.",
+        "subject": "membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration",
+        "prompt_en": "What are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "mitochondria"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d5bfd1caffd471cfdc0a83af4eec6b4b1665f9e4f070475964c6b19a9991500a",
+      "input_sha256": "0ea3d47603364ac61252a3d979a3bf09fffd0bc6a4a48a0bdbd03733ead0f5b6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000006",
+      "input_sha256": "4661f89916c39684885298ba1d12be07b7d9726f864bc1a2bb87ac3e0560b082",
+      "english": {
+        "direction": "taxon -> ancestral taxon group",
+        "relation_id": "taxon_to_evolved_from",
+        "answer": "therapods",
+        "canonical_fact": "Birds are thought to have evolved from a group of bipedal dinosaurs called therapods.",
+        "subject": "birds",
+        "prompt_en": "From what group of bipedal dinosaurs are birds thought to have evolved?",
+        "relation_definition": "Phylogenetic ancestral taxon group from which a specified taxon is thought to have evolved; retains uncertainty qualifiers such as 'thought to have'.",
+        "answer_aliases_en": [
+          "therapods"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_evolved_from",
+          "definition": "Phylogenetic ancestral taxon group from which a specified taxon is thought to have evolved; retains uncertainty qualifiers such as 'thought to have'.",
+          "direction": "taxon -> ancestral taxon group"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8e992f3fa43627291c7f46ca5c8a270adde8a4585e1541d2427fb9bb49f5fb78",
+      "translation": {
+        "record_id": "historical:raw_sciq_000006",
+        "subject_zh": "鸟类",
+        "prompt_zh": "鸟类被认为进化自哪一群双足恐龙？",
+        "canonical_fact_zh": "鸟类被认为进化自一群称为兽脚类恐龙的双足恐龙。",
+        "answer_zh": "兽脚类",
+        "answer_aliases_zh": [
+          "兽脚类"
+        ]
+      },
+      "translation_sha256": "8480a6e100d5c4ee5a0d4962023568b25c48a036ce20fe6945f7f7b7f9808a47"
+    },
+    {
+      "record_id": "historical:raw_sciq_000007",
+      "input_sha256": "0ea3d47603364ac61252a3d979a3bf09fffd0bc6a4a48a0bdbd03733ead0f5b6",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "mitochondria",
+        "canonical_fact": "Mitochondria are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration.",
+        "subject": "membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration",
+        "prompt_en": "What are the membranous organelles in a cell that sequence enzyme and electron molecules for efficient cellular respiration?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "mitochondria"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d5bfd1caffd471cfdc0a83af4eec6b4b1665f9e4f070475964c6b19a9991500a",
+      "translation": {
+        "record_id": "historical:raw_sciq_000007",
+        "subject_zh": "细胞中按序列排列酶和电子分子以进行高效细胞呼吸的膜性细胞器",
+        "prompt_zh": "细胞中按序列排列酶和电子分子以进行高效细胞呼吸的膜性细胞器是什么？",
+        "canonical_fact_zh": "线粒体是细胞中按序列排列酶和电子分子以进行高效细胞呼吸的膜性细胞器。",
+        "answer_zh": "线粒体",
+        "answer_aliases_zh": [
+          "线粒体"
+        ]
+      },
+      "translation_sha256": "566ad19d350fa5c150b427458064fd08e89c837f604fc64d35a125a4e8fb13c6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000006",
+        "historical:raw_sciq_000007"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "636f4eb0eef8a8b289b5ea71bc8194fc9c1c6bb3f3cbc81cc1426b6d678975f3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2457,
+      "first_chunk_seconds": 3.436,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2585,
+        "prompt_tokens": 1799,
+        "total_tokens": 4384,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2010,
+          "text_tokens": 575
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a1dcfb413564b8df4236ffb20bdc878c8741df69a6d997487fa13d6a0f1f8254",
+      "status": "completed",
+      "latency_seconds": 44.864
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000006",
+        "historical:raw_sciq_000007"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "36f8579ec6138460336bef073d26af3c2c664a5b7323700c28177b8e85a22bcb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 797,
+      "first_chunk_seconds": 3.041,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 831,
+        "prompt_tokens": 884,
+        "total_tokens": 1715,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 567,
+          "text_tokens": 264
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d97d404852f9e117f481ab7c9323c8ac19f2e09df0b1bd7171a4915f87e1013b",
+      "status": "completed",
+      "latency_seconds": 13.271
+    }
+  ],
+  "status": "completed"
+}

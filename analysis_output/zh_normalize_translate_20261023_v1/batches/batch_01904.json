@@ -1,0 +1,209 @@
+{
+  "input_sha256": "9aa64c73f8cde55d52a5927019c5862720bfab60a2594ba09ace6a095eac3384",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e091a0627dfb023c58b3",
+      "decision": "ready",
+      "subject": "corn crop requiring moderate and frequent irrigation",
+      "relation_id": "crop_with_irrigation_regime_to_soil_type",
+      "relation_definition": "The soil type for which a specified irrigation regime is most appropriate for a specified crop.",
+      "direction": "crop (with specified irrigation regime) -> suitable soil type",
+      "answer": "light-textured soil",
+      "canonical_fact": "Moderate and frequent irrigation is normally most appropriate for a corn crop growing in light-textured soil.",
+      "prompt_en": "Moderate and frequent irrigation is normally most appropriate for a corn crop growing in",
+      "evidence_quotes": [
+        "Moderate and frequent irrigation is normally most appropriate for a corn crop growing in",
+        "light-textured soil, such as loamy sand"
+      ],
+      "reason": "Source clearly states the soil type appropriate for the specified irrigation regime and crop. No catalog relation fits this conditional agricultural recommendation; a precise new relation is proposed to capture the crop + irrigation-regime to soil-type mapping without forcing a broad category.",
+      "english": {
+        "prompt_en": "Moderate and frequent irrigation is normally most appropriate for a corn crop growing in",
+        "relation_definition": "The soil type for which a specified irrigation regime is most appropriate for a specified crop.",
+        "answer": "light-textured soil",
+        "canonical_fact": "Moderate and frequent irrigation is normally most appropriate for a corn crop growing in light-textured soil.",
+        "direction": "crop (with specified irrigation regime) -> suitable soil type",
+        "relation_id": "crop_with_irrigation_regime_to_soil_type",
+        "subject": "corn crop requiring moderate and frequent irrigation",
+        "answer_aliases_en": [
+          "light-textured soil",
+          "light-textured soil, such as loamy sand"
+        ],
+        "relation_spec": {
+          "id": "crop_with_irrigation_regime_to_soil_type",
+          "definition": "The soil type for which a specified irrigation regime is most appropriate for a specified crop.",
+          "direction": "crop (with specified irrigation regime) -> suitable soil type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "50bccbc6ee1ac19cae13ab363b211d2589f017693615153ccac0ae74896a9217",
+      "input_sha256": "5a9befde052868de42d4dca34806a38c36dd2192b9e2b4525412f6e95d66be0b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e0ea981d03cad648ad82",
+      "decision": "ready",
+      "subject": "endometrium",
+      "relation_id": "anatomical_structure_to_physiological_phase",
+      "relation_definition": "The physiological or hormonal phase during which a specified anatomical structure undergoes a specified morphological or functional change (e.g., growth, thickening, shedding).",
+      "direction": "anatomical structure -> physiological phase",
+      "answer": "the follicular phase",
+      "canonical_fact": "The endometrium grows and thickens during the follicular phase.",
+      "prompt_en": "The endometrium grows and thickens during",
+      "evidence_quotes": [
+        "The endometrium grows and thickens during:",
+        "the follicular phase"
+      ],
+      "reason": "Source clearly states the physiological phase during which the endometrium undergoes growth and thickening. No catalog relation captures this temporal/physiological association between an anatomical structure and a hormonal phase; a precise new relation is proposed.",
+      "english": {
+        "prompt_en": "The endometrium grows and thickens during",
+        "relation_definition": "The physiological or hormonal phase during which a specified anatomical structure undergoes a specified morphological or functional change (e.g., growth, thickening, shedding).",
+        "answer": "the follicular phase",
+        "canonical_fact": "The endometrium grows and thickens during the follicular phase.",
+        "direction": "anatomical structure -> physiological phase",
+        "relation_id": "anatomical_structure_to_physiological_phase",
+        "subject": "endometrium",
+        "answer_aliases_en": [
+          "the follicular phase"
+        ],
+        "relation_spec": {
+          "id": "anatomical_structure_to_physiological_phase",
+          "definition": "The physiological or hormonal phase during which a specified anatomical structure undergoes a specified morphological or functional change (e.g., growth, thickening, shedding).",
+          "direction": "anatomical structure -> physiological phase"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "64ecb66e43317db1bdafba2db7ccc5c0d051d115b3852d803fa92c05f23f0a9e",
+      "input_sha256": "d59d44aa0dcb7aa1c362d4dbe20aa9b4a8de4f66a00d24118e0ae2055021e1aa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "106e5f5dd34fe7af912e8b22bee5bc58a72b6a388f30f29877d54c576b2dbfc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 182.899
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "106e5f5dd34fe7af912e8b22bee5bc58a72b6a388f30f29877d54c576b2dbfc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.477
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "106e5f5dd34fe7af912e8b22bee5bc58a72b6a388f30f29877d54c576b2dbfc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.387
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "106e5f5dd34fe7af912e8b22bee5bc58a72b6a388f30f29877d54c576b2dbfc5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3072,
+      "first_chunk_seconds": 1.789,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3080,
+        "prompt_tokens": 1641,
+        "total_tokens": 4721,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2535,
+          "text_tokens": 545
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4efcf8afe2186a18675e00956eba378c8e9d798cb0926f700c55b7425e8d92f5",
+      "status": "completed",
+      "latency_seconds": 39.046
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9eeec44a7c7634f408283cbebd0c26eff1330ae6568c4054eed4f908bbec59d8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.626
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9eeec44a7c7634f408283cbebd0c26eff1330ae6568c4054eed4f908bbec59d8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.603
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e091a0627dfb023c58b3",
+        "public:pbf_e0ea981d03cad648ad82"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9eeec44a7c7634f408283cbebd0c26eff1330ae6568c4054eed4f908bbec59d8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 24.242
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01904.json",
+      "sha256": "bef5c38e1dd25d6df2df94e0b52bab27832b8658181f82d75977cbc78d67312a",
+      "previous_status": "failed"
+    }
+  ]
+}

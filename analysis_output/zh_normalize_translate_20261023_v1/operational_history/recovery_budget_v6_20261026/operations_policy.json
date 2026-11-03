@@ -1,0 +1,52 @@
+{
+  "version": "zh-operations-v5-autorepair-20261024",
+  "authorization": "User2026-10-24 explicitly requested autonomous diagnosis, repair and verified continuation for stuck/erroring Qwen.",
+  "frozen_generation_and_packet_artifacts_unchanged": true,
+  "automatic_recovery": {
+    "stall_minutes": 20,
+    "confirmation_minutes": 10,
+    "max_attempts_per_24h": 3,
+    "backoff_minutes": [
+      30,
+      60
+    ],
+    "probe_timeout_seconds": 90,
+    "max_failed_batches_per_attempt": 32,
+    "extra_retry_epochs_per_batch": 1,
+    "authentication_identity_or_hash_errors_require_user": true,
+    "graceful_stop_owned_confirmed_stalled_worker_only": true,
+    "force_kill_allowed": false,
+    "revalidate_unknown_403": true,
+    "access_403_cooldown_minutes": 30,
+    "access_403_require_full_probe_success": true,
+    "unknown_403_revalidation_authorized_by_user": true
+  },
+  "luna_assignments": {
+    "requested_model": "gpt-6-luna",
+    "max_rows_per_assignment": 40,
+    "max_existing_packets_per_assignment": 2,
+    "frozen_packet_size": 20,
+    "max_rows_per_read": 5,
+    "separate_dispatch_output_and_finalization_per_packet": true,
+    "fallback_rows_per_assignment_on_truncation_or_coverage_error": 20,
+    "review_scope": "translation_only",
+    "human_gold": false
+  },
+  "active_worker_runtime": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/active_worker_runtime.json",
+  "transport_continuation": {
+    "backoff_seconds": [
+      60,
+      120,
+      300
+    ],
+    "consecutive_failure_threshold": 16,
+    "max_transport_tail_retry_epochs": 1,
+    "transport_probe_min_success_ratio": 0.75,
+    "defer_technical_retries_to_tail": true
+  },
+  "response_transport": "sse_complete_identity_usage_required",
+  "authorization_streaming": "Explicit user API repair; original v3 continuation and bounded tail retry remain unchanged.",
+  "previous_authorization": "User2026-10-24 explicitly requested temporary failures be retained,other sources continue,and retry afterward.",
+  "agent_operational_repair_authorized": true,
+  "agent_operational_repair_scope": "Diagnose operational/program failures and apply tested, versioned repairs; preserve frozen inputs, prompts, validation, models, routes, credentials and all historical results."
+}

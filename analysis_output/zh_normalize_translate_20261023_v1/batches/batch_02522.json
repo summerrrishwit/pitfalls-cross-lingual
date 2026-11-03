@@ -1,0 +1,214 @@
+{
+  "input_sha256": "088bf2d8765d203ef0dd36dfbc59b76798fd2360750787b750feec882c0dabcf",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002753",
+      "decision": "ready",
+      "subject": "marmots",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "northern hemisphere",
+      "canonical_fact": "Marmots live in the northern hemisphere.",
+      "prompt_en": "Which half of the Earth do marmots typically live in?",
+      "evidence_quotes": [
+        "marmots",
+        "northern hemisphere"
+      ],
+      "reason": "The source question asks which hemisphere marmots inhabit and the source answer is 'northern hemisphere'. The catalog relation organism_to_habitat (organism -> habitat) fits exactly: marmots are organisms and the northern hemisphere describes their typical habitat range without asserting exclusivity. No new relation is needed.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "northern hemisphere",
+        "canonical_fact": "Marmots live in the northern hemisphere.",
+        "subject": "marmots",
+        "prompt_en": "Which half of the Earth do marmots typically live in?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "northern hemisphere"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b0810940ec2c93d93a27873b43adc50150befea81fe656e8c4cba3a19bf440e2",
+      "input_sha256": "228acfef7731904a5bab419362393dbfb18ef00941ab8e7a391c57031d62d5ab",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002757",
+      "decision": "ready",
+      "subject": "income",
+      "relation_id": "income_to_applicable_tax",
+      "relation_definition": "The specific tax legally owed upon receiving a stated form of income or earnings; not a general tax class, voluntary payment, or tax on a different asset.",
+      "direction": "form of income -> tax owed upon receiving it",
+      "answer": "income tax",
+      "canonical_fact": "Income tax is the tax owed when a person receives income.",
+      "prompt_en": "What tax do you owe when you receive wages or salary?",
+      "evidence_quotes": [
+        "income tax",
+        "getting paid"
+      ],
+      "reason": "The source question asks what you must pay when getting paid; the source answer 'income tax' is a literal substring of source_answer. No existing catalog relation covers a tax-triggered-by-received-income relationship (entity_to_class, term_to_definition, etc. do not fit). Proposing new relation income_to_applicable_tax with direction 'form of income -> tax owed upon receiving it'. The answer is kept exactly as in the source.",
+      "english": {
+        "direction": "form of income -> tax owed upon receiving it",
+        "relation_id": "income_to_applicable_tax",
+        "answer": "income tax",
+        "canonical_fact": "Income tax is the tax owed when a person receives income.",
+        "subject": "income",
+        "prompt_en": "What tax do you owe when you receive wages or salary?",
+        "relation_definition": "The specific tax legally owed upon receiving a stated form of income or earnings; not a general tax class, voluntary payment, or tax on a different asset.",
+        "answer_aliases_en": [
+          "income tax"
+        ],
+        "relation_spec": {
+          "id": "income_to_applicable_tax",
+          "definition": "The specific tax legally owed upon receiving a stated form of income or earnings; not a general tax class, voluntary payment, or tax on a different asset.",
+          "direction": "form of income -> tax owed upon receiving it"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de5979c8717f7a22a96a382c7fb1895efc766d6bc11ded704b09e11f0a5eba3e",
+      "input_sha256": "64a61a43ddc80e7b5814204824dcc288f16994967a32ebbc9e198567765d00b8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002753",
+      "input_sha256": "228acfef7731904a5bab419362393dbfb18ef00941ab8e7a391c57031d62d5ab",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "northern hemisphere",
+        "canonical_fact": "Marmots live in the northern hemisphere.",
+        "subject": "marmots",
+        "prompt_en": "Which half of the Earth do marmots typically live in?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "northern hemisphere"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b0810940ec2c93d93a27873b43adc50150befea81fe656e8c4cba3a19bf440e2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002753",
+        "subject_zh": "旱獭",
+        "prompt_zh": "旱獭通常生活在地球的哪个半球？",
+        "canonical_fact_zh": "旱獭生活在北半球。",
+        "answer_zh": "北半球",
+        "answer_aliases_zh": [
+          "北半球"
+        ]
+      },
+      "translation_sha256": "923e720620168df8a7e13b2322b6e92a0ae81cc50d53bcd3f6796498a6862d72"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002757",
+      "input_sha256": "64a61a43ddc80e7b5814204824dcc288f16994967a32ebbc9e198567765d00b8",
+      "english": {
+        "direction": "form of income -> tax owed upon receiving it",
+        "relation_id": "income_to_applicable_tax",
+        "answer": "income tax",
+        "canonical_fact": "Income tax is the tax owed when a person receives income.",
+        "subject": "income",
+        "prompt_en": "What tax do you owe when you receive wages or salary?",
+        "relation_definition": "The specific tax legally owed upon receiving a stated form of income or earnings; not a general tax class, voluntary payment, or tax on a different asset.",
+        "answer_aliases_en": [
+          "income tax"
+        ],
+        "relation_spec": {
+          "id": "income_to_applicable_tax",
+          "definition": "The specific tax legally owed upon receiving a stated form of income or earnings; not a general tax class, voluntary payment, or tax on a different asset.",
+          "direction": "form of income -> tax owed upon receiving it"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de5979c8717f7a22a96a382c7fb1895efc766d6bc11ded704b09e11f0a5eba3e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002757",
+        "subject_zh": "收入",
+        "prompt_zh": "领取工资或薪金时需要缴纳什么税？",
+        "canonical_fact_zh": "所得税是个人取得收入时需要缴纳的税。",
+        "answer_zh": "所得税",
+        "answer_aliases_zh": [
+          "所得税"
+        ]
+      },
+      "translation_sha256": "baa91f5f6c24322566e8a0f8ce3881088e5074851f61bcbb4c5e6fd746cde40d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002753",
+        "historical:raw_commonsense_qa_002757"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1c6d2db7ff91facc73b033c696abce80a22aa7ce0b305adbe77f08ac71e06377",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2909,
+      "first_chunk_seconds": 17.056,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3002,
+        "prompt_tokens": 1627,
+        "total_tokens": 4629,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2495,
+          "text_tokens": 507
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7b49d828d19d82ab1d3f6d82f2f35642c9c009cd88280b10cb2829dc7c88040f",
+      "status": "completed",
+      "latency_seconds": 60.96
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002753",
+        "historical:raw_commonsense_qa_002757"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5107b517404c45e5f57f9e9ce42720da930a2a053d0ce8c5ecc289c32566828c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 996,
+      "first_chunk_seconds": 29.539,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1085,
+        "prompt_tokens": 852,
+        "total_tokens": 1937,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 876,
+          "text_tokens": 209
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "93039f56910402f0c3f4fcae699dc63e0639f6e17bb44b8ffcd54d5df05f9b97",
+      "status": "completed",
+      "latency_seconds": 47.371
+    }
+  ],
+  "status": "completed"
+}

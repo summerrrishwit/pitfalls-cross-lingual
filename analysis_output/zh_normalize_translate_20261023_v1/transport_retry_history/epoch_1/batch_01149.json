@@ -1,0 +1,175 @@
+{
+  "input_sha256": "876de2d670b93d4840b462740fa392ea4a515375a641103390adbd64d2139a92",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6720cbddb2f145c1b377",
+      "decision": "ready",
+      "subject": "authentic document (Scott 1990)",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "a 'sound' original, or reliable copy, of known authorship",
+      "canonical_fact": "According to Scott (1990), a document is 'authentic' if it is a 'sound' original, or reliable copy, of known authorship.",
+      "prompt_en": "According to Scott (1990), a document is 'authentic' if it is",
+      "evidence_quotes": [
+        "According to Scott (1990), a document is 'authentic' if it:",
+        "is a 'sound' original, or reliable copy, of known authorship"
+      ],
+      "reason": "The source question and answer jointly define the term 'authentic document' within Scott's (1990) framework. The term_to_definition relation fits exactly: the scoped term 'authentic document (Scott 1990)' is defined by the condition 'a sound original, or reliable copy, of known authorship'. The answer is preserved verbatim from the existing extraction and matches the source answer.",
+      "english": {
+        "answer": "a 'sound' original, or reliable copy, of known authorship",
+        "relation_id": "term_to_definition",
+        "prompt_en": "According to Scott (1990), a document is 'authentic' if it is",
+        "direction": "term -> definition",
+        "subject": "authentic document (Scott 1990)",
+        "canonical_fact": "According to Scott (1990), a document is 'authentic' if it is a 'sound' original, or reliable copy, of known authorship.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "a 'sound' original, or reliable copy, of known authorship",
+          "is a 'sound' original, or reliable copy, of known authorship"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c22518de84676bb9079d3ed8eac49b127624f6d36c83f45e7aec4396717d6ccf",
+      "input_sha256": "e2b0a31c97315dc3cec31e3b02ffbec5c675f31d688ea8ed7b36e7a58a5bb565",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6739c1bded71d10ae75d",
+      "decision": "ready",
+      "subject": "the idea of natural rights",
+      "relation_id": "idea_to_characterization_attribution",
+      "relation_definition": "Attribution of a specific named verbal characterization (a famous phrase or description) to the person credited with coining or first using it regarding the concept.",
+      "direction": "idea/concept -> person",
+      "answer": "Jeremy Bentham",
+      "canonical_fact": "Jeremy Bentham called the idea of natural rights 'nonsense on stilts'.",
+      "prompt_en": "Which philosopher called the idea of natural rights 'nonsense on stilts'?",
+      "evidence_quotes": [
+        "Which philosopher called the idea of natural rights 'nonsense on stilts'?",
+        "Jeremy Bentham"
+      ],
+      "reason": "No existing catalog relation precisely captures attribution of a specific verbal characterization to its author. Proposed new relation 'idea_to_characterization_attribution' (direction: idea/concept -> person; definition: attribution of a specific named verbal characterization to the person credited with coining or first using it). The source clearly and uniquely attributes the phrase 'nonsense on stilts' to Jeremy Bentham regarding natural rights. Answer preserved verbatim from source.",
+      "english": {
+        "answer": "Jeremy Bentham",
+        "relation_id": "idea_to_characterization_attribution",
+        "prompt_en": "Which philosopher called the idea of natural rights 'nonsense on stilts'?",
+        "direction": "idea/concept -> person",
+        "subject": "the idea of natural rights",
+        "canonical_fact": "Jeremy Bentham called the idea of natural rights 'nonsense on stilts'.",
+        "relation_definition": "Attribution of a specific named verbal characterization (a famous phrase or description) to the person credited with coining or first using it regarding the concept.",
+        "answer_aliases_en": [
+          "Jeremy Bentham"
+        ],
+        "relation_spec": {
+          "id": "idea_to_characterization_attribution",
+          "definition": "Attribution of a specific named verbal characterization (a famous phrase or description) to the person credited with coining or first using it regarding the concept.",
+          "direction": "idea/concept -> person"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4f4a2d6bd80c78e89156d4b770d378f2ee7f0f3b1923878f29952237205e2a7b",
+      "input_sha256": "318e682bea97a97501559368753df356b4389acc9ae9b61c189330d8989dc08b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6720cbddb2f145c1b377",
+        "public:pbf_6739c1bded71d10ae75d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cfd202c8d286d3e9bacc6201e875b89cd8ef07ce74b70362eb8bd0ea5ec3e47b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.967
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6720cbddb2f145c1b377",
+        "public:pbf_6739c1bded71d10ae75d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cfd202c8d286d3e9bacc6201e875b89cd8ef07ce74b70362eb8bd0ea5ec3e47b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4007,
+      "first_chunk_seconds": 46.306,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4005,
+        "prompt_tokens": 1752,
+        "total_tokens": 5757,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3352,
+          "text_tokens": 653
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "a5776d9489a3af854fb3d44037aef1bc7df3c142d534986cc128d3eeed8f5d91",
+      "status": "completed",
+      "latency_seconds": 77.91
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6720cbddb2f145c1b377",
+        "public:pbf_6739c1bded71d10ae75d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0bc8069fb4bba2d95db8865ba980830336ddd1c5ff6047b04364ab6d925be152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.943
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6720cbddb2f145c1b377",
+        "public:pbf_6739c1bded71d10ae75d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0bc8069fb4bba2d95db8865ba980830336ddd1c5ff6047b04364ab6d925be152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.961
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6720cbddb2f145c1b377",
+        "public:pbf_6739c1bded71d10ae75d"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0bc8069fb4bba2d95db8865ba980830336ddd1c5ff6047b04364ab6d925be152",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.959
+    }
+  ],
+  "status": "failed"
+}

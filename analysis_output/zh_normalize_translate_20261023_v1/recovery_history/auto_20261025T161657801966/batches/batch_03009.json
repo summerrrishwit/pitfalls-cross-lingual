@@ -1,0 +1,147 @@
+{
+  "input_sha256": "35096d185012d702df0f0841b5c775a02188ba48a9b13f0d812559885db7d089",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000453",
+      "decision": "ready",
+      "subject": "stream or river that slows down",
+      "relation_id": "slowing_water_body_to_deposited_sediment",
+      "relation_definition": "The sediment a stream or river begins to deposit (drop) when its flow velocity decreases below the threshold needed to keep sediment in suspension.",
+      "direction": "slowing stream/river -> deposited sediment",
+      "answer": "sediments",
+      "canonical_fact": "When a stream or river slows down, it starts dropping its sediments.",
+      "prompt_en": "When a stream or river slows down, what does it start dropping?",
+      "evidence_quotes": [
+        "When a stream or river slows down, it starts dropping its what?",
+        "sediments"
+      ],
+      "reason": "No existing catalog relation captures this dynamic physical-process fact (deceleration causing sediment deposition). Proposed new relation 'slowing_water_body_to_deposited_sediment' with explicit direction to avoid forcing a mismatching catalog category.",
+      "english": {
+        "direction": "slowing stream/river -> deposited sediment",
+        "relation_id": "slowing_water_body_to_deposited_sediment",
+        "answer": "sediments",
+        "canonical_fact": "When a stream or river slows down, it starts dropping its sediments.",
+        "subject": "stream or river that slows down",
+        "prompt_en": "When a stream or river slows down, what does it start dropping?",
+        "relation_definition": "The sediment a stream or river begins to deposit (drop) when its flow velocity decreases below the threshold needed to keep sediment in suspension.",
+        "answer_aliases_en": [
+          "sediments"
+        ],
+        "relation_spec": {
+          "id": "slowing_water_body_to_deposited_sediment",
+          "definition": "The sediment a stream or river begins to deposit (drop) when its flow velocity decreases below the threshold needed to keep sediment in suspension.",
+          "direction": "slowing stream/river -> deposited sediment"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e74af9f2184d854e4e7749f802c95e16ef62a9b3da55f5a024b89db628a690fa",
+      "input_sha256": "162edb1273dfd15797379853013b1e6ef6e8d0251af0e52043fcce5f9b5ac8dd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000454",
+      "decision": "ready",
+      "subject": "disease resulting from unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "cancer",
+      "canonical_fact": "Cancer is the disease that results from unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle.",
+      "prompt_en": "What disease is the result of unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle?",
+      "evidence_quotes": [
+        "What disease is the result of unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle?",
+        "cancer"
+      ],
+      "reason": "The question supplies a defining description (unchecked cell division from cell-cycle regulation breakdown) that uniquely identifies the entity 'cancer'; matches catalog relation 'description_to_entity' (identifying description -> entity) in direction and definition.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "cancer",
+        "canonical_fact": "Cancer is the disease that results from unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle.",
+        "subject": "disease resulting from unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle",
+        "prompt_en": "What disease is the result of unchecked cell division caused by a breakdown of the mechanisms regulating the cell cycle?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "cancer"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1ab1a37ad46535e61e4f2fb284e19ca9936912bb32043f940e115e6dca83c326",
+      "input_sha256": "98b22f032a0d2677850d73103c4df0d728553977a0274fbbdf2828f7e596596c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000453",
+        "historical:raw_sciq_000454"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ce0410a9fc7bf930bc29e080fb8063116d20735cf8d52cc18608a15b47f6de29",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2166,
+      "first_chunk_seconds": 1.794,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2308,
+        "prompt_tokens": 1752,
+        "total_tokens": 4060,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1792,
+          "text_tokens": 516
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4dd6c499ba415fd10c7bfe7806e0349bf35fe2c3a61c03dcca9b072b78757426",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 47.271,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000453",
+        "historical:raw_sciq_000454"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "addfa49760e1ff87e97ab4d4c7b29f31161532b8a1425021818c4c9b8f40bc7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2673,
+      "first_chunk_seconds": 2.359,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2907,
+        "prompt_tokens": 1771,
+        "total_tokens": 4678,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2380,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "056d090d94bfc83768455a79330c433ec7229127bb0307793538c5afce49c6e6",
+      "status": "completed",
+      "latency_seconds": 76.631
+    }
+  ],
+  "status": "failed"
+}

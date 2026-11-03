@@ -1,0 +1,182 @@
+{
+  "input_sha256": "9da7b22ba1fa4a295aeeae91616d9cc2f152211af9d39b9a38f44f5fc7d0c2fb",
+  "normalized": [
+    {
+      "record_id": "public:pbf_86e5a988bd25b38fc9c3",
+      "decision": "ready",
+      "subject": "the boy in A Dog's Purpose",
+      "relation_id": "character_to_actor",
+      "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+      "direction": "character in specified work/version -> actor",
+      "answer": "bryce gheisar",
+      "canonical_fact": "Bryce Gheisar plays the boy in A Dog's Purpose.",
+      "prompt_en": "Who plays the boy in A Dog's Purpose?",
+      "evidence_quotes": [
+        "who plays the boy in a dog's purpose",
+        "bryce gheisar"
+      ],
+      "reason": "Source question asks who plays 'the boy' in A Dog's Purpose; source answer is 'bryce gheisar'. This is a straightforward character-to-actor relation in a specified film. The existing answer 'bryce gheisar' is kept verbatim. The relation character_to_actor fits exactly: a named character in a specified work mapped to the actor portraying it.",
+      "english": {
+        "relation_definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated.",
+        "canonical_fact": "Bryce Gheisar plays the boy in A Dog's Purpose.",
+        "direction": "character in specified work/version -> actor",
+        "relation_id": "character_to_actor",
+        "prompt_en": "Who plays the boy in A Dog's Purpose?",
+        "subject": "the boy in A Dog's Purpose",
+        "answer": "bryce gheisar",
+        "answer_aliases_en": [
+          "bryce gheisar"
+        ],
+        "relation_spec": {
+          "id": "character_to_actor",
+          "direction": "character in specified work/version -> actor",
+          "definition": "Actor portraying a character in a specified work and version; not a voice actor unless explicitly separated."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "59b5abf36c78207cfcf63c050d6cea78cf77ad8fff18ad84187cdac599b0de7f",
+      "input_sha256": "256ba67045d910e99df1afa9addbcd58e11ab67c567ed037a375714f0d829c4a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_873e9cd852f0a3fbf9ba",
+      "decision": "ready",
+      "subject": "Play That Funky Music",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Wild Cherry",
+      "canonical_fact": "Wild Cherry sings the song Play That Funky Music.",
+      "prompt_en": "Who sings Play That Funky Music?",
+      "evidence_quotes": [
+        "who sings play that funky music white boy",
+        "Wild Cherry"
+      ],
+      "reason": "Source question asks who sings 'play that funky music'; source answer is 'Wild Cherry'. This is a song-to-performer relation: the song 'Play That Funky Music' is performed by the band Wild Cherry. No cover/version ambiguity is indicated in the source, so the original recording/performer is the correct referent. The existing answer is preserved verbatim.",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "Wild Cherry sings the song Play That Funky Music.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sings Play That Funky Music?",
+        "subject": "Play That Funky Music",
+        "answer": "Wild Cherry",
+        "answer_aliases_en": [
+          "Wild Cherry"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "120cb931dc540d992bdbd2f566e0dc218de0451c36cc01055b1c4cdc7ec22a28",
+      "input_sha256": "bc6c41f77b222b141e57012d3d10978998da56acda74e23889225424ce4946ba",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_86e5a988bd25b38fc9c3",
+        "public:pbf_873e9cd852f0a3fbf9ba"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d995281f55db549d71bfcf7e5eb9e0adf736c7cbd0dc457b7dd105ccbfa8bff5",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1283,
+        "prompt_tokens": 1597,
+        "total_tokens": 2880,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 736,
+          "text_tokens": 547
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "02dbcf1e58a2ccd1ff8fe286c2b094d9b29a3098394231ce8e367bb80b38741b",
+      "status": "completed",
+      "latency_seconds": 75.459
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_86e5a988bd25b38fc9c3",
+        "public:pbf_873e9cd852f0a3fbf9ba"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a4253525939d4844c2008801457e687a522a4c749129c2b10995bd6ab24c991f",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.768
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_86e5a988bd25b38fc9c3",
+        "public:pbf_873e9cd852f0a3fbf9ba"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a4253525939d4844c2008801457e687a522a4c749129c2b10995bd6ab24c991f",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.593
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_86e5a988bd25b38fc9c3",
+        "public:pbf_873e9cd852f0a3fbf9ba"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a4253525939d4844c2008801457e687a522a4c749129c2b10995bd6ab24c991f",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.027
+    }
+  ],
+  "status": "failed"
+}

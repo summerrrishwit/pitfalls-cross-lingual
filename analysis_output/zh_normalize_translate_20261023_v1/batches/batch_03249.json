@@ -1,0 +1,185 @@
+{
+  "input_sha256": "539103e75bd767e1b53d954c3fd27f71e7bfbd798c73a82140c67f5aba0f1213",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000977",
+      "decision": "ready",
+      "subject": "cells that remain within the heart, continuing to divide and potentially replacing dead cells",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "stem cells",
+      "canonical_fact": "Some stem cells remain within the heart, continuing to divide and potentially replace dead cells.",
+      "prompt_en": "Recent evidence indicates that some cells remain within the heart, continuing to divide and potentially replacing dead cells. What type of cells are they?",
+      "evidence_quotes": [
+        "Recent evidence indicates some of what type of cells remain within the heart, continuing to divide and potentially replace dead cells?",
+        "stem cells"
+      ],
+      "reason": "The source question explicitly asks for the cell type; the source answer is 'stem cells.' The qualifier 'some' and 'potentially' are preserved. entity_to_class fits because 'stem cells' is a recognized taxonomic class of cells and the direction entity->class is correct.",
+      "english": {
+        "prompt_en": "Recent evidence indicates that some cells remain within the heart, continuing to divide and potentially replacing dead cells. What type of cells are they?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "stem cells",
+        "canonical_fact": "Some stem cells remain within the heart, continuing to divide and potentially replace dead cells.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "cells that remain within the heart, continuing to divide and potentially replacing dead cells",
+        "answer_aliases_en": [
+          "stem cells"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "841f494f42333d7131ee41623835fcdcb22ff684727bc4373ece575d561bbbfb",
+      "input_sha256": "fa70ca6be7e111ac8a0111cb76419995189c2bc5863136af34d165e398e84ce4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000978",
+      "decision": "ready",
+      "subject": "soil left exposed by farming practices",
+      "relation_id": "entity_to_process_vulnerability",
+      "relation_definition": "The natural process to which a specified entity or substance is vulnerable in a stated context; preserves qualifying conditions.",
+      "direction": "entity -> process",
+      "answer": "erosion",
+      "canonical_fact": "Soil left exposed by farming practices is vulnerable to erosion.",
+      "prompt_en": "Farming practices leave some soil exposed. What natural process makes that exposed soil vulnerable?",
+      "evidence_quotes": [
+        "Farming practices leave some soil exposed and vulnerable to what natural process?",
+        "erosion"
+      ],
+      "reason": "No cataloged relation captures 'entity is vulnerable to a process.' Proposed entity_to_process_vulnerability (entity -> process) precisely matches: the subject is exposed soil (entity) and the answer is erosion (process). The source directly states the vulnerability; no uncertainty qualifiers beyond 'some' are present.",
+      "english": {
+        "prompt_en": "Farming practices leave some soil exposed. What natural process makes that exposed soil vulnerable?",
+        "relation_definition": "The natural process to which a specified entity or substance is vulnerable in a stated context; preserves qualifying conditions.",
+        "answer": "erosion",
+        "canonical_fact": "Soil left exposed by farming practices is vulnerable to erosion.",
+        "direction": "entity -> process",
+        "relation_id": "entity_to_process_vulnerability",
+        "subject": "soil left exposed by farming practices",
+        "answer_aliases_en": [
+          "erosion"
+        ],
+        "relation_spec": {
+          "id": "entity_to_process_vulnerability",
+          "definition": "The natural process to which a specified entity or substance is vulnerable in a stated context; preserves qualifying conditions.",
+          "direction": "entity -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "afe2d6fe86d2a792a98c86ec6312a79c928c9366710c5f51976076f556d5efa0",
+      "input_sha256": "8a974eda48476270bddced45637a75c6f80068ae4e7ae102f2bbf7baba44495b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4242828d16a5e60a64cde0b9a399d26982dc39eaf64697af6cfbdd18b4685d93",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 21.165
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4242828d16a5e60a64cde0b9a399d26982dc39eaf64697af6cfbdd18b4685d93",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.886
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4242828d16a5e60a64cde0b9a399d26982dc39eaf64697af6cfbdd18b4685d93",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1999,
+      "first_chunk_seconds": 6.464,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2028,
+        "prompt_tokens": 1745,
+        "total_tokens": 3773,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1486,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "827b74fe9af1db678c803beb46ce921239a07da468e46ea132f95a7cefb04e66",
+      "status": "completed",
+      "latency_seconds": 40.416
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f3b48dcfad160a7f4680b3b33dd5f4d1f70f18ff053359a7b74f104db6bb5d4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.794
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f3b48dcfad160a7f4680b3b33dd5f4d1f70f18ff053359a7b74f104db6bb5d4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.755
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000977",
+        "historical:raw_sciq_000978"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f3b48dcfad160a7f4680b3b33dd5f4d1f70f18ff053359a7b74f104db6bb5d4f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 52.967
+    }
+  ],
+  "status": "failed"
+}

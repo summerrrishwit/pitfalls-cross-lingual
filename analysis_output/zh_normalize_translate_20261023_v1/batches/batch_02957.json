@@ -1,0 +1,242 @@
+{
+  "input_sha256": "780df0990a8cefeb572c368eca2d07e8d741352f26899ccd58615ab2265e4153",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000333",
+      "decision": "ready",
+      "subject": "increase in the number of gas molecules in the same volume container",
+      "relation_id": "cause_condition_to_quantity_effect",
+      "relation_definition": "In a physical system, a specified change in conditions causes a specified quantity to change; the answer is the quantity that increases or decreases as a result.",
+      "direction": "cause condition -> affected quantity",
+      "answer": "pressure",
+      "canonical_fact": "An increase in the number of gas molecules in the same volume container causes pressure to increase.",
+      "prompt_en": "In a sealed container of fixed volume, what physical quantity increases as the number of gas molecules inside the container increases?",
+      "evidence_quotes": [
+        "An increase in the number of gas molecules in the same volume container causes what to increase?",
+        "pressure"
+      ],
+      "reason": "Source directly states the causal relationship; answer 'pressure' is a literal substring of source_answer. No existing catalog relation captures physical causation between a condition change and a quantity effect; proposing a precise new relation rather than forcing entity_to_class or symbol_to_meaning.",
+      "english": {
+        "direction": "cause condition -> affected quantity",
+        "relation_id": "cause_condition_to_quantity_effect",
+        "answer": "pressure",
+        "canonical_fact": "An increase in the number of gas molecules in the same volume container causes pressure to increase.",
+        "subject": "increase in the number of gas molecules in the same volume container",
+        "prompt_en": "In a sealed container of fixed volume, what physical quantity increases as the number of gas molecules inside the container increases?",
+        "relation_definition": "In a physical system, a specified change in conditions causes a specified quantity to change; the answer is the quantity that increases or decreases as a result.",
+        "answer_aliases_en": [
+          "pressure"
+        ],
+        "relation_spec": {
+          "id": "cause_condition_to_quantity_effect",
+          "definition": "In a physical system, a specified change in conditions causes a specified quantity to change; the answer is the quantity that increases or decreases as a result.",
+          "direction": "cause condition -> affected quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "40ceffaca65c3c8f42fccc78bdd4b05b786f4c3c7e0b1bd585ec7624f114f334",
+      "input_sha256": "a2da9ee287643cd1fad9178be4d0ac82059a454290f2fcb45e6b4ce87ffd6f7c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000334",
+      "decision": "ready",
+      "subject": "chest cavity in the human body",
+      "relation_id": "entity_to_state_exemplified",
+      "relation_definition": "A physical or abstract state that a specified entity is explicitly cited as a clear example or illustration of, within a stated context.",
+      "direction": "entity -> state exemplified",
+      "answer": "resonance",
+      "canonical_fact": "In our bodies, the chest cavity is a clear example of a system at resonance.",
+      "prompt_en": "In the human body, the chest cavity is cited as a clear example of a system at what physical state?",
+      "evidence_quotes": [
+        "In our bodies, the chest cavity is a clear example of a system at what?",
+        "resonance"
+      ],
+      "reason": "Source explicitly identifies the chest cavity as an example of a system at resonance; answer 'resonance' is a literal substring of source_answer. No existing catalog relation captures the 'entity exemplifies a physical state' pattern; entity_to_class requires stable taxonomy membership, which does not fit a transient physical state. Proposing a precise new relation.",
+      "english": {
+        "direction": "entity -> state exemplified",
+        "relation_id": "entity_to_state_exemplified",
+        "answer": "resonance",
+        "canonical_fact": "In our bodies, the chest cavity is a clear example of a system at resonance.",
+        "subject": "chest cavity in the human body",
+        "prompt_en": "In the human body, the chest cavity is cited as a clear example of a system at what physical state?",
+        "relation_definition": "A physical or abstract state that a specified entity is explicitly cited as a clear example or illustration of, within a stated context.",
+        "answer_aliases_en": [
+          "resonance"
+        ],
+        "relation_spec": {
+          "id": "entity_to_state_exemplified",
+          "definition": "A physical or abstract state that a specified entity is explicitly cited as a clear example or illustration of, within a stated context.",
+          "direction": "entity -> state exemplified"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a185f87be7aa5db68b53ad81bd23ed069c30381c24b93f396a694768f0403fb0",
+      "input_sha256": "582943049da2aefce1eb8d3d49716365e114b3a8023c02854c35b84ada9927c3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000333",
+      "input_sha256": "a2da9ee287643cd1fad9178be4d0ac82059a454290f2fcb45e6b4ce87ffd6f7c",
+      "english": {
+        "direction": "cause condition -> affected quantity",
+        "relation_id": "cause_condition_to_quantity_effect",
+        "answer": "pressure",
+        "canonical_fact": "An increase in the number of gas molecules in the same volume container causes pressure to increase.",
+        "subject": "increase in the number of gas molecules in the same volume container",
+        "prompt_en": "In a sealed container of fixed volume, what physical quantity increases as the number of gas molecules inside the container increases?",
+        "relation_definition": "In a physical system, a specified change in conditions causes a specified quantity to change; the answer is the quantity that increases or decreases as a result.",
+        "answer_aliases_en": [
+          "pressure"
+        ],
+        "relation_spec": {
+          "id": "cause_condition_to_quantity_effect",
+          "definition": "In a physical system, a specified change in conditions causes a specified quantity to change; the answer is the quantity that increases or decreases as a result.",
+          "direction": "cause condition -> affected quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "40ceffaca65c3c8f42fccc78bdd4b05b786f4c3c7e0b1bd585ec7624f114f334",
+      "translation": {
+        "record_id": "historical:raw_sciq_000333",
+        "subject_zh": "同体积容器中气体分子数量的增加",
+        "prompt_zh": "在一个体积固定的密封容器中，随着容器内气体分子数量的增加，哪个物理量会随之增大？",
+        "canonical_fact_zh": "同体积容器中气体分子数量的增加会导致压强增大。",
+        "answer_zh": "压强",
+        "answer_aliases_zh": [
+          "压强"
+        ]
+      },
+      "translation_sha256": "509202574506ea53c3bbb990863923c8a52b8ab379aee5f878d969da2a4fc5ae"
+    },
+    {
+      "record_id": "historical:raw_sciq_000334",
+      "input_sha256": "582943049da2aefce1eb8d3d49716365e114b3a8023c02854c35b84ada9927c3",
+      "english": {
+        "direction": "entity -> state exemplified",
+        "relation_id": "entity_to_state_exemplified",
+        "answer": "resonance",
+        "canonical_fact": "In our bodies, the chest cavity is a clear example of a system at resonance.",
+        "subject": "chest cavity in the human body",
+        "prompt_en": "In the human body, the chest cavity is cited as a clear example of a system at what physical state?",
+        "relation_definition": "A physical or abstract state that a specified entity is explicitly cited as a clear example or illustration of, within a stated context.",
+        "answer_aliases_en": [
+          "resonance"
+        ],
+        "relation_spec": {
+          "id": "entity_to_state_exemplified",
+          "definition": "A physical or abstract state that a specified entity is explicitly cited as a clear example or illustration of, within a stated context.",
+          "direction": "entity -> state exemplified"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a185f87be7aa5db68b53ad81bd23ed069c30381c24b93f396a694768f0403fb0",
+      "translation": {
+        "record_id": "historical:raw_sciq_000334",
+        "subject_zh": "人体胸腔",
+        "prompt_zh": "在人体中，胸腔被作为处于什么物理状态的系统的明确例子？",
+        "canonical_fact_zh": "在人体中，胸腔是一个处于共振状态的系统的一个明确例子。",
+        "answer_zh": "共振",
+        "answer_aliases_zh": [
+          "共振"
+        ]
+      },
+      "translation_sha256": "aaf6311a7adcb2e876ef689effea2bf315b486c3daa9b7ee97d870940685112f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000333",
+        "historical:raw_sciq_000334"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3dab91f22b17a827d602026fdd3465377840c9706e0ca32c55993b8b788eaa04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 14.429
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000333",
+        "historical:raw_sciq_000334"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3dab91f22b17a827d602026fdd3465377840c9706e0ca32c55993b8b788eaa04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2382,
+      "first_chunk_seconds": 2.046,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2580,
+        "prompt_tokens": 1739,
+        "total_tokens": 4319,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2008,
+          "text_tokens": 572
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "135ab0439114984bf705e84465b5a316468f0bf045ed848dd252dfa9c04fdae9",
+      "status": "completed",
+      "latency_seconds": 90.789
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000333",
+        "historical:raw_sciq_000334"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac222f75705f02cd630fd6b5d3c7293ada48f5828b64a079f36145d1203b6374",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.862
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000333",
+        "historical:raw_sciq_000334"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ac222f75705f02cd630fd6b5d3c7293ada48f5828b64a079f36145d1203b6374",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 582,
+      "first_chunk_seconds": 1.039,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 687,
+        "prompt_tokens": 904,
+        "total_tokens": 1591,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 450,
+          "text_tokens": 237
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "712f46a18471e8a8ec58febc3ce547d6ffbca4c6dbe0ddc529d57003ab7d290e",
+      "status": "completed",
+      "latency_seconds": 65.708
+    }
+  ],
+  "status": "completed"
+}

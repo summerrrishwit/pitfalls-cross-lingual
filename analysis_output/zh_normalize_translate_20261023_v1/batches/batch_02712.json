@@ -1,0 +1,214 @@
+{
+  "input_sha256": "9d1f18e0983b65f1f5a1511d19c2db0a604e2d6b28083a6260e041f1436b6782",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008754",
+      "decision": "ready",
+      "subject": "ignorance",
+      "relation_id": "concept_to_common_equivalent",
+      "relation_definition": "A concept that is commonly or traditionally equated with another concept; retain qualifiers such as 'often' or 'traditionally' and the specific pairing.",
+      "direction": "concept -> commonly equated concept",
+      "answer": "bliss",
+      "canonical_fact": "Ignorance is often equated with bliss.",
+      "prompt_en": "What is ignorance often equated with?",
+      "evidence_quotes": [
+        "often equated with",
+        "bliss"
+      ],
+      "reason": "Both annotated models extracted the same fact. The source question explicitly asks the equivalence and the source answer is 'bliss'. The qualifier 'often' is preserved from the source. No existing catalog relation fits exactly (not a definition, not an alias, not a symbol-meaning pair), so a precise new relation 'concept_to_common_equivalent' is proposed.",
+      "english": {
+        "direction": "concept -> commonly equated concept",
+        "relation_id": "concept_to_common_equivalent",
+        "answer": "bliss",
+        "canonical_fact": "Ignorance is often equated with bliss.",
+        "subject": "ignorance",
+        "prompt_en": "What is ignorance often equated with?",
+        "relation_definition": "A concept that is commonly or traditionally equated with another concept; retain qualifiers such as 'often' or 'traditionally' and the specific pairing.",
+        "answer_aliases_en": [
+          "bliss"
+        ],
+        "relation_spec": {
+          "id": "concept_to_common_equivalent",
+          "definition": "A concept that is commonly or traditionally equated with another concept; retain qualifiers such as 'often' or 'traditionally' and the specific pairing.",
+          "direction": "concept -> commonly equated concept"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "af80858de888af9ea23c29fe8efd95f4b76bba632b9078820bfd397ee3455f1c",
+      "input_sha256": "a43843013be6118c9ad50bc5cf1bc6d693e6133c2c91aaaab369a98a21541f4a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008766",
+      "decision": "ready",
+      "subject": "apple tree",
+      "relation_id": "entity_to_required_component",
+      "relation_definition": "A specific component, part, or structure that an entity requires to perform a stated function; retain the function qualifier and entity specificity.",
+      "direction": "entity -> required component for specified function",
+      "answer": "flowers",
+      "canonical_fact": "An apple tree needs flowers to create new trees.",
+      "prompt_en": "What does an apple tree need to create new trees?",
+      "evidence_quotes": [
+        "need to create new trees",
+        "flowers"
+      ],
+      "reason": "Both annotated models extracted the same biological fact. The source clearly states the requirement. No existing catalog relation (organism_to_habitat, entity_to_material, part_to_whole) fits the 'needs X to do Y' functional-dependency pattern, so a precise new relation 'entity_to_required_component' is proposed.",
+      "english": {
+        "direction": "entity -> required component for specified function",
+        "relation_id": "entity_to_required_component",
+        "answer": "flowers",
+        "canonical_fact": "An apple tree needs flowers to create new trees.",
+        "subject": "apple tree",
+        "prompt_en": "What does an apple tree need to create new trees?",
+        "relation_definition": "A specific component, part, or structure that an entity requires to perform a stated function; retain the function qualifier and entity specificity.",
+        "answer_aliases_en": [
+          "flowers"
+        ],
+        "relation_spec": {
+          "id": "entity_to_required_component",
+          "definition": "A specific component, part, or structure that an entity requires to perform a stated function; retain the function qualifier and entity specificity.",
+          "direction": "entity -> required component for specified function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5419279583f3caf7772ca3c726696f883dea18fc52ce2f6becb49ceef8b2dca9",
+      "input_sha256": "0a9155c41e8af05eec0bc11f6703ee42e9410643ea32025bc93768d19f34adf8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008754",
+      "input_sha256": "a43843013be6118c9ad50bc5cf1bc6d693e6133c2c91aaaab369a98a21541f4a",
+      "english": {
+        "direction": "concept -> commonly equated concept",
+        "relation_id": "concept_to_common_equivalent",
+        "answer": "bliss",
+        "canonical_fact": "Ignorance is often equated with bliss.",
+        "subject": "ignorance",
+        "prompt_en": "What is ignorance often equated with?",
+        "relation_definition": "A concept that is commonly or traditionally equated with another concept; retain qualifiers such as 'often' or 'traditionally' and the specific pairing.",
+        "answer_aliases_en": [
+          "bliss"
+        ],
+        "relation_spec": {
+          "id": "concept_to_common_equivalent",
+          "definition": "A concept that is commonly or traditionally equated with another concept; retain qualifiers such as 'often' or 'traditionally' and the specific pairing.",
+          "direction": "concept -> commonly equated concept"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "af80858de888af9ea23c29fe8efd95f4b76bba632b9078820bfd397ee3455f1c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008754",
+        "subject_zh": "无知",
+        "prompt_zh": "无知通常被等同于什么？",
+        "canonical_fact_zh": "无知常常被等同于幸福。",
+        "answer_zh": "幸福",
+        "answer_aliases_zh": [
+          "幸福"
+        ]
+      },
+      "translation_sha256": "8783721063ce8a9a50377e391ac2b66fa7520f582b6c207927e01239472e60f3"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008766",
+      "input_sha256": "0a9155c41e8af05eec0bc11f6703ee42e9410643ea32025bc93768d19f34adf8",
+      "english": {
+        "direction": "entity -> required component for specified function",
+        "relation_id": "entity_to_required_component",
+        "answer": "flowers",
+        "canonical_fact": "An apple tree needs flowers to create new trees.",
+        "subject": "apple tree",
+        "prompt_en": "What does an apple tree need to create new trees?",
+        "relation_definition": "A specific component, part, or structure that an entity requires to perform a stated function; retain the function qualifier and entity specificity.",
+        "answer_aliases_en": [
+          "flowers"
+        ],
+        "relation_spec": {
+          "id": "entity_to_required_component",
+          "definition": "A specific component, part, or structure that an entity requires to perform a stated function; retain the function qualifier and entity specificity.",
+          "direction": "entity -> required component for specified function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5419279583f3caf7772ca3c726696f883dea18fc52ce2f6becb49ceef8b2dca9",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008766",
+        "subject_zh": "苹果树",
+        "prompt_zh": "苹果树需要什么来繁殖新树？",
+        "canonical_fact_zh": "苹果树需要花来繁殖新树。",
+        "answer_zh": "花",
+        "answer_aliases_zh": [
+          "花"
+        ]
+      },
+      "translation_sha256": "9a5124f3c70a241b944e888efce3319b2c249eed4c314b65887e5cebfa2667df"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008754",
+        "historical:raw_commonsense_qa_008766"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e1c94d79c5e1c573f8eca3eed5f6c58fde5fb78626fa78ed02ed7875b534f531",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2580,
+      "first_chunk_seconds": 33.48,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2787,
+        "prompt_tokens": 1630,
+        "total_tokens": 4417,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2293,
+          "text_tokens": 494
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a840de3eef481b6b0f4b1b6f224d9db2796ecd183a5e34898f72017f15f4c77c",
+      "status": "completed",
+      "latency_seconds": 68.268
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008754",
+        "historical:raw_commonsense_qa_008766"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "25964d38b154cc79b2b36d51e39e1f215cd8f5aeade6d221755418a706ae9db3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1245,
+      "first_chunk_seconds": 3.687,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1322,
+        "prompt_tokens": 847,
+        "total_tokens": 2169,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1121,
+          "text_tokens": 201
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "708612a260fcba440b953637ddebd2db6ad8174281b00261d77dcbb70e2f78ae",
+      "status": "completed",
+      "latency_seconds": 20.525
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,264 @@
+{
+  "input_sha256": "ffd64dc1cec85b7fd43fb86e4466c67e65ae4e40b2eb60e9e5cd1e93f7407768",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6634f4da7423d8edac9d",
+      "decision": "ready",
+      "subject": "royal disease",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "hemophilia",
+      "canonical_fact": "The royal disease is an alternative name for hemophilia.",
+      "prompt_en": "What disease is sometimes referred to as the 'royal disease'?",
+      "evidence_quotes": [
+        "royaldisease",
+        "hemophilia"
+      ],
+      "reason": "The source question explicitly asks which disease is called the 'royal disease' and the answer is hemophilia. term_to_definition fits because 'royal disease' is a colloquial term whose referent/definition is hemophilia; direction term->definition matches subject->answer. Evidence quotes are literal substrings of source_question ('royaldisease') and source_answer ('hemophilia').",
+      "english": {
+        "answer": "hemophilia",
+        "relation_id": "term_to_definition",
+        "prompt_en": "What disease is sometimes referred to as the 'royal disease'?",
+        "direction": "term -> definition",
+        "subject": "royal disease",
+        "canonical_fact": "The royal disease is an alternative name for hemophilia.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "hemophilia"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "51125f43fbd945faa3610a84b11b736afb8bcf593f3a15d7cbf1e1dcc3094665",
+      "input_sha256": "3aef1daa64293e9e7b8be8453b927a2a14cf201135b78157455aa618c79394c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_663f7e6566479f378eb6",
+      "decision": "ready",
+      "subject": "Ted Mosby (How I Met Your Mother)",
+      "relation_id": "character_to_spouse",
+      "relation_definition": "Spouse of a specified fictional character in a specified work/version; the character who is married to the subject within that narrative.",
+      "direction": "fictional character in specified work -> spouse character",
+      "answer": "The Mother",
+      "canonical_fact": "Ted Mosby married The Mother in How I Met Your Mother.",
+      "prompt_en": "Who married Ted Mosby in How I Met Your Mother?",
+      "evidence_quotes": [
+        "ted mosby",
+        "how i met your mother",
+        "The Mother"
+      ],
+      "reason": "No existing catalog relation captures a fictional-character spousal link. Proposed new relation character_to_spouse with direction 'fictional character in specified work -> spouse character' fits exactly: the source asks who married Ted Mosby in HIMYM and the answer is 'The Mother'. Evidence quotes are literal substrings of source_question ('ted mosby', 'how i met your mother') and source_answer ('The Mother').",
+      "english": {
+        "answer": "The Mother",
+        "relation_id": "character_to_spouse",
+        "prompt_en": "Who married Ted Mosby in How I Met Your Mother?",
+        "direction": "fictional character in specified work -> spouse character",
+        "subject": "Ted Mosby (How I Met Your Mother)",
+        "canonical_fact": "Ted Mosby married The Mother in How I Met Your Mother.",
+        "relation_definition": "Spouse of a specified fictional character in a specified work/version; the character who is married to the subject within that narrative.",
+        "answer_aliases_en": [
+          "The Mother",
+          "Tracy Mosby",
+          "Tracy McConnell"
+        ],
+        "relation_spec": {
+          "id": "character_to_spouse",
+          "definition": "Spouse of a specified fictional character in a specified work/version; the character who is married to the subject within that narrative.",
+          "direction": "fictional character in specified work -> spouse character"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "21cbc60e64647c79cdae9b378be81a2ccd8a494815652f2827b55a8174f51d3b",
+      "input_sha256": "7c90215c0d5c9eb6aab930fd56b524a5a2ab930f544a223d2210f3396507e0da",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "898dcd6fa6983992e1afb7779f0a4c3a79d8eb89e4527204427b5b03e04e9f3e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.926
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "898dcd6fa6983992e1afb7779f0a4c3a79d8eb89e4527204427b5b03e04e9f3e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2700,
+      "first_chunk_seconds": 2.563,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2697,
+        "prompt_tokens": 1584,
+        "total_tokens": 4281,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2140,
+          "text_tokens": 557
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "76de35bf2acb81c051232205a71b0ed5ef797290ac32d9d64ddbc79b3890462a",
+      "status": "completed",
+      "latency_seconds": 23.605
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "10c194bb372646baceaa6b0ee341884949e209820e839b0dde1d39ef48e4f9df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1591,
+      "first_chunk_seconds": 17.144,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1588,
+        "prompt_tokens": 874,
+        "total_tokens": 2462,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1341,
+          "text_tokens": 247
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3437569670cba6a16d7bcadf6d63ea5f968ad6de17fd1387ccd6dc18a999bda4",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 29.536,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b094ade3d9314d250508ccc8e197d1501b5a1c2d26daa5f085a7007eeca0db95",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1518,
+      "first_chunk_seconds": 40.606,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1595,
+        "prompt_tokens": 893,
+        "total_tokens": 2488,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1310,
+          "text_tokens": 285
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6407b06254c11e549204f3a10e5addca721aa8cf7dba7915df5ec2e35b7aa179",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 56.152,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "997f5c058f72772a209443167f05ba1233f1939beeca07918c8b7004832faa5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.928
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "10c194bb372646baceaa6b0ee341884949e209820e839b0dde1d39ef48e4f9df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.32
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "10c194bb372646baceaa6b0ee341884949e209820e839b0dde1d39ef48e4f9df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.278
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6634f4da7423d8edac9d",
+        "public:pbf_663f7e6566479f378eb6"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "10c194bb372646baceaa6b0ee341884949e209820e839b0dde1d39ef48e4f9df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.028
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01143.json",
+      "sha256": "6ae052653c22e8861164b0cd6006b56b596e7e67fa3747fab7914852b5ccef12",
+      "previous_status": "failed"
+    }
+  ]
+}

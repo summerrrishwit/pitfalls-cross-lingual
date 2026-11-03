@@ -1,0 +1,246 @@
+{
+  "input_sha256": "d811a7537aff70a8dd0ebbb8fdc5666392f7322827e09394be0e7f421afa77a1",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000542",
+      "decision": "ready",
+      "subject": "A",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "school grade",
+      "canonical_fact": "An A is a type of school grade.",
+      "prompt_en": "If you did well on the test, you might get an A as a what?",
+      "evidence_quotes": [
+        "If you did well on the test, you might get an A as a what?",
+        "school grade"
+      ],
+      "reason": "The source question asks what category 'A' belongs to when earned on a test; the source answer is 'school grade'. This is a stable class-membership fact: the letter A is a grade category in the school-grading taxonomy. entity_to_class fits exactly because the subject (A) is a member of the class (school grade) at a stated taxonomy level.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "school grade",
+        "canonical_fact": "An A is a type of school grade.",
+        "subject": "A",
+        "prompt_en": "If you did well on the test, you might get an A as a what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "school grade"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "76b45ff661fbf4e4adbbc1bf8e50933aa98389b7f857b9f59d1d90e2afc29c11",
+      "input_sha256": "f36e56b6a6ad862991def2855969a567a94f2dfb3e0e00066177892c33c8bd65",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000566",
+      "decision": "ready",
+      "subject": "person",
+      "relation_id": "organism_to_defensive_system",
+      "relation_definition": "The biological system an organism employs to defend against disease or pathogens; retains the functional scope stated in the source.",
+      "direction": "organism -> defensive system",
+      "answer": "immune system",
+      "canonical_fact": "A person uses the immune system to fight off disease.",
+      "prompt_en": "What does a person use to fight off disease?",
+      "evidence_quotes": [
+        "What does a person use to fight off disease?",
+        "immune system"
+      ],
+      "reason": "The source question and answer establish that a person uses the immune system to fight off disease. No existing catalog relation captures this organism-to-functional-system relationship (it is not a habitat, material, part-whole, class membership, or location), so a precise new relation organism_to_defensive_system is proposed.",
+      "english": {
+        "direction": "organism -> defensive system",
+        "relation_id": "organism_to_defensive_system",
+        "answer": "immune system",
+        "canonical_fact": "A person uses the immune system to fight off disease.",
+        "subject": "person",
+        "prompt_en": "What does a person use to fight off disease?",
+        "relation_definition": "The biological system an organism employs to defend against disease or pathogens; retains the functional scope stated in the source.",
+        "answer_aliases_en": [
+          "immune system"
+        ],
+        "relation_spec": {
+          "id": "organism_to_defensive_system",
+          "definition": "The biological system an organism employs to defend against disease or pathogens; retains the functional scope stated in the source.",
+          "direction": "organism -> defensive system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "512f0a2a37c3b48a427c33b188460d08ee87d8bedafc9d202d36f39a83a3bdc2",
+      "input_sha256": "25152c8246227d68e7669221c851d1c3de61d28f9aa63b691f027371ba19184d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000542",
+      "input_sha256": "f36e56b6a6ad862991def2855969a567a94f2dfb3e0e00066177892c33c8bd65",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "school grade",
+        "canonical_fact": "An A is a type of school grade.",
+        "subject": "A",
+        "prompt_en": "If you did well on the test, you might get an A as a what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "school grade"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "76b45ff661fbf4e4adbbc1bf8e50933aa98389b7f857b9f59d1d90e2afc29c11",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000542",
+        "subject_zh": "A",
+        "prompt_zh": "如果考试考得好，你可能会得到一个A，那这是什么？",
+        "canonical_fact_zh": "A是一种学校成绩等级。",
+        "answer_zh": "学校成绩等级",
+        "answer_aliases_zh": [
+          "学校成绩等级"
+        ]
+      },
+      "translation_sha256": "3480f4439b10a61554c8d6df30a4d0de4bc45d3abdbf3ff734652de517c65db0"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000566",
+      "input_sha256": "25152c8246227d68e7669221c851d1c3de61d28f9aa63b691f027371ba19184d",
+      "english": {
+        "direction": "organism -> defensive system",
+        "relation_id": "organism_to_defensive_system",
+        "answer": "immune system",
+        "canonical_fact": "A person uses the immune system to fight off disease.",
+        "subject": "person",
+        "prompt_en": "What does a person use to fight off disease?",
+        "relation_definition": "The biological system an organism employs to defend against disease or pathogens; retains the functional scope stated in the source.",
+        "answer_aliases_en": [
+          "immune system"
+        ],
+        "relation_spec": {
+          "id": "organism_to_defensive_system",
+          "definition": "The biological system an organism employs to defend against disease or pathogens; retains the functional scope stated in the source.",
+          "direction": "organism -> defensive system"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "512f0a2a37c3b48a427c33b188460d08ee87d8bedafc9d202d36f39a83a3bdc2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000566",
+        "subject_zh": "人",
+        "prompt_zh": "人用什么来对抗疾病？",
+        "canonical_fact_zh": "人利用免疫系统来对抗疾病。",
+        "answer_zh": "免疫系统",
+        "answer_aliases_zh": [
+          "免疫系统"
+        ]
+      },
+      "translation_sha256": "5434e28512e381dbc317d2ea1a4ff9b0143d4698bbc0b687e70238c9358414e8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000542",
+        "historical:raw_commonsense_qa_000566"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "297b8efcbc497cc2afde328ce7e743adcc30070cf3276b50680637739e1644c9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2891,
+      "first_chunk_seconds": 8.023,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3025,
+        "prompt_tokens": 1654,
+        "total_tokens": 4679,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2532,
+          "text_tokens": 493
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6684aa1331f062fd2621183886711368ac36684cc8eaa3203dbfbde346092a6",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 56.337,
+      "validation_code": "invalid_normalization_schema"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000542",
+        "historical:raw_commonsense_qa_000566"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ce1540c66c8d5256d968b0035ddbeca06637917cb18c6e99536af5ec7d44494d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2909,
+      "first_chunk_seconds": 36.452,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2987,
+        "prompt_tokens": 1672,
+        "total_tokens": 4659,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2478,
+          "text_tokens": 509
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "56512f7a3026e8d27e95b62a64804a9d306c84cbd4db8361320cad9c2d9dd36f",
+      "status": "completed",
+      "latency_seconds": 74.201
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000542",
+        "historical:raw_commonsense_qa_000566"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "42a94163029d8fe2971d71c777bdb773f812000b60c54c1835b8837a29cbc821",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1507,
+      "first_chunk_seconds": 9.981,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1543,
+        "prompt_tokens": 825,
+        "total_tokens": 2368,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1337,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "12d7e3e3674b6f0d05c6f98e3bcfee86e441cec2e58a26631947c4cadad69b3c",
+      "status": "completed",
+      "latency_seconds": 33.807
+    }
+  ],
+  "status": "completed"
+}

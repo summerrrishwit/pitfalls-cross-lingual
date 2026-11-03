@@ -1,0 +1,214 @@
+{
+  "input_sha256": "4b6a67af547c6d50d4a83e5a72e39a334a36a1c190516f4bc6f42f95436efa9b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006644",
+      "decision": "ready",
+      "subject": "evening",
+      "relation_id": "time_period_to_preceding_period",
+      "relation_definition": "The earlier time period that the subject time period follows in the natural daily sequence.",
+      "direction": "later_time_period -> earlier_time_period",
+      "answer": "daytime",
+      "canonical_fact": "Evening comes after daytime.",
+      "prompt_en": "In the natural daily cycle, which time period does evening follow?",
+      "evidence_quotes": [
+        "Evening comes after what?",
+        "daytime"
+      ],
+      "reason": "Straightforward temporal-ordering fact: the source question asks what evening comes after and the answer is 'daytime'. No existing catalog relation captures a 'comes after / precedes' relationship between time periods, so a new relation time_period_to_preceding_period is proposed with explicit direction (later period -> earlier period). Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "later_time_period -> earlier_time_period",
+        "relation_id": "time_period_to_preceding_period",
+        "answer": "daytime",
+        "canonical_fact": "Evening comes after daytime.",
+        "subject": "evening",
+        "prompt_en": "In the natural daily cycle, which time period does evening follow?",
+        "relation_definition": "The earlier time period that the subject time period follows in the natural daily sequence.",
+        "answer_aliases_en": [
+          "daytime"
+        ],
+        "relation_spec": {
+          "id": "time_period_to_preceding_period",
+          "definition": "The earlier time period that the subject time period follows in the natural daily sequence.",
+          "direction": "later_time_period -> earlier_time_period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0c2f25d2fb3598132ffa46de2b1d33905941d642a627cf8698478cd6c4c3da96",
+      "input_sha256": "079a6b99d1b497d05f42a56b30b2be7ff0295df72e1c42d99e1cc7607ee6bc32",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006650",
+      "decision": "ready",
+      "subject": "helm",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "tugboat",
+      "canonical_fact": "The helm is the steering control for a tugboat, which pulls shipping barges through bodies of water.",
+      "prompt_en": "For which vessel, which pulls shipping barges through bodies of water, is the helm the steering control?",
+      "evidence_quotes": [
+        "The helm is the steering control for what which pulls shipping barges through bodies of water?",
+        "tugboat"
+      ],
+      "reason": "The helm is a functional component (steering control) of a tugboat; part_to_whole fits the direction (component -> vessel). The identifying clause 'pulls shipping barges through bodies of water' disambiguates the tugboat from other vessels. Both model annotations agree on the core fact; the subject is kept as 'helm' per the source framing.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "tugboat",
+        "canonical_fact": "The helm is the steering control for a tugboat, which pulls shipping barges through bodies of water.",
+        "subject": "helm",
+        "prompt_en": "For which vessel, which pulls shipping barges through bodies of water, is the helm the steering control?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "tugboat"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8463792bf491f941bf65b2d514a6e27a7671ccec4149b2958b0ff0b73c4192c4",
+      "input_sha256": "c5f662eb919d284c8fddc48e7f0d933db8ebd431a9c88a4aae1487e6259d50a2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006644",
+      "input_sha256": "079a6b99d1b497d05f42a56b30b2be7ff0295df72e1c42d99e1cc7607ee6bc32",
+      "english": {
+        "direction": "later_time_period -> earlier_time_period",
+        "relation_id": "time_period_to_preceding_period",
+        "answer": "daytime",
+        "canonical_fact": "Evening comes after daytime.",
+        "subject": "evening",
+        "prompt_en": "In the natural daily cycle, which time period does evening follow?",
+        "relation_definition": "The earlier time period that the subject time period follows in the natural daily sequence.",
+        "answer_aliases_en": [
+          "daytime"
+        ],
+        "relation_spec": {
+          "id": "time_period_to_preceding_period",
+          "definition": "The earlier time period that the subject time period follows in the natural daily sequence.",
+          "direction": "later_time_period -> earlier_time_period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0c2f25d2fb3598132ffa46de2b1d33905941d642a627cf8698478cd6c4c3da96",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006644",
+        "subject_zh": "夜晚",
+        "prompt_zh": "在自然的日常周期中，夜晚紧随哪个时段之后？",
+        "canonical_fact_zh": "夜晚在白天之后到来。",
+        "answer_zh": "白天",
+        "answer_aliases_zh": [
+          "白天"
+        ]
+      },
+      "translation_sha256": "54b94792ec393ce2e579a41a5ed672d7816c1c361a8511172729a2d156d6ce05"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006650",
+      "input_sha256": "c5f662eb919d284c8fddc48e7f0d933db8ebd431a9c88a4aae1487e6259d50a2",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "tugboat",
+        "canonical_fact": "The helm is the steering control for a tugboat, which pulls shipping barges through bodies of water.",
+        "subject": "helm",
+        "prompt_en": "For which vessel, which pulls shipping barges through bodies of water, is the helm the steering control?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "tugboat"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8463792bf491f941bf65b2d514a6e27a7671ccec4149b2958b0ff0b73c4192c4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006650",
+        "subject_zh": "舵",
+        "prompt_zh": "对于哪种拖拽货运驳船穿越水域的船只，舵是它的转向控制装置？",
+        "canonical_fact_zh": "舵是拖船的转向控制装置，拖船用于拖拽货运驳船穿越水域。",
+        "answer_zh": "拖船",
+        "answer_aliases_zh": [
+          "拖船"
+        ]
+      },
+      "translation_sha256": "0964726961817ec243febac2751e934ae2e6167a9eedb683ff592d63b33b775f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006644",
+        "historical:raw_commonsense_qa_006650"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "19386f95478958b66cacbc5ca6d0856a4e5b621562498a8476b0798d235e7ef2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3047,
+      "first_chunk_seconds": 7.787,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3145,
+        "prompt_tokens": 1675,
+        "total_tokens": 4820,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2734,
+          "text_tokens": 411
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3fa644700a0cc01a51447d98f433a8c6114de14ec08d44a16c990d1056414cd4",
+      "status": "completed",
+      "latency_seconds": 61.135
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006644",
+        "historical:raw_commonsense_qa_006650"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d957d44d7fbcd35a2c97eae67ba63b1720eaa9b4255bdc745ad3046d394ba54",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 707,
+      "first_chunk_seconds": 1.75,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 740,
+        "prompt_tokens": 836,
+        "total_tokens": 1576,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 578,
+          "text_tokens": 162
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "05c8ef7fc51eeea7ecd97915b4cb104ac6e2ebfe9abe69492bae9b76ae257443",
+      "status": "completed",
+      "latency_seconds": 12.044
+    }
+  ],
+  "status": "completed"
+}

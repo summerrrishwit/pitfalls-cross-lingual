@@ -1,0 +1,246 @@
+{
+  "input_sha256": "44473b134b57ce04a376007dc9374655740ff252ce22bc4a9ca6489ae39d7c66",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005088",
+      "decision": "ready",
+      "subject": "hadrons",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "quark",
+      "canonical_fact": "Hadrons are made up of quarks.",
+      "prompt_en": "In the context of string theory, what particle makes up hadrons?",
+      "evidence_quotes": [
+        "what particle makes up hadrons",
+        "quark"
+      ],
+      "reason": "Both model annotations extracted the same fact. Source answer 'quark' is the constituent particle of hadrons. whole_to_part fits exactly: hadrons (whole) are composed of quarks (constituent). The 'string theory' qualifier from the source question is preserved in the prompt. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "quark",
+        "canonical_fact": "Hadrons are made up of quarks.",
+        "subject": "hadrons",
+        "prompt_en": "In the context of string theory, what particle makes up hadrons?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "quark"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "187e48d7f426af9a6870dfc883e7efb2ff23e74c7d7c34811de0e14e8f497db7",
+      "input_sha256": "3f0d1773a3869593ef15bcb5b4b9d55b2d9e176d34f5cf2fcd5dd5a1f49cfaa8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005093",
+      "decision": "ready",
+      "subject": "LEDs",
+      "relation_id": "entity_to_typical_location",
+      "relation_definition": "Typical or common location or surface on which an entity is found; retains qualifiers such as 'commonly' and does not assert exclusivity.",
+      "direction": "entity -> typical location",
+      "answer": "electronic devices",
+      "canonical_fact": "LEDs are commonly found on keyboards and other electronic devices.",
+      "prompt_en": "Besides keyboards, on what category of things are LEDs commonly found?",
+      "evidence_quotes": [
+        "are commonly found on kehyboards and other",
+        "electronic devices"
+      ],
+      "reason": "Qwen-3.8-Max extracted the fact; sensenova marked not_extractable due to ambiguous subject, but the source is clear. No catalog relation precisely matches 'commonly found on' (entity_to_containing_location is geographic; organism_to_habitat requires an organism). A new relation entity_to_typical_location is proposed to capture typical-location association with the 'commonly' qualifier preserved. Evidence quotes are literal substrings preserving the source typo 'kehyboards'.",
+      "english": {
+        "direction": "entity -> typical location",
+        "relation_id": "entity_to_typical_location",
+        "answer": "electronic devices",
+        "canonical_fact": "LEDs are commonly found on keyboards and other electronic devices.",
+        "subject": "LEDs",
+        "prompt_en": "Besides keyboards, on what category of things are LEDs commonly found?",
+        "relation_definition": "Typical or common location or surface on which an entity is found; retains qualifiers such as 'commonly' and does not assert exclusivity.",
+        "answer_aliases_en": [
+          "electronic devices"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_location",
+          "definition": "Typical or common location or surface on which an entity is found; retains qualifiers such as 'commonly' and does not assert exclusivity.",
+          "direction": "entity -> typical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a6e81fc1126ffee8f48b52e53f2d49e1832cc995264e35d3bb53faf08ce84235",
+      "input_sha256": "b90b577049b88e4192f8b7f0ec436838fe8173917a852f7549bb5bc895cfb64e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_005088",
+      "input_sha256": "3f0d1773a3869593ef15bcb5b4b9d55b2d9e176d34f5cf2fcd5dd5a1f49cfaa8",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "quark",
+        "canonical_fact": "Hadrons are made up of quarks.",
+        "subject": "hadrons",
+        "prompt_en": "In the context of string theory, what particle makes up hadrons?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "quark"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "187e48d7f426af9a6870dfc883e7efb2ff23e74c7d7c34811de0e14e8f497db7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005088",
+        "subject_zh": "强子",
+        "prompt_zh": "在弦理论的背景下，什么粒子构成强子？",
+        "canonical_fact_zh": "强子由夸克组成。",
+        "answer_zh": "夸克",
+        "answer_aliases_zh": [
+          "夸克"
+        ]
+      },
+      "translation_sha256": "b77bac3eefcc4533bded0929e32d3afc940aaec1c6bdca6a90341d25c8c2acf9"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_005093",
+      "input_sha256": "b90b577049b88e4192f8b7f0ec436838fe8173917a852f7549bb5bc895cfb64e",
+      "english": {
+        "direction": "entity -> typical location",
+        "relation_id": "entity_to_typical_location",
+        "answer": "electronic devices",
+        "canonical_fact": "LEDs are commonly found on keyboards and other electronic devices.",
+        "subject": "LEDs",
+        "prompt_en": "Besides keyboards, on what category of things are LEDs commonly found?",
+        "relation_definition": "Typical or common location or surface on which an entity is found; retains qualifiers such as 'commonly' and does not assert exclusivity.",
+        "answer_aliases_en": [
+          "electronic devices"
+        ],
+        "relation_spec": {
+          "id": "entity_to_typical_location",
+          "definition": "Typical or common location or surface on which an entity is found; retains qualifiers such as 'commonly' and does not assert exclusivity.",
+          "direction": "entity -> typical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a6e81fc1126ffee8f48b52e53f2d49e1832cc995264e35d3bb53faf08ce84235",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_005093",
+        "subject_zh": "LED",
+        "prompt_zh": "除了键盘，LED通常出现在哪一类物品上？",
+        "canonical_fact_zh": "LED通常出现在键盘和其他电子设备上。",
+        "answer_zh": "电子设备",
+        "answer_aliases_zh": [
+          "电子设备"
+        ]
+      },
+      "translation_sha256": "d0f8838975a7de92ada9ec376aa28ef69c130efed7fa3718fe616e617cb8327c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005088",
+        "historical:raw_commonsense_qa_005093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a8fa733a03f2a38e3c6fabcc0ce98c23c9f4cd1b54618401f5de4b2f22d78d6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2930,
+      "first_chunk_seconds": 13.584,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3028,
+        "prompt_tokens": 1642,
+        "total_tokens": 4670,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2561,
+          "text_tokens": 467
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "88cf4ccfd1fa2fe49638ef1d33711b472285789a6eeee220e78d9c00cf46fed5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 52.937,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005088",
+        "historical:raw_commonsense_qa_005093"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "76441c43c477092095921434412dfda4f8ca63b96854301b6a957edda883016b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2348,
+      "first_chunk_seconds": 11.467,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2576,
+        "prompt_tokens": 1660,
+        "total_tokens": 4236,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2036,
+          "text_tokens": 540
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bfcda6c2d9c6eb08abb34f90e0bb7473c8c7c4b1bcb708cece102207f8ebc3d9",
+      "status": "completed",
+      "latency_seconds": 48.588
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_005088",
+        "historical:raw_commonsense_qa_005093"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dba0fc29934ad96f5b69bc916ac16eed9ce06ea7d29bcce4e0abf865919832f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 989,
+      "first_chunk_seconds": 15.662,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1097,
+        "prompt_tokens": 833,
+        "total_tokens": 1930,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 886,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1b2a645beb525e831065c6ed3443adfd2abe0199ad2b2aaaf67094389a4fa0b0",
+      "status": "completed",
+      "latency_seconds": 29.912
+    }
+  ],
+  "status": "completed"
+}

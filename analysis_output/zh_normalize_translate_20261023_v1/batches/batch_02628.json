@@ -1,0 +1,214 @@
+{
+  "input_sha256": "e957fb5ae0cac3178291e80433032324848a415206fc278a0b4331576d739393",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006045",
+      "decision": "ready",
+      "subject": "regular muscles targeted by running",
+      "relation_id": "entity_to_anatomical_location",
+      "relation_definition": "The specific body part or anatomical region in which a specified structure, muscle, or organ is located; retain qualifiers on the entity.",
+      "direction": "entity -> anatomical location",
+      "answer": "legs",
+      "canonical_fact": "The regular muscles targeted by running are located in the legs.",
+      "prompt_en": "In which body part are the regular muscles targeted by running located?",
+      "evidence_quotes": [
+        "the regular muscles it targets are in the what?",
+        "legs"
+      ],
+      "reason": "Source question explicitly asks which body part contains the regular muscles targeted by running; answer is 'legs'. No existing catalog relation covers anatomical containment (entity_to_containing_location is explicitly geographic); proposing entity_to_anatomical_location with clear scope limited to body-part location.",
+      "english": {
+        "direction": "entity -> anatomical location",
+        "relation_id": "entity_to_anatomical_location",
+        "answer": "legs",
+        "canonical_fact": "The regular muscles targeted by running are located in the legs.",
+        "subject": "regular muscles targeted by running",
+        "prompt_en": "In which body part are the regular muscles targeted by running located?",
+        "relation_definition": "The specific body part or anatomical region in which a specified structure, muscle, or organ is located; retain qualifiers on the entity.",
+        "answer_aliases_en": [
+          "legs"
+        ],
+        "relation_spec": {
+          "id": "entity_to_anatomical_location",
+          "definition": "The specific body part or anatomical region in which a specified structure, muscle, or organ is located; retain qualifiers on the entity.",
+          "direction": "entity -> anatomical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d4684c43a8656accf5ca2b02ea8bf15e9032df0f5e27b04b64dbb48f544a388f",
+      "input_sha256": "784ca5908153ffed6a83c7a953a05c5b345e6b1544d6b8bf69ed64872a4f42c3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006052",
+      "decision": "ready",
+      "subject": "fall",
+      "relation_id": "period_to_preceding_period",
+      "relation_definition": "The immediately preceding period in a stated cyclic or linear sequence; retain the sequence context and any qualifiers on the transition.",
+      "direction": "later period -> earlier period",
+      "answer": "summer",
+      "canonical_fact": "Fall officially takes over summer.",
+      "prompt_en": "Which season does fall officially take over?",
+      "evidence_quotes": [
+        "fall had officially taken over what?",
+        "summer"
+      ],
+      "reason": "Source question states that fall took over the preceding season; answer is 'summer'. No existing catalog relation covers sequential period ordering in a cyclic sequence; proposing period_to_preceding_period to capture the immediate-predecessor relation within a stated cycle.",
+      "english": {
+        "direction": "later period -> earlier period",
+        "relation_id": "period_to_preceding_period",
+        "answer": "summer",
+        "canonical_fact": "Fall officially takes over summer.",
+        "subject": "fall",
+        "prompt_en": "Which season does fall officially take over?",
+        "relation_definition": "The immediately preceding period in a stated cyclic or linear sequence; retain the sequence context and any qualifiers on the transition.",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "period_to_preceding_period",
+          "definition": "The immediately preceding period in a stated cyclic or linear sequence; retain the sequence context and any qualifiers on the transition.",
+          "direction": "later period -> earlier period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5a9e010f149b47c9626c6d98a5a31bd70983eaadc6c298836226cab58176668b",
+      "input_sha256": "6aa20cf36494ca2ded8b3b30b5220e6ec9e4d75c2f8332edbe745e3f8cded974",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006045",
+      "input_sha256": "784ca5908153ffed6a83c7a953a05c5b345e6b1544d6b8bf69ed64872a4f42c3",
+      "english": {
+        "direction": "entity -> anatomical location",
+        "relation_id": "entity_to_anatomical_location",
+        "answer": "legs",
+        "canonical_fact": "The regular muscles targeted by running are located in the legs.",
+        "subject": "regular muscles targeted by running",
+        "prompt_en": "In which body part are the regular muscles targeted by running located?",
+        "relation_definition": "The specific body part or anatomical region in which a specified structure, muscle, or organ is located; retain qualifiers on the entity.",
+        "answer_aliases_en": [
+          "legs"
+        ],
+        "relation_spec": {
+          "id": "entity_to_anatomical_location",
+          "definition": "The specific body part or anatomical region in which a specified structure, muscle, or organ is located; retain qualifiers on the entity.",
+          "direction": "entity -> anatomical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d4684c43a8656accf5ca2b02ea8bf15e9032df0f5e27b04b64dbb48f544a388f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006045",
+        "subject_zh": "跑步常规锻炼的肌肉",
+        "prompt_zh": "跑步常规锻炼的肌肉位于身体哪个部位？",
+        "canonical_fact_zh": "跑步常规锻炼的肌肉位于腿部。",
+        "answer_zh": "腿部",
+        "answer_aliases_zh": [
+          "腿部"
+        ]
+      },
+      "translation_sha256": "912e60c904db21aced58fb99497fb135636bf79967809f9e9e95885ad0476320"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006052",
+      "input_sha256": "6aa20cf36494ca2ded8b3b30b5220e6ec9e4d75c2f8332edbe745e3f8cded974",
+      "english": {
+        "direction": "later period -> earlier period",
+        "relation_id": "period_to_preceding_period",
+        "answer": "summer",
+        "canonical_fact": "Fall officially takes over summer.",
+        "subject": "fall",
+        "prompt_en": "Which season does fall officially take over?",
+        "relation_definition": "The immediately preceding period in a stated cyclic or linear sequence; retain the sequence context and any qualifiers on the transition.",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "period_to_preceding_period",
+          "definition": "The immediately preceding period in a stated cyclic or linear sequence; retain the sequence context and any qualifiers on the transition.",
+          "direction": "later period -> earlier period"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5a9e010f149b47c9626c6d98a5a31bd70983eaadc6c298836226cab58176668b",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006052",
+        "subject_zh": "秋季",
+        "prompt_zh": "秋季正式接替的是哪个季节？",
+        "canonical_fact_zh": "秋季正式接替夏季。",
+        "answer_zh": "夏季",
+        "answer_aliases_zh": [
+          "夏季"
+        ]
+      },
+      "translation_sha256": "466d452fb38b9103f3e8c127b6bd21c696641c0592da57fc754d04bb98fd21fe"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006045",
+        "historical:raw_commonsense_qa_006052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "59e22e0ccf074334461de4cd9f88382916e07cfadaa254b1adc62cc694c8c249",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2080,
+      "first_chunk_seconds": 7.814,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2163,
+        "prompt_tokens": 1635,
+        "total_tokens": 3798,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1687,
+          "text_tokens": 476
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1bc3948bb5c28b919b12b49b2aaa52de146e4fe5bd270c6d2bb2e90254be0e16",
+      "status": "completed",
+      "latency_seconds": 41.571
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006045",
+        "historical:raw_commonsense_qa_006052"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "87e57a7dfbd7944568f3f429740aa590a4a1abcd4d526bfcfee2151613600ec6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 897,
+      "first_chunk_seconds": 8.492,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 942,
+        "prompt_tokens": 847,
+        "total_tokens": 1789,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 737,
+          "text_tokens": 205
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0cb4b07e5a62ebc9b0ef715b70de2f14f11faccdbb576c9cce7a4a1494e28d44",
+      "status": "completed",
+      "latency_seconds": 23.204
+    }
+  ],
+  "status": "completed"
+}

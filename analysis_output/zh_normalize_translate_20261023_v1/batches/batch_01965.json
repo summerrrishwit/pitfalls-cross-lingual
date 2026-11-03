@@ -1,0 +1,208 @@
+{
+  "input_sha256": "0c949cf5d23cdc6d76a2bbe7e29b0967ed13cdbab3a41c59ad859e339a705f8a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e9317f59b026148bf75d",
+      "decision": "ready",
+      "subject": "tandoor",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "metal oven",
+      "canonical_fact": "The English name for a tandoor is a metal oven.",
+      "prompt_en": "The English name for a tandoor is a",
+      "evidence_quotes": [
+        "what is the name of tandoor in english",
+        "metal oven"
+      ],
+      "reason": "The source question explicitly asks for the English name of 'tandoor' and the source answer provides 'metal oven'. This maps to entity_to_alias (tandoor as entity -> 'metal oven' as its English equivalent name). The prompt is option-free and does not contain the answer string.",
+      "english": {
+        "answer": "metal oven",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The English name for a tandoor is a",
+        "direction": "entity -> alias",
+        "subject": "tandoor",
+        "canonical_fact": "The English name for a tandoor is a metal oven.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "metal oven"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "988d544df1228d1dc4d2c8cdba8b2c7ff8c296c65fe8ad0b0f96a40a5f52a980",
+      "input_sha256": "80c408b11122a2f4d0a7504db878b16d1f51757010af19f178990ca93bab7697",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e935f33e438fe017f15e",
+      "decision": "ready",
+      "subject": "winter solstice",
+      "relation_id": "event_to_occurrence_location",
+      "relation_definition": "The specific geographic region where a dated astronomical or calendar event occurs; direction is event (with date qualifier) -> region.",
+      "direction": "event (with date) -> location",
+      "answer": "north of equator",
+      "canonical_fact": "The winter solstice is on December 21st in the north of equator.",
+      "prompt_en": "The winter solstice is on December 21st in the",
+      "evidence_quotes": [
+        "The winter solstice is on December 21st in the",
+        "north of equator"
+      ],
+      "reason": "No existing catalog relation fits exactly: entity_to_containing_location is defined as geographic containment, not event occurrence. Proposing new relation event_to_occurrence_location (event with date -> region). The source states the winter solstice occurs on December 21st in the north of equator. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "north of equator",
+        "relation_id": "event_to_occurrence_location",
+        "prompt_en": "The winter solstice is on December 21st in the",
+        "direction": "event (with date) -> location",
+        "subject": "winter solstice",
+        "canonical_fact": "The winter solstice is on December 21st in the north of equator.",
+        "relation_definition": "The specific geographic region where a dated astronomical or calendar event occurs; direction is event (with date qualifier) -> region.",
+        "answer_aliases_en": [
+          "north of equator"
+        ],
+        "relation_spec": {
+          "id": "event_to_occurrence_location",
+          "definition": "The specific geographic region where a dated astronomical or calendar event occurs; direction is event (with date qualifier) -> region.",
+          "direction": "event (with date) -> location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a9cd970be33431d2d2fdf1c72bc8c2dfc7f3507825a17346ef098b708ab1f9fc",
+      "input_sha256": "9a9975abd9a83d1fd5ae777ff911354ad2aa3d732add0d59a13ea0336c16f06d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cfd158b330dc014c3fe6b105b23eeaaef0e61a5219770b6a23c742292414eb19",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2574,
+      "first_chunk_seconds": 15.601,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2669,
+        "prompt_tokens": 1603,
+        "total_tokens": 4272,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2136,
+          "text_tokens": 533
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "462b532c703ecb9b66ccc796a0b13e658aacc55479476694de467a349a0db6b2",
+      "status": "completed",
+      "latency_seconds": 52.958
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.183
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.249
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.984
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 43.02
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 21.962
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e9317f59b026148bf75d",
+        "public:pbf_e935f33e438fe017f15e"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a7b4e02cec8f0ba6148edc7fc9b8d468745f73f068aa00ef11843055bd472502",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 34.433
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01965.json",
+      "sha256": "acc0e630960eddbafea20d9337799e92e9899e2c0fb856d750bd0a522771595f",
+      "previous_status": "failed"
+    }
+  ]
+}

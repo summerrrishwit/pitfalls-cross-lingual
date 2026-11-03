@@ -1,0 +1,247 @@
+{
+  "input_sha256": "e24596988966277bfce87665081b0ab53911a4dd29dece61b2b7b159b0fa46cb",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002141",
+      "decision": "ready",
+      "subject": "cuisine from a Mexican restaurant",
+      "relation_id": "cuisine_to_origin",
+      "relation_definition": "The country or region from which a specified cuisine or culinary tradition geographically originates.",
+      "direction": "cuisine -> origin country/region",
+      "answer": "Mexico",
+      "canonical_fact": "The cuisine from a Mexican restaurant originates in Mexico.",
+      "prompt_en": "What country is the cuisine served at a Mexican restaurant originally from?",
+      "evidence_quotes": [
+        "mexico",
+        "Where does the cuisine from a mexican restaurant originate?"
+      ],
+      "reason": "No existing catalog relation fits 'originates in' for a cuisine. entity_to_containing_location explicitly excludes origin. Proposed new relation cuisine_to_origin captures the geographic origin direction precisely. Answer 'Mexico' is a literal substring of source_answer 'mexico' (case-normalized). Both model annotations agree.",
+      "english": {
+        "prompt_en": "What country is the cuisine served at a Mexican restaurant originally from?",
+        "relation_definition": "The country or region from which a specified cuisine or culinary tradition geographically originates.",
+        "answer": "Mexico",
+        "canonical_fact": "The cuisine from a Mexican restaurant originates in Mexico.",
+        "direction": "cuisine -> origin country/region",
+        "relation_id": "cuisine_to_origin",
+        "subject": "cuisine from a Mexican restaurant",
+        "answer_aliases_en": [
+          "Mexico"
+        ],
+        "relation_spec": {
+          "id": "cuisine_to_origin",
+          "definition": "The country or region from which a specified cuisine or culinary tradition geographically originates.",
+          "direction": "cuisine -> origin country/region"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0baf3266d68340c551d82725ad475a800a5ec9ae46c2c0da33e120e02d689628",
+      "input_sha256": "9a9525d4dcaafaa60381046676f018176ef6308ca8fac5876244968d89cfe54e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000516",
+      "decision": "ready",
+      "subject": "corrosion",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "electrochemical process",
+      "canonical_fact": "Corrosion is usually defined as the degradation of metals due to an electrochemical process.",
+      "prompt_en": "Corrosion is usually defined as the degradation of metals due to what?",
+      "evidence_quotes": [
+        "electrochemical process",
+        "Corrosion is usually defined as the degradation of metals due to what?"
+      ],
+      "reason": "term_to_definition fits: subject 'corrosion' is an explicit term and the question asks for its defining mechanism. The source question explicitly uses 'is usually defined as', confirming a definitional relation. The qualifier 'usually' is preserved in the canonical_fact. Both model annotations agree on the extraction.",
+      "english": {
+        "prompt_en": "Corrosion is usually defined as the degradation of metals due to what?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "electrochemical process",
+        "canonical_fact": "Corrosion is usually defined as the degradation of metals due to an electrochemical process.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "corrosion",
+        "answer_aliases_en": [
+          "electrochemical process"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "170508ad801c4f9ec020f6a3ce6756067a34deec0762f1bfb5582efec1674cd9",
+      "input_sha256": "ff0bcd8bc996a48b6a139c5754e282c9879d1d16254beeff7c5dca1fbeb7cec5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "547872c855dae2af165f572fa77083da065ea38a0d824d96bca7f37a4deae697",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 31.861,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "547872c855dae2af165f572fa77083da065ea38a0d824d96bca7f37a4deae697",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 36.526,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "547872c855dae2af165f572fa77083da065ea38a0d824d96bca7f37a4deae697",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3594,
+      "first_chunk_seconds": 26.414,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3762,
+        "prompt_tokens": 1704,
+        "total_tokens": 5466,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3252,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7f085516227b383b7198fbc432c5aa50e78098b6bce891cd586a36890b646cec",
+      "status": "completed",
+      "latency_seconds": 89.658
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac975e0eadd42433ac61bee91de379ff9b7f0d6d857b49ef4f141e1601479a12",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 578,
+      "first_chunk_seconds": 3.327,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 628,
+        "prompt_tokens": 823,
+        "total_tokens": 1451,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 413,
+          "text_tokens": 215
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1f83a21e06b90c67a9d9ed0eab063f71e041a53a344c1df28a0de4d6fe857138",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 12.478,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "abe10087e09542ab3231146f79e42c06cf4351d1eef5d0054d2f4072f762be89",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.711,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002141",
+        "historical:raw_sciq_000516"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "abe10087e09542ab3231146f79e42c06cf4351d1eef5d0054d2f4072f762be89",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 11.191,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed"
+}

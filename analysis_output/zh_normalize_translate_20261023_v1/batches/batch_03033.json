@@ -1,0 +1,157 @@
+{
+  "input_sha256": "8afb7f7480556f097ab9cf4dc07f0fb5cb26a00ef21984ac88c683fa528f878e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000509",
+      "decision": "ready",
+      "subject": "the only animal phylum that does not consist exclusively of invertebrates",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "chordates",
+      "canonical_fact": "Chordates are the only animal phylum that does not consist exclusively of invertebrates.",
+      "prompt_en": "What is the only animal phylum that does not consist exclusively of invertebrates?",
+      "evidence_quotes": [
+        "the only animal phyla that does not consist exclusively of invertebrates",
+        "chordates"
+      ],
+      "reason": "The source question identifies a unique animal phylum by the property 'does not consist exclusively of invertebrates'; source answer 'chordates' is the entity satisfying that description. This fits description_to_entity (identifying description -> entity). Both model annotations agree on the extraction; no conflict with source.",
+      "english": {
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "direction": "identifying description -> entity",
+        "subject": "the only animal phylum that does not consist exclusively of invertebrates",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the only animal phylum that does not consist exclusively of invertebrates?",
+        "answer": "chordates",
+        "canonical_fact": "Chordates are the only animal phylum that does not consist exclusively of invertebrates.",
+        "answer_aliases_en": [
+          "chordates"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "791bfa7685f2c6db4ecf8b16eb478b706bf952c644fb7e918ca7f1be8fe95966",
+      "input_sha256": "6c6ae08a2f788a1b5bdde1f94f8b33cec72aba58ed7bc0690f57a91f56f8680f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000510",
+      "decision": "ready",
+      "subject": "the term decay in chemistry with regards to atoms",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "changes in nuclei",
+      "canonical_fact": "In chemistry, the term decay with regards to atoms refers to changes in nuclei.",
+      "prompt_en": "What does the term 'decay' in chemistry refer to with regards to atoms?",
+      "evidence_quotes": [
+        "the term decay in chemistry refer to with regards to atoms",
+        "changes in nuclei"
+      ],
+      "reason": "The source question asks for the referent/definition of 'decay' in chemistry specifically regarding atoms; source answer 'changes in nuclei' is the defining content. This fits term_to_definition (term -> definition). Both model annotations agree; no conflict with source.",
+      "english": {
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "direction": "term -> definition",
+        "subject": "the term decay in chemistry with regards to atoms",
+        "relation_id": "term_to_definition",
+        "prompt_en": "What does the term 'decay' in chemistry refer to with regards to atoms?",
+        "answer": "changes in nuclei",
+        "canonical_fact": "In chemistry, the term decay with regards to atoms refers to changes in nuclei.",
+        "answer_aliases_en": [
+          "changes in nuclei"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a8a0c7bbbca4aec79ec96444c7d352e1ccbad74a0e93af02e33f0a68e00ad795",
+      "input_sha256": "254e5d1123f9443530c9f7349923eed595724f439f70328f05c97ccdc53ee86f",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000509",
+        "historical:raw_sciq_000510"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7f02989602788c1f0cfb7d22537604cd06414f56964794150625a8a164d0df8c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2156,
+      "first_chunk_seconds": 2.602,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2282,
+        "prompt_tokens": 1748,
+        "total_tokens": 4030,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1766,
+          "text_tokens": 516
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "289a35be2bdee681489bc7961d7fd2078225c2391899414273a0bf0f45b6de7b",
+      "status": "completed",
+      "latency_seconds": 52.593
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000509",
+        "historical:raw_sciq_000510"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "25c70c2471ba6759817ddba3924db70f633c96eb72e7177968f3826fcab1ef44",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.0
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000509",
+        "historical:raw_sciq_000510"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "25c70c2471ba6759817ddba3924db70f633c96eb72e7177968f3826fcab1ef44",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.242
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000509",
+        "historical:raw_sciq_000510"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "25c70c2471ba6759817ddba3924db70f633c96eb72e7177968f3826fcab1ef44",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.08
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,154 @@
+{
+  "input_sha256": "c3ba3af73daabcca56236c02ca4e35bd771349f63dc846c99b5a39c0642ae535",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000680",
+      "decision": "ready",
+      "subject": "Germany and Norway",
+      "relation_id": "location_to_currency",
+      "relation_definition": "Official currency in use in a specified country or region; retain pairing when multiple locations are combined.",
+      "direction": "location -> currency in use",
+      "answer": "Euros and Norwegian krone",
+      "canonical_fact": "In Germany and Norway, the currencies in use are the Euro and the Norwegian krone, respectively.",
+      "prompt_en": "What currency is in use in Germany and Norway?",
+      "evidence_quotes": [
+        "On a visit to Germany and Norway",
+        "Euros and Norwegian krone"
+      ],
+      "reason": "The source answer clearly states the target currencies for Germany (Euros) and Norway (Norwegian krone). No existing catalog relation covers 'currency in use in a location'; proposing the new precise relation location_to_currency. The combined subject 'Germany and Norway' maps to the paired answer, consistent with the source phrasing.",
+      "english": {
+        "prompt_en": "What currency is in use in Germany and Norway?",
+        "relation_definition": "Official currency in use in a specified country or region; retain pairing when multiple locations are combined.",
+        "answer": "Euros and Norwegian krone",
+        "canonical_fact": "In Germany and Norway, the currencies in use are the Euro and the Norwegian krone, respectively.",
+        "direction": "location -> currency in use",
+        "relation_id": "location_to_currency",
+        "subject": "Germany and Norway",
+        "answer_aliases_en": [
+          "Euros and Norwegian krone"
+        ],
+        "relation_spec": {
+          "id": "location_to_currency",
+          "definition": "Official currency in use in a specified country or region; retain pairing when multiple locations are combined.",
+          "direction": "location -> currency in use"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f9a017bcadc3f78d05c4d93f4af5280894f9b056775966cafa3bb1f35659faf1",
+      "input_sha256": "02265c2298e3200ea219c768f30f78edbb331bd2bbde05104e9210c132007f03",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000685",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer is a general comparative health claim ('organic food is not healthier than regular food') rather than a specific, stable factual datum. No catalog relation fits, and no precise new relation can be defined without resorting to a broad category like 'food_to_health_comparison'. The sensenova annotation correctly flags the claim as subjective_or_normative. Deferred due to lack of precise relational fit and the normative nature of the assertion.",
+      "input_sha256": "6cb86f89a4c568550952b689f03627827812d5c7153a17e1d22eac1ebddd0ad3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000680",
+        "historical:raw_truthful_qa_000685"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a303c8f45822fa236d8124b06922ddf7cc40ffb6d77897d5fd0c3d16f9a9ffdc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2418,
+      "first_chunk_seconds": 49.76,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2512,
+        "prompt_tokens": 1635,
+        "total_tokens": 4147,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2159,
+          "text_tokens": 353
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "38dc555f9a08e3ad60932b9f438c974237235e041a193f177c8614174607ee36",
+      "status": "completed",
+      "latency_seconds": 115.567
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000680"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5a17f25757ccdc0b485f43ddc10e0812fe9a6a0096ce3f1d8350b06e7b9ad45c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 62.186,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000680"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5a17f25757ccdc0b485f43ddc10e0812fe9a6a0096ce3f1d8350b06e7b9ad45c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 105.819,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000680"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5a17f25757ccdc0b485f43ddc10e0812fe9a6a0096ce3f1d8350b06e7b9ad45c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 183.268
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "a0971d5b75a71b162bc1c1f4761993ed33d928561d14ebf2f0d7c8d04411a1d9",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000277",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question is inherently option-dependent ('a mouse or an elephant'), and any faithful prompt_en would contain the answer 'mouse', violating the option-free constraint. No catalog relation fits a two-entity property comparison; a new relation would be needed, but the option-dependent structure of the question makes it unsuitable for a reusable open-ended factual record.",
+      "input_sha256": "6e16aeb93eb05c8983bb557c55afef486bba7675e1537c7a093a5bf5d81e6165",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000278",
+      "decision": "ready",
+      "subject": "digestion of proteins",
+      "relation_id": "process_to_organ",
+      "relation_definition": "The specific organ in which a specified biological process begins or occurs; distinguishes process site from general location or containment.",
+      "direction": "biological process -> organ",
+      "answer": "stomach",
+      "canonical_fact": "Digestion of proteins begins with acids in the stomach.",
+      "prompt_en": "In which organ does the digestion of proteins begin with acids?",
+      "evidence_quotes": [
+        "Digestion of proteins begins with acids in what organ?",
+        "stomach"
+      ],
+      "reason": "Both model annotations agree on the extraction. No existing catalog relation matches a biological-process-to-organ-site mapping (entity_to_containing_location explicitly excludes process locations). Proposed new relation 'process_to_organ' with precise definition. Source answer 'stomach' is a literal substring of source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "biological process -> organ",
+        "relation_id": "process_to_organ",
+        "answer": "stomach",
+        "canonical_fact": "Digestion of proteins begins with acids in the stomach.",
+        "subject": "digestion of proteins",
+        "prompt_en": "In which organ does the digestion of proteins begin with acids?",
+        "relation_definition": "The specific organ in which a specified biological process begins or occurs; distinguishes process site from general location or containment.",
+        "answer_aliases_en": [
+          "stomach"
+        ],
+        "relation_spec": {
+          "id": "process_to_organ",
+          "definition": "The specific organ in which a specified biological process begins or occurs; distinguishes process site from general location or containment.",
+          "direction": "biological process -> organ"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "349267e129b712cbd81160be72c8637282dc8fbba3df5fb17b17573644f09e78",
+      "input_sha256": "05262a634e8b85c943bb1e25b3d50a7b9d32a2b29b5ea1ace352b6119d286fc3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000278",
+      "input_sha256": "05262a634e8b85c943bb1e25b3d50a7b9d32a2b29b5ea1ace352b6119d286fc3",
+      "english": {
+        "direction": "biological process -> organ",
+        "relation_id": "process_to_organ",
+        "answer": "stomach",
+        "canonical_fact": "Digestion of proteins begins with acids in the stomach.",
+        "subject": "digestion of proteins",
+        "prompt_en": "In which organ does the digestion of proteins begin with acids?",
+        "relation_definition": "The specific organ in which a specified biological process begins or occurs; distinguishes process site from general location or containment.",
+        "answer_aliases_en": [
+          "stomach"
+        ],
+        "relation_spec": {
+          "id": "process_to_organ",
+          "definition": "The specific organ in which a specified biological process begins or occurs; distinguishes process site from general location or containment.",
+          "direction": "biological process -> organ"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "349267e129b712cbd81160be72c8637282dc8fbba3df5fb17b17573644f09e78",
+      "translation": {
+        "record_id": "historical:raw_sciq_000278",
+        "subject_zh": "蛋白质的消化",
+        "prompt_zh": "在哪个器官中，蛋白质通过酸性物质开始被消化？",
+        "canonical_fact_zh": "蛋白质的消化从胃中的酸性物质开始。",
+        "answer_zh": "胃",
+        "answer_aliases_zh": [
+          "胃"
+        ]
+      },
+      "translation_sha256": "c3000bf64de1d21bb14d3096b6bec136563c595a7a0acbfd4d72cae0066b69bd"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000277",
+        "historical:raw_sciq_000278"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "94c39dac21487f3b3431c2e121e3a069b9f0913460a86c7af59d44da241ca0f8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2303,
+      "first_chunk_seconds": 2.404,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2379,
+        "prompt_tokens": 1658,
+        "total_tokens": 4037,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1937,
+          "text_tokens": 442
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9a84eb31104c2deb138d2b4496d7ec8987a0df60cc3a78576180c46b09e680ae",
+      "status": "completed",
+      "latency_seconds": 50.92
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000278"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ad5e0b7eb7a7db0e0e1084e0183cfaa889d72de88c3040d95af5835a7de8132e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 549,
+      "first_chunk_seconds": 1.469,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 634,
+        "prompt_tokens": 527,
+        "total_tokens": 1161,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 518,
+          "text_tokens": 116
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7d41ad17046dec14f55bbc4a800c36693ea07efae983a1d76f8e643428de5842",
+      "status": "completed",
+      "latency_seconds": 39.662
+    }
+  ],
+  "status": "completed"
+}

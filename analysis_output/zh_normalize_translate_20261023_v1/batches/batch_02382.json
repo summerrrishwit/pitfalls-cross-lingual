@@ -1,0 +1,223 @@
+{
+  "input_sha256": "98654e0c73d99bf4508c23be423718897c29d5370d5fdd3457970edae84b7ac3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001581",
+      "decision": "ready",
+      "subject": "levels of organization in an organism",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "cells -> tissue -> organs -> organ system",
+      "canonical_fact": "The levels of organization in an organism are correctly represented by the series cells -> tissue -> organs -> organ system.",
+      "prompt_en": "What is the correct ordered sequence of levels of organization in an organism?",
+      "evidence_quotes": [
+        "cells -> tissue -> organs -> organ system",
+        "the levels of organization in an organism"
+      ],
+      "reason": "The source question explicitly asks for the correct series representing levels of organization in an organism, and the source answer provides the ordered sequence 'cells -> tissue -> organs -> organ system'. This constitutes a term (levels of organization in an organism) defined by its ordered hierarchical definition. The term_to_definition relation fits: the term is a named biological concept and the answer is its defining ordered sequence.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "cells -> tissue -> organs -> organ system",
+        "canonical_fact": "The levels of organization in an organism are correctly represented by the series cells -> tissue -> organs -> organ system.",
+        "subject": "levels of organization in an organism",
+        "prompt_en": "What is the correct ordered sequence of levels of organization in an organism?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "cells -> tissue -> organs -> organ system"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "9b4d63b585120a33491255e37add162d9df0282270e8d441bdec9d2ff7cc76f0",
+      "input_sha256": "679788fdbbce3b11aaee17c4f71cb69ba481864c4a27f488e2ff8aa62571d880",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001582",
+      "decision": "ready",
+      "subject": "rock formed from cemented pieces of worn-down dried lava",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "sedimentary",
+      "canonical_fact": "Rock formed from cemented pieces of worn-down dried lava is classified as sedimentary.",
+      "prompt_en": "How is new rock classified when it forms from cemented pieces of worn-down dried lava?",
+      "evidence_quotes": [
+        "sedimentary",
+        "worn down and broken into small pieces",
+        "cemented together to form new rock"
+      ],
+      "reason": "The source question describes a specific rock-formation process (worn-down lava pieces cemented together) and asks for its classification. The source answer is 'sedimentary', a stable rock-type class. The entity is the described rock (qualified by its formation process), and the class is its taxonomic rock type. entity_to_class fits exactly: it assigns a specific entity to a stable class at the rock-type taxonomy level.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "sedimentary",
+        "canonical_fact": "Rock formed from cemented pieces of worn-down dried lava is classified as sedimentary.",
+        "subject": "rock formed from cemented pieces of worn-down dried lava",
+        "prompt_en": "How is new rock classified when it forms from cemented pieces of worn-down dried lava?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "sedimentary"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fb71e170078a0dbf3a7d6ab93740d5756686295e4404c35e2d0d0cdbcb88430b",
+      "input_sha256": "97b19313a2650b1e5a17c871a53cdd2a3f3e2ac5f3170e8f01c66c774d48da16",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6cd8591ce877603dac49610b18a9c7d5cec22c4773371017e30410b3effbb0df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 30.97
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6cd8591ce877603dac49610b18a9c7d5cec22c4773371017e30410b3effbb0df",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1645,
+      "first_chunk_seconds": 23.85,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1780,
+        "prompt_tokens": 1793,
+        "total_tokens": 3573,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1203,
+          "text_tokens": 577
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "df009a7e25b644bb7237f87384cb6c5549221a33e373357df3eec6e3c251a3c5",
+      "status": "completed",
+      "latency_seconds": 45.5
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.108
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.102
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.123
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.759
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.914
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001581",
+        "historical:raw_ai2_arc_easy_001582"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cd2a8aa988d58c547b1461478599e0f29633e83ef58dc2e830f34c06cdbb8f5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.093
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02382.json",
+      "sha256": "3957dd9bad6b9510768e3e3c0808ab2589deb60970f9df4de0a1864d9798d8a1",
+      "previous_status": "failed"
+    }
+  ]
+}

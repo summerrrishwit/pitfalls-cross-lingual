@@ -1,0 +1,214 @@
+{
+  "input_sha256": "11c597462681ab146c315b5b4114a2c32af165f1e0ba809f1e93e78caaebc53c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003111",
+      "decision": "ready",
+      "subject": "Space Needle",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Seattle",
+      "canonical_fact": "The Space Needle is located in Seattle.",
+      "prompt_en": "In which city is the Space Needle located?",
+      "evidence_quotes": [
+        "space needle",
+        "seattle"
+      ],
+      "reason": "The Space Needle is a physical landmark geographically contained in Seattle; entity_to_containing_location captures this at city level. Source answer 'seattle' is retained (properly capitalized) and does not conflict.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Seattle",
+        "canonical_fact": "The Space Needle is located in Seattle.",
+        "subject": "Space Needle",
+        "prompt_en": "In which city is the Space Needle located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Seattle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "483c196a7ea789b11559817802c0ff4497ede9f3aa9b6818697aa845fc975f02",
+      "input_sha256": "9efe7624bcd1d4ec372f7c8bd17a3243b9f3a94bc87b49b3a011646d9d04f9e9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003125",
+      "decision": "ready",
+      "subject": "extra ink from a fountain pen",
+      "relation_id": "substance_to_absorbing_agent",
+      "relation_definition": "The object or medium specifically used to absorb a specified substance; functional use rather than composition or containment.",
+      "direction": "substance -> absorbing agent",
+      "answer": "blotter",
+      "canonical_fact": "Extra ink from a fountain pen is absorbed by a blotter.",
+      "prompt_en": "What do people use to absorb extra ink from a fountain pen?",
+      "evidence_quotes": [
+        "absorb extra ink from a fountain pen",
+        "blotter"
+      ],
+      "reason": "No existing catalog relation captures the functional 'absorbed by' link between a substance and the tool that absorbs it (entity_to_material is about composition, not use). Proposed precise new relation substance_to_absorbing_agent. Source answer 'blotter' is a literal substring of source_answer.",
+      "english": {
+        "direction": "substance -> absorbing agent",
+        "relation_id": "substance_to_absorbing_agent",
+        "answer": "blotter",
+        "canonical_fact": "Extra ink from a fountain pen is absorbed by a blotter.",
+        "subject": "extra ink from a fountain pen",
+        "prompt_en": "What do people use to absorb extra ink from a fountain pen?",
+        "relation_definition": "The object or medium specifically used to absorb a specified substance; functional use rather than composition or containment.",
+        "answer_aliases_en": [
+          "blotter"
+        ],
+        "relation_spec": {
+          "id": "substance_to_absorbing_agent",
+          "definition": "The object or medium specifically used to absorb a specified substance; functional use rather than composition or containment.",
+          "direction": "substance -> absorbing agent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7f11567744145b65a6ade64c1c42db42c65bda2b676d886e2243c7e1ad94f827",
+      "input_sha256": "3fef4cb2deadf92a09b55475bf21cdae0c07af3193715b3b90babba837c72e33",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003111",
+      "input_sha256": "9efe7624bcd1d4ec372f7c8bd17a3243b9f3a94bc87b49b3a011646d9d04f9e9",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Seattle",
+        "canonical_fact": "The Space Needle is located in Seattle.",
+        "subject": "Space Needle",
+        "prompt_en": "In which city is the Space Needle located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Seattle"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "483c196a7ea789b11559817802c0ff4497ede9f3aa9b6818697aa845fc975f02",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003111",
+        "subject_zh": "太空针",
+        "prompt_zh": "太空针位于哪个城市？",
+        "canonical_fact_zh": "太空针位于西雅图。",
+        "answer_zh": "西雅图",
+        "answer_aliases_zh": [
+          "西雅图"
+        ]
+      },
+      "translation_sha256": "df4eaf1ba9406b3fe081692983475217eca569f83394a8ee0e78f08ff2d710d4"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003125",
+      "input_sha256": "3fef4cb2deadf92a09b55475bf21cdae0c07af3193715b3b90babba837c72e33",
+      "english": {
+        "direction": "substance -> absorbing agent",
+        "relation_id": "substance_to_absorbing_agent",
+        "answer": "blotter",
+        "canonical_fact": "Extra ink from a fountain pen is absorbed by a blotter.",
+        "subject": "extra ink from a fountain pen",
+        "prompt_en": "What do people use to absorb extra ink from a fountain pen?",
+        "relation_definition": "The object or medium specifically used to absorb a specified substance; functional use rather than composition or containment.",
+        "answer_aliases_en": [
+          "blotter"
+        ],
+        "relation_spec": {
+          "id": "substance_to_absorbing_agent",
+          "definition": "The object or medium specifically used to absorb a specified substance; functional use rather than composition or containment.",
+          "direction": "substance -> absorbing agent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7f11567744145b65a6ade64c1c42db42c65bda2b676d886e2243c7e1ad94f827",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003125",
+        "subject_zh": "钢笔多余的墨水",
+        "prompt_zh": "人们用什么来吸收钢笔多余的墨水？",
+        "canonical_fact_zh": "钢笔多余的墨水被吸墨纸吸收。",
+        "answer_zh": "吸墨纸",
+        "answer_aliases_zh": [
+          "吸墨纸"
+        ]
+      },
+      "translation_sha256": "59ce6fe6e72342f2ebe85a6cd1912054b5ff6094bedf57fabc12b7771713b81f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003111",
+        "historical:raw_commonsense_qa_003125"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dad8f3c60b4b08d999c6ea7519742f09fca407ed1f390a20615ae214ab00f22b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1963,
+      "first_chunk_seconds": 25.396,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2332,
+        "prompt_tokens": 1667,
+        "total_tokens": 3999,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1865,
+          "text_tokens": 467
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "06c8fd9f1aa14d28d6e9c4388a172f59b460cb67bc330b4b8ed32eba03e24bf4",
+      "status": "completed",
+      "latency_seconds": 57.75
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003111",
+        "historical:raw_commonsense_qa_003125"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39af2fc5deb6fdbf40950bc98319cabed317b5fb4db2ac06d67a13d838f9fb41",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 956,
+      "first_chunk_seconds": 13.138,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 996,
+        "prompt_tokens": 826,
+        "total_tokens": 1822,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 787,
+          "text_tokens": 209
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6c1f4f456258cae9b37cb0d9cc3ba6807bb0ba36dd9704ebda5b87613fd53f3",
+      "status": "completed",
+      "latency_seconds": 34.459
+    }
+  ],
+  "status": "completed"
+}

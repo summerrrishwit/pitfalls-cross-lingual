@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b5b7065a8e35dfd25cc3a36a44a8414e2afeec96b65c1371b27d112ad230c06d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008773",
+      "decision": "ready",
+      "subject": "having nothing left after paying bills",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "broke",
+      "canonical_fact": "Having nothing left after paying bills is the state of being broke.",
+      "prompt_en": "What word describes a person who has nothing left after paying bills?",
+      "evidence_quotes": [
+        "If there is nothing left after paying bills you are what?",
+        "broke"
+      ],
+      "reason": "The source question supplies a defining description ('nothing left after paying bills') and asks for the conventional term. 'broke' is the literal source_answer. description_to_term fits exactly: description -> term.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "broke",
+        "canonical_fact": "Having nothing left after paying bills is the state of being broke.",
+        "subject": "having nothing left after paying bills",
+        "prompt_en": "What word describes a person who has nothing left after paying bills?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "broke"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "506fe7d9aa47f6cb97ad9f5845a0ce2731c3ca1e8aac61251ee8fa528ac60dce",
+      "input_sha256": "04b6a17014e784cc9aaff41d0c9073018bda5563a09cf0193af6ff938da089fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008781",
+      "decision": "ready",
+      "subject": "Dogs",
+      "relation_id": "organism_to_required_substance",
+      "relation_definition": "A substance that a specified organism requires, retaining any stated conditions or qualifiers from the source.",
+      "direction": "organism -> required substance",
+      "answer": "water",
+      "canonical_fact": "Dogs require water, especially on hot days.",
+      "prompt_en": "What substance do dogs require, especially on hot days?",
+      "evidence_quotes": [
+        "Dogs are active pets, especially on hot days it's important to keep their bowl full because they what?",
+        "require water"
+      ],
+      "reason": "No existing catalog relation captures 'organism requires a substance.' Proposed new relation organism_to_required_substance (organism -> required substance) with the qualifier 'especially on hot days' preserved from source. Answer 'water' is the literal tail of source_answer 'require water'.",
+      "english": {
+        "direction": "organism -> required substance",
+        "relation_id": "organism_to_required_substance",
+        "answer": "water",
+        "canonical_fact": "Dogs require water, especially on hot days.",
+        "subject": "Dogs",
+        "prompt_en": "What substance do dogs require, especially on hot days?",
+        "relation_definition": "A substance that a specified organism requires, retaining any stated conditions or qualifiers from the source.",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_required_substance",
+          "definition": "A substance that a specified organism requires, retaining any stated conditions or qualifiers from the source.",
+          "direction": "organism -> required substance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a08040645d042ef0d9899b065858be7e4d8ab71d3c4e36333c0f2225e591db6e",
+      "input_sha256": "b5815882924c16cb3126f26b8dce1dd54c3234454937e22c8e1460e2bec921af",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008773",
+      "input_sha256": "04b6a17014e784cc9aaff41d0c9073018bda5563a09cf0193af6ff938da089fe",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "broke",
+        "canonical_fact": "Having nothing left after paying bills is the state of being broke.",
+        "subject": "having nothing left after paying bills",
+        "prompt_en": "What word describes a person who has nothing left after paying bills?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "broke"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "506fe7d9aa47f6cb97ad9f5845a0ce2731c3ca1e8aac61251ee8fa528ac60dce",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008773",
+        "subject_zh": "付完账单后一无所有",
+        "prompt_zh": "用什么词来形容付完账单后一无所有的人？",
+        "canonical_fact_zh": "付完账单后一无所有就是身无分文的状态。",
+        "answer_zh": "身无分文",
+        "answer_aliases_zh": [
+          "身无分文"
+        ]
+      },
+      "translation_sha256": "dd8f3d1e64a96b65c4d630674d15d3c3bec2a718057773c5c14a22534e4bfc99"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008781",
+      "input_sha256": "b5815882924c16cb3126f26b8dce1dd54c3234454937e22c8e1460e2bec921af",
+      "english": {
+        "direction": "organism -> required substance",
+        "relation_id": "organism_to_required_substance",
+        "answer": "water",
+        "canonical_fact": "Dogs require water, especially on hot days.",
+        "subject": "Dogs",
+        "prompt_en": "What substance do dogs require, especially on hot days?",
+        "relation_definition": "A substance that a specified organism requires, retaining any stated conditions or qualifiers from the source.",
+        "answer_aliases_en": [
+          "water"
+        ],
+        "relation_spec": {
+          "id": "organism_to_required_substance",
+          "definition": "A substance that a specified organism requires, retaining any stated conditions or qualifiers from the source.",
+          "direction": "organism -> required substance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a08040645d042ef0d9899b065858be7e4d8ab71d3c4e36333c0f2225e591db6e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008781",
+        "subject_zh": "狗",
+        "prompt_zh": "狗尤其在热天时需要什么物质？",
+        "canonical_fact_zh": "狗需要水，尤其在热天。",
+        "answer_zh": "水",
+        "answer_aliases_zh": [
+          "水"
+        ]
+      },
+      "translation_sha256": "24c7c17d0ed171f3399ea0cbb2b33fb1f9b45b3fae50f8334f2082a73e52e5f9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008773",
+        "historical:raw_commonsense_qa_008781"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "441a7b6b8a572ff78eb7bbf4896c858b3dc1de104059dfe782934710953130d2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1961,
+      "first_chunk_seconds": 35.908,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2042,
+        "prompt_tokens": 1649,
+        "total_tokens": 3691,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1561,
+          "text_tokens": 481
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8b04d0a21d146e9969352e8b69c2a97c176571499e41482a0e70c28487375831",
+      "status": "completed",
+      "latency_seconds": 72.158
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008773",
+        "historical:raw_commonsense_qa_008781"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0072dde889e351c7a5cc16e51dffee4538b27c5ebebd87a8f4e27c463f0c9907",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1546,
+      "first_chunk_seconds": 25.084,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1684,
+        "prompt_tokens": 819,
+        "total_tokens": 2503,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1463,
+          "text_tokens": 221
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "23883f6e9dbe738decb4dd3a925a348e92bc7031c10b1f1f1afa8ea212190c04",
+      "status": "completed",
+      "latency_seconds": 46.384
+    }
+  ],
+  "status": "completed"
+}

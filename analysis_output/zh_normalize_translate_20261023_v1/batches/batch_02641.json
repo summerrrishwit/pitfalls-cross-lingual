@@ -1,0 +1,214 @@
+{
+  "input_sha256": "b8292b0074bedcee0f9c28fc9b217d454e6a3b94d06c4f0f8c55a0fcdadaeb46",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006438",
+      "decision": "ready",
+      "subject": "valley",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "mountainous region",
+      "canonical_fact": "A valley is usually a lower spot in a mountainous region.",
+      "prompt_en": "In what type of region is a valley usually a lower spot?",
+      "evidence_quotes": [
+        "they're usually just a lower spot in a what?",
+        "mountainous region"
+      ],
+      "reason": "The source states a valley is 'usually just a lower spot in a mountainous region,' which is a geographic containment relation at the terrain level. entity_to_containing_location fits: valley (entity) is geographically contained in a mountainous region. The qualifier 'usually' is preserved in the canonical fact. Both model annotations independently extracted the same subject/answer; no conflict.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "mountainous region",
+        "canonical_fact": "A valley is usually a lower spot in a mountainous region.",
+        "subject": "valley",
+        "prompt_en": "In what type of region is a valley usually a lower spot?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "mountainous region"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3ea9a6e2d77f4578265281a5327795614ff2a90a46c09db7462ae74deec78987",
+      "input_sha256": "a916fa9f782764b75cb57cc19d107142354b51dca8658bab8c3aef9a85b78fb2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006454",
+      "decision": "ready",
+      "subject": "Atlantic Ocean",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "Earth",
+      "canonical_fact": "The Atlantic Ocean is part of Earth.",
+      "prompt_en": "What planet is the Atlantic Ocean part of?",
+      "evidence_quotes": [
+        "What planet is the atlantic ocean part of?",
+        "earth"
+      ],
+      "reason": "The source question explicitly asks what planet the Atlantic Ocean is part of, and the answer is Earth. This is a direct part-whole membership (ocean is part of the planet). part_to_whole is the precise catalog relation: direction part->whole (Atlantic Ocean -> Earth). Both model annotations agree on subject/answer. Answer capitalized to 'Earth' as a proper noun per existing extraction; source uses lowercase but meaning is identical.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "Earth",
+        "canonical_fact": "The Atlantic Ocean is part of Earth.",
+        "subject": "Atlantic Ocean",
+        "prompt_en": "What planet is the Atlantic Ocean part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "Earth"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a6ca287bcd3c08f802bed5b8417c5297f217046e01ed164cbf327fc9f899542e",
+      "input_sha256": "827e7c4d412365dd28d618acdc7e70fd4249e0ed3d25d9e22263603e3e2628a1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006438",
+      "input_sha256": "a916fa9f782764b75cb57cc19d107142354b51dca8658bab8c3aef9a85b78fb2",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "mountainous region",
+        "canonical_fact": "A valley is usually a lower spot in a mountainous region.",
+        "subject": "valley",
+        "prompt_en": "In what type of region is a valley usually a lower spot?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "mountainous region"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3ea9a6e2d77f4578265281a5327795614ff2a90a46c09db7462ae74deec78987",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006438",
+        "subject_zh": "山谷",
+        "prompt_zh": "山谷通常是哪种区域中的低地？",
+        "canonical_fact_zh": "山谷通常是多山地区中的低地。",
+        "answer_zh": "多山地区",
+        "answer_aliases_zh": [
+          "多山地区"
+        ]
+      },
+      "translation_sha256": "3c86f7b7643448f3ce486cde0d5ee8ebaf9e0bdfb28f537802cb3356bc8b06c8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006454",
+      "input_sha256": "827e7c4d412365dd28d618acdc7e70fd4249e0ed3d25d9e22263603e3e2628a1",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "Earth",
+        "canonical_fact": "The Atlantic Ocean is part of Earth.",
+        "subject": "Atlantic Ocean",
+        "prompt_en": "What planet is the Atlantic Ocean part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "Earth"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a6ca287bcd3c08f802bed5b8417c5297f217046e01ed164cbf327fc9f899542e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006454",
+        "subject_zh": "大西洋",
+        "prompt_zh": "大西洋是哪个行星的一部分？",
+        "canonical_fact_zh": "大西洋是地球的一部分。",
+        "answer_zh": "地球",
+        "answer_aliases_zh": [
+          "地球"
+        ]
+      },
+      "translation_sha256": "9f12c1f14a6e4a3c6e56b73c64f07e376c08ee50772800bd35f794959c9d0db6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006438",
+        "historical:raw_commonsense_qa_006454"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "31bb2e2d1d0d564542ba6116d3aed6197bcb81248cda8aa8e5a964f6951224bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1804,
+      "first_chunk_seconds": 34.184,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1992,
+        "prompt_tokens": 1646,
+        "total_tokens": 3638,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1468,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "03b90cda750aecad818ef62956fead649b5e5659b007baa5f6edb9438d038c69",
+      "status": "completed",
+      "latency_seconds": 76.523
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006438",
+        "historical:raw_commonsense_qa_006454"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "367489534a913b0ceb6b350091edc08f350c5b4209849bd631bd760134dceb33",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 966,
+      "first_chunk_seconds": 25.257,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1010,
+        "prompt_tokens": 808,
+        "total_tokens": 1818,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 875,
+          "text_tokens": 135
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "781054511d6fb2209d10d653baa0b686170417692f245d94b866006d07496ad3",
+      "status": "completed",
+      "latency_seconds": 38.954
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,228 @@
+{
+  "input_sha256": "e1a21f2be63154aba9f2398dc0b6048a5e4d1136ba5fa0779f19715d4ac3dc06",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000080",
+      "decision": "ready",
+      "subject": "lancelet",
+      "relation_id": "organism_to_lacking_anatomical_feature",
+      "relation_definition": "Anatomical or structural feature that the organism does not possess, optionally with a comparative qualifier naming the group in which the feature is present.",
+      "direction": "organism -> anatomical feature it lacks",
+      "answer": "backbone",
+      "canonical_fact": "The lancelet lacks a backbone, the feature that distinguishes vertebrates.",
+      "prompt_en": "What anatomical feature does the lancelet lack that is the distinguishing characteristic of vertebrates?",
+      "evidence_quotes": [
+        "The lancelet lacks what feature that distinguishes vertebrates?",
+        "backbone"
+      ],
+      "reason": "Source clearly states the lancelet lacks a backbone as the feature distinguishing vertebrates. No existing catalog relation captures a negative 'lacks/absence-of' anatomical relationship; the closest (whole_to_part, organism_to_habitat, entity_to_class) all assert presence or membership, so a precise new relation is proposed.",
+      "english": {
+        "direction": "organism -> anatomical feature it lacks",
+        "relation_id": "organism_to_lacking_anatomical_feature",
+        "answer": "backbone",
+        "canonical_fact": "The lancelet lacks a backbone, the feature that distinguishes vertebrates.",
+        "subject": "lancelet",
+        "prompt_en": "What anatomical feature does the lancelet lack that is the distinguishing characteristic of vertebrates?",
+        "relation_definition": "Anatomical or structural feature that the organism does not possess, optionally with a comparative qualifier naming the group in which the feature is present.",
+        "answer_aliases_en": [
+          "backbone"
+        ],
+        "relation_spec": {
+          "id": "organism_to_lacking_anatomical_feature",
+          "definition": "Anatomical or structural feature that the organism does not possess, optionally with a comparative qualifier naming the group in which the feature is present.",
+          "direction": "organism -> anatomical feature it lacks"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a118cfb09c7b72520978eff7613fa9e96016a20ce7ad200696e3e4cd941a9ef4",
+      "input_sha256": "6d5edf59e8d2e5a1e35a911db535957b74da528c4bc17996f57118328a0d2466",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000081",
+      "decision": "ready",
+      "subject": "inside of all cells",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "cytosol",
+      "canonical_fact": "The inside of all cells contains cytosol.",
+      "prompt_en": "What substance does the interior of all cells contain?",
+      "evidence_quotes": [
+        "What does the inside of all cells also contain?",
+        "cytosol"
+      ],
+      "reason": "Source states the inside of all cells contains cytosol. The whole_to_part relation fits exactly: cytosol is a specified constituent (part) of the cell interior (whole). Direction whole->part is preserved.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cytosol",
+        "canonical_fact": "The inside of all cells contains cytosol.",
+        "subject": "inside of all cells",
+        "prompt_en": "What substance does the interior of all cells contain?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cytosol"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b5ae5f03830eaa82796320ddea4416753f3b6dbccd6b064e6496983a39b12558",
+      "input_sha256": "269ffde2e1f7e81daf9b1c70e34068465ecae5f594c94ece2ff29555cfdfb8aa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000080",
+      "input_sha256": "6d5edf59e8d2e5a1e35a911db535957b74da528c4bc17996f57118328a0d2466",
+      "english": {
+        "direction": "organism -> anatomical feature it lacks",
+        "relation_id": "organism_to_lacking_anatomical_feature",
+        "answer": "backbone",
+        "canonical_fact": "The lancelet lacks a backbone, the feature that distinguishes vertebrates.",
+        "subject": "lancelet",
+        "prompt_en": "What anatomical feature does the lancelet lack that is the distinguishing characteristic of vertebrates?",
+        "relation_definition": "Anatomical or structural feature that the organism does not possess, optionally with a comparative qualifier naming the group in which the feature is present.",
+        "answer_aliases_en": [
+          "backbone"
+        ],
+        "relation_spec": {
+          "id": "organism_to_lacking_anatomical_feature",
+          "definition": "Anatomical or structural feature that the organism does not possess, optionally with a comparative qualifier naming the group in which the feature is present.",
+          "direction": "organism -> anatomical feature it lacks"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a118cfb09c7b72520978eff7613fa9e96016a20ce7ad200696e3e4cd941a9ef4",
+      "translation": {
+        "record_id": "historical:raw_sciq_000080",
+        "subject_zh": "文昌鱼",
+        "prompt_zh": "文昌鱼缺乏什么解剖学特征，而该特征是脊椎动物的区别特征？",
+        "canonical_fact_zh": "文昌鱼缺乏脊柱，而脊柱是区分脊椎动物的特征。",
+        "answer_zh": "脊柱",
+        "answer_aliases_zh": [
+          "脊柱"
+        ]
+      },
+      "translation_sha256": "30bae2987ff038f09b87ab1d723b67250dad500040170262f3b51a0ff909eca6"
+    },
+    {
+      "record_id": "historical:raw_sciq_000081",
+      "input_sha256": "269ffde2e1f7e81daf9b1c70e34068465ecae5f594c94ece2ff29555cfdfb8aa",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cytosol",
+        "canonical_fact": "The inside of all cells contains cytosol.",
+        "subject": "inside of all cells",
+        "prompt_en": "What substance does the interior of all cells contain?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cytosol"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b5ae5f03830eaa82796320ddea4416753f3b6dbccd6b064e6496983a39b12558",
+      "translation": {
+        "record_id": "historical:raw_sciq_000081",
+        "subject_zh": "所有细胞的内部",
+        "prompt_zh": "所有细胞内部含有什么物质？",
+        "canonical_fact_zh": "所有细胞的内部含有细胞质基质。",
+        "answer_zh": "细胞质基质",
+        "answer_aliases_zh": [
+          "细胞质基质"
+        ]
+      },
+      "translation_sha256": "6d7b2af4c8975d0999769b870d455a09cd4e7aca8e8b0fd3dc5c93da93e7135a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000080",
+        "historical:raw_sciq_000081"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9cb839db51488461eda30b7ab83e4c016ba54b205b720c3a1c670591982a4ee3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2010,
+      "first_chunk_seconds": 11.946,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2119,
+        "prompt_tokens": 1689,
+        "total_tokens": 3808,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1621,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d65f10bc694b0ebea79e700c11bf58d684e6e24e351c944b2d89480b39598ea0",
+      "status": "completed",
+      "latency_seconds": 39.02
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000080",
+        "historical:raw_sciq_000081"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3384c946362382b10a37edd75a4fb14d2854e92e34472643a37d9e777beedb3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.016
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000080",
+        "historical:raw_sciq_000081"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a3384c946362382b10a37edd75a4fb14d2854e92e34472643a37d9e777beedb3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1055,
+      "first_chunk_seconds": 5.427,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1076,
+        "prompt_tokens": 848,
+        "total_tokens": 1924,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 856,
+          "text_tokens": 220
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4bb4e9a37960ab29717d5b088ab67c89162be7045f85c5f887571fe21809ad42",
+      "status": "completed",
+      "latency_seconds": 24.829
+    }
+  ],
+  "status": "completed"
+}

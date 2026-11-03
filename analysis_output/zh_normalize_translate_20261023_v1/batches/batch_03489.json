@@ -1,0 +1,168 @@
+{
+  "input_sha256": "f688adb74d9b597293a415dfdd9aa8d0bccaca039abb5efcfee8f01a21131ec2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007044",
+      "decision": "ready",
+      "subject": "silo home",
+      "relation_id": "entity_to_insulating_medium",
+      "relation_definition": "The natural or artificial medium that provides thermal insulation to a specified entity; retain stated scope (e.g., building, container).",
+      "direction": "entity -> insulating medium",
+      "answer": "surface of earth",
+      "canonical_fact": "A silo home is insulated by the surface of earth.",
+      "prompt_en": "What medium insulates a silo home?",
+      "evidence_quotes": [
+        "What insulates a silo home?",
+        "surface of earth"
+      ],
+      "reason": "The source question explicitly asks what insulates a silo home and the source answer is 'surface of earth.' No existing catalog relation fits exactly: entity_to_material covers composition of an entity, not the insulating medium surrounding it. A new precise relation entity_to_insulating_medium is proposed. Both evidence quotes are literal substrings of source_question and source_answer respectively.",
+      "english": {
+        "prompt_en": "What medium insulates a silo home?",
+        "relation_definition": "The natural or artificial medium that provides thermal insulation to a specified entity; retain stated scope (e.g., building, container).",
+        "answer": "surface of earth",
+        "canonical_fact": "A silo home is insulated by the surface of earth.",
+        "direction": "entity -> insulating medium",
+        "relation_id": "entity_to_insulating_medium",
+        "subject": "silo home",
+        "answer_aliases_en": [
+          "surface of earth"
+        ],
+        "relation_spec": {
+          "id": "entity_to_insulating_medium",
+          "definition": "The natural or artificial medium that provides thermal insulation to a specified entity; retain stated scope (e.g., building, container).",
+          "direction": "entity -> insulating medium"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d17b94728bc4726082643c5de56f7b9bf3bd225bfa9111bf7fd9711e0a2374e8",
+      "input_sha256": "803a822cd45b83c0fd91390451b80bfe60dfdcd49fb32a3f197ec52dfc5579dd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007046",
+      "decision": "ready",
+      "subject": "drinking water",
+      "relation_id": "substance_to_physiological_effect",
+      "relation_definition": "The typical physiological effect a specified substance produces in a stated biological subject group, retaining stated scope (e.g., most humans).",
+      "direction": "substance -> physiological effect",
+      "answer": "need to urinate",
+      "canonical_fact": "Drinking water causes the need to urinate in most humans.",
+      "prompt_en": "What physiological effect does drinking water have in most humans?",
+      "evidence_quotes": [
+        "What does drinking water effect in most humans?",
+        "need to urinate"
+      ],
+      "reason": "The source question asks the effect of drinking water in most humans and the source answer is 'need to urinate.' No existing catalog relation covers a substance-to-physiological-effect mapping; a new precise relation substance_to_physiological_effect is proposed. Both evidence quotes are literal substrings of source_question and source_answer respectively.",
+      "english": {
+        "prompt_en": "What physiological effect does drinking water have in most humans?",
+        "relation_definition": "The typical physiological effect a specified substance produces in a stated biological subject group, retaining stated scope (e.g., most humans).",
+        "answer": "need to urinate",
+        "canonical_fact": "Drinking water causes the need to urinate in most humans.",
+        "direction": "substance -> physiological effect",
+        "relation_id": "substance_to_physiological_effect",
+        "subject": "drinking water",
+        "answer_aliases_en": [
+          "need to urinate"
+        ],
+        "relation_spec": {
+          "id": "substance_to_physiological_effect",
+          "definition": "The typical physiological effect a specified substance produces in a stated biological subject group, retaining stated scope (e.g., most humans).",
+          "direction": "substance -> physiological effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e41d455ac8c4d0ea5d48644e95af62aa155787482c5d1810617ac3786323169c",
+      "input_sha256": "dfe13b2c25e8a3de8a4c88c05b9885d1ae25af9c38e4836bf8e315956a69e69a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007044",
+        "historical:raw_commonsense_qa_007046"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e40eb88ab2cb07443300ac4f4dcb9dd8eae8be38daa6b8bb177851aabf0d9cf6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2148,
+      "first_chunk_seconds": 4.473,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2318,
+        "prompt_tokens": 1614,
+        "total_tokens": 3932,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1791,
+          "text_tokens": 527
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6fbf21213773a7482cd138ee8b8691e5eac4f7150601a350fb2beee5f2fd263b",
+      "status": "completed",
+      "latency_seconds": 42.105
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007044",
+        "historical:raw_commonsense_qa_007046"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5889eecca84dd18b0c1c81bd59e05dd85cbc2c47878f8c5edb39f87e94175ba5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.173
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007044",
+        "historical:raw_commonsense_qa_007046"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5889eecca84dd18b0c1c81bd59e05dd85cbc2c47878f8c5edb39f87e94175ba5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 8.68,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007044",
+        "historical:raw_commonsense_qa_007046"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5889eecca84dd18b0c1c81bd59e05dd85cbc2c47878f8c5edb39f87e94175ba5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.432
+    }
+  ],
+  "status": "failed"
+}

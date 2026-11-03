@@ -1,0 +1,242 @@
+{
+  "input_sha256": "48782d33ce668b1d1ad84842f59fa008ecf62b64163424f3f346e696db64ed12",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000107",
+      "decision": "ready",
+      "subject": "oxygen",
+      "relation_id": "chemical_co_reactant",
+      "relation_definition": "In a specified chemical reaction, the other reactant that combines with the subject to produce the named product.",
+      "direction": "reactant -> co-reactant (for stated product)",
+      "answer": "hydrogen",
+      "canonical_fact": "Oxygen combines with hydrogen to form water.",
+      "prompt_en": "What element combines with oxygen to form water?",
+      "evidence_quotes": [
+        "Oxygen is combined with what to form water?",
+        "hydrogen"
+      ],
+      "reason": "Source question and answer directly state that oxygen is combined with hydrogen to form water. No catalog relation precisely captures a co-reactant relationship (entity_to_material is about composition of a whole, not a reaction partner). Propose 'chemical_co_reactant' to capture the specific reaction-partner direction with the product named. Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "reactant -> co-reactant (for stated product)",
+        "relation_id": "chemical_co_reactant",
+        "answer": "hydrogen",
+        "canonical_fact": "Oxygen combines with hydrogen to form water.",
+        "subject": "oxygen",
+        "prompt_en": "What element combines with oxygen to form water?",
+        "relation_definition": "In a specified chemical reaction, the other reactant that combines with the subject to produce the named product.",
+        "answer_aliases_en": [
+          "hydrogen"
+        ],
+        "relation_spec": {
+          "id": "chemical_co_reactant",
+          "definition": "In a specified chemical reaction, the other reactant that combines with the subject to produce the named product.",
+          "direction": "reactant -> co-reactant (for stated product)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "084b8c8935e9248136bd60f62cbd90b728ff7bee3b61c2b3217421debbd905ce",
+      "input_sha256": "3a4b88014730bde0bbfe17bd6c23df1c62f8215b98d77e2689cff8dc033fda6c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000108",
+      "decision": "ready",
+      "subject": "nitrogen and oxygen at high temperatures",
+      "relation_id": "reaction_to_product",
+      "relation_definition": "The chemical product or product class formed when specified reactants combine under stated conditions.",
+      "direction": "reactants + conditions -> product",
+      "answer": "nitrogen oxides",
+      "canonical_fact": "Nitrogen oxides form when nitrogen and oxygen combine at high temperatures.",
+      "prompt_en": "What forms when nitrogen and oxygen combine at high temperatures?",
+      "evidence_quotes": [
+        "What forms when nitrogen and oxygen combine at high temperatures?",
+        "nitrogen oxides"
+      ],
+      "reason": "Source question asks what forms when nitrogen and oxygen combine at high temperatures; answer is nitrogen oxides. No existing catalog relation covers a reaction-conditions-to-product mapping. Propose 'reaction_to_product' with explicit reactants and conditions in the subject. Both model annotations agree on the extraction. Answer is a compound class, not a single compound, preserved as stated.",
+      "english": {
+        "direction": "reactants + conditions -> product",
+        "relation_id": "reaction_to_product",
+        "answer": "nitrogen oxides",
+        "canonical_fact": "Nitrogen oxides form when nitrogen and oxygen combine at high temperatures.",
+        "subject": "nitrogen and oxygen at high temperatures",
+        "prompt_en": "What forms when nitrogen and oxygen combine at high temperatures?",
+        "relation_definition": "The chemical product or product class formed when specified reactants combine under stated conditions.",
+        "answer_aliases_en": [
+          "nitrogen oxides"
+        ],
+        "relation_spec": {
+          "id": "reaction_to_product",
+          "definition": "The chemical product or product class formed when specified reactants combine under stated conditions.",
+          "direction": "reactants + conditions -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4cf6433c1b88b179ea2ca12ffa28e48b7c0862785b937ba3e8deb4de8d0a88d2",
+      "input_sha256": "00e134b9d1cd3225dd03e7d55e63a11646a23f76344b1b4affc7d64a75929cb8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000107",
+      "input_sha256": "3a4b88014730bde0bbfe17bd6c23df1c62f8215b98d77e2689cff8dc033fda6c",
+      "english": {
+        "direction": "reactant -> co-reactant (for stated product)",
+        "relation_id": "chemical_co_reactant",
+        "answer": "hydrogen",
+        "canonical_fact": "Oxygen combines with hydrogen to form water.",
+        "subject": "oxygen",
+        "prompt_en": "What element combines with oxygen to form water?",
+        "relation_definition": "In a specified chemical reaction, the other reactant that combines with the subject to produce the named product.",
+        "answer_aliases_en": [
+          "hydrogen"
+        ],
+        "relation_spec": {
+          "id": "chemical_co_reactant",
+          "definition": "In a specified chemical reaction, the other reactant that combines with the subject to produce the named product.",
+          "direction": "reactant -> co-reactant (for stated product)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "084b8c8935e9248136bd60f62cbd90b728ff7bee3b61c2b3217421debbd905ce",
+      "translation": {
+        "record_id": "historical:raw_sciq_000107",
+        "subject_zh": "氧气",
+        "prompt_zh": "什么元素与氧气结合生成水？",
+        "canonical_fact_zh": "氧气与氢结合生成水。",
+        "answer_zh": "氢",
+        "answer_aliases_zh": [
+          "氢"
+        ]
+      },
+      "translation_sha256": "4ebbb7d9f8e3c5374a6219c8804be589d135bc09b03fd278b1cf9c8dd6804c5b"
+    },
+    {
+      "record_id": "historical:raw_sciq_000108",
+      "input_sha256": "00e134b9d1cd3225dd03e7d55e63a11646a23f76344b1b4affc7d64a75929cb8",
+      "english": {
+        "direction": "reactants + conditions -> product",
+        "relation_id": "reaction_to_product",
+        "answer": "nitrogen oxides",
+        "canonical_fact": "Nitrogen oxides form when nitrogen and oxygen combine at high temperatures.",
+        "subject": "nitrogen and oxygen at high temperatures",
+        "prompt_en": "What forms when nitrogen and oxygen combine at high temperatures?",
+        "relation_definition": "The chemical product or product class formed when specified reactants combine under stated conditions.",
+        "answer_aliases_en": [
+          "nitrogen oxides"
+        ],
+        "relation_spec": {
+          "id": "reaction_to_product",
+          "definition": "The chemical product or product class formed when specified reactants combine under stated conditions.",
+          "direction": "reactants + conditions -> product"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4cf6433c1b88b179ea2ca12ffa28e48b7c0862785b937ba3e8deb4de8d0a88d2",
+      "translation": {
+        "record_id": "historical:raw_sciq_000108",
+        "subject_zh": "高温下的氮和氧",
+        "prompt_zh": "高温下氮和氧结合会生成什么？",
+        "canonical_fact_zh": "高温下氮和氧结合会形成氮氧化物。",
+        "answer_zh": "氮氧化物",
+        "answer_aliases_zh": [
+          "氮氧化物"
+        ]
+      },
+      "translation_sha256": "992fd30ef953b19f2727e8313ef8d10a04f01e74bee160e3db9ec7dc9e065719"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000107",
+        "historical:raw_sciq_000108"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "26a4f2706c1d755a848b6bd25148cd86ad836421aade9cf0d8d5ea1c82331764",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 90.118
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000107",
+        "historical:raw_sciq_000108"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "26a4f2706c1d755a848b6bd25148cd86ad836421aade9cf0d8d5ea1c82331764",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.643
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000107",
+        "historical:raw_sciq_000108"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "26a4f2706c1d755a848b6bd25148cd86ad836421aade9cf0d8d5ea1c82331764",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2140,
+      "first_chunk_seconds": 2.858,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2256,
+        "prompt_tokens": 1683,
+        "total_tokens": 3939,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1732,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4645b8ace261be8836701205e0e3654dd6a387d3955c14e0012c6c58794aa3d8",
+      "status": "completed",
+      "latency_seconds": 44.315
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000107",
+        "historical:raw_sciq_000108"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "19bf1ac66c92c23f84e731d323155fd14202058addd972a5d1d8cc8cc4c3080a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1053,
+      "first_chunk_seconds": 1.602,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1085,
+        "prompt_tokens": 835,
+        "total_tokens": 1920,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 874,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b95e206e7170e838acf2eacb0a391170f8e2cd1d7c7e4f40adc63b0dbbd3776b",
+      "status": "completed",
+      "latency_seconds": 34.739
+    }
+  ],
+  "status": "completed"
+}

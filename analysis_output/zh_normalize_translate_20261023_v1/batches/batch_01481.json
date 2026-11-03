@@ -1,0 +1,215 @@
+{
+  "input_sha256": "3af9fe2631f599f431ccb345003fe65312bf7a55792a2d9587fa657391113917",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9dfc157a0e7934fc1677",
+      "decision": "ready",
+      "subject": "Derek Shepherd (Grey's Anatomy)",
+      "relation_id": "event_to_episode",
+      "relation_definition": "The episode title in which a specific identified narrative event or scene occurs within a specified series.",
+      "direction": "specific narrative event in a series -> episode title",
+      "answer": "sanctuary",
+      "canonical_fact": "Derek Shepherd gets shot in the Grey's Anatomy episode 'Sanctuary'.",
+      "prompt_en": "In which Grey's Anatomy episode does Derek Shepherd get shot?",
+      "evidence_quotes": [
+        "sanctuary",
+        "the episode where derek gets shot"
+      ],
+      "reason": "Source question and answer clearly identify 'sanctuary' as the episode where Derek Shepherd is shot. No catalog relation covers 'narrative event -> episode', so a precise new relation event_to_episode is proposed.",
+      "english": {
+        "answer": "sanctuary",
+        "relation_id": "event_to_episode",
+        "prompt_en": "In which Grey's Anatomy episode does Derek Shepherd get shot?",
+        "direction": "specific narrative event in a series -> episode title",
+        "subject": "Derek Shepherd (Grey's Anatomy)",
+        "canonical_fact": "Derek Shepherd gets shot in the Grey's Anatomy episode 'Sanctuary'.",
+        "relation_definition": "The episode title in which a specific identified narrative event or scene occurs within a specified series.",
+        "answer_aliases_en": [
+          "sanctuary"
+        ],
+        "relation_spec": {
+          "id": "event_to_episode",
+          "definition": "The episode title in which a specific identified narrative event or scene occurs within a specified series.",
+          "direction": "specific narrative event in a series -> episode title"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "6cdfc030d15078b4f1b483f90079b0d4df48c0ac6415c0a51290df4a37f503eb",
+      "input_sha256": "9f94a5d46940497ba55f2df4c6e98e02e82a03f7ae61b08e2bb845295ca4aabd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9e159d064c16c54c2371",
+      "decision": "ready",
+      "subject": "Gupta Empire",
+      "relation_id": "empire_to_founder",
+      "relation_definition": "The person historically or traditionally considered the founder of a specified empire or dynasty, retaining 'considered' qualifiers.",
+      "direction": "empire/dynasty -> founder",
+      "answer": "Chandragupta I",
+      "canonical_fact": "Chandragupta I is considered the founder of the Gupta Empire.",
+      "prompt_en": "Who is considered the founder of the Gupta Empire?",
+      "evidence_quotes": [
+        "chandragupta –i",
+        "founder of the gupta empire"
+      ],
+      "reason": "Source question and answer identify Chandragupta I as the considered founder of the Gupta Empire. written_work_to_author is limited to written works and does not fit an empire; no other catalog relation applies, so a precise new relation empire_to_founder is proposed.",
+      "english": {
+        "answer": "Chandragupta I",
+        "relation_id": "empire_to_founder",
+        "prompt_en": "Who is considered the founder of the Gupta Empire?",
+        "direction": "empire/dynasty -> founder",
+        "subject": "Gupta Empire",
+        "canonical_fact": "Chandragupta I is considered the founder of the Gupta Empire.",
+        "relation_definition": "The person historically or traditionally considered the founder of a specified empire or dynasty, retaining 'considered' qualifiers.",
+        "answer_aliases_en": [
+          "Chandragupta I",
+          "chandragupta –i"
+        ],
+        "relation_spec": {
+          "id": "empire_to_founder",
+          "definition": "The person historically or traditionally considered the founder of a specified empire or dynasty, retaining 'considered' qualifiers.",
+          "direction": "empire/dynasty -> founder"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2b29408e6aba564748d2266625aaa0970b64861cced9f4e4032dcf2251c2d91f",
+      "input_sha256": "662c8322c47fb3ae1cb99c63a976bd5ed7c1ff53fbfb920f1a10af411dec4750",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9dfc157a0e7934fc1677",
+        "public:pbf_9e159d064c16c54c2371"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6f12678ce5452f7874af759dc364cb9621911c0fbe302ab7d1b018cdf299069f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2158,
+      "first_chunk_seconds": 33.282,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2193,
+        "prompt_tokens": 1603,
+        "total_tokens": 3796,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1683,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "57605c663552ee52b3d7840f468d14197de09b95acdf990577d86e46f79f1ca1",
+      "status": "completed",
+      "latency_seconds": 52.583
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9dfc157a0e7934fc1677",
+        "public:pbf_9e159d064c16c54c2371"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3555c96764c27625abe32fe27af5114294bc1836949fa3aee5b2dec9fdfe7609",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1701,
+      "first_chunk_seconds": 16.212,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1870,
+        "prompt_tokens": 886,
+        "total_tokens": 2756,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1668,
+          "text_tokens": 202
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d75bf3d4638dd9a225196d338f2c00a54e4ed491c506bbaf2fe9d0d181688c75",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 33.106,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9dfc157a0e7934fc1677",
+        "public:pbf_9e159d064c16c54c2371"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "15b4b2bb775e2df7175ab25fcef69ed585b1fd5ea95cf693e11fbb21cb0d73ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1969,
+      "first_chunk_seconds": 34.455,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2020,
+        "prompt_tokens": 903,
+        "total_tokens": 2923,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1726,
+          "text_tokens": 294
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b1dc9ae6dbc1540ac2a2d55d07d19ba841ee8d70130f5498058283a5f8d446d2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 50.895,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9dfc157a0e7934fc1677",
+        "public:pbf_9e159d064c16c54c2371"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "15b4b2bb775e2df7175ab25fcef69ed585b1fd5ea95cf693e11fbb21cb0d73ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1735,
+      "first_chunk_seconds": 32.882,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1760,
+        "prompt_tokens": 903,
+        "total_tokens": 2663,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1507,
+          "text_tokens": 253
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        }
+      },
+      "content_sha256": "58bf17aee22ad55d79c3296a9ad8d9ca19132102f2bd535a411d3df75c8b9e0d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 46.938,
+      "validation_code": "invalid_records_schema"
+    }
+  ],
+  "status": "failed"
+}

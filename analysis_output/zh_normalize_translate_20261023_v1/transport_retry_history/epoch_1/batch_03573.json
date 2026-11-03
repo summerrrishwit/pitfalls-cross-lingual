@@ -1,0 +1,185 @@
+{
+  "input_sha256": "826c065e871dfa740be0090cce9c2e4f84116a16a4d8e97247041809d38e8dc3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000467",
+      "decision": "ready",
+      "subject": "haploid nuclei contributed by each parent in most fungi",
+      "relation_id": "entity_to_process",
+      "relation_definition": "A specific biological or physical process or behavior that an entity undergoes or explicitly does not undergo in a stated context; retain qualifiers and negation.",
+      "direction": "entity -> process",
+      "answer": "fuse",
+      "canonical_fact": "In most fungi, the haploid nuclei contributed by each parent do not fuse right away.",
+      "prompt_en": "In most fungi, what action do the haploid nuclei contributed by each parent not perform right away?",
+      "evidence_quotes": [
+        "do not do what right away",
+        "fuse"
+      ],
+      "reason": "Source question and answer together form a complete negated-process statement about fungal nuclear biology. No catalog relation captures a process/behavior fact with explicit negation, so a new relation entity_to_process is proposed. Answer 'fuse' is the literal source_answer.",
+      "english": {
+        "prompt_en": "In most fungi, what action do the haploid nuclei contributed by each parent not perform right away?",
+        "relation_definition": "A specific biological or physical process or behavior that an entity undergoes or explicitly does not undergo in a stated context; retain qualifiers and negation.",
+        "answer": "fuse",
+        "canonical_fact": "In most fungi, the haploid nuclei contributed by each parent do not fuse right away.",
+        "direction": "entity -> process",
+        "relation_id": "entity_to_process",
+        "subject": "haploid nuclei contributed by each parent in most fungi",
+        "answer_aliases_en": [
+          "fuse"
+        ],
+        "relation_spec": {
+          "id": "entity_to_process",
+          "definition": "A specific biological or physical process or behavior that an entity undergoes or explicitly does not undergo in a stated context; retain qualifiers and negation.",
+          "direction": "entity -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b713acaabbe2d25154f2b1768c94d8e9d3abfa8f8d5841c7b34b3aadfa32ebb2",
+      "input_sha256": "2b54c4d36ac2a437db567b6a9d9c2f4eadf3c2686783fc0b7ee4c2da16500cce",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000480",
+      "decision": "ready",
+      "subject": "diamond",
+      "relation_id": "entity_to_property",
+      "relation_definition": "A specific property, structural feature, or material characteristic of an entity that explains or causes a stated attribute; retain the explanatory link and scope.",
+      "direction": "entity -> property",
+      "answer": "chemical bonds",
+      "canonical_fact": "The chemical bonds of diamond are the property that makes it so hard.",
+      "prompt_en": "Which property of diamond makes it so hard?",
+      "evidence_quotes": [
+        "Which property of diamond makes it so hard?",
+        "chemical bonds"
+      ],
+      "reason": "Source directly asks which property explains diamond's hardness and answers 'chemical bonds'. No catalog relation (entity_to_material covers composition, not causal property) captures a causal/ explanatory property link, so a new relation entity_to_property is proposed. Answer 'chemical bonds' is the literal source_answer.",
+      "english": {
+        "prompt_en": "Which property of diamond makes it so hard?",
+        "relation_definition": "A specific property, structural feature, or material characteristic of an entity that explains or causes a stated attribute; retain the explanatory link and scope.",
+        "answer": "chemical bonds",
+        "canonical_fact": "The chemical bonds of diamond are the property that makes it so hard.",
+        "direction": "entity -> property",
+        "relation_id": "entity_to_property",
+        "subject": "diamond",
+        "answer_aliases_en": [
+          "chemical bonds"
+        ],
+        "relation_spec": {
+          "id": "entity_to_property",
+          "definition": "A specific property, structural feature, or material characteristic of an entity that explains or causes a stated attribute; retain the explanatory link and scope.",
+          "direction": "entity -> property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "71cc67ca5488ee71b67e5e99006d8424ba38c51cec2d7828108b3690668d74ad",
+      "input_sha256": "b40079e2b75b978354a95557de5b0019be7b7ec42e25751afa5e0263b8b37352",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6004e2317d454a13ac7241112561a4accad2874bc5a482806ca527b7dc2d06ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 80.734
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6004e2317d454a13ac7241112561a4accad2874bc5a482806ca527b7dc2d06ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 88.732
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6004e2317d454a13ac7241112561a4accad2874bc5a482806ca527b7dc2d06ba",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2401,
+      "first_chunk_seconds": 64.267,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2453,
+        "prompt_tokens": 1599,
+        "total_tokens": 4052,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1948,
+          "text_tokens": 505
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "86ec69986a3c04117f39cb968290320080f797e08b333c7b0e51e024c14aebe5",
+      "status": "completed",
+      "latency_seconds": 101.011
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "37d6a1b34d6342e5a2c76bb41b5cb37b89e4d28dce308a3cdcbd1a5816fe4303",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 28.585
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "37d6a1b34d6342e5a2c76bb41b5cb37b89e4d28dce308a3cdcbd1a5816fe4303",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 16.6
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000467",
+        "historical:raw_sciq_000480"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "37d6a1b34d6342e5a2c76bb41b5cb37b89e4d28dce308a3cdcbd1a5816fe4303",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.352
+    }
+  ],
+  "status": "failed"
+}

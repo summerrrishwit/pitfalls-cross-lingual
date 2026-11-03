@@ -1,0 +1,159 @@
+{
+  "input_sha256": "3c807c9341e7c1f9e3bb320e28b3433e1f8c951dbdcb824aaee6d9a1dffab1c4",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0c3c4612ed8a99ea9905",
+      "decision": "ready",
+      "subject": "Sikhs",
+      "relation_id": "group_to_primary_festival",
+      "relation_definition": "The most important or primary festival associated with a specified religious or cultural group.",
+      "direction": "religious/cultural group -> most important festival",
+      "answer": "Baisakhi Day",
+      "canonical_fact": "The most important festival for Sikhs is Baisakhi Day.",
+      "prompt_en": "The most important festival for Sikhs is",
+      "evidence_quotes": [
+        "most important festival for Sikhs",
+        "Baisakhi Day"
+      ],
+      "reason": "No catalog relation captures a group's primary festival; proposed group_to_primary_festival with explicit direction. Answer and canonical fact preserved from source; prompt is option-free and omits the answer.",
+      "english": {
+        "subject": "Sikhs",
+        "relation_definition": "The most important or primary festival associated with a specified religious or cultural group.",
+        "answer": "Baisakhi Day",
+        "canonical_fact": "The most important festival for Sikhs is Baisakhi Day.",
+        "direction": "religious/cultural group -> most important festival",
+        "relation_id": "group_to_primary_festival",
+        "prompt_en": "The most important festival for Sikhs is",
+        "answer_aliases_en": [
+          "Baisakhi Day"
+        ],
+        "relation_spec": {
+          "id": "group_to_primary_festival",
+          "definition": "The most important or primary festival associated with a specified religious or cultural group.",
+          "direction": "religious/cultural group -> most important festival"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "35ccf0fc49b592fa86609d945f18614c51ed832e50732cc823e3c6ce4fe9b3c7",
+      "input_sha256": "877d1601d730ba70e169fc92e0f649b45451b06eff29efb17f5491e71801e3f5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0c5a0ca259f7fc7151ce",
+      "decision": "ready",
+      "subject": "Statue of Liberty",
+      "relation_id": "monument_to_donor",
+      "relation_definition": "The country, organization, or individual that gifted or donated the specified monument to a named recipient.",
+      "direction": "monument -> donor",
+      "answer": "France",
+      "canonical_fact": "France gave the Statue of Liberty to the US.",
+      "prompt_en": "The Statue of Liberty was given to the US by",
+      "evidence_quotes": [
+        "who gave the statue of liberty to the us",
+        "France"
+      ],
+      "reason": "No catalog relation expresses a gift/donation donor for a monument; proposed monument_to_donor with explicit direction. Answer preserved from source; prompt is option-free and does not contain 'France'.",
+      "english": {
+        "subject": "Statue of Liberty",
+        "relation_definition": "The country, organization, or individual that gifted or donated the specified monument to a named recipient.",
+        "answer": "France",
+        "canonical_fact": "France gave the Statue of Liberty to the US.",
+        "direction": "monument -> donor",
+        "relation_id": "monument_to_donor",
+        "prompt_en": "The Statue of Liberty was given to the US by",
+        "answer_aliases_en": [
+          "France",
+          "Republic of France",
+          "FR",
+          "République française",
+          "FRA",
+          "French Republic",
+          "La France"
+        ],
+        "relation_spec": {
+          "id": "monument_to_donor",
+          "definition": "The country, organization, or individual that gifted or donated the specified monument to a named recipient.",
+          "direction": "monument -> donor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3190728bceb160e19773d86a893e0b50500827bab71bdb0e2a679d59635357ff",
+      "input_sha256": "cbe5d20e47e177f2f0d3aa39313c634a5bb618a7974ec0ea7a992686252c3d8e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0c3c4612ed8a99ea9905",
+        "public:pbf_0c5a0ca259f7fc7151ce"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fd8b24c481b7a20c1907a769dd3116e52bb80b4aba2e277a212249e66aea994b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2328,
+        "prompt_tokens": 1602,
+        "total_tokens": 3930,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1867,
+          "text_tokens": 461
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bb595d3ad9481cb4ea4a9c351eecf77e03b52e7e6964b9403d6c743c1af90a99",
+      "status": "completed",
+      "latency_seconds": 40.951
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0c3c4612ed8a99ea9905",
+        "public:pbf_0c5a0ca259f7fc7151ce"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ba61384bd74e610d58e359f955d73707b60be29b04597789393347e90e3db5f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 152.661
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0c3c4612ed8a99ea9905",
+        "public:pbf_0c5a0ca259f7fc7151ce"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "ba61384bd74e610d58e359f955d73707b60be29b04597789393347e90e3db5f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.017
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0c3c4612ed8a99ea9905",
+        "public:pbf_0c5a0ca259f7fc7151ce"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "ba61384bd74e610d58e359f955d73707b60be29b04597789393347e90e3db5f9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.146
+    }
+  ],
+  "status": "failed"
+}

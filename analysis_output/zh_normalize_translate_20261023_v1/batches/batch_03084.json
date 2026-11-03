@@ -1,0 +1,229 @@
+{
+  "input_sha256": "fc59e0775ed3cefec1186215e787875e55ac6926562efb22af44270e3ef7b918",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000621",
+      "decision": "ready",
+      "subject": "organisms on earth that are the most diverse and are often classified by shape or by how they react to a Gram stain",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "bacteria",
+      "canonical_fact": "Bacteria are the most diverse organisms on earth, often classified by shape or how they react to gram stain.",
+      "prompt_en": "What are the most diverse organisms on earth, often classified by shape or by how they react to a Gram stain?",
+      "evidence_quotes": [
+        "the most diverse organisms on earth",
+        "classified by shape or how they react to gram stain",
+        "bacteria"
+      ],
+      "reason": "The source question supplies a defining description (most diverse organisms on earth, classified by shape or Gram stain reaction) and the source answer 'bacteria' is the conventional term uniquely fitting that description. This matches description_to_term exactly; no conflict with existing extractions.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "organisms on earth that are the most diverse and are often classified by shape or by how they react to a Gram stain",
+        "relation_id": "description_to_term",
+        "prompt_en": "What are the most diverse organisms on earth, often classified by shape or by how they react to a Gram stain?",
+        "answer": "bacteria",
+        "canonical_fact": "Bacteria are the most diverse organisms on earth, often classified by shape or how they react to gram stain.",
+        "answer_aliases_en": [
+          "bacteria"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2cb950e702810bdc697c697b66767d783f8336f649bb8061b54799489f0444db",
+      "input_sha256": "2ebbc3a3f5f0d60e4ba29b242632d48bf6de51ac7a58a227d776fc153560db4c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000622",
+      "decision": "ready",
+      "subject": "spongy bone",
+      "relation_id": "entity_to_structural_property",
+      "relation_definition": "A structural or compositional attribute of a specified entity, retaining the causal context that explains a stated characteristic (e.g., why the entity is lighter or less dense).",
+      "direction": "entity -> structural property",
+      "answer": "porous",
+      "canonical_fact": "Spongy bone is lighter and less dense than compact bone because it is porous.",
+      "prompt_en": "Spongy bone is found inside bones and is lighter and less dense than compact bone because it is what?",
+      "evidence_quotes": [
+        "Spongy bone is found inside bones and is lighter and less dense than compact bone because it is",
+        "porous"
+      ],
+      "reason": "No existing catalog relation captures 'entity -> structural attribute explaining a property.' entity_to_material covers composition but not porosity as a structural property; entity_to_class excludes arbitrary attributes. Proposing new precise relation entity_to_structural_property. Source clearly supports that spongy bone is porous, which causally explains its lower density relative to compact bone.",
+      "english": {
+        "relation_definition": "A structural or compositional attribute of a specified entity, retaining the causal context that explains a stated characteristic (e.g., why the entity is lighter or less dense).",
+        "direction": "entity -> structural property",
+        "subject": "spongy bone",
+        "relation_id": "entity_to_structural_property",
+        "prompt_en": "Spongy bone is found inside bones and is lighter and less dense than compact bone because it is what?",
+        "answer": "porous",
+        "canonical_fact": "Spongy bone is lighter and less dense than compact bone because it is porous.",
+        "answer_aliases_en": [
+          "porous"
+        ],
+        "relation_spec": {
+          "id": "entity_to_structural_property",
+          "definition": "A structural or compositional attribute of a specified entity, retaining the causal context that explains a stated characteristic (e.g., why the entity is lighter or less dense).",
+          "direction": "entity -> structural property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "254fc0e17edc17b6132fb61048b60d13e68c52b875ca11213fb7fbaa82ba05d2",
+      "input_sha256": "9ab8ced113ee33f3b0e3ec0167cd45bf1d2b6edb82ea527fc0758d80cdaa5e23",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000621",
+      "input_sha256": "2ebbc3a3f5f0d60e4ba29b242632d48bf6de51ac7a58a227d776fc153560db4c",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "organisms on earth that are the most diverse and are often classified by shape or by how they react to a Gram stain",
+        "relation_id": "description_to_term",
+        "prompt_en": "What are the most diverse organisms on earth, often classified by shape or by how they react to a Gram stain?",
+        "answer": "bacteria",
+        "canonical_fact": "Bacteria are the most diverse organisms on earth, often classified by shape or how they react to gram stain.",
+        "answer_aliases_en": [
+          "bacteria"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2cb950e702810bdc697c697b66767d783f8336f649bb8061b54799489f0444db",
+      "translation": {
+        "record_id": "historical:raw_sciq_000621",
+        "subject_zh": "地球上种类最为多样、常按形态或革兰氏染色反应进行分类的生物",
+        "prompt_zh": "地球上种类最为多样、常按形态或革兰氏染色反应进行分类的生物是什么？",
+        "canonical_fact_zh": "细菌是地球上种类最为多样的生物，常按形态或革兰氏染色反应进行分类。",
+        "answer_zh": "细菌",
+        "answer_aliases_zh": [
+          "细菌"
+        ]
+      },
+      "translation_sha256": "660ff0a2d18f695ddab68dfa9733473e53b4a72778bc07de11a0b9f0de687db6"
+    },
+    {
+      "record_id": "historical:raw_sciq_000622",
+      "input_sha256": "9ab8ced113ee33f3b0e3ec0167cd45bf1d2b6edb82ea527fc0758d80cdaa5e23",
+      "english": {
+        "relation_definition": "A structural or compositional attribute of a specified entity, retaining the causal context that explains a stated characteristic (e.g., why the entity is lighter or less dense).",
+        "direction": "entity -> structural property",
+        "subject": "spongy bone",
+        "relation_id": "entity_to_structural_property",
+        "prompt_en": "Spongy bone is found inside bones and is lighter and less dense than compact bone because it is what?",
+        "answer": "porous",
+        "canonical_fact": "Spongy bone is lighter and less dense than compact bone because it is porous.",
+        "answer_aliases_en": [
+          "porous"
+        ],
+        "relation_spec": {
+          "id": "entity_to_structural_property",
+          "definition": "A structural or compositional attribute of a specified entity, retaining the causal context that explains a stated characteristic (e.g., why the entity is lighter or less dense).",
+          "direction": "entity -> structural property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "254fc0e17edc17b6132fb61048b60d13e68c52b875ca11213fb7fbaa82ba05d2",
+      "translation": {
+        "record_id": "historical:raw_sciq_000622",
+        "subject_zh": "骨松质",
+        "prompt_zh": "骨松质位于骨骼内部，比骨密质更轻、密度更低，这是因为它具有什么特性？",
+        "canonical_fact_zh": "骨松质比骨密质更轻、密度更低，因为它具有多孔性。",
+        "answer_zh": "多孔",
+        "answer_aliases_zh": [
+          "多孔"
+        ]
+      },
+      "translation_sha256": "6ca79ebbd09b1be6f31cbbef50b2d53b0c6e882cac637ad9f6bd4447c02e6d88"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000621",
+        "historical:raw_sciq_000622"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d881fbbdf3a49996abed8ef6ed30bfdf701b64253c0911ea8841bc9805a20e3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.001
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000621",
+        "historical:raw_sciq_000622"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5d881fbbdf3a49996abed8ef6ed30bfdf701b64253c0911ea8841bc9805a20e3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2097,
+      "first_chunk_seconds": 0.992,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2124,
+        "prompt_tokens": 1796,
+        "total_tokens": 3920,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1541,
+          "text_tokens": 583
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "15bcc7061a8f1bb00d2746948f92925d7ff511f418aa4cb2d81d6e6bb455f851",
+      "status": "completed",
+      "latency_seconds": 72.336
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000621",
+        "historical:raw_sciq_000622"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eae13c7211db9d1e7784d07bba8735c7be70434e202fa30c928c8696ae619264",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 988,
+      "first_chunk_seconds": 1.455,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1070,
+        "prompt_tokens": 903,
+        "total_tokens": 1973,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 806,
+          "text_tokens": 264
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a57ff3898cbc8d6cb6ac48245c7efffb03a01d01b12ba05faabdb4209adc9dce",
+      "status": "completed",
+      "latency_seconds": 90.278
+    }
+  ],
+  "status": "completed"
+}

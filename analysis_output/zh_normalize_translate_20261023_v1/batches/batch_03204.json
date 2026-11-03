@@ -1,0 +1,157 @@
+{
+  "input_sha256": "eaebd60e789001aecb48198585a86339b91259f1eb4960852d1a23e2f7d4b1ec",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000882",
+      "decision": "ready",
+      "subject": "a rock that contains important minerals",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "ore",
+      "canonical_fact": "A rock that contains important minerals is called an ore.",
+      "prompt_en": "What is a rock that contains important minerals called?",
+      "evidence_quotes": [
+        "rock that contains important minerals",
+        "ore"
+      ],
+      "reason": "The source question supplies a defining description ('a rock that contains important minerals') and asks for the conventional term; the source answer is the single-word term 'ore'. This matches the catalog relation description_to_term exactly. Both old extractions agree on subject, answer, and canonical fact; no conflict with source.",
+      "english": {
+        "prompt_en": "What is a rock that contains important minerals called?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "ore",
+        "canonical_fact": "A rock that contains important minerals is called an ore.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "a rock that contains important minerals",
+        "answer_aliases_en": [
+          "ore"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1a2af12fc56b1b3a4f37c92f2d1a7679e39c6b4c93a41f8eb5a450637ca9c542",
+      "input_sha256": "e2f94a01bd9cf6d6cad9fd6113ea085c07839d36e19f4fa0d57fa64be7136580",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000883",
+      "decision": "ready",
+      "subject": "the process by which liquid water changes to water vapor",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "evaporation",
+      "canonical_fact": "When liquid water changes to water vapor, it is called evaporation.",
+      "prompt_en": "What is the process called when liquid water changes to water vapor?",
+      "evidence_quotes": [
+        "liquid water changes to water vapor",
+        "evaporation"
+      ],
+      "reason": "The source question supplies a process description ('liquid water changes to water vapor') and asks for the conventional term; the source answer is 'evaporation'. This matches the catalog relation description_to_term. Both old extractions agree; no conflict with source.",
+      "english": {
+        "prompt_en": "What is the process called when liquid water changes to water vapor?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "evaporation",
+        "canonical_fact": "When liquid water changes to water vapor, it is called evaporation.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "the process by which liquid water changes to water vapor",
+        "answer_aliases_en": [
+          "evaporation"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "daee87a1147120cf7fa96c91ff85f35bbb557b53c626ae7f20abbfc99dc58259",
+      "input_sha256": "8f99f7a3ea1ab16a945b261c74018a8cebd33902403ddd8175b1f1fd08bba981",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000882",
+        "historical:raw_sciq_000883"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "42ea30b825b61449cb5538368eb166bb21874a70aace3a184579458e242b219b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1397,
+      "first_chunk_seconds": 61.821,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1430,
+        "prompt_tokens": 1670,
+        "total_tokens": 3100,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 954,
+          "text_tokens": 476
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e9983af880f51786d5869dc32c1e8ebe74df24c5f093d435c2b4afa63553b573",
+      "status": "completed",
+      "latency_seconds": 98.238
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000882",
+        "historical:raw_sciq_000883"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "16066fc675e6888d69850e779416803f025d41e1cee9e5b234d63331357006a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 80.347
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000882",
+        "historical:raw_sciq_000883"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "16066fc675e6888d69850e779416803f025d41e1cee9e5b234d63331357006a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 73.369
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000882",
+        "historical:raw_sciq_000883"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "16066fc675e6888d69850e779416803f025d41e1cee9e5b234d63331357006a6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 42.231
+    }
+  ],
+  "status": "failed"
+}

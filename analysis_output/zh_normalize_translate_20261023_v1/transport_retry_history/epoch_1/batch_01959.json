@@ -1,0 +1,159 @@
+{
+  "input_sha256": "ae94697f4a018269baaca0261be00ccd6038e3e1a06624a4b60b47f1e2823b22",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e86513e4b7e99aebf56d",
+      "decision": "ready",
+      "subject": "Grapevine, California",
+      "relation_id": "place_to_elevation",
+      "relation_definition": "The elevation (height above sea level) of a specified geographic location.",
+      "direction": "place -> elevation value",
+      "answer": "1499.0 feet",
+      "canonical_fact": "The elevation of Grapevine, California is 1499.0 feet.",
+      "prompt_en": "What is the elevation of Grapevine in California?",
+      "evidence_quotes": [
+        "what is the elevation of the grapevine in california",
+        "1499.0 feet"
+      ],
+      "reason": "Source question and answer clearly state the elevation of Grapevine, California as 1499.0 feet. No existing catalog relation covers a geographic elevation property; proposing place_to_elevation as a precise new relation. Answer is preserved verbatim from source.",
+      "english": {
+        "answer": "1499.0 feet",
+        "relation_id": "place_to_elevation",
+        "prompt_en": "What is the elevation of Grapevine in California?",
+        "direction": "place -> elevation value",
+        "subject": "Grapevine, California",
+        "canonical_fact": "The elevation of Grapevine, California is 1499.0 feet.",
+        "relation_definition": "The elevation (height above sea level) of a specified geographic location.",
+        "answer_aliases_en": [
+          "1499.0 feet",
+          "1499 feet"
+        ],
+        "relation_spec": {
+          "id": "place_to_elevation",
+          "definition": "The elevation (height above sea level) of a specified geographic location.",
+          "direction": "place -> elevation value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da79a95008dd8fa11c59ff5f90da7a5aa061cef468c064543b82d469152b7581",
+      "input_sha256": "9e9edbcbf3187429b065e5a159b1b87ebbadf048990de804b5a6042e2ffad3c3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e8686bc801d23ace6a9d",
+      "decision": "ready",
+      "subject": "short ton",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "2000.0 pounds",
+      "canonical_fact": "A short ton is equivalent to 2000.0 pounds.",
+      "prompt_en": "How many pounds is a short ton?",
+      "evidence_quotes": [
+        "how much is a short ton in pounds",
+        "2000.0 pounds"
+      ],
+      "reason": "The source question asks for the pound-equivalent of a short ton and the source answer gives 2000.0 pounds. This is the defining value of the unit 'short ton' (as opposed to long ton or metric ton), fitting term_to_definition with the scope of unit-of-mass. Answer preserved verbatim.",
+      "english": {
+        "answer": "2000.0 pounds",
+        "relation_id": "term_to_definition",
+        "prompt_en": "How many pounds is a short ton?",
+        "direction": "term -> definition",
+        "subject": "short ton",
+        "canonical_fact": "A short ton is equivalent to 2000.0 pounds.",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "2000.0 pounds",
+          "2000 pounds"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e9424eebada094ebbdcfd5330612f5298a81a41649a1a6fe871739c51d4edeab",
+      "input_sha256": "5597b4fd4f283e43547c2097789ed0c4df3724996ce4793dc9cae20b3b87f684",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e86513e4b7e99aebf56d",
+        "public:pbf_e8686bc801d23ace6a9d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5541487708cfd0689588160d25ffddc69e5f369629ade4531520383c3a4e4745",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2362,
+      "first_chunk_seconds": 14.637,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2438,
+        "prompt_tokens": 1622,
+        "total_tokens": 4060,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1922,
+          "text_tokens": 516
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "db9d9d008f349e18a025b2310b6d9043faf48428b2cdbabbea4a9e95371ee0a1",
+      "status": "completed",
+      "latency_seconds": 45.77
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e86513e4b7e99aebf56d",
+        "public:pbf_e8686bc801d23ace6a9d"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cf936eee3a86d7cc8cf5a4fa61dad435dd9fed24c87c494cb5a29204dce601ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.106
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e86513e4b7e99aebf56d",
+        "public:pbf_e8686bc801d23ace6a9d"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cf936eee3a86d7cc8cf5a4fa61dad435dd9fed24c87c494cb5a29204dce601ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.115
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e86513e4b7e99aebf56d",
+        "public:pbf_e8686bc801d23ace6a9d"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cf936eee3a86d7cc8cf5a4fa61dad435dd9fed24c87c494cb5a29204dce601ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.405
+    }
+  ],
+  "status": "failed"
+}

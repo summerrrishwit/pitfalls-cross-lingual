@@ -1,0 +1,214 @@
+{
+  "input_sha256": "763bb1fd2b991c0de1594c77189c57e53bf4c9fc51946f0ba9b56c7d86e7eab2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000740",
+      "decision": "ready",
+      "subject": "sunflower plant",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "Roots",
+      "canonical_fact": "The roots of a sunflower plant absorb water and nutrients.",
+      "prompt_en": "Which part of a sunflower plant absorbs water and nutrients?",
+      "evidence_quotes": [
+        "Which part of a sunflower plant absorbs water and nutrients?",
+        "Roots"
+      ],
+      "reason": "Catalog relation whole_to_part fits exactly: sunflower plant (whole) → Roots (part), with the functional qualifier 'absorbs water and nutrients' specifying which part. Answer 'Roots' is a literal substring of source_answer 'Roots'. Both model annotations agree on extraction.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "Roots",
+        "canonical_fact": "The roots of a sunflower plant absorb water and nutrients.",
+        "subject": "sunflower plant",
+        "prompt_en": "Which part of a sunflower plant absorbs water and nutrients?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "Roots"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a3ae88a63c149644e3c2f996b89e0c8efe49f3f791699a0fd33b40c975d89a58",
+      "input_sha256": "3ca1e9afcc7105f60163cbd13426442ee04a0fb17b9b96ac408f838f7a43bf39",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000743",
+      "decision": "ready",
+      "subject": "new stars",
+      "relation_id": "entity_to_formation_location",
+      "relation_definition": "The specific structure or medium in which a natural entity forms or originates; distinct from geographic containment, habitat, or current residence.",
+      "direction": "entity -> formation location",
+      "answer": "molecular clouds of gas",
+      "canonical_fact": "New stars originate in molecular clouds of gas.",
+      "prompt_en": "In the Universe, where do new stars originate?",
+      "evidence_quotes": [
+        "In the Universe, where do new stars originate?",
+        "in molecular clouds of gas"
+      ],
+      "reason": "No catalog relation fits exactly: entity_to_containing_location explicitly excludes origin and process location; organism_to_habitat targets organisms and habitat rather than formation medium. Propose new relation entity_to_formation_location. Answer 'molecular clouds of gas' is a concise literal substring of source_answer 'in molecular clouds of gas'. Both model annotations agree.",
+      "english": {
+        "direction": "entity -> formation location",
+        "relation_id": "entity_to_formation_location",
+        "answer": "molecular clouds of gas",
+        "canonical_fact": "New stars originate in molecular clouds of gas.",
+        "subject": "new stars",
+        "prompt_en": "In the Universe, where do new stars originate?",
+        "relation_definition": "The specific structure or medium in which a natural entity forms or originates; distinct from geographic containment, habitat, or current residence.",
+        "answer_aliases_en": [
+          "molecular clouds of gas"
+        ],
+        "relation_spec": {
+          "id": "entity_to_formation_location",
+          "definition": "The specific structure or medium in which a natural entity forms or originates; distinct from geographic containment, habitat, or current residence.",
+          "direction": "entity -> formation location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "df06906c343555f4a75aa60b03527627cf287b2b1bc078e5637b879e6be9241d",
+      "input_sha256": "dc64b29000a98c32c322fa968d0feb7acb76a6ed94f92d214f46d7d5b675612d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000740",
+      "input_sha256": "3ca1e9afcc7105f60163cbd13426442ee04a0fb17b9b96ac408f838f7a43bf39",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "Roots",
+        "canonical_fact": "The roots of a sunflower plant absorb water and nutrients.",
+        "subject": "sunflower plant",
+        "prompt_en": "Which part of a sunflower plant absorbs water and nutrients?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "Roots"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a3ae88a63c149644e3c2f996b89e0c8efe49f3f791699a0fd33b40c975d89a58",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000740",
+        "subject_zh": "向日葵植株",
+        "prompt_zh": "向日葵植株的哪个部分吸收水分和养分？",
+        "canonical_fact_zh": "向日葵植株的根系吸收水分和养分。",
+        "answer_zh": "根系",
+        "answer_aliases_zh": [
+          "根系"
+        ]
+      },
+      "translation_sha256": "dce877583f43cd8852580ffd1610a20a28252ead0114426886bfa148966e2fd5"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000743",
+      "input_sha256": "dc64b29000a98c32c322fa968d0feb7acb76a6ed94f92d214f46d7d5b675612d",
+      "english": {
+        "direction": "entity -> formation location",
+        "relation_id": "entity_to_formation_location",
+        "answer": "molecular clouds of gas",
+        "canonical_fact": "New stars originate in molecular clouds of gas.",
+        "subject": "new stars",
+        "prompt_en": "In the Universe, where do new stars originate?",
+        "relation_definition": "The specific structure or medium in which a natural entity forms or originates; distinct from geographic containment, habitat, or current residence.",
+        "answer_aliases_en": [
+          "molecular clouds of gas"
+        ],
+        "relation_spec": {
+          "id": "entity_to_formation_location",
+          "definition": "The specific structure or medium in which a natural entity forms or originates; distinct from geographic containment, habitat, or current residence.",
+          "direction": "entity -> formation location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "df06906c343555f4a75aa60b03527627cf287b2b1bc078e5637b879e6be9241d",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_000743",
+        "subject_zh": "新生恒星",
+        "prompt_zh": "在宇宙中，新生恒星诞生于何处？",
+        "canonical_fact_zh": "新生恒星诞生于气体分子云。",
+        "answer_zh": "气体分子云",
+        "answer_aliases_zh": [
+          "气体分子云"
+        ]
+      },
+      "translation_sha256": "1678fc6bda5855c22151970e75e7e4ed7be6d7676f56b25bab5572345d7a96ae"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000740",
+        "historical:raw_ai2_arc_easy_000743"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e629a0a5425759c61fc3d2bdd233c98e7d03f1ad7380b45b2f1c3d7f15fefb91",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2225,
+      "first_chunk_seconds": 23.958,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2412,
+        "prompt_tokens": 1690,
+        "total_tokens": 4102,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1912,
+          "text_tokens": 500
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aee0dea331de69c7a8630e24834ddf103d18f6c9eb7c814269fbb5b9542a6ed0",
+      "status": "completed",
+      "latency_seconds": 54.27
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000740",
+        "historical:raw_ai2_arc_easy_000743"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e342f80642d3c00caea351ca968b2f461e76bc270e2985f00cb4e92a89bf01d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 626,
+      "first_chunk_seconds": 6.175,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 643,
+        "prompt_tokens": 826,
+        "total_tokens": 1469,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 429,
+          "text_tokens": 214
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ccd296543ab5933b222166a6c334455a9240631aa210b807437c1229bb7db41e",
+      "status": "completed",
+      "latency_seconds": 13.829
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "666f823a45407374b8685042857ac5f2aff7b25ee08a1b565c5c528bb8f4a9dc",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ec8e5fbd5c46962d0f06",
+      "decision": "ready",
+      "subject": "anchor",
+      "relation_id": "entity_to_function",
+      "relation_definition": "Stated purpose or operational function of a specified entity within a given domain or context; distinct from class membership, material composition, or taxonomic placement.",
+      "direction": "entity -> function",
+      "answer": "to hold a ship in place",
+      "canonical_fact": "The proper nautical use of an anchor is to hold a ship in place.",
+      "prompt_en": "What is the proper nautical use of an anchor?",
+      "evidence_quotes": [
+        "proper nautical use",
+        "to hold a ship in place"
+      ],
+      "reason": "No catalog relation captures a domain-scoped functional/purpose property. Proposed new relation entity_to_function to express that an anchor's proper nautical use is to hold a ship in place. Answer taken verbatim from source_answer.",
+      "english": {
+        "answer": "to hold a ship in place",
+        "relation_id": "entity_to_function",
+        "prompt_en": "What is the proper nautical use of an anchor?",
+        "direction": "entity -> function",
+        "subject": "anchor",
+        "canonical_fact": "The proper nautical use of an anchor is to hold a ship in place.",
+        "relation_definition": "Stated purpose or operational function of a specified entity within a given domain or context; distinct from class membership, material composition, or taxonomic placement.",
+        "answer_aliases_en": [
+          "to hold a ship in place"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "Stated purpose or operational function of a specified entity within a given domain or context; distinct from class membership, material composition, or taxonomic placement.",
+          "direction": "entity -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c39eafbf9a6ac526115d4c8c2b91181fca9724750f0d876ec18bd78e2fdc8fb4",
+      "input_sha256": "c582d01aa78c9596a2aa503b2af72bd769e1d601b299ac58ae7a0705a25dc79a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ec9389144541d2f31421",
+      "decision": "ready",
+      "subject": "government set up in the Virginia colony",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "House of Burgesses",
+      "canonical_fact": "The government set up in the Virginia colony was named the House of Burgesses.",
+      "prompt_en": "What was the name of the government set up in the Virginia colony?",
+      "evidence_quotes": [
+        "government set up in the virginia colony",
+        "House of Burgesses"
+      ],
+      "reason": "The question supplies a qualified identifying description ('government set up in the Virginia colony') and asks for the unique entity (its name). description_to_entity fits exactly: the description uniquely identifies the House of Burgesses. Answer copied verbatim from source_answer.",
+      "english": {
+        "answer": "House of Burgesses",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What was the name of the government set up in the Virginia colony?",
+        "direction": "identifying description -> entity",
+        "subject": "government set up in the Virginia colony",
+        "canonical_fact": "The government set up in the Virginia colony was named the House of Burgesses.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "House of Burgesses"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0a279d99c9f728f3fad087a664942414ba5d4145eecee75f5669138f25c10593",
+      "input_sha256": "acc312ce7e544a28a2eeab6de4cf189d5160c53c18ac016deee8feeb1dd929db",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ec8e5fbd5c46962d0f06",
+        "public:pbf_ec9389144541d2f31421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6f59cb62b719a583965d798a1cf1c56577f4ee83eeecdbc8429b67636ed27166",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2345,
+      "first_chunk_seconds": 22.395,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2439,
+        "prompt_tokens": 1607,
+        "total_tokens": 4046,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1944,
+          "text_tokens": 495
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5fe13bf81c9d81bd4ae72dca5ce8ef9b6c684b6dd154e51ea1f1d8908e4696c6",
+      "status": "completed",
+      "latency_seconds": 50.448
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec8e5fbd5c46962d0f06",
+        "public:pbf_ec9389144541d2f31421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c508160fc7390b4e775ce6b9e3fab1804e0c537ca1712a45d53f81225f422e7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.92
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec8e5fbd5c46962d0f06",
+        "public:pbf_ec9389144541d2f31421"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c508160fc7390b4e775ce6b9e3fab1804e0c537ca1712a45d53f81225f422e7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.973
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec8e5fbd5c46962d0f06",
+        "public:pbf_ec9389144541d2f31421"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c508160fc7390b4e775ce6b9e3fab1804e0c537ca1712a45d53f81225f422e7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.014
+    }
+  ],
+  "status": "failed"
+}

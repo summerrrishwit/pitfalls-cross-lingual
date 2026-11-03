@@ -1,0 +1,208 @@
+{
+  "input_sha256": "80e43e2ed727490ad5d71d13d10529e024baedc63e716e894ba979c600d8f4fa",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000236",
+      "decision": "ready",
+      "subject": "body system that processes foods into a useable source of energy",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "digestive",
+      "canonical_fact": "The digestive system is the body system that processes foods into a useable source of energy.",
+      "prompt_en": "Which body system processes foods into a useable source of energy?",
+      "evidence_quotes": [
+        "body system processes foods into a useable source of energy",
+        "digestive"
+      ],
+      "reason": "The source question supplies a defining description (a body system that processes foods into a useable source of energy) and the source answer is the conventional term 'digestive'. This maps precisely to description_to_term in the catalog.",
+      "english": {
+        "answer": "digestive",
+        "relation_id": "description_to_term",
+        "prompt_en": "Which body system processes foods into a useable source of energy?",
+        "direction": "description -> term",
+        "subject": "body system that processes foods into a useable source of energy",
+        "canonical_fact": "The digestive system is the body system that processes foods into a useable source of energy.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "digestive"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0884f92d64aff1358d5826300457c37433b73fa5aa2d48aeafdb81eae888ebe9",
+      "input_sha256": "851c44c9bbc26ef2ae7de3c4e3a1b31abb794f9d5888d950953dfce61e9458b0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000241",
+      "decision": "ready",
+      "subject": "toaster",
+      "relation_id": "device_to_energy_form_used",
+      "relation_definition": "The primary form of energy a specified device uses to perform its stated function or process.",
+      "direction": "device -> energy form",
+      "answer": "heat",
+      "canonical_fact": "A toaster toasts bread using heat energy.",
+      "prompt_en": "Which form of energy does a toaster use to toast bread?",
+      "evidence_quotes": [
+        "Which form of energy toasted the bread",
+        "heat"
+      ],
+      "reason": "The source states the toaster changed electrical energy into other forms and asks which form toasted the bread; the answer is 'heat'. No existing catalog relation captures 'device → energy form used for its function', so a new precise relation device_to_energy_form_used is proposed rather than forcing a broad category.",
+      "english": {
+        "answer": "heat",
+        "relation_id": "device_to_energy_form_used",
+        "prompt_en": "Which form of energy does a toaster use to toast bread?",
+        "direction": "device -> energy form",
+        "subject": "toaster",
+        "canonical_fact": "A toaster toasts bread using heat energy.",
+        "relation_definition": "The primary form of energy a specified device uses to perform its stated function or process.",
+        "answer_aliases_en": [
+          "heat"
+        ],
+        "relation_spec": {
+          "id": "device_to_energy_form_used",
+          "definition": "The primary form of energy a specified device uses to perform its stated function or process.",
+          "direction": "device -> energy form"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2474801d4a046ac5a98d5ec19d1fd57b922ab5888aceee0ced126607c60909f4",
+      "input_sha256": "4fa9878a861b101a32592345ed5dce23de91582b4d10ff4dc6f4b75a7bf002b3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "665d50ed34be561deed488083d42e9caa5a42530367b7b05a4395873abb404a4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2413,
+      "first_chunk_seconds": 46.984,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2451,
+        "prompt_tokens": 1733,
+        "total_tokens": 4184,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1970,
+          "text_tokens": 481
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "16b7a952301a406bcefffda2265efdc8fb7e9c4d4cc8746e76a25ef8430640ea",
+      "status": "completed",
+      "latency_seconds": 74.858
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.028
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 49.921
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.074
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.038
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.256
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000236",
+        "historical:raw_ai2_arc_easy_000241"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "76e52cce84504ef6118d1b1757a233a346de9c3f969212be531234614e42de1f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.12
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02140.json",
+      "sha256": "eb7b7db24cd4bc060ffb7634e4d96978532567465d18f6d6e5f86004448db7d9",
+      "previous_status": "failed"
+    }
+  ]
+}

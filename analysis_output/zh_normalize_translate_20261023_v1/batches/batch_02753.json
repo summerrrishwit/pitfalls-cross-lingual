@@ -1,0 +1,211 @@
+{
+  "input_sha256": "71f7fb20635cc43f5ac737930e3e39018368c506d5915f0f0210ebcb2294f5e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000035",
+      "decision": "ready",
+      "subject": "follicle after releasing an egg under stimulation of luteinizing hormone",
+      "relation_id": "structure_to_transformation_product",
+      "relation_definition": "Resulting structure produced when a specified biological structure transforms under a named stimulus or condition.",
+      "direction": "biological structure under specified stimulus/condition -> resulting structure",
+      "answer": "corpus luteum",
+      "canonical_fact": "After releasing an egg, the follicle, under stimulation of luteinizing hormone, turns into a glandular mass of cells called the corpus luteum.",
+      "prompt_en": "After releasing an egg, under stimulation of luteinizing hormone, what is the name of the glandular mass of cells that a follicle transforms into?",
+      "evidence_quotes": [
+        "the follicle, under stimulation of luteinizing hormone, turns into a a glandular mass of cells called the",
+        "corpus luteum"
+      ],
+      "reason": "The source QA clearly states that the follicle, under LH stimulation after ovulation, becomes the corpus luteum. No catalog relation covers a stimulus-conditional biological transformation, so a precise new relation is proposed. Both model annotations agree on the extraction; the sensenova annotation matches the source question wording exactly.",
+      "english": {
+        "direction": "biological structure under specified stimulus/condition -> resulting structure",
+        "relation_id": "structure_to_transformation_product",
+        "answer": "corpus luteum",
+        "canonical_fact": "After releasing an egg, the follicle, under stimulation of luteinizing hormone, turns into a glandular mass of cells called the corpus luteum.",
+        "subject": "follicle after releasing an egg under stimulation of luteinizing hormone",
+        "prompt_en": "After releasing an egg, under stimulation of luteinizing hormone, what is the name of the glandular mass of cells that a follicle transforms into?",
+        "relation_definition": "Resulting structure produced when a specified biological structure transforms under a named stimulus or condition.",
+        "answer_aliases_en": [
+          "corpus luteum"
+        ],
+        "relation_spec": {
+          "id": "structure_to_transformation_product",
+          "definition": "Resulting structure produced when a specified biological structure transforms under a named stimulus or condition.",
+          "direction": "biological structure under specified stimulus/condition -> resulting structure"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "aa3547de63a1066d409ec485fa2b87c9a84a8a43a56e3fe0f2fa8eb373ecc72c",
+      "input_sha256": "2d2136256187fc4e95b05eb4ccac248ee00ba28e0418b1ba969436dfdbba78fc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000038",
+      "decision": "ready",
+      "subject": "Middle-aged adults",
+      "relation_id": "group_to_comparative_trait",
+      "relation_definition": "Psychological or behavioural trait in which a specified demographic group comparatively outperforms or exceeds named reference groups, preserving source uncertainty qualifiers.",
+      "direction": "demographic group -> comparative trait relative to specified reference groups",
+      "answer": "Generative",
+      "canonical_fact": "Middle-aged adults appear to be more generative than older or younger adults.",
+      "prompt_en": "Compared to older or younger adults, in which psychological trait do middle-aged adults appear to score higher?",
+      "evidence_quotes": [
+        "Middle-aged adults appear to be more ____ than older or younger adults",
+        "Generative"
+      ],
+      "reason": "The source QA identifies 'Generative' as the trait in which middle-aged adults are comparatively more pronounced than older or younger adults, with the qualifier 'appear to be' preserved. No catalog relation covers a comparative-trait relationship between demographic groups, so a precise new relation is proposed. One model could not extract (ambiguous_relation), but the source answer is unambiguous and both the subject and answer are clearly stated.",
+      "english": {
+        "direction": "demographic group -> comparative trait relative to specified reference groups",
+        "relation_id": "group_to_comparative_trait",
+        "answer": "Generative",
+        "canonical_fact": "Middle-aged adults appear to be more generative than older or younger adults.",
+        "subject": "Middle-aged adults",
+        "prompt_en": "Compared to older or younger adults, in which psychological trait do middle-aged adults appear to score higher?",
+        "relation_definition": "Psychological or behavioural trait in which a specified demographic group comparatively outperforms or exceeds named reference groups, preserving source uncertainty qualifiers.",
+        "answer_aliases_en": [
+          "Generative"
+        ],
+        "relation_spec": {
+          "id": "group_to_comparative_trait",
+          "definition": "Psychological or behavioural trait in which a specified demographic group comparatively outperforms or exceeds named reference groups, preserving source uncertainty qualifiers.",
+          "direction": "demographic group -> comparative trait relative to specified reference groups"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "de29e755bafbb6d64b95f435b509927324239018cb85a06be79e58a65bad4a1f",
+      "input_sha256": "1306a191755d0a63652c0bca19a9ca84c2242ca7ed6a06e0ec099938e63d40c7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000035",
+        "historical:raw_mmlu_000038"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6df607339546f97bb619d7a979e283f65a4c6f7418a96778d76b6645b983a78e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2088,
+      "first_chunk_seconds": 18.583,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2146,
+        "prompt_tokens": 1774,
+        "total_tokens": 3920,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1519,
+          "text_tokens": 627
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a13f896b1d36c90d7c88a29c21f26850b1283ac356e7e9936df72af8a551edf",
+      "status": "completed",
+      "latency_seconds": 48.097
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000035",
+        "historical:raw_mmlu_000038"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f3963277f81ba92081a501ea3ba4681d6bb587be305f0e0f630a60e617b77d1c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1094,
+      "first_chunk_seconds": 30.525,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1097,
+        "prompt_tokens": 933,
+        "total_tokens": 2030,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 838,
+          "text_tokens": 259
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "78f826c845f16bef2bf1fc13a3724027172828712d1cb15a9b722170d2177110",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 49.145,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000035",
+        "historical:raw_mmlu_000038"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "624e939e42ba4d03a160351ff756289fc268bca9229e3927398292bf12f1d368",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1026,
+      "first_chunk_seconds": 22.131,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1075,
+        "prompt_tokens": 951,
+        "total_tokens": 2026,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 823,
+          "text_tokens": 252
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fe442fb7bbb795dec1074e62992e3f8e27030057f4bf459629f684b9ef0841e3",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 35.852,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000035",
+        "historical:raw_mmlu_000038"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "624e939e42ba4d03a160351ff756289fc268bca9229e3927398292bf12f1d368",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 972,
+      "first_chunk_seconds": 19.324,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 999,
+        "prompt_tokens": 951,
+        "total_tokens": 1950,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 739,
+          "text_tokens": 260
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fc6ecc7077b8217e2509b9cac33bee43127f526cd77f6bf3312ef46d74f48b92",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 31.298,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

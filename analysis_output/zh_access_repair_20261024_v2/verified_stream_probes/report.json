@@ -1,0 +1,55 @@
+{
+  "schema_version": "relation-expansion-api-probe-v1",
+  "created_at": "2026-10-24T15:34:56.601009+00:00",
+  "requested_model": "qwen-3.8-max",
+  "route_sha256": "726d1daa72fce0a371befd197c8c4620dace424bc224d11033bd91bd7a1bfc4e",
+  "probe_source_sha256": "2151d46142f2073411f5e560ebfed28c8cd03f05f19e5747e5f026f9cd07f3c5",
+  "transport_helper_sha256": "399b3e6f371e1f9ecebbd8d928e368be1a6f7c329a2fa716a7eb6c1098a2d4cb",
+  "input_policy": "synthetic_static_cases_only",
+  "synthetic_output_not_production_data": true,
+  "human_gold": false,
+  "retries": 0,
+  "credentials_or_endpoints_included": false,
+  "max_output_tokens": 8192,
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 1,
+      "peak_in_flight": 1,
+      "completed": 1,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 1
+      },
+      "identity_stable": true,
+      "wall_seconds": 15.645,
+      "p50_seconds": 15.644,
+      "p95_seconds": 15.644,
+      "requests_per_minute": 3.835,
+      "semantic_case_matches": 4,
+      "semantic_cases_total": 4,
+      "bounded_probe_passed": true
+    },
+    {
+      "concurrency": 8,
+      "requests": 8,
+      "peak_in_flight": 8,
+      "completed": 8,
+      "failed": 0,
+      "http_status_counts": {},
+      "response_models": {
+        "Qwen-3.8-Max": 8
+      },
+      "identity_stable": true,
+      "wall_seconds": 56.521,
+      "p50_seconds": 38.721,
+      "p95_seconds": 56.513,
+      "requests_per_minute": 8.492,
+      "semantic_case_matches": 32,
+      "semantic_cases_total": 32,
+      "bounded_probe_passed": true
+    }
+  ],
+  "observed_response_model": "Qwen-3.8-Max"
+}

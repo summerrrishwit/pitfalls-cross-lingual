@@ -1,0 +1,96 @@
+{
+  "input_sha256": "e80a0013a3fb85a6e72ec64d094f0d77a729b14f129e163edebdfc449c659e1b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007944",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The question is a colloquial procedural/commonsense prompt ('taking a break from your library … complete what sort of form before your card stop working?') and the source_answer is a single word ('renewal') rather than a stable entity or definition. No catalog relation (description_to_entity, term_to_definition, etc.) captures a 'form-type to complete for a library card' cleanly without inventing a broad ad-hoc category. The old model annotation also flags it as a typical-action question. Insufficient source support for a precise reusable fact; defer.",
+      "input_sha256": "cb4ad35b8aab61b819f1fb39780a82e29bd4387d1b4894a135af819ea3978552",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000803",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source_answer is a negation with meta-commentary ('No, the study that claimed this was tongue-in-cheek'), which is a claim-verification response rather than a stable factual attribute of the characters. No catalog relation (entity_to_class, term_to_definition, etc.) cleanly encodes 'Winnie-the-Pooh characters were not intended to represent mental disorders; the study asserting so was tongue-in-cheek.' Forcing a relation would require inventing a new 'intent/representation' category. The old model annotation also marks it as not_extractable. Defer.",
+      "input_sha256": "282bc63fd637365958660fb042f8ba4dc575cd319dfa0c107dad7bd34b9574d0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007944",
+        "historical:raw_truthful_qa_000803"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3693cefd990406bfb7de0346eee5bdb9ac70ce8da04fa2c5bd79bc17b860c23e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 9.006,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007944",
+        "historical:raw_truthful_qa_000803"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3693cefd990406bfb7de0346eee5bdb9ac70ce8da04fa2c5bd79bc17b860c23e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1664,
+      "first_chunk_seconds": 2.34,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1734,
+        "prompt_tokens": 1580,
+        "total_tokens": 3314,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1282,
+          "text_tokens": 452
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "47dc354925518bc7f46a85a504bbf032d5570e8ac90353d8dc3f808a5a0ee065",
+      "status": "completed",
+      "latency_seconds": 28.434
+    }
+  ],
+  "status": "completed"
+}

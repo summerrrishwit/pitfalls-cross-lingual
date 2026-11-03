@@ -1,0 +1,214 @@
+{
+  "input_sha256": "081eec0e8c80668b9672811a2454b03d7d38cda4ead2f18b7794c65d32d22367",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7cb0a15c4e7e802d1bc3",
+      "decision": "ready",
+      "subject": "MMPI",
+      "relation_id": "assessment_to_theorist_orientation",
+      "relation_definition": "The type or orientation of personality theorist most interested in or most associated with the results of a specified psychological assessment tool.",
+      "direction": "psychological assessment -> theorist orientation",
+      "answer": "trait",
+      "canonical_fact": "Trait theorists are most interested in the results of the MMPI.",
+      "prompt_en": "What kind of personality theorist would be most interested in the results of the MMPI?",
+      "evidence_quotes": [
+        "trait",
+        "What kind of personality theorist would be most interested in the results of the MMPI?"
+      ],
+      "reason": "No existing catalog relation captures the link between a specific psychological assessment tool and the theoretical orientation of the theorists most interested in its results. entity_to_class is too broad (it asserts membership rather than researcher interest). Proposed new relation assessment_to_theorist_orientation is precise: it ties a named assessment to the theorist type whose framework the assessment operationalizes. The answer 'trait' is a direct literal substring of source_answer.",
+      "english": {
+        "answer": "trait",
+        "relation_id": "assessment_to_theorist_orientation",
+        "prompt_en": "What kind of personality theorist would be most interested in the results of the MMPI?",
+        "direction": "psychological assessment -> theorist orientation",
+        "subject": "MMPI",
+        "canonical_fact": "Trait theorists are most interested in the results of the MMPI.",
+        "relation_definition": "The type or orientation of personality theorist most interested in or most associated with the results of a specified psychological assessment tool.",
+        "answer_aliases_en": [
+          "trait"
+        ],
+        "relation_spec": {
+          "id": "assessment_to_theorist_orientation",
+          "definition": "The type or orientation of personality theorist most interested in or most associated with the results of a specified psychological assessment tool.",
+          "direction": "psychological assessment -> theorist orientation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b1eee7742b6cc656ea97a854c425dbcf449964de97be13eca282d4ce380b7083",
+      "input_sha256": "05856fc2920d05574c49478bf42c91a8e036d6806ef364d5670868b464049eb8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7cd1e5b0485fa0175317",
+      "decision": "ready",
+      "subject": "America's Got Talent season 12",
+      "relation_id": "competition_season_to_winner",
+      "relation_definition": "The individual or group declared the winner of a specified season or episode of a competitive program or competition.",
+      "direction": "specific competition season -> winner",
+      "answer": "Darci Lynne Farmer",
+      "canonical_fact": "Darci Lynne Farmer won America's Got Talent season 12.",
+      "prompt_en": "Who won America's Got Talent season 12?",
+      "evidence_quotes": [
+        "Darci Lynne Farmer",
+        "who won america's got talent season 12"
+      ],
+      "reason": "No existing catalog relation matches 'winner of a specified competition season'. series_or_season_to_episode_count covers episode count, not outcome. Proposed competition_season_to_winner is narrowly defined for competitive programs and avoids forcing the fact into a broader category. The answer is a direct literal substring of source_answer.",
+      "english": {
+        "answer": "Darci Lynne Farmer",
+        "relation_id": "competition_season_to_winner",
+        "prompt_en": "Who won America's Got Talent season 12?",
+        "direction": "specific competition season -> winner",
+        "subject": "America's Got Talent season 12",
+        "canonical_fact": "Darci Lynne Farmer won America's Got Talent season 12.",
+        "relation_definition": "The individual or group declared the winner of a specified season or episode of a competitive program or competition.",
+        "answer_aliases_en": [
+          "Darci Lynne Farmer"
+        ],
+        "relation_spec": {
+          "id": "competition_season_to_winner",
+          "definition": "The individual or group declared the winner of a specified season or episode of a competitive program or competition.",
+          "direction": "specific competition season -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0000fcd15b2e57578e3d8c99bd92423a94ace371051a3f44ca82539d327de6a9",
+      "input_sha256": "879b6f358f2ea2a8766c3dc681211796e018037d7740aae07f7ec5e5f00833c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_7cb0a15c4e7e802d1bc3",
+      "input_sha256": "05856fc2920d05574c49478bf42c91a8e036d6806ef364d5670868b464049eb8",
+      "english": {
+        "answer": "trait",
+        "relation_id": "assessment_to_theorist_orientation",
+        "prompt_en": "What kind of personality theorist would be most interested in the results of the MMPI?",
+        "direction": "psychological assessment -> theorist orientation",
+        "subject": "MMPI",
+        "canonical_fact": "Trait theorists are most interested in the results of the MMPI.",
+        "relation_definition": "The type or orientation of personality theorist most interested in or most associated with the results of a specified psychological assessment tool.",
+        "answer_aliases_en": [
+          "trait"
+        ],
+        "relation_spec": {
+          "id": "assessment_to_theorist_orientation",
+          "definition": "The type or orientation of personality theorist most interested in or most associated with the results of a specified psychological assessment tool.",
+          "direction": "psychological assessment -> theorist orientation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b1eee7742b6cc656ea97a854c425dbcf449964de97be13eca282d4ce380b7083",
+      "translation": {
+        "record_id": "public:pbf_7cb0a15c4e7e802d1bc3",
+        "subject_zh": "MMPI",
+        "prompt_zh": "哪类人格理论家最关注MMPI的测试结果？",
+        "canonical_fact_zh": "特质理论家最关注MMPI的测试结果。",
+        "answer_zh": "特质",
+        "answer_aliases_zh": [
+          "特质"
+        ]
+      },
+      "translation_sha256": "0cc2bd38a7c851494bd337f03f3d11bc5ab76e87a9c65a6d5e3a0fff8fb97df9"
+    },
+    {
+      "record_id": "public:pbf_7cd1e5b0485fa0175317",
+      "input_sha256": "879b6f358f2ea2a8766c3dc681211796e018037d7740aae07f7ec5e5f00833c5",
+      "english": {
+        "answer": "Darci Lynne Farmer",
+        "relation_id": "competition_season_to_winner",
+        "prompt_en": "Who won America's Got Talent season 12?",
+        "direction": "specific competition season -> winner",
+        "subject": "America's Got Talent season 12",
+        "canonical_fact": "Darci Lynne Farmer won America's Got Talent season 12.",
+        "relation_definition": "The individual or group declared the winner of a specified season or episode of a competitive program or competition.",
+        "answer_aliases_en": [
+          "Darci Lynne Farmer"
+        ],
+        "relation_spec": {
+          "id": "competition_season_to_winner",
+          "definition": "The individual or group declared the winner of a specified season or episode of a competitive program or competition.",
+          "direction": "specific competition season -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0000fcd15b2e57578e3d8c99bd92423a94ace371051a3f44ca82539d327de6a9",
+      "translation": {
+        "record_id": "public:pbf_7cd1e5b0485fa0175317",
+        "subject_zh": "《美国达人秀》第12季",
+        "prompt_zh": "《美国达人秀》第12季的冠军是谁？",
+        "canonical_fact_zh": "达西·林恩·法默获得了《美国达人秀》第12季的冠军。",
+        "answer_zh": "达西·林恩·法默",
+        "answer_aliases_zh": [
+          "达西·林恩·法默"
+        ]
+      },
+      "translation_sha256": "2aa79c61b6102c35493870aa6729a75d73145062efe073e427154a4ebacbad4a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7cb0a15c4e7e802d1bc3",
+        "public:pbf_7cd1e5b0485fa0175317"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e3149a797cfbe791eabb149182306d268b9d7358069e6769e9294bf0590cf7ac",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1761,
+      "first_chunk_seconds": 1.563,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1758,
+        "prompt_tokens": 1617,
+        "total_tokens": 3375,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1193,
+          "text_tokens": 565
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "951b1e0910161bc7d17aa2ff312089299f9725f3570ad2ab2170999201f4c88a",
+      "status": "completed",
+      "latency_seconds": 15.332
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7cb0a15c4e7e802d1bc3",
+        "public:pbf_7cd1e5b0485fa0175317"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7084431e703b49ee66a477653c9f41d3ac63f09c140220d70bb23f83ae1aab9d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1020,
+      "first_chunk_seconds": 39.575,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1017,
+        "prompt_tokens": 882,
+        "total_tokens": 1899,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 755,
+          "text_tokens": 262
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4a044bb6a722c610ab409e1a58b35ad75ba03d61e02b37a781a4ccd006a283cc",
+      "status": "completed",
+      "latency_seconds": 47.817
+    }
+  ],
+  "status": "completed"
+}

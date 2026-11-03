@@ -1,0 +1,214 @@
+{
+  "input_sha256": "42a358a9d934b0933ab57a5b73882bf2e18f564a22941bf8bc7510d9c42ed116",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008189",
+      "decision": "ready",
+      "subject": "diaphragm",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "valve",
+      "canonical_fact": "A diaphragm is a type of valve.",
+      "prompt_en": "What type of device is a diaphragm?",
+      "evidence_quotes": [
+        "A diaphragm is a type is what?",
+        "valve"
+      ],
+      "reason": "Both models agree on extraction. The source explicitly states a diaphragm is a type of valve, which is a stable taxonomy/class-membership claim. entity_to_class fits: diaphragm (entity) -> valve (class). The prompt is option-free and does not contain the answer 'valve'.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "valve",
+        "canonical_fact": "A diaphragm is a type of valve.",
+        "subject": "diaphragm",
+        "prompt_en": "What type of device is a diaphragm?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "valve"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "297a2d3c4cee14ca1bfcb6b5074117b81eb7857be09765eefc70f2abde5d6146",
+      "input_sha256": "33f9771d0865172b5be5267184106df1d17d5aff6bcc61a02e8af59ef34e863e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008240",
+      "decision": "ready",
+      "subject": "state north of Kansas where cows outnumber people 4 to 1",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Nebraska",
+      "canonical_fact": "The state north of Kansas where cows outnumber people 4 to 1 is Nebraska.",
+      "prompt_en": "Which state north of Kansas has cows outnumbering people four to one?",
+      "evidence_quotes": [
+        "Cows outnumber people 4 to 1 in what state north of Kansas?",
+        "nebraska"
+      ],
+      "reason": "Both models agree on extraction. The source describes a uniquely qualified identifying description (state north of Kansas + cow-to-person ratio 4:1) that resolves to the entity Nebraska. description_to_entity fits: the qualifying description -> the unique entity. The answer capitalization 'Nebraska' is the standard proper-noun form of the source's 'nebraska' and does not conflict. Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Nebraska",
+        "canonical_fact": "The state north of Kansas where cows outnumber people 4 to 1 is Nebraska.",
+        "subject": "state north of Kansas where cows outnumber people 4 to 1",
+        "prompt_en": "Which state north of Kansas has cows outnumbering people four to one?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Nebraska"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e0d42bae2bc7a51d0e8dafa17f7ad4122bc337e2465a2b95d468f68260e2ca24",
+      "input_sha256": "b680c749a422319af9327a08a6961058da630cfc383af0d093ed5c3c8ca7acc4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008189",
+      "input_sha256": "33f9771d0865172b5be5267184106df1d17d5aff6bcc61a02e8af59ef34e863e",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "valve",
+        "canonical_fact": "A diaphragm is a type of valve.",
+        "subject": "diaphragm",
+        "prompt_en": "What type of device is a diaphragm?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "valve"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "297a2d3c4cee14ca1bfcb6b5074117b81eb7857be09765eefc70f2abde5d6146",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008189",
+        "subject_zh": "隔膜",
+        "prompt_zh": "隔膜是什么类型的装置？",
+        "canonical_fact_zh": "隔膜是一种阀门。",
+        "answer_zh": "阀门",
+        "answer_aliases_zh": [
+          "阀门"
+        ]
+      },
+      "translation_sha256": "380caf6f30dfae4dc891778c983c6b5f5ca6cdd9d4cf168a3793217b25b1bacb"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008240",
+      "input_sha256": "b680c749a422319af9327a08a6961058da630cfc383af0d093ed5c3c8ca7acc4",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Nebraska",
+        "canonical_fact": "The state north of Kansas where cows outnumber people 4 to 1 is Nebraska.",
+        "subject": "state north of Kansas where cows outnumber people 4 to 1",
+        "prompt_en": "Which state north of Kansas has cows outnumbering people four to one?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Nebraska"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e0d42bae2bc7a51d0e8dafa17f7ad4122bc337e2465a2b95d468f68260e2ca24",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008240",
+        "subject_zh": "位于堪萨斯州北部、牛的数量以四比一超过人口的州",
+        "prompt_zh": "位于堪萨斯州北部、牛的数量以四比一超过人口的州是哪个？",
+        "canonical_fact_zh": "位于堪萨斯州北部、牛的数量以四比一超过人口的州是内布拉斯加州。",
+        "answer_zh": "内布拉斯加州",
+        "answer_aliases_zh": [
+          "内布拉斯加州"
+        ]
+      },
+      "translation_sha256": "f18d74f84d675d38bc5a39c8d407c4bb6722165a73bf36726fe80cbd19096d30"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008189",
+        "historical:raw_commonsense_qa_008240"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5e0675f58bfaf5655ccfc6649c5acca166bcf465d503080aa5ca039b8df9dfdd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1830,
+      "first_chunk_seconds": 16.17,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1845,
+        "prompt_tokens": 1709,
+        "total_tokens": 3554,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1338,
+          "text_tokens": 507
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d3e0667082954af69dafaf3298eef68c67f0d5122ed18d09c74c4cadc22a7eb9",
+      "status": "completed",
+      "latency_seconds": 45.605
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008189",
+        "historical:raw_commonsense_qa_008240"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "09c0a62b3753809bb57f3ebe1ccc41ed7f9d867d63627096fe235808e82230c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 683,
+      "first_chunk_seconds": 10.679,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 703,
+        "prompt_tokens": 802,
+        "total_tokens": 1505,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 465,
+          "text_tokens": 238
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ef3794b52b555a80b088278fdacc232f112f4e65ccf4d73f64058a4b6f1d31c4",
+      "status": "completed",
+      "latency_seconds": 19.557
+    }
+  ],
+  "status": "completed"
+}

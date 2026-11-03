@@ -1,0 +1,214 @@
+{
+  "input_sha256": "d7a16fa6beb2a35fddda3bd8150c9a1e79fcdcf52389dbf017446620e533354a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007886",
+      "decision": "ready",
+      "subject": "thing whose three quarters are covered by the ocean",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "surface of earth",
+      "canonical_fact": "Three quarters of the surface of Earth are covered by the ocean.",
+      "prompt_en": "What entity has the property that three quarters of it are covered by the ocean?",
+      "evidence_quotes": [
+        "Three quarters of what are covered by the ocean?",
+        "surface of earth"
+      ],
+      "reason": "The source question describes an entity by the identifying condition 'three quarters covered by the ocean' and the source answer names that entity as 'surface of earth.' This matches description_to_entity (identifying description -> unique entity). No existing relation in the catalog captures a proportional-coverage fact, but description_to_entity fits precisely because the question posits a descriptive clause and asks for the single entity satisfying it.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "surface of earth",
+        "canonical_fact": "Three quarters of the surface of Earth are covered by the ocean.",
+        "subject": "thing whose three quarters are covered by the ocean",
+        "prompt_en": "What entity has the property that three quarters of it are covered by the ocean?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "surface of earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2e1794db85ea84efca712b62885370decc33376b56d758a9c4327229c40d4694",
+      "input_sha256": "d6b480a6d901125b91bdbf2304284cf4893882621aa76af0e760386180ce2ebf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007894",
+      "decision": "ready",
+      "subject": "Kobe beef",
+      "relation_id": "entity_to_origin_location",
+      "relation_definition": "Named country or region of origin for a specific food, product, or cultural item; distinct from containing location, habitat, or production site.",
+      "direction": "entity -> origin location",
+      "answer": "Japan",
+      "canonical_fact": "Kobe beef originates from Japan.",
+      "prompt_en": "In which country does Kobe beef originate?",
+      "evidence_quotes": [
+        "Where is the source of this steak house kobe?",
+        "japan"
+      ],
+      "reason": "The source asks for the source (origin) of 'kobe' in the steak-house context, answered 'japan.' The existing relation entity_to_containing_location explicitly excludes origin, so a new relation entity_to_origin_location is proposed to capture 'named country of origin for a specific food/product.' Direction is entity -> origin location.",
+      "english": {
+        "direction": "entity -> origin location",
+        "relation_id": "entity_to_origin_location",
+        "answer": "Japan",
+        "canonical_fact": "Kobe beef originates from Japan.",
+        "subject": "Kobe beef",
+        "prompt_en": "In which country does Kobe beef originate?",
+        "relation_definition": "Named country or region of origin for a specific food, product, or cultural item; distinct from containing location, habitat, or production site.",
+        "answer_aliases_en": [
+          "Japan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "Named country or region of origin for a specific food, product, or cultural item; distinct from containing location, habitat, or production site.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "62b935d6b4684882551a2bed14dd82a1f8edfd0ee340efc767264a1f9fffc69f",
+      "input_sha256": "b36f96927157e4dad17657ddcf220f915d3443e7f17fe34730c86952d5f86466",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007886",
+      "input_sha256": "d6b480a6d901125b91bdbf2304284cf4893882621aa76af0e760386180ce2ebf",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "surface of earth",
+        "canonical_fact": "Three quarters of the surface of Earth are covered by the ocean.",
+        "subject": "thing whose three quarters are covered by the ocean",
+        "prompt_en": "What entity has the property that three quarters of it are covered by the ocean?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "surface of earth"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2e1794db85ea84efca712b62885370decc33376b56d758a9c4327229c40d4694",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007886",
+        "subject_zh": "有四分之三被海洋覆盖的事物",
+        "prompt_zh": "有什么实体具有四分之三被海洋覆盖的特性？",
+        "canonical_fact_zh": "地球表面有四分之三被海洋覆盖。",
+        "answer_zh": "地球表面",
+        "answer_aliases_zh": [
+          "地球表面"
+        ]
+      },
+      "translation_sha256": "97e49357a884497a31710ba7087bf23d985057bc28f560defcc38f5a0c0e9c0a"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007894",
+      "input_sha256": "b36f96927157e4dad17657ddcf220f915d3443e7f17fe34730c86952d5f86466",
+      "english": {
+        "direction": "entity -> origin location",
+        "relation_id": "entity_to_origin_location",
+        "answer": "Japan",
+        "canonical_fact": "Kobe beef originates from Japan.",
+        "subject": "Kobe beef",
+        "prompt_en": "In which country does Kobe beef originate?",
+        "relation_definition": "Named country or region of origin for a specific food, product, or cultural item; distinct from containing location, habitat, or production site.",
+        "answer_aliases_en": [
+          "Japan"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "Named country or region of origin for a specific food, product, or cultural item; distinct from containing location, habitat, or production site.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "62b935d6b4684882551a2bed14dd82a1f8edfd0ee340efc767264a1f9fffc69f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007894",
+        "subject_zh": "神户牛肉",
+        "prompt_zh": "神户牛肉原产于哪个国家？",
+        "canonical_fact_zh": "神户牛肉原产于日本。",
+        "answer_zh": "日本",
+        "answer_aliases_zh": [
+          "日本"
+        ]
+      },
+      "translation_sha256": "4367f919e6f9ce4ca410f2b1221beb464004ad88548bcdc85e5e0913f7088b38"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007886",
+        "historical:raw_commonsense_qa_007894"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2dcf5110afcc25bcd34be9a53908ae6d9cd62ab8983b17673a91bb40173d3da6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2728,
+      "first_chunk_seconds": 62.991,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2893,
+        "prompt_tokens": 1657,
+        "total_tokens": 4550,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2372,
+          "text_tokens": 521
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ba99bd46dce98ef351303fa7474db11a4aa084bb19ecce87fac81ad446845a32",
+      "status": "completed",
+      "latency_seconds": 114.891
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007886",
+        "historical:raw_commonsense_qa_007894"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "87cfeaf02339e071f0c1f3a583603f6394b5ff5df92b13880300928792ae1964",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 689,
+      "first_chunk_seconds": 49.932,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 696,
+        "prompt_tokens": 826,
+        "total_tokens": 1522,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 547,
+          "text_tokens": 149
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3bc978f94fda552bc3bdd20bf90f4fbd60c5921a1efb4d993ba1ea3a944a3a0c",
+      "status": "completed",
+      "latency_seconds": 58.508
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,222 @@
+{
+  "input_sha256": "1cd21a54c53202d11d654fb7b1a6c466bf6a973a7e95e80b87f0754876fa47fe",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001606",
+      "decision": "ready",
+      "subject": "Nevada mines",
+      "relation_id": "location_to_resource_produced",
+      "relation_definition": "The specific natural resource that a specified location or jurisdiction's mines/industry produces; retain any superlative or comparative qualifier present in source.",
+      "direction": "location -> resource produced",
+      "answer": "gold",
+      "canonical_fact": "Nevada mines produce greater quantities of gold than any other state.",
+      "prompt_en": "Nevada mines produce greater quantities of which resource than any other state's mines?",
+      "evidence_quotes": [
+        "Nevada mines produce greater quantities of a particular resource than any other state.",
+        "gold"
+      ],
+      "reason": "No catalog relation captures a production/extractive-resource association. Proposed 'location_to_resource_produced' with direction location->resource. The superlative qualifier 'greater quantities than any other state' is preserved from source. Answer 'gold' is a verbatim substring of source_answer.",
+      "english": {
+        "direction": "location -> resource produced",
+        "relation_id": "location_to_resource_produced",
+        "answer": "gold",
+        "canonical_fact": "Nevada mines produce greater quantities of gold than any other state.",
+        "subject": "Nevada mines",
+        "prompt_en": "Nevada mines produce greater quantities of which resource than any other state's mines?",
+        "relation_definition": "The specific natural resource that a specified location or jurisdiction's mines/industry produces; retain any superlative or comparative qualifier present in source.",
+        "answer_aliases_en": [
+          "gold"
+        ],
+        "relation_spec": {
+          "id": "location_to_resource_produced",
+          "definition": "The specific natural resource that a specified location or jurisdiction's mines/industry produces; retain any superlative or comparative qualifier present in source.",
+          "direction": "location -> resource produced"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b724efda8b86d564d98f5df18318c2dada8b790ef1048b293630ab3fc9f46c7c",
+      "input_sha256": "1f97333b00b74763e93d1e16695ac50ae364c3288f228263c8a6682cbaec43d0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001608",
+      "decision": "ready",
+      "subject": "mountain formation",
+      "relation_id": "process_to_mechanistic_interaction",
+      "relation_definition": "Named structural or material components whose specified interaction constitutes or directly causes the given natural or engineering process; retain the interaction type stated.",
+      "direction": "process -> interacting components",
+      "answer": "asthenosphere and lithosphere",
+      "canonical_fact": "Mountain formation results from interaction between the asthenosphere and lithosphere.",
+      "prompt_en": "Which two layers of Earth interact to result in the formation of mountains?",
+      "evidence_quotes": [
+        "Which two will interact and result in the formation of mountains?",
+        "asthenosphere and lithosphere"
+      ],
+      "reason": "No catalog relation captures a causal-mechanism / interacting-components link for a geological process. Proposed 'process_to_mechanistic_interaction' with direction process->interacting components. The answer is a verbatim substring of source_answer; the source specifies 'two' components, retained in the canonical fact and prompt.",
+      "english": {
+        "direction": "process -> interacting components",
+        "relation_id": "process_to_mechanistic_interaction",
+        "answer": "asthenosphere and lithosphere",
+        "canonical_fact": "Mountain formation results from interaction between the asthenosphere and lithosphere.",
+        "subject": "mountain formation",
+        "prompt_en": "Which two layers of Earth interact to result in the formation of mountains?",
+        "relation_definition": "Named structural or material components whose specified interaction constitutes or directly causes the given natural or engineering process; retain the interaction type stated.",
+        "answer_aliases_en": [
+          "asthenosphere and lithosphere"
+        ],
+        "relation_spec": {
+          "id": "process_to_mechanistic_interaction",
+          "definition": "Named structural or material components whose specified interaction constitutes or directly causes the given natural or engineering process; retain the interaction type stated.",
+          "direction": "process -> interacting components"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "5ac0ca674ae2ef1ef195a6b08e694b7be9e2a1e39872ad6764a456cbbdafb63a",
+      "input_sha256": "174a937f580fd1a59fbad7dbcf0dfb3ce838c577e9a25e1e4c81eb9d0fd16954",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2ff5c23b40e9744300ced1dc2788192eea535c5931f159e84bd01646247ff9f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.034
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2ff5c23b40e9744300ced1dc2788192eea535c5931f159e84bd01646247ff9f7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1895,
+      "first_chunk_seconds": 21.302,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1932,
+        "prompt_tokens": 1735,
+        "total_tokens": 3667,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1396,
+          "text_tokens": 536
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d78d76eef3c269d43bd5613d3f0938d939147f1a26cd756a135526bd96fe5982",
+      "status": "completed",
+      "latency_seconds": 46.114
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.06
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.321
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.045
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.795
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.796
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001606",
+        "historical:raw_ai2_arc_easy_001608"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fb5322c944c336fa1260d055fb375a8904ef70d887659e77515200640d0bce68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.069
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02388.json",
+      "sha256": "a1c8587f47dccdb8904b36f86e7df80f65081ae3e96817fa1bceef13620b4852",
+      "previous_status": "failed"
+    }
+  ]
+}

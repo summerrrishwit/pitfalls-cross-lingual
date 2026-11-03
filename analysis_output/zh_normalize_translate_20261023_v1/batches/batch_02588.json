@@ -1,0 +1,157 @@
+{
+  "input_sha256": "e4c3faf43d8d245c15a51ab2859d09f1b439a4703934faa62bbba27fa4921814",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004661",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source is a generic commonsense logical inference ('not failing implies succeeding'), not a discrete factual assertion about a named entity or term. The relation 'is' is too broad; no catalog relation (entity_to_class, term_to_definition, description_to_entity, etc.) precisely captures a logical-consequence state. Creating a new relation for a tautological inference would be over-specified and not reusable. Insufficient source support for a stable, independently verifiable fact.",
+      "input_sha256": "e300c2991ec9386bbdcbb592e9e13f7d7d36e516b1351cf81d2944dd4b3638d6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004699",
+      "decision": "ready",
+      "subject": "little",
+      "relation_id": "word_to_antonym",
+      "relation_definition": "Standard antonym (opposite in meaning) of a specified word in its primary/common sense; the two words occupy opposite poles of the same semantic dimension.",
+      "direction": "word -> antonym",
+      "answer": "big",
+      "canonical_fact": "The opposite (antonym) of 'little' is 'big'.",
+      "prompt_en": "What is the opposite of the word 'little'?",
+      "evidence_quotes": [
+        "What is the opposite of little?",
+        "big"
+      ],
+      "reason": "Source question explicitly asks for the opposite of 'little'; source answer is 'big'. Both model annotations independently extracted the antonym pair. No existing catalog relation covers antonymy; proposed 'word_to_antonym' is precise and reusable. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "word -> antonym",
+        "relation_id": "word_to_antonym",
+        "answer": "big",
+        "canonical_fact": "The opposite (antonym) of 'little' is 'big'.",
+        "subject": "little",
+        "prompt_en": "What is the opposite of the word 'little'?",
+        "relation_definition": "Standard antonym (opposite in meaning) of a specified word in its primary/common sense; the two words occupy opposite poles of the same semantic dimension.",
+        "answer_aliases_en": [
+          "big"
+        ],
+        "relation_spec": {
+          "id": "word_to_antonym",
+          "definition": "Standard antonym (opposite in meaning) of a specified word in its primary/common sense; the two words occupy opposite poles of the same semantic dimension.",
+          "direction": "word -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dcce7b409f071b6b92e65bd89a0e610eee7090c16658b84695b2f33cc89c7e6e",
+      "input_sha256": "7b42b27b84e24d9a58a15c600609526e9da11e7f464fa7c6354d19e0834c03a7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004699",
+      "input_sha256": "7b42b27b84e24d9a58a15c600609526e9da11e7f464fa7c6354d19e0834c03a7",
+      "english": {
+        "direction": "word -> antonym",
+        "relation_id": "word_to_antonym",
+        "answer": "big",
+        "canonical_fact": "The opposite (antonym) of 'little' is 'big'.",
+        "subject": "little",
+        "prompt_en": "What is the opposite of the word 'little'?",
+        "relation_definition": "Standard antonym (opposite in meaning) of a specified word in its primary/common sense; the two words occupy opposite poles of the same semantic dimension.",
+        "answer_aliases_en": [
+          "big"
+        ],
+        "relation_spec": {
+          "id": "word_to_antonym",
+          "definition": "Standard antonym (opposite in meaning) of a specified word in its primary/common sense; the two words occupy opposite poles of the same semantic dimension.",
+          "direction": "word -> antonym"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dcce7b409f071b6b92e65bd89a0e610eee7090c16658b84695b2f33cc89c7e6e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004699",
+        "subject_zh": "little",
+        "prompt_zh": "单词\"little\"（小的）的反义词是什么？",
+        "canonical_fact_zh": "\"little\"（小的）的反义词是\"big\"（大的）。",
+        "answer_zh": "big",
+        "answer_aliases_zh": [
+          "big"
+        ]
+      },
+      "translation_sha256": "deb299a94acf0e16135ef96d82fd1eeba812d299c34af4fc7906fbb11c4e9f20"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004661",
+        "historical:raw_commonsense_qa_004699"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "244e970ef7d5b9bd2427dad8b482804f3145e8ff929e1f9d3e822dbd9f9ac536",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1855,
+      "first_chunk_seconds": 60.974,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1943,
+        "prompt_tokens": 1615,
+        "total_tokens": 3558,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1487,
+          "text_tokens": 456
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "545b57c27235b035eea96cf23b545d0b3b14a649d3b52e11ee0e077ba80a1149",
+      "status": "completed",
+      "latency_seconds": 90.137
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004699"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9ea20beebb35467478984b5be5c487e2d2f63c47b207e790790b9b52b6c40865",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1274,
+      "first_chunk_seconds": 20.415,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1393,
+        "prompt_tokens": 543,
+        "total_tokens": 1936,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1273,
+          "text_tokens": 120
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "45f6eccf6bbdb8544ab245e5638e296746d7c14c3c05d5b3b05d55ebd1d5fafe",
+      "status": "completed",
+      "latency_seconds": 36.287
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,264 @@
+{
+  "input_sha256": "77d257e098dfda464ec7593e01d39e281df27ce3c739256c0599960dbecfe0ef",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000160",
+      "decision": "ready",
+      "subject": "91",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "No",
+      "canonical_fact": "91 is not a prime number; it is the product of 7 and 13.",
+      "prompt_en": "Is 91 a prime number?",
+      "evidence_quotes": [
+        "No, 91 is the product of 7 and 13"
+      ],
+      "reason": "Source explicitly negates primality of 91 and provides the factorization 7×13, establishing stable class membership in composite numbers. Kept existing answer 'No' (literal substring of source). entity_to_class fits: 91 belongs to the class of composite (non-prime) integers at the prime/composite taxonomy level.",
+      "english": {
+        "prompt_en": "Is 91 a prime number?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "No",
+        "canonical_fact": "91 is not a prime number; it is the product of 7 and 13.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "91",
+        "answer_aliases_en": [
+          "No"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "be6983d3abf849416621c6fb437c4563617df628a982f593528725642114f9c7",
+      "input_sha256": "24e6426c5c304ddaf0d00a94944cc561c12f82d3fc6a40b121cfbb3c68f6c7c5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000163",
+      "decision": "ready",
+      "subject": "affordability of food and drink in Britain",
+      "relation_id": "entity_to_observed_trend",
+      "relation_definition": "A stated directional change (improvement or decline) for a specified phenomenon within an explicit time frame and geographic scope.",
+      "direction": "entity -> observed trend",
+      "answer": "easier to afford",
+      "canonical_fact": "Food and drink has become easier to afford in Britain since 1950.",
+      "prompt_en": "What happened to the affordability of food and drink in Britain since 1950?",
+      "evidence_quotes": [
+        "Food and drink has become easier to afford In Britain since 1950"
+      ],
+      "reason": "No existing catalog relation covers a directional trend observation. Proposed entity_to_observed_trend to capture the stated improvement in affordability within the explicit scope (Britain, since 1950). Kept existing answer 'easier to afford' (literal substring of source). Prompt is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "What happened to the affordability of food and drink in Britain since 1950?",
+        "relation_definition": "A stated directional change (improvement or decline) for a specified phenomenon within an explicit time frame and geographic scope.",
+        "answer": "easier to afford",
+        "canonical_fact": "Food and drink has become easier to afford in Britain since 1950.",
+        "direction": "entity -> observed trend",
+        "relation_id": "entity_to_observed_trend",
+        "subject": "affordability of food and drink in Britain",
+        "answer_aliases_en": [
+          "easier to afford"
+        ],
+        "relation_spec": {
+          "id": "entity_to_observed_trend",
+          "definition": "A stated directional change (improvement or decline) for a specified phenomenon within an explicit time frame and geographic scope.",
+          "direction": "entity -> observed trend"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8ac314f3bcf1b256427f68e4fa81a47a7c67d01df9d4044f98592ac79650e13e",
+      "input_sha256": "e0bb86a250d46aa620b30f13bc7d7a3a2b804aef9cbdc5d09ae47a13d6900c9d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b800adb58bf723f98411f5b4b45baf7d30b228a3630ecbf0fc929363fc0ba0b6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 28.188,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b800adb58bf723f98411f5b4b45baf7d30b228a3630ecbf0fc929363fc0ba0b6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4253,
+      "first_chunk_seconds": 1.836,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4406,
+        "prompt_tokens": 1628,
+        "total_tokens": 6034,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3993,
+          "text_tokens": 413
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2389132c50d6b5c9d2ce1da4486a765fce4130a974ca2845ea8d744544d8c59a",
+      "status": "completed",
+      "latency_seconds": 57.249
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 35.902,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 58.346,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 25.967,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.795
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.814
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000160",
+        "historical:raw_truthful_qa_000163"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "853d3b689c2009ad55eb7f393915c6b37508e8c190b58d5fd5be8d1b18ba8021",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.813
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03589.json",
+      "sha256": "961948bdd46da541f9c26dc2cfcd8228b1588956d22ae20f44d0ab29ea796914",
+      "previous_status": "failed"
+    }
+  ]
+}

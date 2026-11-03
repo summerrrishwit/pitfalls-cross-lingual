@@ -1,0 +1,274 @@
+{
+  "input_sha256": "85448f293cf8fa523b413c964a2f11a004fbf257a056563f0fa88587e22995d5",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0951a49348582e4c7528",
+      "decision": "ready",
+      "subject": "first university in the United States",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Harvard University",
+      "canonical_fact": "The first university in the United States was Harvard University.",
+      "prompt_en": "The first university in the United States was",
+      "evidence_quotes": [
+        "first university in the united states",
+        "Harvard University"
+      ],
+      "reason": "The question identifies a unique entity (Harvard University) via the superlative description 'first university in the United States'. This matches description_to_entity: an explicitly qualified identifying description that uniquely maps to one entity. The existing answer and canonical_fact are preserved verbatim from source.",
+      "english": {
+        "prompt_en": "The first university in the United States was",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Harvard University",
+        "canonical_fact": "The first university in the United States was Harvard University.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "first university in the United States",
+        "answer_aliases_en": [
+          "Harvard University",
+          "University of Harvard",
+          "Harvard"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3c848d6ecaf0bd06a224eca3cc8bfbce1c26632c734155234d336c7a2ba6e290",
+      "input_sha256": "2f32670ee00e143a2132dae3319e9a5019edbdb4732a293fa8e51ab9b56b23e7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d853ed3c5ba2b985179c",
+      "decision": "ready",
+      "subject": "tallest building in the United States",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "One World Trade Center",
+      "canonical_fact": "The tallest building in the United States is One World Trade Center.",
+      "prompt_en": "The tallest building in the United States is",
+      "evidence_quotes": [
+        "tallest building in the united states",
+        "One World Trade Center"
+      ],
+      "reason": "The question identifies a unique entity (One World Trade Center) via the superlative description 'tallest building in the United States'. This matches description_to_entity. The original extraction split subject as 'United States' with relation 'tallest building', which is a two-hop hop not in the catalog; collapsing into a single identifying-description → entity relation is the precise fit. Existing answer and canonical_fact preserved verbatim from source.",
+      "english": {
+        "prompt_en": "The tallest building in the United States is",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "One World Trade Center",
+        "canonical_fact": "The tallest building in the United States is One World Trade Center.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "tallest building in the United States",
+        "answer_aliases_en": [
+          "One World Trade Center",
+          "1 World Trade Center",
+          "Freedom Tower",
+          "One WTC"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a73fe09cfc1435d17378adc4b0f2da8b6286d3d0720dcaee9035a5c07feb50ce",
+      "input_sha256": "2cc47c7a319a4b1bdf2209fab1a0e1d2cb44201dbbec8beb7c33769f0856e597",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5b138cf7c739d2c56800f431d87b61bcd73452d65df0c8271b6f2a52a2cc1157",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 60.212,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5b138cf7c739d2c56800f431d87b61bcd73452d65df0c8271b6f2a52a2cc1157",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 126.893,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5b138cf7c739d2c56800f431d87b61bcd73452d65df0c8271b6f2a52a2cc1157",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1404,
+      "first_chunk_seconds": 46.103,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1428,
+        "prompt_tokens": 1594,
+        "total_tokens": 3022,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 918,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "318e4e7e35ba65f8a642d925e9c9b8e2af195c82f4b9edf162ae9b06abe179bc",
+      "status": "completed",
+      "latency_seconds": 66.033
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 61.846
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 3.828,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.032
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.077
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.796
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0951a49348582e4c7528",
+        "public:pbf_d853ed3c5ba2b985179c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "15a939cefc9d4a00eba02ad566b4ae7bc587efcb144c215c8730b62aa996584c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.857
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03610.json",
+      "sha256": "04297392b2bc01ac1c46291000a62359ba7d2d86eac04b7defb05dcda60e0029",
+      "previous_status": "failed"
+    }
+  ]
+}

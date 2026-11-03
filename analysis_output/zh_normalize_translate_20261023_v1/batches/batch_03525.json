@@ -1,0 +1,164 @@
+{
+  "input_sha256": "35e2d4df3c52a813a52c4eb32bc6c2f7e636456228bfaec3ed86351ba480c40e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008637",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'stolen' is a normative/moral judgment about unauthorized downloading, not a stable factual classification. Whether downloading music without paying constitutes 'stealing' is a value-dependent legal/moral claim that varies by jurisdiction and context. No catalog relation captures a normative judgment, and forcing it into entity_to_class would misrepresent it as a stable taxonomy membership. Deferred.",
+      "input_sha256": "9bd4073e0ed6125354d6b28bbc6bc953c39e1500f3a7e3589e2ce2b7f1a31c52",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008726",
+      "decision": "ready",
+      "subject": "traveling to a new time zone",
+      "relation_id": "activity_to_common_effect",
+      "relation_definition": "A well-established typical physiological or psychological effect commonly and generally associated with a specified activity or situation; the association is widely accepted and qualified with 'often' or 'typically' rather than asserted as universal.",
+      "direction": "activity/situation -> common effect",
+      "answer": "jet lag",
+      "canonical_fact": "Traveling to a new time zone often causes jet lag.",
+      "prompt_en": "What often happens when a person travels to a new time zone?",
+      "evidence_quotes": [
+        "often when traveling to a new time zone",
+        "jet lag"
+      ],
+      "reason": "The source question and answer establish a well-known, generally accepted physiological association: crossing time zones often produces jet lag. The qualifier 'often' is preserved. No existing catalog relation covers activity-to-common-physiological-effect, so a new precise relation ID 'activity_to_common_effect' is proposed. Evidence quotes are literal substrings of the source question and answer.",
+      "english": {
+        "prompt_en": "What often happens when a person travels to a new time zone?",
+        "relation_definition": "A well-established typical physiological or psychological effect commonly and generally associated with a specified activity or situation; the association is widely accepted and qualified with 'often' or 'typically' rather than asserted as universal.",
+        "answer": "jet lag",
+        "canonical_fact": "Traveling to a new time zone often causes jet lag.",
+        "direction": "activity/situation -> common effect",
+        "relation_id": "activity_to_common_effect",
+        "subject": "traveling to a new time zone",
+        "answer_aliases_en": [
+          "jet lag"
+        ],
+        "relation_spec": {
+          "id": "activity_to_common_effect",
+          "definition": "A well-established typical physiological or psychological effect commonly and generally associated with a specified activity or situation; the association is widely accepted and qualified with 'often' or 'typically' rather than asserted as universal.",
+          "direction": "activity/situation -> common effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2498459fa99b77299a380afc89993bf96d7a738da6e7720a76d361f1652d0798",
+      "input_sha256": "b1c6d64ffca3d206ffc281a83d760c83ec233fb603f510d0a4df060a113a0eb5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008637",
+        "historical:raw_commonsense_qa_008726"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "540d1a34c486f7e342277ad36687eeb874fd67d1129af0776049537ac9e98395",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 17.412
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008637",
+        "historical:raw_commonsense_qa_008726"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "540d1a34c486f7e342277ad36687eeb874fd67d1129af0776049537ac9e98395",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1908,
+      "first_chunk_seconds": 5.339,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1969,
+        "prompt_tokens": 1589,
+        "total_tokens": 3558,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1499,
+          "text_tokens": 470
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ca5837e2040b8e4a07548224c3d99c205c02dcde943fb9cf1fe271a381adab2e",
+      "status": "completed",
+      "latency_seconds": 48.202
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008726"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bd6ef7153597541b6a96e88ee615772c36168ad24dd364e72e76a7e5ad7805c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.398
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008726"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bd6ef7153597541b6a96e88ee615772c36168ad24dd364e72e76a7e5ad7805c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 19.268
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008726"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bd6ef7153597541b6a96e88ee615772c36168ad24dd364e72e76a7e5ad7805c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 693,
+      "first_chunk_seconds": 2.82,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 718,
+        "prompt_tokens": 567,
+        "total_tokens": 1285,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 628,
+          "text_tokens": 90
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3debeda89fff8d2c8321a2deadb9b16d542bbacd820168d20eef42a43806e1ff",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 15.671,
+      "validation_code": "invalid_records_schema"
+    }
+  ],
+  "status": "failed"
+}

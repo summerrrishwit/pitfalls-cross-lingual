@@ -1,0 +1,3 @@
+# Obsolete relation-review payloads deleted
+
+The user authorized permanent deletion on 2026-10-24 after dependency checks. The former primary/ and worktree/ payload directories are gone. archive_manifest.json describes the historical archive at creation time; its recoverable_archive_path fields no longer indicate present/recoverable payloads. See deletion_receipt.json. Only deletion/inventory metadata and compact historical model-contact/request hashes remain. They contain no old Qwen proposals, Luna/Sol semantic judgments, source QA or accepted-candidate datasets. Deletion does not erase exposure and does not establish clean holdout status.

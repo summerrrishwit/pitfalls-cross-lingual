@@ -1,0 +1,418 @@
+{
+  "method": "Exact NFKC/casefold/whitespace comparisons only; no semantic deduplication or new model review.",
+  "legacy": {
+    "canonical_records": 2450,
+    "decision_reasons": {
+      "both_models_not_extracted_or_invalid": 10561,
+      "dual_model_extraction_and_answer_consensus": 1986,
+      "codex_rejected_single_model_extraction": 609,
+      "codex_accepted_single_model_extraction": 443,
+      "codex_accepted_dual_model_answer_conflict": 21,
+      "codex_rejected_dual_model_answer_conflict": 5
+    },
+    "normalization_status": {
+      "mapped": 1511,
+      "out_of_taxonomy": 849,
+      "ambiguous": 90
+    },
+    "mapped_relations": {
+      "description_named_entity": 45,
+      "entity_transformation": 17,
+      "entity_determinant": 12,
+      "entity_classification": 161,
+      "effect_cause": 53,
+      "entity_energy_form": 22,
+      "description_named_term": 494,
+      "process_location": 5,
+      "part_of": 22,
+      "entity_attribute": 73,
+      "entity_location": 113,
+      "has_part": 19,
+      "producer_product": 39,
+      "measurement_target": 11,
+      "entity_instrument": 8,
+      "entity_function": 77,
+      "description_example": 17,
+      "entity_measurement": 56,
+      "entity_time": 11,
+      "activity_requirement": 32,
+      "cause_effect": 32,
+      "made_of": 21,
+      "quantity_unit": 11,
+      "symbol_meaning": 11,
+      "term_definition": 36,
+      "organism_habitat": 9,
+      "element_symbol": 1,
+      "work_creator": 15,
+      "entity_protection": 8,
+      "entity_origin": 10,
+      "entity_controller": 6,
+      "activity_goal": 4,
+      "sequence_successor": 4,
+      "entity_alias": 21,
+      "entity_antonym": 16,
+      "entity_capability": 10,
+      "work_genre": 1,
+      "abbreviation_expansion": 4,
+      "entity_language": 3,
+      "person_spouse": 1
+    },
+    "unique_relation_signatures": 2133,
+    "singleton_relation_signatures": 2040,
+    "consensus_rows": 1986,
+    "consensus_with_any_field_conflict": 1841,
+    "consensus_conflict_fields": {
+      "subject": 629,
+      "subject_type": 1129,
+      "relation_raw": 1033,
+      "answer_type": 1075,
+      "canonical_fact": 987
+    },
+    "prompt_sources": {
+      "source_question_open_answer_fallback": 860,
+      "canonical_fact_answer_suffix": 1590
+    },
+    "distractor_candidates": 7976,
+    "verified_distractor_candidates": 0
+  },
+  "raw_ledgers": {
+    "triple-full-v1/sensenova-6.7-flash-lite": {
+      "rows": 13625,
+      "unique_source_ids": 13625,
+      "extraction_status": {
+        "not_extractable": 11291,
+        "extracted": 2332,
+        "null": 2
+      },
+      "validation_errors": 2
+    },
+    "triple-full-v1/qwen3.7-plus": {
+      "rows": 13625,
+      "unique_source_ids": 13625,
+      "extraction_status": {
+        "not_extractable": 10880,
+        "extracted": 2744,
+        "null": 1
+      },
+      "validation_errors": 1
+    },
+    "public-benchmarks-full-v1/qwen3.7-plus": {
+      "rows": 20834,
+      "unique_source_ids": 20834,
+      "extraction_status": {
+        "not_extractable": 11775,
+        "extracted": 9059
+      },
+      "validation_errors": 0
+    }
+  },
+  "overlap": {
+    "source_manifests_question": {
+      "left_unique": 13625,
+      "right_unique": 20834,
+      "intersection_unique": 0
+    },
+    "legacy_canonical_vs_public_valid_extracted_question": {
+      "left_unique": 2450,
+      "right_unique": 9059,
+      "intersection_unique": 0
+    },
+    "legacy_canonical_vs_public_valid_extracted_sra": {
+      "left_unique": 2446,
+      "right_unique": 8969,
+      "intersection_unique": 1
+    },
+    "legacy_canonical_vs_public_valid_extracted_fact": {
+      "left_unique": 2445,
+      "right_unique": 8998,
+      "intersection_unique": 0
+    },
+    "legacy_canonical_vs_multilingual_4513_fact": {
+      "left_unique": 2445,
+      "right_unique": 4502,
+      "intersection_unique": 0
+    }
+  },
+  "multilingual": {
+    "records": 4513,
+    "common": 3326,
+    "groups": {
+      "comparison_or_order": {
+        "all": 149,
+        "common": 110,
+        "common_splits": {
+          "development": 63,
+          "sealed": 25,
+          "validation": 22
+        }
+      },
+      "song_to_performer": {
+        "all": 503,
+        "common": 446,
+        "common_splits": {
+          "development": 270,
+          "sealed": 94,
+          "validation": 82
+        }
+      },
+      "definition_term_direction_unresolved": {
+        "all": 562,
+        "common": 327,
+        "common_splits": {
+          "development": 187,
+          "sealed": 69,
+          "validation": 71
+        }
+      },
+      "character_to_actor": {
+        "all": 420,
+        "common": 352,
+        "common_splits": {
+          "development": 203,
+          "sealed": 76,
+          "validation": 73
+        }
+      },
+      "series_or_season_to_episode_count": {
+        "all": 27,
+        "common": 22,
+        "common_splits": {
+          "development": 11,
+          "validation": 6,
+          "sealed": 5
+        }
+      },
+      "alias_or_identity": {
+        "all": 119,
+        "common": 90,
+        "common_splits": {
+          "development": 53,
+          "validation": 22,
+          "sealed": 15
+        }
+      },
+      "function_goal_or_use": {
+        "all": 97,
+        "common": 62,
+        "common_splits": {
+          "sealed": 13,
+          "development": 39,
+          "validation": 10
+        }
+      },
+      "creator_author_or_producer": {
+        "all": 82,
+        "common": 71,
+        "common_splits": {
+          "sealed": 15,
+          "development": 41,
+          "validation": 15
+        }
+      },
+      "origin_or_source": {
+        "all": 19,
+        "common": 12,
+        "common_splits": {
+          "validation": 4,
+          "development": 7,
+          "sealed": 1
+        }
+      },
+      "location_or_habitat": {
+        "all": 275,
+        "common": 192,
+        "common_splits": {
+          "development": 122,
+          "sealed": 44,
+          "validation": 26
+        }
+      },
+      "quantity_or_measurement": {
+        "all": 401,
+        "common": 346,
+        "common_splits": {
+          "development": 218,
+          "validation": 69,
+          "sealed": 59
+        }
+      },
+      "temporal": {
+        "all": 527,
+        "common": 386,
+        "common_splits": {
+          "development": 225,
+          "validation": 79,
+          "sealed": 82
+        }
+      },
+      "classification_or_type": {
+        "all": 225,
+        "common": 134,
+        "common_splits": {
+          "sealed": 23,
+          "development": 79,
+          "validation": 32
+        }
+      },
+      "language_or_symbol": {
+        "all": 40,
+        "common": 29,
+        "common_splits": {
+          "validation": 7,
+          "sealed": 6,
+          "development": 16
+        }
+      },
+      "work_to_release_date": {
+        "all": 151,
+        "common": 118,
+        "common_splits": {
+          "development": 69,
+          "validation": 27,
+          "sealed": 22
+        }
+      },
+      "attribute_or_state": {
+        "all": 106,
+        "common": 64,
+        "common_splits": {
+          "development": 37,
+          "sealed": 12,
+          "validation": 15
+        }
+      },
+      "character_to_voice_actor": {
+        "all": 51,
+        "common": 47,
+        "common_splits": {
+          "development": 29,
+          "validation": 8,
+          "sealed": 10
+        }
+      },
+      "written_work_to_author": {
+        "all": 60,
+        "common": 51,
+        "common_splits": {
+          "development": 33,
+          "sealed": 7,
+          "validation": 11
+        }
+      },
+      "term_to_definition": {
+        "all": 266,
+        "common": 165,
+        "common_splits": {
+          "development": 101,
+          "sealed": 28,
+          "validation": 36
+        }
+      },
+      "composition_or_material": {
+        "all": 31,
+        "common": 20,
+        "common_splits": {
+          "development": 12,
+          "validation": 5,
+          "sealed": 3
+        }
+      },
+      "definition_or_meaning": {
+        "all": 57,
+        "common": 33,
+        "common_splits": {
+          "development": 21,
+          "validation": 5,
+          "sealed": 7
+        }
+      },
+      "performer_or_cast": {
+        "all": 91,
+        "common": 66,
+        "common_splits": {
+          "validation": 12,
+          "development": 41,
+          "sealed": 13
+        }
+      },
+      "work_to_filming_location": {
+        "all": 61,
+        "common": 52,
+        "common_splits": {
+          "development": 32,
+          "sealed": 10,
+          "validation": 10
+        }
+      },
+      "cause_effect_or_process": {
+        "all": 100,
+        "common": 55,
+        "common_splits": {
+          "validation": 12,
+          "development": 29,
+          "sealed": 14
+        }
+      },
+      "part_whole_or_membership": {
+        "all": 27,
+        "common": 20,
+        "common_splits": {
+          "development": 12,
+          "sealed": 4,
+          "validation": 4
+        }
+      },
+      "work_to_release_year": {
+        "all": 66,
+        "common": 56,
+        "common_splits": {
+          "development": 33,
+          "validation": 10,
+          "sealed": 13
+        }
+      }
+    }
+  },
+  "inputs": {
+    "data_processed/factual_triples/triple-full-v1/canonical-v2/triples_normalized.jsonl": {
+      "sha256": "a7a1c82f29acc27c6126c58a9facd2619e4af24c47d3c6e4dd92df4d2bae5540",
+      "bytes": 7505936
+    },
+    "data_processed/factual_triples/triple-full-v1/canonical-v2/canonical_decisions.jsonl": {
+      "sha256": "32df006f40d90d0f33c1375d2cc472bfa5ee1fc75b9ba4d02ef918d8b70d8c28",
+      "bytes": 26029160
+    },
+    "data_processed/factual_triples/triple-full-v1/canonical-v2/factual_prompts.jsonl": {
+      "sha256": "3a4cf17c6d3c3164a6008dd942793d25f849cb942fe69ad437463438ecd90dc3",
+      "bytes": 8551766
+    },
+    "data_processed/factual_triples/triple-full-v1/canonical-v2/distractor_candidates.jsonl": {
+      "sha256": "bd114ffe05901370c70810cd385e919f2785872b2b5ffc30481e58c804393e70",
+      "bytes": 5737480
+    },
+    "data_processed/factual_triples/triple-full-v1/models/sensenova-6.7-flash-lite/triple_extractions.jsonl": {
+      "sha256": "d8a2ad0acb2d7366d571ae1cc7f58b073cbb843cb031340d8e81db76cc7d6176",
+      "bytes": 31761833
+    },
+    "data_processed/factual_triples/triple-full-v1/models/qwen3.7-plus/triple_extractions.jsonl": {
+      "sha256": "dce249fd513bd10a9189aa92882f0166b4f793fe4838579d16de900deb6eba19",
+      "bytes": 44046801
+    },
+    "data_processed/factual_triples/public-benchmarks-full-v1/models/qwen3.7-plus/triple_extractions.jsonl": {
+      "sha256": "6f3357ce85d2fe7fd7d769534c0208da670289670b2dd6ea36bba04011934a94",
+      "bytes": 63254148
+    },
+    "data_processed/factual_triples/triple-full-v1/raw_source_manifest.json": {
+      "sha256": "3978cf93e3b1b574f35b02cc50308ae9025e653dec78cc0dc6e195926d2f89af",
+      "bytes": 10137371
+    },
+    "data_processed/factual_triples/public-benchmarks-full-v1/raw_source_manifest.json": {
+      "sha256": "851def54b07a6cbc87339051eb8fdde5c0dd657d98faf540e0bd298c36d4a80b",
+      "bytes": 27405871
+    },
+    "data_processed/factual_triples/public-benchmarks-full-v1/provisional/qwen3.7-plus-v1/full-4513-multilingual-review-r09-recovery-v3-c16-r8-20260929/multilingual_translation_review_records.jsonl": {
+      "sha256": "de778a445dc1938dd2e6d0d6cf47aa1b5891155048422f7f8c3108d552564879",
+      "bytes": 29124396
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "faca85cdabdd103265ed78e08660dbd58ae9a01c640d6eededa45726375880da",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002124",
+      "decision": "ready",
+      "subject": "device used to record something",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "recorder",
+      "canonical_fact": "A device used to record something is called a recorder.",
+      "prompt_en": "What is the conventional term for a device used to record something?",
+      "evidence_quotes": [
+        "do you use to recording something",
+        "recorder"
+      ],
+      "reason": "The question asks for the term matching the description 'device used to record something'; the source answer 'recorder' is a literal substring of source_answer. Relation description_to_term fits exactly: the subject is a defining description and the answer is the conventional term. No conflict with existing answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "recorder",
+        "canonical_fact": "A device used to record something is called a recorder.",
+        "subject": "device used to record something",
+        "prompt_en": "What is the conventional term for a device used to record something?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "recorder"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5a137de729de77d5197ddb306039564d17ef891adf732fa47a913759befb8ae3",
+      "input_sha256": "4ca23f30a71d6f29a358ef3be57d7e07c2bde5c728a16d3d9cb74d71e8a622ac",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002175",
+      "decision": "ready",
+      "subject": "milk",
+      "relation_id": "entity_to_color",
+      "relation_definition": "Typical or standard color of a specified entity in its ordinary, unflavored natural form; not a particular batch or variant.",
+      "direction": "entity -> color",
+      "answer": "white",
+      "canonical_fact": "Milk is white.",
+      "prompt_en": "What color is milk?",
+      "evidence_quotes": [
+        "What color is milk?",
+        "white"
+      ],
+      "reason": "No existing catalog relation captures a simple entity-to-inherent-color fact; entity_to_class is too broad, entity_to_material is about composition. A precise new relation entity_to_color is proposed. The source answer 'white' is a literal substring of source_answer and matches the existing answer exactly. No qualifier is present in the source, so none is added.",
+      "english": {
+        "direction": "entity -> color",
+        "relation_id": "entity_to_color",
+        "answer": "white",
+        "canonical_fact": "Milk is white.",
+        "subject": "milk",
+        "prompt_en": "What color is milk?",
+        "relation_definition": "Typical or standard color of a specified entity in its ordinary, unflavored natural form; not a particular batch or variant.",
+        "answer_aliases_en": [
+          "white"
+        ],
+        "relation_spec": {
+          "id": "entity_to_color",
+          "definition": "Typical or standard color of a specified entity in its ordinary, unflavored natural form; not a particular batch or variant.",
+          "direction": "entity -> color"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4c5b14000e7b167bec56eb89f5be299c5479c433d30470305711cc9a0aa92f40",
+      "input_sha256": "4cf1c205c1679a707ad48bb467d1e05ef75541aff8df491ea1f5811ecf402f55",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002124",
+      "input_sha256": "4ca23f30a71d6f29a358ef3be57d7e07c2bde5c728a16d3d9cb74d71e8a622ac",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "recorder",
+        "canonical_fact": "A device used to record something is called a recorder.",
+        "subject": "device used to record something",
+        "prompt_en": "What is the conventional term for a device used to record something?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "recorder"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5a137de729de77d5197ddb306039564d17ef891adf732fa47a913759befb8ae3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002124",
+        "subject_zh": "用于记录某事物的设备",
+        "prompt_zh": "用于记录某事物的设备的约定术语是什么？",
+        "canonical_fact_zh": "用于记录某事物的设备称为记录器。",
+        "answer_zh": "记录器",
+        "answer_aliases_zh": [
+          "记录器"
+        ]
+      },
+      "translation_sha256": "9425f5cb5a69036d3e5755bb011489f050ec25d624e4b16df8d59f98c5f42293"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002175",
+      "input_sha256": "4cf1c205c1679a707ad48bb467d1e05ef75541aff8df491ea1f5811ecf402f55",
+      "english": {
+        "direction": "entity -> color",
+        "relation_id": "entity_to_color",
+        "answer": "white",
+        "canonical_fact": "Milk is white.",
+        "subject": "milk",
+        "prompt_en": "What color is milk?",
+        "relation_definition": "Typical or standard color of a specified entity in its ordinary, unflavored natural form; not a particular batch or variant.",
+        "answer_aliases_en": [
+          "white"
+        ],
+        "relation_spec": {
+          "id": "entity_to_color",
+          "definition": "Typical or standard color of a specified entity in its ordinary, unflavored natural form; not a particular batch or variant.",
+          "direction": "entity -> color"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4c5b14000e7b167bec56eb89f5be299c5479c433d30470305711cc9a0aa92f40",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002175",
+        "subject_zh": "牛奶",
+        "prompt_zh": "牛奶是什么颜色的？",
+        "canonical_fact_zh": "牛奶是白色的。",
+        "answer_zh": "白色",
+        "answer_aliases_zh": [
+          "白色"
+        ]
+      },
+      "translation_sha256": "41fb21c25f9dbaf566d79ea242f18aa1654858dfc7bb996ad2da609e34ae73ce"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002124",
+        "historical:raw_commonsense_qa_002175"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1659886fcccd1d2d8070ecc5e82c72535ca5745dcc1a9e78983b816b9507cd56",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2144,
+      "first_chunk_seconds": 23.987,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2301,
+        "prompt_tokens": 1604,
+        "total_tokens": 3905,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1900,
+          "text_tokens": 401
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d30d062f52bba9a0f10a3e64ab3558dbfcffacedbe50163a7229f50cb2f70ec3",
+      "status": "completed",
+      "latency_seconds": 54.798
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002124",
+        "historical:raw_commonsense_qa_002175"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1e5c98a62871f80bba70b3db27310326d8f36e509a2e07314f191c25eae55296",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1110,
+      "first_chunk_seconds": 2.728,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1153,
+        "prompt_tokens": 810,
+        "total_tokens": 1963,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1017,
+          "text_tokens": 136
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "63f0a29f2a741d2d60899de9effc613cdcf045a5b16d126827e863b83f78f909",
+      "status": "completed",
+      "latency_seconds": 16.137
+    }
+  ],
+  "status": "completed"
+}

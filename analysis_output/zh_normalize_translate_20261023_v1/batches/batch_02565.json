@@ -1,0 +1,214 @@
+{
+  "input_sha256": "566b89161ac6473d3528eb71d785e123f545d4295d24d4010167bcdcd7f75c7a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003955",
+      "decision": "ready",
+      "subject": "Sharks",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "great oceans",
+      "canonical_fact": "Sharks can be found in each of the great oceans.",
+      "prompt_en": "Sharks can be found in each of the ___.",
+      "evidence_quotes": [
+        "Sharks can be dangerous to encounter, they can be found in each of the",
+        "great oceans"
+      ],
+      "reason": "Source explicitly states sharks 'can be found in each of the great oceans,' a typical-habitat claim with scope qualifier 'each of the' and uncertainty marker 'can be found in.' The catalog relation organism_to_habitat fits exactly: organism (Sharks) -> habitat (great oceans), preserving non-exclusivity.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "great oceans",
+        "canonical_fact": "Sharks can be found in each of the great oceans.",
+        "subject": "Sharks",
+        "prompt_en": "Sharks can be found in each of the ___.",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "great oceans"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6b202bcd39fad378ee2211a2da6ca0f720d85c49c381a50910d35fad47963fd7",
+      "input_sha256": "90cb18c22aaa5cf09b7b6420d8e5a7ecf7fbf388aeb9e9c2d2553e845c0f0f82",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003959",
+      "decision": "ready",
+      "subject": "chief in a company",
+      "relation_id": "role_to_overseen_role",
+      "relation_definition": "In a specified organizational context, the class of personnel or role that a given supervisory role oversees or holds authority over.",
+      "direction": "supervisory role -> overseen personnel/role",
+      "answer": "employee",
+      "canonical_fact": "In a company, a chief oversees employees.",
+      "prompt_en": "In a company, a chief oversees what people?",
+      "evidence_quotes": [
+        "In a company a chief oversees what people?",
+        "employee"
+      ],
+      "reason": "No catalog relation captures a supervisory-oversight relationship between organizational roles. Proposed role_to_overseen_role precisely defines the direction (supervisory role -> overseen personnel) and scope (specified organizational context). Source states the fact unambiguously: a chief in a company oversees employees.",
+      "english": {
+        "direction": "supervisory role -> overseen personnel/role",
+        "relation_id": "role_to_overseen_role",
+        "answer": "employee",
+        "canonical_fact": "In a company, a chief oversees employees.",
+        "subject": "chief in a company",
+        "prompt_en": "In a company, a chief oversees what people?",
+        "relation_definition": "In a specified organizational context, the class of personnel or role that a given supervisory role oversees or holds authority over.",
+        "answer_aliases_en": [
+          "employee"
+        ],
+        "relation_spec": {
+          "id": "role_to_overseen_role",
+          "definition": "In a specified organizational context, the class of personnel or role that a given supervisory role oversees or holds authority over.",
+          "direction": "supervisory role -> overseen personnel/role"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0ffc8f570f04364435f7294d79b266876594667df99f0a5fdd4bbff22fe2d7f3",
+      "input_sha256": "82e830031307f03675ce364a3bd363103b900fb4323a06e2af27ec75869464e1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003955",
+      "input_sha256": "90cb18c22aaa5cf09b7b6420d8e5a7ecf7fbf388aeb9e9c2d2553e845c0f0f82",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "great oceans",
+        "canonical_fact": "Sharks can be found in each of the great oceans.",
+        "subject": "Sharks",
+        "prompt_en": "Sharks can be found in each of the ___.",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "great oceans"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6b202bcd39fad378ee2211a2da6ca0f720d85c49c381a50910d35fad47963fd7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003955",
+        "subject_zh": "鲨鱼",
+        "prompt_zh": "鲨鱼可以在每一个___中找到。",
+        "canonical_fact_zh": "鲨鱼可以在各大洋中找到。",
+        "answer_zh": "各大洋",
+        "answer_aliases_zh": [
+          "各大洋"
+        ]
+      },
+      "translation_sha256": "fdcbcc768ba5439ae7cfdc46d6518832a1ef17c277cd75af902f083f1e2a9a20"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003959",
+      "input_sha256": "82e830031307f03675ce364a3bd363103b900fb4323a06e2af27ec75869464e1",
+      "english": {
+        "direction": "supervisory role -> overseen personnel/role",
+        "relation_id": "role_to_overseen_role",
+        "answer": "employee",
+        "canonical_fact": "In a company, a chief oversees employees.",
+        "subject": "chief in a company",
+        "prompt_en": "In a company, a chief oversees what people?",
+        "relation_definition": "In a specified organizational context, the class of personnel or role that a given supervisory role oversees or holds authority over.",
+        "answer_aliases_en": [
+          "employee"
+        ],
+        "relation_spec": {
+          "id": "role_to_overseen_role",
+          "definition": "In a specified organizational context, the class of personnel or role that a given supervisory role oversees or holds authority over.",
+          "direction": "supervisory role -> overseen personnel/role"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0ffc8f570f04364435f7294d79b266876594667df99f0a5fdd4bbff22fe2d7f3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003959",
+        "subject_zh": "公司中的主管",
+        "prompt_zh": "在公司里，主管负责监督哪些人？",
+        "canonical_fact_zh": "在公司里，主管负责监督员工。",
+        "answer_zh": "员工",
+        "answer_aliases_zh": [
+          "员工"
+        ]
+      },
+      "translation_sha256": "e6cd6cb302a704bb59be3398ee662c1c41d25713a1727d15d455007d1cfdb3f3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003955",
+        "historical:raw_commonsense_qa_003959"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c12e0bafe2c768abdb69701e2d7563bbc5f929f6188e312b3475972f1f7789fc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1845,
+      "first_chunk_seconds": 3.225,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1896,
+        "prompt_tokens": 1620,
+        "total_tokens": 3516,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1391,
+          "text_tokens": 505
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2d4e80b697b7d2c4af653d0a977f53c3f539ddff11f3cd119e172b9c98e2eecb",
+      "status": "completed",
+      "latency_seconds": 27.596
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003955",
+        "historical:raw_commonsense_qa_003959"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bd3a3aa665f12b16e2575e66a33b8e50d11ad4fa1bc2cae2a8054a785bf6fa3c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1185,
+      "first_chunk_seconds": 34.579,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1287,
+        "prompt_tokens": 839,
+        "total_tokens": 2126,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1083,
+          "text_tokens": 204
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dfdd81d91fbd32eca59772ad7d6dbac409f6e62ff7e500730d46fa760b0e54ea",
+      "status": "completed",
+      "latency_seconds": 54.009
+    }
+  ],
+  "status": "completed"
+}

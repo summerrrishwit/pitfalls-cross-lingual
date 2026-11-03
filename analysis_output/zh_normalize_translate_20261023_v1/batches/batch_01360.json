@@ -1,0 +1,217 @@
+{
+  "input_sha256": "10b39344e490d7c24339d354cd2b68a5c5a6a253058623e0dd84471c572e1e4a",
+  "normalized": [
+    {
+      "record_id": "public:pbf_8b6c48e615266fc99fd8",
+      "decision": "ready",
+      "subject": "Love Don't Live Here Anymore",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Rose Royce",
+      "canonical_fact": "Rose Royce is the performer of the song Love Don't Live Here Anymore.",
+      "prompt_en": "Factual question: who sings the song love don't live here anymore\nAnswer:",
+      "evidence_quotes": [
+        "who sings the song love don't live here anymore",
+        "Rose Royce"
+      ],
+      "reason": "The question asks who sings a specified song; catalog relation song_to_performer (song -> performer) fits exactly. Source answer 'Rose Royce' is kept verbatim as the existing answer.",
+      "english": {
+        "answer": "Rose Royce",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Factual question: who sings the song love don't live here anymore\nAnswer:",
+        "direction": "song -> performer",
+        "subject": "Love Don't Live Here Anymore",
+        "canonical_fact": "Rose Royce is the performer of the song Love Don't Live Here Anymore.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Rose Royce"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "586826fc2f82ca949f305291496437777f66edf8babeadc0b0e7ddb5c38320c0",
+      "input_sha256": "e843263bb4a2f8674b3259d09f7373ef5f9cd04615efe6659c8e8aaffd0ae41d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8bb0d030b6a3ac1a41be",
+      "decision": "ready",
+      "subject": "GDP per capita in Japan from 1950 to 2016, controlling for inflation and PPP adjustment",
+      "relation_id": "statistic_to_change_factor",
+      "relation_definition": "The multiplicative change factor (increase or decrease) of a specified economic or statistical metric over a stated period, with stated adjustments (e.g., inflation, PPP).",
+      "direction": "specified metric, entity, period, and adjustments -> change factor",
+      "answer": "15 fold",
+      "canonical_fact": "GDP per capita in Japan, controlling for inflation and PPP adjustment, increased by approximately 15 fold from 1950 to 2016.",
+      "prompt_en": "Factual question: Controlling for inflation and PPP-adjustment, about how much did GDP per capita increase from 1950 to 2016 in Japan?\nAnswer:",
+      "evidence_quotes": [
+        "about how much did GDP per capita increase from 1950 to 2016 in Japan",
+        "by 15 fold"
+      ],
+      "reason": "No existing catalog relation captures a quantitative change factor of an economic statistic over time. Proposed new precise relation statistic_to_change_factor. The 'about' qualifier from the question is preserved in the canonical fact. Existing answer '15 fold' is a literal substring of source_answer 'by 15 fold' and is retained.",
+      "english": {
+        "answer": "15 fold",
+        "relation_id": "statistic_to_change_factor",
+        "prompt_en": "Factual question: Controlling for inflation and PPP-adjustment, about how much did GDP per capita increase from 1950 to 2016 in Japan?\nAnswer:",
+        "direction": "specified metric, entity, period, and adjustments -> change factor",
+        "subject": "GDP per capita in Japan from 1950 to 2016, controlling for inflation and PPP adjustment",
+        "canonical_fact": "GDP per capita in Japan, controlling for inflation and PPP adjustment, increased by approximately 15 fold from 1950 to 2016.",
+        "relation_definition": "The multiplicative change factor (increase or decrease) of a specified economic or statistical metric over a stated period, with stated adjustments (e.g., inflation, PPP).",
+        "answer_aliases_en": [
+          "15 fold",
+          "by 15 fold"
+        ],
+        "relation_spec": {
+          "id": "statistic_to_change_factor",
+          "definition": "The multiplicative change factor (increase or decrease) of a specified economic or statistical metric over a stated period, with stated adjustments (e.g., inflation, PPP).",
+          "direction": "specified metric, entity, period, and adjustments -> change factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a7c782c8efc9b87fbcfa76f8bc064b9a087ee9ad19415d4ff87aa3dade931d66",
+      "input_sha256": "2592e3fe07215023289b91cb42d4efe36061444ef70d99d910c6fc411bb95f5c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_8b6c48e615266fc99fd8",
+      "input_sha256": "e843263bb4a2f8674b3259d09f7373ef5f9cd04615efe6659c8e8aaffd0ae41d",
+      "english": {
+        "answer": "Rose Royce",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Factual question: who sings the song love don't live here anymore\nAnswer:",
+        "direction": "song -> performer",
+        "subject": "Love Don't Live Here Anymore",
+        "canonical_fact": "Rose Royce is the performer of the song Love Don't Live Here Anymore.",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer_aliases_en": [
+          "Rose Royce"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "586826fc2f82ca949f305291496437777f66edf8babeadc0b0e7ddb5c38320c0",
+      "translation": {
+        "record_id": "public:pbf_8b6c48e615266fc99fd8",
+        "subject_zh": "Love Don't Live Here Anymore",
+        "prompt_zh": "事实性问题：歌曲《Love Don't Live Here Anymore》的演唱者是谁？答案：",
+        "canonical_fact_zh": "Rose Royce 是歌曲《Love Don't Live Here Anymore》的演唱者。",
+        "answer_zh": "Rose Royce",
+        "answer_aliases_zh": [
+          "Rose Royce"
+        ]
+      },
+      "translation_sha256": "a65892c7c96e1ffdf925f71f998e40905c57ebb70449f27e913add533154a109"
+    },
+    {
+      "record_id": "public:pbf_8bb0d030b6a3ac1a41be",
+      "input_sha256": "2592e3fe07215023289b91cb42d4efe36061444ef70d99d910c6fc411bb95f5c",
+      "english": {
+        "answer": "15 fold",
+        "relation_id": "statistic_to_change_factor",
+        "prompt_en": "Factual question: Controlling for inflation and PPP-adjustment, about how much did GDP per capita increase from 1950 to 2016 in Japan?\nAnswer:",
+        "direction": "specified metric, entity, period, and adjustments -> change factor",
+        "subject": "GDP per capita in Japan from 1950 to 2016, controlling for inflation and PPP adjustment",
+        "canonical_fact": "GDP per capita in Japan, controlling for inflation and PPP adjustment, increased by approximately 15 fold from 1950 to 2016.",
+        "relation_definition": "The multiplicative change factor (increase or decrease) of a specified economic or statistical metric over a stated period, with stated adjustments (e.g., inflation, PPP).",
+        "answer_aliases_en": [
+          "15 fold",
+          "by 15 fold"
+        ],
+        "relation_spec": {
+          "id": "statistic_to_change_factor",
+          "definition": "The multiplicative change factor (increase or decrease) of a specified economic or statistical metric over a stated period, with stated adjustments (e.g., inflation, PPP).",
+          "direction": "specified metric, entity, period, and adjustments -> change factor"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a7c782c8efc9b87fbcfa76f8bc064b9a087ee9ad19415d4ff87aa3dade931d66",
+      "translation": {
+        "record_id": "public:pbf_8bb0d030b6a3ac1a41be",
+        "subject_zh": "1950年至2016年间日本的人均GDP（剔除通胀并进行购买力平价调整）",
+        "prompt_zh": "事实性问题：剔除通胀并进行购买力平价调整后，1950年至2016年间日本的人均GDP大约增长了多少倍？答案：",
+        "canonical_fact_zh": "剔除通胀并进行购买力平价调整后，日本1950年至2016年间的人均GDP大约增长了15倍。",
+        "answer_zh": "15倍",
+        "answer_aliases_zh": [
+          "15倍",
+          "增长15倍"
+        ]
+      },
+      "translation_sha256": "7d6e04768514f7c0628c27e3883a58b6595c9a3ce31c7520dba37994ef2c611c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8b6c48e615266fc99fd8",
+        "public:pbf_8bb0d030b6a3ac1a41be"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39b45f58f14ff3ae5387cf680f0ecd83bd41bb736d4aadaf508544dc02552031",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3033,
+      "first_chunk_seconds": 36.494,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3031,
+        "prompt_tokens": 1734,
+        "total_tokens": 4765,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2413,
+          "text_tokens": 618
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "550ab48c33cfc26b7819b2169bbd87f4b85aa31c77b582d1ea78ffd31496c863",
+      "status": "completed",
+      "latency_seconds": 61.321
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8b6c48e615266fc99fd8",
+        "public:pbf_8bb0d030b6a3ac1a41be"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1fbce2fd47f483dc7bdad901b8e1ff8b2704b4b7707c57dd4914fa71d7685130",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1777,
+      "first_chunk_seconds": 22.729,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1784,
+        "prompt_tokens": 975,
+        "total_tokens": 2759,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1439,
+          "text_tokens": 345
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0522e883873df1f7115da7fceca35d2c6794a0d2ce633d094c3beafd50a39667",
+      "status": "completed",
+      "latency_seconds": 37.99
+    }
+  ],
+  "status": "completed"
+}

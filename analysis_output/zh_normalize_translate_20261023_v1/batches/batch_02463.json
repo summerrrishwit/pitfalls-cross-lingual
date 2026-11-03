@@ -1,0 +1,214 @@
+{
+  "input_sha256": "157e6721c05f525dd8791d1f792184d3731a0bfbaa4bd5e01a0bfe6e71feac85",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000821",
+      "decision": "ready",
+      "subject": "basketball",
+      "relation_id": "activity_to_objective",
+      "relation_definition": "The stated purpose or objective of a specified sport, game, or activity; retained at the granularity asked.",
+      "direction": "specified activity/sport -> objective",
+      "answer": "score points",
+      "canonical_fact": "The goal of basketball is to score points.",
+      "prompt_en": "What is the objective when competing in a basketball game?",
+      "evidence_quotes": [
+        "the goal was to what?",
+        "score points"
+      ],
+      "reason": "No catalog relation captures 'purpose/objective of a sport.' Proposed activity_to_objective fits exactly: the question asks the goal of basketball and the source answer is 'score points.' One model marked it not_extractable as 'typical_action_or_location,' but the fact is a stable commonsense rule about the sport's objective, not a typical action or location, so it is extractable. Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "specified activity/sport -> objective",
+        "relation_id": "activity_to_objective",
+        "answer": "score points",
+        "canonical_fact": "The goal of basketball is to score points.",
+        "subject": "basketball",
+        "prompt_en": "What is the objective when competing in a basketball game?",
+        "relation_definition": "The stated purpose or objective of a specified sport, game, or activity; retained at the granularity asked.",
+        "answer_aliases_en": [
+          "score points"
+        ],
+        "relation_spec": {
+          "id": "activity_to_objective",
+          "definition": "The stated purpose or objective of a specified sport, game, or activity; retained at the granularity asked.",
+          "direction": "specified activity/sport -> objective"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "451032706a22a184cc9d12225d6185609737dd8836fbb1059448db35d10ed803",
+      "input_sha256": "e97174db818180e6c3762bd9600d9320f5b5a9c66f467dc05f66f42214f57130",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000847",
+      "decision": "ready",
+      "subject": "device that shoots water up someones butt",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "enema",
+      "canonical_fact": "An enema is a device that shoots water up someones butt.",
+      "prompt_en": "What shoots water up someone's butt?",
+      "evidence_quotes": [
+        "shoots water up someones butt",
+        "enema"
+      ],
+      "reason": "The source question supplies a defining description and asks for the conventional term; this maps exactly to the catalog relation description_to_term (description -> term). One model flagged the subject as ambiguous, but the description is specific enough to uniquely identify 'enema' in common-sense usage. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "enema",
+        "canonical_fact": "An enema is a device that shoots water up someones butt.",
+        "subject": "device that shoots water up someones butt",
+        "prompt_en": "What shoots water up someone's butt?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "enema"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "685b670e19f707a2b999f0e6fcdb569a42cc2d48fee8e6d6937f820a90b4f467",
+      "input_sha256": "fad5bfde31b752e17d8dc899bed3f570a94f01f404ad75b7496c333d1335f5de",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_000821",
+      "input_sha256": "e97174db818180e6c3762bd9600d9320f5b5a9c66f467dc05f66f42214f57130",
+      "english": {
+        "direction": "specified activity/sport -> objective",
+        "relation_id": "activity_to_objective",
+        "answer": "score points",
+        "canonical_fact": "The goal of basketball is to score points.",
+        "subject": "basketball",
+        "prompt_en": "What is the objective when competing in a basketball game?",
+        "relation_definition": "The stated purpose or objective of a specified sport, game, or activity; retained at the granularity asked.",
+        "answer_aliases_en": [
+          "score points"
+        ],
+        "relation_spec": {
+          "id": "activity_to_objective",
+          "definition": "The stated purpose or objective of a specified sport, game, or activity; retained at the granularity asked.",
+          "direction": "specified activity/sport -> objective"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "451032706a22a184cc9d12225d6185609737dd8836fbb1059448db35d10ed803",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000821",
+        "subject_zh": "篮球",
+        "prompt_zh": "在篮球比赛中，比赛的目的是什么？",
+        "canonical_fact_zh": "篮球的目标是得分。",
+        "answer_zh": "得分",
+        "answer_aliases_zh": [
+          "得分"
+        ]
+      },
+      "translation_sha256": "cfabe5e4863a1f23d74e02ee50160c2da1429d108c00b7b5eac5bc159463a782"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_000847",
+      "input_sha256": "fad5bfde31b752e17d8dc899bed3f570a94f01f404ad75b7496c333d1335f5de",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "enema",
+        "canonical_fact": "An enema is a device that shoots water up someones butt.",
+        "subject": "device that shoots water up someones butt",
+        "prompt_en": "What shoots water up someone's butt?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "enema"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "685b670e19f707a2b999f0e6fcdb569a42cc2d48fee8e6d6937f820a90b4f467",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_000847",
+        "subject_zh": "将水喷入某人屁股的装置",
+        "prompt_zh": "什么东西会把水喷进人的屁股里？",
+        "canonical_fact_zh": "灌肠器是一种将水喷入某人屁股的装置。",
+        "answer_zh": "灌肠器",
+        "answer_aliases_zh": [
+          "灌肠器"
+        ]
+      },
+      "translation_sha256": "7e643c8968a0581d8378a265b23b7e640ac2dc0a3764d36cf9e84dc97382b6bf"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000821",
+        "historical:raw_commonsense_qa_000847"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08fd23abf62cf445a503a1b10a8e9e539c4a4f485f95c3ba889b53ec12f98f1c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1705,
+      "first_chunk_seconds": 26.851,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1779,
+        "prompt_tokens": 1629,
+        "total_tokens": 3408,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1259,
+          "text_tokens": 520
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "961b50a4dc53fc24ab1c68291d4a206520bdde462ce6e0e8329eb30f8a122f03",
+      "status": "completed",
+      "latency_seconds": 46.969
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_000821",
+        "historical:raw_commonsense_qa_000847"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c758839b21d5189a5b4b24c80811cf618d4185a484ae3a0b75ff72f46146b479",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 636,
+      "first_chunk_seconds": 12.317,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 719,
+        "prompt_tokens": 831,
+        "total_tokens": 1550,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 502,
+          "text_tokens": 217
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "08e02df409c999a97dda033e03cce7b29cd5693b1affaa6e2848309430c799df",
+      "status": "completed",
+      "latency_seconds": 86.336
+    }
+  ],
+  "status": "completed"
+}

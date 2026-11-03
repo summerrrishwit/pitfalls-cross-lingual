@@ -1,0 +1,85 @@
+{
+  "input_sha256": "705ee6a6042b40b96631e8e3cccd1a9d353066a1a99da77786b1b9760d7d297a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009619",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'is likely' is a vague property inference and the fact is nearly tautological ('isn't recent' ≈ 'old'). No catalog relation fits, and proposing a new relation such as 'entity_to_likely_property' would be too broad to be a precise, reusable factual edge. Source support is a single common-sense QA pair without disambiguating context. Deferring.",
+      "input_sha256": "18b863b9419fb7dcb95ffdc7a9a5af084fe3d92fef3ee6625685f907b9748bc0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009640",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'might lead to' is a common-sense causal association (eating garlic → bad breath) with no corresponding catalog relation. A proposed new relation like 'action_to_likely_outcome' would be overly broad. The source provides only a thin common-sense QA pair without sufficient factual depth or disambiguation to justify a reusable precise fact. Deferring.",
+      "input_sha256": "d10aac3137e9005d3c9bc69a6e03f0d1679ef0b05632929a71846edf302725d1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009619",
+        "historical:raw_commonsense_qa_009640"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "52e86f5f3f2a36a48ec2a40b24fe16f694406329a0e96e5d89789310514c518e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.545
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009619",
+        "historical:raw_commonsense_qa_009640"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "52e86f5f3f2a36a48ec2a40b24fe16f694406329a0e96e5d89789310514c518e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1811,
+      "first_chunk_seconds": 62.211,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1942,
+        "prompt_tokens": 1599,
+        "total_tokens": 3541,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1627,
+          "text_tokens": 315
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "005e00c0edd7fd67b186540fd665b2ff399bb7dbc243430a0c8db146cb79aec9",
+      "status": "completed",
+      "latency_seconds": 100.777
+    }
+  ],
+  "status": "completed"
+}

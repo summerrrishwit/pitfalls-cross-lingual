@@ -1,0 +1,189 @@
+{
+  "input_sha256": "8624d0999ce5987910f5d25e754c15d98420492dd53a95655d6b8b141668ce92",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001831",
+      "decision": "ready",
+      "subject": "index fossils",
+      "relation_id": "index_fossil_to_inferred_rock_property",
+      "relation_definition": "A geological property (such as age) of a rock that can be inferred from the presence of a specified index fossil; scope limited to the property explicitly stated in source.",
+      "direction": "index fossil -> inferred property of containing rock",
+      "answer": "the age of the rock",
+      "canonical_fact": "Index fossils indicate the age of the rock.",
+      "prompt_en": "What property of the rocks can be inferred from the presence of index fossils?",
+      "evidence_quotes": [
+        "the age of the rock",
+        "What can scientists infer about the rocks in which these fossils were found?"
+      ],
+      "reason": "Source answer 'the age of the rock' matches old extraction exactly. No catalog relation captures the inferential 'indicates a property of' direction; proposed new relation index_fossil_to_inferred_rock_property. Prompt is option-free and does not contain the answer string.",
+      "english": {
+        "direction": "index fossil -> inferred property of containing rock",
+        "relation_id": "index_fossil_to_inferred_rock_property",
+        "answer": "the age of the rock",
+        "canonical_fact": "Index fossils indicate the age of the rock.",
+        "subject": "index fossils",
+        "prompt_en": "What property of the rocks can be inferred from the presence of index fossils?",
+        "relation_definition": "A geological property (such as age) of a rock that can be inferred from the presence of a specified index fossil; scope limited to the property explicitly stated in source.",
+        "answer_aliases_en": [
+          "the age of the rock"
+        ],
+        "relation_spec": {
+          "id": "index_fossil_to_inferred_rock_property",
+          "definition": "A geological property (such as age) of a rock that can be inferred from the presence of a specified index fossil; scope limited to the property explicitly stated in source.",
+          "direction": "index fossil -> inferred property of containing rock"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "03ead0b64c4203d8cf842d3335cfa6ef4054d97e289907f7400ae964572b208a",
+      "input_sha256": "18d4241b12fd2903919c1fa41514ca6d45fa0ea5d4f3f26b88dd165395eea5f9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001836",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Old answer 'division of cells' omits the source qualifier 'in the plant' present in source_answer 'the division of cells in the plant'. Instructions require preserving qualifiers and deferring when the existing answer conflicts with source. No further extraction without altering the answer.",
+      "input_sha256": "2bfb33314fdc72a08b716ff86393c7901a20e1dfad6fb9a8705c90689101569c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001831",
+      "input_sha256": "18d4241b12fd2903919c1fa41514ca6d45fa0ea5d4f3f26b88dd165395eea5f9",
+      "english": {
+        "direction": "index fossil -> inferred property of containing rock",
+        "relation_id": "index_fossil_to_inferred_rock_property",
+        "answer": "the age of the rock",
+        "canonical_fact": "Index fossils indicate the age of the rock.",
+        "subject": "index fossils",
+        "prompt_en": "What property of the rocks can be inferred from the presence of index fossils?",
+        "relation_definition": "A geological property (such as age) of a rock that can be inferred from the presence of a specified index fossil; scope limited to the property explicitly stated in source.",
+        "answer_aliases_en": [
+          "the age of the rock"
+        ],
+        "relation_spec": {
+          "id": "index_fossil_to_inferred_rock_property",
+          "definition": "A geological property (such as age) of a rock that can be inferred from the presence of a specified index fossil; scope limited to the property explicitly stated in source.",
+          "direction": "index fossil -> inferred property of containing rock"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "03ead0b64c4203d8cf842d3335cfa6ef4054d97e289907f7400ae964572b208a",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001831",
+        "subject_zh": "标准化石",
+        "prompt_zh": "从标准化石的存在可以推断出岩石的什么性质？",
+        "canonical_fact_zh": "标准化石指示岩石的年代。",
+        "answer_zh": "岩石的年代",
+        "answer_aliases_zh": [
+          "岩石的年代"
+        ]
+      },
+      "translation_sha256": "59efb7b7b5c61bee2f1423cab6f5405ef11435bf89301bb48c6d4255a000c764"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001831",
+        "historical:raw_ai2_arc_easy_001836"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5bad12af4f388c6c1368cd558d8daf7c3567c2d2e2b75ae785e03c678a11e26a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3277,
+      "first_chunk_seconds": 8.722,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3334,
+        "prompt_tokens": 1722,
+        "total_tokens": 5056,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2754,
+          "text_tokens": 580
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4cd00f8a24d78c656155ca22dfd4c7f283837ef3a3b1da50b30e572663eaaca1",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 49.051,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001831",
+        "historical:raw_ai2_arc_easy_001836"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "475de4d1edcc4211c1ddf600f473e6c4f4362ec5f6b52e15597481e8f30ca69d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2388,
+      "first_chunk_seconds": 7.984,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2598,
+        "prompt_tokens": 1739,
+        "total_tokens": 4337,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2161,
+          "text_tokens": 437
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aa4de0d49d4c9a14620bee078ff692d74949c11defccc8c6f5caa8168ff0f91e",
+      "status": "completed",
+      "latency_seconds": 38.405
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001831"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d62991e621147a13f0360d32c949527b029beb6bbe720184037e3da42d71b37a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 634,
+      "first_chunk_seconds": 23.021,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 689,
+        "prompt_tokens": 568,
+        "total_tokens": 1257,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 614,
+          "text_tokens": 75
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c3022e84ce79857a60cb7290106e3258f46b47de3cbd5612a2c12a1551b02aa6",
+      "status": "completed",
+      "latency_seconds": 48.1
+    }
+  ],
+  "status": "completed"
+}

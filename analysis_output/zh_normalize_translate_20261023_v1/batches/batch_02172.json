@@ -1,0 +1,208 @@
+{
+  "input_sha256": "1d6bfbdc24e341e61161c9c1a4881bc8250867d3891bc0bb65de4c5d0bbd1dfc",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000442",
+      "decision": "ready",
+      "subject": "source that produces light from nuclear energy",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "the Sun",
+      "canonical_fact": "The Sun is the source that produces light from nuclear energy.",
+      "prompt_en": "What source produces light from nuclear energy?",
+      "evidence_quotes": [
+        "Which source produces light from nuclear energy?",
+        "the Sun"
+      ],
+      "reason": "The source question provides an identifying description ('source that produces light from nuclear energy') and the source answer 'the Sun' is the unique entity satisfying it. description_to_entity fits exactly: the description is qualified (source + produces light + nuclear energy) and the answer is a single named entity. No existing broader relation applies more precisely.",
+      "english": {
+        "answer": "the Sun",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What source produces light from nuclear energy?",
+        "direction": "identifying description -> entity",
+        "subject": "source that produces light from nuclear energy",
+        "canonical_fact": "The Sun is the source that produces light from nuclear energy.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "the Sun"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ceff17953c5749cb189b03b681e0e00b09393c784697abc99dae801f6f8b4abc",
+      "input_sha256": "6711717d043e6808fb80f97d7a288d9deaf0fc1059bd32610f46c25c0602d942",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000444",
+      "decision": "ready",
+      "subject": "organ made mostly of muscle",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "heart",
+      "canonical_fact": "The heart is an organ made mostly of muscle.",
+      "prompt_en": "Which organ is made mostly of muscle?",
+      "evidence_quotes": [
+        "Which organ is made mostly of muscle?",
+        "heart"
+      ],
+      "reason": "The source question gives a qualified identifying description ('organ made mostly of muscle') and the source answer 'heart' is the entity that satisfies it. description_to_entity fits: the description is explicitly qualified by class (organ) and property (made mostly of muscle). Although other organs contain muscle, the qualifier 'mostly' points uniquely to the heart in the stated elementary-sense. The source_answer is authoritative; old model review flagging non-uniqueness is not gold.",
+      "english": {
+        "answer": "heart",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which organ is made mostly of muscle?",
+        "direction": "identifying description -> entity",
+        "subject": "organ made mostly of muscle",
+        "canonical_fact": "The heart is an organ made mostly of muscle.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "heart"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ebb6ffe1492ef843636c25c23846ddfdf755f2b2015575ad5c8667591a46ae33",
+      "input_sha256": "a86364df0a8b5caee8668804018c39b6ebd56663e6b77319257119670b74878c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3a0119adf71cf7f49d9d7ac8b346500dd289e4ef17dc8ecc26369a5b45729df8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1556,
+      "first_chunk_seconds": 28.713,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1570,
+        "prompt_tokens": 1642,
+        "total_tokens": 3212,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1084,
+          "text_tokens": 486
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "89b0dc741fe0f2d20b218112e36d7e2de75a408d36bf4b133fb82a9e1b96bddb",
+      "status": "completed",
+      "latency_seconds": 49.612
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.02
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.181
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.688
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.791
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.807
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000442",
+        "historical:raw_ai2_arc_easy_000444"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "95ad81832c87fa3b9525fc8d0c3d3902e13874e79d4425d85414abd1ae7c050b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.784
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02172.json",
+      "sha256": "3b7bad8a47fd7717dbf9363bcc95fa98de9aeaf9e0359452cf5b9d7a43104f75",
+      "previous_status": "failed"
+    }
+  ]
+}

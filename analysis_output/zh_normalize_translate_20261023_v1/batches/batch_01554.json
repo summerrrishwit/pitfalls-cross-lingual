@@ -1,0 +1,217 @@
+{
+  "input_sha256": "d4eae27297af920e4432c411981d7953b349068a1b401aad23681149a8eb4cd9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_a9ce1b7d695a6df79dbd",
+      "decision": "ready",
+      "subject": "thank you for being a friend",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "Andrew Gold",
+      "canonical_fact": "Andrew Gold wrote the song thank you for being a friend.",
+      "prompt_en": "Factual question: who wrote the song thank you for being a friend\nAnswer:",
+      "evidence_quotes": [
+        "who wrote the song thank you for being a friend",
+        "Andrew Gold"
+      ],
+      "reason": "A song's songwriter is the author of the written work (lyrics/composition). The catalog relation written_work_to_author (direction: written work -> author) fits exactly: subject is the song (a written work), answer is the named writer. No uncertainty or qualifier in source.",
+      "english": {
+        "answer": "Andrew Gold",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Factual question: who wrote the song thank you for being a friend\nAnswer:",
+        "direction": "written work -> author",
+        "subject": "thank you for being a friend",
+        "canonical_fact": "Andrew Gold wrote the song thank you for being a friend.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "Andrew Gold"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1f2a3eac78174770f5afdf5edd35b93df090b2a0268262f41855dff3d7716f1f",
+      "input_sha256": "862bcfc876a95ab8f09605285ae5cdccfa168c36746cf8f9e9f5a0be1a233575",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_a9e4c0b97131358a7cf7",
+      "decision": "ready",
+      "subject": "Parkinson's disease and schizophrenia",
+      "relation_id": "condition_to_associated_neurotransmitter",
+      "relation_definition": "Neurotransmitter most closely associated with a specified medical condition or set of conditions per established biomedical consensus; retains qualifiers such as 'most closely associated'.",
+      "direction": "specified medical condition(s) -> neurotransmitter",
+      "answer": "dopamine",
+      "canonical_fact": "Dopamine is the neurotransmitter most closely associated with both Parkinson's disease and schizophrenia.",
+      "prompt_en": "Factual question: Which neurotransmitter is most closely associated with both Parkinson's disease and schizophrenia?\nAnswer:",
+      "evidence_quotes": [
+        "Which neurotransmitter is most closely associated with both Parkinson's disease and schizophrenia?",
+        "dopamine"
+      ],
+      "reason": "No existing catalog relation captures a disease-condition-to-biochemical-association link. entity_to_class is taxonomy membership, organism_to_habitat is ecological, entity_to_material is composition. A precise new relation condition_to_associated_neurotransmitter (condition(s) -> neurotransmitter) is needed to express this biomedical association without forcing a broad category. Source answer 'dopamine' is a literal substring of source_answer; qualifier 'most closely associated' is preserved.",
+      "english": {
+        "answer": "dopamine",
+        "relation_id": "condition_to_associated_neurotransmitter",
+        "prompt_en": "Factual question: Which neurotransmitter is most closely associated with both Parkinson's disease and schizophrenia?\nAnswer:",
+        "direction": "specified medical condition(s) -> neurotransmitter",
+        "subject": "Parkinson's disease and schizophrenia",
+        "canonical_fact": "Dopamine is the neurotransmitter most closely associated with both Parkinson's disease and schizophrenia.",
+        "relation_definition": "Neurotransmitter most closely associated with a specified medical condition or set of conditions per established biomedical consensus; retains qualifiers such as 'most closely associated'.",
+        "answer_aliases_en": [
+          "dopamine"
+        ],
+        "relation_spec": {
+          "id": "condition_to_associated_neurotransmitter",
+          "definition": "Neurotransmitter most closely associated with a specified medical condition or set of conditions per established biomedical consensus; retains qualifiers such as 'most closely associated'.",
+          "direction": "specified medical condition(s) -> neurotransmitter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fc0c067276b7be76ce2ef937d11a137b3a682938371b3deedeb1da56c27f7e42",
+      "input_sha256": "26a93405274131914005ce5ebb7bdb075b415035ffb483e3b3f4b819e29fbef2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_a9ce1b7d695a6df79dbd",
+      "input_sha256": "862bcfc876a95ab8f09605285ae5cdccfa168c36746cf8f9e9f5a0be1a233575",
+      "english": {
+        "answer": "Andrew Gold",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Factual question: who wrote the song thank you for being a friend\nAnswer:",
+        "direction": "written work -> author",
+        "subject": "thank you for being a friend",
+        "canonical_fact": "Andrew Gold wrote the song thank you for being a friend.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "Andrew Gold"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1f2a3eac78174770f5afdf5edd35b93df090b2a0268262f41855dff3d7716f1f",
+      "translation": {
+        "record_id": "public:pbf_a9ce1b7d695a6df79dbd",
+        "subject_zh": "《Thank You for Being a Friend》",
+        "prompt_zh": "事实性问题：歌曲《Thank You for Being a Friend》是谁创作的？\n答案：",
+        "canonical_fact_zh": "Andrew Gold 创作了歌曲《Thank You for Being a Friend》。",
+        "answer_zh": "Andrew Gold",
+        "answer_aliases_zh": [
+          "Andrew Gold"
+        ]
+      },
+      "translation_sha256": "04f8166f6bfd4af560d053e6612e7e51ed28894ad966ffde73bf9103136b4ef4"
+    },
+    {
+      "record_id": "public:pbf_a9e4c0b97131358a7cf7",
+      "input_sha256": "26a93405274131914005ce5ebb7bdb075b415035ffb483e3b3f4b819e29fbef2",
+      "english": {
+        "answer": "dopamine",
+        "relation_id": "condition_to_associated_neurotransmitter",
+        "prompt_en": "Factual question: Which neurotransmitter is most closely associated with both Parkinson's disease and schizophrenia?\nAnswer:",
+        "direction": "specified medical condition(s) -> neurotransmitter",
+        "subject": "Parkinson's disease and schizophrenia",
+        "canonical_fact": "Dopamine is the neurotransmitter most closely associated with both Parkinson's disease and schizophrenia.",
+        "relation_definition": "Neurotransmitter most closely associated with a specified medical condition or set of conditions per established biomedical consensus; retains qualifiers such as 'most closely associated'.",
+        "answer_aliases_en": [
+          "dopamine"
+        ],
+        "relation_spec": {
+          "id": "condition_to_associated_neurotransmitter",
+          "definition": "Neurotransmitter most closely associated with a specified medical condition or set of conditions per established biomedical consensus; retains qualifiers such as 'most closely associated'.",
+          "direction": "specified medical condition(s) -> neurotransmitter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fc0c067276b7be76ce2ef937d11a137b3a682938371b3deedeb1da56c27f7e42",
+      "translation": {
+        "record_id": "public:pbf_a9e4c0b97131358a7cf7",
+        "subject_zh": "帕金森病和精神分裂症",
+        "prompt_zh": "事实性问题：哪种神经递质与帕金森病和精神分裂症都最为密切相关？\n答案：",
+        "canonical_fact_zh": "多巴胺是与帕金森病和精神分裂症都最为密切相关的神经递质。",
+        "answer_zh": "多巴胺",
+        "answer_aliases_zh": [
+          "多巴胺"
+        ]
+      },
+      "translation_sha256": "cd160ab18c00700fb1bc9e4472cb4b09f22f9d27505ad33d91cecdc65e317199"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a9ce1b7d695a6df79dbd",
+        "public:pbf_a9e4c0b97131358a7cf7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4ad2dec9c38d1206e21da50c96a0356d95d0026695d96cdc5354cc9604c86111",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1846,
+      "first_chunk_seconds": 39.907,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1844,
+        "prompt_tokens": 1607,
+        "total_tokens": 3451,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1274,
+          "text_tokens": 570
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "c44d79ff30e9965df8187ff58029aa9a6b8b9b837f4d16959e1a54e4f5c50fc9",
+      "status": "completed",
+      "latency_seconds": 56.529
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_a9ce1b7d695a6df79dbd",
+        "public:pbf_a9e4c0b97131358a7cf7"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b6fd134945d799d38b4182903e4c768fcdd640f2c39b8d76b4847326df3c2e52",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1420,
+      "first_chunk_seconds": 30.118,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1418,
+        "prompt_tokens": 894,
+        "total_tokens": 2312,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1149,
+          "text_tokens": 269
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0a2f29c2e56293c7bf8821238f0e033fe62e90b31648fdd92cc0000d2e0d998f",
+      "status": "completed",
+      "latency_seconds": 41.886
+    }
+  ],
+  "status": "completed"
+}

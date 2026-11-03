@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8733cb71d77433c44032d292fd1c3c507b67c9b6e8828d782928f87de54a4e54",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006784",
+      "decision": "ready",
+      "subject": "humans",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "male or female",
+      "canonical_fact": "Humans tend to be born two ways: male or female.",
+      "prompt_en": "What are the two biological sex categories into which humans are born?",
+      "evidence_quotes": [
+        "Humans tend to be born two ways",
+        "male or female"
+      ],
+      "reason": "The source question explicitly asks for the two ways humans are born; the answer 'male or female' denotes stable class membership at a biological-sex taxonomy level. entity_to_class fits exactly: humans (entity) map to the two sex classes. No conflicting prior answer existed to defer to. The qualifier 'tend to be born two ways' is preserved in the canonical fact.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "male or female",
+        "canonical_fact": "Humans tend to be born two ways: male or female.",
+        "subject": "humans",
+        "prompt_en": "What are the two biological sex categories into which humans are born?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "male or female"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d6d1bae84f07bb844c4b59b46c5571301ed688e74f19c548aac7b70e47b2df78",
+      "input_sha256": "7ec8f6221013157b36a19dbbffb2d665c92055a1ae89abe025453109dabc7b05",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006794",
+      "decision": "ready",
+      "subject": "pewter",
+      "relation_id": "entity_to_notable_property",
+      "relation_definition": "A property or characteristic for which a specified entity is known or noted; retain any comparative or distinguishing context from the source (e.g. 'unlike most X').",
+      "direction": "entity -> notable property",
+      "answer": "softness",
+      "canonical_fact": "Unlike most metal alloys, pewter is known for its softness.",
+      "prompt_en": "What property is pewter known for, unlike most metal alloys?",
+      "evidence_quotes": [
+        "pewter is known for its",
+        "softness"
+      ],
+      "reason": "The source asks what pewter is 'known for' with a comparative qualifier ('unlike most metal alloys'). No existing catalog relation captures a notable/distinguishing property of an entity without forcing it into entity_to_class (which requires stable taxonomy membership) or entity_to_material (which asks what something is composed of). A new precise relation entity_to_notable_property is proposed. The answer 'softness' is a verbatim substring of source_answer; the comparative context is preserved in the canonical fact.",
+      "english": {
+        "direction": "entity -> notable property",
+        "relation_id": "entity_to_notable_property",
+        "answer": "softness",
+        "canonical_fact": "Unlike most metal alloys, pewter is known for its softness.",
+        "subject": "pewter",
+        "prompt_en": "What property is pewter known for, unlike most metal alloys?",
+        "relation_definition": "A property or characteristic for which a specified entity is known or noted; retain any comparative or distinguishing context from the source (e.g. 'unlike most X').",
+        "answer_aliases_en": [
+          "softness"
+        ],
+        "relation_spec": {
+          "id": "entity_to_notable_property",
+          "definition": "A property or characteristic for which a specified entity is known or noted; retain any comparative or distinguishing context from the source (e.g. 'unlike most X').",
+          "direction": "entity -> notable property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ef317a3ee0ff6bde20b4b825b38e0a4c3373f4bf7e364d33cb01d2afe72cd05",
+      "input_sha256": "e913d9710f4f4bf0b3ad850aa87c34819440869d734cabd6a3bdc81ccf2b572e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006784",
+      "input_sha256": "7ec8f6221013157b36a19dbbffb2d665c92055a1ae89abe025453109dabc7b05",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "male or female",
+        "canonical_fact": "Humans tend to be born two ways: male or female.",
+        "subject": "humans",
+        "prompt_en": "What are the two biological sex categories into which humans are born?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "male or female"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d6d1bae84f07bb844c4b59b46c5571301ed688e74f19c548aac7b70e47b2df78",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006784",
+        "subject_zh": "人类",
+        "prompt_zh": "人类出生时分为哪两种生物学性别类别？",
+        "canonical_fact_zh": "人类出生时通常分为两种：男性或女性。",
+        "answer_zh": "男性或女性",
+        "answer_aliases_zh": [
+          "男性或女性"
+        ]
+      },
+      "translation_sha256": "9aae301bafa4d45e096b43130d36b40ac6dfd0bd012419d9abd926f3f3712825"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006794",
+      "input_sha256": "e913d9710f4f4bf0b3ad850aa87c34819440869d734cabd6a3bdc81ccf2b572e",
+      "english": {
+        "direction": "entity -> notable property",
+        "relation_id": "entity_to_notable_property",
+        "answer": "softness",
+        "canonical_fact": "Unlike most metal alloys, pewter is known for its softness.",
+        "subject": "pewter",
+        "prompt_en": "What property is pewter known for, unlike most metal alloys?",
+        "relation_definition": "A property or characteristic for which a specified entity is known or noted; retain any comparative or distinguishing context from the source (e.g. 'unlike most X').",
+        "answer_aliases_en": [
+          "softness"
+        ],
+        "relation_spec": {
+          "id": "entity_to_notable_property",
+          "definition": "A property or characteristic for which a specified entity is known or noted; retain any comparative or distinguishing context from the source (e.g. 'unlike most X').",
+          "direction": "entity -> notable property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ef317a3ee0ff6bde20b4b825b38e0a4c3373f4bf7e364d33cb01d2afe72cd05",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006794",
+        "subject_zh": "白镴",
+        "prompt_zh": "与大多数金属合金不同，白镴以什么特性著称？",
+        "canonical_fact_zh": "与大多数金属合金不同，白镴以其柔软性著称。",
+        "answer_zh": "柔软性",
+        "answer_aliases_zh": [
+          "柔软性"
+        ]
+      },
+      "translation_sha256": "c08a59ded12712911184a538708412de369353c54776cf30ed6da3ef1b142c57"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006784",
+        "historical:raw_commonsense_qa_006794"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7eacf539100bb204aedc56f7cd11fdc39db00ddd7bfb06c1be6d3c69c3a9c71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2567,
+      "first_chunk_seconds": 21.92,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2674,
+        "prompt_tokens": 1667,
+        "total_tokens": 4341,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2117,
+          "text_tokens": 557
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "755af315df4d385a0452a927455175893e809dfbefc2fbf81921fcac1034a507",
+      "status": "completed",
+      "latency_seconds": 83.453
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006784",
+        "historical:raw_commonsense_qa_006794"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9ae1e708a54e5d3de0273f7b3f08fbc3ac2ee8b83709baacf07b2b9cb35cb279",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1190,
+      "first_chunk_seconds": 22.111,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1282,
+        "prompt_tokens": 847,
+        "total_tokens": 2129,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1054,
+          "text_tokens": 228
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "39d21afdba77cae1663c44f2a3ee74d6bd700f86d06af6aeac7c6aefb7cbc5f0",
+      "status": "completed",
+      "latency_seconds": 35.67
+    }
+  ],
+  "status": "completed"
+}

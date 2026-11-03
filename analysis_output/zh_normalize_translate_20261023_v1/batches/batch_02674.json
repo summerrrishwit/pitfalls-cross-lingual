@@ -1,0 +1,228 @@
+{
+  "input_sha256": "e928afaa4da484110ba87959b9980bdc8061d4b51d6b07fdff5b2621489512b2",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007337",
+      "decision": "ready",
+      "subject": "murder",
+      "relation_id": "action_to_intention",
+      "relation_definition": "The purposeful intention or goal inherent in a specified act or crime.",
+      "direction": "action -> intention",
+      "answer": "kill",
+      "canonical_fact": "The intention of murder is to kill.",
+      "prompt_en": "What is the intention inherent in the act of murder?",
+      "evidence_quotes": [
+        "kill",
+        "what was his intention to his victim"
+      ],
+      "reason": "The source QA pair directly states that the intention of murder is to kill. No catalog relation exactly captures 'intention of an act'; term_to_definition would require a full definitional paraphrase rather than a single intention noun, so a precise new relation 'action_to_intention' is proposed.",
+      "english": {
+        "direction": "action -> intention",
+        "relation_id": "action_to_intention",
+        "answer": "kill",
+        "canonical_fact": "The intention of murder is to kill.",
+        "subject": "murder",
+        "prompt_en": "What is the intention inherent in the act of murder?",
+        "relation_definition": "The purposeful intention or goal inherent in a specified act or crime.",
+        "answer_aliases_en": [
+          "kill"
+        ],
+        "relation_spec": {
+          "id": "action_to_intention",
+          "definition": "The purposeful intention or goal inherent in a specified act or crime.",
+          "direction": "action -> intention"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "61dbd2c524e61dc50081d8d19a37df05b0f4debe0c2100df25ef32dc9c2f0d69",
+      "input_sha256": "24deb7c4f007c056ffd7ca50eea43d112a51da8aa395f7b47eb74c92a27273f0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007350",
+      "decision": "ready",
+      "subject": "European red fox",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "northern hemisphere",
+      "canonical_fact": "The European red fox is native to the northern hemisphere.",
+      "prompt_en": "In which hemisphere is the European red fox typically found in the wild?",
+      "evidence_quotes": [
+        "northern hemisphere",
+        "A european red fox roams in the wild"
+      ],
+      "reason": "The source QA pair states that a European red fox roaming in the wild is likely on the northern hemisphere. This fits organism_to_habitat at the broad 'hemisphere' scope, retaining range without asserting exclusivity. entity_to_containing_location explicitly excludes habitat/origin, so organism_to_habitat is the precise match.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "northern hemisphere",
+        "canonical_fact": "The European red fox is native to the northern hemisphere.",
+        "subject": "European red fox",
+        "prompt_en": "In which hemisphere is the European red fox typically found in the wild?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "northern hemisphere"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84dac03ab52f4edfde68d9a486e775300c52f003b6476efde9ff211fc114538e",
+      "input_sha256": "27c7e973827a5860847e916027670f88628351427a61ffc4cab9a6c49b631687",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007337",
+      "input_sha256": "24deb7c4f007c056ffd7ca50eea43d112a51da8aa395f7b47eb74c92a27273f0",
+      "english": {
+        "direction": "action -> intention",
+        "relation_id": "action_to_intention",
+        "answer": "kill",
+        "canonical_fact": "The intention of murder is to kill.",
+        "subject": "murder",
+        "prompt_en": "What is the intention inherent in the act of murder?",
+        "relation_definition": "The purposeful intention or goal inherent in a specified act or crime.",
+        "answer_aliases_en": [
+          "kill"
+        ],
+        "relation_spec": {
+          "id": "action_to_intention",
+          "definition": "The purposeful intention or goal inherent in a specified act or crime.",
+          "direction": "action -> intention"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "61dbd2c524e61dc50081d8d19a37df05b0f4debe0c2100df25ef32dc9c2f0d69",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007337",
+        "subject_zh": "谋杀",
+        "prompt_zh": "谋杀行为中固有的意图是什么？",
+        "canonical_fact_zh": "谋杀的意图是杀死。",
+        "answer_zh": "杀死",
+        "answer_aliases_zh": [
+          "杀死"
+        ]
+      },
+      "translation_sha256": "7839afcb2b7ed4cbc2dc1f009752acb9c4744f384d980da5f0d81484bf2e6a20"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007350",
+      "input_sha256": "27c7e973827a5860847e916027670f88628351427a61ffc4cab9a6c49b631687",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "northern hemisphere",
+        "canonical_fact": "The European red fox is native to the northern hemisphere.",
+        "subject": "European red fox",
+        "prompt_en": "In which hemisphere is the European red fox typically found in the wild?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "northern hemisphere"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "84dac03ab52f4edfde68d9a486e775300c52f003b6476efde9ff211fc114538e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007350",
+        "subject_zh": "欧洲赤狐",
+        "prompt_zh": "欧洲赤狐在野外通常出现在哪个半球？",
+        "canonical_fact_zh": "欧洲赤狐原产于北半球。",
+        "answer_zh": "北半球",
+        "answer_aliases_zh": [
+          "北半球"
+        ]
+      },
+      "translation_sha256": "803caf8aa90ff3d53900bcff0bc99670f83b6b9c37b9abab5e1d5d6acf416eb8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007337",
+        "historical:raw_commonsense_qa_007350"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f1ff50a16bd0e3b367d6c639677f8b4762c737d2df9204371cfcb4c4023b520c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3122,
+      "first_chunk_seconds": 31.361,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3340,
+        "prompt_tokens": 1627,
+        "total_tokens": 4967,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2858,
+          "text_tokens": 482
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b1d946c19388c2e3fb61aaebda875bc177b30845ba7733eb308f9e5ade23303b",
+      "status": "completed",
+      "latency_seconds": 86.908
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007337",
+        "historical:raw_commonsense_qa_007350"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6fc5bfb0b60ea73e9baf5c99c2b6c5da9a2936f72a5b5b8a6bcee27ca923ca27",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 175.277
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007337",
+        "historical:raw_commonsense_qa_007350"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6fc5bfb0b60ea73e9baf5c99c2b6c5da9a2936f72a5b5b8a6bcee27ca923ca27",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1086,
+      "first_chunk_seconds": 49.44,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1123,
+        "prompt_tokens": 803,
+        "total_tokens": 1926,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 917,
+          "text_tokens": 206
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c1340a7a2760b2c8a3100b4246a9bc93b1abdfcdb40b876c8028f91df6f64435",
+      "status": "completed",
+      "latency_seconds": 64.975
+    }
+  ],
+  "status": "completed"
+}

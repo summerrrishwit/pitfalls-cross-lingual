@@ -1,0 +1,214 @@
+{
+  "input_sha256": "729c8290a8872eab85778a65bdb0c269c87518e89fc48174a0eb474d95d6d65f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009069",
+      "decision": "ready",
+      "subject": "a test that is not hard",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "easy",
+      "canonical_fact": "A test that is not hard is easy.",
+      "prompt_en": "What would a test be described as if it is not hard?",
+      "evidence_quotes": [
+        "What would a test be if it is not hard?",
+        "easy"
+      ],
+      "reason": "The source question directly asks for the characterizing word of a test that is not hard; the source answer is 'easy'. The existing relation term_to_definition (term -> definition) fits: the described condition 'a test that is not hard' is the term, and 'easy' is its definition/characterization. No qualifier or uncertainty is present in the source.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "easy",
+        "canonical_fact": "A test that is not hard is easy.",
+        "subject": "a test that is not hard",
+        "prompt_en": "What would a test be described as if it is not hard?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "easy"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b147f9ee623c5d281bf5f7de0f6165fac65a53fd8af7f0db23cfe2deb69de6bf",
+      "input_sha256": "d0339cc57180558bd045740f6176ddbe05db18e83db5f25ad49f86a01ea50884",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009070",
+      "decision": "ready",
+      "subject": "shuttle launches",
+      "relation_id": "event_to_location",
+      "relation_definition": "The geographic location where a specified event or recurring activity took place; retain the specific scope and granularity asked.",
+      "direction": "specified event/activity -> location",
+      "answer": "cape kennedy",
+      "canonical_fact": "Shuttle launches occurred from Cape Kennedy.",
+      "prompt_en": "From which location did space shuttle launches originate?",
+      "evidence_quotes": [
+        "shuttle launches from where?",
+        "cape kennedy"
+      ],
+      "reason": "No existing catalog relation precisely captures 'location where a specific recurring event/activity took place.' entity_to_containing_location explicitly excludes process/origin locations, and work_to_filming_location is scoped to film/TV productions. A new relation event_to_location is proposed with direction 'specified event/activity -> location' to capture the launch-site relationship without forcing a broader category. Source answer 'cape kennedy' is used verbatim; no qualifier or uncertainty present.",
+      "english": {
+        "direction": "specified event/activity -> location",
+        "relation_id": "event_to_location",
+        "answer": "cape kennedy",
+        "canonical_fact": "Shuttle launches occurred from Cape Kennedy.",
+        "subject": "shuttle launches",
+        "prompt_en": "From which location did space shuttle launches originate?",
+        "relation_definition": "The geographic location where a specified event or recurring activity took place; retain the specific scope and granularity asked.",
+        "answer_aliases_en": [
+          "cape kennedy"
+        ],
+        "relation_spec": {
+          "id": "event_to_location",
+          "definition": "The geographic location where a specified event or recurring activity took place; retain the specific scope and granularity asked.",
+          "direction": "specified event/activity -> location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "08fda3e4a4edcb7dbd94e4253d2568ff0e99c8d99b513b35b13f3a471c8905e1",
+      "input_sha256": "defa0a019cc1f7f9f390cc6f40ce5bef89e12e9f905f094075c8c1ef16892453",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009069",
+      "input_sha256": "d0339cc57180558bd045740f6176ddbe05db18e83db5f25ad49f86a01ea50884",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "easy",
+        "canonical_fact": "A test that is not hard is easy.",
+        "subject": "a test that is not hard",
+        "prompt_en": "What would a test be described as if it is not hard?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "easy"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b147f9ee623c5d281bf5f7de0f6165fac65a53fd8af7f0db23cfe2deb69de6bf",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009069",
+        "subject_zh": "不难的考试",
+        "prompt_zh": "如果一个考试不难，它会怎样被描述？",
+        "canonical_fact_zh": "不难的考试是简单的。",
+        "answer_zh": "简单",
+        "answer_aliases_zh": [
+          "简单"
+        ]
+      },
+      "translation_sha256": "c56888225b8a566b0f2cd060ca1528abac2c54a3f903722c2ff6ada30e7bd070"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009070",
+      "input_sha256": "defa0a019cc1f7f9f390cc6f40ce5bef89e12e9f905f094075c8c1ef16892453",
+      "english": {
+        "direction": "specified event/activity -> location",
+        "relation_id": "event_to_location",
+        "answer": "cape kennedy",
+        "canonical_fact": "Shuttle launches occurred from Cape Kennedy.",
+        "subject": "shuttle launches",
+        "prompt_en": "From which location did space shuttle launches originate?",
+        "relation_definition": "The geographic location where a specified event or recurring activity took place; retain the specific scope and granularity asked.",
+        "answer_aliases_en": [
+          "cape kennedy"
+        ],
+        "relation_spec": {
+          "id": "event_to_location",
+          "definition": "The geographic location where a specified event or recurring activity took place; retain the specific scope and granularity asked.",
+          "direction": "specified event/activity -> location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "08fda3e4a4edcb7dbd94e4253d2568ff0e99c8d99b513b35b13f3a471c8905e1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009070",
+        "subject_zh": "航天飞机发射",
+        "prompt_zh": "航天飞机发射是从哪个地点进行的？",
+        "canonical_fact_zh": "航天飞机发射是从肯尼迪角进行的。",
+        "answer_zh": "肯尼迪角",
+        "answer_aliases_zh": [
+          "肯尼迪角"
+        ]
+      },
+      "translation_sha256": "5200c455ba9cbd411a49cce71dd5ff493d4d1f74632064434783ba9729c92692"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009069",
+        "historical:raw_commonsense_qa_009070"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "256780bf33d1653f05594737e5fe8ea83d369c6da6dcc1ac2278b473676fe39e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2656,
+      "first_chunk_seconds": 3.583,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2770,
+        "prompt_tokens": 1642,
+        "total_tokens": 4412,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2246,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "535ba412b6361df269897ac02e2c86556fd49594ce042cc1edaa086369b6531f",
+      "status": "completed",
+      "latency_seconds": 40.289
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009069",
+        "historical:raw_commonsense_qa_009070"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f8b913f92248e6f98ad523ad1994a2937c76a46581e3c7f048024115c4f2e9a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 866,
+      "first_chunk_seconds": 20.072,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 903,
+        "prompt_tokens": 809,
+        "total_tokens": 1712,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 692,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9d72995fc35158798783373390f15233b9dc23d8f275d55f3f0c8341136e9d99",
+      "status": "completed",
+      "latency_seconds": 39.533
+    }
+  ],
+  "status": "completed"
+}

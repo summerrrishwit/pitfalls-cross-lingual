@@ -1,0 +1,157 @@
+{
+  "input_sha256": "160f9e7edb916db7f4e65cf5fd369b41d20be506e170d134b3c70c5af9099991",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000874",
+      "decision": "ready",
+      "subject": "system possessing a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "adaptive immune system",
+      "canonical_fact": "The adaptive immune system is the system that possesses a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen.",
+      "prompt_en": "What system possesses a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen?",
+      "evidence_quotes": [
+        "What system possesses a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen?",
+        "adaptive immune system"
+      ],
+      "reason": "The source question supplies an identifying description of a biological system and the source answer names the unique entity (adaptive immune system) that satisfies it. This maps exactly to description_to_entity. The prompt is the original question, which is option-free and does not contain the answer.",
+      "english": {
+        "prompt_en": "What system possesses a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "adaptive immune system",
+        "canonical_fact": "The adaptive immune system is the system that possesses a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "system possessing a memory component that allows for an efficient and dramatic response upon reinvasion of the same pathogen",
+        "answer_aliases_en": [
+          "adaptive immune system"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "44edb9485f7c1627bec97f9366f8da30d9dc15267396198e335a6f94d73827e0",
+      "input_sha256": "9f89ce8ca3bb3ea69c1dfb43d8465983f2f2b1fd4ea344d3e0f83c5ba8f84850",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000875",
+      "decision": "ready",
+      "subject": "carbon dioxide",
+      "relation_id": "inhibitor_to_inhibited_substance",
+      "relation_definition": "A substance whose presence inhibits the synthesis or formation of a specified target substance; retain the specific mechanism (e.g. synthesis) stated in the source.",
+      "direction": "inhibitor substance -> inhibited substance",
+      "answer": "ethylene",
+      "canonical_fact": "Carbon dioxide inhibits the synthesis of new ethylene.",
+      "prompt_en": "Carbon dioxide inhibits synthesis of new what?",
+      "evidence_quotes": [
+        "carbon dioxide inhibits synthesis of new what?",
+        "ethylene"
+      ],
+      "reason": "No existing catalog relation captures this biochemical inhibitory/synthesis relationship, so a new precise relation inhibitor_to_inhibited_substance is proposed. The original question mentions 'ethylene' in its first clause, so the prompt is trimmed to the self-contained second clause to avoid embedding the answer. Evidence quotes are literal substrings of the source question and answer.",
+      "english": {
+        "prompt_en": "Carbon dioxide inhibits synthesis of new what?",
+        "relation_definition": "A substance whose presence inhibits the synthesis or formation of a specified target substance; retain the specific mechanism (e.g. synthesis) stated in the source.",
+        "answer": "ethylene",
+        "canonical_fact": "Carbon dioxide inhibits the synthesis of new ethylene.",
+        "direction": "inhibitor substance -> inhibited substance",
+        "relation_id": "inhibitor_to_inhibited_substance",
+        "subject": "carbon dioxide",
+        "answer_aliases_en": [
+          "ethylene"
+        ],
+        "relation_spec": {
+          "id": "inhibitor_to_inhibited_substance",
+          "definition": "A substance whose presence inhibits the synthesis or formation of a specified target substance; retain the specific mechanism (e.g. synthesis) stated in the source.",
+          "direction": "inhibitor substance -> inhibited substance"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ef0d0e839d40c185707b93f2315013bd41acd0e026eaec832d1c5bb2f0ef6653",
+      "input_sha256": "443ea3e7221beaac0466af5c20d1669a528922b14c7938c59344cf47e2af65e7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000874",
+        "historical:raw_sciq_000875"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bca5906fe18885180f69581bd4440b24704009d1075030eca8eadec6ebc71864",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3120,
+      "first_chunk_seconds": 63.235,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3198,
+        "prompt_tokens": 1778,
+        "total_tokens": 4976,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2644,
+          "text_tokens": 554
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c7477a9a8c4563357a09629e1a0e8c1bda0f2359dc5ad4c8b78bf75bb7f29b3f",
+      "status": "completed",
+      "latency_seconds": 104.768
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000874",
+        "historical:raw_sciq_000875"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "aa02fda8a589b3076e07a3fec9c8b77400b7a4c9029011938e8e309f7d07244f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 56.692
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000874",
+        "historical:raw_sciq_000875"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "aa02fda8a589b3076e07a3fec9c8b77400b7a4c9029011938e8e309f7d07244f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 35.097
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000874",
+        "historical:raw_sciq_000875"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "aa02fda8a589b3076e07a3fec9c8b77400b7a4c9029011938e8e309f7d07244f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 18.935
+    }
+  ],
+  "status": "failed"
+}

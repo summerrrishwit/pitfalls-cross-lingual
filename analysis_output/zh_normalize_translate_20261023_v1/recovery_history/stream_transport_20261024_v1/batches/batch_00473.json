@@ -1,0 +1,189 @@
+{
+  "input_sha256": "b564d2ff214de2a2515a8d39cef4962a3090d0b80593ecb611a97f1428aac267",
+  "normalized": [
+    {
+      "record_id": "public:pbf_df86ec6d30834221dfa8",
+      "decision": "ready",
+      "subject": "Uncle Drew",
+      "relation_id": "work_to_release_date",
+      "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+      "direction": "specified work/version/market -> release date",
+      "answer": "2018-06-29",
+      "canonical_fact": "The movie Uncle Drew was released on 2018-06-29.",
+      "prompt_en": "The movie Uncle Drew was released on",
+      "evidence_quotes": [
+        "when did the movie uncle drew come out",
+        "2018-06-29"
+      ],
+      "reason": "Source question asks for the release date of the movie Uncle Drew; source answer gives 2018-06-29. The catalog relation work_to_release_date (work -> release date) fits exactly. Existing answer matches source_answer verbatim; no conflict. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "subject": "Uncle Drew",
+        "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+        "answer": "2018-06-29",
+        "canonical_fact": "The movie Uncle Drew was released on 2018-06-29.",
+        "direction": "specified work/version/market -> release date",
+        "relation_id": "work_to_release_date",
+        "prompt_en": "The movie Uncle Drew was released on",
+        "answer_aliases_en": [
+          "2018-06-29",
+          "06-29-2018",
+          "29 June 2018",
+          "29/06/2018",
+          "29-06-2018",
+          "2018 06 29",
+          "2018 June 29",
+          "2018 June, 29",
+          "06/29/2018",
+          "06 29 2018",
+          "29 06 2018"
+        ],
+        "relation_spec": {
+          "id": "work_to_release_date",
+          "direction": "specified work/version/market -> release date",
+          "definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cd3bdd064881928930a1adaa9b43806e2614bb360482de9c53125c107ccce299",
+      "input_sha256": "d48a74f8e474f222f39c8c96f3b26e21740ff376fbec7282b1134cdbb7331ca6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_dfceedee912afe011679",
+      "decision": "ready",
+      "subject": "Turn Down for What",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "Lil Jon",
+      "canonical_fact": "Lil Jon sings the song Turn Down for What.",
+      "prompt_en": "Who sings the song Turn Down for What?",
+      "evidence_quotes": [
+        "who sings the song turn down for what",
+        "Lil Jon"
+      ],
+      "reason": "Source question asks who sings the song 'Turn Down for What'; source answer is Lil Jon. The catalog relation song_to_performer (song -> performer) fits exactly. Existing answer matches source_answer verbatim. Prompt is option-free, rephrased to avoid leaking the answer, and contains no multiple-choice options.",
+      "english": {
+        "subject": "Turn Down for What",
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "answer": "Lil Jon",
+        "canonical_fact": "Lil Jon sings the song Turn Down for What.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sings the song Turn Down for What?",
+        "answer_aliases_en": [
+          "Lil Jon",
+          "Lil' Jon",
+          "Jonathan Mortimer Smith",
+          "Jonathan Smith"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c0363b20fcee5c9d59a9a181fd9f8485d78cd8a027e1b6d489498cd69a784228",
+      "input_sha256": "d830f3f622e413eceb06c53b940ff4f32bc27eceaf57339228b59d322c400808",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_df86ec6d30834221dfa8",
+        "public:pbf_dfceedee912afe011679"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "992e3df0bfd6dd1edcb25b7539d107eb7785cd35333164f4ff0ae079d8c98b1b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1299,
+        "prompt_tokens": 1725,
+        "total_tokens": 3024,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 767,
+          "text_tokens": 532
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b95d3201f78293c233e8a2c6446062d69f6184da8752a0256b731f2b0c42ed20",
+      "status": "completed",
+      "latency_seconds": 47.218
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_df86ec6d30834221dfa8",
+        "public:pbf_dfceedee912afe011679"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2d1ed3af66090b7e5eddf6b5af78fabaee036303581e49197611152d7e74c2c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 39.423
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_df86ec6d30834221dfa8",
+        "public:pbf_dfceedee912afe011679"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2d1ed3af66090b7e5eddf6b5af78fabaee036303581e49197611152d7e74c2c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.154
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_df86ec6d30834221dfa8",
+        "public:pbf_dfceedee912afe011679"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "2d1ed3af66090b7e5eddf6b5af78fabaee036303581e49197611152d7e74c2c7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.376
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "3340142ed651d4bf8ecd544dd100d738c9cd4c1ad5342e7176d2e105173b8585",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008606",
+      "decision": "ready",
+      "subject": "small vehicle whose accelerator is controlled via a hand throttle and whose steering is controlled by foot pedals",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "airplane",
+      "canonical_fact": "A small airplane is a vehicle whose accelerator is controlled via a hand throttle and whose steering is controlled by foot pedals.",
+      "prompt_en": "In what small vehicle is the accelerator controlled via a hand throttle and the steering controlled by foot pedals?",
+      "evidence_quotes": [
+        "The accelerator was controller via a hand throttle, and the foot pedals controlled the steering in the small",
+        "airplane"
+      ],
+      "reason": "The source question provides an identifying description (hand-throttle accelerator + foot-pedal steering in a small vehicle) and the source answer supplies the conventional term 'airplane' that uniquely fits. description_to_term from the catalog fits exactly (description -> term). No catalog relation is needed beyond the existing one.",
+      "english": {
+        "prompt_en": "In what small vehicle is the accelerator controlled via a hand throttle and the steering controlled by foot pedals?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "airplane",
+        "canonical_fact": "A small airplane is a vehicle whose accelerator is controlled via a hand throttle and whose steering is controlled by foot pedals.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "small vehicle whose accelerator is controlled via a hand throttle and whose steering is controlled by foot pedals",
+        "answer_aliases_en": [
+          "airplane"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "82ff137512f86b32b5676148942f6212cd5d1ed1da1bba724f5af519ed286b21",
+      "input_sha256": "144dfafb2915fef218e7780c2e13015e5d725f1ec13a26e32465138bce4dac45",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008634",
+      "decision": "ready",
+      "subject": "celebrating with too many drinks",
+      "relation_id": "activity_to_resulting_pain_type",
+      "relation_definition": "The specific kind of pain or symptom that commonly results from a specified activity, retaining the stated temporal qualifier (e.g., 'the next morning'). Direction: activity -> resulting pain type.",
+      "direction": "activity -> resulting pain type",
+      "answer": "headaches",
+      "canonical_fact": "Celebrating with too many drinks leads to headaches the next morning.",
+      "prompt_en": "What kind of pain the next morning results from celebrating with too many drinks?",
+      "evidence_quotes": [
+        "Celebrating with too many drinks will lead to what kind of pain the next morning?",
+        "headaches"
+      ],
+      "reason": "No existing catalog relation captures a causal 'activity leads to specific pain type at a stated time' relationship. Proposed a precise new snake_case ID 'activity_to_resulting_pain_type' with explicit direction and definition. The source question and answer together provide sufficient literal support for the causal-temporal claim with the qualifier 'the next morning' preserved.",
+      "english": {
+        "prompt_en": "What kind of pain the next morning results from celebrating with too many drinks?",
+        "relation_definition": "The specific kind of pain or symptom that commonly results from a specified activity, retaining the stated temporal qualifier (e.g., 'the next morning'). Direction: activity -> resulting pain type.",
+        "answer": "headaches",
+        "canonical_fact": "Celebrating with too many drinks leads to headaches the next morning.",
+        "direction": "activity -> resulting pain type",
+        "relation_id": "activity_to_resulting_pain_type",
+        "subject": "celebrating with too many drinks",
+        "answer_aliases_en": [
+          "headaches"
+        ],
+        "relation_spec": {
+          "id": "activity_to_resulting_pain_type",
+          "definition": "The specific kind of pain or symptom that commonly results from a specified activity, retaining the stated temporal qualifier (e.g., 'the next morning'). Direction: activity -> resulting pain type.",
+          "direction": "activity -> resulting pain type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d42761e1eac2b2b5102cb6de43a4efd39309d533321cad49bbf9041f50795b18",
+      "input_sha256": "fc2e943f752c8c8984d1cd0f5c14d7c625381f8b534261b9d41a22822af2488c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008606",
+        "historical:raw_commonsense_qa_008634"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f64f30c499f85bf16e9c65271f0332452542717ed5c5ee5c03bb05035673cdbd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2741,
+      "first_chunk_seconds": 3.839,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3072,
+        "prompt_tokens": 1621,
+        "total_tokens": 4693,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2493,
+          "text_tokens": 579
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "549adf6f90d9134ea08c36f01607daf5d01ee573082aa96dc08a0785a5015317",
+      "status": "completed",
+      "latency_seconds": 48.724
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008606",
+        "historical:raw_commonsense_qa_008634"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3169311979f15b0ebddd8f59dd4a63e69a3d98fceccc7954be90be8634d87387",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 18.117
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008606",
+        "historical:raw_commonsense_qa_008634"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3169311979f15b0ebddd8f59dd4a63e69a3d98fceccc7954be90be8634d87387",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.719
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008606",
+        "historical:raw_commonsense_qa_008634"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "3169311979f15b0ebddd8f59dd4a63e69a3d98fceccc7954be90be8634d87387",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.889
+    }
+  ],
+  "status": "failed"
+}

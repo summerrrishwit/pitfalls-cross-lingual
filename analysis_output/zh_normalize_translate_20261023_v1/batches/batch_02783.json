@@ -1,0 +1,214 @@
+{
+  "input_sha256": "8f1a8b2710ecaf3943509d88a304bebca67042c7b35081119a378dcefa9fce60",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000168",
+      "decision": "ready",
+      "subject": "Adolph Eichmann",
+      "relation_id": "entity_to_event_location",
+      "relation_definition": "The geographic location (at the granularity asked) where a specified named event occurred for the entity; the event type and time qualifier must be retained in the canonical statement.",
+      "direction": "entity -> location of specified event",
+      "answer": "Argentina",
+      "canonical_fact": "Adolph Eichmann was captured in Argentina in 1960.",
+      "prompt_en": "In what country was Adolph Eichmann captured in 1960?",
+      "evidence_quotes": [
+        "In 1960 Nazi official Adolph Eichmann was finally captured in what country?",
+        "Argentina"
+      ],
+      "reason": "Source answer explicitly states Argentina as the country of capture. No existing catalog relation covers 'location where an event (capture) happened to a person'; entity_to_containing_location is about geographic containment, not event location. Proposed entity_to_event_location to capture this precisely. Answer kept as literal source substring.",
+      "english": {
+        "direction": "entity -> location of specified event",
+        "relation_id": "entity_to_event_location",
+        "answer": "Argentina",
+        "canonical_fact": "Adolph Eichmann was captured in Argentina in 1960.",
+        "subject": "Adolph Eichmann",
+        "prompt_en": "In what country was Adolph Eichmann captured in 1960?",
+        "relation_definition": "The geographic location (at the granularity asked) where a specified named event occurred for the entity; the event type and time qualifier must be retained in the canonical statement.",
+        "answer_aliases_en": [
+          "Argentina"
+        ],
+        "relation_spec": {
+          "id": "entity_to_event_location",
+          "definition": "The geographic location (at the granularity asked) where a specified named event occurred for the entity; the event type and time qualifier must be retained in the canonical statement.",
+          "direction": "entity -> location of specified event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "296f82d9a8f54fd4ea5402bc40699b14f6b33084cac85f8d7f42d47029d47c8c",
+      "input_sha256": "a6cdd5e6856c96608752c325ed03f1e42b18dd68b5e8d1d456ca454c1788e7ab",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000170",
+      "decision": "ready",
+      "subject": "the rubber capital of the world",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Akron Ohio",
+      "canonical_fact": "Akron Ohio is known as the rubber capital of the world.",
+      "prompt_en": "What city is known as the rubber capital of the world?",
+      "evidence_quotes": [
+        "What city is known as 'the rubber capital of the world'?",
+        "Akron Ohio"
+      ],
+      "reason": "The subject is an identifying nickname/description ('the rubber capital of the world') and the answer is the unique entity it identifies (Akron Ohio). This matches description_to_entity exactly (description -> entity). Answer preserved as literal source substring without adding punctuation not in source.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Akron Ohio",
+        "canonical_fact": "Akron Ohio is known as the rubber capital of the world.",
+        "subject": "the rubber capital of the world",
+        "prompt_en": "What city is known as the rubber capital of the world?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Akron Ohio"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4fba5d26cf6f8a0be9edc3114aba69e2018ff3822cca0f6121e7c3ac57ebab10",
+      "input_sha256": "acb8f6c7f2b88d54bc8628179334a8021cfc2d307a2a365e3b7b4c350314f225",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000168",
+      "input_sha256": "a6cdd5e6856c96608752c325ed03f1e42b18dd68b5e8d1d456ca454c1788e7ab",
+      "english": {
+        "direction": "entity -> location of specified event",
+        "relation_id": "entity_to_event_location",
+        "answer": "Argentina",
+        "canonical_fact": "Adolph Eichmann was captured in Argentina in 1960.",
+        "subject": "Adolph Eichmann",
+        "prompt_en": "In what country was Adolph Eichmann captured in 1960?",
+        "relation_definition": "The geographic location (at the granularity asked) where a specified named event occurred for the entity; the event type and time qualifier must be retained in the canonical statement.",
+        "answer_aliases_en": [
+          "Argentina"
+        ],
+        "relation_spec": {
+          "id": "entity_to_event_location",
+          "definition": "The geographic location (at the granularity asked) where a specified named event occurred for the entity; the event type and time qualifier must be retained in the canonical statement.",
+          "direction": "entity -> location of specified event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "296f82d9a8f54fd4ea5402bc40699b14f6b33084cac85f8d7f42d47029d47c8c",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000168",
+        "subject_zh": "阿道夫·艾希曼",
+        "prompt_zh": "1960年，阿道夫·艾希曼在哪个国家被抓获？",
+        "canonical_fact_zh": "阿道夫·艾希曼于1960年在阿根廷被抓获。",
+        "answer_zh": "阿根廷",
+        "answer_aliases_zh": [
+          "阿根廷"
+        ]
+      },
+      "translation_sha256": "f4d9c1dfd0f94a2fcb0dca033c8f46a61a0f37d783175101f4415ad80ca8effc"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000170",
+      "input_sha256": "acb8f6c7f2b88d54bc8628179334a8021cfc2d307a2a365e3b7b4c350314f225",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Akron Ohio",
+        "canonical_fact": "Akron Ohio is known as the rubber capital of the world.",
+        "subject": "the rubber capital of the world",
+        "prompt_en": "What city is known as the rubber capital of the world?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Akron Ohio"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4fba5d26cf6f8a0be9edc3114aba69e2018ff3822cca0f6121e7c3ac57ebab10",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000170",
+        "subject_zh": "世界橡胶之都",
+        "prompt_zh": "哪座城市被称为世界橡胶之都？",
+        "canonical_fact_zh": "俄亥俄州阿克伦市被称为世界橡胶之都。",
+        "answer_zh": "俄亥俄州阿克伦市",
+        "answer_aliases_zh": [
+          "俄亥俄州阿克伦市"
+        ]
+      },
+      "translation_sha256": "0920ed76fb8e57196b4a973cfa040cea9ac046dcbec1e1e41817aacf020da617"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000168",
+        "historical:raw_mmlu_000170"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "67520230a9767a92f8e62c8c1aa10005dff230da242b7b1759a81509ee45f392",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1726,
+      "first_chunk_seconds": 11.78,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1865,
+        "prompt_tokens": 1711,
+        "total_tokens": 3576,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1351,
+          "text_tokens": 514
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e3be0c4520932cd41c63f75f60920dc784511639f7c3d1f31d1ce03fa1dbb743",
+      "status": "completed",
+      "latency_seconds": 48.267
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000168",
+        "historical:raw_mmlu_000170"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f326568fd95c9bc092dc883b8e9f77bf7da2c39dab27bc3e4c192f0ede15a033",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 638,
+      "first_chunk_seconds": 17.403,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 671,
+        "prompt_tokens": 848,
+        "total_tokens": 1519,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 427,
+          "text_tokens": 244
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2090c5ccec9f297da6775479b98b1d2c4719caf63c03ec170fb565d53e0eb357",
+      "status": "completed",
+      "latency_seconds": 26.161
+    }
+  ],
+  "status": "completed"
+}

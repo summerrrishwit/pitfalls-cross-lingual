@@ -1,0 +1,236 @@
+{
+  "input_sha256": "88f6e0e61abaa46372d9be8c7734b02bd8bbcf7577b4b74914dd2ad161e4da70",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001613",
+      "decision": "ready",
+      "subject": "Jagged mountains",
+      "relation_id": "entity_to_transforming_process",
+      "relation_definition": "The named physical or geological process responsible for transforming the specified entity into a described end state.",
+      "direction": "entity -> process",
+      "answer": "erosion",
+      "canonical_fact": "Jagged mountains become rounded hills through the process of erosion.",
+      "prompt_en": "What process most likely transforms jagged mountains into rounded hills?",
+      "evidence_quotes": [
+        "Jagged mountains would most likely become rounded hills through which process?",
+        "erosion"
+      ],
+      "reason": "The source QA establishes that erosion is the process that transforms jagged mountains into rounded hills. No existing catalog relation captures an entity-to-transforming-process mapping; a new precise relation entity_to_transforming_process is proposed with direction entity -> process. The qualifier 'most likely' from the source is preserved in the prompt. Answer is a verbatim substring of source_answer.",
+      "english": {
+        "direction": "entity -> process",
+        "relation_id": "entity_to_transforming_process",
+        "answer": "erosion",
+        "canonical_fact": "Jagged mountains become rounded hills through the process of erosion.",
+        "subject": "Jagged mountains",
+        "prompt_en": "What process most likely transforms jagged mountains into rounded hills?",
+        "relation_definition": "The named physical or geological process responsible for transforming the specified entity into a described end state.",
+        "answer_aliases_en": [
+          "erosion"
+        ],
+        "relation_spec": {
+          "id": "entity_to_transforming_process",
+          "definition": "The named physical or geological process responsible for transforming the specified entity into a described end state.",
+          "direction": "entity -> process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4a576c72fb6ed6b64e5043b9b961f8cf7979a12ad7dce827109c0ae9f88e8bfd",
+      "input_sha256": "0399209003891f7567c8385d1311753b216a5e51fc7fb254916f0a966a539f1d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001614",
+      "decision": "ready",
+      "subject": "resources that are replenished more quickly than they are used",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "renewable resources",
+      "canonical_fact": "Resources that are replenished more quickly than they are used are called renewable resources.",
+      "prompt_en": "What term refers to resources that are replenished more quickly than they are used?",
+      "evidence_quotes": [
+        "Which are replenished more quickly than they are used?",
+        "renewable resources"
+      ],
+      "reason": "The source QA maps a defining description to its conventional term. The existing catalog relation description_to_term fits exactly in both direction (description -> term) and definition (conventional term uniquely fitting a supplied defining description). No qualifiers or uncertainty markers need preservation. Answer is a verbatim substring of source_answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "renewable resources",
+        "canonical_fact": "Resources that are replenished more quickly than they are used are called renewable resources.",
+        "subject": "resources that are replenished more quickly than they are used",
+        "prompt_en": "What term refers to resources that are replenished more quickly than they are used?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "renewable resources"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4c47241bcb20f53299c342a5c9e01b6330c74e9a0a928cbc10c59aab6926d250",
+      "input_sha256": "487692552598ee0a2c0b396357f6aacd00036cdbc0c3c14bc90e898508642444",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7dd0854f2b36ef42f2d1539787ec74d6669b3c64ad1ce1cf3999af70cffcae2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.802
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7dd0854f2b36ef42f2d1539787ec74d6669b3c64ad1ce1cf3999af70cffcae2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 35.177
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7dd0854f2b36ef42f2d1539787ec74d6669b3c64ad1ce1cf3999af70cffcae2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1924,
+      "first_chunk_seconds": 28.89,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2118,
+        "prompt_tokens": 1670,
+        "total_tokens": 3788,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1594,
+          "text_tokens": 524
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0801b24dfd396154a35a34b3caaf89e2c3dc370e6f08f4182084448e1fd1d840",
+      "status": "completed",
+      "latency_seconds": 62.197
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.006
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.569
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.258
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.802
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.773
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001613",
+        "historical:raw_ai2_arc_easy_001614"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d0391f7ac3013a1d85e56aff3505871c9b43bcd5a794840c6bb925577be7e702",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.108
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02390.json",
+      "sha256": "5332130e868d4b5ef3df028f5c048826c9a1e807a73b37d14e21e329caaf2ffc",
+      "previous_status": "failed"
+    }
+  ]
+}

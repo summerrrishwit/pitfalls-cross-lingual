@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3acea62acb820db2241800cfd50a3411cecb7a9f151d17edc1151d9383ea5621",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000299",
+      "decision": "ready",
+      "subject": "solar system",
+      "relation_id": "entity_to_ranked_constituent",
+      "relation_definition": "The constituent element or species at a specific abundance rank (e.g., most common, second most common) within a specified system or body, retaining the rank and system scope.",
+      "direction": "entity -> Nth ranked constituent",
+      "answer": "Helium",
+      "canonical_fact": "The second most common element in the solar system is helium.",
+      "prompt_en": "What is the second most common element in the solar system?",
+      "evidence_quotes": [
+        "What is the second most common element in the solar system?",
+        "Helium"
+      ],
+      "reason": "The question asks for the element at a specific abundance rank (second most common) within the solar system. No existing catalog relation captures ranked-constituent membership; entity_to_material covers composition broadly but does not retain a specific rank. Proposing entity_to_ranked_constituent to capture the rank + system scope. Source answer 'Helium' is a literal substring of source_answer; canonical_fact preserves lowercase 'helium' per source.",
+      "english": {
+        "direction": "entity -> Nth ranked constituent",
+        "relation_id": "entity_to_ranked_constituent",
+        "answer": "Helium",
+        "canonical_fact": "The second most common element in the solar system is helium.",
+        "subject": "solar system",
+        "prompt_en": "What is the second most common element in the solar system?",
+        "relation_definition": "The constituent element or species at a specific abundance rank (e.g., most common, second most common) within a specified system or body, retaining the rank and system scope.",
+        "answer_aliases_en": [
+          "Helium"
+        ],
+        "relation_spec": {
+          "id": "entity_to_ranked_constituent",
+          "definition": "The constituent element or species at a specific abundance rank (e.g., most common, second most common) within a specified system or body, retaining the rank and system scope.",
+          "direction": "entity -> Nth ranked constituent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe475a7ab1a643ca3c19cbc05a8e850f089f41a570c2ecd1d5f3f4927c2a9c48",
+      "input_sha256": "f77b3e6fa2d4c16eb2b7387e452ebbce17ac5558d80e23a17eaf3faa4f6db168",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000000",
+      "decision": "ready",
+      "subject": "enzyme that removes phosphorylated amino acids from proteins",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "phosphatase",
+      "canonical_fact": "A phosphatase functions in removing phosphorylated amino acids from proteins.",
+      "prompt_en": "What is the name of the enzyme that functions in removing phosphorylated amino acids from proteins?",
+      "evidence_quotes": [
+        "What functions in removing phosphorylated amino acids from proteins?",
+        "phosphatase"
+      ],
+      "reason": "The source question supplies a defining functional description ('enzyme that removes phosphorylated amino acids from proteins') and asks for the conventional term. description_to_term fits exactly: the description uniquely maps to 'phosphatase'. Source answer 'phosphatase' is a literal substring of source_answer; prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "phosphatase",
+        "canonical_fact": "A phosphatase functions in removing phosphorylated amino acids from proteins.",
+        "subject": "enzyme that removes phosphorylated amino acids from proteins",
+        "prompt_en": "What is the name of the enzyme that functions in removing phosphorylated amino acids from proteins?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "phosphatase"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6b270990ae03dd2adbfee7382fbaa10bdd6bec099156b75be6b661af746323e6",
+      "input_sha256": "9347d3a5cc0c61451453035da7b577fdc9c0f4e8e165d731b0cc0d98e4d63d6d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000299",
+      "input_sha256": "f77b3e6fa2d4c16eb2b7387e452ebbce17ac5558d80e23a17eaf3faa4f6db168",
+      "english": {
+        "direction": "entity -> Nth ranked constituent",
+        "relation_id": "entity_to_ranked_constituent",
+        "answer": "Helium",
+        "canonical_fact": "The second most common element in the solar system is helium.",
+        "subject": "solar system",
+        "prompt_en": "What is the second most common element in the solar system?",
+        "relation_definition": "The constituent element or species at a specific abundance rank (e.g., most common, second most common) within a specified system or body, retaining the rank and system scope.",
+        "answer_aliases_en": [
+          "Helium"
+        ],
+        "relation_spec": {
+          "id": "entity_to_ranked_constituent",
+          "definition": "The constituent element or species at a specific abundance rank (e.g., most common, second most common) within a specified system or body, retaining the rank and system scope.",
+          "direction": "entity -> Nth ranked constituent"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "fe475a7ab1a643ca3c19cbc05a8e850f089f41a570c2ecd1d5f3f4927c2a9c48",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000299",
+        "subject_zh": "太阳系",
+        "prompt_zh": "太阳系中第二丰富的元素是什么？",
+        "canonical_fact_zh": "太阳系中第二丰富的元素是氦。",
+        "answer_zh": "氦",
+        "answer_aliases_zh": [
+          "氦"
+        ]
+      },
+      "translation_sha256": "a212155799d0e6a4c05c3f4774dcb2845021090c76eadf2b9eec527aa157dd23"
+    },
+    {
+      "record_id": "historical:raw_sciq_000000",
+      "input_sha256": "9347d3a5cc0c61451453035da7b577fdc9c0f4e8e165d731b0cc0d98e4d63d6d",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "phosphatase",
+        "canonical_fact": "A phosphatase functions in removing phosphorylated amino acids from proteins.",
+        "subject": "enzyme that removes phosphorylated amino acids from proteins",
+        "prompt_en": "What is the name of the enzyme that functions in removing phosphorylated amino acids from proteins?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "phosphatase"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6b270990ae03dd2adbfee7382fbaa10bdd6bec099156b75be6b661af746323e6",
+      "translation": {
+        "record_id": "historical:raw_sciq_000000",
+        "subject_zh": "从蛋白质中去除磷酸化氨基酸的酶",
+        "prompt_zh": "能从蛋白质中去除磷酸化氨基酸的酶叫什么？",
+        "canonical_fact_zh": "磷酸酶的功能是从蛋白质中去除磷酸化氨基酸。",
+        "answer_zh": "磷酸酶",
+        "answer_aliases_zh": [
+          "磷酸酶"
+        ]
+      },
+      "translation_sha256": "27f3c44198452e973e513667e963b2f7bf935fa3eb80c8b16491618d04265c5c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000299",
+        "historical:raw_sciq_000000"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f7221d1aff36e264cd032523225ac0a463214f3db6701087ae64120d87a29005",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2445,
+      "first_chunk_seconds": 19.011,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2544,
+        "prompt_tokens": 1693,
+        "total_tokens": 4237,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1976,
+          "text_tokens": 568
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a51254ea4cd642c14b455ba36e50d6960c2993ef57a92d4ab4b5dc79e12e4006",
+      "status": "completed",
+      "latency_seconds": 52.338
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000299",
+        "historical:raw_sciq_000000"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5d41e3bccffbe5dc3f307563bfc8670381c25cecbf1aaea68311b982a68b0d51",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 796,
+      "first_chunk_seconds": 5.962,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 904,
+        "prompt_tokens": 871,
+        "total_tokens": 1775,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 685,
+          "text_tokens": 219
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9ceab97dee73d044099233c813ccf6a5ed4b48688b1920a679bfda6affd40d17",
+      "status": "completed",
+      "latency_seconds": 44.368
+    }
+  ],
+  "status": "completed"
+}

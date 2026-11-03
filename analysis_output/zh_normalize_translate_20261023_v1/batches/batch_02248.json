@@ -1,0 +1,214 @@
+{
+  "input_sha256": "a2b162e1895460c69178ce949469e5f5417f45e179ad2d9282179571d2916356",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000864",
+      "decision": "ready",
+      "subject": "force described by Newton as attraction between objects depending on mass and distance",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "gravitational force",
+      "canonical_fact": "The force described by Newton as attraction between objects depending on mass and distance is gravitational force.",
+      "prompt_en": "What type of force did Sir Isaac Newton describe, in which every object in the universe attracts matter and the attraction depends on the mass of an object and the distance between the objects?",
+      "evidence_quotes": [
+        "gravitational force",
+        "What type of force did Newton describe?"
+      ],
+      "reason": "The source question supplies a defining description (attraction between objects depending on mass and distance) and asks for the type. The source answer 'gravitational force' is the conventional term uniquely fitting that description. This maps precisely to description_to_term. The existing extraction and answer are consistent with the source; no conflict.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "gravitational force",
+        "canonical_fact": "The force described by Newton as attraction between objects depending on mass and distance is gravitational force.",
+        "subject": "force described by Newton as attraction between objects depending on mass and distance",
+        "prompt_en": "What type of force did Sir Isaac Newton describe, in which every object in the universe attracts matter and the attraction depends on the mass of an object and the distance between the objects?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "gravitational force"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3dbc391f49e38960865044685d10e89bcd34fa47ed6efadb51e7797eab920565",
+      "input_sha256": "56af51b9b87bc22c7a95f574c08930dac910ef2a6d8f0398da7711566719360a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000867",
+      "decision": "ready",
+      "subject": "arctic fox fur color change",
+      "relation_id": "trait_to_function",
+      "relation_definition": "The specific biological function or purpose served by a described trait or adaptation, retaining the organism context.",
+      "direction": "described biological trait -> function it serves",
+      "answer": "hide",
+      "canonical_fact": "The change in fur color helps the arctic fox to hide.",
+      "prompt_en": "In winter, the arctic fox has white fur. In summer, its fur changes color to brown and gray. The change in fur color helps the arctic fox to do what?",
+      "evidence_quotes": [
+        "hide",
+        "The change in fur color helps the arctic fox to ___."
+      ],
+      "reason": "The source question describes the arctic fox's seasonal fur color change and asks what function it serves. The source answer 'hide' is the biological purpose. No existing catalog relation captures a trait-to-function/purpose link, so a new precise relation 'trait_to_function' is proposed. The existing extraction is consistent with the source; one model flagged it as 'typical_action' but the question explicitly frames a specific adaptive purpose, so the fact is extractable.",
+      "english": {
+        "direction": "described biological trait -> function it serves",
+        "relation_id": "trait_to_function",
+        "answer": "hide",
+        "canonical_fact": "The change in fur color helps the arctic fox to hide.",
+        "subject": "arctic fox fur color change",
+        "prompt_en": "In winter, the arctic fox has white fur. In summer, its fur changes color to brown and gray. The change in fur color helps the arctic fox to do what?",
+        "relation_definition": "The specific biological function or purpose served by a described trait or adaptation, retaining the organism context.",
+        "answer_aliases_en": [
+          "hide"
+        ],
+        "relation_spec": {
+          "id": "trait_to_function",
+          "definition": "The specific biological function or purpose served by a described trait or adaptation, retaining the organism context.",
+          "direction": "described biological trait -> function it serves"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "81b16bb77e439f446fe54ff6d547ba848c1676177ef8041f7d69580af14fd128",
+      "input_sha256": "073d0452ed6e020464f0fec976c99d978471c5910a0faa56204649ad9e846019",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000864",
+        "historical:raw_ai2_arc_easy_000867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08dced4ac7fc8d43a47e7f3bb71402e7373ce2a729354a2bcf52dc3f92a9461e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2427,
+      "first_chunk_seconds": 3.143,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2523,
+        "prompt_tokens": 1756,
+        "total_tokens": 4279,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1926,
+          "text_tokens": 597
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "695eefb650595ce75e9e13c5af3ac5b61daead2d527355960630b7fca2e6002c",
+      "status": "completed",
+      "latency_seconds": 32.558
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000864",
+        "historical:raw_ai2_arc_easy_000867"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5561028ea81cbe6acd235d2d76e3684be4e80a6a41839570662bf186fd6b7793",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1024,
+      "first_chunk_seconds": 17.88,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1071,
+        "prompt_tokens": 894,
+        "total_tokens": 1965,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 805,
+          "text_tokens": 266
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "09758e7317718ce25fe78f86a5f2cb2aad113ae9e1254505592e4a5351dd4c07",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 45.311,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000864",
+        "historical:raw_ai2_arc_easy_000867"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "fd1b11597ec8f8c8c6bb6cba057b310ca83f0da6f5d3caabb183056df110e218",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1570,
+      "first_chunk_seconds": 3.077,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1613,
+        "prompt_tokens": 912,
+        "total_tokens": 2525,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1348,
+          "text_tokens": 265
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        }
+      },
+      "content_sha256": "d4688436c7cf5d28bffd1c3bc67cac0bdba789e14b3e059e3a468cff90257420",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 80.232,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000864",
+        "historical:raw_ai2_arc_easy_000867"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "fd1b11597ec8f8c8c6bb6cba057b310ca83f0da6f5d3caabb183056df110e218",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1427,
+      "first_chunk_seconds": 2.105,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1461,
+        "prompt_tokens": 912,
+        "total_tokens": 2373,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1196,
+          "text_tokens": 265
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b263f50452de91c63bb45fa1ae34f57ede30572725adc92acc2c98b9b7893193",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 19.454,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

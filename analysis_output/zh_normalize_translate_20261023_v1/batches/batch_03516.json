@@ -1,0 +1,71 @@
+{
+  "input_sha256": "5915e1e5c20417490072cedeebe43a6fdd4b835f18692536601b368001764817",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008224",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question asks where the banjo is \"probably most famous,\" which is a subjective/normative claim, not a stable factual relation. No catalog relation (entity_to_containing_location, organism_to_habitat, etc.) fits a 'most famous in' predicate. The source also hedges with \"probably,\" further indicating non-definitive status. Per unknown_relation policy, defer without forcing a broad category.",
+      "input_sha256": "7f8f55f7a51ff546d35ef3293b965b1e6209868537986ceb38919ade28478170",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008231",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source question refers to \"the movie\" without naming it, leaving the subject (the fragile man / character) ambiguous and not clearly disambiguated. The relation in question is a character's narrative hope to find a person with a contrasting trait, which has no corresponding catalog relation. No listed relation (character_to_actor, term_to_definition, entity_to_class, etc.) fits a plot-specific desire. Insufficient source support for a precise, reusable factual record.",
+      "input_sha256": "bbdd1eedbd381a418f682885dbe97a28927de72fca9273ea4460b706656b9439",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008224",
+        "historical:raw_commonsense_qa_008231"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bfe9887c26a13ef14c281f7ed21d9e37c301d218505e474d14037e58ce842501",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1420,
+      "first_chunk_seconds": 2.341,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1512,
+        "prompt_tokens": 1630,
+        "total_tokens": 3142,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1112,
+          "text_tokens": 400
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cefd4fc01ab99547c2a79eb3b212c4c3e2db8ba8ca5dac7b66cbd461d54ba510",
+      "status": "completed",
+      "latency_seconds": 46.603
+    }
+  ],
+  "status": "completed"
+}

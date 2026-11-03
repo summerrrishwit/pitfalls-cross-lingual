@@ -1,0 +1,214 @@
+{
+  "input_sha256": "a067612122749dfdc6aa8dcbc282ac4e6be8f0d0e4f1348699948a2a0065461a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000240",
+      "decision": "ready",
+      "subject": "force",
+      "relation_id": "formula_to_quantity",
+      "relation_definition": "The specific physical quantity that completes a stated physics formula or equation, given the other terms explicitly.",
+      "direction": "formula subject (with stated other terms) -> missing quantity",
+      "answer": "Acceleration",
+      "canonical_fact": "Force equals mass times acceleration.",
+      "prompt_en": "In the formula for force, force equals mass times what quantity?",
+      "evidence_quotes": [
+        "Force equals mass times what?",
+        "Acceleration"
+      ],
+      "reason": "The source question asks for the missing quantity in the force formula (F = m × a); the answer 'Acceleration' is a literal substring of source_answer. No catalog relation precisely captures a formula-completion query (term_to_definition is too broad for a specific component of an equation), so a new relation 'formula_to_quantity' is proposed with explicit direction and definition.",
+      "english": {
+        "direction": "formula subject (with stated other terms) -> missing quantity",
+        "relation_id": "formula_to_quantity",
+        "answer": "Acceleration",
+        "canonical_fact": "Force equals mass times acceleration.",
+        "subject": "force",
+        "prompt_en": "In the formula for force, force equals mass times what quantity?",
+        "relation_definition": "The specific physical quantity that completes a stated physics formula or equation, given the other terms explicitly.",
+        "answer_aliases_en": [
+          "Acceleration"
+        ],
+        "relation_spec": {
+          "id": "formula_to_quantity",
+          "definition": "The specific physical quantity that completes a stated physics formula or equation, given the other terms explicitly.",
+          "direction": "formula subject (with stated other terms) -> missing quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7dd92be0ab9546702bf05a0bdbe6dd2bccb030a7c8213d8f57c7c486a5ed330c",
+      "input_sha256": "d5d6e348d665e9a87b0e7866cadb7cefd2032dc7e381febf35e654a63ef055ad",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000243",
+      "decision": "ready",
+      "subject": "objective",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "A clearly defined and measurable outcome to be achieved over a specified timeframe",
+      "canonical_fact": "An objective is a clearly defined and measurable outcome to be achieved over a specified timeframe.",
+      "prompt_en": "What is a definition of an objective?",
+      "evidence_quotes": [
+        "What is a definition of an objective?",
+        "A clearly defined and measurable outcome to be achieved over a specified timeframe"
+      ],
+      "reason": "The source question explicitly requests a definition of the term 'objective.' The answer is a literal substring of source_answer and retains scope ('measurable', 'specified timeframe'). The existing relation 'term_to_definition' (term -> definition) fits exactly; no new relation is needed.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "A clearly defined and measurable outcome to be achieved over a specified timeframe",
+        "canonical_fact": "An objective is a clearly defined and measurable outcome to be achieved over a specified timeframe.",
+        "subject": "objective",
+        "prompt_en": "What is a definition of an objective?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "A clearly defined and measurable outcome to be achieved over a specified timeframe"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "118059450de6070b12f50d3aacddd68acba3bb170ae9f463dad974b33766d6ac",
+      "input_sha256": "31e70b77c2244f630a2e4eea134f1d1bf8ad0689df5d830dd8efec8ba08d2768",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000240",
+      "input_sha256": "d5d6e348d665e9a87b0e7866cadb7cefd2032dc7e381febf35e654a63ef055ad",
+      "english": {
+        "direction": "formula subject (with stated other terms) -> missing quantity",
+        "relation_id": "formula_to_quantity",
+        "answer": "Acceleration",
+        "canonical_fact": "Force equals mass times acceleration.",
+        "subject": "force",
+        "prompt_en": "In the formula for force, force equals mass times what quantity?",
+        "relation_definition": "The specific physical quantity that completes a stated physics formula or equation, given the other terms explicitly.",
+        "answer_aliases_en": [
+          "Acceleration"
+        ],
+        "relation_spec": {
+          "id": "formula_to_quantity",
+          "definition": "The specific physical quantity that completes a stated physics formula or equation, given the other terms explicitly.",
+          "direction": "formula subject (with stated other terms) -> missing quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7dd92be0ab9546702bf05a0bdbe6dd2bccb030a7c8213d8f57c7c486a5ed330c",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000240",
+        "subject_zh": "力",
+        "prompt_zh": "在力的公式中，力等于质量乘以什么物理量？",
+        "canonical_fact_zh": "力等于质量乘以加速度。",
+        "answer_zh": "加速度",
+        "answer_aliases_zh": [
+          "加速度"
+        ]
+      },
+      "translation_sha256": "37735b353833f27635a324bc4b9706f2c894ae36a90b374621ad293986814d34"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000243",
+      "input_sha256": "31e70b77c2244f630a2e4eea134f1d1bf8ad0689df5d830dd8efec8ba08d2768",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "A clearly defined and measurable outcome to be achieved over a specified timeframe",
+        "canonical_fact": "An objective is a clearly defined and measurable outcome to be achieved over a specified timeframe.",
+        "subject": "objective",
+        "prompt_en": "What is a definition of an objective?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "A clearly defined and measurable outcome to be achieved over a specified timeframe"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "118059450de6070b12f50d3aacddd68acba3bb170ae9f463dad974b33766d6ac",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000243",
+        "subject_zh": "目标",
+        "prompt_zh": "目标是如何定义的？",
+        "canonical_fact_zh": "目标是在规定时间段内要实现的、明确定义且可衡量的结果。",
+        "answer_zh": "在规定的时间内实现的、明确定义且可衡量的结果",
+        "answer_aliases_zh": [
+          "在规定的时间内实现的、明确定义且可衡量的结果"
+        ]
+      },
+      "translation_sha256": "0f102387815a5bef53e3168c3fd01b71cc177e11cf43d5886be6b12f722da63b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000240",
+        "historical:raw_mmlu_000243"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6b534d47b1ad8cea031b44ed5f98d1b05784a9b06b7a2e86f9d02cc491413951",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2095,
+      "first_chunk_seconds": 19.889,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2188,
+        "prompt_tokens": 1673,
+        "total_tokens": 3861,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1682,
+          "text_tokens": 506
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "12a51474ca636e717e6e281ddfcc8a74bb991e12705a696251f0e6358570f106",
+      "status": "completed",
+      "latency_seconds": 50.002
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000240",
+        "historical:raw_mmlu_000243"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ed7917b9068e9eb872a3533dd9c6752cbfebfd5424f38c7fde47d79f43319b9f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 828,
+      "first_chunk_seconds": 2.065,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 847,
+        "prompt_tokens": 827,
+        "total_tokens": 1674,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 617,
+          "text_tokens": 230
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81344a350ad28ed8b0d617346b1adb87d0282c2ea2a6a3ad8fb489a2317654b1",
+      "status": "completed",
+      "latency_seconds": 16.938
+    }
+  ],
+  "status": "completed"
+}

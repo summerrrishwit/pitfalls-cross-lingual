@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5eb5ed17387931b23ec077e3a97c5657d0c1d3426a98564cab77be2379873bcd",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008937",
+      "decision": "ready",
+      "subject": "combustible materials",
+      "relation_id": "entity_to_causal_effect",
+      "relation_definition": "The physical or chemical process that occurs to a specified entity when a stated external condition or action is applied; retains the triggering condition.",
+      "direction": "entity under stated condition -> resulting physical effect",
+      "answer": "burns",
+      "canonical_fact": "Combustible materials burn when a heat source is applied.",
+      "prompt_en": "What physical process occurs to combustible materials when a heat source is applied?",
+      "evidence_quotes": [
+        "What happens when applying a heat source to combustible materials?",
+        "burns"
+      ],
+      "reason": "The source question describes a causal physical process (heat applied to combustible materials) and the answer 'burns' is the resulting effect. No existing catalog relation captures a condition-triggered physical process; the new 'entity_to_causal_effect' relation precisely fits. Both models' annotations agree on extractability; sensenova flagged causal_reasoning but the fact is directly stated in the source. Relation is novel and narrowly scoped to avoid forcing a broad category.",
+      "english": {
+        "direction": "entity under stated condition -> resulting physical effect",
+        "relation_id": "entity_to_causal_effect",
+        "answer": "burns",
+        "canonical_fact": "Combustible materials burn when a heat source is applied.",
+        "subject": "combustible materials",
+        "prompt_en": "What physical process occurs to combustible materials when a heat source is applied?",
+        "relation_definition": "The physical or chemical process that occurs to a specified entity when a stated external condition or action is applied; retains the triggering condition.",
+        "answer_aliases_en": [
+          "burns"
+        ],
+        "relation_spec": {
+          "id": "entity_to_causal_effect",
+          "definition": "The physical or chemical process that occurs to a specified entity when a stated external condition or action is applied; retains the triggering condition.",
+          "direction": "entity under stated condition -> resulting physical effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c47b3422e8ee8de4441342fc03f64782fffbee68ea0bc6c08d9d48728f70c12f",
+      "input_sha256": "79c089d47332eda50ec0e57fc722f3ce80a8d84141db201009a5ac6a5fe2a084",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008939",
+      "decision": "ready",
+      "subject": "several train terminals linked together",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "transportation system",
+      "canonical_fact": "Several train terminals linked together is an example of a transportation system.",
+      "prompt_en": "Several train terminals linked together is an example of what type of system?",
+      "evidence_quotes": [
+        "Several train terminals linked together is an example of what?",
+        "transportation system"
+      ],
+      "reason": "The source explicitly asks what category 'several train terminals linked together' is an example of, and the answer 'transportation system' is a stable class-level membership. The existing relation 'entity_to_class' fits exactly in direction and definition. Both models extracted this fact consistently. No conflict with source.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "transportation system",
+        "canonical_fact": "Several train terminals linked together is an example of a transportation system.",
+        "subject": "several train terminals linked together",
+        "prompt_en": "Several train terminals linked together is an example of what type of system?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "transportation system"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2903695d9b8a370379f8319f99ee88ab4d389f933cc1a2ef057999db361f6ca3",
+      "input_sha256": "6beb1cbecfcff6a5ec3f344d943fb08800c1614bba9873bf6626840614d4a2a3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008937",
+      "input_sha256": "79c089d47332eda50ec0e57fc722f3ce80a8d84141db201009a5ac6a5fe2a084",
+      "english": {
+        "direction": "entity under stated condition -> resulting physical effect",
+        "relation_id": "entity_to_causal_effect",
+        "answer": "burns",
+        "canonical_fact": "Combustible materials burn when a heat source is applied.",
+        "subject": "combustible materials",
+        "prompt_en": "What physical process occurs to combustible materials when a heat source is applied?",
+        "relation_definition": "The physical or chemical process that occurs to a specified entity when a stated external condition or action is applied; retains the triggering condition.",
+        "answer_aliases_en": [
+          "burns"
+        ],
+        "relation_spec": {
+          "id": "entity_to_causal_effect",
+          "definition": "The physical or chemical process that occurs to a specified entity when a stated external condition or action is applied; retains the triggering condition.",
+          "direction": "entity under stated condition -> resulting physical effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c47b3422e8ee8de4441342fc03f64782fffbee68ea0bc6c08d9d48728f70c12f",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008937",
+        "subject_zh": "可燃材料",
+        "prompt_zh": "当施加热源时，可燃材料会发生什么物理过程？",
+        "canonical_fact_zh": "可燃材料在施加热源时会燃烧。",
+        "answer_zh": "燃烧",
+        "answer_aliases_zh": [
+          "燃烧"
+        ]
+      },
+      "translation_sha256": "42c6229dadfda7d690ca7f15e3b30b873bd82e2aeea3167c65639c7187586149"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008939",
+      "input_sha256": "6beb1cbecfcff6a5ec3f344d943fb08800c1614bba9873bf6626840614d4a2a3",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "transportation system",
+        "canonical_fact": "Several train terminals linked together is an example of a transportation system.",
+        "subject": "several train terminals linked together",
+        "prompt_en": "Several train terminals linked together is an example of what type of system?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "transportation system"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2903695d9b8a370379f8319f99ee88ab4d389f933cc1a2ef057999db361f6ca3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008939",
+        "subject_zh": "相互连接的多个火车终端",
+        "prompt_zh": "相互连接的多个火车终端是哪类系统的例子？",
+        "canonical_fact_zh": "相互连接的多个火车终端是交通系统的一个例子。",
+        "answer_zh": "交通系统",
+        "answer_aliases_zh": [
+          "交通系统"
+        ]
+      },
+      "translation_sha256": "5cca92cd80e349bfbea275e0be04bcc2d9c739c47959a8ed31fe7d725c02ad71"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008937",
+        "historical:raw_commonsense_qa_008939"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "72e4132c476dbee225686190d2d7892e84c05b262c360f48b45ce264dcbddb6f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1508,
+      "first_chunk_seconds": 22.99,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1619,
+        "prompt_tokens": 1665,
+        "total_tokens": 3284,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1077,
+          "text_tokens": 542
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9bbca9226ab618c5c8560d7ac01753e1732f1de674ecb31181315ff775ce8972",
+      "status": "completed",
+      "latency_seconds": 60.136
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008937",
+        "historical:raw_commonsense_qa_008939"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e4713927b93fac8f57d010acaae02da9c84bde9e13377e92fce6582d6e15dcf4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1105,
+      "first_chunk_seconds": 1.678,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1113,
+        "prompt_tokens": 843,
+        "total_tokens": 1956,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 961,
+          "text_tokens": 152
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b7599a071da956abdc19e12f49bebee7d918fbc85286701064e9f5a950dd8dc8",
+      "status": "completed",
+      "latency_seconds": 20.454
+    }
+  ],
+  "status": "completed"
+}

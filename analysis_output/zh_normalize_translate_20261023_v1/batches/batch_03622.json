@@ -1,0 +1,79 @@
+{
+  "input_sha256": "2b1aa0142a882a69d2104029200205667edd7a40ad17ead3a8b93af5cb73aff8",
+  "normalized": [],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000491",
+        "historical:raw_ai2_arc_easy_001020"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f2c0cc7d806e71fbea092050efa15c2be6e8191f793180ba2dcd863129e864a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.03
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000491",
+        "historical:raw_ai2_arc_easy_001020"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f2c0cc7d806e71fbea092050efa15c2be6e8191f793180ba2dcd863129e864a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 24.236,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000491",
+        "historical:raw_ai2_arc_easy_001020"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f2c0cc7d806e71fbea092050efa15c2be6e8191f793180ba2dcd863129e864a9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3155,
+      "first_chunk_seconds": 2.132,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3268,
+        "prompt_tokens": 1677,
+        "total_tokens": 4945,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2587,
+          "text_tokens": 681
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e961dd9cab0f2c2640812c89ac85012c1ecba8ae93895c1d208192d1af972f33",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 52.237,
+      "validation_code": "answer_not_in_source"
+    }
+  ],
+  "status": "failed"
+}

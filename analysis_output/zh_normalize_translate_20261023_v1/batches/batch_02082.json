@@ -1,0 +1,171 @@
+{
+  "input_sha256": "e84c17ed9081fbef7571b4da151f5d8c047aa2e5f1891bff8acc1ca976bb78e6",
+  "normalized": [
+    {
+      "record_id": "public:pbf_fdb72d61e87700125071",
+      "decision": "ready",
+      "subject": "Toronto Raptors",
+      "relation_id": "entity_to_mascot",
+      "relation_definition": "The official mascot name associated with a specified entity (sports team, organization, event, etc.).",
+      "direction": "entity -> mascot",
+      "answer": "The Raptor",
+      "canonical_fact": "The mascot for the Toronto Raptors is The Raptor.",
+      "prompt_en": "The mascot for the Toronto Raptors is",
+      "evidence_quotes": [
+        "who is the mascot for the toronto raptors",
+        "The Raptor"
+      ],
+      "reason": "No existing catalog relation captures the mascot association. Proposed entity_to_mascot with direction entity->mascot. Source answer 'The Raptor' is used verbatim. Prompt is option-free and does not contain the answer string. All fields are consistent with the source QA.",
+      "english": {
+        "answer": "The Raptor",
+        "relation_id": "entity_to_mascot",
+        "prompt_en": "The mascot for the Toronto Raptors is",
+        "direction": "entity -> mascot",
+        "subject": "Toronto Raptors",
+        "canonical_fact": "The mascot for the Toronto Raptors is The Raptor.",
+        "relation_definition": "The official mascot name associated with a specified entity (sports team, organization, event, etc.).",
+        "answer_aliases_en": [
+          "The Raptor"
+        ],
+        "relation_spec": {
+          "id": "entity_to_mascot",
+          "definition": "The official mascot name associated with a specified entity (sports team, organization, event, etc.).",
+          "direction": "entity -> mascot"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "26ea73322ba33ef0c3245de2a99456ac416a4e9e3ad4a16e14d7ac91105506f6",
+      "input_sha256": "8b67d754944bfb430bd865b5010658e6b03ba2dc0535db777e8a01fd4a6f5cdf",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_fdc593b267aa227e25c4",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The natural prompt derived from the source question ('In a mixture of hydrogen, oxygen, and nitrogen gases at a given temperature, the fastest molecules on average are those of') inherently contains the answer 'hydrogen' as part of the listed gas species, violating the requirement that prompt_en must not contain its answer. No catalog relation fits this kinetic-theory comparison fact, and the embedded-answer constraint cannot be satisfied without departing from a literal source substring for the prompt. Deferred.",
+      "input_sha256": "91c78079ddb2aa44df6e86e78f8a4ac76981793fbcf7f6088f710454ff7b35b1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_fdb72d61e87700125071",
+      "input_sha256": "8b67d754944bfb430bd865b5010658e6b03ba2dc0535db777e8a01fd4a6f5cdf",
+      "english": {
+        "answer": "The Raptor",
+        "relation_id": "entity_to_mascot",
+        "prompt_en": "The mascot for the Toronto Raptors is",
+        "direction": "entity -> mascot",
+        "subject": "Toronto Raptors",
+        "canonical_fact": "The mascot for the Toronto Raptors is The Raptor.",
+        "relation_definition": "The official mascot name associated with a specified entity (sports team, organization, event, etc.).",
+        "answer_aliases_en": [
+          "The Raptor"
+        ],
+        "relation_spec": {
+          "id": "entity_to_mascot",
+          "definition": "The official mascot name associated with a specified entity (sports team, organization, event, etc.).",
+          "direction": "entity -> mascot"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "26ea73322ba33ef0c3245de2a99456ac416a4e9e3ad4a16e14d7ac91105506f6",
+      "translation": {
+        "record_id": "public:pbf_fdb72d61e87700125071",
+        "subject_zh": "多伦多猛龙队",
+        "prompt_zh": "多伦多猛龙队的吉祥物是",
+        "canonical_fact_zh": "多伦多猛龙队的吉祥物是 The Raptor。",
+        "answer_zh": "The Raptor",
+        "answer_aliases_zh": [
+          "The Raptor"
+        ]
+      },
+      "translation_sha256": "887d898eb21065aca6147f81bb3f69ad4dcb66f03c44ec2202bb009bf8cb5865"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fdb72d61e87700125071",
+        "public:pbf_fdc593b267aa227e25c4"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a3b386c3d6e0812fd02843a166023a3a7f457c372d56ccc23d1b83f8631b92c5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.213
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_fdb72d61e87700125071",
+        "public:pbf_fdc593b267aa227e25c4"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a3b386c3d6e0812fd02843a166023a3a7f457c372d56ccc23d1b83f8631b92c5",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2719,
+      "first_chunk_seconds": 35.059,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2828,
+        "prompt_tokens": 1644,
+        "total_tokens": 4472,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2379,
+          "text_tokens": 449
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "34b8ccc135512121a7610208453d2692f5fc5343ea9d2f8155a72b9a9d31250e",
+      "status": "completed",
+      "latency_seconds": 76.038
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_fdb72d61e87700125071"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fcbc77ca85f41d27f35046a89fbe1f20f6da3f0b4eae771705b925c7329543d2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1047,
+      "first_chunk_seconds": 32.2,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1072,
+        "prompt_tokens": 519,
+        "total_tokens": 1591,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 950,
+          "text_tokens": 122
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ad5b1a54c15a059492eb4b5871906856516cbcc7b905b278e67842d39f2d581a",
+      "status": "completed",
+      "latency_seconds": 45.437
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,241 @@
+{
+  "input_sha256": "846c4bc9915d47dbe20380190faef23fa827cebc0140310eb7c1ed65bbb0cf1e",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000150",
+      "decision": "ready",
+      "subject": "cage-free (hen housing term)",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "do not necessarily have access to the outdoors",
+      "canonical_fact": "Cage-free hens do not necessarily have access to the outdoors.",
+      "prompt_en": "What does the term 'cage-free' mean regarding outdoor access for hens?",
+      "evidence_quotes": [
+        "do not necessarily have access to the outdoors",
+        "access to the outdoors"
+      ],
+      "reason": "Source explicitly defines the boundary of the term 'cage-free' in hen housing: it does not guarantee outdoor access. term_to_definition fits because the statement delineates what the term does and does not entail, retaining the qualifier 'necessarily'.",
+      "english": {
+        "prompt_en": "What does the term 'cage-free' mean regarding outdoor access for hens?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer": "do not necessarily have access to the outdoors",
+        "canonical_fact": "Cage-free hens do not necessarily have access to the outdoors.",
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "subject": "cage-free (hen housing term)",
+        "answer_aliases_en": [
+          "do not necessarily have access to the outdoors"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0e884d30dc7630f8434f282542c443d399625e0a79c4385adfba31a38b211f6b",
+      "input_sha256": "98e33eb665f1abc0be0dadb5013c7fc915d2422edd6d8966565cbc9ba4c75890",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000153",
+      "decision": "ready",
+      "subject": "country of immigrants consuming tons of chicken per person but little pork",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Israel",
+      "canonical_fact": "Israel is a country of immigrants that consumes tons of chicken per person but little pork.",
+      "prompt_en": "Which country of immigrants consumes tons of chicken per person but little pork?",
+      "evidence_quotes": [
+        "Israel consumes tons of chicken per person but little pork",
+        "consumes tons of chicken per person but little pork"
+      ],
+      "reason": "Source explicitly identifies Israel as the unique country matching the qualifying description (country of immigrants + high chicken / low pork per-person consumption). description_to_entity fits because the question supplies a multi-attribute identifying description and the answer names the single entity that satisfies it.",
+      "english": {
+        "prompt_en": "Which country of immigrants consumes tons of chicken per person but little pork?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Israel",
+        "canonical_fact": "Israel is a country of immigrants that consumes tons of chicken per person but little pork.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "country of immigrants consuming tons of chicken per person but little pork",
+        "answer_aliases_en": [
+          "Israel"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4bcfca81b26210810aa677107cb0926c42867fd198857ca9e81adab092b3d661",
+      "input_sha256": "8d08e0b9a5b548bd0e4ac544592bec8107d45e7c30fa34465eefb01ab795c6cd",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e77b9ad52c7d596b6edca7838caa2791a14dc9588c94d0993ab649ba2745d210",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2774,
+      "first_chunk_seconds": 6.241,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3034,
+        "prompt_tokens": 1625,
+        "total_tokens": 4659,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2536,
+          "text_tokens": 498
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e03fae517d01a92b8cc32b49c93956e4d2e82b56a99e3af9706b126d3d2d7d84",
+      "status": "completed",
+      "latency_seconds": 49.87
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 18.846,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 20.924,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 38.328,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.779
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.072
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000150",
+        "historical:raw_truthful_qa_000153"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "af683ac9db9cd1aa241510be6009fc427746e2a9784b418aa353edf55b715abb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.793
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_03588.json",
+      "sha256": "469a3e577c6f38749c6cffa38fdf2c7569e66c6fb5ccae9bbe29fd7155b8e459",
+      "previous_status": "failed"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "fa2e8bb1b54de1402e749d2aa517e8fd608a9664bb720c1f0b1381f7a0aa9323",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002017",
+      "decision": "ready",
+      "subject": "Amsterdam",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Netherlands",
+      "canonical_fact": "Amsterdam is the capital of the Netherlands.",
+      "prompt_en": "Of which country is Amsterdam the capital?",
+      "evidence_quotes": [
+        "netherlands",
+        "capital of Amsterdam"
+      ],
+      "reason": "The source question and answer establish that Amsterdam is the capital of the Netherlands. The relation entity_to_containing_location (Amsterdam -> Netherlands) fits precisely as geographic containment at the country level. The existing answer 'Netherlands' matches source_answer 'netherlands' and is preserved.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Netherlands",
+        "canonical_fact": "Amsterdam is the capital of the Netherlands.",
+        "subject": "Amsterdam",
+        "prompt_en": "Of which country is Amsterdam the capital?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Netherlands"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "be27350f699f09fd72554517818304f49d154524d7acfd59beb8ee879f69d273",
+      "input_sha256": "e2b68ea94ca62902050fbea1487a82ef146af4d88267fd19a398c312fe4d0656",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002042",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source states 'An arch is a very strong way to have a doorway in a building,' which is a compositional/descriptive relationship (arch as a structural technique used within a building). No catalog relation fits cleanly: term_to_definition would require the full descriptive phrase as the answer rather than just 'building'; part_to_whole implies a structural part-of relation not stated here; entity_to_class implies taxonomy membership. Forcing any of these would distort the meaning. Deferred.",
+      "input_sha256": "8bcab3ea4859cabcc0945306d5f69a795daed7152ae468db6dd21bc8ab8195e4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002017",
+      "input_sha256": "e2b68ea94ca62902050fbea1487a82ef146af4d88267fd19a398c312fe4d0656",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "Netherlands",
+        "canonical_fact": "Amsterdam is the capital of the Netherlands.",
+        "subject": "Amsterdam",
+        "prompt_en": "Of which country is Amsterdam the capital?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Netherlands"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "be27350f699f09fd72554517818304f49d154524d7acfd59beb8ee879f69d273",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002017",
+        "subject_zh": "阿姆斯特丹",
+        "prompt_zh": "阿姆斯特丹是哪个国家的首都？",
+        "canonical_fact_zh": "阿姆斯特丹是荷兰的首都。",
+        "answer_zh": "荷兰",
+        "answer_aliases_zh": [
+          "荷兰"
+        ]
+      },
+      "translation_sha256": "feafe43904e7dea7b1a9517117fdc99582234a5545c664c23eebc4f54a3e9602"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002017",
+        "historical:raw_commonsense_qa_002042"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3ad5036f1ae6e1f7944f7d9125029c5c49146de2340b0033b1073926c5665e5b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2629,
+      "first_chunk_seconds": 19.763,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2683,
+        "prompt_tokens": 1658,
+        "total_tokens": 4341,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2250,
+          "text_tokens": 433
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5b6024f80a10aa86e94a3aee4b0f9244f8c51bf7d23fdbc780ddffdc01efda42",
+      "status": "completed",
+      "latency_seconds": 62.025
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002017"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b92ebd6e93e998f10a40821db928334becce97cad4fa1ee29b0ebbfd1b0bc03b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 520,
+      "first_chunk_seconds": 24.385,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 576,
+        "prompt_tokens": 505,
+        "total_tokens": 1081,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 469,
+          "text_tokens": 107
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e5015d6e3f422ddc6eb78ef3d1277bf03fc8fbabb867c041be0bf4719f160ffa",
+      "status": "completed",
+      "latency_seconds": 32.251
+    }
+  ],
+  "status": "completed"
+}

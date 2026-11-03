@@ -1,0 +1,307 @@
+{
+  "input_sha256": "c6af12c21213a1556f36a7f67fdb320fa522e32eaf43c8412de3217510c94591",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001768",
+      "decision": "ready",
+      "subject": "rocks",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "one or more minerals",
+      "canonical_fact": "Rocks are made of one or more minerals.",
+      "prompt_en": "What do all rocks have in common?",
+      "evidence_quotes": [
+        "Rocks are made of one or more minerals.",
+        "What do all rocks have in common?"
+      ],
+      "reason": "The fact states the material composition of rocks. entity_to_material fits exactly: subject 'rocks' is an entity, 'one or more minerals' is its constituent material. Answer is a literal substring of source_answer. Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "one or more minerals",
+        "canonical_fact": "Rocks are made of one or more minerals.",
+        "subject": "rocks",
+        "prompt_en": "What do all rocks have in common?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "one or more minerals"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "653786950a015bc0bf4663df58751c52c8bf111663a67b6db644190761a2ddb6",
+      "input_sha256": "5a942103098c0fef4a66bbb5ee37f1f70c1d3f68a34e9ef494163460ff64159d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001769",
+      "decision": "ready",
+      "subject": "changing ice into water",
+      "relation_id": "process_to_required_input",
+      "relation_definition": "The specific physical quantity or resource required to carry out a named physical or chemical process or state transition.",
+      "direction": "specified process/transition -> required input",
+      "answer": "energy",
+      "canonical_fact": "Energy is needed to change ice into water.",
+      "prompt_en": "What is needed to change ice into water?",
+      "evidence_quotes": [
+        "energy",
+        "What is needed to change ice into water?"
+      ],
+      "reason": "No existing catalog relation captures a process-to-required-input mapping. Proposed process_to_required_input with direction 'specified process/transition -> required input'. Subject is the named transition 'changing ice into water'; answer 'energy' is the required input. Answer is a literal substring of source_answer. Prompt is option-free and omits the answer.",
+      "english": {
+        "direction": "specified process/transition -> required input",
+        "relation_id": "process_to_required_input",
+        "answer": "energy",
+        "canonical_fact": "Energy is needed to change ice into water.",
+        "subject": "changing ice into water",
+        "prompt_en": "What is needed to change ice into water?",
+        "relation_definition": "The specific physical quantity or resource required to carry out a named physical or chemical process or state transition.",
+        "answer_aliases_en": [
+          "energy"
+        ],
+        "relation_spec": {
+          "id": "process_to_required_input",
+          "definition": "The specific physical quantity or resource required to carry out a named physical or chemical process or state transition.",
+          "direction": "specified process/transition -> required input"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1fcfdf1abb5451210c99670bd03f88deb5ae5a96ad4f4e34615c58617ad85695",
+      "input_sha256": "f079ed0bd80fc247734cb1cb824a3a8d362c4497d6f1df768e6c3512096167b2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001768",
+      "input_sha256": "5a942103098c0fef4a66bbb5ee37f1f70c1d3f68a34e9ef494163460ff64159d",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "one or more minerals",
+        "canonical_fact": "Rocks are made of one or more minerals.",
+        "subject": "rocks",
+        "prompt_en": "What do all rocks have in common?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "one or more minerals"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "653786950a015bc0bf4663df58751c52c8bf111663a67b6db644190761a2ddb6",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001768",
+        "subject_zh": "岩石",
+        "prompt_zh": "所有岩石有什么共同点？",
+        "canonical_fact_zh": "岩石由一种或多种矿物组成。",
+        "answer_zh": "一种或多种矿物",
+        "answer_aliases_zh": [
+          "一种或多种矿物"
+        ]
+      },
+      "translation_sha256": "c7917dbee384ba321515ca1724423e944c137661df86fa12556d44e43c27178c"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001769",
+      "input_sha256": "f079ed0bd80fc247734cb1cb824a3a8d362c4497d6f1df768e6c3512096167b2",
+      "english": {
+        "direction": "specified process/transition -> required input",
+        "relation_id": "process_to_required_input",
+        "answer": "energy",
+        "canonical_fact": "Energy is needed to change ice into water.",
+        "subject": "changing ice into water",
+        "prompt_en": "What is needed to change ice into water?",
+        "relation_definition": "The specific physical quantity or resource required to carry out a named physical or chemical process or state transition.",
+        "answer_aliases_en": [
+          "energy"
+        ],
+        "relation_spec": {
+          "id": "process_to_required_input",
+          "definition": "The specific physical quantity or resource required to carry out a named physical or chemical process or state transition.",
+          "direction": "specified process/transition -> required input"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1fcfdf1abb5451210c99670bd03f88deb5ae5a96ad4f4e34615c58617ad85695",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001769",
+        "subject_zh": "将冰变为水",
+        "prompt_zh": "将冰变为水需要什么？",
+        "canonical_fact_zh": "将冰变为水需要能量。",
+        "answer_zh": "能量",
+        "answer_aliases_zh": [
+          "能量"
+        ]
+      },
+      "translation_sha256": "6526d83cf56bac188f5a6c4272cb64bf881f63038ad0b49959ceef87cd851fbc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bb094fccf68fb11b6b7514a8330956c232c75206f8cb8725d74ba24909bf4bcc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.145
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bb094fccf68fb11b6b7514a8330956c232c75206f8cb8725d74ba24909bf4bcc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1871,
+      "first_chunk_seconds": 17.806,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1923,
+        "prompt_tokens": 1653,
+        "total_tokens": 3576,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1441,
+          "text_tokens": 482
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4fb31eb86f1700c1ff78819d4b29ba01707d4f7d52e34674d993e176a1f4d4dd",
+      "status": "completed",
+      "latency_seconds": 44.444
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.41
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.262
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 150.864
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.784
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.788
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001768",
+        "historical:raw_ai2_arc_easy_001769"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "a86c0f6499541e4ec51d13020e868aa3df96ab592fff0aa7b92ddad94faaa2b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 562,
+      "first_chunk_seconds": 2.049,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 570,
+        "prompt_tokens": 808,
+        "total_tokens": 1378,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 363,
+          "text_tokens": 207
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "286f10c0aaae6b288d6353183d6af5afe8920b32b4a0b2fe08f05299af8866e1",
+      "status": "completed",
+      "latency_seconds": 11.449
+    }
+  ],
+  "status": "completed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02420.json",
+      "sha256": "9bd8f6634d0f5f664b5faf8e2e2b8212905e8fe54ad6e9e7dfca190b7732a2f4",
+      "previous_status": "failed"
+    }
+  ]
+}

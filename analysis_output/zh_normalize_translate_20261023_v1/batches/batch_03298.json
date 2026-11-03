@@ -1,0 +1,228 @@
+{
+  "input_sha256": "ba70b13f8c6ace3ae297ca7eebf6dd043941f64bb8b618e5a8ca6bd3c6857174",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000602",
+      "decision": "ready",
+      "subject": "AD",
+      "relation_id": "abbreviation_to_expansion",
+      "relation_definition": "Expansion of an abbreviation in the stated domain, not a loose association.",
+      "direction": "abbreviation -> expansion",
+      "answer": "In the year of the Lord",
+      "canonical_fact": "In the Gregorian calendar, 'AD' translates to 'In the year of the Lord'.",
+      "prompt_en": "In the Gregorian calendar, what does the abbreviation 'AD' translate to?",
+      "evidence_quotes": [
+        "what does 'AD' mean?",
+        "'AD' translates to 'In the year of the Lord'"
+      ],
+      "reason": "AD is an abbreviation and 'In the year of the Lord' is its translation/expansion in the Gregorian calendar domain. Fits abbreviation_to_expansion exactly. Both model annotations independently extracted the same subject, relation, and answer. Answer preserved verbatim from source.",
+      "english": {
+        "prompt_en": "In the Gregorian calendar, what does the abbreviation 'AD' translate to?",
+        "relation_definition": "Expansion of an abbreviation in the stated domain, not a loose association.",
+        "answer": "In the year of the Lord",
+        "canonical_fact": "In the Gregorian calendar, 'AD' translates to 'In the year of the Lord'.",
+        "direction": "abbreviation -> expansion",
+        "relation_id": "abbreviation_to_expansion",
+        "subject": "AD",
+        "answer_aliases_en": [
+          "In the year of the Lord"
+        ],
+        "relation_spec": {
+          "id": "abbreviation_to_expansion",
+          "direction": "abbreviation -> expansion",
+          "definition": "Expansion of an abbreviation in the stated domain, not a loose association."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "99c783c83dfd16fca06e3b31d3efa5d2bf886d869477b1959fe13c658da3d6e9",
+      "input_sha256": "6613c16cc2861cb28608a6b7e640d06c2d518eb690ad9b79c789fd3d8b92838f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000604",
+      "decision": "ready",
+      "subject": "I cannot tell a lie",
+      "relation_id": "quotation_to_claimed_speaker",
+      "relation_definition": "The person who is the claimed or attributed speaker of a specific quotation, retaining source qualifiers (e.g., 'claimed that he said') to preserve uncertainty and not assert direct authorship.",
+      "direction": "quotation -> claimed speaker",
+      "answer": "Mason Locke Weems",
+      "canonical_fact": "Mason Locke Weems claimed that he said, 'I cannot tell a lie'.",
+      "prompt_en": "According to the historical record, who is recorded as having claimed to have said 'I cannot tell a lie'?",
+      "evidence_quotes": [
+        "Who famously said, \"I cannot tell a lie\"?",
+        "Mason Locke Weems claimed that he said, \"I cannot tell a lie\""
+      ],
+      "reason": "No existing catalog relation precisely captures a quotation's claimed/attributed speaker with a source qualifier. Proposed new relation quotation_to_claimed_speaker (direction: quotation -> claimed speaker). The source answer includes the qualifier 'claimed that he said', which must be preserved to avoid asserting direct authorship. Both model annotations independently extracted the same subject and answer.",
+      "english": {
+        "prompt_en": "According to the historical record, who is recorded as having claimed to have said 'I cannot tell a lie'?",
+        "relation_definition": "The person who is the claimed or attributed speaker of a specific quotation, retaining source qualifiers (e.g., 'claimed that he said') to preserve uncertainty and not assert direct authorship.",
+        "answer": "Mason Locke Weems",
+        "canonical_fact": "Mason Locke Weems claimed that he said, 'I cannot tell a lie'.",
+        "direction": "quotation -> claimed speaker",
+        "relation_id": "quotation_to_claimed_speaker",
+        "subject": "I cannot tell a lie",
+        "answer_aliases_en": [
+          "Mason Locke Weems"
+        ],
+        "relation_spec": {
+          "id": "quotation_to_claimed_speaker",
+          "definition": "The person who is the claimed or attributed speaker of a specific quotation, retaining source qualifiers (e.g., 'claimed that he said') to preserve uncertainty and not assert direct authorship.",
+          "direction": "quotation -> claimed speaker"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3b0ed396a6c0ffee39b0bdb7e78cbe96d40a95fea871b40af6988c633fa99921",
+      "input_sha256": "ef8ae589e1b4491bfdc96a47991fece7dd308c24b08acbd5182bfc12df73234a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_truthful_qa_000602",
+      "input_sha256": "6613c16cc2861cb28608a6b7e640d06c2d518eb690ad9b79c789fd3d8b92838f",
+      "english": {
+        "prompt_en": "In the Gregorian calendar, what does the abbreviation 'AD' translate to?",
+        "relation_definition": "Expansion of an abbreviation in the stated domain, not a loose association.",
+        "answer": "In the year of the Lord",
+        "canonical_fact": "In the Gregorian calendar, 'AD' translates to 'In the year of the Lord'.",
+        "direction": "abbreviation -> expansion",
+        "relation_id": "abbreviation_to_expansion",
+        "subject": "AD",
+        "answer_aliases_en": [
+          "In the year of the Lord"
+        ],
+        "relation_spec": {
+          "id": "abbreviation_to_expansion",
+          "direction": "abbreviation -> expansion",
+          "definition": "Expansion of an abbreviation in the stated domain, not a loose association."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "99c783c83dfd16fca06e3b31d3efa5d2bf886d869477b1959fe13c658da3d6e9",
+      "translation": {
+        "record_id": "historical:raw_truthful_qa_000602",
+        "subject_zh": "AD",
+        "prompt_zh": "在格里高利历中，缩写'AD'代表什么？",
+        "canonical_fact_zh": "在格里高利历中，'AD'对应'主的纪年'。",
+        "answer_zh": "主的纪年",
+        "answer_aliases_zh": [
+          "主的纪年"
+        ]
+      },
+      "translation_sha256": "ade6dbd747555b64b35a01aa9aba19c9c58d8d618f6baa37c6918c3cd52e55c3"
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000604",
+      "input_sha256": "ef8ae589e1b4491bfdc96a47991fece7dd308c24b08acbd5182bfc12df73234a",
+      "english": {
+        "prompt_en": "According to the historical record, who is recorded as having claimed to have said 'I cannot tell a lie'?",
+        "relation_definition": "The person who is the claimed or attributed speaker of a specific quotation, retaining source qualifiers (e.g., 'claimed that he said') to preserve uncertainty and not assert direct authorship.",
+        "answer": "Mason Locke Weems",
+        "canonical_fact": "Mason Locke Weems claimed that he said, 'I cannot tell a lie'.",
+        "direction": "quotation -> claimed speaker",
+        "relation_id": "quotation_to_claimed_speaker",
+        "subject": "I cannot tell a lie",
+        "answer_aliases_en": [
+          "Mason Locke Weems"
+        ],
+        "relation_spec": {
+          "id": "quotation_to_claimed_speaker",
+          "definition": "The person who is the claimed or attributed speaker of a specific quotation, retaining source qualifiers (e.g., 'claimed that he said') to preserve uncertainty and not assert direct authorship.",
+          "direction": "quotation -> claimed speaker"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3b0ed396a6c0ffee39b0bdb7e78cbe96d40a95fea871b40af6988c633fa99921",
+      "translation": {
+        "record_id": "historical:raw_truthful_qa_000604",
+        "subject_zh": "我不会说谎",
+        "prompt_zh": "根据历史记载，谁据称说过'我不会说谎'？",
+        "canonical_fact_zh": "梅森·洛克·韦姆斯据称说过：'我不会说谎'。",
+        "answer_zh": "梅森·洛克·韦姆斯",
+        "answer_aliases_zh": [
+          "梅森·洛克·韦姆斯"
+        ]
+      },
+      "translation_sha256": "edb0b9328577b6521aa7cde37054d8aa4bbc025761f9616198cc4546f3f0682c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000602",
+        "historical:raw_truthful_qa_000604"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d46bbd836bd0cf74141d464d553f4ab576954e257a3dec4b7adafcc13caad638",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.911
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000602",
+        "historical:raw_truthful_qa_000604"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d46bbd836bd0cf74141d464d553f4ab576954e257a3dec4b7adafcc13caad638",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2858,
+      "first_chunk_seconds": 3.346,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2942,
+        "prompt_tokens": 1744,
+        "total_tokens": 4686,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2450,
+          "text_tokens": 492
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "696a1581c8dd7b7399ac21449f6e8056b11b5b052ae5182b831eb4dab0954cd8",
+      "status": "completed",
+      "latency_seconds": 58.253
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000602",
+        "historical:raw_truthful_qa_000604"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "17cca48ba62f8d21fe1e240a679eaf875d13a2d5dcd33f2f039aa20d924e024f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1328,
+      "first_chunk_seconds": 6.134,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1324,
+        "prompt_tokens": 893,
+        "total_tokens": 2217,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1076,
+          "text_tokens": 248
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fc0f890108cada74c14a8d15b8fc8e247cb2969cc55c26124eab86dfac83fd09",
+      "status": "completed",
+      "latency_seconds": 26.507
+    }
+  ],
+  "status": "completed"
+}

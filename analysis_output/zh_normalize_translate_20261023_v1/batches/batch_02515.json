@@ -1,0 +1,214 @@
+{
+  "input_sha256": "abd9d44d3dd6d36347058cc4d3cd8c791f7aeac52929e4f779e2eae0841f4b8d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002541",
+      "decision": "ready",
+      "subject": "person lacking immortality",
+      "relation_id": "entity_to_eventual_state",
+      "relation_definition": "The inevitable end-state an entity will reach given stated conditions (e.g., a being lacking immortality will eventually be dead).",
+      "direction": "entity -> eventual state",
+      "answer": "dead",
+      "canonical_fact": "A person lacking immortality will one day be dead.",
+      "prompt_en": "What state will a person who lacks immortality eventually be in?",
+      "evidence_quotes": [
+        "Someone lacking immortality will one day be",
+        "dead"
+      ],
+      "reason": "The source question and answer establish a commonsense temporal-state inference: a person who lacks immortality will eventually be dead. No existing catalog relation captures entity-to-eventual-state (entity_to_class requires stable taxonomy membership, not a biological end-state); a new relation is proposed. The Qwen-3.8-Max annotation extracted it successfully; sensenova flagged ambiguity but the source is unambiguous. Answer 'dead' copied verbatim from source_answer.",
+      "english": {
+        "direction": "entity -> eventual state",
+        "relation_id": "entity_to_eventual_state",
+        "answer": "dead",
+        "canonical_fact": "A person lacking immortality will one day be dead.",
+        "subject": "person lacking immortality",
+        "prompt_en": "What state will a person who lacks immortality eventually be in?",
+        "relation_definition": "The inevitable end-state an entity will reach given stated conditions (e.g., a being lacking immortality will eventually be dead).",
+        "answer_aliases_en": [
+          "dead"
+        ],
+        "relation_spec": {
+          "id": "entity_to_eventual_state",
+          "definition": "The inevitable end-state an entity will reach given stated conditions (e.g., a being lacking immortality will eventually be dead).",
+          "direction": "entity -> eventual state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "22b5697635105bdc08abe9a436fb1d0113db336e621971192c6d13b7c809d93c",
+      "input_sha256": "c2a17d19afc9b0a8975a7b4220920c818c8e369c65ee0d7d7583478b7c2a4794",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002546",
+      "decision": "ready",
+      "subject": "Christmas in Argentina",
+      "relation_id": "event_to_occurrence_season",
+      "relation_definition": "The calendar season in which a specified recurring event occurs in a given geographic location; stated at the granularity asked (e.g., summer vs. winter in the Southern Hemisphere).",
+      "direction": "event (in specified location) -> season",
+      "answer": "summer",
+      "canonical_fact": "Christmas in Argentina occurs in summer.",
+      "prompt_en": "In which season does Christmas occur in Argentina?",
+      "evidence_quotes": [
+        "When does christmas happen in Argentina?",
+        "summer"
+      ],
+      "reason": "The source question and answer establish that Christmas in Argentina (Southern Hemisphere) falls in the summer season. No existing catalog relation captures event-to-season-of-occurrence (entity_to_containing_location is geographic containment, not temporal season; work_to_release_date is for publication/release dates). A new relation is proposed. Both model annotations support extraction. Answer 'summer' copied verbatim from source_answer.",
+      "english": {
+        "direction": "event (in specified location) -> season",
+        "relation_id": "event_to_occurrence_season",
+        "answer": "summer",
+        "canonical_fact": "Christmas in Argentina occurs in summer.",
+        "subject": "Christmas in Argentina",
+        "prompt_en": "In which season does Christmas occur in Argentina?",
+        "relation_definition": "The calendar season in which a specified recurring event occurs in a given geographic location; stated at the granularity asked (e.g., summer vs. winter in the Southern Hemisphere).",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "event_to_occurrence_season",
+          "definition": "The calendar season in which a specified recurring event occurs in a given geographic location; stated at the granularity asked (e.g., summer vs. winter in the Southern Hemisphere).",
+          "direction": "event (in specified location) -> season"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b944329ea5534002435f88ebf9f1c84417967f16ab2dfc58a51f8033b2c123a7",
+      "input_sha256": "376a4e0a4f4b97014bdf8a07cc178097b8fdefe440743d9fdd933e061b717100",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002541",
+      "input_sha256": "c2a17d19afc9b0a8975a7b4220920c818c8e369c65ee0d7d7583478b7c2a4794",
+      "english": {
+        "direction": "entity -> eventual state",
+        "relation_id": "entity_to_eventual_state",
+        "answer": "dead",
+        "canonical_fact": "A person lacking immortality will one day be dead.",
+        "subject": "person lacking immortality",
+        "prompt_en": "What state will a person who lacks immortality eventually be in?",
+        "relation_definition": "The inevitable end-state an entity will reach given stated conditions (e.g., a being lacking immortality will eventually be dead).",
+        "answer_aliases_en": [
+          "dead"
+        ],
+        "relation_spec": {
+          "id": "entity_to_eventual_state",
+          "definition": "The inevitable end-state an entity will reach given stated conditions (e.g., a being lacking immortality will eventually be dead).",
+          "direction": "entity -> eventual state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "22b5697635105bdc08abe9a436fb1d0113db336e621971192c6d13b7c809d93c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002541",
+        "subject_zh": "不具备不朽能力的人",
+        "prompt_zh": "一个不具备不朽能力的人最终会处于什么状态？",
+        "canonical_fact_zh": "一个不具备不朽能力的人终有一日会死亡。",
+        "answer_zh": "死亡",
+        "answer_aliases_zh": [
+          "死亡"
+        ]
+      },
+      "translation_sha256": "459af8134a59af0eb09c6e11ebf2b63c5de3571f5db13596a57a19e110c318e9"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002546",
+      "input_sha256": "376a4e0a4f4b97014bdf8a07cc178097b8fdefe440743d9fdd933e061b717100",
+      "english": {
+        "direction": "event (in specified location) -> season",
+        "relation_id": "event_to_occurrence_season",
+        "answer": "summer",
+        "canonical_fact": "Christmas in Argentina occurs in summer.",
+        "subject": "Christmas in Argentina",
+        "prompt_en": "In which season does Christmas occur in Argentina?",
+        "relation_definition": "The calendar season in which a specified recurring event occurs in a given geographic location; stated at the granularity asked (e.g., summer vs. winter in the Southern Hemisphere).",
+        "answer_aliases_en": [
+          "summer"
+        ],
+        "relation_spec": {
+          "id": "event_to_occurrence_season",
+          "definition": "The calendar season in which a specified recurring event occurs in a given geographic location; stated at the granularity asked (e.g., summer vs. winter in the Southern Hemisphere).",
+          "direction": "event (in specified location) -> season"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b944329ea5534002435f88ebf9f1c84417967f16ab2dfc58a51f8033b2c123a7",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_002546",
+        "subject_zh": "阿根廷的圣诞节",
+        "prompt_zh": "圣诞节在阿根廷属于哪个季节？",
+        "canonical_fact_zh": "阿根廷的圣诞节在夏季。",
+        "answer_zh": "夏季",
+        "answer_aliases_zh": [
+          "夏季"
+        ]
+      },
+      "translation_sha256": "18e25a72c723413c6d6ff875beb664f65af9c131c8dd80be8ee78735e48be3c5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002541",
+        "historical:raw_commonsense_qa_002546"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "45269766429f03bd27864e9807df67a9e9a362a3809f557fa858ee185f07e325",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2127,
+      "first_chunk_seconds": 9.73,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2250,
+        "prompt_tokens": 1621,
+        "total_tokens": 3871,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1696,
+          "text_tokens": 554
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bf3ccaefa4ad34b5f9ee5590997ce00bfab80bc25be5ba78f0fe4a17f7457393",
+      "status": "completed",
+      "latency_seconds": 40.868
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002541",
+        "historical:raw_commonsense_qa_002546"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f9a39901bad980327fcf13e5f2c05f59f7a7f5062537dc071a8c8f5dbed93f34",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 921,
+      "first_chunk_seconds": 28.559,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 935,
+        "prompt_tokens": 882,
+        "total_tokens": 1817,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 791,
+          "text_tokens": 144
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "042ec96a8c57ccb2b8a3c042f31be5469e76d23dc7d675dac34c067bdcfb5e8d",
+      "status": "completed",
+      "latency_seconds": 41.718
+    }
+  ],
+  "status": "completed"
+}

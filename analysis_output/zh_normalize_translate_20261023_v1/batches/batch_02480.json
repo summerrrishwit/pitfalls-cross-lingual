@@ -1,0 +1,215 @@
+{
+  "input_sha256": "755b226d2699bc2fa0eb682f0f4d8b7a4737d15c35f3c9ed5df4f71a2685aded",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001314",
+      "decision": "ready",
+      "subject": "food that is able to be eaten",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "edible",
+      "canonical_fact": "Food that is able to be eaten is called edible.",
+      "prompt_en": "What is the conventional term for food that is able to be eaten?",
+      "evidence_quotes": [
+        "food that is able to be eaten",
+        "edible"
+      ],
+      "reason": "The source question asks for the term that fits the description 'food that is able to be eaten.' The catalog relation description_to_term (description -> term) fits exactly: the subject is the supplied defining description and the answer is the conventional term. No uncertainty or qualifier is present in the source.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "edible",
+        "canonical_fact": "Food that is able to be eaten is called edible.",
+        "subject": "food that is able to be eaten",
+        "prompt_en": "What is the conventional term for food that is able to be eaten?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "edible"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3dea699f5b2c629f6359cc41d13aac6beb1ab1b812ce4d9e13356eea8a1ecfc4",
+      "input_sha256": "cc4908ef40a7be53c3987ab0a2a421bb174eb80211945e031550c4afdfb308e2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001331",
+      "decision": "ready",
+      "subject": "cats",
+      "relation_id": "organism_to_typical_behavior",
+      "relation_definition": "A characteristic action or mechanism an organism typically performs in a specified behavioral context, retaining the specific action verb and context (e.g., territory marking, communication, feeding). Direction: organism -> typical behavior.",
+      "direction": "organism -> typical behavior",
+      "answer": "excrete",
+      "canonical_fact": "Cats excrete a spray to mark their territories.",
+      "prompt_en": "What action do cats perform with a spray to mark their territories?",
+      "evidence_quotes": [
+        "Cats mark their territories",
+        "a spray they",
+        "excrete"
+      ],
+      "reason": "No existing catalog relation covers a typical organism behavior. Proposed new relation organism_to_typical_behavior with explicit definition and direction. The source question and answer together support the specific claim that cats excrete a spray for territory marking; the action verb 'excrete' is the precise answer. One model (sensenova) flagged this as non-extractable 'typical_action_or_location,' but the source text directly states the fact, so sufficient support exists.",
+      "english": {
+        "direction": "organism -> typical behavior",
+        "relation_id": "organism_to_typical_behavior",
+        "answer": "excrete",
+        "canonical_fact": "Cats excrete a spray to mark their territories.",
+        "subject": "cats",
+        "prompt_en": "What action do cats perform with a spray to mark their territories?",
+        "relation_definition": "A characteristic action or mechanism an organism typically performs in a specified behavioral context, retaining the specific action verb and context (e.g., territory marking, communication, feeding). Direction: organism -> typical behavior.",
+        "answer_aliases_en": [
+          "excrete"
+        ],
+        "relation_spec": {
+          "id": "organism_to_typical_behavior",
+          "definition": "A characteristic action or mechanism an organism typically performs in a specified behavioral context, retaining the specific action verb and context (e.g., territory marking, communication, feeding). Direction: organism -> typical behavior.",
+          "direction": "organism -> typical behavior"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e4b690884ac47ee2b9b0998d49f8eec1c0dc522ef3af22968bc4e5ee1e41c293",
+      "input_sha256": "c8e92063213c4626df4b10fa10c82c777133d8e69d918008091d03c79e4bd4aa",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001314",
+      "input_sha256": "cc4908ef40a7be53c3987ab0a2a421bb174eb80211945e031550c4afdfb308e2",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "edible",
+        "canonical_fact": "Food that is able to be eaten is called edible.",
+        "subject": "food that is able to be eaten",
+        "prompt_en": "What is the conventional term for food that is able to be eaten?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "edible"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3dea699f5b2c629f6359cc41d13aac6beb1ab1b812ce4d9e13356eea8a1ecfc4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001314",
+        "subject_zh": "可以被吃的食物",
+        "prompt_zh": "可以被吃的食物，其常规术语是什么？",
+        "canonical_fact_zh": "可以被吃的食物被称为可食用的。",
+        "answer_zh": "可食用的",
+        "answer_aliases_zh": [
+          "可食用的"
+        ]
+      },
+      "translation_sha256": "c1e7d2281137d273431924165106ebcf2d86957a85e1945ae9317d39439ca71e"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001331",
+      "input_sha256": "c8e92063213c4626df4b10fa10c82c777133d8e69d918008091d03c79e4bd4aa",
+      "english": {
+        "direction": "organism -> typical behavior",
+        "relation_id": "organism_to_typical_behavior",
+        "answer": "excrete",
+        "canonical_fact": "Cats excrete a spray to mark their territories.",
+        "subject": "cats",
+        "prompt_en": "What action do cats perform with a spray to mark their territories?",
+        "relation_definition": "A characteristic action or mechanism an organism typically performs in a specified behavioral context, retaining the specific action verb and context (e.g., territory marking, communication, feeding). Direction: organism -> typical behavior.",
+        "answer_aliases_en": [
+          "excrete"
+        ],
+        "relation_spec": {
+          "id": "organism_to_typical_behavior",
+          "definition": "A characteristic action or mechanism an organism typically performs in a specified behavioral context, retaining the specific action verb and context (e.g., territory marking, communication, feeding). Direction: organism -> typical behavior.",
+          "direction": "organism -> typical behavior"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e4b690884ac47ee2b9b0998d49f8eec1c0dc522ef3af22968bc4e5ee1e41c293",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001331",
+        "subject_zh": "猫",
+        "prompt_zh": "猫以何种行为喷射物质来标记它们的领地？",
+        "canonical_fact_zh": "猫通过排泄喷射物来标记它们的领地。",
+        "answer_zh": "排泄",
+        "answer_aliases_zh": [
+          "排泄"
+        ]
+      },
+      "translation_sha256": "1419a418f5bdd269aada4a695d772e962199825ea051fe42dc36bb5d72861586"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001314",
+        "historical:raw_commonsense_qa_001331"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da8d2f8fc84012116d676becedf8662ad9199fec56f6aadfbc64625c454a0c70",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1842,
+      "first_chunk_seconds": 2.009,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1940,
+        "prompt_tokens": 1656,
+        "total_tokens": 3596,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1394,
+          "text_tokens": 546
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a981f70f2a951ebc3d38d52ae1735c73bcf2b95fe024ca7e8b4825b948462bad",
+      "status": "completed",
+      "latency_seconds": 27.104
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001314",
+        "historical:raw_commonsense_qa_001331"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da2642496762fca17c64121ff67ee0f1554b7ffebf951229fd96af474f72594f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1473,
+      "first_chunk_seconds": 28.674,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1569,
+        "prompt_tokens": 864,
+        "total_tokens": 2433,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1357,
+          "text_tokens": 212
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b57c38d859cf99b0f44495928d66d4700217d370c8811b0f0aa97436d1fc4814",
+      "status": "completed",
+      "latency_seconds": 52.751
+    }
+  ],
+  "status": "completed"
+}

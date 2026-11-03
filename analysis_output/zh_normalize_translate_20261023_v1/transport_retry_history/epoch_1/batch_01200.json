@@ -1,0 +1,204 @@
+{
+  "input_sha256": "943afe1d92a7be66c3f802b4d011fe5b94b4f1eba53192b0384c41fca7e5f178",
+  "normalized": [
+    {
+      "record_id": "public:pbf_7041c7aa28281ec9cd27",
+      "decision": "ready",
+      "subject": "early civilization that arose in the south of Mesopotamia",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Sumer",
+      "canonical_fact": "The early civilization that arose in the south of Mesopotamia is Sumer.",
+      "prompt_en": "The early civilization that arose in the south of Mesopotamia is",
+      "evidence_quotes": [
+        "the early civilization that arose in the south of mesopotamia is",
+        "Sumer"
+      ],
+      "reason": "The source question provides an identifying description ('early civilization that arose in the south of Mesopotamia') and the source answer is 'Sumer'. This maps exactly to the catalog relation description_to_entity (identifying description -> entity). The old extraction used the non-catalog relation_raw 'name', which caused the known_relation_spec_mismatch. Corrected to the existing catalog relation.",
+      "english": {
+        "answer": "Sumer",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The early civilization that arose in the south of Mesopotamia is",
+        "direction": "identifying description -> entity",
+        "subject": "early civilization that arose in the south of Mesopotamia",
+        "canonical_fact": "The early civilization that arose in the south of Mesopotamia is Sumer.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Sumer"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "732c1c3da49d3aa6eee67a72f9904cad3005e9223bb49c1c4456e69b0b703826",
+      "input_sha256": "701c1c43661cf5e99128a562a31620f3873b770c57b0611e592151931dd8ea29",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_70420ba9332ed9c69653",
+      "decision": "ready",
+      "subject": "red blood cells in the body",
+      "relation_id": "entity_to_quantity",
+      "relation_definition": "Numerical count or quantity of a specified entity within a stated scope; retain the value and qualifiers exactly as given in source.",
+      "direction": "specified entity in stated scope -> quantity",
+      "answer": "30000000000000.0",
+      "canonical_fact": "There are 30000000000000.0 red blood cells in the body.",
+      "prompt_en": "How many red blood cells are in the body?",
+      "evidence_quotes": [
+        "how many red blood cells are in the body",
+        "30000000000000.0"
+      ],
+      "reason": "The source question asks for a numerical count ('how many red blood cells are in the body') and the source answer is '30000000000000.0'. No existing catalog relation covers entity-to-quantity/count. The old extraction used non-catalog relation_raw 'estimated quantity', which caused known_relation_spec_mismatch. Proposed new precise relation entity_to_quantity with explicit definition and direction. Answer copied verbatim from source; no qualifier added since source contains none.",
+      "english": {
+        "answer": "30000000000000.0",
+        "relation_id": "entity_to_quantity",
+        "prompt_en": "How many red blood cells are in the body?",
+        "direction": "specified entity in stated scope -> quantity",
+        "subject": "red blood cells in the body",
+        "canonical_fact": "There are 30000000000000.0 red blood cells in the body.",
+        "relation_definition": "Numerical count or quantity of a specified entity within a stated scope; retain the value and qualifiers exactly as given in source.",
+        "answer_aliases_en": [
+          "30000000000000.0",
+          "30000000000000"
+        ],
+        "relation_spec": {
+          "id": "entity_to_quantity",
+          "definition": "Numerical count or quantity of a specified entity within a stated scope; retain the value and qualifiers exactly as given in source.",
+          "direction": "specified entity in stated scope -> quantity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65f3beec765749047dd81e68d3944a9ce2a9fb8c39ddba5bcaf6b4a1fe4bea1f",
+      "input_sha256": "d85294763e41206e77b97486fff0a8f8d3f8d36c94f83b4eec56d8ce2519c11b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "309a5256538ea9eb1c22d0acdfec67df02b98524cf14a9116f5003a53381a17b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.97
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "309a5256538ea9eb1c22d0acdfec67df02b98524cf14a9116f5003a53381a17b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2166,
+      "first_chunk_seconds": 9.702,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2163,
+        "prompt_tokens": 1703,
+        "total_tokens": 3866,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1618,
+          "text_tokens": 545
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4d11845a9ff9dc3bfa2ee195e07298e2c5c7bb3ac0c0327164ce1a5d540419e5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 28.015,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "f754363adbd34e53f89298a6d9d46ab923a851043b00e0657ec1ba0ca3e767ec",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2847,
+      "first_chunk_seconds": 40.422,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2925,
+        "prompt_tokens": 1722,
+        "total_tokens": 4647,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2304,
+          "text_tokens": 621
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "cd7cc88c1077e16bab5ca5705830873d0cd613a8d6ffcef7eed33ab8531726a4",
+      "status": "completed",
+      "latency_seconds": 67.029
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "39feea44e8b153faade8c716261f16bac7462e6934dac98fc0ca99f96dbe0a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.085
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "39feea44e8b153faade8c716261f16bac7462e6934dac98fc0ca99f96dbe0a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.93
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_7041c7aa28281ec9cd27",
+        "public:pbf_70420ba9332ed9c69653"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "39feea44e8b153faade8c716261f16bac7462e6934dac98fc0ca99f96dbe0a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.962
+    }
+  ],
+  "status": "failed"
+}

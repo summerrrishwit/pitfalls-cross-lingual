@@ -1,0 +1,226 @@
+{
+  "input_sha256": "3632eaad4f569ec6fe917eb844072b1698a58d2ea37b8132939c0a21a7e9151b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e577996f9b882cd8a5ba",
+      "decision": "ready",
+      "subject": "Singin' in the Rain",
+      "relation_id": "work_to_songwriter",
+      "relation_definition": "Named songwriter(s) of songs in a specified film or theatrical work; retain multi-author constraints and distinguish composer vs. lyricist where specified.",
+      "direction": "specified work -> songwriter",
+      "answer": "Arthur Freed",
+      "canonical_fact": "Arthur Freed wrote the songs for Singin' in the Rain.",
+      "prompt_en": "Who wrote the songs for Singin' in the Rain?",
+      "evidence_quotes": [
+        "who wrote the songs for singing in the rain",
+        "Arthur Freed"
+      ],
+      "reason": "Source answer 'Arthur Freed' is a literal substring of source_answer. No existing catalog relation captures a film's songwriter role; 'written_work_to_author' targets literary works and 'song_to_performer' targets performers, so a new precise relation 'work_to_songwriter' is proposed with direction 'specified work -> songwriter'. Answer kept exactly as in source.",
+      "english": {
+        "answer": "Arthur Freed",
+        "relation_id": "work_to_songwriter",
+        "prompt_en": "Who wrote the songs for Singin' in the Rain?",
+        "direction": "specified work -> songwriter",
+        "subject": "Singin' in the Rain",
+        "canonical_fact": "Arthur Freed wrote the songs for Singin' in the Rain.",
+        "relation_definition": "Named songwriter(s) of songs in a specified film or theatrical work; retain multi-author constraints and distinguish composer vs. lyricist where specified.",
+        "answer_aliases_en": [
+          "Arthur Freed",
+          "Arthur Grossman"
+        ],
+        "relation_spec": {
+          "id": "work_to_songwriter",
+          "definition": "Named songwriter(s) of songs in a specified film or theatrical work; retain multi-author constraints and distinguish composer vs. lyricist where specified.",
+          "direction": "specified work -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9ddde1d1f8164439ba1d32c64205a47149b5a862f74bc76dfa9dd4eaf8078674",
+      "input_sha256": "e66611045c656acdf3dc43be9954d8e89456363fcb66a23fdc500f2a8f1ca492",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e579b0999fde9d28560a",
+      "decision": "ready",
+      "subject": "the saltiest ocean in the world",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Atlantic Ocean",
+      "canonical_fact": "The Atlantic Ocean is the saltiest ocean in the world.",
+      "prompt_en": "What is the saltiest ocean in the world?",
+      "evidence_quotes": [
+        "what is the saltiest ocean in the world",
+        "Atlantic Ocean"
+      ],
+      "reason": "The superlative description 'the saltiest ocean in the world' uniquely identifies 'Atlantic Ocean' per source_answer. Existing catalog relation 'description_to_entity' fits exactly with direction 'identifying description -> entity'. Answer kept verbatim from source.",
+      "english": {
+        "answer": "Atlantic Ocean",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the saltiest ocean in the world?",
+        "direction": "identifying description -> entity",
+        "subject": "the saltiest ocean in the world",
+        "canonical_fact": "The Atlantic Ocean is the saltiest ocean in the world.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Atlantic Ocean",
+          "Atlantic",
+          "Great Western Ocean",
+          "Atlantic Sea"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3683e34fdb301eaa6323bbe1e03b1453102b1fbf7c95468b7bef16d8f8b5ec62",
+      "input_sha256": "1450fb76ac3ff1c2dc875ed774b60f2f139c586f71d5c50f3a0bbf564cb3b134",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_e577996f9b882cd8a5ba",
+      "input_sha256": "e66611045c656acdf3dc43be9954d8e89456363fcb66a23fdc500f2a8f1ca492",
+      "english": {
+        "answer": "Arthur Freed",
+        "relation_id": "work_to_songwriter",
+        "prompt_en": "Who wrote the songs for Singin' in the Rain?",
+        "direction": "specified work -> songwriter",
+        "subject": "Singin' in the Rain",
+        "canonical_fact": "Arthur Freed wrote the songs for Singin' in the Rain.",
+        "relation_definition": "Named songwriter(s) of songs in a specified film or theatrical work; retain multi-author constraints and distinguish composer vs. lyricist where specified.",
+        "answer_aliases_en": [
+          "Arthur Freed",
+          "Arthur Grossman"
+        ],
+        "relation_spec": {
+          "id": "work_to_songwriter",
+          "definition": "Named songwriter(s) of songs in a specified film or theatrical work; retain multi-author constraints and distinguish composer vs. lyricist where specified.",
+          "direction": "specified work -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9ddde1d1f8164439ba1d32c64205a47149b5a862f74bc76dfa9dd4eaf8078674",
+      "translation": {
+        "record_id": "public:pbf_e577996f9b882cd8a5ba",
+        "subject_zh": "《雨中曲》",
+        "prompt_zh": "《雨中曲》的歌曲是由谁创作的？",
+        "canonical_fact_zh": "亚瑟·弗里德为《雨中曲》创作了歌曲。",
+        "answer_zh": "亚瑟·弗里德",
+        "answer_aliases_zh": [
+          "亚瑟·弗里德",
+          "亚瑟·格罗斯曼"
+        ]
+      },
+      "translation_sha256": "199bbe28f98352d4e1377aa2f6c45b067f826d251f7f50b011296c4d054100bc"
+    },
+    {
+      "record_id": "public:pbf_e579b0999fde9d28560a",
+      "input_sha256": "1450fb76ac3ff1c2dc875ed774b60f2f139c586f71d5c50f3a0bbf564cb3b134",
+      "english": {
+        "answer": "Atlantic Ocean",
+        "relation_id": "description_to_entity",
+        "prompt_en": "What is the saltiest ocean in the world?",
+        "direction": "identifying description -> entity",
+        "subject": "the saltiest ocean in the world",
+        "canonical_fact": "The Atlantic Ocean is the saltiest ocean in the world.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Atlantic Ocean",
+          "Atlantic",
+          "Great Western Ocean",
+          "Atlantic Sea"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "3683e34fdb301eaa6323bbe1e03b1453102b1fbf7c95468b7bef16d8f8b5ec62",
+      "translation": {
+        "record_id": "public:pbf_e579b0999fde9d28560a",
+        "subject_zh": "世界上盐度最高的海洋",
+        "prompt_zh": "世界上盐度最高的海洋是什么？",
+        "canonical_fact_zh": "大西洋是世界上盐度最高的海洋。",
+        "answer_zh": "大西洋",
+        "answer_aliases_zh": [
+          "大西洋",
+          "大西洋",
+          "大西大洋",
+          "大西洋海"
+        ]
+      },
+      "translation_sha256": "a59d2563f193ac01215f9fb59423dcfe0dc838372edb085e40196f974aa3fc09"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e577996f9b882cd8a5ba",
+        "public:pbf_e579b0999fde9d28560a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "964300508d5ecceb1cf89cf0b969cefd5fb2133885b5c52729b2172e95652133",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2288,
+      "first_chunk_seconds": 23.594,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2413,
+        "prompt_tokens": 1596,
+        "total_tokens": 4009,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1980,
+          "text_tokens": 433
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ae1f1966be706d3a0365730906c0ef1d72d5965439c6b7b091f6f1bf03a688c2",
+      "status": "completed",
+      "latency_seconds": 58.454
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e577996f9b882cd8a5ba",
+        "public:pbf_e579b0999fde9d28560a"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "36ee1716dc4f7d3c286c42407ceb55ea4e67e0cd80f9e29c9390de1112381318",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1447,
+      "first_chunk_seconds": 12.141,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1544,
+        "prompt_tokens": 855,
+        "total_tokens": 2399,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1288,
+          "text_tokens": 256
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9dad6c3ed00c7ea9a853cc972fbe199c49af17a6f952659e9b36e4bbbe0fc681",
+      "status": "completed",
+      "latency_seconds": 29.145
+    }
+  ],
+  "status": "completed"
+}

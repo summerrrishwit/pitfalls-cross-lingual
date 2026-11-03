@@ -1,0 +1,171 @@
+{
+  "input_sha256": "fca68be0a0a198d4e948a4a104ddc4c83ffe7c2d3ceffa200ec8af3490eda848",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000867",
+      "decision": "ready",
+      "subject": "sound reflected off an object",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "echo",
+      "canonical_fact": "Sound reflected off an object is called an echo.",
+      "prompt_en": "What is the term for when sound is reflected off an object?",
+      "evidence_quotes": [
+        "What is it called when sound is reflected off an object?",
+        "echo"
+      ],
+      "reason": "The source question asks for the conventional term that names the phenomenon of sound being reflected off an object; the source answer is 'echo'. This maps exactly to description_to_term (a defining description yields a unique conventional term). No uncertainty or qualifier is present in the source. The prompt omits the answer word and is option-free.",
+      "english": {
+        "prompt_en": "What is the term for when sound is reflected off an object?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "echo",
+        "canonical_fact": "Sound reflected off an object is called an echo.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "sound reflected off an object",
+        "answer_aliases_en": [
+          "echo"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0aa1876b4c112d91fcf5ec24c8f9d22e3d312fc4076863b4cb6e142fadd36744",
+      "input_sha256": "6c807dd41eb54b3e58f50f04ff1321197ef32523b030c3e69ddf722d687d88c2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000869",
+      "decision": "ready",
+      "subject": "muscles that control the anus",
+      "relation_id": "entity_to_shape",
+      "relation_definition": "The geometric shape or form of a specified entity or anatomical structure, retaining the granularity and qualifier stated in the source.",
+      "direction": "entity -> shape",
+      "answer": "circular",
+      "canonical_fact": "The muscles that control the anus are circular in shape.",
+      "prompt_en": "What shape are the muscles that control the anus?",
+      "evidence_quotes": [
+        "What shape are the muscles that control the anus?",
+        "circular"
+      ],
+      "reason": "No existing catalog relation covers 'shape of an entity'. Proposed entity_to_shape (entity -> shape) to capture the specific geometric form attribute. Source question and answer directly support that the muscles controlling the anus are circular. Prompt is option-free and does not contain the answer. No dates, markets, or versions are introduced.",
+      "english": {
+        "prompt_en": "What shape are the muscles that control the anus?",
+        "relation_definition": "The geometric shape or form of a specified entity or anatomical structure, retaining the granularity and qualifier stated in the source.",
+        "answer": "circular",
+        "canonical_fact": "The muscles that control the anus are circular in shape.",
+        "direction": "entity -> shape",
+        "relation_id": "entity_to_shape",
+        "subject": "muscles that control the anus",
+        "answer_aliases_en": [
+          "circular"
+        ],
+        "relation_spec": {
+          "id": "entity_to_shape",
+          "definition": "The geometric shape or form of a specified entity or anatomical structure, retaining the granularity and qualifier stated in the source.",
+          "direction": "entity -> shape"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "00aa3039465f018f472b2db321af535ecfa6f9ce35d9f2092d672f781d211394",
+      "input_sha256": "f769e016fbd9ac94fb7c6dc3fc0665bab3582a9ce17307d8a3794896635be2ed",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000867",
+        "historical:raw_sciq_000869"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3b563dab0e5a3b62e92f249661209f68280de00670113d050c612b30745a0ae9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.969
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000867",
+        "historical:raw_sciq_000869"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3b563dab0e5a3b62e92f249661209f68280de00670113d050c612b30745a0ae9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1506,
+      "first_chunk_seconds": 62.083,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1549,
+        "prompt_tokens": 1655,
+        "total_tokens": 3204,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1049,
+          "text_tokens": 500
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "821c9462f4b4db952b1fe0fd7e26dcfd17b7e4e7ccba91030ec3e748191664b2",
+      "status": "completed",
+      "latency_seconds": 93.28
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000867",
+        "historical:raw_sciq_000869"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1999c6204dcabbad399448bb8abc02db8842deaa246bece540db8bea4400150c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 29.674
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000867",
+        "historical:raw_sciq_000869"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1999c6204dcabbad399448bb8abc02db8842deaa246bece540db8bea4400150c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 103.401
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000867",
+        "historical:raw_sciq_000869"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1999c6204dcabbad399448bb8abc02db8842deaa246bece540db8bea4400150c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 141.131
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,171 @@
+{
+  "input_sha256": "c0c3b1402ab4445af91b2d8a18dd9dce2eb1c8a7792a3917adf10338efaf008b",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007768",
+      "decision": "ready",
+      "subject": "strong laxative",
+      "relation_id": "substance_to_maintained_state",
+      "relation_definition": "The state or property that a specified substance helps maintain in a target biological system; retain intensity qualifiers on the substance and the specific maintained state.",
+      "direction": "substance -> maintained state",
+      "answer": "regular",
+      "canonical_fact": "A strong laxative helps keep bowel movements regular.",
+      "prompt_en": "What kind of bowel movements does a strong laxative help keep?",
+      "evidence_quotes": [
+        "A strong laxative will help you keep what kind of bowel movements?",
+        "regular"
+      ],
+      "reason": "Source question explicitly asks what kind of bowel movements a strong laxative helps keep, and source answer states 'regular'. No existing catalog relation captures a substance's maintained physiological state; proposing precise new relation substance_to_maintained_state. Both model annotations: Qwen-3.8-Max extracted correctly; sensenova flagged as subjective, but this is a standard pharmacological effect, not a normative claim.",
+      "english": {
+        "prompt_en": "What kind of bowel movements does a strong laxative help keep?",
+        "relation_definition": "The state or property that a specified substance helps maintain in a target biological system; retain intensity qualifiers on the substance and the specific maintained state.",
+        "answer": "regular",
+        "canonical_fact": "A strong laxative helps keep bowel movements regular.",
+        "direction": "substance -> maintained state",
+        "relation_id": "substance_to_maintained_state",
+        "subject": "strong laxative",
+        "answer_aliases_en": [
+          "regular"
+        ],
+        "relation_spec": {
+          "id": "substance_to_maintained_state",
+          "definition": "The state or property that a specified substance helps maintain in a target biological system; retain intensity qualifiers on the substance and the specific maintained state.",
+          "direction": "substance -> maintained state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "00a263649a68fbe0e54bd299c93b7b7d58f0a9bcac1ebc6713cb79d05f712718",
+      "input_sha256": "af8c2da33fef3722af729a9e2d23e04616a98c7bba342681c681d05cfb0a26fd",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007812",
+      "decision": "ready",
+      "subject": "pantry",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "storage cabinet",
+      "canonical_fact": "A pantry is a storage cabinet.",
+      "prompt_en": "What is a pantry?",
+      "evidence_quotes": [
+        "he just put the full bags right in his pantry what?",
+        "storage cabinet"
+      ],
+      "reason": "Source question asks what a pantry is (class membership), and source answer gives 'storage cabinet'. This fits entity_to_class exactly: a pantry is a stable subtype of storage cabinet. Qwen-3.8-Max extracted correctly; sensenova-6.7-flash-lite misread it as a location/action question, but the 'what?' phrasing clearly requests a classification.",
+      "english": {
+        "prompt_en": "What is a pantry?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "storage cabinet",
+        "canonical_fact": "A pantry is a storage cabinet.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "pantry",
+        "answer_aliases_en": [
+          "storage cabinet"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "90aa6fd058814553497d6e72535df8f53aa8448d5853a43435e7c6fc54312878",
+      "input_sha256": "7ba04551e89f3e8e2061c5492cfeefdcbb5769c13b0fbe3885c4a0872a643ee8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007768",
+        "historical:raw_commonsense_qa_007812"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3b10a7ff0b76a2b915adaad683b9e37e8ab04193f2bd267219235efa2a9fda94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 8.057
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007768",
+        "historical:raw_commonsense_qa_007812"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3b10a7ff0b76a2b915adaad683b9e37e8ab04193f2bd267219235efa2a9fda94",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2199,
+      "first_chunk_seconds": 2.266,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2270,
+        "prompt_tokens": 1599,
+        "total_tokens": 3869,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1751,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ac7ee9a5f5eedb3fabe637eabf7b08a9d5121ff546f44404b163f8b13925793",
+      "status": "completed",
+      "latency_seconds": 34.716
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007768",
+        "historical:raw_commonsense_qa_007812"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e173e654c447c43c06005b5a1425c5458ada94f37f7c2918fbdd7e1c169efb04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.283
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007768",
+        "historical:raw_commonsense_qa_007812"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e173e654c447c43c06005b5a1425c5458ada94f37f7c2918fbdd7e1c169efb04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.603
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007768",
+        "historical:raw_commonsense_qa_007812"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e173e654c447c43c06005b5a1425c5458ada94f37f7c2918fbdd7e1c169efb04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.004
+    }
+  ],
+  "status": "failed"
+}

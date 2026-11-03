@@ -1,0 +1,228 @@
+{
+  "input_sha256": "9627cb554f33d79d326e00a3ade017aa0729f671fff651ecb666535f7b3914e6",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000269",
+      "decision": "ready",
+      "subject": "skeletons of most organic molecules",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "carbon chains",
+      "canonical_fact": "Carbon chains form the skeletons of most organic molecules.",
+      "prompt_en": "What forms the skeletons of most organic molecules?",
+      "evidence_quotes": [
+        "skeletons of most organic molecules",
+        "carbon chains"
+      ],
+      "reason": "The source question asks what forms the skeletons of most organic molecules; the answer is 'carbon chains.' This maps to entity_to_material: the skeletons (entity) are constituted by carbon chains (material constituent). Both model annotations agree on extraction. The prompt does not contain the answer.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "carbon chains",
+        "canonical_fact": "Carbon chains form the skeletons of most organic molecules.",
+        "subject": "skeletons of most organic molecules",
+        "prompt_en": "What forms the skeletons of most organic molecules?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "carbon chains"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7211e9557f012f8e005cb4a2d7ef66d7155c9febd7188c9078c94852e594ec72",
+      "input_sha256": "e478e1202fe3d3f3f005d424e587efcc8db360f6c5e28a3da6026c33bd16b361",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000270",
+      "decision": "ready",
+      "subject": "bigger ocean waves and waves that carry more sediment",
+      "relation_id": "phenomenon_to_causal_effect",
+      "relation_definition": "The specific resulting process or effect (with degree/extent qualifier) caused by a stated physical phenomenon or condition.",
+      "direction": "causing phenomenon -> resulting effect/process",
+      "answer": "erosion",
+      "canonical_fact": "Bigger ocean waves and waves that carry more sediment cause a greater extent of erosion.",
+      "prompt_en": "Bigger ocean waves and waves that carry more sediment cause a greater extent of what?",
+      "evidence_quotes": [
+        "Bigger ocean waves and waves that carry more sediment cause a greater extent of",
+        "erosion"
+      ],
+      "reason": "No existing catalog relation captures a causal physical-process relationship. A new relation 'phenomenon_to_causal_effect' is proposed to express that a specified physical phenomenon (bigger waves carrying sediment) results in a specified effect/process (erosion) with the degree qualifier 'greater extent.' Both model annotations agree on extraction. The prompt does not contain the answer 'erosion'.",
+      "english": {
+        "direction": "causing phenomenon -> resulting effect/process",
+        "relation_id": "phenomenon_to_causal_effect",
+        "answer": "erosion",
+        "canonical_fact": "Bigger ocean waves and waves that carry more sediment cause a greater extent of erosion.",
+        "subject": "bigger ocean waves and waves that carry more sediment",
+        "prompt_en": "Bigger ocean waves and waves that carry more sediment cause a greater extent of what?",
+        "relation_definition": "The specific resulting process or effect (with degree/extent qualifier) caused by a stated physical phenomenon or condition.",
+        "answer_aliases_en": [
+          "erosion"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_causal_effect",
+          "definition": "The specific resulting process or effect (with degree/extent qualifier) caused by a stated physical phenomenon or condition.",
+          "direction": "causing phenomenon -> resulting effect/process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ae5570072db678b31aa952e59cb89c9bfeb0e8ebc4f88e4983e7b8d814b77c19",
+      "input_sha256": "f197a558f5f3a1f5a703b61a0f451b1f96806761d3cdc82d502076c80fb4012a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000269",
+      "input_sha256": "e478e1202fe3d3f3f005d424e587efcc8db360f6c5e28a3da6026c33bd16b361",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "carbon chains",
+        "canonical_fact": "Carbon chains form the skeletons of most organic molecules.",
+        "subject": "skeletons of most organic molecules",
+        "prompt_en": "What forms the skeletons of most organic molecules?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "carbon chains"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7211e9557f012f8e005cb4a2d7ef66d7155c9febd7188c9078c94852e594ec72",
+      "translation": {
+        "record_id": "historical:raw_sciq_000269",
+        "subject_zh": "大多数有机分子的骨架",
+        "prompt_zh": "什么构成了大多数有机分子的骨架？",
+        "canonical_fact_zh": "碳链构成了大多数有机分子的骨架。",
+        "answer_zh": "碳链",
+        "answer_aliases_zh": [
+          "碳链"
+        ]
+      },
+      "translation_sha256": "8a290b484d90e5dfb51d73bad62c9cfa05d260a4bc84a687e865d224c06fb00f"
+    },
+    {
+      "record_id": "historical:raw_sciq_000270",
+      "input_sha256": "f197a558f5f3a1f5a703b61a0f451b1f96806761d3cdc82d502076c80fb4012a",
+      "english": {
+        "direction": "causing phenomenon -> resulting effect/process",
+        "relation_id": "phenomenon_to_causal_effect",
+        "answer": "erosion",
+        "canonical_fact": "Bigger ocean waves and waves that carry more sediment cause a greater extent of erosion.",
+        "subject": "bigger ocean waves and waves that carry more sediment",
+        "prompt_en": "Bigger ocean waves and waves that carry more sediment cause a greater extent of what?",
+        "relation_definition": "The specific resulting process or effect (with degree/extent qualifier) caused by a stated physical phenomenon or condition.",
+        "answer_aliases_en": [
+          "erosion"
+        ],
+        "relation_spec": {
+          "id": "phenomenon_to_causal_effect",
+          "definition": "The specific resulting process or effect (with degree/extent qualifier) caused by a stated physical phenomenon or condition.",
+          "direction": "causing phenomenon -> resulting effect/process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ae5570072db678b31aa952e59cb89c9bfeb0e8ebc4f88e4983e7b8d814b77c19",
+      "translation": {
+        "record_id": "historical:raw_sciq_000270",
+        "subject_zh": "更大的海浪以及携带更多沉积物的海浪",
+        "prompt_zh": "更大的海浪以及携带更多沉积物的海浪会导致更大程度的什么？",
+        "canonical_fact_zh": "更大的海浪以及携带更多沉积物的海浪会导致更大程度的侵蚀。",
+        "answer_zh": "侵蚀",
+        "answer_aliases_zh": [
+          "侵蚀"
+        ]
+      },
+      "translation_sha256": "7dbc8367ab628ddfa6ee168a3d14cabb974ac0ad54d5472572a2c170b0540054"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000269",
+        "historical:raw_sciq_000270"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "067a63ed055b7b688e2d4aea625583586bfe7cfbc87a680b9bd53636c5ff49ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 33.443
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000269",
+        "historical:raw_sciq_000270"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "067a63ed055b7b688e2d4aea625583586bfe7cfbc87a680b9bd53636c5ff49ed",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2449,
+      "first_chunk_seconds": 1.183,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2578,
+        "prompt_tokens": 1711,
+        "total_tokens": 4289,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2176,
+          "text_tokens": 402
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4fd6ec87984bbe9678cbbae1ef15220813b08195cfa7e967ca4bf97fe0911751",
+      "status": "completed",
+      "latency_seconds": 55.75
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000269",
+        "historical:raw_sciq_000270"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6f4b51e1e7ab176a9f6b31d87bcc2162e1b00d660ba1acd63775c1b0bafa7f77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 635,
+      "first_chunk_seconds": 1.292,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 689,
+        "prompt_tokens": 852,
+        "total_tokens": 1541,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 467,
+          "text_tokens": 222
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9d1153ad690cc57486a7c792f7cbc76e2edd94b59babd08f2e51cb9387c1b032",
+      "status": "completed",
+      "latency_seconds": 71.614
+    }
+  ],
+  "status": "completed"
+}

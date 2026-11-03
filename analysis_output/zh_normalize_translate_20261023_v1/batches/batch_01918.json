@@ -1,0 +1,246 @@
+{
+  "input_sha256": "94c70c991920e18890269f123d4e4980b227906f1df6fdaaea1ba7b8975cd2c6",
+  "normalized": [
+    {
+      "record_id": "public:pbf_e246e551caf491f150c5",
+      "decision": "ready",
+      "subject": "Swedish company that specializes in affordable furniture",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "IKEA",
+      "canonical_fact": "The Swedish company that specializes in affordable furniture is IKEA.",
+      "prompt_en": "The Swedish company that specializes in affordable furniture is",
+      "evidence_quotes": [
+        "Swedish company that specializes in affordable furniture",
+        "IKEA"
+      ],
+      "reason": "The source question supplies an identifying description (Swedish, company, specializes in affordable furniture) whose unique entity answer is IKEA. The existing catalog relation description_to_entity fits exactly: the subject is an identifying description and the answer is the named entity it uniquely identifies.",
+      "english": {
+        "answer": "IKEA",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The Swedish company that specializes in affordable furniture is",
+        "direction": "identifying description -> entity",
+        "subject": "Swedish company that specializes in affordable furniture",
+        "canonical_fact": "The Swedish company that specializes in affordable furniture is IKEA.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "IKEA"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5cd93b782c3f260333ee04966cbe179934904ee28fc1feb32ff5b6d647f1e4e0",
+      "input_sha256": "04b70b62d7e1412fb02b50ecd3be5c34221fbfe568ae956ca11b199a26d4e70c",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_e24c38e9e13943a4d06f",
+      "decision": "ready",
+      "subject": "Jim Rockford",
+      "relation_id": "character_to_vehicle",
+      "relation_definition": "Vehicle model a fictional character is known for driving in their work/series; retain work or version qualifier when available.",
+      "direction": "fictional character -> vehicle model driven",
+      "answer": "Pontiac Firebird",
+      "canonical_fact": "Jim Rockford drove a Pontiac Firebird.",
+      "prompt_en": "Jim Rockford is known for driving a",
+      "evidence_quotes": [
+        "what kind of car did jim rockford drive",
+        "Pontiac Firebird"
+      ],
+      "reason": "No existing catalog relation covers 'character -> vehicle they drive.' Proposed character_to_vehicle as a precise new snake_case relation. The source question explicitly asks what car Jim Rockford drove; the source answer is Pontiac Firebird. The fact is directly and unambiguously supported by the source pair. No work/version is specified in the source, so the subject is kept as 'Jim Rockford' without a version qualifier.",
+      "english": {
+        "answer": "Pontiac Firebird",
+        "relation_id": "character_to_vehicle",
+        "prompt_en": "Jim Rockford is known for driving a",
+        "direction": "fictional character -> vehicle model driven",
+        "subject": "Jim Rockford",
+        "canonical_fact": "Jim Rockford drove a Pontiac Firebird.",
+        "relation_definition": "Vehicle model a fictional character is known for driving in their work/series; retain work or version qualifier when available.",
+        "answer_aliases_en": [
+          "Pontiac Firebird"
+        ],
+        "relation_spec": {
+          "id": "character_to_vehicle",
+          "definition": "Vehicle model a fictional character is known for driving in their work/series; retain work or version qualifier when available.",
+          "direction": "fictional character -> vehicle model driven"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "196de0aaada4e94eaa79c42d11962770e2ae358a23f47accf8e7ca395b93e975",
+      "input_sha256": "aaa842b2247effa004ba78ab5c84ad5e6c07be07607cd0243f23afcd85e75a89",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_e246e551caf491f150c5",
+      "input_sha256": "04b70b62d7e1412fb02b50ecd3be5c34221fbfe568ae956ca11b199a26d4e70c",
+      "english": {
+        "answer": "IKEA",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The Swedish company that specializes in affordable furniture is",
+        "direction": "identifying description -> entity",
+        "subject": "Swedish company that specializes in affordable furniture",
+        "canonical_fact": "The Swedish company that specializes in affordable furniture is IKEA.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "IKEA"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5cd93b782c3f260333ee04966cbe179934904ee28fc1feb32ff5b6d647f1e4e0",
+      "translation": {
+        "record_id": "public:pbf_e246e551caf491f150c5",
+        "subject_zh": "专门经营平价家具的瑞典公司",
+        "prompt_zh": "专门经营平价家具的瑞典公司是",
+        "canonical_fact_zh": "专门经营平价家具的瑞典公司是宜家。",
+        "answer_zh": "宜家",
+        "answer_aliases_zh": [
+          "宜家"
+        ]
+      },
+      "translation_sha256": "ce33de0fa0517b352fbcf4b70286d36786487d2eacfd2cffe21f19100cb14364"
+    },
+    {
+      "record_id": "public:pbf_e24c38e9e13943a4d06f",
+      "input_sha256": "aaa842b2247effa004ba78ab5c84ad5e6c07be07607cd0243f23afcd85e75a89",
+      "english": {
+        "answer": "Pontiac Firebird",
+        "relation_id": "character_to_vehicle",
+        "prompt_en": "Jim Rockford is known for driving a",
+        "direction": "fictional character -> vehicle model driven",
+        "subject": "Jim Rockford",
+        "canonical_fact": "Jim Rockford drove a Pontiac Firebird.",
+        "relation_definition": "Vehicle model a fictional character is known for driving in their work/series; retain work or version qualifier when available.",
+        "answer_aliases_en": [
+          "Pontiac Firebird"
+        ],
+        "relation_spec": {
+          "id": "character_to_vehicle",
+          "definition": "Vehicle model a fictional character is known for driving in their work/series; retain work or version qualifier when available.",
+          "direction": "fictional character -> vehicle model driven"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "196de0aaada4e94eaa79c42d11962770e2ae358a23f47accf8e7ca395b93e975",
+      "translation": {
+        "record_id": "public:pbf_e24c38e9e13943a4d06f",
+        "subject_zh": "吉姆·洛克福德",
+        "prompt_zh": "吉姆·洛克福德以驾驶一辆",
+        "canonical_fact_zh": "吉姆·洛克福德驾驶庞蒂亚克火鸟。",
+        "answer_zh": "庞蒂亚克火鸟",
+        "answer_aliases_zh": [
+          "庞蒂亚克火鸟"
+        ]
+      },
+      "translation_sha256": "73e05ee22268eeac254506fab24e368f835db4c7ba705e109ac850e55a3ec50d"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_e246e551caf491f150c5",
+        "public:pbf_e24c38e9e13943a4d06f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b45b7432b6a8077a3b895fd525bc7d0db5c6c163f72090613e8712961163148b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1950,
+      "first_chunk_seconds": 14.669,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2086,
+        "prompt_tokens": 1570,
+        "total_tokens": 3656,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1568,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "56ded44c301cf9792d32fd791f2924a7239ced8d56ecc96b6145b138cde833f6",
+      "status": "completed",
+      "latency_seconds": 38.306
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e246e551caf491f150c5",
+        "public:pbf_e24c38e9e13943a4d06f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c7b1f51549a418234930cb7f536011a7ddd72a8bfdb67f582263432019fceadc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1394,
+      "first_chunk_seconds": 22.901,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1622,
+        "prompt_tokens": 824,
+        "total_tokens": 2446,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1439,
+          "text_tokens": 183
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "005bd0381588cd748ddd6c76fcbf597ece1f9d81e8e4d26ada1ef292b19efc9c",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 43.996,
+      "validation_code": "duplicate_or_invalid_record_id"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_e246e551caf491f150c5",
+        "public:pbf_e24c38e9e13943a4d06f"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1c5a5459281c6079b86327e9b38426011b30305d95403d666fb71881345f58a4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1327,
+      "first_chunk_seconds": 17.161,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1438,
+        "prompt_tokens": 843,
+        "total_tokens": 2281,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1196,
+          "text_tokens": 242
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3ed405b34158983a4016a6b3ef58e8d7372b4d00040707fe0f3f247747bf6e45",
+      "status": "completed",
+      "latency_seconds": 36.849
+    }
+  ],
+  "status": "completed"
+}

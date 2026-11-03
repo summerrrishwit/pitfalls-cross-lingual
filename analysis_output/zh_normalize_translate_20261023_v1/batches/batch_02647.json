@@ -1,0 +1,214 @@
+{
+  "input_sha256": "87caab091351a3ba511a01aa6f150e2abd3e231a5dc8f93907d22964d45d8104",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006611",
+      "decision": "ready",
+      "subject": "someone who wants a lot of money",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "greedy",
+      "canonical_fact": "Someone who wants a lot of money is called greedy.",
+      "prompt_en": "What is the term for someone who wants a lot of money?",
+      "evidence_quotes": [
+        "What is someone who wants a lot of money?",
+        "greedy"
+      ],
+      "reason": "Source question asks for the conventional term fitting the description 'someone who wants a lot of money'; source answer is 'greedy'. This is a textbook description_to_term case. No existing catalog relation is a better fit; no new relation needed.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "greedy",
+        "canonical_fact": "Someone who wants a lot of money is called greedy.",
+        "subject": "someone who wants a lot of money",
+        "prompt_en": "What is the term for someone who wants a lot of money?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "greedy"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fcd39988e82433a3a6eea942281029f2cc216e93af1f55f351424c94da6696c3",
+      "input_sha256": "23732f30e9452455b035cf29655b7f53bc9cd37aa3236921ab8115562f2863b0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006643",
+      "decision": "ready",
+      "subject": "first violin",
+      "relation_id": "role_to_organization",
+      "relation_definition": "The organization or ensemble in which a specified role or position is held.",
+      "direction": "specified role/position -> organization",
+      "answer": "symphony orchestra",
+      "canonical_fact": "First violin is a position in a symphony orchestra.",
+      "prompt_en": "In what ensemble is first violin a position?",
+      "evidence_quotes": [
+        "first violin",
+        "symphony orchestra"
+      ],
+      "reason": "No existing catalog relation captures a positional/role-to-organizational-containment relationship. part_to_whole implies structural part, not a named role; entity_to_containing_location is geographic. Propose new relation role_to_organization with explicit direction. Source confirms first violin is a position on a symphony orchestra.",
+      "english": {
+        "direction": "specified role/position -> organization",
+        "relation_id": "role_to_organization",
+        "answer": "symphony orchestra",
+        "canonical_fact": "First violin is a position in a symphony orchestra.",
+        "subject": "first violin",
+        "prompt_en": "In what ensemble is first violin a position?",
+        "relation_definition": "The organization or ensemble in which a specified role or position is held.",
+        "answer_aliases_en": [
+          "symphony orchestra"
+        ],
+        "relation_spec": {
+          "id": "role_to_organization",
+          "definition": "The organization or ensemble in which a specified role or position is held.",
+          "direction": "specified role/position -> organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2ad506f491003c83d556f44894eacf84a00e08422106a6de6dbb05e076ecf55a",
+      "input_sha256": "b721ab92af90b17aefaee596619a8125862afabd0dc5148a6de042630f5a3d71",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006611",
+      "input_sha256": "23732f30e9452455b035cf29655b7f53bc9cd37aa3236921ab8115562f2863b0",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "greedy",
+        "canonical_fact": "Someone who wants a lot of money is called greedy.",
+        "subject": "someone who wants a lot of money",
+        "prompt_en": "What is the term for someone who wants a lot of money?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "greedy"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fcd39988e82433a3a6eea942281029f2cc216e93af1f55f351424c94da6696c3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006611",
+        "subject_zh": "想要很多钱的人",
+        "prompt_zh": "想要很多钱的人用哪个词来形容？",
+        "canonical_fact_zh": "想要很多钱的人被称为贪婪的。",
+        "answer_zh": "贪婪的",
+        "answer_aliases_zh": [
+          "贪婪的"
+        ]
+      },
+      "translation_sha256": "c03fa355cbd2eeb112b725b91490933452f8c7243fb41d3be5edcd09200b3730"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006643",
+      "input_sha256": "b721ab92af90b17aefaee596619a8125862afabd0dc5148a6de042630f5a3d71",
+      "english": {
+        "direction": "specified role/position -> organization",
+        "relation_id": "role_to_organization",
+        "answer": "symphony orchestra",
+        "canonical_fact": "First violin is a position in a symphony orchestra.",
+        "subject": "first violin",
+        "prompt_en": "In what ensemble is first violin a position?",
+        "relation_definition": "The organization or ensemble in which a specified role or position is held.",
+        "answer_aliases_en": [
+          "symphony orchestra"
+        ],
+        "relation_spec": {
+          "id": "role_to_organization",
+          "definition": "The organization or ensemble in which a specified role or position is held.",
+          "direction": "specified role/position -> organization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "2ad506f491003c83d556f44894eacf84a00e08422106a6de6dbb05e076ecf55a",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006643",
+        "subject_zh": "第一小提琴",
+        "prompt_zh": "第一小提琴是哪个乐团中的位置？",
+        "canonical_fact_zh": "第一小提琴是交响乐团中的一个位置。",
+        "answer_zh": "交响乐团",
+        "answer_aliases_zh": [
+          "交响乐团"
+        ]
+      },
+      "translation_sha256": "45feeb59e742ea3d70dbcba3e857ec7c31c4dbb0156cf668cdc3072b9f965f43"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006611",
+        "historical:raw_commonsense_qa_006643"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4a45d48f7af2f23c44ba6b503a9ef1921fd4f17c661b376af0d7c5d947124e69",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2079,
+      "first_chunk_seconds": 27.114,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2199,
+        "prompt_tokens": 1669,
+        "total_tokens": 3868,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1730,
+          "text_tokens": 469
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "957be93b86d749d905e92ec0772c72b35f05bcc18d6bea34ca883fb6ac8f6f92",
+      "status": "completed",
+      "latency_seconds": 52.648
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006611",
+        "historical:raw_commonsense_qa_006643"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bed431e701c91c4f3af80be71075c1b31a92bcaa20da4d7305bdd111bade4ad9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1027,
+      "first_chunk_seconds": 7.394,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1107,
+        "prompt_tokens": 813,
+        "total_tokens": 1920,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 896,
+          "text_tokens": 211
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c2c6f4f561163c9153d70e180fc3ec256d48b2ebe91981ea1ef8099f061d1856",
+      "status": "completed",
+      "latency_seconds": 22.572
+    }
+  ],
+  "status": "completed"
+}

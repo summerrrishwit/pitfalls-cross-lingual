@@ -1,0 +1,231 @@
+{
+  "input_sha256": "c1f3b3ed4b6389ac71bfb0d02e61e479b1e741f4f43b8fd8869f42ff7ee306e7",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c9954ba2a44feeb5b05e",
+      "decision": "ready",
+      "subject": "the world's first civilization",
+      "relation_id": "entity_to_origin_location",
+      "relation_definition": "The geographic region or location where a specified entity (e.g., a civilization) first developed or originated; distinct from containment, habitat, or process location.",
+      "direction": "entity -> origin location",
+      "answer": "Mesopotamia",
+      "canonical_fact": "The world's first civilization developed in Mesopotamia.",
+      "prompt_en": "The world's first civilization developed in",
+      "evidence_quotes": [
+        "Where did the world's first civilization develop?",
+        "Mesopotamia"
+      ],
+      "reason": "The source question asks where the world's first civilization developed and the answer is 'Mesopotamia'. No existing catalog relation fits 'developed in' for a civilization (entity_to_containing_location explicitly excludes origin/process location), so a new relation entity_to_origin_location is proposed. The answer is a literal substring of source_answer; the prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "Mesopotamia",
+        "relation_id": "entity_to_origin_location",
+        "prompt_en": "The world's first civilization developed in",
+        "direction": "entity -> origin location",
+        "subject": "the world's first civilization",
+        "canonical_fact": "The world's first civilization developed in Mesopotamia.",
+        "relation_definition": "The geographic region or location where a specified entity (e.g., a civilization) first developed or originated; distinct from containment, habitat, or process location.",
+        "answer_aliases_en": [
+          "Mesopotamia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "The geographic region or location where a specified entity (e.g., a civilization) first developed or originated; distinct from containment, habitat, or process location.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "be2d0008d1b15f5540670e6df61748fbcc061665ba8a0adac6f17c94d271fbc1",
+      "input_sha256": "4745fcdc83f087d5da133150ce09c1af9d953a5918baf440896af98f4c05cecc",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c9c2bef91633a19a1dd0",
+      "decision": "ready",
+      "subject": "Business cycles",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "a recession and an expansion",
+      "canonical_fact": "Business cycles are each comprised of a recession and an expansion.",
+      "prompt_en": "Business cycles are each comprised of",
+      "evidence_quotes": [
+        "Business cycles",
+        "are each comprised of a recession and an expansion."
+      ],
+      "reason": "The source states that business cycles are comprised of a recession and an expansion. This is a whole-to-part relationship (the cycle is the whole; recession and expansion are its constituent phases). The existing catalog relation whole_to_part fits exactly in direction and definition. The answer is a literal substring of source_answer; the prompt is option-free and does not contain the answer.",
+      "english": {
+        "answer": "a recession and an expansion",
+        "relation_id": "whole_to_part",
+        "prompt_en": "Business cycles are each comprised of",
+        "direction": "whole -> part",
+        "subject": "Business cycles",
+        "canonical_fact": "Business cycles are each comprised of a recession and an expansion.",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "a recession and an expansion",
+          "are each comprised of a recession and an expansion."
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2df1e92c04a81aca31a6785f59f2d402b240628af396398e9d54d5ed853bc736",
+      "input_sha256": "a93f804e9697278d50a879a8eefa3abadb247446d8c35adc27490b9ce89e3c4e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c9954ba2a44feeb5b05e",
+      "input_sha256": "4745fcdc83f087d5da133150ce09c1af9d953a5918baf440896af98f4c05cecc",
+      "english": {
+        "answer": "Mesopotamia",
+        "relation_id": "entity_to_origin_location",
+        "prompt_en": "The world's first civilization developed in",
+        "direction": "entity -> origin location",
+        "subject": "the world's first civilization",
+        "canonical_fact": "The world's first civilization developed in Mesopotamia.",
+        "relation_definition": "The geographic region or location where a specified entity (e.g., a civilization) first developed or originated; distinct from containment, habitat, or process location.",
+        "answer_aliases_en": [
+          "Mesopotamia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_origin_location",
+          "definition": "The geographic region or location where a specified entity (e.g., a civilization) first developed or originated; distinct from containment, habitat, or process location.",
+          "direction": "entity -> origin location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "be2d0008d1b15f5540670e6df61748fbcc061665ba8a0adac6f17c94d271fbc1",
+      "translation": {
+        "record_id": "public:pbf_c9954ba2a44feeb5b05e",
+        "subject_zh": "世界最早的文明",
+        "prompt_zh": "世界最早的文明形成于",
+        "canonical_fact_zh": "世界最早的文明形成于美索不达米亚。",
+        "answer_zh": "美索不达米亚",
+        "answer_aliases_zh": [
+          "美索不达米亚"
+        ]
+      },
+      "translation_sha256": "7b7c3d2cc774c3ec43a5644a6fcc1d4509652c209ed1e4c92f22b918536677cd"
+    },
+    {
+      "record_id": "public:pbf_c9c2bef91633a19a1dd0",
+      "input_sha256": "a93f804e9697278d50a879a8eefa3abadb247446d8c35adc27490b9ce89e3c4e",
+      "english": {
+        "answer": "a recession and an expansion",
+        "relation_id": "whole_to_part",
+        "prompt_en": "Business cycles are each comprised of",
+        "direction": "whole -> part",
+        "subject": "Business cycles",
+        "canonical_fact": "Business cycles are each comprised of a recession and an expansion.",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "a recession and an expansion",
+          "are each comprised of a recession and an expansion."
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2df1e92c04a81aca31a6785f59f2d402b240628af396398e9d54d5ed853bc736",
+      "translation": {
+        "record_id": "public:pbf_c9c2bef91633a19a1dd0",
+        "subject_zh": "经济周期",
+        "prompt_zh": "经济周期各由……组成",
+        "canonical_fact_zh": "每个经济周期由一次衰退和一次扩张组成。",
+        "answer_zh": "一次衰退和一次扩张",
+        "answer_aliases_zh": [
+          "一次衰退和一次扩张",
+          "各由一次衰退和一次扩张组成。"
+        ]
+      },
+      "translation_sha256": "0008f4e7d29296dc0e1916431ad9ace64df52cc3f44b91f511cb550d14b22bd9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c9954ba2a44feeb5b05e",
+        "public:pbf_c9c2bef91633a19a1dd0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6ea09a5646c798585f5c278f91816bc877b81923a2a66c5ed3f4a65f97017946",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.955
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c9954ba2a44feeb5b05e",
+        "public:pbf_c9c2bef91633a19a1dd0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6ea09a5646c798585f5c278f91816bc877b81923a2a66c5ed3f4a65f97017946",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2006,
+      "first_chunk_seconds": 18.628,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2042,
+        "prompt_tokens": 1576,
+        "total_tokens": 3618,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1511,
+          "text_tokens": 531
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7a0ebaa7f851883872226e59f5170fa0b0c741b9b6f2bf883603d1eb87f1d379",
+      "status": "completed",
+      "latency_seconds": 37.763
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c9954ba2a44feeb5b05e",
+        "public:pbf_c9c2bef91633a19a1dd0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7f0d7ca1c10c6376a75e2570e4cb81f6f6137a3ff007edd460ac9c84c441cc09",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 835,
+      "first_chunk_seconds": 27.345,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 877,
+        "prompt_tokens": 851,
+        "total_tokens": 1728,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 636,
+          "text_tokens": 241
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3efc49fabf295b63008a8ab29701e4fe87e6c3964bd034343cd8b98b603a4259",
+      "status": "completed",
+      "latency_seconds": 37.282
+    }
+  ],
+  "status": "completed"
+}

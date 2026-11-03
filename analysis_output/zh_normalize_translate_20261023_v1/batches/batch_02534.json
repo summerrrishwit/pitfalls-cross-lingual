@@ -1,0 +1,214 @@
+{
+  "input_sha256": "6e4c1f1942d8e90bfb2e3d421ece475394e1b53d6e536b03159b177a7e8d171c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003036",
+      "decision": "ready",
+      "subject": "dying due to suffocation",
+      "relation_id": "term_to_definition",
+      "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+      "direction": "term -> definition",
+      "answer": "stop breathing",
+      "canonical_fact": "Dying due to suffocation means you stop breathing.",
+      "prompt_en": "What does dying due to suffocation mean?",
+      "evidence_quotes": [
+        "Dying due to suffocation means you have what?",
+        "stop breathing"
+      ],
+      "reason": "The source question explicitly asks for the meaning of 'dying due to suffocation' using 'means', which maps directly to term_to_definition. The answer 'stop breathing' is a literal substring of the source answer. No conflict with existing extractions.",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "stop breathing",
+        "canonical_fact": "Dying due to suffocation means you stop breathing.",
+        "subject": "dying due to suffocation",
+        "prompt_en": "What does dying due to suffocation mean?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "stop breathing"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6170dd677431571dc4e4a0cf23f7f99b904ba14c63ff847fe39294a78529f719",
+      "input_sha256": "2cc44373b67777f07266d0229ac375096c2f511a2b2ebc3bfcffff2da4fb86f9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003050",
+      "decision": "ready",
+      "subject": "master carpenter",
+      "relation_id": "role_to_tool_for_task",
+      "relation_definition": "The typical tool used by a specified role/profession to accomplish a specified task.",
+      "direction": "role -> tool (for specified task)",
+      "answer": "drill",
+      "canonical_fact": "A master carpenter uses a drill to put holes in objects.",
+      "prompt_en": "What tool does a master carpenter use to put holes in objects?",
+      "evidence_quotes": [
+        "What does a master carpenter use to put holes in objects?",
+        "drill"
+      ],
+      "reason": "No existing catalog relation precisely captures 'profession -> tool for a specific task.' Proposing new relation role_to_tool_for_task. The answer 'drill' is a literal substring of the source answer. Both model annotations agree on the extraction. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "role -> tool (for specified task)",
+        "relation_id": "role_to_tool_for_task",
+        "answer": "drill",
+        "canonical_fact": "A master carpenter uses a drill to put holes in objects.",
+        "subject": "master carpenter",
+        "prompt_en": "What tool does a master carpenter use to put holes in objects?",
+        "relation_definition": "The typical tool used by a specified role/profession to accomplish a specified task.",
+        "answer_aliases_en": [
+          "drill"
+        ],
+        "relation_spec": {
+          "id": "role_to_tool_for_task",
+          "definition": "The typical tool used by a specified role/profession to accomplish a specified task.",
+          "direction": "role -> tool (for specified task)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bf32d26cf953f554e06e5bbd108ec527150753fc6a40840fcf5426f18a649694",
+      "input_sha256": "64b61227d31bcfa262ea38c34b3edf9ae2ae5ed858df308e63f2932689b6596e",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003036",
+      "input_sha256": "2cc44373b67777f07266d0229ac375096c2f511a2b2ebc3bfcffff2da4fb86f9",
+      "english": {
+        "direction": "term -> definition",
+        "relation_id": "term_to_definition",
+        "answer": "stop breathing",
+        "canonical_fact": "Dying due to suffocation means you stop breathing.",
+        "subject": "dying due to suffocation",
+        "prompt_en": "What does dying due to suffocation mean?",
+        "relation_definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense.",
+        "answer_aliases_en": [
+          "stop breathing"
+        ],
+        "relation_spec": {
+          "id": "term_to_definition",
+          "direction": "term -> definition",
+          "definition": "Definition of an explicit term; allow equivalent paraphrases, retain scope and named sense."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6170dd677431571dc4e4a0cf23f7f99b904ba14c63ff847fe39294a78529f719",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003036",
+        "subject_zh": "因窒息而死",
+        "prompt_zh": "因窒息而死是什么意思？",
+        "canonical_fact_zh": "因窒息而死意味着你停止呼吸。",
+        "answer_zh": "停止呼吸",
+        "answer_aliases_zh": [
+          "停止呼吸"
+        ]
+      },
+      "translation_sha256": "c439e60452ec52680014dd4727b48fd140e9d9495faea9be049616df67d94023"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003050",
+      "input_sha256": "64b61227d31bcfa262ea38c34b3edf9ae2ae5ed858df308e63f2932689b6596e",
+      "english": {
+        "direction": "role -> tool (for specified task)",
+        "relation_id": "role_to_tool_for_task",
+        "answer": "drill",
+        "canonical_fact": "A master carpenter uses a drill to put holes in objects.",
+        "subject": "master carpenter",
+        "prompt_en": "What tool does a master carpenter use to put holes in objects?",
+        "relation_definition": "The typical tool used by a specified role/profession to accomplish a specified task.",
+        "answer_aliases_en": [
+          "drill"
+        ],
+        "relation_spec": {
+          "id": "role_to_tool_for_task",
+          "definition": "The typical tool used by a specified role/profession to accomplish a specified task.",
+          "direction": "role -> tool (for specified task)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bf32d26cf953f554e06e5bbd108ec527150753fc6a40840fcf5426f18a649694",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003050",
+        "subject_zh": "木匠师傅",
+        "prompt_zh": "木匠师傅用什么工具在物体上打孔？",
+        "canonical_fact_zh": "木匠师傅用电钻在物体上打孔。",
+        "answer_zh": "电钻",
+        "answer_aliases_zh": [
+          "电钻"
+        ]
+      },
+      "translation_sha256": "fe6783e64d085d72dc5e007952909fa5a4eff681f792212dd9e36db777093987"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003036",
+        "historical:raw_commonsense_qa_003050"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1eda7fa134929f2ba0897c9c69d87f485603792ffbb299dace41a1f4255d68fa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2217,
+      "first_chunk_seconds": 22.984,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2334,
+        "prompt_tokens": 1676,
+        "total_tokens": 4010,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1849,
+          "text_tokens": 485
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "97b726e8ea168fa9f9746cd3cee838d2872f4596c1d50b1147f1fd3c9a01d553",
+      "status": "completed",
+      "latency_seconds": 59.005
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003036",
+        "historical:raw_commonsense_qa_003050"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "303536c277dd8f45ab051e4018e812daca530c4cd8efdd001f983d9a89f814b1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 842,
+      "first_chunk_seconds": 17.372,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 964,
+        "prompt_tokens": 823,
+        "total_tokens": 1787,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 752,
+          "text_tokens": 212
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f726b2a6d0ad1e020f83f32c6a67a1315c6ae5fdbf901fc377a0f4fe1bd0b13a",
+      "status": "completed",
+      "latency_seconds": 31.631
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "39ffa7d2fcf3b724a28eee22983d5845690ceff9d7e2a986d576967d6cbddd6f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001005",
+      "decision": "ready",
+      "subject": "garage",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "building",
+      "canonical_fact": "A garage is a type of building.",
+      "prompt_en": "A garage is a type of what?",
+      "evidence_quotes": [
+        "A garage is a type of what?",
+        "building"
+      ],
+      "reason": "The source question asks for the category a garage belongs to; the source answer 'building' is the literal class. entity_to_class fits the direction exactly (garage -> building) and the taxonomy level is stable.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "building",
+        "canonical_fact": "A garage is a type of building.",
+        "subject": "garage",
+        "prompt_en": "A garage is a type of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "809ed8dcd057d38be11270b9003438663520a3f9b288228b754304275a09f562",
+      "input_sha256": "05cb714a2cf4927a00d60858ef6730131c2a7be06ad032b86cb34aa8cf8b3b0e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001006",
+      "decision": "ready",
+      "subject": "book",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "cover",
+      "canonical_fact": "A book is bounded by a cover.",
+      "prompt_en": "What bounds a book?",
+      "evidence_quotes": [
+        "What bounds a book?",
+        "cover"
+      ],
+      "reason": "The source question asks what physically bounds a book; the source answer 'cover' is a constituent part of the book's structure. whole_to_part fits the direction (book -> cover) as the cover is a specified constituent of the whole object.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cover",
+        "canonical_fact": "A book is bounded by a cover.",
+        "subject": "book",
+        "prompt_en": "What bounds a book?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cover"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e8658c27819c40952c669f573a90cc0c8607e7abc3023e04af609b73829c1241",
+      "input_sha256": "b8b901ff022fda8721e00294448a896c991462c3e6211e0784e92f470c4bcfd8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001005",
+      "input_sha256": "05cb714a2cf4927a00d60858ef6730131c2a7be06ad032b86cb34aa8cf8b3b0e",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "building",
+        "canonical_fact": "A garage is a type of building.",
+        "subject": "garage",
+        "prompt_en": "A garage is a type of what?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "building"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "809ed8dcd057d38be11270b9003438663520a3f9b288228b754304275a09f562",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001005",
+        "subject_zh": "车库",
+        "prompt_zh": "车库属于哪一类？",
+        "canonical_fact_zh": "车库是一种建筑。",
+        "answer_zh": "建筑",
+        "answer_aliases_zh": [
+          "建筑"
+        ]
+      },
+      "translation_sha256": "b2743ccdc5d05002d75c5800ef3051c58ef254545b72768f43499c94929286ff"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001006",
+      "input_sha256": "b8b901ff022fda8721e00294448a896c991462c3e6211e0784e92f470c4bcfd8",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "cover",
+        "canonical_fact": "A book is bounded by a cover.",
+        "subject": "book",
+        "prompt_en": "What bounds a book?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "cover"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e8658c27819c40952c669f573a90cc0c8607e7abc3023e04af609b73829c1241",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001006",
+        "subject_zh": "书",
+        "prompt_zh": "什么围住了一本书？",
+        "canonical_fact_zh": "一本书由封面围合。",
+        "answer_zh": "封面",
+        "answer_aliases_zh": [
+          "封面"
+        ]
+      },
+      "translation_sha256": "29ace849b8dbfbfc73ff6a14203bb6e703c95eef3f04bb89105d839707ee6bf8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001005",
+        "historical:raw_commonsense_qa_001006"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4774b1056fc2d2b5425d33498cd494e146fc6eaece6204c94d30fa797c5482a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1683,
+      "first_chunk_seconds": 37.475,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1738,
+        "prompt_tokens": 1607,
+        "total_tokens": 3345,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1338,
+          "text_tokens": 400
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec5d8efb98c7405709cedcfc92c34e7dfeaca136858247f572c496c4f7bb04e1",
+      "status": "completed",
+      "latency_seconds": 57.92
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001005",
+        "historical:raw_commonsense_qa_001006"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "361d22913588681fa21d4cbcd25b5c39b3655f1000927c5f8936356affcd9daa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 934,
+      "first_chunk_seconds": 12.824,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 988,
+        "prompt_tokens": 781,
+        "total_tokens": 1769,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 796,
+          "text_tokens": 192
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8e40f7790d3b2e77447663f1555f0806de1bc07eb40b296a4ec2ebe3fcd17134",
+      "status": "completed",
+      "latency_seconds": 24.706
+    }
+  ],
+  "status": "completed"
+}

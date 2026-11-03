@@ -1,0 +1,284 @@
+{
+  "input_sha256": "aed40d239036e9d9156702833f8adcd3830e0f340202c8471f04f789fd657a93",
+  "normalized": [
+    {
+      "record_id": "public:pbf_a954b7f352fa29e5ff9f",
+      "decision": "ready",
+      "subject": "Chinese foreign trade (1750-1900)",
+      "relation_id": "policy_to_restricted_location",
+      "relation_definition": "A stated historical policy or era restricts a named activity (e.g., trade) to specific designated locations; retains era and activity qualifiers.",
+      "direction": "policy/era -> restricted location",
+      "answer": "a few cities designated for foreign trade",
+      "canonical_fact": "During the era 1750–1900, Chinese foreign trade policy confined European merchants to a few cities designated for foreign trade.",
+      "prompt_en": "During the era 1750–1900, to what type of locations were European merchants confined under Chinese foreign trade policy?",
+      "evidence_quotes": [
+        "European merchants were confined to a few cities designated for foreign trade.",
+        "How did the Chinese restrict foreign trade during the era 1750–1900?"
+      ],
+      "reason": "Source answer directly states the trade restriction; 'a few cities designated for foreign trade' is a literal substring of source_answer. No catalog relation covers a policy-to-location restriction for a trade activity, so a precise new relation is proposed. Old extraction's relation_raw 'confined European merchants to' is preserved in the canonical fact.",
+      "english": {
+        "answer": "a few cities designated for foreign trade",
+        "relation_id": "policy_to_restricted_location",
+        "prompt_en": "During the era 1750–1900, to what type of locations were European merchants confined under Chinese foreign trade policy?",
+        "direction": "policy/era -> restricted location",
+        "subject": "Chinese foreign trade (1750-1900)",
+        "canonical_fact": "During the era 1750–1900, Chinese foreign trade policy confined European merchants to a few cities designated for foreign trade.",
+        "relation_definition": "A stated historical policy or era restricts a named activity (e.g., trade) to specific designated locations; retains era and activity qualifiers.",
+        "answer_aliases_en": [
+          "a few cities designated for foreign trade",
+          "European merchants were confined to a few cities designated for foreign trade."
+        ],
+        "relation_spec": {
+          "id": "policy_to_restricted_location",
+          "definition": "A stated historical policy or era restricts a named activity (e.g., trade) to specific designated locations; retains era and activity qualifiers.",
+          "direction": "policy/era -> restricted location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4c85ba7d30c70aeb24a0b88cbc97a1a1c2baed9d02100e84026ede30ce1ede12",
+      "input_sha256": "8e55845f1b2bcc18cd948bc99d991106ede4a05d5297e8ae6babc6f1b76dcef5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_a95efdc0739ae1abd4a0",
+      "decision": "ready",
+      "subject": "Yijing",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "The Classic of Changes",
+      "canonical_fact": "The English title for the divination text Yijing is The Classic of Changes.",
+      "prompt_en": "What is the English title for the divination text also known as the Yijing?",
+      "evidence_quotes": [
+        "The Classic of Changes",
+        "What is the English title for the divination text also known as the Yijing?"
+      ],
+      "reason": "entity_to_alias fits exactly: 'The Classic of Changes' is an equivalent English title for 'Yijing'; the answer is a literal substring of source_answer. The source question explicitly frames this as an alternate name, matching the alias relation definition.",
+      "english": {
+        "answer": "The Classic of Changes",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "What is the English title for the divination text also known as the Yijing?",
+        "direction": "entity -> alias",
+        "subject": "Yijing",
+        "canonical_fact": "The English title for the divination text Yijing is The Classic of Changes.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "The Classic of Changes"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "37de8a9051056759d6d088284c27d8c33e5acfacbe3e45140b824671b59c4d9a",
+      "input_sha256": "cab88c213e3331c138cd0cb148768016b2100f41c725adac50da85973f61a15d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_a954b7f352fa29e5ff9f",
+      "input_sha256": "8e55845f1b2bcc18cd948bc99d991106ede4a05d5297e8ae6babc6f1b76dcef5",
+      "english": {
+        "answer": "a few cities designated for foreign trade",
+        "relation_id": "policy_to_restricted_location",
+        "prompt_en": "During the era 1750–1900, to what type of locations were European merchants confined under Chinese foreign trade policy?",
+        "direction": "policy/era -> restricted location",
+        "subject": "Chinese foreign trade (1750-1900)",
+        "canonical_fact": "During the era 1750–1900, Chinese foreign trade policy confined European merchants to a few cities designated for foreign trade.",
+        "relation_definition": "A stated historical policy or era restricts a named activity (e.g., trade) to specific designated locations; retains era and activity qualifiers.",
+        "answer_aliases_en": [
+          "a few cities designated for foreign trade",
+          "European merchants were confined to a few cities designated for foreign trade."
+        ],
+        "relation_spec": {
+          "id": "policy_to_restricted_location",
+          "definition": "A stated historical policy or era restricts a named activity (e.g., trade) to specific designated locations; retains era and activity qualifiers.",
+          "direction": "policy/era -> restricted location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4c85ba7d30c70aeb24a0b88cbc97a1a1c2baed9d02100e84026ede30ce1ede12",
+      "translation": {
+        "record_id": "public:pbf_a954b7f352fa29e5ff9f",
+        "subject_zh": "中国对外贸易（1750–1900年）",
+        "prompt_zh": "在1750–1900年期间，中国对外贸易政策将欧洲商人限制在何种类型的地点？",
+        "canonical_fact_zh": "在1750–1900年期间，中国对外贸易政策将欧洲商人限制在少数几个指定用于对外贸易的城市。",
+        "answer_zh": "少数几个指定用于对外贸易的城市",
+        "answer_aliases_zh": [
+          "少数几个指定用于对外贸易的城市",
+          "欧洲商人被限制在少数几个指定用于对外贸易的城市。"
+        ]
+      },
+      "translation_sha256": "9bc65945fbd65c1242ba16e90df698f80dfb93dfa9092396659b10337b2da60b"
+    },
+    {
+      "record_id": "public:pbf_a95efdc0739ae1abd4a0",
+      "input_sha256": "cab88c213e3331c138cd0cb148768016b2100f41c725adac50da85973f61a15d",
+      "english": {
+        "answer": "The Classic of Changes",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "What is the English title for the divination text also known as the Yijing?",
+        "direction": "entity -> alias",
+        "subject": "Yijing",
+        "canonical_fact": "The English title for the divination text Yijing is The Classic of Changes.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "The Classic of Changes"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "37de8a9051056759d6d088284c27d8c33e5acfacbe3e45140b824671b59c4d9a",
+      "translation": {
+        "record_id": "public:pbf_a95efdc0739ae1abd4a0",
+        "subject_zh": "《易经》",
+        "prompt_zh": "又称《易经》的占卜文本的英文标题是什么？",
+        "canonical_fact_zh": "占卜文本《易经》的英文标题为 The Classic of Changes。",
+        "answer_zh": "The Classic of Changes",
+        "answer_aliases_zh": [
+          "The Classic of Changes"
+        ]
+      },
+      "translation_sha256": "ac5eb14be8f14a139defc55b484d1aa09d9d2142c9e923277064cdae25eb4b8f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a954b7f352fa29e5ff9f",
+        "public:pbf_a95efdc0739ae1abd4a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a781a0a78a26a334dedc16bcd75acd0498a636a50013511eace27775a6f1991d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3335,
+      "first_chunk_seconds": 24.839,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3333,
+        "prompt_tokens": 1865,
+        "total_tokens": 5198,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2717,
+          "text_tokens": 616
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "d819854fff4c8e61597807eeefcadc805e6a0e1075cc0ab7e36bdc6ca736c30b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 51.914,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a954b7f352fa29e5ff9f",
+        "public:pbf_a95efdc0739ae1abd4a0"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d12ead38f30d47c57c4d477359db40a8686cff1d0651c9ff98efcafd84f05539",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2598,
+      "first_chunk_seconds": 37.579,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2597,
+        "prompt_tokens": 1882,
+        "total_tokens": 4479,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2166,
+          "text_tokens": 431
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a71177b8b44834c64305c750badb178782b8fd51f7c85dc1af6b1f8eb872a20d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 58.941,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_a954b7f352fa29e5ff9f",
+        "public:pbf_a95efdc0739ae1abd4a0"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b7fb6864c358ac16a9255050746eadaae12819b298da5bdc79dae845c453898f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2664,
+      "first_chunk_seconds": 34.654,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2720,
+        "prompt_tokens": 1884,
+        "total_tokens": 4604,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2132,
+          "text_tokens": 588
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1c55cd0d64d1d0256999905357739313a3767e7063b96f01f6941f272fa3ebb9",
+      "status": "completed",
+      "latency_seconds": 61.902
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_a954b7f352fa29e5ff9f",
+        "public:pbf_a95efdc0739ae1abd4a0"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "74b986ed9f6f46709ac45d054f7f91f5e110b53ff59c9a978b4dea7ed75749e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2303,
+      "first_chunk_seconds": 17.389,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2316,
+        "prompt_tokens": 916,
+        "total_tokens": 3232,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1998,
+          "text_tokens": 318
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "74c5d5fb272b74158638429d6a7bdeffbaf89fc1aee33953985e67f93ec98c7b",
+      "status": "completed",
+      "latency_seconds": 36.476
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "087a48d84305cbe45036add3ee565ae9a34402120099bfb00b5b04071eca704d",
+  "normalized": [
+    {
+      "record_id": "historical:raw_mmlu_000272",
+      "decision": "ready",
+      "subject": "Male breast cancer",
+      "relation_id": "condition_to_gene_mutation",
+      "relation_definition": "A specified medical condition is associated with mutations in a named gene; retain population qualifiers (e.g., male/female) and the non-exclusivity implied by 'associated with.'",
+      "direction": "medical condition -> gene",
+      "answer": "BRCA2",
+      "canonical_fact": "Male breast cancer is associated with mutations in BRCA2.",
+      "prompt_en": "Male breast cancer is associated with mutations in which gene?",
+      "evidence_quotes": [
+        "Male breast cancer is associated with mutations in",
+        "BRCA2"
+      ],
+      "reason": "No existing catalog relation covers a disease-to-gene-mutation association. Proposed 'condition_to_gene_mutation' as a precise, direction-specific relation. Source question and answer support the fact unambiguously; qualifier 'associated with' preserved to avoid implying exclusivity.",
+      "english": {
+        "direction": "medical condition -> gene",
+        "relation_id": "condition_to_gene_mutation",
+        "answer": "BRCA2",
+        "canonical_fact": "Male breast cancer is associated with mutations in BRCA2.",
+        "subject": "Male breast cancer",
+        "prompt_en": "Male breast cancer is associated with mutations in which gene?",
+        "relation_definition": "A specified medical condition is associated with mutations in a named gene; retain population qualifiers (e.g., male/female) and the non-exclusivity implied by 'associated with.'",
+        "answer_aliases_en": [
+          "BRCA2"
+        ],
+        "relation_spec": {
+          "id": "condition_to_gene_mutation",
+          "definition": "A specified medical condition is associated with mutations in a named gene; retain population qualifiers (e.g., male/female) and the non-exclusivity implied by 'associated with.'",
+          "direction": "medical condition -> gene"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f67cf0e2cdf5a0b2174131e2160e002b6441eda946ca27224d022cca79dcea5d",
+      "input_sha256": "5f321d03afd41ff36001107e4cbb1805f71a59b1d7d1bd16073c58a7dba64717",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_mmlu_000273",
+      "decision": "ready",
+      "subject": "$\\hat{u}^t \\hat{u}$",
+      "relation_id": "math_expression_to_dimension",
+      "relation_definition": "The dimensional shape (rows × columns) of a specified mathematical expression or matrix product; retain the exact expression form and notational context.",
+      "direction": "mathematical expression -> dimension specification",
+      "answer": "1 x 1",
+      "canonical_fact": "The dimensions of $\\hat{u}^t \\hat{u}$ are 1 x 1.",
+      "prompt_en": "What are the dimensions of the expression $\\hat{u}^t \\hat{u}$?",
+      "evidence_quotes": [
+        "What are the dimensions of",
+        "1 x 1"
+      ],
+      "reason": "No existing catalog relation covers a mathematical expression's dimensional property. Proposed 'math_expression_to_dimension' as a precise relation. Source question and answer support the fact directly; no uncertainty qualifiers present in source.",
+      "english": {
+        "direction": "mathematical expression -> dimension specification",
+        "relation_id": "math_expression_to_dimension",
+        "answer": "1 x 1",
+        "canonical_fact": "The dimensions of $\\hat{u}^t \\hat{u}$ are 1 x 1.",
+        "subject": "$\\hat{u}^t \\hat{u}$",
+        "prompt_en": "What are the dimensions of the expression $\\hat{u}^t \\hat{u}$?",
+        "relation_definition": "The dimensional shape (rows × columns) of a specified mathematical expression or matrix product; retain the exact expression form and notational context.",
+        "answer_aliases_en": [
+          "1 x 1"
+        ],
+        "relation_spec": {
+          "id": "math_expression_to_dimension",
+          "definition": "The dimensional shape (rows × columns) of a specified mathematical expression or matrix product; retain the exact expression form and notational context.",
+          "direction": "mathematical expression -> dimension specification"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "030d87398fd9fe7732dbf581c871ab26acd4f4510e6503b6c292022c99adf8ed",
+      "input_sha256": "48d36ffd14cd3cb8f5c6a7858fc0fdac0fa7602651ed3c159afa089b8178d5b8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_mmlu_000272",
+      "input_sha256": "5f321d03afd41ff36001107e4cbb1805f71a59b1d7d1bd16073c58a7dba64717",
+      "english": {
+        "direction": "medical condition -> gene",
+        "relation_id": "condition_to_gene_mutation",
+        "answer": "BRCA2",
+        "canonical_fact": "Male breast cancer is associated with mutations in BRCA2.",
+        "subject": "Male breast cancer",
+        "prompt_en": "Male breast cancer is associated with mutations in which gene?",
+        "relation_definition": "A specified medical condition is associated with mutations in a named gene; retain population qualifiers (e.g., male/female) and the non-exclusivity implied by 'associated with.'",
+        "answer_aliases_en": [
+          "BRCA2"
+        ],
+        "relation_spec": {
+          "id": "condition_to_gene_mutation",
+          "definition": "A specified medical condition is associated with mutations in a named gene; retain population qualifiers (e.g., male/female) and the non-exclusivity implied by 'associated with.'",
+          "direction": "medical condition -> gene"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f67cf0e2cdf5a0b2174131e2160e002b6441eda946ca27224d022cca79dcea5d",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000272",
+        "subject_zh": "男性乳腺癌",
+        "prompt_zh": "男性乳腺癌与哪个基因的突变相关？",
+        "canonical_fact_zh": "男性乳腺癌与BRCA2基因的突变相关。",
+        "answer_zh": "BRCA2",
+        "answer_aliases_zh": [
+          "BRCA2"
+        ]
+      },
+      "translation_sha256": "75ecf2dcb8d87393b8b8f4c125ca5b0cb8302de19518c86e491ece7c9cce7f93"
+    },
+    {
+      "record_id": "historical:raw_mmlu_000273",
+      "input_sha256": "48d36ffd14cd3cb8f5c6a7858fc0fdac0fa7602651ed3c159afa089b8178d5b8",
+      "english": {
+        "direction": "mathematical expression -> dimension specification",
+        "relation_id": "math_expression_to_dimension",
+        "answer": "1 x 1",
+        "canonical_fact": "The dimensions of $\\hat{u}^t \\hat{u}$ are 1 x 1.",
+        "subject": "$\\hat{u}^t \\hat{u}$",
+        "prompt_en": "What are the dimensions of the expression $\\hat{u}^t \\hat{u}$?",
+        "relation_definition": "The dimensional shape (rows × columns) of a specified mathematical expression or matrix product; retain the exact expression form and notational context.",
+        "answer_aliases_en": [
+          "1 x 1"
+        ],
+        "relation_spec": {
+          "id": "math_expression_to_dimension",
+          "definition": "The dimensional shape (rows × columns) of a specified mathematical expression or matrix product; retain the exact expression form and notational context.",
+          "direction": "mathematical expression -> dimension specification"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "030d87398fd9fe7732dbf581c871ab26acd4f4510e6503b6c292022c99adf8ed",
+      "translation": {
+        "record_id": "historical:raw_mmlu_000273",
+        "subject_zh": "$\\hat{u}^t \\hat{u}$",
+        "prompt_zh": "表达式 $\\hat{u}^t \\hat{u}$ 的维度是多少？",
+        "canonical_fact_zh": "表达式 $\\hat{u}^t \\hat{u}$ 的维度为 1 x 1。",
+        "answer_zh": "1 x 1",
+        "answer_aliases_zh": [
+          "1 x 1"
+        ]
+      },
+      "translation_sha256": "29c81a91fd984ea080a2a1e3dd358007d32fc79a81d4eb4daa7c2ffae426cd38"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_mmlu_000272",
+        "historical:raw_mmlu_000273"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3f1149cb9e740341d6a075111ee3627ca8cf6c6a2b3089706d84454562887858",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1903,
+      "first_chunk_seconds": 25.196,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1929,
+        "prompt_tokens": 1739,
+        "total_tokens": 3668,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1528,
+          "text_tokens": 401
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9e8e3825c722679005396e4112ad4e80d299541b581f3ed91f555326df2102dd",
+      "status": "completed",
+      "latency_seconds": 50.916
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_mmlu_000272",
+        "historical:raw_mmlu_000273"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a55d75cdf413f3f1751ab9acfa97662b27ee56f3757c7e14944d6292e7fca962",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 681,
+      "first_chunk_seconds": 27.5,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 727,
+        "prompt_tokens": 907,
+        "total_tokens": 1634,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 475,
+          "text_tokens": 252
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c7a7cbfa6e9cabc7f572f9537e92ddaa4b74d763fb2a05fd8005706a0ba48db9",
+      "status": "completed",
+      "latency_seconds": 36.312
+    }
+  ],
+  "status": "completed"
+}

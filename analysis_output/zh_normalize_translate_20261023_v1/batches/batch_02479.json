@@ -1,0 +1,217 @@
+{
+  "input_sha256": "57d8a641d6e19c2135db29be8b0cd82da6ff8e44cfdbfc3d280bf891d819f2ff",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001248",
+      "decision": "ready",
+      "subject": "marmoset",
+      "relation_id": "organism_to_habitat",
+      "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+      "direction": "organism -> habitat",
+      "answer": "latin america",
+      "canonical_fact": "Marmosets are likely to be found in Latin America.",
+      "prompt_en": "What southern area outside the US are you likely to find a marmoset?",
+      "evidence_quotes": [
+        "latin america",
+        "likely to find a marmoset"
+      ],
+      "reason": "The source question asks where a marmoset is likely to be found (its natural range), which maps precisely to organism_to_habitat (typical/natural habitat retaining scope, not asserting exclusivity). The answer 'latin america' is a verbatim substring of source_answer. One model flagged it as 'typical_action_or_location' and declined, but the catalog relation explicitly covers typical habitat/range for organisms, so extraction is justified.",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "latin america",
+        "canonical_fact": "Marmosets are likely to be found in Latin America.",
+        "subject": "marmoset",
+        "prompt_en": "What southern area outside the US are you likely to find a marmoset?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "latin america"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1acd4111bc762db1556984737d8a475c2f67cae7189d6b915802d9c8054124a6",
+      "input_sha256": "153cf164478a25a038d993bf860611d76a92a8d7223475b23fa6e7e5349aa479",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001306",
+      "decision": "ready",
+      "subject": "globe",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "ocean",
+      "canonical_fact": "The globe is mostly covered by ocean.",
+      "prompt_en": "The globe is mostly covered by what?",
+      "evidence_quotes": [
+        "ocean",
+        "the globe is mostly covered by"
+      ],
+      "reason": "The source states the globe is mostly covered by ocean, i.e., ocean is the dominant surface constituent/material of the globe. This fits entity_to_material (material composition, distinguishing constituent vs whole). The answer 'ocean' is a verbatim substring of source_answer. Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "ocean",
+        "canonical_fact": "The globe is mostly covered by ocean.",
+        "subject": "globe",
+        "prompt_en": "The globe is mostly covered by what?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "ocean"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d60d2663becf5034908526ea06c4a2025448d28045b3b9bee7eefa44910ccde8",
+      "input_sha256": "26b5e445942937508b80506bc1148d9a1e8101f796672de251989d3e32744dfc",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001248",
+      "input_sha256": "153cf164478a25a038d993bf860611d76a92a8d7223475b23fa6e7e5349aa479",
+      "english": {
+        "direction": "organism -> habitat",
+        "relation_id": "organism_to_habitat",
+        "answer": "latin america",
+        "canonical_fact": "Marmosets are likely to be found in Latin America.",
+        "subject": "marmoset",
+        "prompt_en": "What southern area outside the US are you likely to find a marmoset?",
+        "relation_definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity.",
+        "answer_aliases_en": [
+          "latin america"
+        ],
+        "relation_spec": {
+          "id": "organism_to_habitat",
+          "direction": "organism -> habitat",
+          "definition": "Typical or natural habitat, retaining scope and range rather than asserting exclusivity."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1acd4111bc762db1556984737d8a475c2f67cae7189d6b915802d9c8054124a6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001248",
+        "subject_zh": "狨猴",
+        "prompt_zh": "在美国以外的南方地区，你更有可能在哪里发现狨猴？",
+        "canonical_fact_zh": "狨猴很可能出现在拉丁美洲。",
+        "answer_zh": "拉丁美洲",
+        "answer_aliases_zh": [
+          "拉丁美洲"
+        ]
+      },
+      "translation_sha256": "10f302d75ccefb7de8bc88a59c630b564bd964e6840745be9071a1e4b23a0fd2"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001306",
+      "input_sha256": "26b5e445942937508b80506bc1148d9a1e8101f796672de251989d3e32744dfc",
+      "english": {
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "answer": "ocean",
+        "canonical_fact": "The globe is mostly covered by ocean.",
+        "subject": "globe",
+        "prompt_en": "The globe is mostly covered by what?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "ocean"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d60d2663becf5034908526ea06c4a2025448d28045b3b9bee7eefa44910ccde8",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_001306",
+        "subject_zh": "地球",
+        "prompt_zh": "地球大部分被什么覆盖？",
+        "canonical_fact_zh": "地球大部分被海洋覆盖。",
+        "answer_zh": "海洋",
+        "answer_aliases_zh": [
+          "海洋"
+        ]
+      },
+      "translation_sha256": "f3cb82f24214c66199537ed9321d13abf3c467324c1ac7ac0f0c746b31c07e0e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001248",
+        "historical:raw_commonsense_qa_001306"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7b1e3247ecfc0206845470c7a21cbc705db8dbc16f0731bdc0668a88e62d259d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2124,
+      "first_chunk_seconds": 28.74,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2326,
+        "prompt_tokens": 1654,
+        "total_tokens": 3980,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1831,
+          "text_tokens": 495
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "fc9f05bb86b920b5a7f91a50103b7cc984b88f11cd7358f91e878aaee1b82eda",
+      "status": "completed",
+      "latency_seconds": 59.344
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001248",
+        "historical:raw_commonsense_qa_001306"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9078e0a4a6e4fb1d84cbcea54caf4c913eef2a1745ee0c78dbff3602b3dbde45",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 635,
+      "first_chunk_seconds": 21.399,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 639,
+        "prompt_tokens": 816,
+        "total_tokens": 1455,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 430,
+          "text_tokens": 209
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a372664c6fd8638cff362b77aa59be5a3297b14dbf1b973a694a824f89fcf385",
+      "status": "completed",
+      "latency_seconds": 38.887
+    }
+  ],
+  "status": "completed"
+}

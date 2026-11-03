@@ -1,14 +1,52 @@
-# Task Plan: Chinese-first Factual Perturbation Before Paths Not Taken
+## 2026-11-03 当前核验状态
+
+中文生产与独立翻译审核均已结束，非“仍在运行”：7,250 来源、4,985 完成翻译/审核、
+4,807 接受候选，6 条终局未定，生成/审核待办均为 0。正式实验与 PNT 冻结仍未完成。
+主目录已收录活动 worktree 的代码、协议及原字节证据；本次不启动新推理、不删除数据。
+当前核对计划和检查结果见 `analysis_output/status_git_audit_20261103/`。
+下文为历史阶段记录，不能替代最新 `final_summary.json` 与核对报告。
+
+## 2026-10-24 当前数据建设方案
+
+以[中文候选流水线](/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/tasks/task_zh_candidate_pipeline.md)及 analysis_output/active_data_pipeline.json 为准：Qwen规范化英文并翻译中文，Luna只审核翻译，Sol只裁决翻译疑难项。旧关系逐条复审方案、专用运行器、配置、测试及派生数据已删除；仅保留删除清单和历史曝光元数据。原始抽取账本、历史译文、160实验及当前7,250条来源输入保留。中文通过不自动满足正式实验/PNT冻结。
+
+# Task Plan: Open-answer Factual Perturbation Before Paths Not Taken
+
+## 2026-10-20 Active Change: bounded open-answer discovery
+
+The active workflow for new candidates is reviewed source QA → option-free Original baseline →
+source-wrong-option-guided Targeted and matched Neutral → exact-HF open-answer measurement →
+independent review and reproducibility → mechanism attribution and repair. MCQ behavior is an
+optional comparison, never an admission gate. Existing frozen 160-fact inputs/results remain
+historical evidence; this change does not rerun experiments or retune on exposed Validation.
+
+- [x] Inspect the current task entry points and open-answer analyzer.
+- [x] Remove mandatory MCQ-label and fixed two-variant/960-input assumptions from open analysis.
+- [x] Add a bounded discovery policy and auditable independent-fact/budget reporting.
+- [x] Update active protocols and supersede the old MCQ-first instructions for new candidates.
+- [x] Verify no-MCQ, single-variant, legacy compatibility, budget limits, and documentation links.
+
+Status: workflow and offline tooling complete; 27 relevant tests passed. Replaying the existing
+960-input/96-fact bridge preserved all compared outcome metrics. No new inference was launched.
+New-cohort runtime/ledger integration is explicitly tracked in the active protocol rather than
+claimed complete. Delivery: `analysis_output/open_discovery_update_20261020.md`.
+
+Default feedback limit: one initial candidate plus at most one targeted revision per fact;
+no recursive generator optimization and no search for a required positive count. Persist every
+attempt and technical retry, preserve missing judgments, stop on verified success or budget.
+
+The sections below retain historical plans and results; the active entry is
+`tasks/task_open_factual_discovery_protocol.md`.
 
 ## Goal
-Build an auditable independent review/freeze → Development MCQ weakness mining → natural EN/ZH
-open-completion baseline and claim stratification → exact-HF attribution/intervention → independent
-confirmation loop. Use Qwen public-benchmark extractions only as provenance-preserving single-model
-provisional candidates; keep unreviewed data out of formal behavior/PATH cohorts, and stop at
-offline preparation until a GPU-accessible exact HF checkpoint and tokenizer are frozen for the
-same-model behavior, mechanism, and repair experiment.
+Build reviewed canonical facts and option-free prompts, use source wrong options as perturbation
+material, and confirm defects with the target model's open Original/Neutral/Targeted generation.
+Allow at most one bounded Development revision, report reproducible independent-fact yield per
+complete request/token budget, and retain controls and failed attempts. Bind the same exact HF
+identity for mechanism attribution and repair, then use independent data for confirmation.
+MCQ labels are optional metadata and never qualify a new candidate for this workflow.
 
-## Phases
+## Historical Phases
 - [x] Phase 1: Plan and setup
 - [x] Phase 2: Profile inventory and existing pilot artifacts
 - [x] Phase 3: Build candidate taxonomy and complete signature mapping
@@ -221,7 +259,7 @@ same-model behavior, mechanism, and repair experiment.
 - [ ] 9.21 Open Sealed 32 once only after Validation confirms the frozen protocol; report repair,
   English retention, Original/Neutral preservation, and unrelated-fact regression.
 
-## Immediate Execution Order
+## Historical Execution Order (superseded for new candidates)
 1. Use only the SHA-bound authoritative chain under `preperturbation_v1`:
    `duplicate_closure_adjudications_v1` → `duplicate_closure_resolution_v1` →
    `postclosure_preperturbation_v2`, followed by the PATH output
@@ -296,3 +334,7 @@ translation/distractor review and perturbation**
   started; Validation and Sealed have not run; all 160 rows remain `pnt_eligible=false`.
 
 **Historical local Ollama compatibility run completed on the legacy frozen v5c records** - `gemma3:12b` and `llama3.1:8b` completed 180/180 Simulation calls over the same 15 candidates. Two model-specific strict signals were observed for `llama3.1:8b`; none were observed for `gemma3:12b`. Nine Original/Neutral choice changes mean this remains a compatibility/calibration result with `pnt_eligible=false`, not the current 160-fact split or a frozen mechanism cohort.
+
+## 2026-10-24 用户授权删除旧关系复审中间数据
+
+已确认当前中文流程不依赖旧关系审核结果，随后永久删除旧relation_expansion归档的10个payload目录（13061文件，约2.00GB）。原归档不再提供旧提案、Luna/Sol关系裁决或旧接受候选集；仅保留哈希清单、删除凭据和不含语义正文的历史曝光元数据。原始账本、当前7250输入/中文流程、旧译文/160实验、.env及通用脚本保留；不得恢复旧worker。详情见analysis_output/relation_intermediate_cleanup_20261024_v1/cleanup_report.md。此前“可恢复归档”描述仅反映删除前历史。

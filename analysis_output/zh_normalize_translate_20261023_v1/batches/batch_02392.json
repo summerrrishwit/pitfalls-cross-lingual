@@ -1,0 +1,236 @@
+{
+  "input_sha256": "1bfae2abeb9988c4721442d1385e276b935220cb94297966554f5d320c8b37a4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001623",
+      "decision": "ready",
+      "subject": "water",
+      "relation_id": "property_state_to_typical_location",
+      "relation_definition": "The location where a substance or entity is most likely to exhibit a specified property or state; retains the qualifier 'most likely' and the specific property.",
+      "direction": "entity in specified property state -> typical location",
+      "answer": "estuary",
+      "canonical_fact": "Water is most likely to be brackish in an estuary.",
+      "prompt_en": "Where is water most likely to be brackish?",
+      "evidence_quotes": [
+        "Where is water most likely to be brackish?",
+        "estuary"
+      ],
+      "reason": "Source explicitly states 'estuary' as the location where water is most likely to be brackish. No existing catalog relation captures a property-to-typical-location association; nearest candidates (entity_to_containing_location, organism_to_habitat) do not fit because this is not geographic containment of an entity nor an organism habitat. Proposed new relation 'property_state_to_typical_location' with explicit qualifier preservation.",
+      "english": {
+        "prompt_en": "Where is water most likely to be brackish?",
+        "relation_definition": "The location where a substance or entity is most likely to exhibit a specified property or state; retains the qualifier 'most likely' and the specific property.",
+        "answer": "estuary",
+        "canonical_fact": "Water is most likely to be brackish in an estuary.",
+        "direction": "entity in specified property state -> typical location",
+        "relation_id": "property_state_to_typical_location",
+        "subject": "water",
+        "answer_aliases_en": [
+          "estuary"
+        ],
+        "relation_spec": {
+          "id": "property_state_to_typical_location",
+          "definition": "The location where a substance or entity is most likely to exhibit a specified property or state; retains the qualifier 'most likely' and the specific property.",
+          "direction": "entity in specified property state -> typical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a1510b26f1664c3d3bec2b197ec4cdd34b02e5af27871096c58cc82457332b1e",
+      "input_sha256": "7f53aec14095d8444147fe9fa6eddbfae4e663fc619dcc65044b04a0b16201c3",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001624",
+      "decision": "ready",
+      "subject": "atom",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "electrons, neutrons, and protons",
+      "canonical_fact": "An atom is made up of electrons, neutrons, and protons.",
+      "prompt_en": "What are the parts that make up an atom?",
+      "evidence_quotes": [
+        "What are the parts that make up an atom?",
+        "electrons, neutrons, and protons"
+      ],
+      "reason": "Source explicitly lists electrons, neutrons, and protons as the constituent parts of an atom. Fits the existing whole_to_part relation (direction: whole -> part) exactly. Both model annotations extracted the same fact with consistent wording.",
+      "english": {
+        "prompt_en": "What are the parts that make up an atom?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "electrons, neutrons, and protons",
+        "canonical_fact": "An atom is made up of electrons, neutrons, and protons.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "atom",
+        "answer_aliases_en": [
+          "electrons, neutrons, and protons"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "ceef9c502c9649823fb843aaa11098d6174d95f0bc05e8604f1bdf10b8df0179",
+      "input_sha256": "0a784604801192c37ab997c117acebf20c0d0011f33f535f15f561ad64d4643c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.452
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.443
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.128
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.804
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.792
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "29555cf1deb6b053596080a7a7c2bb60d17843a18ad2d2285038a3bb1a8a1f46",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2244,
+      "first_chunk_seconds": 1.674,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2253,
+        "prompt_tokens": 1698,
+        "total_tokens": 3951,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1732,
+          "text_tokens": 521
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "119fedfc3c5675dc3265b40c0f99b788b25906fc661035ef2087d3553ce78611",
+      "status": "completed",
+      "latency_seconds": 24.683
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "da767d8d0f8176c181e33fd5a8851b7226dc8b75dc29b074a1d3deed7bae05c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.112
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "da767d8d0f8176c181e33fd5a8851b7226dc8b75dc29b074a1d3deed7bae05c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.693
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001623",
+        "historical:raw_ai2_arc_easy_001624"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "da767d8d0f8176c181e33fd5a8851b7226dc8b75dc29b074a1d3deed7bae05c4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.093
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02392.json",
+      "sha256": "d1da4e6fb0a792ac1c1b3f4326b9d74ea899ce6a548eb08f6e56efe101ed6103",
+      "previous_status": "failed"
+    }
+  ]
+}

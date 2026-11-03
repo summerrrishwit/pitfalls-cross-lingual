@@ -1,0 +1,160 @@
+{
+  "input_sha256": "7e513b2bdd7196cd30c7d9f714f7bafeb2d1a57d69670cfdb6347f2ba9295b46",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006000",
+      "decision": "ready",
+      "subject": "landing",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "stairwell",
+      "canonical_fact": "A landing is at the top of a stairwell.",
+      "prompt_en": "What structure that you walk up has a landing at its top?",
+      "evidence_quotes": [
+        "landing at the top of",
+        "stairwell"
+      ],
+      "reason": "The source question identifies a stairwell as the walkable structure whose top features a landing. A landing is an architectural component (part) of a stairwell (whole), fitting the part_to_whole relation. The 'at the top' qualifier specifies which part. Both model annotations agree on the answer 'stairwell'; the sensenova flag of 'ambiguous_subject' is outweighed by the clear structural reading of the question.",
+      "english": {
+        "prompt_en": "What structure that you walk up has a landing at its top?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer": "stairwell",
+        "canonical_fact": "A landing is at the top of a stairwell.",
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "subject": "landing",
+        "answer_aliases_en": [
+          "stairwell"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "66b3a2804c4f9d290d151a556e27f49558023b8386b7a8b5ac8644201c3f1d45",
+      "input_sha256": "9314696c864a421049c0e5e62579f7cb3b2b81d0feec4c869eca967757f15cd5",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006001",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures a general 'activity requires practice' principle. The subject 'becoming great at fiddling' is a normative process state, not a concrete entity, and 'practice' is a broad prerequisite that applies to virtually any skill rather than a specific, disambiguated factual link. The sensenova annotation of 'subjective_or_normative' is justified; forcing a relation here would create an overly broad, non-reusable pattern. Deferred pending a more precise relation proposal.",
+      "input_sha256": "0e4ff5356dc1bbe47a5428f4637c8fac5bb8d9103cc723e5ced84dff3be16237",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000",
+        "historical:raw_commonsense_qa_006001"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6d46f037fca3d8d410153b5fe78e25899f19f1727f5414e0210628af44b8f6d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.921
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000",
+        "historical:raw_commonsense_qa_006001"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6d46f037fca3d8d410153b5fe78e25899f19f1727f5414e0210628af44b8f6d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.957
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000",
+        "historical:raw_commonsense_qa_006001"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6d46f037fca3d8d410153b5fe78e25899f19f1727f5414e0210628af44b8f6d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2308,
+      "first_chunk_seconds": 62.784,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2385,
+        "prompt_tokens": 1591,
+        "total_tokens": 3976,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1912,
+          "text_tokens": 473
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e372bb05d89d1f49dd8f6fbda6da89b7b5c5b881e6cb0df913032464a5d99803",
+      "status": "completed",
+      "latency_seconds": 102.102
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "35a5ed91f2969f1105c91447d86010f1be7b01fc16decb1ee68ce5ed135b49b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 40.861
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "35a5ed91f2969f1105c91447d86010f1be7b01fc16decb1ee68ce5ed135b49b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 58.307
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006000"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "35a5ed91f2969f1105c91447d86010f1be7b01fc16decb1ee68ce5ed135b49b0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "RemoteProtocolError",
+      "latency_seconds": 187.055
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "id": "automation",
+  "kind": "heartbeat",
+  "name": "Qwen 运行检查与故障恢复",
+  "prompt": "负责Qwen运行检查与故障恢复。工作目录：/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual；运行目录：analysis_output/zh_normalize_translate_20261023_v1。\n\n按运行目录当前有效的协议与运维配置，检查Qwen3.8-max后台规范化、中文翻译及补试进度，优先诊断接口故障，执行允许的修复和续跑，保留真实失败记录。后台正常时继续运行，避免重复启动；审核是否积压不影响生产。本任务不分派Luna或Sol，也不导出审核接受集。\n\n全量生成及规定补试结束并保存生产汇总后，删除本定时任务，审核任务继续完成收尾。常规状态静默，仅实质故障、恢复、完成或需用户操作时通知。",
+  "status": "ACTIVE",
+  "rrule": "RRULE:FREQ=MINUTELY;INTERVAL=10",
+  "target_thread_id": "01a16774-5d9f-70a2-bbf1-112336d4fc72",
+  "created_at": 1792672867158,
+  "updated_at": 1792855026169
+}

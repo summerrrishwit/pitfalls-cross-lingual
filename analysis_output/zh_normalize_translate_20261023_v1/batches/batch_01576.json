@@ -1,0 +1,255 @@
+{
+  "input_sha256": "cfb29072ed3e549b846ccb9617cbd133416d303091b04d46c9835a83a27c0893",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ad7f7733005e50719f3d",
+      "decision": "ready",
+      "subject": "Olympic athlete who has won the most gold medals at one Olympics",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Michael Phelps",
+      "canonical_fact": "Michael Phelps is the Olympic athlete who has won the most gold medals at one Olympics.",
+      "prompt_en": "Factual question: Who has won the most gold medals at one Olympics?\nAnswer:",
+      "evidence_quotes": [
+        "who has won the most gold medals at one olympics",
+        "Michael Phelps"
+      ],
+      "reason": "Source question and answer directly support the mapping. The identifying description 'Olympic athlete who has won the most gold medals at one Olympics' uniquely resolves to Michael Phelps per the source. The existing catalog relation description_to_entity fits exactly: a qualified description pointing to the unique entity that satisfies it. No invention of dates or markets; qualifier 'at one Olympics' is preserved.",
+      "english": {
+        "answer": "Michael Phelps",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Factual question: Who has won the most gold medals at one Olympics?\nAnswer:",
+        "direction": "identifying description -> entity",
+        "subject": "Olympic athlete who has won the most gold medals at one Olympics",
+        "canonical_fact": "Michael Phelps is the Olympic athlete who has won the most gold medals at one Olympics.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Michael Phelps",
+          "The Baltimore Bullet",
+          "Flying Fish",
+          "Michael Fred Phelps II"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c55d57efde56ef4d28e8de91c203072da20be40a7c03e69b949148b01674123b",
+      "input_sha256": "39d93dd2934e30d9e072a8a5e2e19d903e7ecc1d46115f3560199dec1ce12bf9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ade62f69aaff17f3bbd1",
+      "decision": "ready",
+      "subject": "Worst Cooks in America season 12",
+      "relation_id": "competition_to_winner",
+      "relation_definition": "Declared winner of a specified competition, show season, or tournament edition; retain exact show title and season number.",
+      "direction": "specified competition/season -> winner",
+      "answer": "hazell mckenzie",
+      "canonical_fact": "hazell mckenzie won Worst Cooks in America season 12.",
+      "prompt_en": "Factual question: Who won Worst Cooks in America season 12?\nAnswer:",
+      "evidence_quotes": [
+        "who won worst cooks in america season 12",
+        "hazell mckenzie"
+      ],
+      "reason": "Source question and answer directly state that hazell mckenzie is the winner of Worst Cooks in America season 12. No existing catalog relation precisely covers a show-season-to-winner mapping (closest would be description_to_entity, but that is broader and less precise for a competition-winner fact). A new precise relation competition_to_winner is proposed with explicit direction and scope. Answer kept lowercase to match source_answer literally.",
+      "english": {
+        "answer": "hazell mckenzie",
+        "relation_id": "competition_to_winner",
+        "prompt_en": "Factual question: Who won Worst Cooks in America season 12?\nAnswer:",
+        "direction": "specified competition/season -> winner",
+        "subject": "Worst Cooks in America season 12",
+        "canonical_fact": "hazell mckenzie won Worst Cooks in America season 12.",
+        "relation_definition": "Declared winner of a specified competition, show season, or tournament edition; retain exact show title and season number.",
+        "answer_aliases_en": [
+          "hazell mckenzie"
+        ],
+        "relation_spec": {
+          "id": "competition_to_winner",
+          "definition": "Declared winner of a specified competition, show season, or tournament edition; retain exact show title and season number.",
+          "direction": "specified competition/season -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "43a0a92b81b0f67000cf0540318bb33eb8f0cc3f30ea06cfceb466c4e95c2965",
+      "input_sha256": "0bee115f77c7bc4add6e55077b52ee9de17ef7bc7413b905bc9678d0b773db15",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_ad7f7733005e50719f3d",
+      "input_sha256": "39d93dd2934e30d9e072a8a5e2e19d903e7ecc1d46115f3560199dec1ce12bf9",
+      "english": {
+        "answer": "Michael Phelps",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Factual question: Who has won the most gold medals at one Olympics?\nAnswer:",
+        "direction": "identifying description -> entity",
+        "subject": "Olympic athlete who has won the most gold medals at one Olympics",
+        "canonical_fact": "Michael Phelps is the Olympic athlete who has won the most gold medals at one Olympics.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Michael Phelps",
+          "The Baltimore Bullet",
+          "Flying Fish",
+          "Michael Fred Phelps II"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "c55d57efde56ef4d28e8de91c203072da20be40a7c03e69b949148b01674123b",
+      "translation": {
+        "record_id": "public:pbf_ad7f7733005e50719f3d",
+        "subject_zh": "在一届奥运会上获得最多金牌的奥运运动员",
+        "prompt_zh": "事实性问题：谁在一届奥运会上获得过最多金牌？\n答案：",
+        "canonical_fact_zh": "迈克尔·菲尔普斯是在一届奥运会上获得最多金牌的奥运运动员。",
+        "answer_zh": "迈克尔·菲尔普斯",
+        "answer_aliases_zh": [
+          "迈克尔·菲尔普斯",
+          "巴尔的摩子弹",
+          "飞鱼",
+          "迈克尔·弗雷德·菲尔普斯二世"
+        ]
+      },
+      "translation_sha256": "502709a4e249c2f9a8a31b11a2059b0c5aeda591b93265aebe35a5cc19a18e72"
+    },
+    {
+      "record_id": "public:pbf_ade62f69aaff17f3bbd1",
+      "input_sha256": "0bee115f77c7bc4add6e55077b52ee9de17ef7bc7413b905bc9678d0b773db15",
+      "english": {
+        "answer": "hazell mckenzie",
+        "relation_id": "competition_to_winner",
+        "prompt_en": "Factual question: Who won Worst Cooks in America season 12?\nAnswer:",
+        "direction": "specified competition/season -> winner",
+        "subject": "Worst Cooks in America season 12",
+        "canonical_fact": "hazell mckenzie won Worst Cooks in America season 12.",
+        "relation_definition": "Declared winner of a specified competition, show season, or tournament edition; retain exact show title and season number.",
+        "answer_aliases_en": [
+          "hazell mckenzie"
+        ],
+        "relation_spec": {
+          "id": "competition_to_winner",
+          "definition": "Declared winner of a specified competition, show season, or tournament edition; retain exact show title and season number.",
+          "direction": "specified competition/season -> winner"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "43a0a92b81b0f67000cf0540318bb33eb8f0cc3f30ea06cfceb466c4e95c2965",
+      "translation": {
+        "record_id": "public:pbf_ade62f69aaff17f3bbd1",
+        "subject_zh": "《美国最差厨师》第12季",
+        "prompt_zh": "事实性问题：谁赢得了《美国最差厨师》第12季？\n答案：",
+        "canonical_fact_zh": "哈泽尔·麦肯齐赢得了《美国最差厨师》第12季。",
+        "answer_zh": "哈泽尔·麦肯齐",
+        "answer_aliases_zh": [
+          "哈泽尔·麦肯齐"
+        ]
+      },
+      "translation_sha256": "3f0d392ddee88f19c01df49de00e1350e51500d5f608b335290d0d690ee08457"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ad7f7733005e50719f3d",
+        "public:pbf_ade62f69aaff17f3bbd1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f5a7cf6f3f9405384736f0d4b46d82982b4b1ef914a12281622005fb6f17b99a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3546,
+      "first_chunk_seconds": 33.901,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3545,
+        "prompt_tokens": 1648,
+        "total_tokens": 5193,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2957,
+          "text_tokens": 588
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "db3f64cf2149923599fcca6e5acfb6bda98fb1b502d3ed07a2050f1e0f6c254e",
+      "status": "completed",
+      "latency_seconds": 63.172
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ad7f7733005e50719f3d",
+        "public:pbf_ade62f69aaff17f3bbd1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7c5b0358fe52d0b64b35b93438caa5344390f021eaadf4af85cfedeb88ef047e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 958,
+      "first_chunk_seconds": 1.664,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 955,
+        "prompt_tokens": 884,
+        "total_tokens": 1839,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 655,
+          "text_tokens": 300
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "94abd8553d80e1789be2b1bc5d25aa4dadb44eb18bcfed02dae84bba05b53613",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 9.091,
+      "validation_code": "record_id_coverage_mismatch"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ad7f7733005e50719f3d",
+        "public:pbf_ade62f69aaff17f3bbd1"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "088e2573103d953ab4fb540d456d99a96b946bc7eefa608be30bf72a6972fb4e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1456,
+      "first_chunk_seconds": 3.975,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1454,
+        "prompt_tokens": 903,
+        "total_tokens": 2357,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1144,
+          "text_tokens": 310
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c5847cc431d072187e449bc2c7d19ad8557d333da9fd0e67be9986118c338bee",
+      "status": "completed",
+      "latency_seconds": 15.618
+    }
+  ],
+  "status": "completed"
+}

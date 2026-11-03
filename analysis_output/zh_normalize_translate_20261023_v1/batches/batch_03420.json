@@ -1,0 +1,132 @@
+{
+  "input_sha256": "fe69fee9d26497388e7588317d1251e4d9b35ce9e9ebf957d8cedd236b4a9ee3",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003106",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The relation 'hope' between an activity (going fishing) and its outcome (catching fish) is subjective and normative rather than a stable factual relationship. No catalog relation fits, and a new 'activity_to_hope' would be an unstable, non-factual association. The source answer reflects a commonsense psychological expectation, not a verifiable fact.",
+      "input_sha256": "4af104835425200144d6cea9eef9a9ca945f911a843f513b6cfcaa862f3b0a0d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003149",
+      "decision": "ready",
+      "subject": "ice",
+      "relation_id": "entity_to_function",
+      "relation_definition": "A common or typical function/use of a specified entity; retain hedging qualifiers such as 'often' or 'typically'. Direction: entity -> function.",
+      "direction": "entity -> function",
+      "answer": "cool drink",
+      "canonical_fact": "Ice often functions to cool a drink.",
+      "prompt_en": "What is a common function of ice?",
+      "evidence_quotes": [
+        "What is often the function of ice?",
+        "cool drink"
+      ],
+      "reason": "The source question and answer establish that a common function of ice is to cool a drink, with the hedge 'often' preserved. No existing catalog relation captures 'function/use of an entity,' so a precise new relation 'entity_to_function' is proposed. The answer 'cool drink' is copied verbatim from source_answer.",
+      "english": {
+        "prompt_en": "What is a common function of ice?",
+        "relation_definition": "A common or typical function/use of a specified entity; retain hedging qualifiers such as 'often' or 'typically'. Direction: entity -> function.",
+        "answer": "cool drink",
+        "canonical_fact": "Ice often functions to cool a drink.",
+        "direction": "entity -> function",
+        "relation_id": "entity_to_function",
+        "subject": "ice",
+        "answer_aliases_en": [
+          "cool drink"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function",
+          "definition": "A common or typical function/use of a specified entity; retain hedging qualifiers such as 'often' or 'typically'. Direction: entity -> function.",
+          "direction": "entity -> function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e4c71a7628d5049bc525d4999fda22263d0a2d119a7941d7d90281a7beea2744",
+      "input_sha256": "1261d950ce8a6540ceee8a93d33d1270be9c3d46c2ceea81926c786e413ba578",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003106",
+        "historical:raw_commonsense_qa_003149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3cb08e24340bed32631fdfff939a2977c36c679620ac5f29e248708851beae60",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2466,
+      "first_chunk_seconds": 45.584,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2639,
+        "prompt_tokens": 1572,
+        "total_tokens": 4211,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2315,
+          "text_tokens": 324
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6966ea379a27c8d88cb3e7cc77d61f384807fbe68ce200a6fe2cf148f0a68b31",
+      "status": "completed",
+      "latency_seconds": 155.568
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "12ae570138f949062b4c255a1b561fb65b3279327a54fbbc2e108fdc2e2414ea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 93.088
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003149"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "12ae570138f949062b4c255a1b561fb65b3279327a54fbbc2e108fdc2e2414ea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 97.49
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003149"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "12ae570138f949062b4c255a1b561fb65b3279327a54fbbc2e108fdc2e2414ea",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 105.531
+    }
+  ],
+  "status": "failed"
+}

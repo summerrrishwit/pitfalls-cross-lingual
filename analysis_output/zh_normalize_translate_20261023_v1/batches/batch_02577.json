@@ -1,0 +1,157 @@
+{
+  "input_sha256": "d377baebd954420777b289f3455392ab4241f05e1b5674f1dda0aa36b7a9646f",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004292",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The statement 'When someone doesn't have beauty they have ugliness' is tautological (the antonym of beauty is ugliness). No catalog relation captures this 'absence-of-X implies Y' antonymic/counterpart relation. The subject 'someone who doesn't have beauty' is a vague description rather than a clean entity, and no listed relation (entity_to_alias, term_to_definition, symbol_to_meaning, etc.) fits the direction and semantics. Deferring to avoid forcing a broad or inaccurate category.",
+      "input_sha256": "565d79e7486f66c5d580fc3a2162d20cbad86b131a794ca80a1e4c9b4bc6a534",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004330",
+      "decision": "ready",
+      "subject": "Silk",
+      "relation_id": "material_to_product",
+      "relation_definition": "Product category typically made from a specified material; retain stated quality or grade qualifiers as given in source.",
+      "direction": "material -> product category",
+      "answer": "garments",
+      "canonical_fact": "Silk is used to make high quality garments.",
+      "prompt_en": "What category of product is silk used to make at high quality?",
+      "evidence_quotes": [
+        "Silk is used to make high quality",
+        "garments"
+      ],
+      "reason": "Source question and answer clearly establish that silk (a material) is used to make garments (a product category), with the qualifier 'high quality' preserved. No existing catalog relation captures the 'material -> product made from it' direction (entity_to_material is the inverse: product -> material). A precise new relation 'material_to_product' is proposed. The prompt is option-free and does not contain the answer 'garments'.",
+      "english": {
+        "direction": "material -> product category",
+        "relation_id": "material_to_product",
+        "answer": "garments",
+        "canonical_fact": "Silk is used to make high quality garments.",
+        "subject": "Silk",
+        "prompt_en": "What category of product is silk used to make at high quality?",
+        "relation_definition": "Product category typically made from a specified material; retain stated quality or grade qualifiers as given in source.",
+        "answer_aliases_en": [
+          "garments"
+        ],
+        "relation_spec": {
+          "id": "material_to_product",
+          "definition": "Product category typically made from a specified material; retain stated quality or grade qualifiers as given in source.",
+          "direction": "material -> product category"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d65f99b817257a6cbad0568e922257f0587eae0d9429ac0ba36e6d276c1b0f05",
+      "input_sha256": "f5ae0e597edf2a48031fa40d00fd7bcb7c20a8b870f1a8d4e89e1ebeecab0243",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004330",
+      "input_sha256": "f5ae0e597edf2a48031fa40d00fd7bcb7c20a8b870f1a8d4e89e1ebeecab0243",
+      "english": {
+        "direction": "material -> product category",
+        "relation_id": "material_to_product",
+        "answer": "garments",
+        "canonical_fact": "Silk is used to make high quality garments.",
+        "subject": "Silk",
+        "prompt_en": "What category of product is silk used to make at high quality?",
+        "relation_definition": "Product category typically made from a specified material; retain stated quality or grade qualifiers as given in source.",
+        "answer_aliases_en": [
+          "garments"
+        ],
+        "relation_spec": {
+          "id": "material_to_product",
+          "definition": "Product category typically made from a specified material; retain stated quality or grade qualifiers as given in source.",
+          "direction": "material -> product category"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "d65f99b817257a6cbad0568e922257f0587eae0d9429ac0ba36e6d276c1b0f05",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004330",
+        "subject_zh": "丝绸",
+        "prompt_zh": "丝绸用于制作什么类别的高品质产品？",
+        "canonical_fact_zh": "丝绸用于制作高品质服装。",
+        "answer_zh": "服装",
+        "answer_aliases_zh": [
+          "服装"
+        ]
+      },
+      "translation_sha256": "31688012b3f73fb717b6b5c6033b9af601e90a3f7d8556c65a675622ad39ece1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004292",
+        "historical:raw_commonsense_qa_004330"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7842dc9aa363536d5ee12ee2fc4ca6cd44aafc776a4b3d5bad0892baef9b4314",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2051,
+      "first_chunk_seconds": 22.143,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2288,
+        "prompt_tokens": 1621,
+        "total_tokens": 3909,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1804,
+          "text_tokens": 484
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "af7713a984b6159efb2fb67fa9dc750bfd13e01543e08404ec8b359a26f21f2e",
+      "status": "completed",
+      "latency_seconds": 52.885
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004330"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ae2d1123246db09b057afd780a931152b6de02e04035e7c77b778fa5bb54ec82",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 570,
+      "first_chunk_seconds": 22.46,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 612,
+        "prompt_tokens": 513,
+        "total_tokens": 1125,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 543,
+          "text_tokens": 69
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b9c9f4e5852b729b8350c4be3be3f3c064254cc4ad918ffc8d7c901e7e82f64a",
+      "status": "completed",
+      "latency_seconds": 50.188
+    }
+  ],
+  "status": "completed"
+}

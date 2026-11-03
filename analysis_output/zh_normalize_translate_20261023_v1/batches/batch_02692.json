@@ -1,0 +1,211 @@
+{
+  "input_sha256": "d34ce2bf05df04cde314eb3178fb6b2f9835031581307e1ba0316826e85ff33c",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007998",
+      "decision": "ready",
+      "subject": "flask",
+      "relation_id": "container_to_intended_content",
+      "relation_definition": "The substance or material a specified container is specifically designed or made to hold.",
+      "direction": "container -> intended content",
+      "answer": "liquid",
+      "canonical_fact": "A flask is made to hold liquid.",
+      "prompt_en": "What is a flask made to hold?",
+      "evidence_quotes": [
+        "A flask is a container can, it is made to hold what?",
+        "liquid"
+      ],
+      "reason": "Source explicitly states a flask is made to hold liquid. No catalog relation covers the functional containment purpose of a container; proposed precise new relation container_to_intended_content to capture the 'made to hold' design-purpose link without forcing it into entity_to_material or part_to_whole.",
+      "english": {
+        "direction": "container -> intended content",
+        "relation_id": "container_to_intended_content",
+        "answer": "liquid",
+        "canonical_fact": "A flask is made to hold liquid.",
+        "subject": "flask",
+        "prompt_en": "What is a flask made to hold?",
+        "relation_definition": "The substance or material a specified container is specifically designed or made to hold.",
+        "answer_aliases_en": [
+          "liquid"
+        ],
+        "relation_spec": {
+          "id": "container_to_intended_content",
+          "definition": "The substance or material a specified container is specifically designed or made to hold.",
+          "direction": "container -> intended content"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "79817853a7f070d405e01b29e554777a104101e29e9c4ed207bd58c5d8be925c",
+      "input_sha256": "16d6ab33f87dedf2fd5d62686084a3512727275aae8a7d427029ddaaef334f04",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008012",
+      "decision": "ready",
+      "subject": "dry and cracked heels",
+      "relation_id": "condition_to_anatomical_location",
+      "relation_definition": "The anatomical region or body part on which a specified condition, symptom, or feature is located.",
+      "direction": "condition/feature -> anatomical location",
+      "answer": "foot",
+      "canonical_fact": "Dry and cracked heels are found on the foot.",
+      "prompt_en": "Where are dry and cracked heels found?",
+      "evidence_quotes": [
+        "Dry and cracked heels are found on?",
+        "foot"
+      ],
+      "reason": "Source explicitly states dry and cracked heels are found on the foot. entity_to_containing_location is scoped to geographic containment and excludes non-geographic locations; proposed precise new relation condition_to_anatomical_location to capture the anatomical-site link without forcing a broad category.",
+      "english": {
+        "direction": "condition/feature -> anatomical location",
+        "relation_id": "condition_to_anatomical_location",
+        "answer": "foot",
+        "canonical_fact": "Dry and cracked heels are found on the foot.",
+        "subject": "dry and cracked heels",
+        "prompt_en": "Where are dry and cracked heels found?",
+        "relation_definition": "The anatomical region or body part on which a specified condition, symptom, or feature is located.",
+        "answer_aliases_en": [
+          "foot"
+        ],
+        "relation_spec": {
+          "id": "condition_to_anatomical_location",
+          "definition": "The anatomical region or body part on which a specified condition, symptom, or feature is located.",
+          "direction": "condition/feature -> anatomical location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e64e09c3b6c4176fcf2942306d02006d4b5dd611873ea921993c27ca9e0ebbfb",
+      "input_sha256": "bef2946ae0cad2fdc7549371d2c32d70bbd952fa61ace82d5f454fd1093866e0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007998",
+        "historical:raw_commonsense_qa_008012"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4b6c41b66317423a135d9c523753a03e75ec7f52d558fa08281d81c1a1836207",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2205,
+      "first_chunk_seconds": 13.373,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2233,
+        "prompt_tokens": 1635,
+        "total_tokens": 3868,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1765,
+          "text_tokens": 468
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "01c44613fc3c3527bde8640a00c0026ffd24791fb529b0077b83c89ef0e273b6",
+      "status": "completed",
+      "latency_seconds": 48.493
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007998",
+        "historical:raw_commonsense_qa_008012"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ce029053eafd37d6a2c1b302992a9048525f459e297c95f8dda47f7fc675d650",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 779,
+      "first_chunk_seconds": 37.26,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 777,
+        "prompt_tokens": 810,
+        "total_tokens": 1587,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 568,
+          "text_tokens": 209
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fd0d6cd3ebe961b3c658294f5082abe197f1f14eb94251371c05ce734c628b49",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 46.746,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007998",
+        "historical:raw_commonsense_qa_008012"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "373cf1dcf72dce1d9f8b410c7f337518f33c8dffd37b4795606ae2b759b1adb8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 970,
+      "first_chunk_seconds": 9.274,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1081,
+        "prompt_tokens": 828,
+        "total_tokens": 1909,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 873,
+          "text_tokens": 208
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1b8357601e9a44bc7102a727478ad5710748bd3162b53bf0152271d56b9e3360",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 29.429,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007998",
+        "historical:raw_commonsense_qa_008012"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "373cf1dcf72dce1d9f8b410c7f337518f33c8dffd37b4795606ae2b759b1adb8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 578,
+      "first_chunk_seconds": 8.455,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 647,
+        "prompt_tokens": 828,
+        "total_tokens": 1475,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 437,
+          "text_tokens": 210
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "91f0eebec192ed84d1121c2e04518a816f52d3d84243f3c9788734a88b9508af",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 17.768,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

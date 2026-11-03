@@ -1,0 +1,171 @@
+{
+  "input_sha256": "b99c12d76b68bf5de7223d57e2738456fdc0fd266bc605b8c27f1ad165c9b32d",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f796d6e69574dfcf2981",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The prompt_en ('Atoms of four elements are examined: carbon, nitrogen, neon, and sulfur. Atoms of which element would have the strongest mQwen-3.8-Maxtic moment?') contains the answer word 'nitrogen' as part of the listed element set, violating the requirement that prompt_en must not contain its answer. Additionally, no catalog relation captures the 'superlative property within a bounded set' pattern; forcing a broad category is disallowed. Defer.",
+      "input_sha256": "3752c1fbef2d2586378f7b208fe49bfea9f24ece2769b2447e63e114db3a0aba",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f7acb7c9a0f4dd638d48",
+      "decision": "ready",
+      "subject": "breakfast meal consisting of sausages wrapped in pancakes",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "pigs in a blanket",
+      "canonical_fact": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is pigs in a blanket.",
+      "prompt_en": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is",
+      "evidence_quotes": [
+        "popular name of the breakfast meal consisting of sausages wrapped in pancakes",
+        "pigs in a blanket"
+      ],
+      "reason": "The source question asks for the popular name (alias) of a specifically described dish. 'pigs in a blanket' is the established equivalent name for sausages wrapped in pancakes. The relation entity_to_alias fits exactly: the described entity (by composition) maps to its popular name. The prompt is option-free and does not contain the answer string.",
+      "english": {
+        "answer": "pigs in a blanket",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is",
+        "direction": "entity -> alias",
+        "subject": "breakfast meal consisting of sausages wrapped in pancakes",
+        "canonical_fact": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is pigs in a blanket.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "pigs in a blanket"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4686ce1aec27298a52681a6818298d8c3fe626ff1413b3b8a805b7fadefad97a",
+      "input_sha256": "079aeee66b9eada8e0c8907b7ab5d6d96a38a24db615b132fe9145d67719dea5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_f7acb7c9a0f4dd638d48",
+      "input_sha256": "079aeee66b9eada8e0c8907b7ab5d6d96a38a24db615b132fe9145d67719dea5",
+      "english": {
+        "answer": "pigs in a blanket",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is",
+        "direction": "entity -> alias",
+        "subject": "breakfast meal consisting of sausages wrapped in pancakes",
+        "canonical_fact": "The popular name of the breakfast meal consisting of sausages wrapped in pancakes is pigs in a blanket.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "pigs in a blanket"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "4686ce1aec27298a52681a6818298d8c3fe626ff1413b3b8a805b7fadefad97a",
+      "translation": {
+        "record_id": "public:pbf_f7acb7c9a0f4dd638d48",
+        "subject_zh": "由薄饼包裹香肠组成的早餐",
+        "prompt_zh": "由薄饼包裹香肠组成的早餐的通俗名称是",
+        "canonical_fact_zh": "由薄饼包裹香肠组成的早餐的通俗名称是pigs in a blanket。",
+        "answer_zh": "pigs in a blanket",
+        "answer_aliases_zh": [
+          "pigs in a blanket"
+        ]
+      },
+      "translation_sha256": "7684639943403b51a32bdc3616bccb61458a6db32fce0f1123097b3450c3c8bb"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f796d6e69574dfcf2981",
+        "public:pbf_f7acb7c9a0f4dd638d48"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "db36aa81835cf9da9c093a267d4305ae5dce915ed93b4d7b51fc36cf3f65bf38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.12
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f796d6e69574dfcf2981",
+        "public:pbf_f7acb7c9a0f4dd638d48"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "db36aa81835cf9da9c093a267d4305ae5dce915ed93b4d7b51fc36cf3f65bf38",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2461,
+      "first_chunk_seconds": 23.583,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2655,
+        "prompt_tokens": 1679,
+        "total_tokens": 4334,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2167,
+          "text_tokens": 488
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "af21f197a83c3bd25c4662a78461d3664a25b6ead720ef6da2415183b087a0bf",
+      "status": "completed",
+      "latency_seconds": 58.634
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f7acb7c9a0f4dd638d48"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "042246f1267ebcc13e3bfec0cc271b5eebba5d4e25c12165036ebcb9057a0882",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1106,
+      "first_chunk_seconds": 16.599,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1146,
+        "prompt_tokens": 524,
+        "total_tokens": 1670,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1007,
+          "text_tokens": 139
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f5d4982183723c43ad028d32209ba725752205148ef46825c27b94c1e1fe92a4",
+      "status": "completed",
+      "latency_seconds": 31.633
+    }
+  ],
+  "status": "completed"
+}

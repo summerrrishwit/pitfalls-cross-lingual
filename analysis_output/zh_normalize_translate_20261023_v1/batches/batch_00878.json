@@ -1,0 +1,192 @@
+{
+  "input_sha256": "b2f33b56b34e91c2c326916846131d7207d86600c0bddfd14f3fe5f011d3b06c",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3915009446fe3b5132b1",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Source question asks 'who sings once upon a time in the west' but source_answer is 'Ennio Morricone,' a composer. No source text supports the word 'composer' or any bridge between 'sings' and composition. The question-answer pair has an internal mismatch; insufficient source support to normalize a specific relation without external knowledge.",
+      "input_sha256": "a55f80f8c00a98fd060ffa298e4cd04d42d8415fbe339b7b1edbe8bf3c4f5d6a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_3916c7ac4ead5ded965c",
+      "decision": "ready",
+      "subject": "The Bracks government",
+      "relation_id": "veto_power_abolition_to_target_entity",
+      "relation_definition": "The specific legislative entity whose long-standing veto power was ended by a described governmental reform action.",
+      "direction": "description of governmental veto-ending action -> target legislative entity",
+      "answer": "The Upper House",
+      "canonical_fact": "The Bracks government ended the long-standing veto power of the Upper House by introducing proportional representation for the Legislative Council.",
+      "prompt_en": "Which entity's long-standing veto power did the Bracks government end by introducing proportional representation for the Legislative Council?",
+      "evidence_quotes": [
+        "The Upper House.",
+        "long-standing veto power did the Bracks government end"
+      ],
+      "reason": "Source question and answer clearly establish that the Bracks government ended the Upper House's long-standing veto power via proportional-representation reform. No catalog relation captures this specific institutional/political fact, so a precise new snake_case relation is proposed. Both evidence quotes are literal substrings of source_answer and source_question respectively.",
+      "english": {
+        "relation_id": "veto_power_abolition_to_target_entity",
+        "canonical_fact": "The Bracks government ended the long-standing veto power of the Upper House by introducing proportional representation for the Legislative Council.",
+        "prompt_en": "Which entity's long-standing veto power did the Bracks government end by introducing proportional representation for the Legislative Council?",
+        "answer": "The Upper House",
+        "direction": "description of governmental veto-ending action -> target legislative entity",
+        "relation_definition": "The specific legislative entity whose long-standing veto power was ended by a described governmental reform action.",
+        "subject": "The Bracks government",
+        "answer_aliases_en": [
+          "The Upper House",
+          "The Upper House."
+        ],
+        "relation_spec": {
+          "id": "veto_power_abolition_to_target_entity",
+          "definition": "The specific legislative entity whose long-standing veto power was ended by a described governmental reform action.",
+          "direction": "description of governmental veto-ending action -> target legislative entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ce1736b0d905dbb9ed4e43ac1e80ce3a36d51a632745df717df9b8e5f232bb86",
+      "input_sha256": "cc3c3e9565b51add1fc3bb116d9424d2da7e4669575536ae485218701a710632",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_3916c7ac4ead5ded965c",
+      "input_sha256": "cc3c3e9565b51add1fc3bb116d9424d2da7e4669575536ae485218701a710632",
+      "english": {
+        "relation_id": "veto_power_abolition_to_target_entity",
+        "canonical_fact": "The Bracks government ended the long-standing veto power of the Upper House by introducing proportional representation for the Legislative Council.",
+        "prompt_en": "Which entity's long-standing veto power did the Bracks government end by introducing proportional representation for the Legislative Council?",
+        "answer": "The Upper House",
+        "direction": "description of governmental veto-ending action -> target legislative entity",
+        "relation_definition": "The specific legislative entity whose long-standing veto power was ended by a described governmental reform action.",
+        "subject": "The Bracks government",
+        "answer_aliases_en": [
+          "The Upper House",
+          "The Upper House."
+        ],
+        "relation_spec": {
+          "id": "veto_power_abolition_to_target_entity",
+          "definition": "The specific legislative entity whose long-standing veto power was ended by a described governmental reform action.",
+          "direction": "description of governmental veto-ending action -> target legislative entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ce1736b0d905dbb9ed4e43ac1e80ce3a36d51a632745df717df9b8e5f232bb86",
+      "translation": {
+        "record_id": "public:pbf_3916c7ac4ead5ded965c",
+        "subject_zh": "布拉克斯政府",
+        "prompt_zh": "布拉克斯政府通过为立法理事会引入比例代表制，终结了哪个机构的长期否决权？",
+        "canonical_fact_zh": "布拉克斯政府通过为立法理事会引入比例代表制，终结了上院的长期否决权。",
+        "answer_zh": "上院",
+        "answer_aliases_zh": [
+          "上院",
+          "上院。"
+        ]
+      },
+      "translation_sha256": "545ce9af712be2ec1730022d6e432c14c290f5aba4013c045f7049a6258bdd3c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3915009446fe3b5132b1",
+        "public:pbf_3916c7ac4ead5ded965c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "674793ebddb497de773bf5717e2d07aa6a5a40a864162cbff35c85b178f03394",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3281,
+      "first_chunk_seconds": 4.278,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3491,
+        "prompt_tokens": 1669,
+        "total_tokens": 5160,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2916,
+          "text_tokens": 575
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "446bb7182107a113ad505a53dff340dd5bf0754013def6bf283d096c00d05e88",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 72.05,
+      "validation_code": "unsupported_evidence_quote"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3915009446fe3b5132b1",
+        "public:pbf_3916c7ac4ead5ded965c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6c0b6868be05991c033d3f94ec7cc75d9b1cfc55039009e7df2fd0b70714f53a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 4126,
+      "first_chunk_seconds": 6.14,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4499,
+        "prompt_tokens": 1687,
+        "total_tokens": 6186,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 4025,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0e569d7e052877e4ab570f0ae866533df4d7de10b8e0f55b9bfeadc59882b45a",
+      "status": "completed",
+      "latency_seconds": 77.807
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_3916c7ac4ead5ded965c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7e630e7ce5076f9f5f8d01d697e60bc7ec73e0193f56b8519ddde3112f784d7d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1055,
+      "first_chunk_seconds": 18.604,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1113,
+        "prompt_tokens": 568,
+        "total_tokens": 1681,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 968,
+          "text_tokens": 145
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2a0aaf4adafa0deb73ec2a31ed107cff40c6155871cb6d5a32457f5356fe6c39",
+      "status": "completed",
+      "latency_seconds": 42.364
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,217 @@
+{
+  "input_sha256": "6717720ff8c9e730364fabfd1a13f395a8d3644572ebc8a2e54c1972fe2079b7",
+  "normalized": [
+    {
+      "record_id": "public:pbf_2ea6d16ba9359a1db957",
+      "decision": "ready",
+      "subject": "Battle of New Orleans",
+      "relation_id": "event_to_containing_event",
+      "relation_definition": "A named military event (battle, campaign, siege) that was fought within a larger named conflict (war); the containing event defines the temporal and strategic context.",
+      "direction": "specific event -> containing event",
+      "answer": "War of 1812",
+      "canonical_fact": "The Battle of New Orleans was fought during the War of 1812.",
+      "prompt_en": "The Battle of New Orleans was fought during the",
+      "evidence_quotes": [
+        "During which war did US troops fight the Battle of New Orleans?",
+        "War of 1812"
+      ],
+      "reason": "Source explicitly links the Battle of New Orleans to the War of 1812. No catalog relation captures event-in-event containment precisely; part_to_whole is too broad and structural. Proposed new relation event_to_containing_event with clear definition for military event / parent conflict.",
+      "english": {
+        "direction": "specific event -> containing event",
+        "prompt_en": "The Battle of New Orleans was fought during the",
+        "relation_id": "event_to_containing_event",
+        "answer": "War of 1812",
+        "relation_definition": "A named military event (battle, campaign, siege) that was fought within a larger named conflict (war); the containing event defines the temporal and strategic context.",
+        "subject": "Battle of New Orleans",
+        "canonical_fact": "The Battle of New Orleans was fought during the War of 1812.",
+        "answer_aliases_en": [
+          "War of 1812"
+        ],
+        "relation_spec": {
+          "id": "event_to_containing_event",
+          "definition": "A named military event (battle, campaign, siege) that was fought within a larger named conflict (war); the containing event defines the temporal and strategic context.",
+          "direction": "specific event -> containing event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ead2057e67a1028ea78c89a264605a639d464f77f3933ab2cd8d5c05ed477fe5",
+      "input_sha256": "26420dfb56ee6193a7de369e2c0aceef079d2ff660fef68dfa95b1ff0310e0a0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_2ed7052f4ce788ee6c12",
+      "decision": "ready",
+      "subject": "Peter Singer",
+      "relation_id": "person_to_claimed_similar_conclusions",
+      "relation_definition": "A person (X) explicitly asserts that their own conclusions are similar to those of another specific person (Y); a directional intellectual-alignment claim made by X about Y.",
+      "direction": "person making claim -> person whose conclusions are claimed similar",
+      "answer": "Thomas Aquinas",
+      "canonical_fact": "Peter Singer claims that his conclusions are similar to those of Thomas Aquinas.",
+      "prompt_en": "Peter Singer claims that his conclusions are similar to those of",
+      "evidence_quotes": [
+        "Singer claims that his conclusions are similar to those of",
+        "Thomas Aquinas."
+      ],
+      "reason": "Source states the claim directly. Subject 'Singer' in source is disambiguated to 'Peter Singer' per the existing extraction; answer 'Thomas Aquinas' matches source literally. No catalog relation captures a directional 'claims conclusions similar to' link; proposed precise new relation person_to_claimed_similar_conclusions.",
+      "english": {
+        "direction": "person making claim -> person whose conclusions are claimed similar",
+        "prompt_en": "Peter Singer claims that his conclusions are similar to those of",
+        "relation_id": "person_to_claimed_similar_conclusions",
+        "answer": "Thomas Aquinas",
+        "relation_definition": "A person (X) explicitly asserts that their own conclusions are similar to those of another specific person (Y); a directional intellectual-alignment claim made by X about Y.",
+        "subject": "Peter Singer",
+        "canonical_fact": "Peter Singer claims that his conclusions are similar to those of Thomas Aquinas.",
+        "answer_aliases_en": [
+          "Thomas Aquinas",
+          "Thomas Aquinas."
+        ],
+        "relation_spec": {
+          "id": "person_to_claimed_similar_conclusions",
+          "definition": "A person (X) explicitly asserts that their own conclusions are similar to those of another specific person (Y); a directional intellectual-alignment claim made by X about Y.",
+          "direction": "person making claim -> person whose conclusions are claimed similar"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "78c9a7c9bcd1536435e76293ad2d28c47e06e5037cf0a6d15bac9a362987f610",
+      "input_sha256": "ac0a4de9cf0d335f304bd008092d2f3ce13f8b91b302afd552b5e1e72ee6f74b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_2ea6d16ba9359a1db957",
+      "input_sha256": "26420dfb56ee6193a7de369e2c0aceef079d2ff660fef68dfa95b1ff0310e0a0",
+      "english": {
+        "direction": "specific event -> containing event",
+        "prompt_en": "The Battle of New Orleans was fought during the",
+        "relation_id": "event_to_containing_event",
+        "answer": "War of 1812",
+        "relation_definition": "A named military event (battle, campaign, siege) that was fought within a larger named conflict (war); the containing event defines the temporal and strategic context.",
+        "subject": "Battle of New Orleans",
+        "canonical_fact": "The Battle of New Orleans was fought during the War of 1812.",
+        "answer_aliases_en": [
+          "War of 1812"
+        ],
+        "relation_spec": {
+          "id": "event_to_containing_event",
+          "definition": "A named military event (battle, campaign, siege) that was fought within a larger named conflict (war); the containing event defines the temporal and strategic context.",
+          "direction": "specific event -> containing event"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ead2057e67a1028ea78c89a264605a639d464f77f3933ab2cd8d5c05ed477fe5",
+      "translation": {
+        "record_id": "public:pbf_2ea6d16ba9359a1db957",
+        "subject_zh": "新奥尔良战役",
+        "prompt_zh": "新奥尔良战役发生在",
+        "canonical_fact_zh": "新奥尔良战役发生在1812年战争期间。",
+        "answer_zh": "1812年战争",
+        "answer_aliases_zh": [
+          "1812年战争"
+        ]
+      },
+      "translation_sha256": "660de7af7b6d09fce04d25419e786e7214084e7168dc474e4918cf05a3cd7601"
+    },
+    {
+      "record_id": "public:pbf_2ed7052f4ce788ee6c12",
+      "input_sha256": "ac0a4de9cf0d335f304bd008092d2f3ce13f8b91b302afd552b5e1e72ee6f74b",
+      "english": {
+        "direction": "person making claim -> person whose conclusions are claimed similar",
+        "prompt_en": "Peter Singer claims that his conclusions are similar to those of",
+        "relation_id": "person_to_claimed_similar_conclusions",
+        "answer": "Thomas Aquinas",
+        "relation_definition": "A person (X) explicitly asserts that their own conclusions are similar to those of another specific person (Y); a directional intellectual-alignment claim made by X about Y.",
+        "subject": "Peter Singer",
+        "canonical_fact": "Peter Singer claims that his conclusions are similar to those of Thomas Aquinas.",
+        "answer_aliases_en": [
+          "Thomas Aquinas",
+          "Thomas Aquinas."
+        ],
+        "relation_spec": {
+          "id": "person_to_claimed_similar_conclusions",
+          "definition": "A person (X) explicitly asserts that their own conclusions are similar to those of another specific person (Y); a directional intellectual-alignment claim made by X about Y.",
+          "direction": "person making claim -> person whose conclusions are claimed similar"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "78c9a7c9bcd1536435e76293ad2d28c47e06e5037cf0a6d15bac9a362987f610",
+      "translation": {
+        "record_id": "public:pbf_2ed7052f4ce788ee6c12",
+        "subject_zh": "彼得·辛格",
+        "prompt_zh": "彼得·辛格声称他的结论与",
+        "canonical_fact_zh": "彼得·辛格声称他的结论与托马斯·阿奎那的结论相似。",
+        "answer_zh": "托马斯·阿奎那",
+        "answer_aliases_zh": [
+          "托马斯·阿奎那",
+          "托马斯·阿奎那。"
+        ]
+      },
+      "translation_sha256": "2c0c1ce388c9e2367221d5860dd8b15d258e80a5ea02794d8884441fd26fe4b3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_2ea6d16ba9359a1db957",
+        "public:pbf_2ed7052f4ce788ee6c12"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cc47bdb1841eda6abee33752dbb3a00b21c3213af990d4c2ccc77c4e2551e4a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2850,
+      "first_chunk_seconds": 17.522,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2975,
+        "prompt_tokens": 1615,
+        "total_tokens": 4590,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2408,
+          "text_tokens": 567
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "49d42ed51fa058b5f75d0cb41248a194847427fecff6c2fe6ae65d4d3042d8f8",
+      "status": "completed",
+      "latency_seconds": 96.36
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_2ea6d16ba9359a1db957",
+        "public:pbf_2ed7052f4ce788ee6c12"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d4241435be30830bdd6993a0f9c8fc1fcc07d5816e6a126d6abb7005acf468de",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 697,
+      "first_chunk_seconds": 11.311,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 764,
+        "prompt_tokens": 935,
+        "total_tokens": 1699,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 506,
+          "text_tokens": 258
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0f25f0fc5e8a7e1186634561577825e1c28b7531be6d37ea278648c9cb9b6e6a",
+      "status": "completed",
+      "latency_seconds": 25.79
+    }
+  ],
+  "status": "completed"
+}

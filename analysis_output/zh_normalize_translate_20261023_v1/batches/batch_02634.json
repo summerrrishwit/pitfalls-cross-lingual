@@ -1,0 +1,214 @@
+{
+  "input_sha256": "2dcc1b7ac4e33d65a49a88d98c1f990787c9179ae5385dc8005d3a2c32c5a391",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006203",
+      "decision": "ready",
+      "subject": "soprano",
+      "relation_id": "part_to_whole",
+      "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+      "direction": "part -> whole",
+      "answer": "choir",
+      "canonical_fact": "A soprano in church would be a part of a choir.",
+      "prompt_en": "In a church setting, what would a soprano be a part of?",
+      "evidence_quotes": [
+        "What would a soprano be a part of in church?",
+        "choir"
+      ],
+      "reason": "The source question explicitly frames the relationship as 'a part of' and the answer 'choir' is a whole group. part_to_whole (part -> whole) fits exactly: a soprano singer is a stated member/part of a choir in the church context. Both models extracted this; no conflict.",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "choir",
+        "canonical_fact": "A soprano in church would be a part of a choir.",
+        "subject": "soprano",
+        "prompt_en": "In a church setting, what would a soprano be a part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "choir"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8481531c19c599153ac91f5ad6351d90d388550450b9b3bd2c258fb7e760525e",
+      "input_sha256": "adb547cfdb8fc7453e6d7ac5313520b5dbd2d714c91613f44e25f25caf460858",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006207",
+      "decision": "ready",
+      "subject": "living things",
+      "relation_id": "organism_to_biological_action",
+      "relation_definition": "A biological action or process an organism performs for a stated purpose; retain the specific purpose qualifier.",
+      "direction": "organism -> action",
+      "answer": "reproducing",
+      "canonical_fact": "Living things reproduce to continue their species.",
+      "prompt_en": "What do living things do to continue their species?",
+      "evidence_quotes": [
+        "What to living things do to continue their species?",
+        "reproducing"
+      ],
+      "reason": "No existing catalog relation captures 'action an organism performs for a stated biological purpose.' Proposed organism_to_biological_action with direction organism -> action. Source clearly states living things reproduce to continue their species; both models extracted it. The qualifier 'to continue their species' is preserved in the canonical fact and prompt.",
+      "english": {
+        "direction": "organism -> action",
+        "relation_id": "organism_to_biological_action",
+        "answer": "reproducing",
+        "canonical_fact": "Living things reproduce to continue their species.",
+        "subject": "living things",
+        "prompt_en": "What do living things do to continue their species?",
+        "relation_definition": "A biological action or process an organism performs for a stated purpose; retain the specific purpose qualifier.",
+        "answer_aliases_en": [
+          "reproducing"
+        ],
+        "relation_spec": {
+          "id": "organism_to_biological_action",
+          "definition": "A biological action or process an organism performs for a stated purpose; retain the specific purpose qualifier.",
+          "direction": "organism -> action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "477c2573617c72eeeaaa64c044292680f0b196da4a61d0640d7a47671fe94ee3",
+      "input_sha256": "77012737779ef974fc464b1657436236087c7c108cd2884d18d76a7feebe4384",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006203",
+      "input_sha256": "adb547cfdb8fc7453e6d7ac5313520b5dbd2d714c91613f44e25f25caf460858",
+      "english": {
+        "direction": "part -> whole",
+        "relation_id": "part_to_whole",
+        "answer": "choir",
+        "canonical_fact": "A soprano in church would be a part of a choir.",
+        "subject": "soprano",
+        "prompt_en": "In a church setting, what would a soprano be a part of?",
+        "relation_definition": "Stated part-whole membership; not the inverse whole_to_part.",
+        "answer_aliases_en": [
+          "choir"
+        ],
+        "relation_spec": {
+          "id": "part_to_whole",
+          "direction": "part -> whole",
+          "definition": "Stated part-whole membership; not the inverse whole_to_part."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8481531c19c599153ac91f5ad6351d90d388550450b9b3bd2c258fb7e760525e",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006203",
+        "subject_zh": "女高音",
+        "prompt_zh": "在教堂环境中，女高音会是哪个整体的组成部分？",
+        "canonical_fact_zh": "在教堂中，女高音是合唱团的一部分。",
+        "answer_zh": "合唱团",
+        "answer_aliases_zh": [
+          "合唱团"
+        ]
+      },
+      "translation_sha256": "2d13f8f2f6e937f6dfe28af3ad331a37dec9397af72352f37b30533c8c129532"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006207",
+      "input_sha256": "77012737779ef974fc464b1657436236087c7c108cd2884d18d76a7feebe4384",
+      "english": {
+        "direction": "organism -> action",
+        "relation_id": "organism_to_biological_action",
+        "answer": "reproducing",
+        "canonical_fact": "Living things reproduce to continue their species.",
+        "subject": "living things",
+        "prompt_en": "What do living things do to continue their species?",
+        "relation_definition": "A biological action or process an organism performs for a stated purpose; retain the specific purpose qualifier.",
+        "answer_aliases_en": [
+          "reproducing"
+        ],
+        "relation_spec": {
+          "id": "organism_to_biological_action",
+          "definition": "A biological action or process an organism performs for a stated purpose; retain the specific purpose qualifier.",
+          "direction": "organism -> action"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "477c2573617c72eeeaaa64c044292680f0b196da4a61d0640d7a47671fe94ee3",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006207",
+        "subject_zh": "生物",
+        "prompt_zh": "生物做什么来延续其物种？",
+        "canonical_fact_zh": "生物通过繁殖来延续其物种。",
+        "answer_zh": "繁殖",
+        "answer_aliases_zh": [
+          "繁殖"
+        ]
+      },
+      "translation_sha256": "be73a011bde084552604dea8f2f0f139c87dde05d7a4180051b1f44f1bb65c9e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006203",
+        "historical:raw_commonsense_qa_006207"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ab2285da3241776a5c9ef952d3f4bab32810265c0c1eb53f37f17c66c6fbff3b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2453,
+      "first_chunk_seconds": 29.274,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2619,
+        "prompt_tokens": 1647,
+        "total_tokens": 4266,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2128,
+          "text_tokens": 491
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f9d2f0fbe644760a8854eb7d6aed659d75b223d1ecebc0796ef0f8806b413b86",
+      "status": "completed",
+      "latency_seconds": 63.155
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006203",
+        "historical:raw_commonsense_qa_006207"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b7128ca185ff9c07667d5f2a572a05b14d98756986a654f621a754dc79927a7e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 536,
+      "first_chunk_seconds": 26.699,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 626,
+        "prompt_tokens": 818,
+        "total_tokens": 1444,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 418,
+          "text_tokens": 208
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "139294fd93337c52137f2b6c8a6f62dda50222dcb0de1118e999609ac78f086a",
+      "status": "completed",
+      "latency_seconds": 35.404
+    }
+  ],
+  "status": "completed"
+}

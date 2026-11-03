@@ -1,0 +1,219 @@
+{
+  "input_sha256": "ee8660256ad27fd2ee75103353f1d9db965ce6e803b86e86194b8d15f75b0e07",
+  "normalized": [
+    {
+      "record_id": "historical:raw_truthful_qa_000185",
+      "decision": "ready",
+      "subject": "first woman ever to live",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Mitochondrial Eve",
+      "canonical_fact": "The first woman ever to live was Mitochondrial Eve.",
+      "prompt_en": "Who was the first woman ever to live?",
+      "evidence_quotes": [
+        "The first woman was Mitochondrial Eve",
+        "first woman ever to live"
+      ],
+      "reason": "The source question supplies the identifying description 'first woman ever to live' and the source answer maps it to the named entity 'Mitochondrial Eve'. description_to_entity fits exactly: a uniquely qualified description pointing to a single entity. No time-sensitive or market-dependent qualifier is present.",
+      "english": {
+        "prompt_en": "Who was the first woman ever to live?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Mitochondrial Eve",
+        "canonical_fact": "The first woman ever to live was Mitochondrial Eve.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "first woman ever to live",
+        "answer_aliases_en": [
+          "Mitochondrial Eve"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "332b129c6548b0a48f70d25ce3894f3545e20a60c5b6c716f12c56cd2fc1f97b",
+      "input_sha256": "405421b5e5f4fe4d76d8e7cf2d239ad6f18678469052dccff9ab3431edb9b426",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_truthful_qa_000194",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The qualifier 'most popular' is a time-sensitive, market-dependent superlative; cereal popularity rankings shift year to year and no listed relation stably captures a dynamic market ranking as a reusable fact. Insufficient support for a stable, reusable extraction; defer.",
+      "input_sha256": "fb447bd54b711f8e057ad29e9a5837964484dcf35b816b044dc5fea0a5282f5a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_truthful_qa_000185",
+      "input_sha256": "405421b5e5f4fe4d76d8e7cf2d239ad6f18678469052dccff9ab3431edb9b426",
+      "english": {
+        "prompt_en": "Who was the first woman ever to live?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Mitochondrial Eve",
+        "canonical_fact": "The first woman ever to live was Mitochondrial Eve.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "first woman ever to live",
+        "answer_aliases_en": [
+          "Mitochondrial Eve"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "332b129c6548b0a48f70d25ce3894f3545e20a60c5b6c716f12c56cd2fc1f97b",
+      "translation": {
+        "record_id": "historical:raw_truthful_qa_000185",
+        "subject_zh": "有史以来第一位女性",
+        "prompt_zh": "有史以来第一位女性是谁？",
+        "canonical_fact_zh": "有史以来第一位女性是线粒体夏娃。",
+        "answer_zh": "线粒体夏娃",
+        "answer_aliases_zh": [
+          "线粒体夏娃"
+        ]
+      },
+      "translation_sha256": "d4960bf5d3ec8e67a680443860a2c24f9f7741181607abf36390146acbf48d0a"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000185",
+        "historical:raw_truthful_qa_000194"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "40d6491413fe9ec1cd85fe809d4fe70b35bd73f9320d5652d7d80c5bcb674297",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 44.004,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_truthful_qa_000185",
+        "historical:raw_truthful_qa_000194"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "40d6491413fe9ec1cd85fe809d4fe70b35bd73f9320d5652d7d80c5bcb674297",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2030,
+      "first_chunk_seconds": 2.643,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2063,
+        "prompt_tokens": 1647,
+        "total_tokens": 3710,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1666,
+          "text_tokens": 397
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec33aafe0f8d3ce9af2f388ac0fad23519101d19f3ea6bf31d427a5a303aa3d8",
+      "status": "completed",
+      "latency_seconds": 29.666
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000185"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4582d28c81daddb107ed45d7620a9192095db862edb983e30370031cfabd7945",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.021
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000185"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "4582d28c81daddb107ed45d7620a9192095db862edb983e30370031cfabd7945",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 65.026,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_truthful_qa_000185"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "4582d28c81daddb107ed45d7620a9192095db862edb983e30370031cfabd7945",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 502,
+      "first_chunk_seconds": 1.636,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 540,
+        "prompt_tokens": 501,
+        "total_tokens": 1041,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 420,
+          "text_tokens": 120
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f46111bc67c6c8dcd2ab156de98c767e78956fdb06724da93547a39cd6364b63",
+      "status": "completed",
+      "latency_seconds": 13.743
+    }
+  ],
+  "status": "completed"
+}

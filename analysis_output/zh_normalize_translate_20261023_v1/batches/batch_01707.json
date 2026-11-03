@@ -1,0 +1,157 @@
+{
+  "input_sha256": "7e27b3a952fb67e7e164db0fefa3f4c5de779ed789ad994ddf359f53056f63ae",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c3086d0efbacf91ab275",
+      "decision": "ready",
+      "subject": "El Salvador",
+      "relation_id": "country_to_currency_adoption_year",
+      "relation_definition": "The year a country officially adopted or switched to a specified currency; retain the target currency name for disambiguation.",
+      "direction": "country -> year of currency adoption (target currency specified)",
+      "answer": "2001",
+      "canonical_fact": "El Salvador switched to the US dollar in 2001.",
+      "prompt_en": "In what year did El Salvador switch to the US dollar?",
+      "evidence_quotes": [
+        "when did el salvador switch to the dollar",
+        "2001"
+      ],
+      "reason": "Source explicitly states El Salvador switched to the dollar in 2001; the year is directly extractable from source_answer. No existing catalog relation covers a country's currency-adoption event; proposing a precise new snake_case relation to avoid forcing a broad category.",
+      "english": {
+        "answer": "2001",
+        "relation_id": "country_to_currency_adoption_year",
+        "prompt_en": "In what year did El Salvador switch to the US dollar?",
+        "direction": "country -> year of currency adoption (target currency specified)",
+        "subject": "El Salvador",
+        "canonical_fact": "El Salvador switched to the US dollar in 2001.",
+        "relation_definition": "The year a country officially adopted or switched to a specified currency; retain the target currency name for disambiguation.",
+        "answer_aliases_en": [
+          "2001"
+        ],
+        "relation_spec": {
+          "id": "country_to_currency_adoption_year",
+          "definition": "The year a country officially adopted or switched to a specified currency; retain the target currency name for disambiguation.",
+          "direction": "country -> year of currency adoption (target currency specified)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8549d82efadb3679a3219d0e8e4476d1195fc639bfee24193be44d5a4da6fbb4",
+      "input_sha256": "b4fc1194dd81ca834c63ffb317eb0820ca77a77b4b39a5c7602fbb6f25328eb8",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c316c3087c9147ffb294",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source answer 'v' is a context-dependent variable defined within the problem's own setup; the underlying fact is a physics principle (speed of a sound wave in a given medium is independent of frequency) rather than a standalone entity-relation-value tuple. No catalog relation captures a medium-dependent wave property, and the variable 'v' has no meaning outside the problem's definitions. Insufficient source support for a reusable, context-free factual candidate.",
+      "input_sha256": "1cde5167368e5de1b11cc90a10068c27e0b791d953db41451a2c7d839a13c7c4",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c3086d0efbacf91ab275",
+      "input_sha256": "b4fc1194dd81ca834c63ffb317eb0820ca77a77b4b39a5c7602fbb6f25328eb8",
+      "english": {
+        "answer": "2001",
+        "relation_id": "country_to_currency_adoption_year",
+        "prompt_en": "In what year did El Salvador switch to the US dollar?",
+        "direction": "country -> year of currency adoption (target currency specified)",
+        "subject": "El Salvador",
+        "canonical_fact": "El Salvador switched to the US dollar in 2001.",
+        "relation_definition": "The year a country officially adopted or switched to a specified currency; retain the target currency name for disambiguation.",
+        "answer_aliases_en": [
+          "2001"
+        ],
+        "relation_spec": {
+          "id": "country_to_currency_adoption_year",
+          "definition": "The year a country officially adopted or switched to a specified currency; retain the target currency name for disambiguation.",
+          "direction": "country -> year of currency adoption (target currency specified)"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8549d82efadb3679a3219d0e8e4476d1195fc639bfee24193be44d5a4da6fbb4",
+      "translation": {
+        "record_id": "public:pbf_c3086d0efbacf91ab275",
+        "subject_zh": "萨尔瓦多",
+        "prompt_zh": "萨尔瓦多在哪一年改用美元？",
+        "canonical_fact_zh": "萨尔瓦多于2001年改用美元。",
+        "answer_zh": "2001",
+        "answer_aliases_zh": [
+          "2001"
+        ]
+      },
+      "translation_sha256": "47e8fe6c6c9fe5a62d4f28c86f70ccae609925f081acce59c89fca67d6920cc2"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c3086d0efbacf91ab275",
+        "public:pbf_c316c3087c9147ffb294"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f0ded4d9bd57864fcf44fe9b3bd6fa7c7f22390552251676fa2f0a4d472811da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2800,
+      "first_chunk_seconds": 35.302,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2868,
+        "prompt_tokens": 1607,
+        "total_tokens": 4475,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2508,
+          "text_tokens": 360
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "087be4a533daeda6c79e70a0da3f366bb2a83ec6ced4ed9d650fccd0e3022301",
+      "status": "completed",
+      "latency_seconds": 60.248
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c3086d0efbacf91ab275"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "84ee4f38688bb9f5fa416250411072b5cb8f82322232940f96f3d335b2ea7e0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 681,
+      "first_chunk_seconds": 15.079,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 679,
+        "prompt_tokens": 547,
+        "total_tokens": 1226,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 556,
+          "text_tokens": 123
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c8718ebbdd49ca2031523aeb5ba8115685859025283873467b103583b621183b",
+      "status": "completed",
+      "latency_seconds": 21.439
+    }
+  ],
+  "status": "completed"
+}

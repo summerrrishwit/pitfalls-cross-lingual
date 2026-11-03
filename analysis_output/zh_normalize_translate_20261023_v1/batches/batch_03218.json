@@ -1,0 +1,182 @@
+{
+  "input_sha256": "53e3145a5bb235f20c42c9ae94dbd9e90a11829ec5ce3f67c1c510ee835e99ce",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000910",
+      "decision": "ready",
+      "subject": "chemical reactions that release energy",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "exothermic reactions",
+      "canonical_fact": "Chemical reactions that release energy are called exothermic reactions.",
+      "prompt_en": "What type of chemical reactions release energy?",
+      "evidence_quotes": [
+        "chemical reactions release energy",
+        "exothermic reactions"
+      ],
+      "reason": "The source question supplies a defining description ('chemical reactions that release energy') and asks for the conventional term. 'Exothermic reactions' is the unique standard term for that description, fitting description_to_term exactly. No qualifiers to preserve; both model annotations agree.",
+      "english": {
+        "prompt_en": "What type of chemical reactions release energy?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "exothermic reactions",
+        "canonical_fact": "Chemical reactions that release energy are called exothermic reactions.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "chemical reactions that release energy",
+        "answer_aliases_en": [
+          "exothermic reactions"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "073b28eda461ba3a8a8c3618fda18993af86a5839f7e0169c4db543312e82165",
+      "input_sha256": "a86e79fed477d0b2a054e5bef5e6742c4c1b7ead2e4b91548d927ae48ee77bd4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000911",
+      "decision": "ready",
+      "subject": "mid-ocean ridges",
+      "relation_id": "geological_feature_to_max_height",
+      "relation_definition": "Typical maximum vertical extent of a specified geological feature; retain uncertainty qualifiers such as 'about'.",
+      "direction": "geological feature -> maximum height",
+      "answer": "about 2 km",
+      "canonical_fact": "Mid-ocean ridges can be about 2 km tall.",
+      "prompt_en": "How tall can mid-ocean ridges be?",
+      "evidence_quotes": [
+        "how tall can mid-ocean ridges be",
+        "about 2 km"
+      ],
+      "reason": "No existing catalog relation covers the physical height/dimension of a geological feature. Proposed geological_feature_to_max_height (feature -> max height). The source question asks the upper bound ('how tall can … be'); the answer 'about 2 km' carries an uncertainty qualifier that must be preserved. Both model annotations agree on subject and answer.",
+      "english": {
+        "prompt_en": "How tall can mid-ocean ridges be?",
+        "relation_definition": "Typical maximum vertical extent of a specified geological feature; retain uncertainty qualifiers such as 'about'.",
+        "answer": "about 2 km",
+        "canonical_fact": "Mid-ocean ridges can be about 2 km tall.",
+        "direction": "geological feature -> maximum height",
+        "relation_id": "geological_feature_to_max_height",
+        "subject": "mid-ocean ridges",
+        "answer_aliases_en": [
+          "about 2 km"
+        ],
+        "relation_spec": {
+          "id": "geological_feature_to_max_height",
+          "definition": "Typical maximum vertical extent of a specified geological feature; retain uncertainty qualifiers such as 'about'.",
+          "direction": "geological feature -> maximum height"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f58f5e1974c324364836615cbb8f4e92a5bfb0dd0f16333fed7bc8d2c39b3d71",
+      "input_sha256": "412f09febfd43a9e8956adf69e17f47da156499ad172d03cfd78aa24fdd77d5a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000910",
+        "historical:raw_sciq_000911"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "51dc6338c11d7ffb08f010adc80fad9b3ae1ca131288ab72fc0747c73bce6bc0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 9.797
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000910",
+        "historical:raw_sciq_000911"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "51dc6338c11d7ffb08f010adc80fad9b3ae1ca131288ab72fc0747c73bce6bc0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2239,
+      "first_chunk_seconds": 3.056,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2566,
+        "prompt_tokens": 1686,
+        "total_tokens": 4252,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2073,
+          "text_tokens": 493
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f41b98a8deb1b155cb830d852145dc4c3e3f0e8efb1578bcf37e0d899dae79ba",
+      "status": "completed",
+      "latency_seconds": 49.248
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000910",
+        "historical:raw_sciq_000911"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b05ea38aadebe8038846c9f3d4967732487374fcdd671eecd773fae75f1e3844",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 92.35
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000910",
+        "historical:raw_sciq_000911"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b05ea38aadebe8038846c9f3d4967732487374fcdd671eecd773fae75f1e3844",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 502,
+      "latency_seconds": 16.662,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000910",
+        "historical:raw_sciq_000911"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b05ea38aadebe8038846c9f3d4967732487374fcdd671eecd773fae75f1e3844",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 30.953
+    }
+  ],
+  "status": "failed"
+}

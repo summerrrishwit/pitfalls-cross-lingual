@@ -1,0 +1,157 @@
+{
+  "input_sha256": "3d3d2938d0475130478ff4dbc35888b5b298784cc77b6e82b5ff52bae34bdbfe",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008069",
+      "decision": "ready",
+      "subject": "coming back from death",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "rebirth",
+      "canonical_fact": "Coming back from death is called rebirth.",
+      "prompt_en": "What is the term for when someone comes back from death?",
+      "evidence_quotes": [
+        "comes back from death",
+        "rebirth"
+      ],
+      "reason": "The source question asks for the term that describes the phenomenon 'coming back from death'; the source answer 'rebirth' is the conventional term. This maps cleanly to description_to_term (description -> term). The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "rebirth",
+        "canonical_fact": "Coming back from death is called rebirth.",
+        "subject": "coming back from death",
+        "prompt_en": "What is the term for when someone comes back from death?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "rebirth"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04eec570c79dd7f89c0b5e92dc982b54f8d988eb98b469036758b894b14b86e2",
+      "input_sha256": "3c0691d5c778a90e5c52d2a80c90b50ad2fffa2b65e2a7b713ed30fb30b95667",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008074",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact is a narrow idiom fill-in (the color word for 'eyes' in the fixed expression 'green with envy'). No catalog relation captures 'slot value in a specific idiom' without forcing a broad category (entity_to_class, entity_to_material, etc. do not fit). The subject 'eyes' is only meaningful within the idiom context, making the record idiom-specific rather than a broadly reusable factual candidate. Defer without forcing a new relation for a single linguistic trivia item.",
+      "input_sha256": "66052c1e93fd06b4594dd61b2aada171a5387443ea8b47c0e322e99fe7ccf64d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008069",
+      "input_sha256": "3c0691d5c778a90e5c52d2a80c90b50ad2fffa2b65e2a7b713ed30fb30b95667",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "rebirth",
+        "canonical_fact": "Coming back from death is called rebirth.",
+        "subject": "coming back from death",
+        "prompt_en": "What is the term for when someone comes back from death?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "rebirth"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "04eec570c79dd7f89c0b5e92dc982b54f8d988eb98b469036758b894b14b86e2",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008069",
+        "subject_zh": "从死亡中归来",
+        "prompt_zh": "人从死亡中归来的术语是什么？",
+        "canonical_fact_zh": "从死亡中归来被称为重生。",
+        "answer_zh": "重生",
+        "answer_aliases_zh": [
+          "重生"
+        ]
+      },
+      "translation_sha256": "471fce064695bd93aee7e3e0196ebceca17bfc966734093093baa37bec3368cc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008069",
+        "historical:raw_commonsense_qa_008074"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4e3eead0e9f1b79c01bcc0c2408b326eeb86fafd74390793b388ec2f8d1de1ab",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2512,
+      "first_chunk_seconds": 11.233,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2727,
+        "prompt_tokens": 1634,
+        "total_tokens": 4361,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2287,
+          "text_tokens": 440
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6e3d35b0b195839064701840b52e13922d5f9c3ae4b81a91b652f4aac96b4e6",
+      "status": "completed",
+      "latency_seconds": 86.988
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008069"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1681f99695946aa001f0ad2f63a967492f894bee13e9e65105f84eb2e5485545",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 827,
+      "first_chunk_seconds": 10.514,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 891,
+        "prompt_tokens": 512,
+        "total_tokens": 1403,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 818,
+          "text_tokens": 73
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dbbd34c3efe4149ec037cd37674a810b0a5daa2e6c37cabbc84f0f155e03613d",
+      "status": "completed",
+      "latency_seconds": 27.628
+    }
+  ],
+  "status": "completed"
+}

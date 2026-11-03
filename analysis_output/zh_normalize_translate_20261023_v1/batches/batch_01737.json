@@ -1,0 +1,159 @@
+{
+  "input_sha256": "9b953312893aad6ae90ba67e5608a8846b53ba138eb1b3a9494e376e624397bc",
+  "normalized": [
+    {
+      "record_id": "public:pbf_c800e2e540fd4244915f",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact is a context-bound reading-comprehension claim (Hill's specific alternative philosophical question in a particular ethical argument). No catalog relation fits; the closest candidates (term_to_definition, symbol_to_meaning, entity_to_class) do not capture 'a person's stated alternative question in a specific philosophical context.' Proposing a new relation such as 'person_to_stated_philosophical_question' would be too narrow to be reusable and would essentially re-encode a single exam passage. Defer.",
+      "input_sha256": "567ae9e2d9c1438810701dff5c52caf3c775f2a86e0f2d249ad945ada8d0389b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_c82fde7ce851a7ef62ca",
+      "decision": "ready",
+      "subject": "beta particle ejection (beta decay)",
+      "relation_id": "process_to_property_change",
+      "relation_definition": "The specific change in a measurable physical property resulting from a specified physical process; retain the exact magnitude and direction as stated.",
+      "direction": "physical process -> property change",
+      "answer": "increases by 1",
+      "canonical_fact": "When an element ejects a beta particle, the atomic number of that element increases by 1.",
+      "prompt_en": "When an element ejects a beta particle, the atomic number of that element",
+      "evidence_quotes": [
+        "increases by 1"
+      ],
+      "reason": "Stable physics fact: beta decay (ejection of a beta particle) increases the atomic number by 1. No catalog relation covers 'physical process -> property change,' so a new precise relation 'process_to_property_change' is proposed. The answer 'increases by 1' is a literal substring of source_answer and is kept verbatim. The prompt_en is the sentence stem from source_question and does not contain the answer.",
+      "english": {
+        "answer": "increases by 1",
+        "relation_id": "process_to_property_change",
+        "prompt_en": "When an element ejects a beta particle, the atomic number of that element",
+        "direction": "physical process -> property change",
+        "subject": "beta particle ejection (beta decay)",
+        "canonical_fact": "When an element ejects a beta particle, the atomic number of that element increases by 1.",
+        "relation_definition": "The specific change in a measurable physical property resulting from a specified physical process; retain the exact magnitude and direction as stated.",
+        "answer_aliases_en": [
+          "increases by 1"
+        ],
+        "relation_spec": {
+          "id": "process_to_property_change",
+          "definition": "The specific change in a measurable physical property resulting from a specified physical process; retain the exact magnitude and direction as stated.",
+          "direction": "physical process -> property change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da3bef2765f0d6258fe9aed35509eea4ec8307dda6051bc42e414c2a06c0b846",
+      "input_sha256": "868d2e8b821123e44a720b5a454d02beb9af3f7696a912ba7a00e18a3b5191eb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_c82fde7ce851a7ef62ca",
+      "input_sha256": "868d2e8b821123e44a720b5a454d02beb9af3f7696a912ba7a00e18a3b5191eb",
+      "english": {
+        "answer": "increases by 1",
+        "relation_id": "process_to_property_change",
+        "prompt_en": "When an element ejects a beta particle, the atomic number of that element",
+        "direction": "physical process -> property change",
+        "subject": "beta particle ejection (beta decay)",
+        "canonical_fact": "When an element ejects a beta particle, the atomic number of that element increases by 1.",
+        "relation_definition": "The specific change in a measurable physical property resulting from a specified physical process; retain the exact magnitude and direction as stated.",
+        "answer_aliases_en": [
+          "increases by 1"
+        ],
+        "relation_spec": {
+          "id": "process_to_property_change",
+          "definition": "The specific change in a measurable physical property resulting from a specified physical process; retain the exact magnitude and direction as stated.",
+          "direction": "physical process -> property change"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da3bef2765f0d6258fe9aed35509eea4ec8307dda6051bc42e414c2a06c0b846",
+      "translation": {
+        "record_id": "public:pbf_c82fde7ce851a7ef62ca",
+        "subject_zh": "β粒子发射（β衰变）",
+        "prompt_zh": "当某元素发射一个β粒子时，该元素的原子序数",
+        "canonical_fact_zh": "当某元素发射一个β粒子时，该元素的原子序数增加1。",
+        "answer_zh": "增加1",
+        "answer_aliases_zh": [
+          "增加1"
+        ]
+      },
+      "translation_sha256": "c26299b601dab50d09815cc8b889ea14ec87e11b451b06ad77f87a88ff8d5813"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_c800e2e540fd4244915f",
+        "public:pbf_c82fde7ce851a7ef62ca"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "447db62b96653a5b2b221327ed6b3881e476d06c51031b20970668318b4a1efa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2680,
+      "first_chunk_seconds": 44.1,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2678,
+        "prompt_tokens": 1720,
+        "total_tokens": 4398,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2173,
+          "text_tokens": 505
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "42e8a18fa15b96096b323e55033926036ed3748a495080555bf7f58ea810e83b",
+      "status": "completed",
+      "latency_seconds": 65.367
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_c82fde7ce851a7ef62ca"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "3d6704e1f7a600ba596595af6926e2ac27f2340c77e592f344440d954ec62be1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 557,
+      "first_chunk_seconds": 1.598,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 554,
+        "prompt_tokens": 550,
+        "total_tokens": 1104,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 418,
+          "text_tokens": 136
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9dd3a4795892bce4c65aed42efd841c6e6891da2d90ea40efa958e33c2f7db6b",
+      "status": "completed",
+      "latency_seconds": 6.702
+    }
+  ],
+  "status": "completed"
+}

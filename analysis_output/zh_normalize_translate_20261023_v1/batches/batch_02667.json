@@ -1,0 +1,214 @@
+{
+  "input_sha256": "6fc69a71fa2216cae06c5f1aa3e3eab7c877815df5dd3e3bffc1d1438b7d4732",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007118",
+      "decision": "ready",
+      "subject": "a person who knows how to read and write",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "literate",
+      "canonical_fact": "A person who knows how to read and write is literate.",
+      "prompt_en": "What is the term for a person who knows how to read and write?",
+      "evidence_quotes": [
+        "If you know how to read and write you are what?",
+        "literate"
+      ],
+      "reason": "The source question supplies a description (knows how to read and write) and asks for the corresponding term (literate), which matches description_to_term exactly. Both model annotations agree on extraction; the existing canonical_fact is retained verbatim.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "literate",
+        "canonical_fact": "A person who knows how to read and write is literate.",
+        "subject": "a person who knows how to read and write",
+        "prompt_en": "What is the term for a person who knows how to read and write?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "literate"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "da3b1a0eab7790ff70bf43e7ee30ab1cded9a87a5cba71cfd2a8dc86d190a321",
+      "input_sha256": "6b66bcd0284f5182a70f9049855359030788c9a9cec9e957e0d309c856ad763f",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007125",
+      "decision": "ready",
+      "subject": "going for a run",
+      "relation_id": "activity_to_common_name",
+      "relation_definition": "The common or colloquial name people use to refer to a specified activity, preserving informal register without implying strict equivalence to the activity.",
+      "direction": "activity -> common name",
+      "answer": "working out",
+      "canonical_fact": "Going for a run is commonly called working out.",
+      "prompt_en": "What do people commonly call going for a run?",
+      "evidence_quotes": [
+        "What do people call it when they are going for run?",
+        "working out"
+      ],
+      "reason": "No existing catalog relation fits exactly: entity_to_alias requires an actually equivalent name, but 'working out' is a broader colloquial grouping, not an equivalent synonym for 'going for a run.' description_to_term requires a uniquely fitting term, which 'working out' is not for the specific activity of running. Proposing the new precise relation activity_to_common_name to capture the informal naming without forcing a broad category.",
+      "english": {
+        "direction": "activity -> common name",
+        "relation_id": "activity_to_common_name",
+        "answer": "working out",
+        "canonical_fact": "Going for a run is commonly called working out.",
+        "subject": "going for a run",
+        "prompt_en": "What do people commonly call going for a run?",
+        "relation_definition": "The common or colloquial name people use to refer to a specified activity, preserving informal register without implying strict equivalence to the activity.",
+        "answer_aliases_en": [
+          "working out"
+        ],
+        "relation_spec": {
+          "id": "activity_to_common_name",
+          "definition": "The common or colloquial name people use to refer to a specified activity, preserving informal register without implying strict equivalence to the activity.",
+          "direction": "activity -> common name"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7f20425b67b0b5c0405d7e67d6665e5fb356b9f7eb52cb4f14e11a32f54ebc5c",
+      "input_sha256": "a534a982ac4bf5871190f1ff78325b18ba518ae3358974b0a72dd71bce01f6ce",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007118",
+      "input_sha256": "6b66bcd0284f5182a70f9049855359030788c9a9cec9e957e0d309c856ad763f",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "literate",
+        "canonical_fact": "A person who knows how to read and write is literate.",
+        "subject": "a person who knows how to read and write",
+        "prompt_en": "What is the term for a person who knows how to read and write?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "literate"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "da3b1a0eab7790ff70bf43e7ee30ab1cded9a87a5cba71cfd2a8dc86d190a321",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007118",
+        "subject_zh": "会读会写的人",
+        "prompt_zh": "会读会写的人用什么术语来描述？",
+        "canonical_fact_zh": "会读会写的人被称为有读写能力。",
+        "answer_zh": "有读写能力",
+        "answer_aliases_zh": [
+          "有读写能力"
+        ]
+      },
+      "translation_sha256": "ca29a5e7a2bfa31024054466a80cf13ddb386fd7b5d2f7544cd0d806cd048e91"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007125",
+      "input_sha256": "a534a982ac4bf5871190f1ff78325b18ba518ae3358974b0a72dd71bce01f6ce",
+      "english": {
+        "direction": "activity -> common name",
+        "relation_id": "activity_to_common_name",
+        "answer": "working out",
+        "canonical_fact": "Going for a run is commonly called working out.",
+        "subject": "going for a run",
+        "prompt_en": "What do people commonly call going for a run?",
+        "relation_definition": "The common or colloquial name people use to refer to a specified activity, preserving informal register without implying strict equivalence to the activity.",
+        "answer_aliases_en": [
+          "working out"
+        ],
+        "relation_spec": {
+          "id": "activity_to_common_name",
+          "definition": "The common or colloquial name people use to refer to a specified activity, preserving informal register without implying strict equivalence to the activity.",
+          "direction": "activity -> common name"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7f20425b67b0b5c0405d7e67d6665e5fb356b9f7eb52cb4f14e11a32f54ebc5c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_007125",
+        "subject_zh": "去跑步",
+        "prompt_zh": "人们通常把去跑步叫什么？",
+        "canonical_fact_zh": "去跑步通常被称为锻炼。",
+        "answer_zh": "锻炼",
+        "answer_aliases_zh": [
+          "锻炼"
+        ]
+      },
+      "translation_sha256": "175714c77b4af743852bc4b23b54648f9614021aebe207c6e2c3547ab0cba9a5"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007118",
+        "historical:raw_commonsense_qa_007125"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "eae2d4f63ac74769f80a80a8969b72260cfc4ee42a6bab80ca94ae4a7b295ded",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2596,
+      "first_chunk_seconds": 37.3,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2875,
+        "prompt_tokens": 1661,
+        "total_tokens": 4536,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2356,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d32f6b797d9380d893ce7044cdd46f88b8a7a753d1c33befda5d26aa1f4dfb35",
+      "status": "completed",
+      "latency_seconds": 99.546
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007118",
+        "historical:raw_commonsense_qa_007125"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6f192a025359567d8691949b4100c2591856dd7e25085ddeb27b83e3192b740f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1519,
+      "first_chunk_seconds": 24.984,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1574,
+        "prompt_tokens": 841,
+        "total_tokens": 2415,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1361,
+          "text_tokens": 213
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "16218df5415e66a00c40821867d69c85e0da998b08dc6fbc093664cbbffb94c0",
+      "status": "completed",
+      "latency_seconds": 44.32
+    }
+  ],
+  "status": "completed"
+}

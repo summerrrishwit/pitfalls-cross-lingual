@@ -1,0 +1,193 @@
+{
+  "input_sha256": "c836981f763cf2cb8a8fefd6ab589cb8d024a47ec771e388aae303d271e1550f",
+  "normalized": [
+    {
+      "record_id": "public:pbf_66fd20648d5a62b22b7d",
+      "decision": "ready",
+      "subject": "difference in approval of school desegration from the South and the rest of the U.S.",
+      "relation_id": "measure_to_value",
+      "relation_definition": "The value of a specified quantitative measure, statistical difference, or metric at a stated condition, time point, or context; retains qualifiers such as 'approximate' and time bounds.",
+      "direction": "specified measure/metric at a stated condition or time -> value",
+      "answer": "40%",
+      "canonical_fact": "At its peak, the approximate difference in approval of school desegration from the South and the rest of the U.S. was 40%.",
+      "prompt_en": "At its peak, what was the approximate difference in approval of school desegration from the South and the rest of the U.S.?",
+      "evidence_quotes": [
+        "40%",
+        "approximate difference in approval of school desegration from the South and the rest of the U.S."
+      ],
+      "reason": "No catalog relation covers a statistical-measure value at a stated time/condition. Proposed new precise relation measure_to_value. Answer '40%' kept exactly as in prior extraction and is a literal substring of source_answer. Qualifier 'approximate' and time bound 'at its peak' preserved.",
+      "english": {
+        "answer": "40%",
+        "relation_id": "measure_to_value",
+        "prompt_en": "At its peak, what was the approximate difference in approval of school desegration from the South and the rest of the U.S.?",
+        "direction": "specified measure/metric at a stated condition or time -> value",
+        "subject": "difference in approval of school desegration from the South and the rest of the U.S.",
+        "canonical_fact": "At its peak, the approximate difference in approval of school desegration from the South and the rest of the U.S. was 40%.",
+        "relation_definition": "The value of a specified quantitative measure, statistical difference, or metric at a stated condition, time point, or context; retains qualifiers such as 'approximate' and time bounds.",
+        "answer_aliases_en": [
+          "40%"
+        ],
+        "relation_spec": {
+          "id": "measure_to_value",
+          "definition": "The value of a specified quantitative measure, statistical difference, or metric at a stated condition, time point, or context; retains qualifiers such as 'approximate' and time bounds.",
+          "direction": "specified measure/metric at a stated condition or time -> value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8bc6c5311980ed1aaadcdac66745abe3c9d52af95badb995ef69034a8be7187b",
+      "input_sha256": "bce2de7cfe0d84347948100003be4ecd409e83901ed108368bc0747bcfc00f51",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6711d0e0fe4670292382",
+      "decision": "ready",
+      "subject": "dollar",
+      "relation_id": "condition_to_outcome",
+      "relation_definition": "The stated outcome or consequence that follows when one or more specified conditions are met; retains all qualifiers, scope, and conditional framing.",
+      "direction": "stated condition set -> outcome",
+      "answer": "appreciate",
+      "canonical_fact": "The dollar will appreciate when the demand for dollars rises while the supply of dollars falls.",
+      "prompt_en": "If the demand for dollars rises while the supply of dollars falls, the dollar will",
+      "evidence_quotes": [
+        "dollar will appreciate.",
+        "demand for dollars rises while the supply of dollars falls"
+      ],
+      "reason": "No catalog relation captures a conditional economic/causal outcome. Proposed new precise relation condition_to_outcome. Answer 'appreciate' kept exactly as in prior extraction (substring of source_answer 'dollar will appreciate.'). Prompt is option-free and omits the answer word 'appreciate'.",
+      "english": {
+        "answer": "appreciate",
+        "relation_id": "condition_to_outcome",
+        "prompt_en": "If the demand for dollars rises while the supply of dollars falls, the dollar will",
+        "direction": "stated condition set -> outcome",
+        "subject": "dollar",
+        "canonical_fact": "The dollar will appreciate when the demand for dollars rises while the supply of dollars falls.",
+        "relation_definition": "The stated outcome or consequence that follows when one or more specified conditions are met; retains all qualifiers, scope, and conditional framing.",
+        "answer_aliases_en": [
+          "appreciate",
+          "dollar will appreciate."
+        ],
+        "relation_spec": {
+          "id": "condition_to_outcome",
+          "definition": "The stated outcome or consequence that follows when one or more specified conditions are met; retains all qualifiers, scope, and conditional framing.",
+          "direction": "stated condition set -> outcome"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c2f8a6d9116a40b4e84c279ddce52885412af983c2b3e4c7d6a86025c0f289de",
+      "input_sha256": "200625746d9712523a00b1d168051e5d1d108a07be920520652b1a0ca0128f96",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_66fd20648d5a62b22b7d",
+        "public:pbf_6711d0e0fe4670292382"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c846bf5b0d27b3cdcf7adc75a414e12d95568da156112c75d38d56434cb73e2e",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2796,
+      "first_chunk_seconds": 32.428,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2793,
+        "prompt_tokens": 1714,
+        "total_tokens": 4507,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2165,
+          "text_tokens": 628
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "81edc81f98961bc8fe42a5f350ba687d8eeafd4e035cf00982e6abc8405da607",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 54.444,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_66fd20648d5a62b22b7d",
+        "public:pbf_6711d0e0fe4670292382"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "95d5fe751508b191426f26dc877c5593987be3d07c2d496229ba25c20af61a85",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2875,
+      "first_chunk_seconds": 46.483,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2873,
+        "prompt_tokens": 1731,
+        "total_tokens": 4604,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2263,
+          "text_tokens": 610
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "02e606df0838aa00b44e92c4b8f39d951516b21fa958574fc88b18a41b4037db",
+      "status": "completed",
+      "latency_seconds": 69.253
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_66fd20648d5a62b22b7d",
+        "public:pbf_6711d0e0fe4670292382"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e6c4979a876e12dfe9b601ceb3661150e73477d84540739bf664b5039ef2db88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.086
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_66fd20648d5a62b22b7d",
+        "public:pbf_6711d0e0fe4670292382"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e6c4979a876e12dfe9b601ceb3661150e73477d84540739bf664b5039ef2db88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.967
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_66fd20648d5a62b22b7d",
+        "public:pbf_6711d0e0fe4670292382"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e6c4979a876e12dfe9b601ceb3661150e73477d84540739bf664b5039ef2db88",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.201
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,214 @@
+{
+  "input_sha256": "3c0e535cd995066e3f2ed49c204dcc9684b496657c1cb6fde53a91489e1191cf",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006685",
+      "decision": "ready",
+      "subject": "master control for the Tardis",
+      "relation_id": "entity_to_position_in_space",
+      "relation_definition": "Spatial position of an entity within a specified room or container; the subject names the entity and the qualifying space is retained in the canonical fact.",
+      "direction": "entity -> position within specified space",
+      "answer": "center",
+      "canonical_fact": "The master control for the Tardis is in the center of the main room.",
+      "prompt_en": "In what position within the main room is the master control for the Tardis?",
+      "evidence_quotes": [
+        "The master control for the Tardis is where in the main room?",
+        "center"
+      ],
+      "reason": "Source QA directly states the master control is at 'center' of the main room. No existing catalog relation captures an intra-space positional fact (entity_to_containing_location is limited to geographic containment). Proposing a precise new relation entity_to_position_in_space. Evidence is a literal substring of source_answer; prompt omits the answer.",
+      "english": {
+        "direction": "entity -> position within specified space",
+        "relation_id": "entity_to_position_in_space",
+        "answer": "center",
+        "canonical_fact": "The master control for the Tardis is in the center of the main room.",
+        "subject": "master control for the Tardis",
+        "prompt_en": "In what position within the main room is the master control for the Tardis?",
+        "relation_definition": "Spatial position of an entity within a specified room or container; the subject names the entity and the qualifying space is retained in the canonical fact.",
+        "answer_aliases_en": [
+          "center"
+        ],
+        "relation_spec": {
+          "id": "entity_to_position_in_space",
+          "definition": "Spatial position of an entity within a specified room or container; the subject names the entity and the qualifying space is retained in the canonical fact.",
+          "direction": "entity -> position within specified space"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "abd8d909b368429eb057388e4eed96eb7dd0033e0d87e72f48da7ad2d1397ed4",
+      "input_sha256": "32e76727d2bbc72603a556d678a15edd10d25a3df296e7874820795d66232874",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006701",
+      "decision": "ready",
+      "subject": "Google Maps and other highway and street GPS services",
+      "relation_id": "replacer_to_replaced",
+      "relation_definition": "The entity or class that the subject has replaced or supplanted in function; implies succession or substitution.",
+      "direction": "replacing entity -> replaced entity",
+      "answer": "atlas",
+      "canonical_fact": "Google Maps and other highway and street GPS services have replaced atlas.",
+      "prompt_en": "What did Google Maps and other highway and street GPS services replace?",
+      "evidence_quotes": [
+        "Google Maps and other highway and street GPS services have replaced what?",
+        "atlas"
+      ],
+      "reason": "Source QA explicitly states the services 'replaced' 'atlas'. No existing catalog relation captures a replacement/supersession relation. Proposing replacer_to_replaced with direction from replacing entity to replaced entity. Answer 'atlas' is a literal substring of source_answer; prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "replacing entity -> replaced entity",
+        "relation_id": "replacer_to_replaced",
+        "answer": "atlas",
+        "canonical_fact": "Google Maps and other highway and street GPS services have replaced atlas.",
+        "subject": "Google Maps and other highway and street GPS services",
+        "prompt_en": "What did Google Maps and other highway and street GPS services replace?",
+        "relation_definition": "The entity or class that the subject has replaced or supplanted in function; implies succession or substitution.",
+        "answer_aliases_en": [
+          "atlas"
+        ],
+        "relation_spec": {
+          "id": "replacer_to_replaced",
+          "definition": "The entity or class that the subject has replaced or supplanted in function; implies succession or substitution.",
+          "direction": "replacing entity -> replaced entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b3edf9f364672603d9cc62910920f806dce8916a51b7ed84cb3583ebe3b2a0f6",
+      "input_sha256": "ee7206aa3663c341e11e861de092ca6ee579ce5d3219d2861a56f0eb4eaa0157",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006685",
+      "input_sha256": "32e76727d2bbc72603a556d678a15edd10d25a3df296e7874820795d66232874",
+      "english": {
+        "direction": "entity -> position within specified space",
+        "relation_id": "entity_to_position_in_space",
+        "answer": "center",
+        "canonical_fact": "The master control for the Tardis is in the center of the main room.",
+        "subject": "master control for the Tardis",
+        "prompt_en": "In what position within the main room is the master control for the Tardis?",
+        "relation_definition": "Spatial position of an entity within a specified room or container; the subject names the entity and the qualifying space is retained in the canonical fact.",
+        "answer_aliases_en": [
+          "center"
+        ],
+        "relation_spec": {
+          "id": "entity_to_position_in_space",
+          "definition": "Spatial position of an entity within a specified room or container; the subject names the entity and the qualifying space is retained in the canonical fact.",
+          "direction": "entity -> position within specified space"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "abd8d909b368429eb057388e4eed96eb7dd0033e0d87e72f48da7ad2d1397ed4",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006685",
+        "subject_zh": "Tardis的主控装置",
+        "prompt_zh": "Tardis的主控装置位于主房间的什么位置？",
+        "canonical_fact_zh": "Tardis的主控装置位于主房间的中心。",
+        "answer_zh": "中心",
+        "answer_aliases_zh": [
+          "中心"
+        ]
+      },
+      "translation_sha256": "8d65d050d0ae015704c48bd825345c4ecf0dc062afc07731400760e14f1faae0"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006701",
+      "input_sha256": "ee7206aa3663c341e11e861de092ca6ee579ce5d3219d2861a56f0eb4eaa0157",
+      "english": {
+        "direction": "replacing entity -> replaced entity",
+        "relation_id": "replacer_to_replaced",
+        "answer": "atlas",
+        "canonical_fact": "Google Maps and other highway and street GPS services have replaced atlas.",
+        "subject": "Google Maps and other highway and street GPS services",
+        "prompt_en": "What did Google Maps and other highway and street GPS services replace?",
+        "relation_definition": "The entity or class that the subject has replaced or supplanted in function; implies succession or substitution.",
+        "answer_aliases_en": [
+          "atlas"
+        ],
+        "relation_spec": {
+          "id": "replacer_to_replaced",
+          "definition": "The entity or class that the subject has replaced or supplanted in function; implies succession or substitution.",
+          "direction": "replacing entity -> replaced entity"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b3edf9f364672603d9cc62910920f806dce8916a51b7ed84cb3583ebe3b2a0f6",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_006701",
+        "subject_zh": "谷歌地图及其他公路和街道GPS服务",
+        "prompt_zh": "谷歌地图及其他公路和街道GPS服务取代了什么？",
+        "canonical_fact_zh": "谷歌地图及其他公路和街道GPS服务已经取代了地图集。",
+        "answer_zh": "地图集",
+        "answer_aliases_zh": [
+          "地图集"
+        ]
+      },
+      "translation_sha256": "c137ec3e0d3b13816bfc2c1bd7dbb686103071a98392866aa5ed978f2b782bc9"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006685",
+        "historical:raw_commonsense_qa_006701"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dab6757aa7012b5513a04ac6d50822ac30cc9d432b6b3adc3b1503240b70098d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2108,
+      "first_chunk_seconds": 16.376,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2249,
+        "prompt_tokens": 1715,
+        "total_tokens": 3964,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1701,
+          "text_tokens": 548
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "372bac1bc1fbb23cff5ad173c41de311c92294b39b527ee3c0785fbaa34c2fe2",
+      "status": "completed",
+      "latency_seconds": 46.76
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006685",
+        "historical:raw_commonsense_qa_006701"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e9cfc829cede65fe3a677a9960007d9c44ccbdf39f1c63a70c6e84dd73ec11b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 798,
+      "first_chunk_seconds": 3.366,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 802,
+        "prompt_tokens": 874,
+        "total_tokens": 1676,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 569,
+          "text_tokens": 233
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "aaf9d09b922da1402dd25e3436789a6d73b561ac9988b371b457cd343943ceee",
+      "status": "completed",
+      "latency_seconds": 13.51
+    }
+  ],
+  "status": "completed"
+}

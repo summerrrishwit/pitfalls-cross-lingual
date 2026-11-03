@@ -1,0 +1,214 @@
+{
+  "input_sha256": "fa1cd1295f0ed37754ece79d0b9fd3c3115a8487b4637cee87f479b721c1ccb4",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009005",
+      "decision": "ready",
+      "subject": "super ball",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "toy",
+      "canonical_fact": "A super ball is a toy.",
+      "prompt_en": "What category of item is a super ball?",
+      "evidence_quotes": [
+        "A super ball is a popular what that children enjoy?",
+        "toy"
+      ],
+      "reason": "Source explicitly states a super ball is a toy (class membership). entity_to_class fits: stable taxonomy-level classification of the entity 'super ball' into the class 'toy'. No conflict with any old extraction; both models agreed on 'toy' as the class. Qualifiers 'popular' and 'that children enjoy' are descriptive context in the question, not part of the classification relation, so the canonical fact omits them.",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "toy",
+        "canonical_fact": "A super ball is a toy.",
+        "subject": "super ball",
+        "prompt_en": "What category of item is a super ball?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "toy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "34193be1245c3cf0a72fbf6b1c9615eebdd8b9b58b5538fa1c58fcb409ff1051",
+      "input_sha256": "e6b62956d308c0e0b5091b014bb81cdc5aa8219309b1be98fcd1a625a1f15b6a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009039",
+      "decision": "ready",
+      "subject": "tallest skyscraper in the mid-western U.S.",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "chicago",
+      "canonical_fact": "The tallest skyscraper in the mid-western U.S. is located in Chicago.",
+      "prompt_en": "Where is the tallest skyscraper in the mid-western U.S. located?",
+      "evidence_quotes": [
+        "Where can you find the tallest skyscraper in the mid-western U.S.?",
+        "chicago"
+      ],
+      "reason": "Source question asks for the location of the tallest skyscraper in the mid-western U.S., and the answer is 'chicago'. entity_to_containing_location fits: the skyscraper (entity) is geographically contained within the city of Chicago. Both model annotations agree on 'chicago' as the location. The qualifier 'in the mid-western U.S.' is part of the subject identification, not the answer, and is retained in the subject.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "chicago",
+        "canonical_fact": "The tallest skyscraper in the mid-western U.S. is located in Chicago.",
+        "subject": "tallest skyscraper in the mid-western U.S.",
+        "prompt_en": "Where is the tallest skyscraper in the mid-western U.S. located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "chicago"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "665b2b008a6ab62c0a20b9721e09c2233184f238ab6de49b4ff7107253671ec1",
+      "input_sha256": "8769dd1686f029a3f60229bd17b1af54454bd355b6a0d3a02faedf7130a698d6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_009005",
+      "input_sha256": "e6b62956d308c0e0b5091b014bb81cdc5aa8219309b1be98fcd1a625a1f15b6a",
+      "english": {
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "answer": "toy",
+        "canonical_fact": "A super ball is a toy.",
+        "subject": "super ball",
+        "prompt_en": "What category of item is a super ball?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer_aliases_en": [
+          "toy"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "34193be1245c3cf0a72fbf6b1c9615eebdd8b9b58b5538fa1c58fcb409ff1051",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009005",
+        "subject_zh": "超级球",
+        "prompt_zh": "超级球属于什么类别的物品？",
+        "canonical_fact_zh": "超级球是一种玩具。",
+        "answer_zh": "玩具",
+        "answer_aliases_zh": [
+          "玩具"
+        ]
+      },
+      "translation_sha256": "d481eb39c8fd7f4a7005124fa296f21651d99de72b7934718add629d01908bd8"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_009039",
+      "input_sha256": "8769dd1686f029a3f60229bd17b1af54454bd355b6a0d3a02faedf7130a698d6",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "chicago",
+        "canonical_fact": "The tallest skyscraper in the mid-western U.S. is located in Chicago.",
+        "subject": "tallest skyscraper in the mid-western U.S.",
+        "prompt_en": "Where is the tallest skyscraper in the mid-western U.S. located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "chicago"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "665b2b008a6ab62c0a20b9721e09c2233184f238ab6de49b4ff7107253671ec1",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_009039",
+        "subject_zh": "美国中西部最高的摩天大楼",
+        "prompt_zh": "美国中西部最高的摩天大楼位于哪里？",
+        "canonical_fact_zh": "美国中西部最高的摩天大楼位于芝加哥。",
+        "answer_zh": "芝加哥",
+        "answer_aliases_zh": [
+          "芝加哥"
+        ]
+      },
+      "translation_sha256": "ea9e3ee741eff451759885819e42e1ee03533eb9b83c4c7f6f3fe816d5798f31"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009005",
+        "historical:raw_commonsense_qa_009039"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1dd07efd2b766f4239c75170bf8a8811567223dd582fd86ad78a33e3c25f9a13",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1568,
+      "first_chunk_seconds": 32.216,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1711,
+        "prompt_tokens": 1677,
+        "total_tokens": 3388,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1155,
+          "text_tokens": 556
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9d772fbcbc977bb55c627c49bebb23f53d86f90b3b3ff72c059c6dd0e980c671",
+      "status": "completed",
+      "latency_seconds": 56.424
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_009005",
+        "historical:raw_commonsense_qa_009039"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0d257928def244576c70d5aee21d556eeb1f0208569650455288b769d52f3c8f",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 677,
+      "first_chunk_seconds": 30.897,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 719,
+        "prompt_tokens": 820,
+        "total_tokens": 1539,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 582,
+          "text_tokens": 137
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b4639db3e440bd90640f635870c1d1803d8b23cefbe1bf227fd8e6e21203d901",
+      "status": "completed",
+      "latency_seconds": 43.109
+    }
+  ],
+  "status": "completed"
+}

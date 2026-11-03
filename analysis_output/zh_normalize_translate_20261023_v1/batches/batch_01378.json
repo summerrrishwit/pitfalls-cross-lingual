@@ -1,0 +1,189 @@
+{
+  "input_sha256": "8a84491e74b0647f4dd0baad76a4fbd27fd377568f929e8a8e814f1673509a16",
+  "normalized": [
+    {
+      "record_id": "public:pbf_8e43a7bb91e4dd7c582e",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The answer '3000 N' is numerically identical to the input-force value stated in the source question ('delivers a force of 3000 N to a board'). Any faithful prompt_en describing the karate-chop scenario necessarily contains the string '3000 N', violating the constraint that prompt_en must not contain its answer. No catalog relation fits 'magnitude' of a reaction force; a new relation would need to be proposed, but the prompt constraint cannot be satisfied. Defer.",
+      "input_sha256": "7ab2a5ce17118bf330c131ec421f49269de9d5c3ca3b8cbc77e5e19585bba87a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_8e536e16f069e2961a2f",
+      "decision": "ready",
+      "subject": "I Don't Like Spiders and Snakes",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "David Bellamy",
+      "canonical_fact": "David Bellamy wrote I Don't Like Spiders and Snakes.",
+      "prompt_en": "Who wrote I Don't Like Spiders and Snakes?",
+      "evidence_quotes": [
+        "who wrote i don't like spiders and snakes",
+        "David Bellamy"
+      ],
+      "reason": "Source question asks for the author of a specific work; source answer names David Bellamy. Catalog relation written_work_to_author (written work -> author) fits exactly in definition and direction. The old extraction's subject, answer, and canonical_fact match the source and are retained. prompt_en is option-free and does not contain the answer string 'David Bellamy'.",
+      "english": {
+        "answer": "David Bellamy",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote I Don't Like Spiders and Snakes?",
+        "direction": "written work -> author",
+        "subject": "I Don't Like Spiders and Snakes",
+        "canonical_fact": "David Bellamy wrote I Don't Like Spiders and Snakes.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "David Bellamy"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8524f06e3de3ace01afdd13ff3b231e2b02a8bf6f540b5b6e163e8f820d94c93",
+      "input_sha256": "8b459cf1f7fb062962d2f08c91e2322fac1baa16015b50ef107d5167b662b12c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_8e536e16f069e2961a2f",
+      "input_sha256": "8b459cf1f7fb062962d2f08c91e2322fac1baa16015b50ef107d5167b662b12c",
+      "english": {
+        "answer": "David Bellamy",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote I Don't Like Spiders and Snakes?",
+        "direction": "written work -> author",
+        "subject": "I Don't Like Spiders and Snakes",
+        "canonical_fact": "David Bellamy wrote I Don't Like Spiders and Snakes.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "David Bellamy"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "8524f06e3de3ace01afdd13ff3b231e2b02a8bf6f540b5b6e163e8f820d94c93",
+      "translation": {
+        "record_id": "public:pbf_8e536e16f069e2961a2f",
+        "subject_zh": "《我不喜欢蜘蛛和蛇》",
+        "prompt_zh": "谁写了《我不喜欢蜘蛛和蛇》？",
+        "canonical_fact_zh": "大卫·贝拉米写了《我不喜欢蜘蛛和蛇》。",
+        "answer_zh": "大卫·贝拉米",
+        "answer_aliases_zh": [
+          "大卫·贝拉米"
+        ]
+      },
+      "translation_sha256": "a35b8b1c103b02d8366e06a154f3ff742f2a01e2c909d8b461cef94b0fb26a03"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8e43a7bb91e4dd7c582e",
+        "public:pbf_8e536e16f069e2961a2f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6d685a7a778ef5b8655cd67de5ad03b03d827ff2ef4e0df681e2c9788a2a328d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2946,
+      "first_chunk_seconds": 37.001,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2990,
+        "prompt_tokens": 1701,
+        "total_tokens": 4691,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2365,
+          "text_tokens": 625
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "fa63e1841f0977791e40356f6deb843b8f28e80b4d3b1db4d8c6ad7457d7527d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 64.452,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_8e43a7bb91e4dd7c582e",
+        "public:pbf_8e536e16f069e2961a2f"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c9b7662605c990a240107345f9d65bd4d2d0cde4150d8ab28e4df169a99e7b7b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3070,
+      "first_chunk_seconds": 37.147,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3078,
+        "prompt_tokens": 1720,
+        "total_tokens": 4798,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2581,
+          "text_tokens": 497
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "512075d3dc530fef0e558b84ac47537a6f5fc27be92b33dcb1373d3b010d45bf",
+      "status": "completed",
+      "latency_seconds": 62.126
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_8e536e16f069e2961a2f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f8eea5c0f2d44687e3632910dbd1a83670edabbc71c7689ad4cf1f913d41c7a0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 681,
+      "first_chunk_seconds": 28.453,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 678,
+        "prompt_tokens": 530,
+        "total_tokens": 1208,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 539,
+          "text_tokens": 139
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3a4ca43043c1fb355a8e99c8e29ddc77df37ce57a125ded91834b06a706a2f37",
+      "status": "completed",
+      "latency_seconds": 33.691
+    }
+  ],
+  "status": "completed"
+}

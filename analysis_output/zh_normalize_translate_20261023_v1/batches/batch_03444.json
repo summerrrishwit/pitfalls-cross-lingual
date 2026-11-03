@@ -1,0 +1,71 @@
+{
+  "input_sha256": "ad099fc3a262be9af00ced56a69ba509f714e3e706e8c5ea82e354a47bbbc401",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004679",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation precisely captures 'observational location/domain where an entity is seen.' entity_to_containing_location is defined for geographic containment, not observational domain, and explicitly excludes process location. A meteor is a transient atmospheric event, not a contained entity. The fact 'you look to the sky to see a meteor' is a trivial commonsense observation rather than a precise reusable factual candidate. Model annotations are split (one extractable, one not). Defer without forcing a broad or ill-fitting relation.",
+      "input_sha256": "26757f705583d93facc756adad06f98ffe68f46cd7e641a78bf7e5ba67d50d81",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004680",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "No catalog relation captures 'activity prerequisite / required resource.' The question 'What must someone have in order to shop?' and answer 'have money' express a very general commonsense requirement (shopping requires money), not a precise, disambiguated fact about a specific entity. No listed relation fits (not class membership, not material composition, not containment). Model annotations are split (Qwen-3.8-Max extracted, sensenova deferred as typical_action). Insufficient support for a precise reusable relation; defer.",
+      "input_sha256": "d20c38dc4630058c1952e10a1d56afdc2b43b7bd901eea5a5264176eae0c8d13",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004679",
+        "historical:raw_commonsense_qa_004680"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c3420810d6e03b539c5a58fca448ad8a7126f631895347605733c4879e6245d4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1539,
+      "first_chunk_seconds": 64.505,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1665,
+        "prompt_tokens": 1569,
+        "total_tokens": 3234,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1244,
+          "text_tokens": 421
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0d9c7bac5c4a6e78239b5409a3809e28eaf5ffba337d77f46d005aff6c44804a",
+      "status": "completed",
+      "latency_seconds": 127.183
+    }
+  ],
+  "status": "completed"
+}

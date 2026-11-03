@@ -1,0 +1,195 @@
+{
+  "input_sha256": "b3cfbae59786e3043bf7dc44bdeb7ec025d388b1d41101e7df8a1196da1eacc7",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9b888b89fb6cf7e1f493",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The source_answer 'The university does not increase financial aid.' is an inherent substring of the source_question (it is the antecedent clause of the stated conditional proposition). Any faithful prompt asking for the antecedent must reproduce the full conditional, which contains the answer verbatim. No prompt can be constructed that is option-free and omits the answer while remaining faithful to the source.",
+      "input_sha256": "f8b4e6aec0bfd6f22ed888c58bcff090c838a1fa4d1824afb413af8a35cf0b00",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9b98d4a060b2b56309cb",
+      "decision": "ready",
+      "subject": "imperatives according to Kant",
+      "relation_id": "concept_to_expressing_word",
+      "relation_definition": "The specific word or term designated by a named thinker or philosophical tradition as expressing a given concept or notion; retains the attribution and scope.",
+      "direction": "specified concept in a named framework -> expressing word/term",
+      "answer": "ought",
+      "canonical_fact": "According to Kant, all imperatives are expressed by the word 'ought'.",
+      "prompt_en": "According to Kant, all imperatives are expressed by which word?",
+      "evidence_quotes": [
+        "According to Kant, all imperatives are expressed by the word",
+        "\"ought.\""
+      ],
+      "reason": "The source question asks for the word that expresses Kant's imperatives; the answer 'ought' is a concise literal substring of source_answer. No catalog relation fits exactly (this is not a definition, alias, or symbol-meaning pairing), so a precise new relation 'concept_to_expressing_word' is proposed with explicit direction.",
+      "english": {
+        "answer": "ought",
+        "relation_id": "concept_to_expressing_word",
+        "prompt_en": "According to Kant, all imperatives are expressed by which word?",
+        "direction": "specified concept in a named framework -> expressing word/term",
+        "subject": "imperatives according to Kant",
+        "canonical_fact": "According to Kant, all imperatives are expressed by the word 'ought'.",
+        "relation_definition": "The specific word or term designated by a named thinker or philosophical tradition as expressing a given concept or notion; retains the attribution and scope.",
+        "answer_aliases_en": [
+          "ought",
+          "\"ought.\""
+        ],
+        "relation_spec": {
+          "id": "concept_to_expressing_word",
+          "definition": "The specific word or term designated by a named thinker or philosophical tradition as expressing a given concept or notion; retains the attribution and scope.",
+          "direction": "specified concept in a named framework -> expressing word/term"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "57e3ce04f46830bb55146b21aa0fd8b9d9a497d8e78729dc10de3a2805797e03",
+      "input_sha256": "3966ea6db79374384c467556e109e634e196ce28913410e5dbff821aab1823a5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9b98d4a060b2b56309cb",
+      "input_sha256": "3966ea6db79374384c467556e109e634e196ce28913410e5dbff821aab1823a5",
+      "english": {
+        "answer": "ought",
+        "relation_id": "concept_to_expressing_word",
+        "prompt_en": "According to Kant, all imperatives are expressed by which word?",
+        "direction": "specified concept in a named framework -> expressing word/term",
+        "subject": "imperatives according to Kant",
+        "canonical_fact": "According to Kant, all imperatives are expressed by the word 'ought'.",
+        "relation_definition": "The specific word or term designated by a named thinker or philosophical tradition as expressing a given concept or notion; retains the attribution and scope.",
+        "answer_aliases_en": [
+          "ought",
+          "\"ought.\""
+        ],
+        "relation_spec": {
+          "id": "concept_to_expressing_word",
+          "definition": "The specific word or term designated by a named thinker or philosophical tradition as expressing a given concept or notion; retains the attribution and scope.",
+          "direction": "specified concept in a named framework -> expressing word/term"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "57e3ce04f46830bb55146b21aa0fd8b9d9a497d8e78729dc10de3a2805797e03",
+      "translation": {
+        "record_id": "public:pbf_9b98d4a060b2b56309cb",
+        "subject_zh": "康德意义上的命令",
+        "prompt_zh": "根据康德，所有命令都由哪个词来表达？",
+        "canonical_fact_zh": "根据康德，所有命令都由'应当'这个词来表达。",
+        "answer_zh": "应当",
+        "answer_aliases_zh": [
+          "应当",
+          "应当。"
+        ]
+      },
+      "translation_sha256": "46cd6804f0299a3d3b02896e4b9b8391e60dfd02ea301f144679c53be70cbe17"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9b888b89fb6cf7e1f493",
+        "public:pbf_9b98d4a060b2b56309cb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6a5b6192aa6ce8d62933a0ccf2f5f3b3ee594216ca666088974e2030f2319f77",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3202,
+      "first_chunk_seconds": 1.696,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3208,
+        "prompt_tokens": 1784,
+        "total_tokens": 4992,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2512,
+          "text_tokens": 696
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3bd731891ec199010878b1f17801bd64ad0ac31742072678aeb3c4f8a0a17048",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 28.126,
+      "validation_code": "answer_leaked_in_prompt"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9b888b89fb6cf7e1f493",
+        "public:pbf_9b98d4a060b2b56309cb"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "22e0eac9edf7d42e580d0dcead273f1fc60954a521bf76865551bf2cf31c2642",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3452,
+      "first_chunk_seconds": 24.996,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3459,
+        "prompt_tokens": 1803,
+        "total_tokens": 5262,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2980,
+          "text_tokens": 479
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "5f1f33ca382fa5997915570698c43d8bf3fbd65a894cbc7e8d458fbe7c03b097",
+      "status": "completed",
+      "latency_seconds": 53.118
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9b98d4a060b2b56309cb"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e008dc04fde5b12368f3e2dc7582bebf25f9abd15a05778295c6b4245dd342f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 922,
+      "first_chunk_seconds": 25.281,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 920,
+        "prompt_tokens": 567,
+        "total_tokens": 1487,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 792,
+          "text_tokens": 128
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "875b473aa2f0244b54bbd2686d05a89b160ac2b1ded5fb7183e7b7e855612768",
+      "status": "completed",
+      "latency_seconds": 32.442
+    }
+  ],
+  "status": "completed"
+}

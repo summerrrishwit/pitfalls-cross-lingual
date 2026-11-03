@@ -1,0 +1,217 @@
+{
+  "input_sha256": "79cd44264a130c9b787438a6b0fb05c7dbc86e60627c89742c369c3031e5c739",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9905990a135d73d2d855",
+      "decision": "ready",
+      "subject": "EM algorithm",
+      "relation_id": "algorithm_to_step_for_task",
+      "relation_definition": "Named algorithm -> specific step/component that must be modified to achieve a stated variant goal (e.g., switching from MLE to MAP estimation).",
+      "direction": "algorithm -> step to modify for specified task variant",
+      "answer": "Maximization",
+      "canonical_fact": "In the EM algorithm, the Maximization step is the step that must be modified to obtain MAP estimates instead of maximum likelihood estimates.",
+      "prompt_en": "In the EM algorithm, which step must be modified to obtain MAP estimates instead of maximum likelihood estimates?",
+      "evidence_quotes": [
+        "Which step or steps do you need to modify?",
+        "Maximization"
+      ],
+      "reason": "Source question explicitly asks which step of the EM algorithm to modify for MAP; source answer is 'Maximization'. No catalog relation captures 'which component of an algorithm to modify for a task variant', so a new precise relation is proposed. The answer is a literal substring of source_answer and the prompt does not leak the answer.",
+      "english": {
+        "answer": "Maximization",
+        "relation_id": "algorithm_to_step_for_task",
+        "prompt_en": "In the EM algorithm, which step must be modified to obtain MAP estimates instead of maximum likelihood estimates?",
+        "direction": "algorithm -> step to modify for specified task variant",
+        "subject": "EM algorithm",
+        "canonical_fact": "In the EM algorithm, the Maximization step is the step that must be modified to obtain MAP estimates instead of maximum likelihood estimates.",
+        "relation_definition": "Named algorithm -> specific step/component that must be modified to achieve a stated variant goal (e.g., switching from MLE to MAP estimation).",
+        "answer_aliases_en": [
+          "Maximization"
+        ],
+        "relation_spec": {
+          "id": "algorithm_to_step_for_task",
+          "definition": "Named algorithm -> specific step/component that must be modified to achieve a stated variant goal (e.g., switching from MLE to MAP estimation).",
+          "direction": "algorithm -> step to modify for specified task variant"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cc7f97b944c8ff43bfbaaf1cd832eed66966c48f508097f168a996f0eac7adcc",
+      "input_sha256": "d0c946d7dcf1fd014ba75ec04e28ffbeb1432893e16c66e129f397750718b692",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_990881694ff105aa1421",
+      "decision": "ready",
+      "subject": "most strikeouts in a single MLB game",
+      "relation_id": "record_to_value",
+      "relation_definition": "Named sports/statistical record -> the record value (numeric quantity) as officially recognized.",
+      "direction": "record description -> record value",
+      "answer": "20.0",
+      "canonical_fact": "The record for the most strikeouts in a single MLB game is 20.0.",
+      "prompt_en": "What is the record for the most strikeouts in a single MLB game?",
+      "evidence_quotes": [
+        "what's the most strikeouts in a mlb game",
+        "20.0"
+      ],
+      "reason": "Source question asks for the MLB single-game strikeout record; source answer is '20.0'. No catalog relation covers 'record -> record value', so a new precise relation 'record_to_value' is proposed. The answer is kept exactly as '20.0' per source. The prompt does not contain the numeric answer.",
+      "english": {
+        "answer": "20.0",
+        "relation_id": "record_to_value",
+        "prompt_en": "What is the record for the most strikeouts in a single MLB game?",
+        "direction": "record description -> record value",
+        "subject": "most strikeouts in a single MLB game",
+        "canonical_fact": "The record for the most strikeouts in a single MLB game is 20.0.",
+        "relation_definition": "Named sports/statistical record -> the record value (numeric quantity) as officially recognized.",
+        "answer_aliases_en": [
+          "20.0",
+          "20"
+        ],
+        "relation_spec": {
+          "id": "record_to_value",
+          "definition": "Named sports/statistical record -> the record value (numeric quantity) as officially recognized.",
+          "direction": "record description -> record value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b6445f8f0b4ece75077e1a7b3739016ab375a041a98876b326113c6da8557a4f",
+      "input_sha256": "4b83281811b89182d52d37c5db612916dc5f0cf41e173f0ab043b2ac762fe4ad",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9905990a135d73d2d855",
+      "input_sha256": "d0c946d7dcf1fd014ba75ec04e28ffbeb1432893e16c66e129f397750718b692",
+      "english": {
+        "answer": "Maximization",
+        "relation_id": "algorithm_to_step_for_task",
+        "prompt_en": "In the EM algorithm, which step must be modified to obtain MAP estimates instead of maximum likelihood estimates?",
+        "direction": "algorithm -> step to modify for specified task variant",
+        "subject": "EM algorithm",
+        "canonical_fact": "In the EM algorithm, the Maximization step is the step that must be modified to obtain MAP estimates instead of maximum likelihood estimates.",
+        "relation_definition": "Named algorithm -> specific step/component that must be modified to achieve a stated variant goal (e.g., switching from MLE to MAP estimation).",
+        "answer_aliases_en": [
+          "Maximization"
+        ],
+        "relation_spec": {
+          "id": "algorithm_to_step_for_task",
+          "definition": "Named algorithm -> specific step/component that must be modified to achieve a stated variant goal (e.g., switching from MLE to MAP estimation).",
+          "direction": "algorithm -> step to modify for specified task variant"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cc7f97b944c8ff43bfbaaf1cd832eed66966c48f508097f168a996f0eac7adcc",
+      "translation": {
+        "record_id": "public:pbf_9905990a135d73d2d855",
+        "subject_zh": "EM算法",
+        "prompt_zh": "在EM算法中，为了获得MAP估计而非极大似然估计，需要修改哪个步骤？",
+        "canonical_fact_zh": "在EM算法中，需要修改的步骤是最大化步骤，以获得MAP估计而非极大似然估计。",
+        "answer_zh": "最大化",
+        "answer_aliases_zh": [
+          "最大化"
+        ]
+      },
+      "translation_sha256": "011fba0691e08409db4181042f1104c536750c3a9963eb8b820841cb71a6c97c"
+    },
+    {
+      "record_id": "public:pbf_990881694ff105aa1421",
+      "input_sha256": "4b83281811b89182d52d37c5db612916dc5f0cf41e173f0ab043b2ac762fe4ad",
+      "english": {
+        "answer": "20.0",
+        "relation_id": "record_to_value",
+        "prompt_en": "What is the record for the most strikeouts in a single MLB game?",
+        "direction": "record description -> record value",
+        "subject": "most strikeouts in a single MLB game",
+        "canonical_fact": "The record for the most strikeouts in a single MLB game is 20.0.",
+        "relation_definition": "Named sports/statistical record -> the record value (numeric quantity) as officially recognized.",
+        "answer_aliases_en": [
+          "20.0",
+          "20"
+        ],
+        "relation_spec": {
+          "id": "record_to_value",
+          "definition": "Named sports/statistical record -> the record value (numeric quantity) as officially recognized.",
+          "direction": "record description -> record value"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b6445f8f0b4ece75077e1a7b3739016ab375a041a98876b326113c6da8557a4f",
+      "translation": {
+        "record_id": "public:pbf_990881694ff105aa1421",
+        "subject_zh": "MLB单场最多三振数纪录",
+        "prompt_zh": "MLB单场比赛中最多少次三振的纪录是多少？",
+        "canonical_fact_zh": "MLB单场比赛中最多少次三振的纪录为20.0。",
+        "answer_zh": "20.0",
+        "answer_aliases_zh": [
+          "20.0",
+          "20"
+        ]
+      },
+      "translation_sha256": "1b2fd5d8bc749e5d09075153ce8ef62345e4a0a75c92eaddcb30f94630657d58"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9905990a135d73d2d855",
+        "public:pbf_990881694ff105aa1421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ddb8766a7054e06dec4f6ca2116da964ff89e6d72051192a31a4fdf7fd8f09bd",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2352,
+      "first_chunk_seconds": 46.943,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2350,
+        "prompt_tokens": 1704,
+        "total_tokens": 4054,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1778,
+          "text_tokens": 572
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "0554f09d9a6f4539727407cf0d919c7e376975466dcc44db42fed7ace2a085dd",
+      "status": "completed",
+      "latency_seconds": 65.47
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9905990a135d73d2d855",
+        "public:pbf_990881694ff105aa1421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "74ca757657b6f5c656addd37eee5e4b3bf416c66629099c18a02f4d05025c388",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1455,
+      "first_chunk_seconds": 33.273,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1463,
+        "prompt_tokens": 908,
+        "total_tokens": 2371,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1186,
+          "text_tokens": 277
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d6099b1c7451afc168ef5fbd9494239904eb3b4687eafcd68ba767be867cec8b",
+      "status": "completed",
+      "latency_seconds": 48.162
+    }
+  ],
+  "status": "completed"
+}

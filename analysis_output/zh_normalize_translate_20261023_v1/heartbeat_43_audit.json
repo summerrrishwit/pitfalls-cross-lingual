@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-24T06:44:21.785927+00:00",
+  "state": "blocked_api_recovery_cooldown",
+  "fatal_error_code": "gateway_zero_usage_error_response",
+  "fatal_sha256": "dc2266380ad4e94213f0cbd18e6b64a60ba7aa43102a577a71b18b6f329d9ecf",
+  "guard": {
+    "at": "2026-10-24T06:43:47.206438+00:00",
+    "fingerprint": "fea920bc480ef60092ac87617e8c8a4e097e5e7afb4ad49e1966b9e0f9aecc70",
+    "pid": 30812,
+    "eligible_repair": true,
+    "last_activity_age_seconds": 185.29725885391235,
+    "state": "recoverable_gateway",
+    "retryable_technical_batches": 23,
+    "policy_sha256": "4424f9f26a61ee5f9b6d6ba0a5de7f30dcd176c3410bb1fa16f8911145fea3aa"
+  },
+  "recovery_events": [
+    {
+      "at": "2026-10-24T06:41:20.493129+00:00",
+      "attempt_id": "auto_20261024T064120493007",
+      "event": "recovery_attempt_started",
+      "trigger": "recoverable_gateway"
+    },
+    {
+      "at": "2026-10-24T06:42:43.998045+00:00",
+      "attempt_id": "auto_20261024T064120493007",
+      "event": "recovery_attempt_finished",
+      "result": "probe_failed",
+      "manual_block": false,
+      "concurrency": 8,
+      "returncode": 1
+    }
+  ],
+  "recovery_probe_reports": [
+    {
+      "path": "analysis_output/zh_normalize_translate_20261023_v1/automatic_recovery/attempts/auto_20261024T064120493007/probe_c1/report.json",
+      "sha256": "e558651425b843596177b9d4d2e21c9b8e5540f911e3aa2eb0166477c9be967b",
+      "levels": [
+        {
+          "concurrency": 1,
+          "requests": 1,
+          "peak_in_flight": 1,
+          "completed": 1,
+          "failed": 0,
+          "http_status_counts": {},
+          "response_models": {
+            "Qwen-3.8-Max": 1
+          },
+          "identity_stable": true,
+          "wall_seconds": 20.106,
+          "p50_seconds": 20.106,
+          "p95_seconds": 20.106,
+          "requests_per_minute": 2.984,
+          "semantic_case_matches": 4,
+          "semantic_cases_total": 4,
+          "bounded_probe_passed": true
+        }
+      ]
+    },
+    {
+      "path": "analysis_output/zh_normalize_translate_20261023_v1/automatic_recovery/attempts/auto_20261024T064120493007/probe_c8/report.json",
+      "sha256": "c63e6413a4fdeea4a3c16d7ae0722a988f40b58230ba047619ce02f6cf278151",
+      "levels": [
+        {
+          "concurrency": 8,
+          "requests": 8,
+          "peak_in_flight": 8,
+          "completed": 7,
+          "failed": 1,
+          "http_status_counts": {},
+          "response_models": {
+            "Qwen-3.8-Max": 7
+          },
+          "identity_stable": true,
+          "wall_seconds": 62.765,
+          "p50_seconds": 43.554,
+          "p95_seconds": 62.763,
+          "requests_per_minute": 6.692,
+          "semantic_case_matches": 28,
+          "semantic_cases_total": 28,
+          "bounded_probe_passed": false
+        }
+      ]
+    }
+  ],
+  "production_restarted": false,
+  "new_finalized_packets": [
+    "packet_0036",
+    "packet_0037",
+    "packet_0038",
+    "packet_0039"
+  ],
+  "real_luna_agents": [
+    "/root/zh_translation_luna_0036_0037",
+    "/root/zh_translation_luna_0038",
+    "/root/zh_translation_luna_0039"
+  ],
+  "real_sol_agent": "/root/zh_translation_sol_0039",
+  "new_reviewed": 73,
+  "new_counts": {
+    "accepted": 69,
+    "rejected": 3,
+    "deferred": 1
+  },
+  "reviewed_counts": {
+    "zh_translation_accepted": 757,
+    "zh_translation_rejected": 22,
+    "zh_translation_deferred": 1
+  },
+  "reviewed_unique_records": 780,
+  "unfinalized_packets": [],
+  "summary": {
+    "at": "2026-10-24T06:43:35.067284+00:00",
+    "source_count": 7250,
+    "normalized_count": 802,
+    "translated_count": 780,
+    "reviewed_count": 780,
+    "source_status_counts": {
+      "zh_translation_accepted": 757,
+      "zh_translation_rejected": 22,
+      "normalization_defer": 4,
+      "technical_normalization_failed": 36,
+      "technical_translation_failed": 18,
+      "zh_translation_deferred": 1,
+      "pending_normalization": 6412
+    },
+    "counts_are_not_deduplicated_facts_or_net_new160": true,
+    "new_target_behavior_calls": 0,
+    "formal_experiment_eligible": false,
+    "human_gold": false,
+    "files": {
+      "accepted_chinese_candidates.jsonl": "15f12c5ce09a697ea490e439907d6b7e06fc1a629aa5d3cfae465b89c13e1928",
+      "source_coverage.jsonl": "9f1dad9df9edf816ccb5eb9f7bc9a6de8c07b183711bc20b24aafa4a56a3812d",
+      "normalized_candidates.jsonl": "978e33ef643c76ac68c777137faceaa8ffb0876961b12462ddb34ff18ec5e0f1"
+    }
+  },
+  "historical_technical_failed_records": 38,
+  "historical_failures_not_added_to_current_partition": true,
+  "frozen_operations_and_packet_hashes_valid": true,
+  "historical_review_recovery_exposure_attempt_prefixes_valid": true,
+  "human_gold": false,
+  "formal_experiment_eligible": false
+}

@@ -1,0 +1,189 @@
+{
+  "input_sha256": "96dd8b9cb662840044c9d063de098213aa0328a7981cae32c58ff2fbe417e0e7",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000122",
+      "decision": "ready",
+      "subject": "living species of bird considered the largest of the raptors",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "golden eagles",
+      "canonical_fact": "The living species of bird considered the largest of the raptors is golden eagles.",
+      "prompt_en": "What living species of bird is considered the largest of the raptors?",
+      "evidence_quotes": [
+        "largest of the raptors",
+        "golden eagles"
+      ],
+      "reason": "The source question defines an identifying description (largest living raptor) and the source answer names the unique entity (golden eagles). This matches description_to_entity exactly: a qualified identifying description resolves to one entity.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "golden eagles",
+        "canonical_fact": "The living species of bird considered the largest of the raptors is golden eagles.",
+        "subject": "living species of bird considered the largest of the raptors",
+        "prompt_en": "What living species of bird is considered the largest of the raptors?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "golden eagles"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "b878b0954cd20f46f0cf0d848fce4ae749f1f02a498297c24e051413be4ba4fc",
+      "input_sha256": "57e38f9d46762afd0f1479f6c8456405c5064dcd2e2b241240f8f46ba668e8c6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000123",
+      "decision": "ready",
+      "subject": "mechanical weathering that occurs when one rock bumps against another rock",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "abrasion",
+      "canonical_fact": "The mechanical weathering that occurs when one rock bumps against another rock is abrasion.",
+      "prompt_en": "What type of mechanical weathering occurs when one rock bumps against another rock?",
+      "evidence_quotes": [
+        "mechanical weathering occurs when one rock bumps against another rock",
+        "abrasion"
+      ],
+      "reason": "The source question supplies a defining description of a process and the source answer gives the conventional term 'abrasion'. This is description_to_term (description -> term), not term_to_definition (the inverse).",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "abrasion",
+        "canonical_fact": "The mechanical weathering that occurs when one rock bumps against another rock is abrasion.",
+        "subject": "mechanical weathering that occurs when one rock bumps against another rock",
+        "prompt_en": "What type of mechanical weathering occurs when one rock bumps against another rock?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "abrasion"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "dc81e19ee8e2f422aaeba1d6d77454f4c10e85f92e7936bee481555f935afe7b",
+      "input_sha256": "fd237395280d49a1c710f0d1a5edef92c758c24f759bbb055b235b1a0a4572d7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000122",
+        "historical:raw_sciq_000123"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0f053bd25fce81074a6144b5cd73fbf8243392b9fd50d3e8d9c33631959dfb0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1373,
+      "first_chunk_seconds": 1.248,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1407,
+        "prompt_tokens": 1735,
+        "total_tokens": 3142,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 888,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "3db7af6b24f347f38aa63dc3f222e2d77b35f8ed709322794f2a2cb8fe03391b",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 41.058,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000122",
+        "historical:raw_sciq_000123"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e470c81c54066d07cd484772ab316bcc8856efea997632d0b11f73928af5175b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1781,
+      "first_chunk_seconds": 1.444,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2097,
+        "prompt_tokens": 1754,
+        "total_tokens": 3851,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1623,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "58914b79b54796ca9abfc4b577d5dcdd9a699a13f44eb764add6ebcd6e2e9bd8",
+      "status": "completed",
+      "latency_seconds": 157.951
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000122",
+        "historical:raw_sciq_000123"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0d229b7064578fa33429c74a2ffe7fd5ac456883877a9de5b9953a60f7f916fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.698
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000122",
+        "historical:raw_sciq_000123"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0d229b7064578fa33429c74a2ffe7fd5ac456883877a9de5b9953a60f7f916fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.778
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000122",
+        "historical:raw_sciq_000123"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0d229b7064578fa33429c74a2ffe7fd5ac456883877a9de5b9953a60f7f916fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 31.992
+    }
+  ],
+  "status": "failed"
+}

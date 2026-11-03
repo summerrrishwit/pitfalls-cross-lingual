@@ -1,0 +1,157 @@
+{
+  "input_sha256": "4844ec37a4e5fecdf174e46662d4781bca8aa5a52859100ee93fe106c282bd39",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000936",
+      "decision": "ready",
+      "subject": "series of biochemical reactions by which an organism converts a given reactant to a specific end product",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "metabolic pathway",
+      "canonical_fact": "A series of biochemical reactions by which an organism converts a given reactant to a specific end product is called a metabolic pathway.",
+      "prompt_en": "What is the term for a series of biochemical reactions by which an organism converts a given reactant to a specific end product?",
+      "evidence_quotes": [
+        "series of biochemical reactions by which an organism converts a given reactant to a specific end product",
+        "metabolic pathway"
+      ],
+      "reason": "The source question supplies a defining description and asks for the conventional term; source_answer gives 'metabolic pathway' directly. description_to_term fits exactly (description -> term). Both model annotations agree on extraction.",
+      "english": {
+        "prompt_en": "What is the term for a series of biochemical reactions by which an organism converts a given reactant to a specific end product?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "metabolic pathway",
+        "canonical_fact": "A series of biochemical reactions by which an organism converts a given reactant to a specific end product is called a metabolic pathway.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "series of biochemical reactions by which an organism converts a given reactant to a specific end product",
+        "answer_aliases_en": [
+          "metabolic pathway"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1a4a79fefd3e4b0b50db287d86e9fd9561ec8c11558823b9b66fe6baaae4cc8c",
+      "input_sha256": "02f851afae128bb536c0571d17e8b57916edc821c253c4163d6f93f8d3319548",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000937",
+      "decision": "ready",
+      "subject": "occur in arteries that can cause heart attacks and strokes",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "clots",
+      "canonical_fact": "Clots occur in arteries and can cause heart attacks and strokes.",
+      "prompt_en": "What occurs in arteries and can cause heart attacks and strokes?",
+      "evidence_quotes": [
+        "occur in arteries that can cause heart attacks and strokes",
+        "clots"
+      ],
+      "reason": "The source question provides an identifying description (occurs in arteries; can cause heart attacks and strokes) and the answer is the entity 'clots'. description_to_entity fits: the description uniquely identifies the entity in this medical context. No catalog relation captures a pathological-occurrence/causal medical fact more precisely; description_to_entity is the closest without forcing a broad category.",
+      "english": {
+        "prompt_en": "What occurs in arteries and can cause heart attacks and strokes?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "clots",
+        "canonical_fact": "Clots occur in arteries and can cause heart attacks and strokes.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "occur in arteries that can cause heart attacks and strokes",
+        "answer_aliases_en": [
+          "clots"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a5a5e732c187926b0afeaf605dee46f2ef8bfba1ce2e94f518bdf207ef4b59af",
+      "input_sha256": "d6bd844e49e5416f37d69eb7ac94248a784fb453dc6e29bc9df6a94a134e195a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000936",
+        "historical:raw_sciq_000937"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5ac29000acb1e73db02bb40efaf69ffe031fcb321dceac347cb234633873dea3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1850,
+      "first_chunk_seconds": 2.054,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2099,
+        "prompt_tokens": 1773,
+        "total_tokens": 3872,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1565,
+          "text_tokens": 534
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c09de2eac7f8e534766d6fbf04f3dc6c31df82f30e3e0fa82e1584861bd57852",
+      "status": "completed",
+      "latency_seconds": 32.893
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000936",
+        "historical:raw_sciq_000937"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9bc1000679d918972329113ca4768abadcbaa803c99702a3feda9b77806adc57",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 13.559
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000936",
+        "historical:raw_sciq_000937"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9bc1000679d918972329113ca4768abadcbaa803c99702a3feda9b77806adc57",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 15.26
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000936",
+        "historical:raw_sciq_000937"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9bc1000679d918972329113ca4768abadcbaa803c99702a3feda9b77806adc57",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 23.109
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "b3e5422710855e60b56bbaa213b481f298395a3e2e4deb81333d0e96341d7dca",
+  "normalized": [
+    {
+      "record_id": "public:pbf_9a74a10b4961d3f6f05d",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'temperature of the remaining air' is a scenario-dependent physical quantity, not a stable identifiable entity. No catalog relation captures 'change-direction of a quantity under a specified physical condition.' Proposing a new relation for this narrow thermodynamics fact would be over-specific and not reusable as a general triple. The fact is better retained as a complete declarative statement rather than decomposed into subject-relation-answer.",
+      "input_sha256": "8c2ab069bc31bd1f49f48e12f2cd2e3cffe2cb0514c38b4166b4f12f6192803d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_9a74f7c273cdfefbec22",
+      "decision": "ready",
+      "subject": "first centaur Harry meets",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Ronan",
+      "canonical_fact": "The name of the first centaur Harry meets is Ronan.",
+      "prompt_en": "The name of the first centaur Harry meets is",
+      "evidence_quotes": [
+        "what is the name of the first centar harry meets",
+        "ronan"
+      ],
+      "reason": "The source question asks for the name of the first centaur Harry meets; the source answer is 'ronan.' The identifying description 'first centaur Harry meets' uniquely picks out the entity Ronan (Harry Potter and the Prisoner of Azkaban). The existing answer 'Ronan' is kept. The relation description_to_entity fits exactly: an explicitly qualified identifying description resolves to a unique named entity.",
+      "english": {
+        "answer": "Ronan",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The name of the first centaur Harry meets is",
+        "direction": "identifying description -> entity",
+        "subject": "first centaur Harry meets",
+        "canonical_fact": "The name of the first centaur Harry meets is Ronan.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Ronan"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "45d4157534a4afdcf93539a6dfc4c8150681ab6006383a04e84a45c8c43d54a8",
+      "input_sha256": "d234c12027ee40d83f5d1764d5f0d4a682fa9db19b169bf87e941874c4cb2a37",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_9a74f7c273cdfefbec22",
+      "input_sha256": "d234c12027ee40d83f5d1764d5f0d4a682fa9db19b169bf87e941874c4cb2a37",
+      "english": {
+        "answer": "Ronan",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The name of the first centaur Harry meets is",
+        "direction": "identifying description -> entity",
+        "subject": "first centaur Harry meets",
+        "canonical_fact": "The name of the first centaur Harry meets is Ronan.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Ronan"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "45d4157534a4afdcf93539a6dfc4c8150681ab6006383a04e84a45c8c43d54a8",
+      "translation": {
+        "record_id": "public:pbf_9a74f7c273cdfefbec22",
+        "subject_zh": "哈利遇到的第一个半人马",
+        "prompt_zh": "哈利遇到的第一个半人马的名字是",
+        "canonical_fact_zh": "哈利遇到的第一个半人马的名字是Ronan。",
+        "answer_zh": "Ronan",
+        "answer_aliases_zh": [
+          "Ronan"
+        ]
+      },
+      "translation_sha256": "2ed9a4ee10c48627b4f09d9460fb2e1e36da0fa1dd50c1e7809907cd8f09e170"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_9a74a10b4961d3f6f05d",
+        "public:pbf_9a74f7c273cdfefbec22"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "41560789a113f49098ddbc2024cf54e368d9a4c5123bf7061e9f49e0caab88d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2945,
+      "first_chunk_seconds": 37.677,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2943,
+        "prompt_tokens": 1613,
+        "total_tokens": 4556,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2475,
+          "text_tokens": 468
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4395b3f11682aa1b41f897188941cbbc88f63ecaf985a1e8c6dd33d8354ec084",
+      "status": "completed",
+      "latency_seconds": 60.903
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_9a74f7c273cdfefbec22"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e76fd8d006b9d6b9ff02045b870a54e48389fcd883b7f471255dbbd22ad331b6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 663,
+      "first_chunk_seconds": 35.895,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 660,
+        "prompt_tokens": 507,
+        "total_tokens": 1167,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 541,
+          "text_tokens": 119
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2c9c80c83c1c282fe4ab9cc408f359625b35b5a2f0fb9579447dd7390931bd43",
+      "status": "completed",
+      "latency_seconds": 41.01
+    }
+  ],
+  "status": "completed"
+}

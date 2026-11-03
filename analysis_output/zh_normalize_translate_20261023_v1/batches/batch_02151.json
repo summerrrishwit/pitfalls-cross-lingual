@@ -1,0 +1,222 @@
+{
+  "input_sha256": "00555a4c9f3f9c94d42da7b78ef64953b6b1b10fa1dd6230422ff5da85beadad",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000311",
+      "decision": "ready",
+      "subject": "cytoskeleton",
+      "relation_id": "cellular_structure_to_dependent_function",
+      "relation_definition": "The cellular function most directly dependent on a specified cellular structure; retain the superlative qualifier 'most directly'.",
+      "direction": "cellular structure -> cellular function",
+      "answer": "transport of material inside the cell",
+      "canonical_fact": "The cytoskeleton is the cellular structure on which transport of material inside the cell is most directly dependent.",
+      "prompt_en": "Which cell function is most directly dependent on the cytoskeleton?",
+      "evidence_quotes": [
+        "Which cell function is most directly dependent on the cytoskeleton?",
+        "transport of material inside the cell"
+      ],
+      "reason": "The source question directly asks which cell function most directly depends on the cytoskeleton, and the source answer is 'transport of material inside the cell.' No existing catalog relation captures a structure-to-function mapping in biology; a new precise relation cellular_structure_to_dependent_function is proposed. The 'most directly' qualifier is preserved.",
+      "english": {
+        "answer": "transport of material inside the cell",
+        "relation_id": "cellular_structure_to_dependent_function",
+        "prompt_en": "Which cell function is most directly dependent on the cytoskeleton?",
+        "direction": "cellular structure -> cellular function",
+        "subject": "cytoskeleton",
+        "canonical_fact": "The cytoskeleton is the cellular structure on which transport of material inside the cell is most directly dependent.",
+        "relation_definition": "The cellular function most directly dependent on a specified cellular structure; retain the superlative qualifier 'most directly'.",
+        "answer_aliases_en": [
+          "transport of material inside the cell"
+        ],
+        "relation_spec": {
+          "id": "cellular_structure_to_dependent_function",
+          "definition": "The cellular function most directly dependent on a specified cellular structure; retain the superlative qualifier 'most directly'.",
+          "direction": "cellular structure -> cellular function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "da0a079e89d3e28d7b08a51da32d343d3eb7c2d0c37923c74febd47a4c0136f7",
+      "input_sha256": "274e17907f6138617e144e402d9010f7f8fab6d307c9db260beaf3340a7ad0c1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_000313",
+      "decision": "ready",
+      "subject": "the water-quality factor evaluated by visual inspection of water to determine whether it is safe to drink",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "turbidity",
+      "canonical_fact": "Turbidity is the conventional term for the water-quality factor evaluated by visual inspection to determine whether water is safe to drink.",
+      "prompt_en": "What is the conventional water-quality term for the factor assessed by looking at the visual appearance of water to judge its safety for drinking?",
+      "evidence_quotes": [
+        "What factor did the man use to evaluate the safety of the water?",
+        "turbidity"
+      ],
+      "reason": "The source question presents a scenario in which a man evaluates water safety by looking at the water, and the source answer identifies the factor as 'turbidity.' The existing catalog relation description_to_term fits: the description (water-quality factor judged by visual appearance) uniquely maps to the conventional term 'turbidity.' No new relation is needed.",
+      "english": {
+        "answer": "turbidity",
+        "relation_id": "description_to_term",
+        "prompt_en": "What is the conventional water-quality term for the factor assessed by looking at the visual appearance of water to judge its safety for drinking?",
+        "direction": "description -> term",
+        "subject": "the water-quality factor evaluated by visual inspection of water to determine whether it is safe to drink",
+        "canonical_fact": "Turbidity is the conventional term for the water-quality factor evaluated by visual inspection to determine whether water is safe to drink.",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "turbidity"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "f5c5d0b74ec6c3548dcc3eb35644fbbe73095015c60821a58d8c30ded76906f2",
+      "input_sha256": "8dad79ac67d80c43d0eff06ed6389958795e741eed48bb2e95bea6b5dad61c3c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a1183a15bea094867e8e39bde283c5d979b1f86eff606774fea3bea51d1c17f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.203
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "a1183a15bea094867e8e39bde283c5d979b1f86eff606774fea3bea51d1c17f6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2970,
+      "first_chunk_seconds": 8.855,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3065,
+        "prompt_tokens": 1733,
+        "total_tokens": 4798,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2485,
+          "text_tokens": 580
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6fd9dfb8d2679159e945f4cc9c97a8e6411632b00601f3e37476e468b617e210",
+      "status": "completed",
+      "latency_seconds": 56.575
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.045
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.059
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.312
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.521
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.777
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_000311",
+        "historical:raw_ai2_arc_easy_000313"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c0a5ef045b0b79c4e557fcadc19c7e4fe1b92d938236a442d89ad0d66f518f5d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.231
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02151.json",
+      "sha256": "aea2015847aee378cf1013c5ae14b4cf1cf529687e97b0d7069da8907b7dd3b5",
+      "previous_status": "failed"
+    }
+  ]
+}

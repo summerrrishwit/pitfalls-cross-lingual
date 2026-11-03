@@ -1,0 +1,193 @@
+{
+  "input_sha256": "b6212edefa049e30132c67a460cbd7b87f7ea6a338b7eea2e6f0b2ac2d038483",
+  "normalized": [
+    {
+      "record_id": "public:pbf_6285839d84d4a358d65e",
+      "decision": "ready",
+      "subject": "I've Had the Time of My Life",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "Franke Previte",
+      "canonical_fact": "Franke Previte wrote the song I've Had the Time of My Life.",
+      "prompt_en": "Who wrote the song I've Had the Time of My Life?",
+      "evidence_quotes": [
+        "who wrote the song i've had the time of my life",
+        "Franke Previte"
+      ],
+      "reason": "The catalog relation written_work_to_author (written work -> author) fits exactly: a song is a written work, and the question asks for the songwriter. The existing answer 'Franke Previte' matches source_answer verbatim. No conflict; keep as-is.",
+      "english": {
+        "answer": "Franke Previte",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote the song I've Had the Time of My Life?",
+        "direction": "written work -> author",
+        "subject": "I've Had the Time of My Life",
+        "canonical_fact": "Franke Previte wrote the song I've Had the Time of My Life.",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer_aliases_en": [
+          "Franke Previte",
+          "00075248073 IPI",
+          "00075247860 IPI",
+          "Franke Jon Previte"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "49e2051b953b6968c5778ba8143b72ffa8e678e3cbf6bf1eb4fa99d5c93ba926",
+      "input_sha256": "41af589c66a39531d5300d47edeea661cbdbf614a6f1f1d00fe0c68f3388e264",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_6285f84169f7f518822b",
+      "decision": "ready",
+      "subject": "Craigieburn line",
+      "relation_id": "transit_line_to_station_platform",
+      "relation_definition": "The assigned platform number for a specified transit line at a named station; distinguishes the line's operational position from other lines or platform types.",
+      "direction": "transit line -> platform number at specified station",
+      "answer": "4",
+      "canonical_fact": "The Craigieburn line is at platform 4 at Flinders Street station.",
+      "prompt_en": "What platform number is the Craigieburn line at Flinders Street station?",
+      "evidence_quotes": [
+        "what platform is craigieburn line at flinders street",
+        "4.0"
+      ],
+      "reason": "No catalog relation captures a transit line's platform number at a specific station. Proposed new relation transit_line_to_station_platform with explicit definition and direction. Existing answer '4' is semantically identical to source_answer '4.0' (integer vs float representation); kept the concise existing form. prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "4",
+        "relation_id": "transit_line_to_station_platform",
+        "prompt_en": "What platform number is the Craigieburn line at Flinders Street station?",
+        "direction": "transit line -> platform number at specified station",
+        "subject": "Craigieburn line",
+        "canonical_fact": "The Craigieburn line is at platform 4 at Flinders Street station.",
+        "relation_definition": "The assigned platform number for a specified transit line at a named station; distinguishes the line's operational position from other lines or platform types.",
+        "answer_aliases_en": [
+          "4",
+          "4.0"
+        ],
+        "relation_spec": {
+          "id": "transit_line_to_station_platform",
+          "definition": "The assigned platform number for a specified transit line at a named station; distinguishes the line's operational position from other lines or platform types.",
+          "direction": "transit line -> platform number at specified station"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "885d5abdfca051510a0cb6e3a34be9af5795d6369f9721a22f6c6e04107dfc92",
+      "input_sha256": "a4698590a08849645b58161068fc49801ebf6e2e88c187e0324c2481ba99ef4d",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6285839d84d4a358d65e",
+        "public:pbf_6285f84169f7f518822b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2b90a0e5cbf1b0f8f7cbff1bcdb4c40b3660f0cd35e6977c373c809ef99224ad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 150.833
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_6285839d84d4a358d65e",
+        "public:pbf_6285f84169f7f518822b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "2b90a0e5cbf1b0f8f7cbff1bcdb4c40b3660f0cd35e6977c373c809ef99224ad",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1446,
+      "first_chunk_seconds": 32.771,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1443,
+        "prompt_tokens": 1664,
+        "total_tokens": 3107,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 890,
+          "text_tokens": 553
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a3377a6c6c37a2b8b545bf11008d204bf6b1d3622594294fed34d94000788ba2",
+      "status": "completed",
+      "latency_seconds": 44.183
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6285839d84d4a358d65e",
+        "public:pbf_6285f84169f7f518822b"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5795617e21f3f15f03fb1d498005b0bfd7c1799f075f6cf5b18233cea273370a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6285839d84d4a358d65e",
+        "public:pbf_6285f84169f7f518822b"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "5795617e21f3f15f03fb1d498005b0bfd7c1799f075f6cf5b18233cea273370a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 181.078
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_6285839d84d4a358d65e",
+        "public:pbf_6285f84169f7f518822b"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "5795617e21f3f15f03fb1d498005b0bfd7c1799f075f6cf5b18233cea273370a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1590,
+      "first_chunk_seconds": 46.155,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1587,
+        "prompt_tokens": 933,
+        "total_tokens": 2520,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1332,
+          "text_tokens": 255
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c8bf4bc7eb43eff5b60c2100b5a8b3377dc147d9b959424e7209b1eac06e5b79",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 58.63,
+      "validation_code": "duplicate_or_invalid_record_id"
+    }
+  ],
+  "status": "failed"
+}

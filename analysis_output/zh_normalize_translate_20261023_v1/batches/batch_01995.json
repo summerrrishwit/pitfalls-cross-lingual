@@ -1,0 +1,209 @@
+{
+  "input_sha256": "b70d2bb15f0d9e88262d6817235c0399d9d93c68d6f1afd38e8d5d063d7dc743",
+  "normalized": [
+    {
+      "record_id": "public:pbf_eeedb2c2a477349367b7",
+      "decision": "ready",
+      "subject": "alpha particle",
+      "relation_id": "entity_to_alias",
+      "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+      "direction": "entity -> alias",
+      "answer": "helium nucleus",
+      "canonical_fact": "An alpha particle is another name for a helium nucleus.",
+      "prompt_en": "An alpha particle is another name for a",
+      "evidence_quotes": [
+        "What is an alpha particle?",
+        "Another name for a helium nucleus"
+      ],
+      "reason": "Source explicitly states alpha particle is another name for a helium nucleus, i.e., an equivalent alias. entity_to_alias (entity -> alias) fits exactly: 'alpha particle' and 'helium nucleus' are two names for the same physical entity. No uncertainty or qualifier to preserve.",
+      "english": {
+        "answer": "helium nucleus",
+        "relation_id": "entity_to_alias",
+        "prompt_en": "An alpha particle is another name for a",
+        "direction": "entity -> alias",
+        "subject": "alpha particle",
+        "canonical_fact": "An alpha particle is another name for a helium nucleus.",
+        "relation_definition": "An actually equivalent name, keeping definition and descriptive property separate.",
+        "answer_aliases_en": [
+          "helium nucleus",
+          "Another name for a helium nucleus"
+        ],
+        "relation_spec": {
+          "id": "entity_to_alias",
+          "direction": "entity -> alias",
+          "definition": "An actually equivalent name, keeping definition and descriptive property separate."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a07d42c9b5d24db2eef7549df01ee549b3de9b82cad0ead1a9ecf8de412e27ac",
+      "input_sha256": "6fd61542d5c10a43858eea973515cfd33a99acf9f60539484d0f18d214404e94",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ef00c135dd7c8bf7db8f",
+      "decision": "ready",
+      "subject": "ratio of 3 dogs to 5 dogs",
+      "relation_id": "ratio_to_fractional_form",
+      "relation_definition": "The standard fraction (numerator over denominator) that represents a given ratio of two specified quantities.",
+      "direction": "specified ratio -> its fractional representation",
+      "answer": "3 over 5",
+      "canonical_fact": "The fraction that shows the ratio of 3 dogs to 5 dogs is 3 over 5.",
+      "prompt_en": "The fraction that shows the ratio of 3 dogs to 5 dogs is",
+      "evidence_quotes": [
+        "Which fraction shows the ratio of 3 dogs to 5 dogs?",
+        "3 over 5"
+      ],
+      "reason": "Source unambiguously identifies 3/5 as the fraction representing the 3-to-5 ratio. No catalog relation captures a mathematical notation/representation link, so a precise new relation ratio_to_fractional_form is proposed. The fact is a straightforward arithmetic correspondence with no uncertainty.",
+      "english": {
+        "answer": "3 over 5",
+        "relation_id": "ratio_to_fractional_form",
+        "prompt_en": "The fraction that shows the ratio of 3 dogs to 5 dogs is",
+        "direction": "specified ratio -> its fractional representation",
+        "subject": "ratio of 3 dogs to 5 dogs",
+        "canonical_fact": "The fraction that shows the ratio of 3 dogs to 5 dogs is 3 over 5.",
+        "relation_definition": "The standard fraction (numerator over denominator) that represents a given ratio of two specified quantities.",
+        "answer_aliases_en": [
+          "3 over 5"
+        ],
+        "relation_spec": {
+          "id": "ratio_to_fractional_form",
+          "definition": "The standard fraction (numerator over denominator) that represents a given ratio of two specified quantities.",
+          "direction": "specified ratio -> its fractional representation"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4d1f05166c37a4561d0c685eef1189ffc849fe2e26a2ea09f10c46f680a535b1",
+      "input_sha256": "bcf6288f90d82f57bde20bea53dcb2a62fa0cd76c90e0c9aa5010185a8f0b2fe",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "886ae249769d6ca27c9ad73e0e1f0875a39527056d6662bc697036fadc5023b1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2783,
+      "first_chunk_seconds": 17.763,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2914,
+        "prompt_tokens": 1611,
+        "total_tokens": 4525,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2402,
+          "text_tokens": 512
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6b688773c531fc0b66a31222e195cd7f674485c4a8570792b32e6f02f5d1bcc2",
+      "status": "completed",
+      "latency_seconds": 57.001
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.804
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.969
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.982
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.304
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 26.171
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_eeedb2c2a477349367b7",
+        "public:pbf_ef00c135dd7c8bf7db8f"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "cc88a5d60beb0cd1c7f2c8776f7c50dbac5066a49b0c6c97af81a642a906a459",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 12.397
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_01995.json",
+      "sha256": "7855873429a931489774812cee4ec8110ee98e0fa754741ce73c227b9e0120ed",
+      "previous_status": "failed"
+    }
+  ]
+}

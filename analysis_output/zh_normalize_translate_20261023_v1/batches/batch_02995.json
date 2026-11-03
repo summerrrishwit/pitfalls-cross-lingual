@@ -1,0 +1,211 @@
+{
+  "input_sha256": "90a630d8938475bd26258265c92766ae50b7a6ebab7272e9ff2151a047dd1dc0",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000420",
+      "decision": "ready",
+      "subject": "very massive stars",
+      "relation_id": "stellar_object_to_terminal_stellar_class",
+      "relation_definition": "The stellar class or evolutionary state that a specified type of massive star transitions into at the end of its lifecycle.",
+      "direction": "type of massive star -> terminal stellar class",
+      "answer": "red supergiants",
+      "canonical_fact": "Very massive stars end their lives by becoming red supergiants.",
+      "prompt_en": "How do very massive stars end their lives?",
+      "evidence_quotes": [
+        "How do very massive stars end their lives?",
+        "become red supergiants"
+      ],
+      "reason": "Source explicitly states very massive stars end their lives by becoming red supergiants. No existing catalog relation captures a terminal evolutionary-state transition (entity_to_class implies stable membership, not a lifecycle endpoint). Proposed new relation 'stellar_object_to_terminal_stellar_class' to precisely encode the direction 'massive-star type → terminal stellar class'.",
+      "english": {
+        "direction": "type of massive star -> terminal stellar class",
+        "relation_id": "stellar_object_to_terminal_stellar_class",
+        "answer": "red supergiants",
+        "canonical_fact": "Very massive stars end their lives by becoming red supergiants.",
+        "subject": "very massive stars",
+        "prompt_en": "How do very massive stars end their lives?",
+        "relation_definition": "The stellar class or evolutionary state that a specified type of massive star transitions into at the end of its lifecycle.",
+        "answer_aliases_en": [
+          "red supergiants"
+        ],
+        "relation_spec": {
+          "id": "stellar_object_to_terminal_stellar_class",
+          "definition": "The stellar class or evolutionary state that a specified type of massive star transitions into at the end of its lifecycle.",
+          "direction": "type of massive star -> terminal stellar class"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "f790415db5cb43bbec3022f2063d9abadc8d3c2b6ff0be8ce680db3d32dbd794",
+      "input_sha256": "ed1f50ecf089b374b7d2bdb5ae24b6cb8dcc0c9391b45b7bb7d9a45d4476f5a2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000421",
+      "decision": "ready",
+      "subject": "citrate",
+      "relation_id": "chemical_species_to_parent_molecule",
+      "relation_definition": "The parent molecular compound from which a specified ionized or derived chemical species originates through proton transfer.",
+      "direction": "ion/derived chemical form -> parent molecular compound",
+      "answer": "citric acid",
+      "canonical_fact": "Citrate is an ionized form of citric acid.",
+      "prompt_en": "What compound is citrate an ionized form of?",
+      "evidence_quotes": [
+        "What is citrate an ionized form of?",
+        "citric acid"
+      ],
+      "reason": "Source explicitly states citrate is an ionized form of citric acid. No existing catalog relation captures an ion-to-parent-compound chemical relationship (entity_to_class is taxonomy-level; entity_to_material is composition; abbreviation_to_expansion is naming). Proposed new relation 'chemical_species_to_parent_molecule' to precisely encode 'ionized form → parent molecular compound via proton transfer'.",
+      "english": {
+        "direction": "ion/derived chemical form -> parent molecular compound",
+        "relation_id": "chemical_species_to_parent_molecule",
+        "answer": "citric acid",
+        "canonical_fact": "Citrate is an ionized form of citric acid.",
+        "subject": "citrate",
+        "prompt_en": "What compound is citrate an ionized form of?",
+        "relation_definition": "The parent molecular compound from which a specified ionized or derived chemical species originates through proton transfer.",
+        "answer_aliases_en": [
+          "citric acid"
+        ],
+        "relation_spec": {
+          "id": "chemical_species_to_parent_molecule",
+          "definition": "The parent molecular compound from which a specified ionized or derived chemical species originates through proton transfer.",
+          "direction": "ion/derived chemical form -> parent molecular compound"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "0ed7b6617ab58d1bf51de88150ee1eb2b87cb5681f621b64a15bd1184275d5a2",
+      "input_sha256": "216517526550feec6802cc698565a610672245eaf75dcb064af8b2782d234c4a",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000420",
+        "historical:raw_sciq_000421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "2755b6f7d7eb8602d90d095082ae37c3c8c26934620a3cd7578a772eadee0da4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2993,
+      "first_chunk_seconds": 5.181,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3146,
+        "prompt_tokens": 1664,
+        "total_tokens": 4810,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2614,
+          "text_tokens": 532
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f7144f2dca930310896238e90413f8d9f7c9b93cd199daf46fdeec4c1cfeb521",
+      "status": "completed",
+      "latency_seconds": 64.682
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000420",
+        "historical:raw_sciq_000421"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ae754f2d89fe2bf3b81f16e8adee34b0002bbe62ae97540eb73f681e1084b9fe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 818,
+      "first_chunk_seconds": 2.145,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 856,
+        "prompt_tokens": 851,
+        "total_tokens": 1707,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 636,
+          "text_tokens": 220
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4f87457a4d1e9a0220136647d85d1bd705f645dfe6917610c660432f02dbfe26",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 26.11,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000420",
+        "historical:raw_sciq_000421"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "442eb81f740f6976a297b08a00d491786b009b42219621644dadc92e7ae8f628",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 721,
+      "first_chunk_seconds": 2.559,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 742,
+        "prompt_tokens": 869,
+        "total_tokens": 1611,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 588,
+          "text_tokens": 154
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e7093c66391fd91ae84f6ca8eac5059b3f41e81d530684675c05e920447c4ee2",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 51.309,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000420",
+        "historical:raw_sciq_000421"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "442eb81f740f6976a297b08a00d491786b009b42219621644dadc92e7ae8f628",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 810,
+      "first_chunk_seconds": 2.543,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 937,
+        "prompt_tokens": 869,
+        "total_tokens": 1806,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 784,
+          "text_tokens": 153
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d05b2ba90bfbcfe9cd16300ecb2229decbda070bce47f39b005f75f6cb8a5e70",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 148.296,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

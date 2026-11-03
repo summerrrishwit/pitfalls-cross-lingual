@@ -1,0 +1,214 @@
+{
+  "input_sha256": "787c5f531ca3821300fc61417e0a26fadb4bba1c7884a8dbedeca50ed5117e30",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003609",
+      "decision": "ready",
+      "subject": "St. Paul",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "minnesota",
+      "canonical_fact": "St. Paul is located in Minnesota.",
+      "prompt_en": "In which state is St. Paul located?",
+      "evidence_quotes": [
+        "St. Paul",
+        "minnesota"
+      ],
+      "reason": "The source question locates St. Paul and the source answer gives 'minnesota'. St. Paul is a city geographically contained within the state of Minnesota, which fits entity_to_containing_location exactly at the state-level granularity. Both model annotations agree on the extraction.",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "minnesota",
+        "canonical_fact": "St. Paul is located in Minnesota.",
+        "subject": "St. Paul",
+        "prompt_en": "In which state is St. Paul located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "minnesota"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "189bceb0972308e3cd4a98ae44eca9d0accef027cf29e802f2ffb8c8295fb768",
+      "input_sha256": "a551e150a60b2daee164faf86369c02fbb9360e8eb9e2c151a65ce1a5814a2fb",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003612",
+      "decision": "ready",
+      "subject": "cavity filling",
+      "relation_id": "procedure_to_professional",
+      "relation_definition": "A specific medical or professional procedure -> the professional who performs or is the standard point of contact for that procedure; not the physical location or institution.",
+      "direction": "procedure -> professional",
+      "answer": "dentist",
+      "canonical_fact": "A cavity filling is performed by a dentist.",
+      "prompt_en": "What professional do you see for a cavity filling?",
+      "evidence_quotes": [
+        "cavity filled",
+        "dentist"
+      ],
+      "reason": "The source question links 'cavity filled' to 'dentist' as the professional to consult. No existing catalog relation covers 'procedure -> performing professional'. A new relation procedure_to_professional is proposed to capture this precisely without forcing a broader category such as entity_to_class or description_to_entity. One model flagged this as a typical action/location association, but the source answer is a clear professional role, supporting extraction.",
+      "english": {
+        "direction": "procedure -> professional",
+        "relation_id": "procedure_to_professional",
+        "answer": "dentist",
+        "canonical_fact": "A cavity filling is performed by a dentist.",
+        "subject": "cavity filling",
+        "prompt_en": "What professional do you see for a cavity filling?",
+        "relation_definition": "A specific medical or professional procedure -> the professional who performs or is the standard point of contact for that procedure; not the physical location or institution.",
+        "answer_aliases_en": [
+          "dentist"
+        ],
+        "relation_spec": {
+          "id": "procedure_to_professional",
+          "definition": "A specific medical or professional procedure -> the professional who performs or is the standard point of contact for that procedure; not the physical location or institution.",
+          "direction": "procedure -> professional"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7acc492087e74082b4949708bc846ec11ad06aa090e18caacc47c0587d34f929",
+      "input_sha256": "a5c7222b7a485ddf170de763d4a99b0b4ba774b726977bbd8484af65f6213892",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_003609",
+      "input_sha256": "a551e150a60b2daee164faf86369c02fbb9360e8eb9e2c151a65ce1a5814a2fb",
+      "english": {
+        "direction": "entity -> containing location",
+        "relation_id": "entity_to_containing_location",
+        "answer": "minnesota",
+        "canonical_fact": "St. Paul is located in Minnesota.",
+        "subject": "St. Paul",
+        "prompt_en": "In which state is St. Paul located?",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "minnesota"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "189bceb0972308e3cd4a98ae44eca9d0accef027cf29e802f2ffb8c8295fb768",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003609",
+        "subject_zh": "圣保罗",
+        "prompt_zh": "圣保罗位于哪个州？",
+        "canonical_fact_zh": "圣保罗位于明尼苏达州。",
+        "answer_zh": "明尼苏达州",
+        "answer_aliases_zh": [
+          "明尼苏达州"
+        ]
+      },
+      "translation_sha256": "bed9e5d35a6c1f2e7ebfd4caa2022c5dd228cd0e9d66ff1e3e733dc4288caff5"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_003612",
+      "input_sha256": "a5c7222b7a485ddf170de763d4a99b0b4ba774b726977bbd8484af65f6213892",
+      "english": {
+        "direction": "procedure -> professional",
+        "relation_id": "procedure_to_professional",
+        "answer": "dentist",
+        "canonical_fact": "A cavity filling is performed by a dentist.",
+        "subject": "cavity filling",
+        "prompt_en": "What professional do you see for a cavity filling?",
+        "relation_definition": "A specific medical or professional procedure -> the professional who performs or is the standard point of contact for that procedure; not the physical location or institution.",
+        "answer_aliases_en": [
+          "dentist"
+        ],
+        "relation_spec": {
+          "id": "procedure_to_professional",
+          "definition": "A specific medical or professional procedure -> the professional who performs or is the standard point of contact for that procedure; not the physical location or institution.",
+          "direction": "procedure -> professional"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "7acc492087e74082b4949708bc846ec11ad06aa090e18caacc47c0587d34f929",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_003612",
+        "subject_zh": "龋齿充填",
+        "prompt_zh": "龋齿充填应该看什么医生？",
+        "canonical_fact_zh": "龋齿充填由牙医执行。",
+        "answer_zh": "牙医",
+        "answer_aliases_zh": [
+          "牙医"
+        ]
+      },
+      "translation_sha256": "7497043b7ef9f55fb9a48dd39866b7c20a7bb9aedf642ebc5adeed26440992bd"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003609",
+        "historical:raw_commonsense_qa_003612"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1ab88ff3a4eaf28878bf0346ff2125d8181949d01f82c1bc967c3ae947308ed2",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2359,
+      "first_chunk_seconds": 24.672,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2508,
+        "prompt_tokens": 1629,
+        "total_tokens": 4137,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2016,
+          "text_tokens": 492
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "b135f9aeef10fc255efbab17d3ac0dda4f8c8880b5a55886c340443051d3fa54",
+      "status": "completed",
+      "latency_seconds": 219.066
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_003609",
+        "historical:raw_commonsense_qa_003612"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bc344222d6a9110d7ffbe276f237440b5ccc9fc06bd6ebba8aa909822e052a42",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1370,
+      "first_chunk_seconds": 14.24,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1414,
+        "prompt_tokens": 821,
+        "total_tokens": 2235,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1199,
+          "text_tokens": 215
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a64745fd97a1f9b5fcb888782ad8e5b67486b93790ef6485465373b26df6989b",
+      "status": "completed",
+      "latency_seconds": 29.509
+    }
+  ],
+  "status": "completed"
+}

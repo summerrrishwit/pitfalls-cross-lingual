@@ -1,0 +1,237 @@
+{
+  "input_sha256": "fa1a900bc93e4a98b95350dfe34af8e8fade4b82227df9c4a77533af8f4595d3",
+  "normalized": [
+    {
+      "record_id": "public:pbf_06552cb7a059072fe158",
+      "decision": "ready",
+      "subject": "an obese individual with a breathing-related sleep disorder",
+      "relation_id": "patient_profile_to_most_likely_condition",
+      "relation_definition": "The most likely medical condition for a patient matching a specific clinical profile; retains the probabilistic qualifier 'most likely' and does not assert certainty.",
+      "direction": "clinical patient profile -> most likely condition",
+      "answer": "Sleep apnea",
+      "canonical_fact": "An obese individual with a breathing-related sleep disorder most likely suffers from sleep apnea.",
+      "prompt_en": "An obese individual with a breathing-related sleep disorder most likely suffers from",
+      "evidence_quotes": [
+        "An obese individual with a breathing-related sleep disorder most likely suffers from",
+        "Sleep apnea"
+      ],
+      "reason": "Source question and answer clearly support a probabilistic medical-association fact. No catalog relation captures 'most likely diagnosis' exactly (entity_to_class is taxonomy, description_to_entity implies uniqueness), so a precise new relation is proposed. Subject corrected to singular to match source ('An obese individual' rather than the old plural). Answer 'Sleep apnea' is a verbatim literal of source_answer.",
+      "english": {
+        "subject": "an obese individual with a breathing-related sleep disorder",
+        "relation_definition": "The most likely medical condition for a patient matching a specific clinical profile; retains the probabilistic qualifier 'most likely' and does not assert certainty.",
+        "answer": "Sleep apnea",
+        "canonical_fact": "An obese individual with a breathing-related sleep disorder most likely suffers from sleep apnea.",
+        "direction": "clinical patient profile -> most likely condition",
+        "relation_id": "patient_profile_to_most_likely_condition",
+        "prompt_en": "An obese individual with a breathing-related sleep disorder most likely suffers from",
+        "answer_aliases_en": [
+          "Sleep apnea"
+        ],
+        "relation_spec": {
+          "id": "patient_profile_to_most_likely_condition",
+          "definition": "The most likely medical condition for a patient matching a specific clinical profile; retains the probabilistic qualifier 'most likely' and does not assert certainty.",
+          "direction": "clinical patient profile -> most likely condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "242be64468b3e6fe3c6f2d54bc064c193065c2047e8e388b5af584c705b9d1a9",
+      "input_sha256": "5bdb94839ed70053148ae2d216fe2513f360164fb5499c901b6bb67246989946",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0656d01919e4f816ea7e",
+      "decision": "ready",
+      "subject": "the farthest west county of Florida",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Escambia County",
+      "canonical_fact": "The farthest west county of Florida is Escambia County.",
+      "prompt_en": "The farthest west county of Florida is",
+      "evidence_quotes": [
+        "the farthest west of florida",
+        "Escambia County"
+      ],
+      "reason": "The identifying description 'the farthest west county of Florida' uniquely satisfies description_to_entity (direction: description -> entity). Answer 'Escambia County' is a verbatim literal of source_answer. Old extraction's framing (subject='Florida counties', relation='farthest west') is reframed to match the catalog's description_to_entity schema exactly.",
+      "english": {
+        "subject": "the farthest west county of Florida",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Escambia County",
+        "canonical_fact": "The farthest west county of Florida is Escambia County.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The farthest west county of Florida is",
+        "answer_aliases_en": [
+          "Escambia County",
+          "Escambia County, Florida"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "578686d469d42a4406621d172d3b91fb3544695e0c2d845ab6138cf1060b4825",
+      "input_sha256": "b2cd2451aec3cfccb3605b23d2f6a07a678c78429025288860be3ae5e09c9dee",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_06552cb7a059072fe158",
+      "input_sha256": "5bdb94839ed70053148ae2d216fe2513f360164fb5499c901b6bb67246989946",
+      "english": {
+        "subject": "an obese individual with a breathing-related sleep disorder",
+        "relation_definition": "The most likely medical condition for a patient matching a specific clinical profile; retains the probabilistic qualifier 'most likely' and does not assert certainty.",
+        "answer": "Sleep apnea",
+        "canonical_fact": "An obese individual with a breathing-related sleep disorder most likely suffers from sleep apnea.",
+        "direction": "clinical patient profile -> most likely condition",
+        "relation_id": "patient_profile_to_most_likely_condition",
+        "prompt_en": "An obese individual with a breathing-related sleep disorder most likely suffers from",
+        "answer_aliases_en": [
+          "Sleep apnea"
+        ],
+        "relation_spec": {
+          "id": "patient_profile_to_most_likely_condition",
+          "definition": "The most likely medical condition for a patient matching a specific clinical profile; retains the probabilistic qualifier 'most likely' and does not assert certainty.",
+          "direction": "clinical patient profile -> most likely condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "242be64468b3e6fe3c6f2d54bc064c193065c2047e8e388b5af584c705b9d1a9",
+      "translation": {
+        "record_id": "public:pbf_06552cb7a059072fe158",
+        "subject_zh": "一名患有呼吸相关睡眠障碍的肥胖个体",
+        "prompt_zh": "一名患有呼吸相关睡眠障碍的肥胖个体最可能患有",
+        "canonical_fact_zh": "一名患有呼吸相关睡眠障碍的肥胖个体最可能患有睡眠呼吸暂停。",
+        "answer_zh": "睡眠呼吸暂停",
+        "answer_aliases_zh": [
+          "睡眠呼吸暂停"
+        ]
+      },
+      "translation_sha256": "0e4b28527d70a8d1c48371df12d34669bfa07a16be565892507efe1e16c6df71"
+    },
+    {
+      "record_id": "public:pbf_0656d01919e4f816ea7e",
+      "input_sha256": "b2cd2451aec3cfccb3605b23d2f6a07a678c78429025288860be3ae5e09c9dee",
+      "english": {
+        "subject": "the farthest west county of Florida",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "Escambia County",
+        "canonical_fact": "The farthest west county of Florida is Escambia County.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "prompt_en": "The farthest west county of Florida is",
+        "answer_aliases_en": [
+          "Escambia County",
+          "Escambia County, Florida"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "578686d469d42a4406621d172d3b91fb3544695e0c2d845ab6138cf1060b4825",
+      "translation": {
+        "record_id": "public:pbf_0656d01919e4f816ea7e",
+        "subject_zh": "佛罗里达州最西边的县",
+        "prompt_zh": "佛罗里达州最西边的县是",
+        "canonical_fact_zh": "佛罗里达州最西边的县是埃斯坎比县。",
+        "answer_zh": "埃斯坎比县",
+        "answer_aliases_zh": [
+          "埃斯坎比县",
+          "佛罗里达州埃斯坎比县"
+        ]
+      },
+      "translation_sha256": "cfe008def284e6ce407161ab53a4de1049cfb64d21c859042bee0634dc754f18"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_06552cb7a059072fe158",
+        "public:pbf_0656d01919e4f816ea7e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "577dfffea1a84995f04120df8d3451b438270f264bb12cb04cdb05156dac7c04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.216
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_06552cb7a059072fe158",
+        "public:pbf_0656d01919e4f816ea7e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "577dfffea1a84995f04120df8d3451b438270f264bb12cb04cdb05156dac7c04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 151.308
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_06552cb7a059072fe158",
+        "public:pbf_0656d01919e4f816ea7e"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "577dfffea1a84995f04120df8d3451b438270f264bb12cb04cdb05156dac7c04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3341,
+        "prompt_tokens": 1607,
+        "total_tokens": 4948,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2783,
+          "text_tokens": 558
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ec9806b9abd03597a112f1a854072202e75fccc77a2bb892a5a51907117aac9c",
+      "status": "completed",
+      "latency_seconds": 65.873
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_06552cb7a059072fe158",
+        "public:pbf_0656d01919e4f816ea7e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ac5c6a7951429218aab514334046bd94c7336f8127f1fa80d762f719fa24f235",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 985,
+        "prompt_tokens": 881,
+        "total_tokens": 1866,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 713,
+          "text_tokens": 272
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9682162dae55611105e148e2185e022e3c413c8a8484ab6fe2ac12ef4210ba81",
+      "status": "completed",
+      "latency_seconds": 20.867
+    }
+  ],
+  "status": "completed"
+}

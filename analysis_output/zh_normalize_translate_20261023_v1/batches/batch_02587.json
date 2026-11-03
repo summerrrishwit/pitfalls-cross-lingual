@@ -1,0 +1,214 @@
+{
+  "input_sha256": "5f10061433762822f7e519bad4dafdfd99fb0273059e0ca745de8f7adbfa798a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004608",
+      "decision": "ready",
+      "subject": "bike with an engine",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "motorcycle",
+      "canonical_fact": "A bike with an engine is called a motorcycle.",
+      "prompt_en": "What is the conventional term for a bike with an engine?",
+      "evidence_quotes": [
+        "What type of bike has an engine?",
+        "motorcycle"
+      ],
+      "reason": "The source question supplies the description 'a bike with an engine' and the answer 'motorcycle' is the conventional term that uniquely fits that description. The catalog relation description_to_term (description -> term) matches this direction exactly.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "motorcycle",
+        "canonical_fact": "A bike with an engine is called a motorcycle.",
+        "subject": "bike with an engine",
+        "prompt_en": "What is the conventional term for a bike with an engine?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "motorcycle"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5f24c78185f187c1d65645148e4389024f9d2320b493b6a825a6b466ac4bba12",
+      "input_sha256": "e793f892e6840afc35d5cacc9241fe0ecd6a4c7aeec5d1b9be6d80ec2fc22b6d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004639",
+      "decision": "ready",
+      "subject": "cube",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "front back",
+      "canonical_fact": "A cube has a top, bottom, two sides, front, and back.",
+      "prompt_en": "A cube has a top, bottom, and two sides; what are the remaining two faces?",
+      "evidence_quotes": [
+        "A cube has a top, bottom, two sides and what else?",
+        "front back"
+      ],
+      "reason": "The source question lists four of a cube's six faces (top, bottom, two sides) and asks for the remainder. The answer 'front back' names the two remaining constituent faces of the cube, fitting the whole_to_part relation (cube -> front and back faces). Both model annotations agree on extractability; sensenova's 'non_unique_answer' concern does not apply because a cube has exactly six faces and four are already named, leaving front and back uniquely.",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "front back",
+        "canonical_fact": "A cube has a top, bottom, two sides, front, and back.",
+        "subject": "cube",
+        "prompt_en": "A cube has a top, bottom, and two sides; what are the remaining two faces?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "front back"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cc55be10659078a6d97c88aa69e9b3398514d8049b67f00892141f5ddeb93d0d",
+      "input_sha256": "6fa87d1e3ccb4ed629cb31360ab83018bdcaad33283118eb5a77bec64fc0d832",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_004608",
+      "input_sha256": "e793f892e6840afc35d5cacc9241fe0ecd6a4c7aeec5d1b9be6d80ec2fc22b6d",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "motorcycle",
+        "canonical_fact": "A bike with an engine is called a motorcycle.",
+        "subject": "bike with an engine",
+        "prompt_en": "What is the conventional term for a bike with an engine?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "motorcycle"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "5f24c78185f187c1d65645148e4389024f9d2320b493b6a825a6b466ac4bba12",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004608",
+        "subject_zh": "带发动机的自行车",
+        "prompt_zh": "带发动机的自行车通常称为什么？",
+        "canonical_fact_zh": "带发动机的自行车叫做摩托车。",
+        "answer_zh": "摩托车",
+        "answer_aliases_zh": [
+          "摩托车"
+        ]
+      },
+      "translation_sha256": "1dd4788ed789d10916b2627c2f0f5db06fc4aa275fdce2639afa47e1d132af2c"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_004639",
+      "input_sha256": "6fa87d1e3ccb4ed629cb31360ab83018bdcaad33283118eb5a77bec64fc0d832",
+      "english": {
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "answer": "front back",
+        "canonical_fact": "A cube has a top, bottom, two sides, front, and back.",
+        "subject": "cube",
+        "prompt_en": "A cube has a top, bottom, and two sides; what are the remaining two faces?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer_aliases_en": [
+          "front back"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cc55be10659078a6d97c88aa69e9b3398514d8049b67f00892141f5ddeb93d0d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_004639",
+        "subject_zh": "正方体",
+        "prompt_zh": "正方体有上面、下面和两个侧面；剩下的两个面是什么？",
+        "canonical_fact_zh": "正方体有上面、下面、两个侧面、前面和后面。",
+        "answer_zh": "前面 后面",
+        "answer_aliases_zh": [
+          "前面 后面"
+        ]
+      },
+      "translation_sha256": "b262235a25ee7725de3647ee7e73de8befb48f7ec5113c5ee2e1bf0a88522282"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004608",
+        "historical:raw_commonsense_qa_004639"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "20e1b481b7f9825e73ef8bf7a4058c7a6f66c2c1ac8f1b547809b3b57b1c13ca",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2296,
+      "first_chunk_seconds": 21.882,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2393,
+        "prompt_tokens": 1663,
+        "total_tokens": 4056,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1882,
+          "text_tokens": 511
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2b379f3c73b69d6ad0e947f079080092aadab0d90b15ac2144d7dc8b06acb7ad",
+      "status": "completed",
+      "latency_seconds": 55.397
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_004608",
+        "historical:raw_commonsense_qa_004639"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "68bd5ece640af297e27c8d1f2c34f021aa0a2388b51b0836304238045a95eec6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 922,
+      "first_chunk_seconds": 13.639,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 919,
+        "prompt_tokens": 808,
+        "total_tokens": 1727,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 766,
+          "text_tokens": 153
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "a1a8d5303acfdca61100bf2ef081016a70e1af025cedd56c796b97e8d3a87e3d",
+      "status": "completed",
+      "latency_seconds": 25.695
+    }
+  ],
+  "status": "completed"
+}

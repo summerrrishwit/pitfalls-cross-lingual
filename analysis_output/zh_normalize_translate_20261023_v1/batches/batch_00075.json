@@ -1,0 +1,161 @@
+{
+  "input_sha256": "74b9bdb4f37c90236c52c4e1f5925e987c337aada94505311568916983e08dc9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_264c1798bc4b7f67da53",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The existing extracted answer 'failing to reject a false null hypothesis' conflicts with the source answer 'It is the probability of failing to reject a null hypothesis that was wrong'. The source explicitly frames the Type II error as 'the probability of failing to reject…', whereas the old extraction drops the 'probability of' qualifier and rephrases 'a null hypothesis that was wrong' as 'a false null hypothesis'. Per instructions, when an existing answer conflicts with the source, the record must be deferred.",
+      "input_sha256": "e059777103218753c8056ad511b91a5367fd74c03b3304b17dbb3f3a3937de41",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_26b3e58ead7afb985297",
+      "decision": "ready",
+      "subject": "Sweets for My Sweet",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "The Searchers",
+      "canonical_fact": "The Searchers performed the song Sweets for My Sweet.",
+      "prompt_en": "Who sang the song Sweets for My Sweet?",
+      "evidence_quotes": [
+        "who sang sweet for my sweet sugar for my honey",
+        "The Searchers"
+      ],
+      "reason": "The source answer 'The Searchers' matches the existing extracted answer exactly. The relation song_to_performer (song -> performer) fits: the subject is the song 'Sweets for My Sweet' (normalized from the garbled lyric reference in the question) and the answer is the performing group. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "The Searchers performed the song Sweets for My Sweet.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song Sweets for My Sweet?",
+        "subject": "Sweets for My Sweet",
+        "answer": "The Searchers",
+        "answer_aliases_en": [
+          "The Searchers"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e872b64fb12d0d1af728f7c6b2d506cb92e7d630424271b96d3cb5360bf2f721",
+      "input_sha256": "a030c41bbf6a6ff03f32da766879aa87576280d0d1fdb6a3c5a500c4c63ea5db",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_26b3e58ead7afb985297",
+      "input_sha256": "a030c41bbf6a6ff03f32da766879aa87576280d0d1fdb6a3c5a500c4c63ea5db",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "The Searchers performed the song Sweets for My Sweet.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Who sang the song Sweets for My Sweet?",
+        "subject": "Sweets for My Sweet",
+        "answer": "The Searchers",
+        "answer_aliases_en": [
+          "The Searchers"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e872b64fb12d0d1af728f7c6b2d506cb92e7d630424271b96d3cb5360bf2f721",
+      "translation": {
+        "record_id": "public:pbf_26b3e58ead7afb985297",
+        "subject_zh": "Sweets for My Sweet",
+        "prompt_zh": "谁演唱了歌曲《Sweets for My Sweet》？",
+        "canonical_fact_zh": "The Searchers 演唱了歌曲《Sweets for My Sweet》。",
+        "answer_zh": "The Searchers",
+        "answer_aliases_zh": [
+          "The Searchers"
+        ]
+      },
+      "translation_sha256": "685cd9974fe05f081f0d4461c0630e43636bde21fa22158f2596acf9299108cc"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_264c1798bc4b7f67da53",
+        "public:pbf_26b3e58ead7afb985297"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "73d78408ea97bf9cbcab601264c6ae5052ac638a181a3b32fb48795e39a54695",
+      "requested_model": "qwen-3.8-max",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 29.678
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_264c1798bc4b7f67da53",
+        "public:pbf_26b3e58ead7afb985297"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "73d78408ea97bf9cbcab601264c6ae5052ac638a181a3b32fb48795e39a54695",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2674,
+        "prompt_tokens": 1608,
+        "total_tokens": 4282,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2191,
+          "text_tokens": 483
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d60889ddd0d7be5bfdb970f3064252d640698609216e14db98f6a6c6f6d4cf53",
+      "status": "completed",
+      "latency_seconds": 88.597
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_26b3e58ead7afb985297"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "5b467d156417c23478beadbfae5ffe3400b94c55e9842955fa33ea59b5b159ad",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 534,
+        "prompt_tokens": 522,
+        "total_tokens": 1056,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 402,
+          "text_tokens": 132
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "02f4fd8978c43355afefe0cc4bb6231def8c13a6378509a75f3a5b0787c34392",
+      "status": "completed",
+      "latency_seconds": 63.359
+    }
+  ],
+  "status": "completed"
+}

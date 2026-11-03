@@ -1,0 +1,228 @@
+{
+  "input_sha256": "ec27087af5e3c6bfa6a89b6f7a519c4b2b61df97454860cc0cf2e30c993b4f61",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000353",
+      "decision": "ready",
+      "subject": "planet named after the Roman goddess of love",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Venus",
+      "canonical_fact": "The planet named after the Roman goddess of love is Venus.",
+      "prompt_en": "Which planet is named after the Roman goddess of love?",
+      "evidence_quotes": [
+        "venus",
+        "Which planet is named after the roman goddess of love?"
+      ],
+      "reason": "The source question provides a unique identifying description (planet named after the Roman goddess of love) and the source answer 'venus' (capitalised to 'Venus') is the entity that satisfies it. The catalog relation description_to_entity fits: an identifying description resolves to a unique entity. No conflict with source; capitalisation of a proper noun is standard.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Venus",
+        "canonical_fact": "The planet named after the Roman goddess of love is Venus.",
+        "subject": "planet named after the Roman goddess of love",
+        "prompt_en": "Which planet is named after the Roman goddess of love?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Venus"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "50f47967785cd206fd4151f336c3a2b16a5042467483e646db8d9d10ff30473b",
+      "input_sha256": "d40b4460bfc4758646225823243ed370cf5d1824779de59c2c3210d2dce91546",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000354",
+      "decision": "ready",
+      "subject": "process that can cause harmful alleles to become fixed",
+      "relation_id": "outcome_to_possible_causal_process",
+      "relation_definition": "A named biological process identified as a possible cause of a specified outcome or phenomenon; retains causal modality (can / may / typically) and does not assert inevitability.",
+      "direction": "specified outcome -> possible causal process",
+      "answer": "genetic drift",
+      "canonical_fact": "Genetic drift is a process that can cause harmful alleles to become fixed.",
+      "prompt_en": "What process can cause harmful alleles to become fixed?",
+      "evidence_quotes": [
+        "genetic drift",
+        "What process can cause harmful alleles to become fixed?"
+      ],
+      "reason": "No catalog relation covers a causal/biological process link. Proposed new snake_case ID 'outcome_to_possible_causal_process' with explicit direction (outcome -> possible cause) and modality-preserving definition. The source answer 'genetic drift' is copied verbatim; the qualifier 'can' from the question is preserved in the canonical fact to avoid overstating the causal claim.",
+      "english": {
+        "direction": "specified outcome -> possible causal process",
+        "relation_id": "outcome_to_possible_causal_process",
+        "answer": "genetic drift",
+        "canonical_fact": "Genetic drift is a process that can cause harmful alleles to become fixed.",
+        "subject": "process that can cause harmful alleles to become fixed",
+        "prompt_en": "What process can cause harmful alleles to become fixed?",
+        "relation_definition": "A named biological process identified as a possible cause of a specified outcome or phenomenon; retains causal modality (can / may / typically) and does not assert inevitability.",
+        "answer_aliases_en": [
+          "genetic drift"
+        ],
+        "relation_spec": {
+          "id": "outcome_to_possible_causal_process",
+          "definition": "A named biological process identified as a possible cause of a specified outcome or phenomenon; retains causal modality (can / may / typically) and does not assert inevitability.",
+          "direction": "specified outcome -> possible causal process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "197f43ea7e091c150e4af6ff5cd80b732c8dc45e0b506ccd19bd40ebbd788dbc",
+      "input_sha256": "3026d2a9b175b9e590f1b79d09ca398f386cce202592d307ac0b5e70b8e03ff2",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000353",
+      "input_sha256": "d40b4460bfc4758646225823243ed370cf5d1824779de59c2c3210d2dce91546",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "Venus",
+        "canonical_fact": "The planet named after the Roman goddess of love is Venus.",
+        "subject": "planet named after the Roman goddess of love",
+        "prompt_en": "Which planet is named after the Roman goddess of love?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Venus"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "50f47967785cd206fd4151f336c3a2b16a5042467483e646db8d9d10ff30473b",
+      "translation": {
+        "record_id": "historical:raw_sciq_000353",
+        "subject_zh": "以罗马爱神命名的行星",
+        "prompt_zh": "哪颗行星是以罗马爱神命名的？",
+        "canonical_fact_zh": "以罗马爱神命名的行星是金星。",
+        "answer_zh": "金星",
+        "answer_aliases_zh": [
+          "金星"
+        ]
+      },
+      "translation_sha256": "21bfcf9de46f5a7f0d611849e94abf5567b802de56b8b345f554acdb308b0966"
+    },
+    {
+      "record_id": "historical:raw_sciq_000354",
+      "input_sha256": "3026d2a9b175b9e590f1b79d09ca398f386cce202592d307ac0b5e70b8e03ff2",
+      "english": {
+        "direction": "specified outcome -> possible causal process",
+        "relation_id": "outcome_to_possible_causal_process",
+        "answer": "genetic drift",
+        "canonical_fact": "Genetic drift is a process that can cause harmful alleles to become fixed.",
+        "subject": "process that can cause harmful alleles to become fixed",
+        "prompt_en": "What process can cause harmful alleles to become fixed?",
+        "relation_definition": "A named biological process identified as a possible cause of a specified outcome or phenomenon; retains causal modality (can / may / typically) and does not assert inevitability.",
+        "answer_aliases_en": [
+          "genetic drift"
+        ],
+        "relation_spec": {
+          "id": "outcome_to_possible_causal_process",
+          "definition": "A named biological process identified as a possible cause of a specified outcome or phenomenon; retains causal modality (can / may / typically) and does not assert inevitability.",
+          "direction": "specified outcome -> possible causal process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "197f43ea7e091c150e4af6ff5cd80b732c8dc45e0b506ccd19bd40ebbd788dbc",
+      "translation": {
+        "record_id": "historical:raw_sciq_000354",
+        "subject_zh": "可能导致有害等位基因固定化的过程",
+        "prompt_zh": "什么过程可能导致有害等位基因固定化？",
+        "canonical_fact_zh": "遗传漂变是一种可能导致有害等位基因固定化的过程。",
+        "answer_zh": "遗传漂变",
+        "answer_aliases_zh": [
+          "遗传漂变"
+        ]
+      },
+      "translation_sha256": "7903df4b0017d09a584b6b45b86fe1807524bb3abd4ced980053daa3e5d51e82"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000353",
+        "historical:raw_sciq_000354"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "92610224cb345296184a1297b7e035042a85d95d652aa046d62bdb0f40907157",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 20.202
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000353",
+        "historical:raw_sciq_000354"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "92610224cb345296184a1297b7e035042a85d95d652aa046d62bdb0f40907157",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2284,
+      "first_chunk_seconds": 1.04,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2341,
+        "prompt_tokens": 1685,
+        "total_tokens": 4026,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1804,
+          "text_tokens": 537
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "282df4b86a9cd13f0ab55325a5eff8945633e77e154f4c47c4469a9e805df4ee",
+      "status": "completed",
+      "latency_seconds": 53.451
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000353",
+        "historical:raw_sciq_000354"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6c73aa1ed2bcd6693878e35614e5992c748c200dd8a74ec4f8a7923ddf403bcc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 781,
+      "first_chunk_seconds": 2.33,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 858,
+        "prompt_tokens": 856,
+        "total_tokens": 1714,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 632,
+          "text_tokens": 226
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "befe5ee9553d52231f8961aeef604d8822d27f08240a89242e58cfde023b73fc",
+      "status": "completed",
+      "latency_seconds": 23.575
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,160 @@
+{
+  "input_sha256": "523afa60cedb8da38875d445366079de2dc0b4939f5440c28b541fc54154b8a2",
+  "normalized": [
+    {
+      "record_id": "public:pbf_dd250ae6ef496dedc54c",
+      "decision": "ready",
+      "subject": "utilitarianism",
+      "relation_id": "theory_to_core_principle",
+      "relation_definition": "A stated core or defining principle of a specified philosophical/ethical theory; retain source qualifiers such as 'an idea from' rather than asserting 'the principle of' when the source is less definitive.",
+      "direction": "philosophical/ethical theory -> core principle",
+      "answer": "The greatest good for the greatest number",
+      "canonical_fact": "An idea from utilitarianism is the greatest good for the greatest number.",
+      "prompt_en": "An idea from utilitarianism is",
+      "evidence_quotes": [
+        "an idea from utilitarianism",
+        "The greatest good for the greatest number."
+      ],
+      "reason": "The source identifies 'the greatest good for the greatest number' as 'an idea from utilitarianism.' No catalog relation captures a theory-to-principle link, so a new precise relation is proposed. The answer is a literal substring of the source answer. The prompt preserves the source's 'an idea from' qualifier rather than asserting it is THE central principle. Evidence quotes are literal substrings of source_question and source_answer respectively.",
+      "english": {
+        "answer": "The greatest good for the greatest number",
+        "relation_id": "theory_to_core_principle",
+        "prompt_en": "An idea from utilitarianism is",
+        "direction": "philosophical/ethical theory -> core principle",
+        "subject": "utilitarianism",
+        "canonical_fact": "An idea from utilitarianism is the greatest good for the greatest number.",
+        "relation_definition": "A stated core or defining principle of a specified philosophical/ethical theory; retain source qualifiers such as 'an idea from' rather than asserting 'the principle of' when the source is less definitive.",
+        "answer_aliases_en": [
+          "The greatest good for the greatest number",
+          "The greatest good for the greatest number."
+        ],
+        "relation_spec": {
+          "id": "theory_to_core_principle",
+          "definition": "A stated core or defining principle of a specified philosophical/ethical theory; retain source qualifiers such as 'an idea from' rather than asserting 'the principle of' when the source is less definitive.",
+          "direction": "philosophical/ethical theory -> core principle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a501c00f02a186d6763343b87c587ed6e141af1a7ecb2dc4e8b23f98170bd3e6",
+      "input_sha256": "9fd3fb368cdd3982801ab0ea95b5b257df3b2e53de5cceb6cccb199fde26312b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_dd426989840d05a4c08e",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The task requires identifying a component (antecedent) of a stated conditional proposition. Any faithful prompt must include the full proposition, which contains the answer 'The university raises tuition' as a literal substring. This violates the rule that prompt_en must not contain its answer. Additionally, the fact is a structural/parsing observation about a specific proposition rather than a broadly reusable world-knowledge fact. Defer pending a suitable rephrasing that avoids embedding the answer in the prompt.",
+      "input_sha256": "872eadcb049bba60475cb28f38ffc7ce6aeaa204440220d49ee2ebebdb2fcfb7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_dd250ae6ef496dedc54c",
+      "input_sha256": "9fd3fb368cdd3982801ab0ea95b5b257df3b2e53de5cceb6cccb199fde26312b",
+      "english": {
+        "answer": "The greatest good for the greatest number",
+        "relation_id": "theory_to_core_principle",
+        "prompt_en": "An idea from utilitarianism is",
+        "direction": "philosophical/ethical theory -> core principle",
+        "subject": "utilitarianism",
+        "canonical_fact": "An idea from utilitarianism is the greatest good for the greatest number.",
+        "relation_definition": "A stated core or defining principle of a specified philosophical/ethical theory; retain source qualifiers such as 'an idea from' rather than asserting 'the principle of' when the source is less definitive.",
+        "answer_aliases_en": [
+          "The greatest good for the greatest number",
+          "The greatest good for the greatest number."
+        ],
+        "relation_spec": {
+          "id": "theory_to_core_principle",
+          "definition": "A stated core or defining principle of a specified philosophical/ethical theory; retain source qualifiers such as 'an idea from' rather than asserting 'the principle of' when the source is less definitive.",
+          "direction": "philosophical/ethical theory -> core principle"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "a501c00f02a186d6763343b87c587ed6e141af1a7ecb2dc4e8b23f98170bd3e6",
+      "translation": {
+        "record_id": "public:pbf_dd250ae6ef496dedc54c",
+        "subject_zh": "功利主义",
+        "prompt_zh": "功利主义的一个观点是",
+        "canonical_fact_zh": "功利主义的一个观点是最大多数人的最大幸福。",
+        "answer_zh": "最大多数人的最大幸福",
+        "answer_aliases_zh": [
+          "最大多数人的最大幸福",
+          "最大多数人的最大幸福。"
+        ]
+      },
+      "translation_sha256": "748f3b39dbccc872ae053531cce2614f8a7a273d648fbc386047160043e4557b"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_dd250ae6ef496dedc54c",
+        "public:pbf_dd426989840d05a4c08e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "52fd143f417e3d03702a5c56c0d61aadbdf79c61e4e52b01c3f7634f27e9da86",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3500,
+      "first_chunk_seconds": 13.088,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3644,
+        "prompt_tokens": 1738,
+        "total_tokens": 5382,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3125,
+          "text_tokens": 519
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "5cacb91325f552c8a3bf7ae9bd9da9eed73fd5e7ac2424189991929cd6e8ba28",
+      "status": "completed",
+      "latency_seconds": 59.88
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dd250ae6ef496dedc54c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "48f7535dda9716d5906a02a6e348256bf419d7789f335053dca8eb44831f73a7",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 945,
+      "first_chunk_seconds": 42.709,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1001,
+        "prompt_tokens": 586,
+        "total_tokens": 1587,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 865,
+          "text_tokens": 136
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4b589e8f2ac8d18c0be56be7d180e5b8c92f0b1941fe62d5f4fedae148ae65ce",
+      "status": "completed",
+      "latency_seconds": 54.912
+    }
+  ],
+  "status": "completed"
+}

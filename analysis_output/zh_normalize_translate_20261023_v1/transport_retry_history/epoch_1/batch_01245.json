@@ -1,0 +1,185 @@
+{
+  "input_sha256": "8e94dbd6c5ed6d4a1068c39c6144f5ea5afccfe40f6339d2ce5c64c678ef0758",
+  "normalized": [
+    {
+      "record_id": "public:pbf_775f1d020b8454fb7932",
+      "decision": "ready",
+      "subject": "maximal dynamic exercise",
+      "relation_id": "process_to_metabolic_transition_duration",
+      "relation_definition": "The duration after which a specified physiological process transitions to a dominant metabolic mode (e.g., from predominantly anaerobic to predominantly aerobic).",
+      "direction": "process -> duration",
+      "answer": "1 minute",
+      "canonical_fact": "Maximal dynamic exercise becomes predominantly aerobic after 1 minute.",
+      "prompt_en": "After what period of time does maximal dynamic exercise become predominantly aerobic?",
+      "evidence_quotes": [
+        "After what period of time does maximal dynamic exercise become predominantly aerobic?",
+        "1 minute"
+      ],
+      "reason": "Source question and answer directly state a duration threshold for a physiological metabolic transition. No catalog relation captures a process-to-duration threshold; proposed a precise new relation. Answer '1 minute' is a literal substring of source_answer.",
+      "english": {
+        "answer": "1 minute",
+        "relation_id": "process_to_metabolic_transition_duration",
+        "prompt_en": "After what period of time does maximal dynamic exercise become predominantly aerobic?",
+        "direction": "process -> duration",
+        "subject": "maximal dynamic exercise",
+        "canonical_fact": "Maximal dynamic exercise becomes predominantly aerobic after 1 minute.",
+        "relation_definition": "The duration after which a specified physiological process transitions to a dominant metabolic mode (e.g., from predominantly anaerobic to predominantly aerobic).",
+        "answer_aliases_en": [
+          "1 minute"
+        ],
+        "relation_spec": {
+          "id": "process_to_metabolic_transition_duration",
+          "definition": "The duration after which a specified physiological process transitions to a dominant metabolic mode (e.g., from predominantly anaerobic to predominantly aerobic).",
+          "direction": "process -> duration"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "e1594220bad4d39b2b77451c016804523f3f7c05eb981c72934fc19f9621f505",
+      "input_sha256": "40baf35e25ab79a645a8a8dd5fe0e49c59cc3f003bff208c651598eaf941d26e",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_7776d1fc135e0ac0e5db",
+      "decision": "ready",
+      "subject": "the cloak that Henry II suggested Thomas Becket give to the beggar (Vita Sancti Thomæ)",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "Squirrel",
+      "canonical_fact": "According to the Vita Sancti Thomæ, the cloak that Henry II suggested Thomas Becket give to the beggar was lined with squirrel fur.",
+      "prompt_en": "According to the Vita Sancti Thomæ, what fur was the cloak lined with that Henry II suggested Thomas Becket give to the beggar they both took pity on?",
+      "evidence_quotes": [
+        "what fur was the cloak lined with that Henry II suggested Thomas Becket give to the beggar",
+        "Squirrel"
+      ],
+      "reason": "Squirrel fur is the constituent material (lining) of the specified cloak; entity_to_material fits exactly with the qualifier 'constituent' (lining) and the source attribution to Vita Sancti Thomæ preserved. Answer 'Squirrel' is a literal substring of source_answer.",
+      "english": {
+        "answer": "Squirrel",
+        "relation_id": "entity_to_material",
+        "prompt_en": "According to the Vita Sancti Thomæ, what fur was the cloak lined with that Henry II suggested Thomas Becket give to the beggar they both took pity on?",
+        "direction": "entity -> material",
+        "subject": "the cloak that Henry II suggested Thomas Becket give to the beggar (Vita Sancti Thomæ)",
+        "canonical_fact": "According to the Vita Sancti Thomæ, the cloak that Henry II suggested Thomas Becket give to the beggar was lined with squirrel fur.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "Squirrel"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d292c86f374a630deb4e314b7a9261c775715582f56da70ac454231a3c3953d9",
+      "input_sha256": "b97afcdb4b1f5be758d1cb59db21ff5c0bd3d2d037ea1986ecbe6d696bf27290",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6d06f0c10fa0414de4fddb12c93dda2fa4eb872d60d772dc8ecdf7f358b17220",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6d06f0c10fa0414de4fddb12c93dda2fa4eb872d60d772dc8ecdf7f358b17220",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.973
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6d06f0c10fa0414de4fddb12c93dda2fa4eb872d60d772dc8ecdf7f358b17220",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2995,
+      "first_chunk_seconds": 25.107,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2993,
+        "prompt_tokens": 1675,
+        "total_tokens": 4668,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2432,
+          "text_tokens": 561
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "750e8a89398d3159d13c304f1f2557a319ce024ef1af2f1e0a218059d4dab65b",
+      "status": "completed",
+      "latency_seconds": 56.568
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0794f30fa7d1e81ac4e8536d013e877e71653505c7691c5383103bb5e0adac71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0794f30fa7d1e81ac4e8536d013e877e71653505c7691c5383103bb5e0adac71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.923
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_775f1d020b8454fb7932",
+        "public:pbf_7776d1fc135e0ac0e5db"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "0794f30fa7d1e81ac4e8536d013e877e71653505c7691c5383103bb5e0adac71",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.938
+    }
+  ],
+  "status": "failed"
+}

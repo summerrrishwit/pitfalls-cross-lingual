@@ -1,0 +1,223 @@
+{
+  "input_sha256": "5174ab5b67ff2251b9a405c654e0da06abae438cf7eb377191c1c6af95a884b9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f40f0533b8af3d3a5470",
+      "decision": "ready",
+      "subject": "who scored 401 runs in a test match",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Brian Lara",
+      "canonical_fact": "Brian Lara scored 401 runs in a test match.",
+      "prompt_en": "Who scored 401 runs in a test match?",
+      "evidence_quotes": [
+        "who scored 401 runs in a test match",
+        "Brian Lara"
+      ],
+      "reason": "The source question is an identifying description (401 runs in a test match) that uniquely points to Brian Lara. description_to_entity fits exactly: an explicitly qualified identifying description maps to a single entity. The answer is preserved verbatim from the source.",
+      "english": {
+        "answer": "Brian Lara",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Who scored 401 runs in a test match?",
+        "direction": "identifying description -> entity",
+        "subject": "who scored 401 runs in a test match",
+        "canonical_fact": "Brian Lara scored 401 runs in a test match.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Brian Lara"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "0ff87e2353cf9d4484c5485a2f1ab3557dc40354fcc3418b4ab99b6251c3643a",
+      "input_sha256": "93a204058c8947dc52ec8caf1db1a0303c3e0bf6b6eb539b7deaca406ed82450",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f4105cfd03df0333acbf",
+      "decision": "ready",
+      "subject": "walls of bronchioles",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "smooth muscle and respiratory epithelium",
+      "canonical_fact": "The walls of bronchioles contain smooth muscle and respiratory epithelium.",
+      "prompt_en": "What tissues do the walls of bronchioles contain?",
+      "evidence_quotes": [
+        "The walls of bronchioles contain",
+        "smooth muscle and respiratory epithelium."
+      ],
+      "reason": "The bronchial wall is a specified anatomical entity whose constituent tissue composition (smooth muscle and respiratory epithelium) is stated. entity_to_material captures this constituent-material relationship more precisely than whole_to_part (which implies discrete structural parts rather than tissue types). Answer copied as a literal substring from source_answer, trailing sentence period omitted.",
+      "english": {
+        "answer": "smooth muscle and respiratory epithelium",
+        "relation_id": "entity_to_material",
+        "prompt_en": "What tissues do the walls of bronchioles contain?",
+        "direction": "entity -> material",
+        "subject": "walls of bronchioles",
+        "canonical_fact": "The walls of bronchioles contain smooth muscle and respiratory epithelium.",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer_aliases_en": [
+          "smooth muscle and respiratory epithelium",
+          "smooth muscle and respiratory epithelium."
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "71d815e4a031ecef5d3762a8e54435d9ad31e26bdb7b88f43b925069937762b4",
+      "input_sha256": "5af06cd0f5b115d3f73c14efd28cf4a5f7b0613dd9234fbf57ee28d2b048d0b3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f8d756bd3e2a144fa381318af8e0227613372d20a1405b6adb35a1ebe310a4bb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 48.706
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "f8d756bd3e2a144fa381318af8e0227613372d20a1405b6adb35a1ebe310a4bb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1695,
+      "first_chunk_seconds": 21.135,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1754,
+        "prompt_tokens": 1613,
+        "total_tokens": 3367,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1247,
+          "text_tokens": 507
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7ae2c807781c588c9f3b15ffbb15ec958ac121194dc1ad74dd9723cb5a83049b",
+      "status": "completed",
+      "latency_seconds": 43.018
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.014
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.013
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.175
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 21.088
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.977
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f40f0533b8af3d3a5470",
+        "public:pbf_f4105cfd03df0333acbf"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "9bd780525fb89c83e6583a35e1c406c3c11f36153cb497024ae59e31a14ba6b9",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 7.738
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02025.json",
+      "sha256": "f8d25b00a759574d3623957abf2c4e1ddbc3e456c10e83d5cff7c4f7411a39ae",
+      "previous_status": "failed"
+    }
+  ]
+}

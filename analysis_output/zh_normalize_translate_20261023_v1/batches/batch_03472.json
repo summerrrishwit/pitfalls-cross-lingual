@@ -1,0 +1,157 @@
+{
+  "input_sha256": "6421d7962913ee12cbe64e0cd7512071832303a47704e1bb8f47849ce0203957",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_006058",
+      "decision": "ready",
+      "subject": "low visibility in underwater travel",
+      "relation_id": "factor_to_effect",
+      "relation_definition": "A specified factor or condition causes a stated effect or outcome; retain the domain or context where given.",
+      "direction": "factor -> effect",
+      "answer": "disorientation",
+      "canonical_fact": "Low visibility in underwater travel causes disorientation.",
+      "prompt_en": "In the context of traveling underwater, what does low visibility cause?",
+      "evidence_quotes": [
+        "low visibility causing what?",
+        "disorientation"
+      ],
+      "reason": "Source explicitly states that low visibility causes disorientation during underwater travel. No existing catalog relation captures a causal factor-to-effect link, so a new precise relation 'factor_to_effect' is proposed with explicit direction. The answer is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "In the context of traveling underwater, what does low visibility cause?",
+        "relation_definition": "A specified factor or condition causes a stated effect or outcome; retain the domain or context where given.",
+        "answer": "disorientation",
+        "canonical_fact": "Low visibility in underwater travel causes disorientation.",
+        "direction": "factor -> effect",
+        "relation_id": "factor_to_effect",
+        "subject": "low visibility in underwater travel",
+        "answer_aliases_en": [
+          "disorientation"
+        ],
+        "relation_spec": {
+          "id": "factor_to_effect",
+          "definition": "A specified factor or condition causes a stated effect or outcome; retain the domain or context where given.",
+          "direction": "factor -> effect"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1a5de122b5682fed28b6cfa7c21c9b8079da635397a0293c2032c6467fec0ac4",
+      "input_sha256": "8bad3bb201c1823785a0410b9a6448138866e41f579c9278a6e05b30e15b871b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_006069",
+      "decision": "ready",
+      "subject": "a large marsh in Florida",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "everglades",
+      "canonical_fact": "The large marsh in Florida is the Everglades.",
+      "prompt_en": "What is the name of the large marsh in Florida?",
+      "evidence_quotes": [
+        "a large marsh in Florida",
+        "everglades"
+      ],
+      "reason": "Source identifies 'a large marsh in Florida' as the Everglades. The existing relation description_to_entity fits exactly: an identifying description (large marsh in Florida) maps to a unique entity (Everglades). Answer is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "What is the name of the large marsh in Florida?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "everglades",
+        "canonical_fact": "The large marsh in Florida is the Everglades.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "a large marsh in Florida",
+        "answer_aliases_en": [
+          "everglades"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "a52fd476d16cfdd876cfefdf9ad78c5002d088cb2e6875babff7f50eb8d12238",
+      "input_sha256": "877598ebd90f2dde04465f544b346ccc09ec1d30b03a22e130de0f37ddfe6132",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006058",
+        "historical:raw_commonsense_qa_006069"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4a09758c1e0a9784e224339693d7911e5aad51a03ebbf49bcd17e13b156847f0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2114,
+      "first_chunk_seconds": 12.524,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2259,
+        "prompt_tokens": 1583,
+        "total_tokens": 3842,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1803,
+          "text_tokens": 456
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c62afef870eaf0d9899c2424ee951cf9e8f752fd8e1c264db5394ae84894306e",
+      "status": "completed",
+      "latency_seconds": 117.582
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006058",
+        "historical:raw_commonsense_qa_006069"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "85204c16a4d267a0addfd8e93adb05716f3c0ecd529e75ac92603ef6d2d75baa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 40.842
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006058",
+        "historical:raw_commonsense_qa_006069"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "85204c16a4d267a0addfd8e93adb05716f3c0ecd529e75ac92603ef6d2d75baa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 68.142
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_006058",
+        "historical:raw_commonsense_qa_006069"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "85204c16a4d267a0addfd8e93adb05716f3c0ecd529e75ac92603ef6d2d75baa",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.481
+    }
+  ],
+  "status": "failed"
+}

@@ -1,0 +1,182 @@
+{
+  "input_sha256": "65b6056bc6d9e1fdde948f06262d030a637f641558e70ddb716e60ca83d8b9f1",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0aecd8729458b7c43b78",
+      "decision": "ready",
+      "subject": "world systems theory",
+      "relation_id": "theory_to_posited_divisions",
+      "relation_definition": "The named categorical layers or zones a specific theoretical framework posits as constituting the domain it models.",
+      "direction": "theoretical framework -> its posited categorical divisions",
+      "answer": "core, periphery, and semi-periphery",
+      "canonical_fact": "The world systems theory divides the world into core, periphery, and semi-periphery.",
+      "prompt_en": "How does world systems theory categorize the world?",
+      "evidence_quotes": [
+        "The world systems theory divides the world into",
+        "core, periphery, and semi-periphery"
+      ],
+      "reason": "The source Q/A establishes a structural classification posited by world systems theory. No existing catalog relation precisely captures 'theory -> its posited categorical divisions'; whole_to_part would require the subject to be the whole (the world system) rather than the theory itself, and term_to_definition is too broad. A new precise relation is proposed. Answer copied literally from source_answer.",
+      "english": {
+        "subject": "world systems theory",
+        "relation_definition": "The named categorical layers or zones a specific theoretical framework posits as constituting the domain it models.",
+        "answer": "core, periphery, and semi-periphery",
+        "canonical_fact": "The world systems theory divides the world into core, periphery, and semi-periphery.",
+        "direction": "theoretical framework -> its posited categorical divisions",
+        "relation_id": "theory_to_posited_divisions",
+        "prompt_en": "How does world systems theory categorize the world?",
+        "answer_aliases_en": [
+          "core, periphery, and semi-periphery",
+          "core, periphery, and semi-periphery."
+        ],
+        "relation_spec": {
+          "id": "theory_to_posited_divisions",
+          "definition": "The named categorical layers or zones a specific theoretical framework posits as constituting the domain it models.",
+          "direction": "theoretical framework -> its posited categorical divisions"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "67cd38c41a079231b48d1b301b01738a68f16fcad60c4af417c34ebbb611c2d8",
+      "input_sha256": "6682993feab847571682e88570678922bd068b3928a65dd0ccf682adc8e66e9b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0aee94b105a6df0e7e07",
+      "decision": "ready",
+      "subject": "Candle in the Wind",
+      "relation_id": "written_work_to_author",
+      "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+      "direction": "written work -> author",
+      "answer": "Bernie Taupin",
+      "canonical_fact": "Bernie Taupin wrote the lyrics for the song Candle in the Wind.",
+      "prompt_en": "Who wrote the lyrics for Candle in the Wind?",
+      "evidence_quotes": [
+        "who wrote the lyrics for candle in the wind",
+        "Bernie Taupin"
+      ],
+      "reason": "Song lyrics are a written work; the lyricist is the named author of that written work. The existing relation written_work_to_author fits exactly with direction 'written work -> author'. song_to_performer does not apply because it refers to the performer/singer, not the lyricist. Answer copied from source_answer.",
+      "english": {
+        "subject": "Candle in the Wind",
+        "relation_definition": "Named author of a disambiguated written work; retain multi-author constraints.",
+        "answer": "Bernie Taupin",
+        "canonical_fact": "Bernie Taupin wrote the lyrics for the song Candle in the Wind.",
+        "direction": "written work -> author",
+        "relation_id": "written_work_to_author",
+        "prompt_en": "Who wrote the lyrics for Candle in the Wind?",
+        "answer_aliases_en": [
+          "Bernie Taupin"
+        ],
+        "relation_spec": {
+          "id": "written_work_to_author",
+          "direction": "written work -> author",
+          "definition": "Named author of a disambiguated written work; retain multi-author constraints."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "82a41067f2aa8e90e55881cc23fc54dd74e35f70f0ce11bba1b355b6bc8e58c5",
+      "input_sha256": "3ca989d874771d0f00ea5af0236191e4db7916164ff73d049aa9a9d7c706d098",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0aecd8729458b7c43b78",
+        "public:pbf_0aee94b105a6df0e7e07"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "198460e62ac269f6612752d4cd583a36874a898ddd6a5a4e5277ff4eee748993",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2213,
+        "prompt_tokens": 1642,
+        "total_tokens": 3855,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1636,
+          "text_tokens": 577
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "11302cae2f604bce7ac861d78d83c12e46e9677e10af1451ed3065e81b7cc894",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 39.431,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0aecd8729458b7c43b78",
+        "public:pbf_0aee94b105a6df0e7e07"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "aef51776c8359ee0302d0378c21a75fe230a03d8d6c3a833d176e862bf30ae78",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 4084,
+        "prompt_tokens": 1661,
+        "total_tokens": 5745,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3530,
+          "text_tokens": 554
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c2e70844fb94ccf0c2ff435be43bf4f0e431ae3058b2f04f3277f07fe7eeb701",
+      "status": "completed",
+      "latency_seconds": 128.8
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0aecd8729458b7c43b78",
+        "public:pbf_0aee94b105a6df0e7e07"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "d3e8f1a5b0ae2ec5453f3f318abce746a292b0ddebbe7002c49ee57f0e63f7d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 166.648
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0aecd8729458b7c43b78",
+        "public:pbf_0aee94b105a6df0e7e07"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "d3e8f1a5b0ae2ec5453f3f318abce746a292b0ddebbe7002c49ee57f0e63f7d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 3.021
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0aecd8729458b7c43b78",
+        "public:pbf_0aee94b105a6df0e7e07"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "d3e8f1a5b0ae2ec5453f3f318abce746a292b0ddebbe7002c49ee57f0e63f7d1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 122.167
+    }
+  ],
+  "status": "failed"
+}

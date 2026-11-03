@@ -1,0 +1,10 @@
+# 自动恢复与40条审核任务
+
+## User-authorized operations policy (2026-10-24)
+
+operations_policy.json and operations_tools.json now bind tested bounded auto-recovery and larger review assignments. Each heartbeat invokes scripts/watch_zh_candidate_pipeline.py --run-dir ABS_RUN --repair using the production Python. Healthy or recently active workers are observed without probing/restarting. Only verified transient gateway failure, unexpected worker exit, confirmed20-minute inactivity across two observations at least10minutes apart, or untouched technical-failure batches after producer exit can trigger bounded recovery. Maximum3attempts per rolling24hours with30/60minute cooldown. Single-request and8-concurrent synthetic probes must pass before recovery. Only an owned confirmed stalled worker can receive SIGTERM;no SIGKILL. Authentication/identity/hash errors,unknown program errors and userSTOP require user action. Restore by archived checkpoints and original runtime;do not edit frozen sources,policy/runtime snapshots or original verdicts. Each technical-failure batch has at most one extra retry epoch; exhausted and semantic/schema failures remain recorded without blocking untouched work.
+
+Real gpt-6-luna assignments now allow up to40rows by grouping at most TWO existing frozen packets of at most20rows each. Read all fields and aliases in groups of at most5rows. Each packet keeps its own input/instructions/manifest,actual dispatch,review output hash and frozen finalize. The same returned task ID may bind both packets. If only one packet is ready,review it immediately. Coverage/hash/schema/truncation failure falls back to one20-row packet per task with failed output retained. This increases assignment size only;per-row review criteria and frozen packet size remain unchanged. Only genuine translation defer goes to a different real gpt-6.1-sol adjudicator.
+
+This section supersedes older operational no-auto-restart and one-packet-per-assignment instructions. Full protocol,7250denominator,history/exposure preservation and formal-entry gates remain in force.
+

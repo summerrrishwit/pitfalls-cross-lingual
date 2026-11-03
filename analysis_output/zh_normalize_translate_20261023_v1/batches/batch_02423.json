@@ -1,0 +1,242 @@
+{
+  "input_sha256": "1429798b2ef1fd572f3b13857e4907d02a40aa4a643e054a33d04d60ed330984",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001779",
+      "decision": "ready",
+      "subject": "human body systems most responsible for getting oxygen to cells",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "circulatory and respiratory",
+      "canonical_fact": "The circulatory and respiratory systems are the two human body systems most responsible for getting oxygen to cells.",
+      "prompt_en": "Which two human body systems are most responsible for getting oxygen to cells?",
+      "evidence_quotes": [
+        "Which two human body systems are most responsible for getting oxygen to cells?",
+        "circulatory and respiratory"
+      ],
+      "reason": "The subject is an explicitly qualified identifying description (two, human body, most responsible, getting oxygen to cells) that uniquely picks out the circulatory and respiratory systems. The answer is a literal copy of source_answer. Both models agreed on the extraction; sensenova's 'non_unique' concern is overridden because the qualifier 'most responsible for getting oxygen to cells' plus 'two' makes the pair the standard and unique answer in basic physiology. No broader relation in the catalog fits better than description_to_entity.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "circulatory and respiratory",
+        "canonical_fact": "The circulatory and respiratory systems are the two human body systems most responsible for getting oxygen to cells.",
+        "subject": "human body systems most responsible for getting oxygen to cells",
+        "prompt_en": "Which two human body systems are most responsible for getting oxygen to cells?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "circulatory and respiratory"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1ad4aad6f1c25522b94494e93a65ac9550e7166b3a1646f44d57ea7ef18b028a",
+      "input_sha256": "d20ae0fbef9764f254484390485b0985b9f4765a381631ad2e60d43201082b17",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001780",
+      "decision": "ready",
+      "subject": "density",
+      "relation_id": "quantity_to_standard_unit",
+      "relation_definition": "The standard SI unit of measurement for a specified physical quantity; retain the exact unit symbol and its domain.",
+      "direction": "physical quantity -> standard unit",
+      "answer": "kg/m^3",
+      "canonical_fact": "The SI unit for density is kg/m^3.",
+      "prompt_en": "What is the SI unit of measurement for density?",
+      "evidence_quotes": [
+        "Which units should be used for the density measurements?",
+        "kg/m^3"
+      ],
+      "reason": "No existing catalog relation covers the quantity-to-unit mapping. Proposed new relation quantity_to_standard_unit (direction: physical quantity -> standard unit) captures that density's standard SI unit is kg/m^3. Both model annotations agree on the extraction. The answer is a literal substring of source_answer. The prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "physical quantity -> standard unit",
+        "relation_id": "quantity_to_standard_unit",
+        "answer": "kg/m^3",
+        "canonical_fact": "The SI unit for density is kg/m^3.",
+        "subject": "density",
+        "prompt_en": "What is the SI unit of measurement for density?",
+        "relation_definition": "The standard SI unit of measurement for a specified physical quantity; retain the exact unit symbol and its domain.",
+        "answer_aliases_en": [
+          "kg/m^3"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_standard_unit",
+          "definition": "The standard SI unit of measurement for a specified physical quantity; retain the exact unit symbol and its domain.",
+          "direction": "physical quantity -> standard unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "070ec0219db3c79bad21a94a3b1ea3f4f28a55c81ea912622a70ab69fe324a6d",
+      "input_sha256": "84a4dd57f72c07f3d2c5073629cc64ec7bd8afab3dd704c6594ce55b0acce6a9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001779",
+      "input_sha256": "d20ae0fbef9764f254484390485b0985b9f4765a381631ad2e60d43201082b17",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "circulatory and respiratory",
+        "canonical_fact": "The circulatory and respiratory systems are the two human body systems most responsible for getting oxygen to cells.",
+        "subject": "human body systems most responsible for getting oxygen to cells",
+        "prompt_en": "Which two human body systems are most responsible for getting oxygen to cells?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "circulatory and respiratory"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "1ad4aad6f1c25522b94494e93a65ac9550e7166b3a1646f44d57ea7ef18b028a",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001779",
+        "subject_zh": "将氧气输送到细胞中起最主要作用的人体系统",
+        "prompt_zh": "哪两个人体系统是将氧气输送到细胞中起最主要作用的？",
+        "canonical_fact_zh": "循环系统和呼吸系统是将氧气输送到细胞中起最主要作用的两个人体系统。",
+        "answer_zh": "循环系统和呼吸系统",
+        "answer_aliases_zh": [
+          "循环系统和呼吸系统"
+        ]
+      },
+      "translation_sha256": "8754df21c72e1e4564fc739ba7ec0662e50e8b011a3bc545d615be42b1ff644c"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001780",
+      "input_sha256": "84a4dd57f72c07f3d2c5073629cc64ec7bd8afab3dd704c6594ce55b0acce6a9",
+      "english": {
+        "direction": "physical quantity -> standard unit",
+        "relation_id": "quantity_to_standard_unit",
+        "answer": "kg/m^3",
+        "canonical_fact": "The SI unit for density is kg/m^3.",
+        "subject": "density",
+        "prompt_en": "What is the SI unit of measurement for density?",
+        "relation_definition": "The standard SI unit of measurement for a specified physical quantity; retain the exact unit symbol and its domain.",
+        "answer_aliases_en": [
+          "kg/m^3"
+        ],
+        "relation_spec": {
+          "id": "quantity_to_standard_unit",
+          "definition": "The standard SI unit of measurement for a specified physical quantity; retain the exact unit symbol and its domain.",
+          "direction": "physical quantity -> standard unit"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "070ec0219db3c79bad21a94a3b1ea3f4f28a55c81ea912622a70ab69fe324a6d",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001780",
+        "subject_zh": "密度",
+        "prompt_zh": "密度的国际单位制（SI）测量单位是什么？",
+        "canonical_fact_zh": "密度的国际单位制（SI）单位是 kg/m^3。",
+        "answer_zh": "kg/m^3",
+        "answer_aliases_zh": [
+          "kg/m^3"
+        ]
+      },
+      "translation_sha256": "42e767fb410db15bf28aaeee97ece5a9661ab1da2485dc0ebfa1e2ce3206d1a3"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001779",
+        "historical:raw_ai2_arc_easy_001780"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dada27dc4dbe8067e8af5a8a87f8d3f6e5b3ca1c047ab4771f373001abb2173b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.187
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001779",
+        "historical:raw_ai2_arc_easy_001780"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dada27dc4dbe8067e8af5a8a87f8d3f6e5b3ca1c047ab4771f373001abb2173b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2236,
+      "first_chunk_seconds": 28.474,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2372,
+        "prompt_tokens": 1694,
+        "total_tokens": 4066,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1812,
+          "text_tokens": 560
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "c312facc868e48a6799a62de6bcbe2963665a5441ec4330ba76dd6f10f729eb1",
+      "status": "completed",
+      "latency_seconds": 68.425
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001779",
+        "historical:raw_ai2_arc_easy_001780"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dba3c19f0cc504d85fcfdd77459af4b86bc526f035dcce56c06a15df4c98022a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 150.871
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001779",
+        "historical:raw_ai2_arc_easy_001780"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "dba3c19f0cc504d85fcfdd77459af4b86bc526f035dcce56c06a15df4c98022a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1046,
+      "first_chunk_seconds": 3.056,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1111,
+        "prompt_tokens": 830,
+        "total_tokens": 1941,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 850,
+          "text_tokens": 261
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8a40db87959a06b191824d1e9c86625248fbb3d6a7ea51b1774ab1da25b6b90a",
+      "status": "completed",
+      "latency_seconds": 16.887
+    }
+  ],
+  "status": "completed"
+}

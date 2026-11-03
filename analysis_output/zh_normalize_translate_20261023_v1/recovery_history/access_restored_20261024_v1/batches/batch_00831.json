@@ -1,0 +1,120 @@
+{
+  "input_sha256": "c2512cdb4269a5fc6ec8c84f8c01b4be1960dd482bf0fdc6c0c795a94bc38d06",
+  "normalized": [
+    {
+      "record_id": "public:pbf_3018a87a1cfcceabcf62",
+      "decision": "ready",
+      "subject": "Sandwich Isles",
+      "relation_id": "location_to_discoverer",
+      "relation_definition": "The person credited with the first documented discovery of a specified geographical location.",
+      "direction": "geographical location -> discoverer",
+      "answer": "James Cook",
+      "canonical_fact": "James Cook discovered the Sandwich Isles (now Hawaiian Isles).",
+      "prompt_en": "Factual question: who discovered the Sandwich Isles (now Hawaiian Isles)?",
+      "evidence_quotes": [
+        "who discovered sandwich (now hawaiian) isles",
+        "James Cook"
+      ],
+      "reason": "No catalog relation fits a discovery-of-location fact. Proposed new relation location_to_discoverer with explicit definition. Source question and answer directly support that James Cook is the discoverer of the Sandwich (now Hawaiian) Isles. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "geographical location -> discoverer",
+        "prompt_en": "Factual question: who discovered the Sandwich Isles (now Hawaiian Isles)?",
+        "relation_id": "location_to_discoverer",
+        "answer": "James Cook",
+        "relation_definition": "The person credited with the first documented discovery of a specified geographical location.",
+        "subject": "Sandwich Isles",
+        "canonical_fact": "James Cook discovered the Sandwich Isles (now Hawaiian Isles).",
+        "answer_aliases_en": [
+          "James Cook",
+          "J. Cook",
+          "Captain James Cook",
+          "Cook, James",
+          "Cook",
+          "Captain Cook"
+        ],
+        "relation_spec": {
+          "id": "location_to_discoverer",
+          "definition": "The person credited with the first documented discovery of a specified geographical location.",
+          "direction": "geographical location -> discoverer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9d0a6f99f75c350142338ace409995add8e9b16c349cbe72d7bacdf3f50a7698",
+      "input_sha256": "2c5a19a779d3cb553b9cb13fc72d13b6942120235f6f536ce999386a6810e228",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_301c24b09bfacc8072d3",
+      "decision": "ready",
+      "subject": "condition in which men live without a common power to keep them all in awe, according to Hobbes",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "war",
+      "canonical_fact": "According to Hobbes, the condition in which men live without a common power to keep them all in awe is called war.",
+      "prompt_en": "According to Hobbes, the condition in which men live without a common power to keep them all in awe is called _____.",
+      "evidence_quotes": [
+        "whenever and wherever men live without a common power to keep them all in awe, there is",
+        "war"
+      ],
+      "reason": "The source supplies a defining description of a philosophical condition and asks for the conventional term (war) that Hobbes uses. This matches the description_to_term catalog relation exactly (description -> term). Prompt is option-free and does not contain the answer 'war'.",
+      "english": {
+        "direction": "description -> term",
+        "prompt_en": "According to Hobbes, the condition in which men live without a common power to keep them all in awe is called _____.",
+        "relation_id": "description_to_term",
+        "answer": "war",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "subject": "condition in which men live without a common power to keep them all in awe, according to Hobbes",
+        "canonical_fact": "According to Hobbes, the condition in which men live without a common power to keep them all in awe is called war.",
+        "answer_aliases_en": [
+          "war"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "fafb6d2612574b2ce7b995b056ab6d81a72f1520fc99cf68d4251445b57b7fc8",
+      "input_sha256": "049c25b34b2fc1b6f139f58dfd7d3489a24aa117adf7d0ddcdebe457184847eb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_3018a87a1cfcceabcf62",
+        "public:pbf_301c24b09bfacc8072d3"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "717b29b93d970ce117f842bda10c11d6b22d05f84c246f7eda433552929235cb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1567,
+      "first_chunk_seconds": 11.568,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1726,
+        "prompt_tokens": 1674,
+        "total_tokens": 3400,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1185,
+          "text_tokens": 541
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "bdbe0ad2a1536bea369e4b25cf69c39ccaf2eaf6f35d4977c93a76305f159741",
+      "status": "completed",
+      "latency_seconds": 45.048
+    }
+  ],
+  "status": "failed"
+}

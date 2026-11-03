@@ -1,0 +1,228 @@
+{
+  "input_sha256": "172936a0db8a16421a5c3cbbeee56bffacba56ecef5dce3f623a4342b4a7c6fa",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001730",
+      "decision": "ready",
+      "subject": "enzyme in the Golgi apparatus that catalyzes the addition of phosphates",
+      "relation_id": "enzyme_to_substrate_class",
+      "relation_definition": "The class of molecule (substrate) that a specified enzyme catalyzes a particular chemical modification on; retains the specific modification and location stated.",
+      "direction": "enzyme (with location and action specified) -> substrate class",
+      "answer": "protein",
+      "canonical_fact": "An enzyme in the Golgi apparatus catalyzes the addition of phosphates to proteins.",
+      "prompt_en": "What class of molecule does an enzyme in the Golgi apparatus catalyze the addition of phosphates to?",
+      "evidence_quotes": [
+        "catalyzes the addition of phosphates to which class of molecule",
+        "protein"
+      ],
+      "reason": "Source question and answer directly establish this biochemical fact. The answer 'protein' is a verbatim literal of source_answer. No catalog relation captures enzyme-to-substrate-class; proposed 'enzyme_to_substrate_class' fits the direction and specificity. No conflict with existing annotations.",
+      "english": {
+        "direction": "enzyme (with location and action specified) -> substrate class",
+        "relation_id": "enzyme_to_substrate_class",
+        "answer": "protein",
+        "canonical_fact": "An enzyme in the Golgi apparatus catalyzes the addition of phosphates to proteins.",
+        "subject": "enzyme in the Golgi apparatus that catalyzes the addition of phosphates",
+        "prompt_en": "What class of molecule does an enzyme in the Golgi apparatus catalyze the addition of phosphates to?",
+        "relation_definition": "The class of molecule (substrate) that a specified enzyme catalyzes a particular chemical modification on; retains the specific modification and location stated.",
+        "answer_aliases_en": [
+          "protein"
+        ],
+        "relation_spec": {
+          "id": "enzyme_to_substrate_class",
+          "definition": "The class of molecule (substrate) that a specified enzyme catalyzes a particular chemical modification on; retains the specific modification and location stated.",
+          "direction": "enzyme (with location and action specified) -> substrate class"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cae11c6368ea2fefa5dafb638e488ba1f60faa6ae65078a1dc4a12d2ae036b3a",
+      "input_sha256": "cb742b85fe473fb60629f5008f1de22059a7639713ffa5589f94ec4e3ae58102",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001732",
+      "decision": "ready",
+      "subject": "osmosis",
+      "relation_id": "process_to_condition",
+      "relation_definition": "The specific condition or situation under which a stated process occurs; retains modal qualifiers such as 'most likely'.",
+      "direction": "process -> condition",
+      "answer": "a permeable membrane that separates solutions of different concentrations",
+      "canonical_fact": "Osmosis would most likely occur in cells across a permeable membrane that separates solutions of different concentrations.",
+      "prompt_en": "In which situation would osmosis most likely occur in cells?",
+      "evidence_quotes": [
+        "In which situation would osmosis most likely occur in cells",
+        "across a permeable membrane that separates solutions of different concentrations"
+      ],
+      "reason": "Source directly provides the condition for osmosis; the answer is a literal substring of source_answer. Qualifier 'most likely' is preserved in the canonical fact. No catalog relation covers process-to-condition; proposed 'process_to_condition' matches the direction and retains the modal qualifier. Existing extraction from Qwen-3.8-Max aligns; sensenova-6.7-flash-lite flagged as not extractable but the source support is unambiguous.",
+      "english": {
+        "direction": "process -> condition",
+        "relation_id": "process_to_condition",
+        "answer": "a permeable membrane that separates solutions of different concentrations",
+        "canonical_fact": "Osmosis would most likely occur in cells across a permeable membrane that separates solutions of different concentrations.",
+        "subject": "osmosis",
+        "prompt_en": "In which situation would osmosis most likely occur in cells?",
+        "relation_definition": "The specific condition or situation under which a stated process occurs; retains modal qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "a permeable membrane that separates solutions of different concentrations"
+        ],
+        "relation_spec": {
+          "id": "process_to_condition",
+          "definition": "The specific condition or situation under which a stated process occurs; retains modal qualifiers such as 'most likely'.",
+          "direction": "process -> condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "38835df91ca36909a550e91c19d60aa2b7812414b5b1ef07819972bb4b58d7db",
+      "input_sha256": "9a9d33ef0b38da7f808234b9550b74ec3f748cee27ed601322980b63cbde0e4b",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001730",
+      "input_sha256": "cb742b85fe473fb60629f5008f1de22059a7639713ffa5589f94ec4e3ae58102",
+      "english": {
+        "direction": "enzyme (with location and action specified) -> substrate class",
+        "relation_id": "enzyme_to_substrate_class",
+        "answer": "protein",
+        "canonical_fact": "An enzyme in the Golgi apparatus catalyzes the addition of phosphates to proteins.",
+        "subject": "enzyme in the Golgi apparatus that catalyzes the addition of phosphates",
+        "prompt_en": "What class of molecule does an enzyme in the Golgi apparatus catalyze the addition of phosphates to?",
+        "relation_definition": "The class of molecule (substrate) that a specified enzyme catalyzes a particular chemical modification on; retains the specific modification and location stated.",
+        "answer_aliases_en": [
+          "protein"
+        ],
+        "relation_spec": {
+          "id": "enzyme_to_substrate_class",
+          "definition": "The class of molecule (substrate) that a specified enzyme catalyzes a particular chemical modification on; retains the specific modification and location stated.",
+          "direction": "enzyme (with location and action specified) -> substrate class"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cae11c6368ea2fefa5dafb638e488ba1f60faa6ae65078a1dc4a12d2ae036b3a",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001730",
+        "subject_zh": "高尔基体中催化磷酸基团添加的酶",
+        "prompt_zh": "高尔基体中催化磷酸基团添加的酶作用于哪一类分子？",
+        "canonical_fact_zh": "高尔基体中的一种酶催化蛋白质上磷酸基团的添加。",
+        "answer_zh": "蛋白质",
+        "answer_aliases_zh": [
+          "蛋白质"
+        ]
+      },
+      "translation_sha256": "c8f15461a6487f4708397a7c389b254b9906c823a7749a47791d5503137b54e5"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001732",
+      "input_sha256": "9a9d33ef0b38da7f808234b9550b74ec3f748cee27ed601322980b63cbde0e4b",
+      "english": {
+        "direction": "process -> condition",
+        "relation_id": "process_to_condition",
+        "answer": "a permeable membrane that separates solutions of different concentrations",
+        "canonical_fact": "Osmosis would most likely occur in cells across a permeable membrane that separates solutions of different concentrations.",
+        "subject": "osmosis",
+        "prompt_en": "In which situation would osmosis most likely occur in cells?",
+        "relation_definition": "The specific condition or situation under which a stated process occurs; retains modal qualifiers such as 'most likely'.",
+        "answer_aliases_en": [
+          "a permeable membrane that separates solutions of different concentrations"
+        ],
+        "relation_spec": {
+          "id": "process_to_condition",
+          "definition": "The specific condition or situation under which a stated process occurs; retains modal qualifiers such as 'most likely'.",
+          "direction": "process -> condition"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "38835df91ca36909a550e91c19d60aa2b7812414b5b1ef07819972bb4b58d7db",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001732",
+        "subject_zh": "渗透作用",
+        "prompt_zh": "在什么情况下，细胞中最可能发生渗透作用？",
+        "canonical_fact_zh": "渗透作用最可能发生在细胞中，跨越一种将不同浓度溶液分隔开的可透膜。",
+        "answer_zh": "一种将不同浓度溶液分隔开的可透膜",
+        "answer_aliases_zh": [
+          "一种将不同浓度溶液分隔开的可透膜"
+        ]
+      },
+      "translation_sha256": "9fcc37d931d34d4c9b153013e8e0502beb51989ec59fc8739fec5ae1d48c74a6"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001730",
+        "historical:raw_ai2_arc_easy_001732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b561c9d415bbaee83c09693e82220c3a19f54541ea0a7f21b7c402c379aa5069",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.834
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001730",
+        "historical:raw_ai2_arc_easy_001732"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b561c9d415bbaee83c09693e82220c3a19f54541ea0a7f21b7c402c379aa5069",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2668,
+      "first_chunk_seconds": 14.065,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2862,
+        "prompt_tokens": 1750,
+        "total_tokens": 4612,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2266,
+          "text_tokens": 596
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "9a283d58eab200c916244827fbcf01449d1a2c6cb65ef3fe42f77b96faa5fa3c",
+      "status": "completed",
+      "latency_seconds": 58.366
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001730",
+        "historical:raw_ai2_arc_easy_001732"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b5d7d8345c5a3da8563e68d6f4c9014ba74f58d8e8344f685f6aac5f69c14ca3",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1827,
+      "first_chunk_seconds": 35.266,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1883,
+        "prompt_tokens": 908,
+        "total_tokens": 2791,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1624,
+          "text_tokens": 259
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "00dda9e224d3ac8e7b09597e6c12a09d93f5d1f8095bae4b53196d3e346efa8b",
+      "status": "completed",
+      "latency_seconds": 64.043
+    }
+  ],
+  "status": "completed"
+}

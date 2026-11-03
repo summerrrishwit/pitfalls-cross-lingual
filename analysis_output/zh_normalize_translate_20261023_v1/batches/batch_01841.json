@@ -1,0 +1,157 @@
+{
+  "input_sha256": "01a9ba6e1870639af76d537bea313bc28e9bfff42eb6794d5bd7936b936c5590",
+  "normalized": [
+    {
+      "record_id": "public:pbf_d7e1f9458dc82df57a82",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The prompt_en necessarily contains the answer \"3 A\" because the given condition (filament current = 3 A) is numerically identical to the answer (connecting wire current = 3 A). No rephrasing from the source can avoid embedding the answer string in the prompt, violating the option-free / answer-free prompt constraint. Additionally, no catalog relation fits \"magnitude\" of a circuit parameter; a new relation would be needed but the prompt constraint blocks readiness.",
+      "input_sha256": "1c52291016e6cb705cac4a883aae954f417325ec30af79c7fa2a540278d99678",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_d7e2a71215cb24520049",
+      "decision": "ready",
+      "subject": "chief justice of India",
+      "relation_id": "position_to_appointing_authority",
+      "relation_definition": "The specific constitutional or statutory authority (office or person) empowered to appoint a holder to the specified position or office.",
+      "direction": "position -> appointing authority",
+      "answer": "the president",
+      "canonical_fact": "The chief justice of India is appointed by the president.",
+      "prompt_en": "The chief justice of India is appointed by",
+      "evidence_quotes": [
+        "who will appoint the chief justice of india",
+        "the president"
+      ],
+      "reason": "Source directly states the appointing authority for the chief justice of India. No existing catalog relation covers positional appointment; proposed new relation position_to_appointing_authority with direction position -> appointing authority. Prompt is option-free and does not contain the answer. Evidence quotes are literal substrings of source.",
+      "english": {
+        "answer": "the president",
+        "relation_id": "position_to_appointing_authority",
+        "prompt_en": "The chief justice of India is appointed by",
+        "direction": "position -> appointing authority",
+        "subject": "chief justice of India",
+        "canonical_fact": "The chief justice of India is appointed by the president.",
+        "relation_definition": "The specific constitutional or statutory authority (office or person) empowered to appoint a holder to the specified position or office.",
+        "answer_aliases_en": [
+          "the president"
+        ],
+        "relation_spec": {
+          "id": "position_to_appointing_authority",
+          "definition": "The specific constitutional or statutory authority (office or person) empowered to appoint a holder to the specified position or office.",
+          "direction": "position -> appointing authority"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c08609a132bbe5d2b872e04c974bf9c741d51f05fca06d43cdf98477547e7b3e",
+      "input_sha256": "5362ef81f75a23a3dbe9c57c1247cf35f8bdf4f6230bc5a663702727893b0ced",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_d7e2a71215cb24520049",
+      "input_sha256": "5362ef81f75a23a3dbe9c57c1247cf35f8bdf4f6230bc5a663702727893b0ced",
+      "english": {
+        "answer": "the president",
+        "relation_id": "position_to_appointing_authority",
+        "prompt_en": "The chief justice of India is appointed by",
+        "direction": "position -> appointing authority",
+        "subject": "chief justice of India",
+        "canonical_fact": "The chief justice of India is appointed by the president.",
+        "relation_definition": "The specific constitutional or statutory authority (office or person) empowered to appoint a holder to the specified position or office.",
+        "answer_aliases_en": [
+          "the president"
+        ],
+        "relation_spec": {
+          "id": "position_to_appointing_authority",
+          "definition": "The specific constitutional or statutory authority (office or person) empowered to appoint a holder to the specified position or office.",
+          "direction": "position -> appointing authority"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "c08609a132bbe5d2b872e04c974bf9c741d51f05fca06d43cdf98477547e7b3e",
+      "translation": {
+        "record_id": "public:pbf_d7e2a71215cb24520049",
+        "subject_zh": "印度首席大法官",
+        "prompt_zh": "印度首席大法官由……任命",
+        "canonical_fact_zh": "印度首席大法官由总统任命。",
+        "answer_zh": "总统",
+        "answer_aliases_zh": [
+          "总统"
+        ]
+      },
+      "translation_sha256": "e2a505d33ac9148615e6d32119d40f7aac065a3f5a641d27cebb3a9a3699a8a8"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_d7e1f9458dc82df57a82",
+        "public:pbf_d7e2a71215cb24520049"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f1b4b1efae11629671cec6814badde7410eed7c86401a0022134681f6401b0ee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2636,
+      "first_chunk_seconds": 30.508,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2710,
+        "prompt_tokens": 1611,
+        "total_tokens": 4321,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2350,
+          "text_tokens": 360
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "10b27c2072bb36c61fedd8a66ad9b6d5dbe8e2851c5711067d62d0f1ad6be4dc",
+      "status": "completed",
+      "latency_seconds": 67.317
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_d7e2a71215cb24520049"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "af88c4aea40da39ae4c47a2addb4d38a66df439a4118f713ba0c4e268c5fc6d8",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 465,
+      "first_chunk_seconds": 29.935,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 496,
+        "prompt_tokens": 535,
+        "total_tokens": 1031,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 417,
+          "text_tokens": 79
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f02f0390116b8b44d5434660959e444c942395da191511a41187d9f15c024ee9",
+      "status": "completed",
+      "latency_seconds": 33.862
+    }
+  ],
+  "status": "completed"
+}

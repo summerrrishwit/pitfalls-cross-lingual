@@ -1,0 +1,278 @@
+{
+  "input_sha256": "1e40db4ddc5bb88bac80c9b10387d042f8c0c2e06e5801e39526a761bfdf79cc",
+  "normalized": [
+    {
+      "record_id": "public:pbf_dac1664245ba3aa934f7",
+      "decision": "ready",
+      "subject": "Take This Job and Shove It",
+      "relation_id": "song_to_songwriter",
+      "relation_definition": "The songwriter or composer who authored a specified song composition; distinct from performer, producer, or recording artist.",
+      "direction": "song -> songwriter",
+      "answer": "David Allan Coe",
+      "canonical_fact": "David Allan Coe wrote the song Take This Job and Shove It.",
+      "prompt_en": "Who wrote the song Take This Job and Shove It?",
+      "evidence_quotes": [
+        "who wrote the song take this job and shove it",
+        "David Allan Coe"
+      ],
+      "reason": "The source question asks for the songwriter of 'Take This Job and Shove It' and the source answer is 'David Allan Coe.' No existing catalog relation covers song authorship exactly (written_work_to_author is scoped to literary written works; song_to_performer covers performers, not writers), so a precise new relation 'song_to_songwriter' is proposed with explicit direction song→songwriter.",
+      "english": {
+        "answer": "David Allan Coe",
+        "relation_id": "song_to_songwriter",
+        "prompt_en": "Who wrote the song Take This Job and Shove It?",
+        "direction": "song -> songwriter",
+        "subject": "Take This Job and Shove It",
+        "canonical_fact": "David Allan Coe wrote the song Take This Job and Shove It.",
+        "relation_definition": "The songwriter or composer who authored a specified song composition; distinct from performer, producer, or recording artist.",
+        "answer_aliases_en": [
+          "David Allan Coe"
+        ],
+        "relation_spec": {
+          "id": "song_to_songwriter",
+          "definition": "The songwriter or composer who authored a specified song composition; distinct from performer, producer, or recording artist.",
+          "direction": "song -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dec1b28d96956ab59a0d6b6614b2bf9bbc63d4f4ac13123480482a187843ee4c",
+      "input_sha256": "36fa9eb11d1a17182bfbe86a470bcaa05ca3d9d765f6bc646f4cb5a9b02728a0",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_dada70d1e445ec0ca3e5",
+      "decision": "ready",
+      "subject": "branch of Judaism founded by Zacharias Frankel known for its \"Positive-Historical Judaism\"",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Conservative",
+      "canonical_fact": "The branch of Judaism founded by Zacharias Frankel known for its 'Positive-Historical Judaism' is Conservative.",
+      "prompt_en": "Which branch of Judaism founded by Zacharias Frankel is known for its \"Positive-Historical Judaism\"?",
+      "evidence_quotes": [
+        "Which branch of Judaism founded by Zacharias Frankel is known for its \"Positive-Historical Judaism\"?",
+        "Conservative"
+      ],
+      "reason": "The source question supplies a qualifying description (founded by Zacharias Frankel, associated with 'Positive-Historical Judaism') that uniquely identifies the entity 'Conservative' (Judaism). The existing relation 'description_to_entity' fits exactly: an identifying description maps to a unique entity. The source answer confirms 'Conservative.' No new relation is needed.",
+      "english": {
+        "answer": "Conservative",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which branch of Judaism founded by Zacharias Frankel is known for its \"Positive-Historical Judaism\"?",
+        "direction": "identifying description -> entity",
+        "subject": "branch of Judaism founded by Zacharias Frankel known for its \"Positive-Historical Judaism\"",
+        "canonical_fact": "The branch of Judaism founded by Zacharias Frankel known for its 'Positive-Historical Judaism' is Conservative.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Conservative"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "758ee1bf49c4d4e85500f0f622bf676b52d94b1d3dcd1e49b071617f714aceac",
+      "input_sha256": "8361824eae1304ed1a07589d6be59e33e795b677f3f04e60e6f268bbc2da36bb",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_dac1664245ba3aa934f7",
+      "input_sha256": "36fa9eb11d1a17182bfbe86a470bcaa05ca3d9d765f6bc646f4cb5a9b02728a0",
+      "english": {
+        "answer": "David Allan Coe",
+        "relation_id": "song_to_songwriter",
+        "prompt_en": "Who wrote the song Take This Job and Shove It?",
+        "direction": "song -> songwriter",
+        "subject": "Take This Job and Shove It",
+        "canonical_fact": "David Allan Coe wrote the song Take This Job and Shove It.",
+        "relation_definition": "The songwriter or composer who authored a specified song composition; distinct from performer, producer, or recording artist.",
+        "answer_aliases_en": [
+          "David Allan Coe"
+        ],
+        "relation_spec": {
+          "id": "song_to_songwriter",
+          "definition": "The songwriter or composer who authored a specified song composition; distinct from performer, producer, or recording artist.",
+          "direction": "song -> songwriter"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "dec1b28d96956ab59a0d6b6614b2bf9bbc63d4f4ac13123480482a187843ee4c",
+      "translation": {
+        "record_id": "public:pbf_dac1664245ba3aa934f7",
+        "subject_zh": "Take This Job and Shove It",
+        "prompt_zh": "歌曲《Take This Job and Shove It》是谁创作的？",
+        "canonical_fact_zh": "David Allan Coe 创作了歌曲《Take This Job and Shove It》。",
+        "answer_zh": "David Allan Coe",
+        "answer_aliases_zh": [
+          "David Allan Coe"
+        ]
+      },
+      "translation_sha256": "056286b952ceda507f0a4268809edba5c26e1f0e3f663a1dee3397bafe2c26a7"
+    },
+    {
+      "record_id": "public:pbf_dada70d1e445ec0ca3e5",
+      "input_sha256": "8361824eae1304ed1a07589d6be59e33e795b677f3f04e60e6f268bbc2da36bb",
+      "english": {
+        "answer": "Conservative",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which branch of Judaism founded by Zacharias Frankel is known for its \"Positive-Historical Judaism\"?",
+        "direction": "identifying description -> entity",
+        "subject": "branch of Judaism founded by Zacharias Frankel known for its \"Positive-Historical Judaism\"",
+        "canonical_fact": "The branch of Judaism founded by Zacharias Frankel known for its 'Positive-Historical Judaism' is Conservative.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Conservative"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "758ee1bf49c4d4e85500f0f622bf676b52d94b1d3dcd1e49b071617f714aceac",
+      "translation": {
+        "record_id": "public:pbf_dada70d1e445ec0ca3e5",
+        "subject_zh": "由 Zacharias Frankel 创立的、以\"积极-历史犹太教\"著称的犹太教分支",
+        "prompt_zh": "由 Zacharias Frankel 创立的、以\"积极-历史犹太教\"著称的犹太教分支是哪一派？",
+        "canonical_fact_zh": "由 Zacharias Frankel 创立的、以\"积极-历史犹太教\"著称的犹太教分支是保守派。",
+        "answer_zh": "保守派",
+        "answer_aliases_zh": [
+          "保守派"
+        ]
+      },
+      "translation_sha256": "63e064382d21cf685c4a34fc67595f2ac3b51ae20b60d2592fc87c14a3996e5f"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_dac1664245ba3aa934f7",
+        "public:pbf_dada70d1e445ec0ca3e5"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "a56bfde55408abac3f14ef4d670c8f91c35d94965f4b23137fcde58520c4322b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3389,
+      "first_chunk_seconds": 68.166,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3463,
+        "prompt_tokens": 1624,
+        "total_tokens": 5087,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3004,
+          "text_tokens": 459
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f8695940eb88b7bfa2aecd541e5da267836e93a0c8522dbe922f331edf236ba7",
+      "status": "completed",
+      "latency_seconds": 108.413
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dac1664245ba3aa934f7",
+        "public:pbf_dada70d1e445ec0ca3e5"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e6c5a6b6307c1b6cd35fb08d1020b2d8fe9a0c3485348883737d647482e4f1fb",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1794,
+      "first_chunk_seconds": 30.849,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1833,
+        "prompt_tokens": 857,
+        "total_tokens": 2690,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1636,
+          "text_tokens": 197
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d4bce623c2e7acee5890873c42267ada377155cdc86c3a85b26f4774c5480942",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 53.834,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dac1664245ba3aa934f7",
+        "public:pbf_dada70d1e445ec0ca3e5"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "bbb172c51be5221dab17f11d21e6230debd281ab6f670125e14c53e148615e6c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1081,
+      "first_chunk_seconds": 35.036,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1081,
+        "prompt_tokens": 874,
+        "total_tokens": 1955,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 886,
+          "text_tokens": 195
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4d582532e6206555002f0907b1ce6cff0e6c8cb6cdea4edfd6b254bfcc478f7e",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 46.42,
+      "validation_code": "invalid_translation_schema"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_dac1664245ba3aa934f7",
+        "public:pbf_dada70d1e445ec0ca3e5"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "bbb172c51be5221dab17f11d21e6230debd281ab6f670125e14c53e148615e6c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2052,
+      "first_chunk_seconds": 9.516,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2290,
+        "prompt_tokens": 874,
+        "total_tokens": 3164,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1981,
+          "text_tokens": 309
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7f96979f714127285843f2a9ccfd4bf7807483b60ef3cb9b8ae7d73630bf7fb5",
+      "status": "completed",
+      "latency_seconds": 30.933
+    }
+  ],
+  "status": "completed"
+}

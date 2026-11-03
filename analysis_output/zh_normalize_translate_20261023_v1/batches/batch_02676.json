@@ -1,0 +1,71 @@
+{
+  "input_sha256": "f2dd1db890e00878a87fe5ba7be5e1436b1a5b2bc388c20d4fdac8cb27404c08",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_007383",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact 'Clothes after washing are wet' describes a transient post-process condition of an object. No catalog relation captures 'entity_after_process -> state/condition'. entity_to_class explicitly excludes arbitrary attributes; entity_to_material is about composition. No listed relation fits exactly, so defer without forcing a broad category.",
+      "input_sha256": "b3ab0d152d2a831dc31ae597c9fe52bd190a421954d302c679f4014edf7ce740",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_007389",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The fact 'The Sooners are from Oklahoma' is a sports-team-to-home-state affiliation. entity_to_containing_location explicitly excludes origin ('not habitat, origin, or process location'), and no other catalog relation models team origin or conference affiliation. No listed relation fits exactly, so defer without forcing.",
+      "input_sha256": "e0dc0f39f104074afb63f181fc9f424ce6b7898ebe926ee23b617c10ab0b98b0",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_007383",
+        "historical:raw_commonsense_qa_007389"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0c2a522a075e2f7feabd405bc2977f97a6b4f50c46d994319ed007c85c6dfe82",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1106,
+      "first_chunk_seconds": 7.751,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1209,
+        "prompt_tokens": 1637,
+        "total_tokens": 2846,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 866,
+          "text_tokens": 343
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6aa56372cf1a653df99567fd76d50b212f56bdee083422e4f3c6c477ceccceca",
+      "status": "completed",
+      "latency_seconds": 21.779
+    }
+  ],
+  "status": "completed"
+}

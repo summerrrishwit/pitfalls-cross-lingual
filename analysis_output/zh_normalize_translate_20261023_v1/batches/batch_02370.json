@@ -1,0 +1,208 @@
+{
+  "input_sha256": "3c45b68f992734a92c32235b7ae11b3c7b9055103b2f0e38b6b1a667b2478794",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001526",
+      "decision": "ready",
+      "subject": "long vine of an ivy plant and the trunk of an oak tree",
+      "relation_id": "pair_to_shared_function",
+      "relation_definition": "Two specified entities -> their explicitly stated common function or property that applies to both members of the pair.",
+      "direction": "pair of entities -> shared function/property",
+      "answer": "give support to a plant",
+      "canonical_fact": "The long vine of an ivy plant and the trunk of an oak tree both give support to a plant.",
+      "prompt_en": "What shared function do the long vine of an ivy plant and the trunk of an oak tree perform?",
+      "evidence_quotes": [
+        "the long vine of an ivy plant and the trunk of an oak tree",
+        "They both give support to a plant."
+      ],
+      "reason": "No catalog relation fits a 'shared function between two specified entities' relationship. Proposed new snake_case relation pair_to_shared_function with explicit direction. Answer 'give support to a plant' is a concise literal substring of source_answer. Evidence quotes are literal substrings of source_question and source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "pair of entities -> shared function/property",
+        "relation_id": "pair_to_shared_function",
+        "answer": "give support to a plant",
+        "canonical_fact": "The long vine of an ivy plant and the trunk of an oak tree both give support to a plant.",
+        "subject": "long vine of an ivy plant and the trunk of an oak tree",
+        "prompt_en": "What shared function do the long vine of an ivy plant and the trunk of an oak tree perform?",
+        "relation_definition": "Two specified entities -> their explicitly stated common function or property that applies to both members of the pair.",
+        "answer_aliases_en": [
+          "give support to a plant"
+        ],
+        "relation_spec": {
+          "id": "pair_to_shared_function",
+          "definition": "Two specified entities -> their explicitly stated common function or property that applies to both members of the pair.",
+          "direction": "pair of entities -> shared function/property"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3a518ae71a9f429dc3c68ebc446eee1debc2d52e521c8007b3d2c9117754f918",
+      "input_sha256": "72c5aab03e1fc5d384a2507e2fc5e52cb1a6770005bc17c6502efc26314af33d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001527",
+      "decision": "ready",
+      "subject": "shape of a riverbed",
+      "relation_id": "property_to_causal_process",
+      "relation_definition": "A specified property or feature of an entity -> the named gradual process explicitly identified as causing that property to change over time.",
+      "direction": "property/feature -> gradual causal process",
+      "answer": "erosion",
+      "canonical_fact": "The shape of a riverbed changes over time as a result of erosion.",
+      "prompt_en": "Which gradual process causes the shape of a riverbed to change over time?",
+      "evidence_quotes": [
+        "The shape of a riverbed changes over time as a result of",
+        "erosion"
+      ],
+      "reason": "No catalog relation fits a 'property changes due to a named process' causal relationship. Proposed new snake_case relation property_to_causal_process with explicit direction. Answer 'erosion' matches source_answer exactly. Evidence quotes are literal substrings of source_question and source_answer. Prompt is option-free and does not contain the answer.",
+      "english": {
+        "direction": "property/feature -> gradual causal process",
+        "relation_id": "property_to_causal_process",
+        "answer": "erosion",
+        "canonical_fact": "The shape of a riverbed changes over time as a result of erosion.",
+        "subject": "shape of a riverbed",
+        "prompt_en": "Which gradual process causes the shape of a riverbed to change over time?",
+        "relation_definition": "A specified property or feature of an entity -> the named gradual process explicitly identified as causing that property to change over time.",
+        "answer_aliases_en": [
+          "erosion"
+        ],
+        "relation_spec": {
+          "id": "property_to_causal_process",
+          "definition": "A specified property or feature of an entity -> the named gradual process explicitly identified as causing that property to change over time.",
+          "direction": "property/feature -> gradual causal process"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "cee9ace7bf92bc6adb847e3656b0eb5e90522ce46fbc41ca8577fbd614610d1b",
+      "input_sha256": "3848aff16a044dd06c89964f65ef1d64bbde79d9a7179b9d244e94a6236755f3",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6435c12162aa372cc51c533aa44c41bdfe0a23a16818e8342d0bf77f20dad078",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1932,
+      "first_chunk_seconds": 26.065,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2112,
+        "prompt_tokens": 1745,
+        "total_tokens": 3857,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1537,
+          "text_tokens": 575
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6a5c440f0808b1b309514e7d44bd53d495801585d1ea807442b8fd9cd46c353a",
+      "status": "completed",
+      "latency_seconds": 98.518
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.185
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 31.712
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 32.601
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 4.985
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 1.078
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001526",
+        "historical:raw_ai2_arc_easy_001527"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "7c2314d2740ca879cae1296429e3d848ca34b3881e332b16f2abb510d5e0a5f4",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 0.829
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_02370.json",
+      "sha256": "b6e269fadac193dd0526b0a28a0b55384e6503fbb480e4824914bbbe82f78be8",
+      "previous_status": "failed"
+    }
+  ]
+}

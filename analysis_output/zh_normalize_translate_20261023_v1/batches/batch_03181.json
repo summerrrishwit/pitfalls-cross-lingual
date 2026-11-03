@@ -1,0 +1,171 @@
+{
+  "input_sha256": "f4d3fc4087669007371016c6ed5a469592c3de45390d4818b1255ff38e4f9456",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000834",
+      "decision": "ready",
+      "subject": "velocity a skydiver reaches when air drag equals their weight",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "terminal velocity",
+      "canonical_fact": "A skydiver reaches terminal velocity when the air drag equals their weight.",
+      "prompt_en": "What is the term for the velocity a skydiver reaches when air drag equals their weight?",
+      "evidence_quotes": [
+        "when the air drag equals their weight",
+        "terminal velocity"
+      ],
+      "reason": "The source question asks for the name of the velocity a skydiver attains when drag equals weight; the literal answer 'terminal velocity' is the conventional physics term uniquely fitting that defining description, matching description_to_term (description -> term).",
+      "english": {
+        "prompt_en": "What is the term for the velocity a skydiver reaches when air drag equals their weight?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "terminal velocity",
+        "canonical_fact": "A skydiver reaches terminal velocity when the air drag equals their weight.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "subject": "velocity a skydiver reaches when air drag equals their weight",
+        "answer_aliases_en": [
+          "terminal velocity"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "019858f4477e7e48174d6d73130fb76e2f89816ce4be55d8befb0e7bee01a79e",
+      "input_sha256": "c6b62723e17a37231faf18e8b5b64b4440971c89cf3992be2265e3cf2643366d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000835",
+      "decision": "ready",
+      "subject": "structures that distinguish Saturn whose spokes appear seasonally with an origin as yet unknown",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "rings",
+      "canonical_fact": "The rings of Saturn are the structures that distinguish Saturn and whose spokes appear seasonally, with an origin as yet unknown.",
+      "prompt_en": "What structures that distinguish Saturn have spokes that appear seasonally, with an origin as yet unknown?",
+      "evidence_quotes": [
+        "structures that distinguish saturn appear seasonally, with an origin as yet unknown",
+        "rings"
+      ],
+      "reason": "The source question identifies a unique entity by its distinguishing properties (spokes appearing seasonally, unknown origin) and asks for the structure name; the literal answer 'rings' is the sole entity satisfying that description, matching description_to_entity (identifying description -> entity).",
+      "english": {
+        "prompt_en": "What structures that distinguish Saturn have spokes that appear seasonally, with an origin as yet unknown?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer": "rings",
+        "canonical_fact": "The rings of Saturn are the structures that distinguish Saturn and whose spokes appear seasonally, with an origin as yet unknown.",
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "subject": "structures that distinguish Saturn whose spokes appear seasonally with an origin as yet unknown",
+        "answer_aliases_en": [
+          "rings"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2e6ab2dc41779c0eec3127f5d04ab40100e6a8defdae1d72ec32a3139763af6f",
+      "input_sha256": "698ad83ba6b7dd7b65fae4f787646d21d9256c5eeb915740708ce4371d68edf1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000834",
+        "historical:raw_sciq_000835"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "53ee00575bd35110ce5c5da32a89d12b0925307420086ac7ffb91fe0dfca3922",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 39.581
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000834",
+        "historical:raw_sciq_000835"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "53ee00575bd35110ce5c5da32a89d12b0925307420086ac7ffb91fe0dfca3922",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3396,
+      "first_chunk_seconds": 62.175,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3466,
+        "prompt_tokens": 1724,
+        "total_tokens": 5190,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2955,
+          "text_tokens": 511
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dc72b080226db6c32b630054a73d2b5a64f7e43f8cad76f8d308f9da524bf671",
+      "status": "completed",
+      "latency_seconds": 111.803
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000834",
+        "historical:raw_sciq_000835"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "279b96c19032871a0407f99268084683039123999978adfb831d9417800ab3e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 41.496
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000834",
+        "historical:raw_sciq_000835"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "279b96c19032871a0407f99268084683039123999978adfb831d9417800ab3e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 25.046
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000834",
+        "historical:raw_sciq_000835"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "279b96c19032871a0407f99268084683039123999978adfb831d9417800ab3e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 60.016
+    }
+  ],
+  "status": "failed"
+}

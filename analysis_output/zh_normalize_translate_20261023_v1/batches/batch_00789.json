@@ -1,0 +1,157 @@
+{
+  "input_sha256": "a522b92f25cf942f1f62d0a4a4e87d96de0944664f4e7ef767c0f9ee3b531e2b",
+  "normalized": [
+    {
+      "record_id": "public:pbf_29bbf2252516b75d00e2",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'older adult who has received a message' is a hypothetical scenario, not a stable entity. The relation 'most likely to remember when telling another person' captures a narrow cognitive-psychology finding with no matching catalog relation. Proposing a new relation (e.g., group_to_most_likely_retrieval_content) would be too specific to a single research finding to serve as a reusable relational fact. Deferred.",
+      "input_sha256": "a15d235b03c8da5e13cda99c4f708e3164cb016f0c71ba891c9d824c373af4d4",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_29d355c4d55a2c4c9fba",
+      "decision": "ready",
+      "subject": "Phil Jackson",
+      "relation_id": "person_to_team_played_for",
+      "relation_definition": "A professional sports team for which a specified person played as an athlete; retain league and career-stage qualifiers where present. Multiple teams may be valid; each instance records one team.",
+      "direction": "person -> sports team played for",
+      "answer": "New York Knicks",
+      "canonical_fact": "Before going into coaching, Phil Jackson played for the New York Knicks.",
+      "prompt_en": "Before going into his coaching career, which NBA team did Phil Jackson play for?",
+      "evidence_quotes": [
+        "Before he went into coaching Phil Jackson played for which of the following NBA teams",
+        "New York Knicks"
+      ],
+      "reason": "Source directly states Phil Jackson played for the New York Knicks before coaching. No existing catalog relation covers sports-team membership; proposing person_to_team_played_for as a precise new relation. Answer is kept exactly as in source. Prompt omits the answer and is option-free.",
+      "english": {
+        "direction": "person -> sports team played for",
+        "prompt_en": "Before going into his coaching career, which NBA team did Phil Jackson play for?",
+        "relation_id": "person_to_team_played_for",
+        "answer": "New York Knicks",
+        "relation_definition": "A professional sports team for which a specified person played as an athlete; retain league and career-stage qualifiers where present. Multiple teams may be valid; each instance records one team.",
+        "subject": "Phil Jackson",
+        "canonical_fact": "Before going into coaching, Phil Jackson played for the New York Knicks.",
+        "answer_aliases_en": [
+          "New York Knicks"
+        ],
+        "relation_spec": {
+          "id": "person_to_team_played_for",
+          "definition": "A professional sports team for which a specified person played as an athlete; retain league and career-stage qualifiers where present. Multiple teams may be valid; each instance records one team.",
+          "direction": "person -> sports team played for"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "751531c4cc53d3685db7f381d327d1378425a71a31136e5420b08641f6734c0e",
+      "input_sha256": "94a3c2941af7b54bfc5569c7c49550a5fa0f3e4a5d60ebeba946b86ef0a869ca",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_29d355c4d55a2c4c9fba",
+      "input_sha256": "94a3c2941af7b54bfc5569c7c49550a5fa0f3e4a5d60ebeba946b86ef0a869ca",
+      "english": {
+        "direction": "person -> sports team played for",
+        "prompt_en": "Before going into his coaching career, which NBA team did Phil Jackson play for?",
+        "relation_id": "person_to_team_played_for",
+        "answer": "New York Knicks",
+        "relation_definition": "A professional sports team for which a specified person played as an athlete; retain league and career-stage qualifiers where present. Multiple teams may be valid; each instance records one team.",
+        "subject": "Phil Jackson",
+        "canonical_fact": "Before going into coaching, Phil Jackson played for the New York Knicks.",
+        "answer_aliases_en": [
+          "New York Knicks"
+        ],
+        "relation_spec": {
+          "id": "person_to_team_played_for",
+          "definition": "A professional sports team for which a specified person played as an athlete; retain league and career-stage qualifiers where present. Multiple teams may be valid; each instance records one team.",
+          "direction": "person -> sports team played for"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "751531c4cc53d3685db7f381d327d1378425a71a31136e5420b08641f6734c0e",
+      "translation": {
+        "record_id": "public:pbf_29d355c4d55a2c4c9fba",
+        "subject_zh": "菲尔·杰克逊",
+        "prompt_zh": "在开始执教生涯之前，菲尔·杰克逊曾效力于哪支NBA球队？",
+        "canonical_fact_zh": "在开始执教生涯之前，菲尔·杰克逊曾效力于纽约尼克斯队。",
+        "answer_zh": "纽约尼克斯队",
+        "answer_aliases_zh": [
+          "纽约尼克斯队"
+        ]
+      },
+      "translation_sha256": "5176745f011bc6a826a9e2ea13487e8dfe7626399b944b990c38013ec118e3c1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_29bbf2252516b75d00e2",
+        "public:pbf_29d355c4d55a2c4c9fba"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c197f82cd25db3dae4bb998fd9a8d6673ad23821e5a0857426b5a889e1de069d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3108,
+      "first_chunk_seconds": 21.485,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3266,
+        "prompt_tokens": 1679,
+        "total_tokens": 4945,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2782,
+          "text_tokens": 484
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "73d1be49cdbf90f9cb108f240bb65ee7bcb4df6d6d2c0e48e106847edac5c139",
+      "status": "completed",
+      "latency_seconds": 105.471
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_29d355c4d55a2c4c9fba"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1c404109649d531f4b3343cbb25a458859f510eedca50141b73d4f276d5ef763",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 494,
+      "first_chunk_seconds": 5.638,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 556,
+        "prompt_tokens": 574,
+        "total_tokens": 1130,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 413,
+          "text_tokens": 143
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "2c304a95b4cf8c56499fe9cd53c397d2bd51d65cc5b286c176d34b3f94a829a0",
+      "status": "completed",
+      "latency_seconds": 15.11
+    }
+  ],
+  "status": "completed"
+}

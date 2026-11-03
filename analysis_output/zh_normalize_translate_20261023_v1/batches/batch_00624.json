@@ -1,0 +1,202 @@
+{
+  "input_sha256": "ae99456ac5b273638be7e784480fe27815a15c570efc507208ae820158fce521",
+  "normalized": [
+    {
+      "record_id": "public:pbf_0d3859544c7a5a79c04a",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Existing answer 'income inequality' is an incomplete subset of the source answer 'The ratio of income inequality to income equality in different countries.' It drops the source's qualifiers ('ratio of income inequality to income equality' and 'in different countries'), violating the instruction to preserve uncertainty and qualifiers. The shortened form conflates 'income inequality' (a general concept) with the specific 'ratio of inequality to equality' the source states. Defer pending a faithful copy of the source answer with all qualifiers intact.",
+      "input_sha256": "6a1abc7490714ee4dc5294fa4459e8edf32736889425b175337b953f6d6daf2d",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_0d4d507799f51e7e8982",
+      "decision": "ready",
+      "subject": "second-year college student",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "sophomore",
+      "canonical_fact": "A second-year college student is usually called a sophomore.",
+      "prompt_en": "A second-year college student is usually called a",
+      "evidence_quotes": [
+        "sophomore"
+      ],
+      "reason": "Source question describes a 'second-year college student' and asks for the usual term; source answer is 'sophomore'. This is a textbook description_to_term: an identifying description ('second-year college student') maps to the conventional term ('sophomore'). The existing answer matches the source exactly with no lost qualifiers. prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "subject": "second-year college student",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "sophomore",
+        "canonical_fact": "A second-year college student is usually called a sophomore.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "prompt_en": "A second-year college student is usually called a",
+        "answer_aliases_en": [
+          "sophomore"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "df0f7775875d9c2bc391db9a3acc4b69cb6da0467f2319e507526c4ac39ae1a0",
+      "input_sha256": "0820b0175e950ff77afc5d4806d3b7715470d7cff7541ac1d7c20f6047570710",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_0d4d507799f51e7e8982",
+      "input_sha256": "0820b0175e950ff77afc5d4806d3b7715470d7cff7541ac1d7c20f6047570710",
+      "english": {
+        "subject": "second-year college student",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer": "sophomore",
+        "canonical_fact": "A second-year college student is usually called a sophomore.",
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "prompt_en": "A second-year college student is usually called a",
+        "answer_aliases_en": [
+          "sophomore"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "df0f7775875d9c2bc391db9a3acc4b69cb6da0467f2319e507526c4ac39ae1a0",
+      "translation": {
+        "record_id": "public:pbf_0d4d507799f51e7e8982",
+        "subject_zh": "大学二年级学生",
+        "prompt_zh": "大学二年级学生通常被称为",
+        "canonical_fact_zh": "大学二年级学生通常被称为大二。",
+        "answer_zh": "大二",
+        "answer_aliases_zh": [
+          "大二"
+        ]
+      },
+      "translation_sha256": "54d5668dbe5c901b1a7b4595db11cb79ef074f2844a593e8a7462f57554b532e"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0d3859544c7a5a79c04a",
+        "public:pbf_0d4d507799f51e7e8982"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ed7f605adcce9cadfbd31553177ebdbd61dd79819a768895ea274b6163e4fd1b",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2155,
+        "prompt_tokens": 1591,
+        "total_tokens": 3746,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1757,
+          "text_tokens": 398
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "f6f1dc025fea44db9035b1c882a802d33571e4436e7c706ef9934445261c086d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 67.58,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_0d3859544c7a5a79c04a",
+        "public:pbf_0d4d507799f51e7e8982"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3d263c0775eb583e2cc5463eebeaff5a9c6a94f75ab7938a05c62459d416e61a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3566,
+        "prompt_tokens": 1610,
+        "total_tokens": 5176,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 3092,
+          "text_tokens": 474
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "31af22a5a38637546c3f04cf5cf5ae8d35d608bd0af003a878c4ecc5d1091165",
+      "status": "completed",
+      "latency_seconds": 104.45
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0d4d507799f51e7e8982"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "9d2a557c3df2b64949fcfc2e0ef615df77c5125ee02825f9d273d79fa3161e9d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 8192,
+        "prompt_tokens": 518,
+        "total_tokens": 8710,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1110,
+          "text_tokens": 7082
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "790f60e3f39bed5bec8150f91affaeedf3226c759f8525ea823a2b7f605b648d",
+      "status": "failed",
+      "error_type": "JSONDecodeError",
+      "latency_seconds": 149.462
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_0d4d507799f51e7e8982"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "9d2a557c3df2b64949fcfc2e0ef615df77c5125ee02825f9d273d79fa3161e9d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1150,
+        "prompt_tokens": 518,
+        "total_tokens": 1668,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1035,
+          "text_tokens": 115
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dd9f57b84d048c4baddd5fa98efb462c40a721ef92e0b151e148bca59ee7c377",
+      "status": "completed",
+      "latency_seconds": 23.075
+    }
+  ],
+  "status": "completed"
+}

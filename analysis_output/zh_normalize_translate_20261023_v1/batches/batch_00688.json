@@ -1,0 +1,251 @@
+{
+  "input_sha256": "518704dd11f4720079e4b2f02661a07952fe97e1c87122946cdecf58e9a93da3",
+  "normalized": [
+    {
+      "record_id": "public:pbf_177c6d27fd0483f310b8",
+      "decision": "ready",
+      "subject": "The Sorcerer's Apprentice",
+      "relation_id": "musical_work_to_composer",
+      "relation_definition": "The composer who wrote the music for a specified musical work; disambiguate version/recording when necessary.",
+      "direction": "musical work -> composer",
+      "answer": "Paul Dukas",
+      "canonical_fact": "Paul Dukas composed the music for The Sorcerer's Apprentice.",
+      "prompt_en": "Factual question: who wrote the music for sorcerer's apprentice\nAnswer:",
+      "evidence_quotes": [
+        "who wrote the music for sorcerer's apprentice",
+        "Paul Dukas"
+      ],
+      "reason": "No existing catalog relation covers composer of a musical work; written_work_to_author is scoped to written (literary) works. Proposed musical_work_to_composer precisely captures 'who wrote the music for X' with direction musical work -> composer. Source answer 'Paul Dukas' directly supports the extraction.",
+      "english": {
+        "prompt_en": "Factual question: who wrote the music for sorcerer's apprentice\nAnswer:",
+        "relation_definition": "The composer who wrote the music for a specified musical work; disambiguate version/recording when necessary.",
+        "answer": "Paul Dukas",
+        "canonical_fact": "Paul Dukas composed the music for The Sorcerer's Apprentice.",
+        "direction": "musical work -> composer",
+        "relation_id": "musical_work_to_composer",
+        "subject": "The Sorcerer's Apprentice",
+        "answer_aliases_en": [
+          "Paul Dukas",
+          "Paul Abraham Dukas"
+        ],
+        "relation_spec": {
+          "id": "musical_work_to_composer",
+          "definition": "The composer who wrote the music for a specified musical work; disambiguate version/recording when necessary.",
+          "direction": "musical work -> composer"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "65481e7a5f3c8a18a33dbdb91d4dcf9f3140b810270ba5cc1d77d6672d2a3d3e",
+      "input_sha256": "4b27026aaad853435651c3c06505c52568db9137714595c806b7364effbf8983",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_17e38ab3f1711b67952c",
+      "decision": "ready",
+      "subject": "Beauty and the Beast",
+      "relation_id": "work_to_setting_location",
+      "relation_definition": "The geographic location where the narrative/story of a specified work is set; distinct from filming location, production location, or author's origin.",
+      "direction": "specified work -> setting location",
+      "answer": "France",
+      "canonical_fact": "The setting of Beauty and the Beast is France.",
+      "prompt_en": "The setting of Beauty and the Beast is",
+      "evidence_quotes": [
+        "where is the setting of beauty and the beast",
+        "France"
+      ],
+      "reason": "work_to_filming_location explicitly excludes 'setting of the story'; no catalog relation covers narrative setting. Proposed work_to_setting_location with explicit distinction from filming/production location. Source answer 'France' is a literal substring and directly supported.",
+      "english": {
+        "prompt_en": "The setting of Beauty and the Beast is",
+        "relation_definition": "The geographic location where the narrative/story of a specified work is set; distinct from filming location, production location, or author's origin.",
+        "answer": "France",
+        "canonical_fact": "The setting of Beauty and the Beast is France.",
+        "direction": "specified work -> setting location",
+        "relation_id": "work_to_setting_location",
+        "subject": "Beauty and the Beast",
+        "answer_aliases_en": [
+          "France",
+          "Republic of France",
+          "FR",
+          "République française",
+          "FRA",
+          "French Republic",
+          "La France"
+        ],
+        "relation_spec": {
+          "id": "work_to_setting_location",
+          "definition": "The geographic location where the narrative/story of a specified work is set; distinct from filming location, production location, or author's origin.",
+          "direction": "specified work -> setting location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "ce5347e08a45c124cefcae8595e6f655f830b1ab16c41be3954311a36b9458d6",
+      "input_sha256": "890f3005cf3007d6c2f10b8232f4d477e438340c07189bc1191221f9536e8d11",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1f81419d17a0a415d31cc450c5bf73067d354b4dbaa04677cc2e444720631884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 57.088
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "1f81419d17a0a415d31cc450c5bf73067d354b4dbaa04677cc2e444720631884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 504,
+      "latency_seconds": 76.905
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "1f81419d17a0a415d31cc450c5bf73067d354b4dbaa04677cc2e444720631884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_continue_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 80.267
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "1f81419d17a0a415d31cc450c5bf73067d354b4dbaa04677cc2e444720631884",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1698,
+      "first_chunk_seconds": 18.572,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1721,
+        "prompt_tokens": 1593,
+        "total_tokens": 3314,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1209,
+          "text_tokens": 512
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "041e0fc8f9b741990fcfe4f1d6ded1c4419760bdc340ee99cb08c630c1f13a98",
+      "status": "completed",
+      "latency_seconds": 43.353
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b4bd48a2c128e97eb751b770376722ee0e26bb6018f5dcccd39e94db07c1cd32",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 30.953,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b4bd48a2c128e97eb751b770376722ee0e26bb6018f5dcccd39e94db07c1cd32",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 31.516,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_177c6d27fd0483f310b8",
+        "public:pbf_17e38ab3f1711b67952c"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b4bd48a2c128e97eb751b770376722ee0e26bb6018f5dcccd39e94db07c1cd32",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "InternalServerError",
+      "http_status": 503,
+      "latency_seconds": 40.995,
+      "provider_error_body_sha256": "250cd3b0b0faeb04c78fa83c7a231e1b6744205930c47b248a837848abc77867",
+      "provider_error_body_redacted": "{\"message\": \"网络连接不稳定，请稍后重试。\", \"type\": \"server_error\"}",
+      "provider_error_body_truncated": false,
+      "provider_error_type": "server_error",
+      "provider_error_message": "网络连接不稳定，请稍后重试。",
+      "provider_error_headers": {
+        "server": "nginx",
+        "content-type": "application/json",
+        "retry-after": "10"
+      }
+    }
+  ],
+  "status": "failed",
+  "transport_retry_epoch": 1,
+  "recovery_history": [
+    {
+      "recovery_id": "transport_tail_epoch_1",
+      "archive": "/Users/qiqing/.codex/worktrees/762b/pitfalls-cross-lingual/analysis_output/zh_normalize_translate_20261023_v1/transport_retry_history/epoch_1/batch_00688.json",
+      "sha256": "a3d4661b2feb7504611cab97f491ed55949175ca84b5e3c6daa057c6a0f6ba1c",
+      "previous_status": "failed"
+    }
+  ]
+}

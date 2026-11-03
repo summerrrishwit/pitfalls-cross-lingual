@@ -1,0 +1,160 @@
+{
+  "input_sha256": "ce0c3ae02da0e6959d920fa0506aa762926d2da38fb1586f3754e1fffeaa6144",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_002549",
+      "decision": "ready",
+      "subject": "The Blowfish",
+      "relation_id": "entity_to_class",
+      "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+      "direction": "entity -> class",
+      "answer": "rock band",
+      "canonical_fact": "The Blowfish is a rock band.",
+      "prompt_en": "What type of musical group is The Blowfish?",
+      "evidence_quotes": [
+        "The Blowfish make music for their lead, they are a what?",
+        "rock band"
+      ],
+      "reason": "The source question explicitly asks for the class ('they are a what?') and the source answer 'rock band' is a stable taxonomy-level class. This fits entity_to_class exactly (entity -> class). The prompt_en restates the classification question without containing the answer string.",
+      "english": {
+        "prompt_en": "What type of musical group is The Blowfish?",
+        "relation_definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute.",
+        "answer": "rock band",
+        "canonical_fact": "The Blowfish is a rock band.",
+        "direction": "entity -> class",
+        "relation_id": "entity_to_class",
+        "subject": "The Blowfish",
+        "answer_aliases_en": [
+          "rock band"
+        ],
+        "relation_spec": {
+          "id": "entity_to_class",
+          "direction": "entity -> class",
+          "definition": "Stable class membership at a stated taxonomy level; not an arbitrary attribute."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "77595f2e9b7f1a95bf3f5a332136e7e28f295cd91d0e0934154f6e04e5ab9943",
+      "input_sha256": "425d99a6cbc8e97b93c786cd6a2a23832f720a399448126bb82413b23fd776e6",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_002567",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "The subject 'payment collected on a toll road' is a generic concept rather than a specific, disambiguated entity. The underlying relation is a purpose/intended-function relation (what the payment is designed to do to road condition), which has no exact match in the catalog and would require a new proposed relation. The answer 'good repair' is a fragment that is only meaningful in the context of the full question. Insufficient source support for a precise, reusable factual record.",
+      "input_sha256": "f916fc5c893e58488e160aab94b4520331b5f5620dce7db8205014d9b0bf3e65",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549",
+        "historical:raw_commonsense_qa_002567"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "88a67cb66e021031899ca26f60a79ce01a49d82744a553063c6bfc6802424b7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 64.268
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549",
+        "historical:raw_commonsense_qa_002567"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "88a67cb66e021031899ca26f60a79ce01a49d82744a553063c6bfc6802424b7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 55.359
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549",
+        "historical:raw_commonsense_qa_002567"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "88a67cb66e021031899ca26f60a79ce01a49d82744a553063c6bfc6802424b7a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2580,
+      "first_chunk_seconds": 62.191,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2769,
+        "prompt_tokens": 1598,
+        "total_tokens": 4367,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2330,
+          "text_tokens": 439
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "4b7962339487df2f9ccae942e6f60bf8b8c08ab807834f0392c91a6f50d53699",
+      "status": "completed",
+      "latency_seconds": 107.241
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "798ce5fe2739de24da1e12688125d9d89877304084677ae5685961cc49e48833",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 27.667
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "798ce5fe2739de24da1e12688125d9d89877304084677ae5685961cc49e48833",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 16.307
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_002549"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "798ce5fe2739de24da1e12688125d9d89877304084677ae5685961cc49e48833",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 65.894
+    }
+  ],
+  "status": "failed"
+}

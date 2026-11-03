@@ -1,0 +1,214 @@
+{
+  "input_sha256": "29eb26e66a53f8eb02a6fb41cc0441083eb1b6ed5b0c826ca44f43201e913c1a",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008148",
+      "decision": "ready",
+      "subject": "two people having the same point of view",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "agree with each other",
+      "canonical_fact": "When two people have the same point of view, it is called agreeing with each other.",
+      "prompt_en": "What is it called when two people have the same point of view?",
+      "evidence_quotes": [
+        "two people have the same point of view",
+        "agree with each other"
+      ],
+      "reason": "Source question explicitly asks for the label/term for a described situation ('What is it called…'). The source answer 'agree with each other' is the conventional phrase naming that situation. This matches description_to_term (description → term) exactly: the identifying description is 'two people having the same point of view' and the conventional term is 'agree with each other'. No uncertainty or qualifier is lost.",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "agree with each other",
+        "canonical_fact": "When two people have the same point of view, it is called agreeing with each other.",
+        "subject": "two people having the same point of view",
+        "prompt_en": "What is it called when two people have the same point of view?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "agree with each other"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e1f6e6b8365315290765f8c51343eb1e23abe8cb1befdc5e4b629d99c543ff5c",
+      "input_sha256": "b320cc56069bbf4bcd4a239bd5e331e3ffb286a3387e858b5e9349e57f1da684",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008149",
+      "decision": "ready",
+      "subject": "most birds",
+      "relation_id": "organism_to_egg_deposition_site",
+      "relation_definition": "Typical structure or location where a specified organism group deposits eggs; retain scope qualifiers such as 'most' or 'typically'.",
+      "direction": "organism group -> egg deposition site",
+      "answer": "nest",
+      "canonical_fact": "Most birds put eggs in a nest.",
+      "prompt_en": "Where do most birds put their eggs?",
+      "evidence_quotes": [
+        "Where do most birds put eggs?",
+        "nest"
+      ],
+      "reason": "Source asks for the typical location where most birds deposit eggs; answer is 'nest'. No existing catalog relation captures 'where an organism group lays/deposits eggs': organism_to_habitat refers to general living environment, not a specific reproductive structure; entity_to_containing_location refers to geographic containment. Proposed new precise relation organism_to_egg_deposition_site to avoid forcing a broad category. Scope qualifier 'most' preserved.",
+      "english": {
+        "direction": "organism group -> egg deposition site",
+        "relation_id": "organism_to_egg_deposition_site",
+        "answer": "nest",
+        "canonical_fact": "Most birds put eggs in a nest.",
+        "subject": "most birds",
+        "prompt_en": "Where do most birds put their eggs?",
+        "relation_definition": "Typical structure or location where a specified organism group deposits eggs; retain scope qualifiers such as 'most' or 'typically'.",
+        "answer_aliases_en": [
+          "nest"
+        ],
+        "relation_spec": {
+          "id": "organism_to_egg_deposition_site",
+          "definition": "Typical structure or location where a specified organism group deposits eggs; retain scope qualifiers such as 'most' or 'typically'.",
+          "direction": "organism group -> egg deposition site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4de288a42d8b15873bbef3a88379dba13fca4beb73a8403387038259c383870d",
+      "input_sha256": "f0cb4370c7d162b1d9b20eb606b1577654f5eb65a35ca21191f7788a41b9a163",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_commonsense_qa_008148",
+      "input_sha256": "b320cc56069bbf4bcd4a239bd5e331e3ffb286a3387e858b5e9349e57f1da684",
+      "english": {
+        "direction": "description -> term",
+        "relation_id": "description_to_term",
+        "answer": "agree with each other",
+        "canonical_fact": "When two people have the same point of view, it is called agreeing with each other.",
+        "subject": "two people having the same point of view",
+        "prompt_en": "What is it called when two people have the same point of view?",
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "answer_aliases_en": [
+          "agree with each other"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e1f6e6b8365315290765f8c51343eb1e23abe8cb1befdc5e4b629d99c543ff5c",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008148",
+        "subject_zh": "两个有相同观点的人",
+        "prompt_zh": "当两个人有相同的观点时，这叫什么？",
+        "canonical_fact_zh": "当两个人有相同的观点时，这被称为彼此同意。",
+        "answer_zh": "彼此同意",
+        "answer_aliases_zh": [
+          "彼此同意"
+        ]
+      },
+      "translation_sha256": "6bcedce947a82237586ef4f6a79ef715f8d52fe68507307f73d3324b11a2dc09"
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_008149",
+      "input_sha256": "f0cb4370c7d162b1d9b20eb606b1577654f5eb65a35ca21191f7788a41b9a163",
+      "english": {
+        "direction": "organism group -> egg deposition site",
+        "relation_id": "organism_to_egg_deposition_site",
+        "answer": "nest",
+        "canonical_fact": "Most birds put eggs in a nest.",
+        "subject": "most birds",
+        "prompt_en": "Where do most birds put their eggs?",
+        "relation_definition": "Typical structure or location where a specified organism group deposits eggs; retain scope qualifiers such as 'most' or 'typically'.",
+        "answer_aliases_en": [
+          "nest"
+        ],
+        "relation_spec": {
+          "id": "organism_to_egg_deposition_site",
+          "definition": "Typical structure or location where a specified organism group deposits eggs; retain scope qualifiers such as 'most' or 'typically'.",
+          "direction": "organism group -> egg deposition site"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "4de288a42d8b15873bbef3a88379dba13fca4beb73a8403387038259c383870d",
+      "translation": {
+        "record_id": "historical:raw_commonsense_qa_008149",
+        "subject_zh": "大多数鸟",
+        "prompt_zh": "大多数鸟把蛋产在哪里？",
+        "canonical_fact_zh": "大多数鸟把蛋产在巢里。",
+        "answer_zh": "巢",
+        "answer_aliases_zh": [
+          "巢"
+        ]
+      },
+      "translation_sha256": "326736486315ff6c04ee7913055d15b23bf91d7ec2c3d3087bafce46f4d65a9c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008148",
+        "historical:raw_commonsense_qa_008149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "66bdfb31058f905b610ecefaf7a73445848cb16a2d5cd72423ef331cbec0b60d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 3049,
+      "first_chunk_seconds": 17.416,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3123,
+        "prompt_tokens": 1676,
+        "total_tokens": 4799,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2573,
+          "text_tokens": 550
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1459a9f373090237bf58e695b0da6ce89000107bec95758581c360c42b8cde68",
+      "status": "completed",
+      "latency_seconds": 64.995
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_008148",
+        "historical:raw_commonsense_qa_008149"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "07cb169617c69faa5302a03786ae086925162e5c0a0c1abe82863cfad6fb98ff",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1002,
+      "first_chunk_seconds": 26.055,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1085,
+        "prompt_tokens": 853,
+        "total_tokens": 1938,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 869,
+          "text_tokens": 216
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "38f41bca4f03621ac8a7deb035295fff2d8172f37151ae8b11ff2d749da01e85",
+      "status": "completed",
+      "latency_seconds": 43.812
+    }
+  ],
+  "status": "completed"
+}

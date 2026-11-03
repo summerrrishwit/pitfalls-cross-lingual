@@ -1,0 +1,192 @@
+{
+  "input_sha256": "f84a380dcd0784ac2f5f61d900c9f2a8c2f6bbfbfbc0f51e52fba75e9ee7aba3",
+  "normalized": [
+    {
+      "record_id": "public:pbf_883d342c9b9d165d1130",
+      "decision": "ready",
+      "subject": "I Love How You Love Me",
+      "relation_id": "song_to_performer",
+      "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+      "direction": "song -> performer",
+      "answer": "The Paris Sisters",
+      "canonical_fact": "The Paris Sisters sings the song I Love How You Love Me.",
+      "prompt_en": "Factual question: who sings i love how you love me\nAnswer:",
+      "evidence_quotes": [
+        "who sings i love how you love me",
+        "The Paris Sisters"
+      ],
+      "reason": "Relation song_to_performer exactly matches the performer-of-a-song relationship. The answer 'The Paris Sisters' is a verbatim copy of the source answer; no conflict with source. Prompt contains no answer text and no options.",
+      "english": {
+        "relation_definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary.",
+        "canonical_fact": "The Paris Sisters sings the song I Love How You Love Me.",
+        "direction": "song -> performer",
+        "relation_id": "song_to_performer",
+        "prompt_en": "Factual question: who sings i love how you love me\nAnswer:",
+        "subject": "I Love How You Love Me",
+        "answer": "The Paris Sisters",
+        "answer_aliases_en": [
+          "The Paris Sisters"
+        ],
+        "relation_spec": {
+          "id": "song_to_performer",
+          "direction": "song -> performer",
+          "definition": "Performer of a specified song recording; disambiguate recording/cover/version when necessary."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2093f8b629bc56b58142c1dde3d0e3e919d2c18bd461617021843219959074ee",
+      "input_sha256": "8a425be794cf9925d4d61aa38d1db69d03503b4d3d9c7d30cab44865c9255263",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_88522e34521ebaca2bb1",
+      "decision": "ready",
+      "subject": "Top Gun",
+      "relation_id": "work_to_release_date",
+      "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+      "direction": "specified work/version/market -> release date",
+      "answer": "1986-05-16",
+      "canonical_fact": "The movie Top Gun was released on 1986-05-16.",
+      "prompt_en": "The movie Top Gun was released on",
+      "evidence_quotes": [
+        "when did the movie top gun come out",
+        "1986-05-16"
+      ],
+      "reason": "Relation work_to_release_date fits a full release date for a specified movie. The answer '1986-05-16' is a verbatim copy of the source answer; no conflict. Prompt does not contain the answer and has no options.",
+      "english": {
+        "relation_definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration.",
+        "canonical_fact": "The movie Top Gun was released on 1986-05-16.",
+        "direction": "specified work/version/market -> release date",
+        "relation_id": "work_to_release_date",
+        "prompt_en": "The movie Top Gun was released on",
+        "subject": "Top Gun",
+        "answer": "1986-05-16",
+        "answer_aliases_en": [
+          "1986-05-16",
+          "1986 May, 16",
+          "05-16-1986",
+          "05/16/1986",
+          "05 16 1986",
+          "16 05 1986",
+          "16/05/1986",
+          "16-05-1986",
+          "16 May 1986",
+          "1986 May 16",
+          "1986 05 16"
+        ],
+        "relation_spec": {
+          "id": "work_to_release_date",
+          "direction": "specified work/version/market -> release date",
+          "definition": "Full release date for a disambiguated work/version and market; do not conflate release year, birth date or duration."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "7523ad88693ba18a37c3ab0a2ac5c03ca5941145608d5d8972a089d4127d5cbc",
+      "input_sha256": "002d2bd1800dd3aa5b2b0b06e85d1a1ab1a5c05818e5c23b91bab5ec1048c7e6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_883d342c9b9d165d1130",
+        "public:pbf_88522e34521ebaca2bb1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0111fb3560c4ffa77131d3d2caf55da6bd5310729db9d302432b1f41c05876ac",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1674,
+        "prompt_tokens": 1726,
+        "total_tokens": 3400,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1156,
+          "text_tokens": 518
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "01e23fcaf4bc537ac2e450f715cb3a6e686c8f43e48ba0da05a3a4907387165f",
+      "status": "completed",
+      "latency_seconds": 91.03
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_883d342c9b9d165d1130",
+        "public:pbf_88522e34521ebaca2bb1"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e58ce97d80f963d69b6e58c621f07b9abd853012df7f90f95dd0c9d8027295df",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.861
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_883d342c9b9d165d1130",
+        "public:pbf_88522e34521ebaca2bb1"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "e58ce97d80f963d69b6e58c621f07b9abd853012df7f90f95dd0c9d8027295df",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.4
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_883d342c9b9d165d1130",
+        "public:pbf_88522e34521ebaca2bb1"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "e58ce97d80f963d69b6e58c621f07b9abd853012df7f90f95dd0c9d8027295df",
+      "requested_model": "qwen-3.8-max",
+      "response_model": "qwen-3.8-max",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e6a5cfaf67d5eff1720a898e8093adca4bfdfb94e3bccf636f548fccf474d380",
+      "gateway_error_hint": "网络连接不稳定，请稍后重试。",
+      "status": "failed",
+      "error_type": "RuntimeError",
+      "error_code": "gateway_zero_usage_error_response",
+      "latency_seconds": 47.722
+    }
+  ],
+  "status": "failed"
+}

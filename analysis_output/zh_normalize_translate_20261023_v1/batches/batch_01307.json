@@ -1,0 +1,255 @@
+{
+  "input_sha256": "7d393960919984409cb1d3c430748a06c85ce16d5cdc7119f2f378bc0e81f703",
+  "normalized": [
+    {
+      "record_id": "public:pbf_82ebf1546a2d827a3e2c",
+      "decision": "ready",
+      "subject": "Japan and Pakistan",
+      "relation_id": "entity_to_containing_location",
+      "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+      "direction": "entity -> containing location",
+      "answer": "Asia",
+      "canonical_fact": "Japan and Pakistan are in Asia.",
+      "prompt_en": "Japan and Pakistan are in",
+      "evidence_quotes": [
+        "japan and pakistan are in europe or asia",
+        "Asia"
+      ],
+      "reason": "The source question asks which continent Japan and Pakistan are in; the source answer is 'Asia'. The catalog relation entity_to_containing_location fits because a continent is a specified geographic containment level. The existing answer 'Asia' is kept exactly as it matches the source answer verbatim.",
+      "english": {
+        "answer": "Asia",
+        "relation_id": "entity_to_containing_location",
+        "prompt_en": "Japan and Pakistan are in",
+        "direction": "entity -> containing location",
+        "subject": "Japan and Pakistan",
+        "canonical_fact": "Japan and Pakistan are in Asia.",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Asia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e1743b26b1c86ac606aaf49d3f352a3bb4fc2837754bf61e701132a0713cf1fd",
+      "input_sha256": "9a7862a9d346a174a364b1843a5ca8abaaf1179cb57089e29cb12a3119ec6e8b",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_82f69e0f452a3d02b578",
+      "decision": "ready",
+      "subject": "aircraft producing a sonic boom",
+      "relation_id": "object_to_motion_state",
+      "relation_definition": "The motion state (speed category relative to sound) of a physical object during a specified condition or event.",
+      "direction": "object in specified condition -> motion state",
+      "answer": "faster than sound",
+      "canonical_fact": "An aircraft producing a sonic boom is flying faster than sound.",
+      "prompt_en": "An aircraft producing a sonic boom is flying",
+      "evidence_quotes": [
+        "During the time an aircraft produces a sonic boom, the aircraft is",
+        "flying faster than sound"
+      ],
+      "reason": "The source states that an aircraft producing a sonic boom is flying faster than sound. No existing catalog relation captures a physical speed/motion state, so a new relation 'object_to_motion_state' is proposed with the explicit definition above. The existing answer 'faster than sound' is kept exactly; it is a literal substring of the source answer 'flying faster than sound'. The prompt_en is option-free and does not contain the answer.",
+      "english": {
+        "answer": "faster than sound",
+        "relation_id": "object_to_motion_state",
+        "prompt_en": "An aircraft producing a sonic boom is flying",
+        "direction": "object in specified condition -> motion state",
+        "subject": "aircraft producing a sonic boom",
+        "canonical_fact": "An aircraft producing a sonic boom is flying faster than sound.",
+        "relation_definition": "The motion state (speed category relative to sound) of a physical object during a specified condition or event.",
+        "answer_aliases_en": [
+          "faster than sound",
+          "flying faster than sound"
+        ],
+        "relation_spec": {
+          "id": "object_to_motion_state",
+          "definition": "The motion state (speed category relative to sound) of a physical object during a specified condition or event.",
+          "direction": "object in specified condition -> motion state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "274c6348ee0e36ca1dde052e7344c6d1e6e178906d0e6a6b6c3053de1da8bfd6",
+      "input_sha256": "e50f788038232c43d73fe0b71f424a32e6bc446c5f647980ca565a979caaabf7",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_82ebf1546a2d827a3e2c",
+      "input_sha256": "9a7862a9d346a174a364b1843a5ca8abaaf1179cb57089e29cb12a3119ec6e8b",
+      "english": {
+        "answer": "Asia",
+        "relation_id": "entity_to_containing_location",
+        "prompt_en": "Japan and Pakistan are in",
+        "direction": "entity -> containing location",
+        "subject": "Japan and Pakistan",
+        "canonical_fact": "Japan and Pakistan are in Asia.",
+        "relation_definition": "Geographic containment at a specified level; not habitat, origin, or process location.",
+        "answer_aliases_en": [
+          "Asia"
+        ],
+        "relation_spec": {
+          "id": "entity_to_containing_location",
+          "direction": "entity -> containing location",
+          "definition": "Geographic containment at a specified level; not habitat, origin, or process location."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "e1743b26b1c86ac606aaf49d3f352a3bb4fc2837754bf61e701132a0713cf1fd",
+      "translation": {
+        "record_id": "public:pbf_82ebf1546a2d827a3e2c",
+        "subject_zh": "日本和巴基斯坦",
+        "prompt_zh": "日本和巴基斯坦位于",
+        "canonical_fact_zh": "日本和巴基斯坦位于亚洲。",
+        "answer_zh": "亚洲",
+        "answer_aliases_zh": [
+          "亚洲"
+        ]
+      },
+      "translation_sha256": "a87712a7b917dc75cc12b04b1e5def82730f16b0103ab0517fd7a188e9e31886"
+    },
+    {
+      "record_id": "public:pbf_82f69e0f452a3d02b578",
+      "input_sha256": "e50f788038232c43d73fe0b71f424a32e6bc446c5f647980ca565a979caaabf7",
+      "english": {
+        "answer": "faster than sound",
+        "relation_id": "object_to_motion_state",
+        "prompt_en": "An aircraft producing a sonic boom is flying",
+        "direction": "object in specified condition -> motion state",
+        "subject": "aircraft producing a sonic boom",
+        "canonical_fact": "An aircraft producing a sonic boom is flying faster than sound.",
+        "relation_definition": "The motion state (speed category relative to sound) of a physical object during a specified condition or event.",
+        "answer_aliases_en": [
+          "faster than sound",
+          "flying faster than sound"
+        ],
+        "relation_spec": {
+          "id": "object_to_motion_state",
+          "definition": "The motion state (speed category relative to sound) of a physical object during a specified condition or event.",
+          "direction": "object in specified condition -> motion state"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "274c6348ee0e36ca1dde052e7344c6d1e6e178906d0e6a6b6c3053de1da8bfd6",
+      "translation": {
+        "record_id": "public:pbf_82f69e0f452a3d02b578",
+        "subject_zh": "产生音爆的飞行器",
+        "prompt_zh": "产生音爆的飞行器正在飞行",
+        "canonical_fact_zh": "产生音爆的飞行器飞行速度超过音速。",
+        "answer_zh": "超过音速",
+        "answer_aliases_zh": [
+          "超过音速",
+          "以超过音速的速度飞行"
+        ]
+      },
+      "translation_sha256": "f2801ab87534af27fee2c059ecfb12cb0bcc1d14167033056ac054763d8ae071"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_82ebf1546a2d827a3e2c",
+        "public:pbf_82f69e0f452a3d02b578"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b212990432c0228cf995d4baabd07da740fd7fc0153c6d492d36ed800c054fb1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2560,
+      "first_chunk_seconds": 38.376,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2801,
+        "prompt_tokens": 1567,
+        "total_tokens": 4368,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2314,
+          "text_tokens": 487
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "8372613cde86386e6d3638814ec05bc5df79119750e545f9804f40068deae4ef",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 93.556,
+      "validation_code": "existing_answer_changed"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_82ebf1546a2d827a3e2c",
+        "public:pbf_82f69e0f452a3d02b578"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6cf1f3861154b2ac05f889b6d215e29c9018f293b35c1fe7c971076a4f6b3eee",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2808,
+      "first_chunk_seconds": 35.691,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2806,
+        "prompt_tokens": 1584,
+        "total_tokens": 4390,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2352,
+          "text_tokens": 454
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "66701fb591d5ac2d55e83d0302ad9169551583e8c813ee6d80e6ffa1290b8bea",
+      "status": "completed",
+      "latency_seconds": 58.093
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_82ebf1546a2d827a3e2c",
+        "public:pbf_82f69e0f452a3d02b578"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "f9769bc2c0d37df2644704d5fa3a51e69883c938963910c54b33a2399b5423e0",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1746,
+      "first_chunk_seconds": 7.068,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1743,
+        "prompt_tokens": 848,
+        "total_tokens": 2591,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1509,
+          "text_tokens": 234
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "dfefff86c740b1ebc0237f28db5263827ce5637476a277e437f5371244ab7ed2",
+      "status": "completed",
+      "latency_seconds": 20.634
+    }
+  ],
+  "status": "completed"
+}

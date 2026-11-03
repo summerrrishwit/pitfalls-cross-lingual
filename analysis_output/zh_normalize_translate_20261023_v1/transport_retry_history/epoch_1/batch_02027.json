@@ -1,0 +1,158 @@
+{
+  "input_sha256": "06a703e9bc7555636c49840fb45d3c6f78e4e6a8bb1884adcdc474c62d46e2a9",
+  "normalized": [
+    {
+      "record_id": "public:pbf_f49596496edd72dade2e",
+      "decision": "ready",
+      "subject": "Big Brother and the Holding Company",
+      "relation_id": "band_to_lead_vocalist",
+      "relation_definition": "The lead vocalist of a specified band or musical group; retain the band name as the disambiguating entity.",
+      "direction": "band -> lead vocalist",
+      "answer": "Janis Joplin",
+      "canonical_fact": "Janis Joplin sang lead vocals for the band Big Brother and the Holding Company.",
+      "prompt_en": "Who sang lead vocals for the band Big Brother and the Holding Company?",
+      "evidence_quotes": [
+        "Who sang lead vocals for the band Big Brother and the Holding Company?",
+        "Janis Joplin"
+      ],
+      "reason": "Source question explicitly asks who sang lead vocals for the band Big Brother and the Holding Company; source answer is Janis Joplin. No existing catalog relation fits exactly: song_to_performer is scoped to a specific song recording, not a band's lead vocalist. A new precise relation band_to_lead_vocalist is proposed.",
+      "english": {
+        "answer": "Janis Joplin",
+        "relation_id": "band_to_lead_vocalist",
+        "prompt_en": "Who sang lead vocals for the band Big Brother and the Holding Company?",
+        "direction": "band -> lead vocalist",
+        "subject": "Big Brother and the Holding Company",
+        "canonical_fact": "Janis Joplin sang lead vocals for the band Big Brother and the Holding Company.",
+        "relation_definition": "The lead vocalist of a specified band or musical group; retain the band name as the disambiguating entity.",
+        "answer_aliases_en": [
+          "Janis Joplin"
+        ],
+        "relation_spec": {
+          "id": "band_to_lead_vocalist",
+          "definition": "The lead vocalist of a specified band or musical group; retain the band name as the disambiguating entity.",
+          "direction": "band -> lead vocalist"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "8e471129947246dace15f0df6ebf5fdb88b4a8a7cc67eebb23da5d467c922a36",
+      "input_sha256": "821f1a444d61219cad970e7b162d8cadcd33e6519fcca92b8084dd5eadd64e36",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_f4a4e4e3150a88ef76bc",
+      "decision": "ready",
+      "subject": "fear",
+      "relation_id": "term_to_characterization",
+      "relation_definition": "A specific attributed characterization or property of a concept/term, retaining the source attribution and scope qualifiers.",
+      "direction": "term -> characterization",
+      "answer": "partially learned and culturally variant",
+      "canonical_fact": "Nussbaum claims that recent anthropological work has shown that fear is partially learned and culturally variant.",
+      "prompt_en": "Nussbaum claims that recent anthropological work has shown that fear is",
+      "evidence_quotes": [
+        "Nussbaum claims that recent anthropological work has shown that fear is:",
+        "partially learned and culturally variant."
+      ],
+      "reason": "Source attributes a specific characterization to the term 'fear' via Nussbaum's claim about anthropological work. No existing catalog relation fits exactly: term_to_definition implies a strict definitional sense, whereas the source provides an attributed property/characterization with a named source (Nussbaum) and scope (recent anthropological work). A new precise relation term_to_characterization is proposed to preserve the attribution without forcing a broad 'definition' category.",
+      "english": {
+        "answer": "partially learned and culturally variant",
+        "relation_id": "term_to_characterization",
+        "prompt_en": "Nussbaum claims that recent anthropological work has shown that fear is",
+        "direction": "term -> characterization",
+        "subject": "fear",
+        "canonical_fact": "Nussbaum claims that recent anthropological work has shown that fear is partially learned and culturally variant.",
+        "relation_definition": "A specific attributed characterization or property of a concept/term, retaining the source attribution and scope qualifiers.",
+        "answer_aliases_en": [
+          "partially learned and culturally variant",
+          "partially learned and culturally variant."
+        ],
+        "relation_spec": {
+          "id": "term_to_characterization",
+          "definition": "A specific attributed characterization or property of a concept/term, retaining the source attribution and scope qualifiers.",
+          "direction": "term -> characterization"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "180e9b7a72b02cef67ed068d33d2e07629c1a150966e155c8e2ab0dc19b244be",
+      "input_sha256": "3b3f54231fd06c46c83da9a34ec39a125d38a19a681b3e3b29404cd9905b07e6",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_f49596496edd72dade2e",
+        "public:pbf_f4a4e4e3150a88ef76bc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "efc92ec26ea76fa90069ca84570142992121d8a46a6d1dbf9b44e6a556979372",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2872,
+      "first_chunk_seconds": 12.21,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 3194,
+        "prompt_tokens": 1651,
+        "total_tokens": 4845,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2608,
+          "text_tokens": 586
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1db69df34d59e0e6d9d4ee0a0de6a8c02a6d9cf18488ad089e78b07311c1c71f",
+      "status": "completed",
+      "latency_seconds": 91.612
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f49596496edd72dade2e",
+        "public:pbf_f4a4e4e3150a88ef76bc"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6ad6c4aea805d4d8182c748a5b86ae678e33724ac42763fd554a8ea71e61f1da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.369
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f49596496edd72dade2e",
+        "public:pbf_f4a4e4e3150a88ef76bc"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "6ad6c4aea805d4d8182c748a5b86ae678e33724ac42763fd554a8ea71e61f1da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.208
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_f49596496edd72dade2e",
+        "public:pbf_f4a4e4e3150a88ef76bc"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "6ad6c4aea805d4d8182c748a5b86ae678e33724ac42763fd554a8ea71e61f1da",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.641
+    }
+  ],
+  "status": "failed"
+}

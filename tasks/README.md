@@ -1,6 +1,62 @@
 # `tasks/` 状态与执行入口
 
-## 2026-09-30 当前执行范围
+## 2026-11-03 当前核验状态
+
+中文候选建设及翻译审核于北京时间 2026-10-27 完成：7,250 来源，5,658 条有规范化决策
+（5,504 ready、151 defer、3 reject），4,985 条完成翻译与审核，4,807 接受、172 拒绝、6 终局未定。
+另有 1,848 条技术失败和 263 条格式/语义校验失败，生成与审核待办均为 0；并非全部来源成功。
+采用 [中文候选协议](task_zh_candidate_pipeline.md)，最新数据与全部审核证据已从活动 worktree
+按原字节同步到本仓库 `analysis_output/zh_normalize_translate_20261023_v1/`。
+
+正式数据冻结尚未完成：2,322 个提议关系 ID 中 163 个存在同名定义冲突；规范事实/别名、
+最终三臂输入、历史曝光、泄漏组件/split、目标模型和评分仍需闭合。后续行为设计使用下面的开放回答协议。
+历史 160 条实验已结束于 G3 未通过，Validation 已曝光，Sealed 未开启。
+完整进度、保留/清理分类和提交检查见 [核对报告](../analysis_output/status_git_audit_20261103/report.md)。
+
+## 2026-10-20：新候选采用开放回答缺陷生成
+
+新候选的唯一活动设计入口为
+[`task_open_factual_discovery_protocol.md`](task_open_factual_discovery_protocol.md)。
+流程为“来源QA/错误选项素材 → 开放Original → Targeted与匹配Neutral → 开放三臂判定 →
+独立复核与复现 → 机制归因与修复”。MCQ标签只作可选比较，不再作为候选准入条件。
+默认首轮每事实一个候选，首轮汇总后最多一次修订；成功或达到预算即停，不做递归生成优化。
+效率按独立复现缺陷事实数与全部物理请求/token预算计算，保留失败、排除、未定和对照。
+
+[`open_factual_discovery_v1.json`](../configs/open_factual_discovery_v1.json) 固定有界策略，
+[`summarize_open_discovery.py`](../scripts/summarize_open_discovery.py) 离线检查账本与效率；
+EN/ZH开放分析已支持无MCQ标签、小cohort及单扰动。该变更不启动新模型调用，
+实际新cohort运行器的预算/账本接入列在新协议待办中。
+
+下面160条为历史执行与复现记录，不作为新候选的MCQ-first指令。既有Validation已被使用，
+不得因本次流程调整重新称为未见验证集；Sealed保持原约束。
+
+## 2026-10-16：160 条 Qwen3-8B 远端恢复
+
+2026-10-17 v5b 已完成固定后独立确认：3%成对 prefill-only方向通过 Development G2并固定规则，但Validation32facts中的10个定向缺陷facts/18variants修复为0，未通过G3。Sealed0/32保持未开启，完整性核验通过。本轮未获得可泛化修复证据。[v5b最终结果](../analysis_output/qwen3_8b_remote_resume_20261016/repair_v5_outcome.md)。
+
+用户已授权在 `connect.cqa1.seetacloud.com:24946` 恢复实验，全部模型推理和执行检查均在远端进行。
+本轮 Development option-free 三臂已完成 960/960 条：192 条 Original 生成在 exact render 与
+复现检查后复用，768 条 context 生成新跑；全体 960 条重新计算完整答案序列分数。
+另完成 26 条无关事实 no-op baseline。原 checkpoint、模型/渲染文件和冻结数据 SHA 均核验通过。
+
+516 个需要语义裁决的唯一输出已完成显式 Codex proxy 复核，15 条输出级判断保留为缺失值；
+这些裁决不是 human gold。按事实统计得到 17 个 open-induced directed facts（25 variants），
+其中 5 facts 为 language-specific；MCQ 阳性中有 12 个 open 阳性，MCQ 阴性中另有 5 个 open 阳性。
+候选序列偏好迁移为 57 facts，单独报告，不能等同于实际生成迁移。
+全部阳性中文三臂及严格案例英文三臂共 82 个唯一输入已独立复跑，82/82 生成文本一致；
+这只验证同一确定性运行环境下的复现。
+
+远端权威目录：`/root/autodl-tmp/pnt-open-development-20261016`。
+必要分析与恢复记录见
+[`remote_status.md`](../analysis_output/qwen3_8b_remote_resume_20261016/remote_status.md)。
+随后已完成 960 条开放输入的层轨迹、1,440 条四折向量来源、12 设置辅助评分和两轮
+共 8 个修复候选（4,256 次生成）。v3 三个候选与 v4 五个候选均违反保留条件，
+没有可固定的修复规则，G2 未通过；按预先固定的停止条件，未启用随机对照、最终向量或独立确认。
+Validation/Sealed 仍各使用 0 条。完整性核验通过，明确失败、语义缺失和未审输出分开保存。
+最终结果见 [`repair_outcome.md`](../analysis_output/qwen3_8b_remote_resume_20261016/repair_outcome.md)。
+下面的暂停和下一步描述为历史记录。
+
+## 2026-09-30 历史执行范围
 
 当前执行五语翻译/独立审核恢复与失败停止机制，扩展输入及比较口径见
 [`task_multilingual_expansion_protocol.md`](task_multilingual_expansion_protocol.md)。
@@ -15,10 +71,10 @@
 本次启动记录为 `launcher_resume_20260930T010619Z.json`，日志为
 `execution_resume_20260930T010619Z.log`；实时状态以该目录 `run_manifest.json` 为准。
 
-## 唯一权威的 160 条流程
+## 历史 160 条流程与冻结版本复现
 
-当前 160 条数据的执行设计以
-[`task_160_mcq_pnt_protocol.md`](task_160_mcq_pnt_protocol.md) 为唯一权威入口。
+既有160条冻结实验的设计以
+[`task_160_mcq_pnt_protocol.md`](task_160_mcq_pnt_protocol.md) 解释；新候选使用上面的开放回答协议。
 
 中心思想是：
 

@@ -1,0 +1,160 @@
+{
+  "input_sha256": "58739b5a4be1a1722d3f9461acf02ad7bf98a39019c6cf7d7ce125fe3486c051",
+  "normalized": [
+    {
+      "record_id": "public:pbf_33ae88e20426470abe0a",
+      "decision": "defer",
+      "subject": null,
+      "relation_id": null,
+      "relation_definition": null,
+      "direction": null,
+      "answer": null,
+      "canonical_fact": null,
+      "prompt_en": null,
+      "evidence_quotes": [],
+      "reason": "Existing extraction answer 'legs' conflicts with source_answer 'stage curtain'. Per rule, defer when existing answer conflicts with source. No unambiguous relation fits either: the description 'curtains on the side of the stage' to the term 'stage curtain' is tautological (the answer merely restates the noun 'curtain' with a qualifier), so the factual content is insufficient to justify a reusable relation without forcing a broad category.",
+      "input_sha256": "c1f719687e3fd3b3bb14e71388c37c2dd82d30a435e5fe496000423bd760b6b2",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_33af39c0f8e5bba5c619",
+      "decision": "ready",
+      "subject": "Anglo-Saxons",
+      "relation_id": "group_to_arrival_period",
+      "relation_definition": "The time period (century, decade, or era) during which a specified historical group first arrived in a specified geographic location.",
+      "direction": "group -> arrival period in specified location",
+      "answer": "5th century",
+      "canonical_fact": "The Anglo-Saxons arrived in Britain in the 5th century.",
+      "prompt_en": "The Anglo-Saxons arrived in Britain in the",
+      "evidence_quotes": [
+        "5th century",
+        "when did the anglo saxons arrive in britain"
+      ],
+      "reason": "Source_answer '5th century' matches the old extraction answer exactly. No catalog relation covers 'when a group arrived in a place'; 'work_to_release_date' is for works, 'entity_to_containing_location' is for geographic containment, not historical arrival. Proposed new relation 'group_to_arrival_period' with explicit direction and definition. Prompt is option-free and does not contain the answer. Evidence quotes are literal substrings of source_question and source_answer.",
+      "english": {
+        "relation_id": "group_to_arrival_period",
+        "canonical_fact": "The Anglo-Saxons arrived in Britain in the 5th century.",
+        "prompt_en": "The Anglo-Saxons arrived in Britain in the",
+        "answer": "5th century",
+        "direction": "group -> arrival period in specified location",
+        "relation_definition": "The time period (century, decade, or era) during which a specified historical group first arrived in a specified geographic location.",
+        "subject": "Anglo-Saxons",
+        "answer_aliases_en": [
+          "5th century",
+          "5th-century"
+        ],
+        "relation_spec": {
+          "id": "group_to_arrival_period",
+          "definition": "The time period (century, decade, or era) during which a specified historical group first arrived in a specified geographic location.",
+          "direction": "group -> arrival period in specified location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bd3f77e417fe560474bfcb3adbd77d5b09ee25524922f6ba2cea97afa2947a30",
+      "input_sha256": "5859708d1842ed4e1e36cc427d2e980e5fdb1d54cd46a66c8f10c2731c6458c8",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_33af39c0f8e5bba5c619",
+      "input_sha256": "5859708d1842ed4e1e36cc427d2e980e5fdb1d54cd46a66c8f10c2731c6458c8",
+      "english": {
+        "relation_id": "group_to_arrival_period",
+        "canonical_fact": "The Anglo-Saxons arrived in Britain in the 5th century.",
+        "prompt_en": "The Anglo-Saxons arrived in Britain in the",
+        "answer": "5th century",
+        "direction": "group -> arrival period in specified location",
+        "relation_definition": "The time period (century, decade, or era) during which a specified historical group first arrived in a specified geographic location.",
+        "subject": "Anglo-Saxons",
+        "answer_aliases_en": [
+          "5th century",
+          "5th-century"
+        ],
+        "relation_spec": {
+          "id": "group_to_arrival_period",
+          "definition": "The time period (century, decade, or era) during which a specified historical group first arrived in a specified geographic location.",
+          "direction": "group -> arrival period in specified location"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "bd3f77e417fe560474bfcb3adbd77d5b09ee25524922f6ba2cea97afa2947a30",
+      "translation": {
+        "record_id": "public:pbf_33af39c0f8e5bba5c619",
+        "subject_zh": "盎格鲁-撒克逊人",
+        "prompt_zh": "盎格鲁-撒克逊人于",
+        "canonical_fact_zh": "盎格鲁-撒克逊人于5世纪抵达不列颠。",
+        "answer_zh": "5世纪",
+        "answer_aliases_zh": [
+          "5世纪",
+          "5世纪的"
+        ]
+      },
+      "translation_sha256": "8ceef133cee01e8916816bb895df934c8696813298f2248ff7383259e029a59c"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_33ae88e20426470abe0a",
+        "public:pbf_33af39c0f8e5bba5c619"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "54b1d9ddfed6373219fd76503f52a4eb633cb6af1ada23102236cbcec14990ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2657,
+      "first_chunk_seconds": 30.385,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2744,
+        "prompt_tokens": 1608,
+        "total_tokens": 4352,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2234,
+          "text_tokens": 510
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "07b24d2b6b46fde9d2a0eb7d97be56e24afbbfa3d5e67eb0044c576f16318584",
+      "status": "completed",
+      "latency_seconds": 77.597
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_33af39c0f8e5bba5c619"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bb1e0bbc3d1eede9b88f85e9785ac43e42ba09e453f3606e63ab7160bbcf601c",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1215,
+      "first_chunk_seconds": 5.394,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1275,
+        "prompt_tokens": 552,
+        "total_tokens": 1827,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1167,
+          "text_tokens": 108
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "e335308ae45ad8429a233891ae7f24a6f3de76c554da769bb07bf9d14e8ee0bb",
+      "status": "completed",
+      "latency_seconds": 36.843
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "input_sha256": "4d029ae074d85ab62f48a5c35680ee8a94aa571ae3dcae08e6cc2c4a1b08add1",
+  "normalized": [
+    {
+      "record_id": "public:pbf_ec704dd8655085d65a29",
+      "decision": "ready",
+      "subject": "Saturday Night Fever",
+      "relation_id": "work_to_sequel",
+      "relation_definition": "The direct sequel work to a specified narrative work; excludes prequels, spin-offs, remakes, and non-sequential entries.",
+      "direction": "specified work -> its direct sequel work",
+      "answer": "Staying Alive",
+      "canonical_fact": "Staying Alive is the sequel to Saturday Night Fever.",
+      "prompt_en": "What was the sequel to Saturday Night Fever?",
+      "evidence_quotes": [
+        "what was the sequel to saturday night fever",
+        "Staying Alive"
+      ],
+      "reason": "Source directly identifies Staying Alive as the sequel to Saturday Night Fever. No existing catalog relation covers the work-to-sequel relationship, so proposing work_to_sequel with an explicit definition that excludes prequels and spin-offs.",
+      "english": {
+        "answer": "Staying Alive",
+        "relation_id": "work_to_sequel",
+        "prompt_en": "What was the sequel to Saturday Night Fever?",
+        "direction": "specified work -> its direct sequel work",
+        "subject": "Saturday Night Fever",
+        "canonical_fact": "Staying Alive is the sequel to Saturday Night Fever.",
+        "relation_definition": "The direct sequel work to a specified narrative work; excludes prequels, spin-offs, remakes, and non-sequential entries.",
+        "answer_aliases_en": [
+          "Staying Alive"
+        ],
+        "relation_spec": {
+          "id": "work_to_sequel",
+          "definition": "The direct sequel work to a specified narrative work; excludes prequels, spin-offs, remakes, and non-sequential entries.",
+          "direction": "specified work -> its direct sequel work"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "9fc03ccdaf23dd2d10b2e1e80251a134e5728e1c95ee590ee8edb171154e070a",
+      "input_sha256": "b57097e93c5b54164fc40cfa52a473e6b309a4ae76f301d3a2bb6b6aa86f7405",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_ec8674a82da0a3c4bc2e",
+      "decision": "ready",
+      "subject": "pulley",
+      "relation_id": "entity_to_function_mechanism",
+      "relation_definition": "The specific mechanism or method by which an entity performs a stated function, retaining the stated context and qualifiers.",
+      "direction": "entity -> mechanism by which it performs a specified function",
+      "answer": "yanking string up a wheel",
+      "canonical_fact": "A pulley is used to lift a flag on a flagpole by yanking string up a wheel.",
+      "prompt_en": "A pulley is used to lift a flag on a flagpole by",
+      "evidence_quotes": [
+        "A pulley is used to lift a flag on a flagpole by",
+        "yanking string up a wheel"
+      ],
+      "reason": "Source provides a direct fill-in-the-blank answer describing the pulley's mechanism for lifting a flag on a flagpole. No existing catalog relation covers a function-mechanism relationship, so proposing entity_to_function_mechanism scoped to a stated function context.",
+      "english": {
+        "answer": "yanking string up a wheel",
+        "relation_id": "entity_to_function_mechanism",
+        "prompt_en": "A pulley is used to lift a flag on a flagpole by",
+        "direction": "entity -> mechanism by which it performs a specified function",
+        "subject": "pulley",
+        "canonical_fact": "A pulley is used to lift a flag on a flagpole by yanking string up a wheel.",
+        "relation_definition": "The specific mechanism or method by which an entity performs a stated function, retaining the stated context and qualifiers.",
+        "answer_aliases_en": [
+          "yanking string up a wheel"
+        ],
+        "relation_spec": {
+          "id": "entity_to_function_mechanism",
+          "definition": "The specific mechanism or method by which an entity performs a stated function, retaining the stated context and qualifiers.",
+          "direction": "entity -> mechanism by which it performs a specified function"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "b191f0e9a61ee70108b5f105bf2032a73cfc7db608296eb4f4c44244dc44b737",
+      "input_sha256": "afba42a4f7e3bbc8fe32329a074797bfbc793ad91565b7cd9c0d96f1cebd9dc1",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_ec704dd8655085d65a29",
+        "public:pbf_ec8674a82da0a3c4bc2e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "4ce6dbc0ec9a3306f8c7dd52a8f1b56b15499dfa24bab9db737e7cd10dffaa68",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2237,
+      "first_chunk_seconds": 21.521,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2327,
+        "prompt_tokens": 1617,
+        "total_tokens": 3944,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1927,
+          "text_tokens": 400
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7896b0ed3875c1c8474641c478ff0754c02c95838e321e2a4dec85779d23d9b8",
+      "status": "completed",
+      "latency_seconds": 55.139
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec704dd8655085d65a29",
+        "public:pbf_ec8674a82da0a3c4bc2e"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "114cbdb28b01b4c1bd926712b8c7bc0b904395955a131cff094d649d9d60f5cc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.971
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec704dd8655085d65a29",
+        "public:pbf_ec8674a82da0a3c4bc2e"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "114cbdb28b01b4c1bd926712b8c7bc0b904395955a131cff094d649d9d60f5cc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 47.019
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_ec704dd8655085d65a29",
+        "public:pbf_ec8674a82da0a3c4bc2e"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "114cbdb28b01b4c1bd926712b8c7bc0b904395955a131cff094d649d9d60f5cc",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIConnectionError",
+      "latency_seconds": 46.979
+    }
+  ],
+  "status": "failed"
+}

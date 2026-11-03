@@ -1,0 +1,157 @@
+{
+  "input_sha256": "6acbe63833a417750e54374b4c41f9a546e555332c91691f223c807736335319",
+  "normalized": [
+    {
+      "record_id": "historical:raw_commonsense_qa_001271",
+      "decision": "ready",
+      "subject": "a plate while it is flying",
+      "relation_id": "entity_to_material",
+      "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+      "direction": "entity -> material",
+      "answer": "air",
+      "canonical_fact": "A plate contains air while it is flying.",
+      "prompt_en": "What is inside of a plate while it is flying?",
+      "evidence_quotes": [
+        "What is inside of a plate while it is flying?",
+        "air"
+      ],
+      "reason": "Source question explicitly asks what is inside a plate while it is flying; source answer is 'air.' The existing extraction by Qwen-3.8-Max matches. entity_to_material fits because air is the constituent material filling the interior of the specified entity (a plate in flight). No conflict between extraction and source.",
+      "english": {
+        "prompt_en": "What is inside of a plate while it is flying?",
+        "relation_definition": "Material composition of a specified entity; distinguish constituent, whole and production source.",
+        "answer": "air",
+        "canonical_fact": "A plate contains air while it is flying.",
+        "direction": "entity -> material",
+        "relation_id": "entity_to_material",
+        "subject": "a plate while it is flying",
+        "answer_aliases_en": [
+          "air"
+        ],
+        "relation_spec": {
+          "id": "entity_to_material",
+          "direction": "entity -> material",
+          "definition": "Material composition of a specified entity; distinguish constituent, whole and production source."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "2984dc928452831ee00f08f5ebba03c5a5ce18c51a9b27c93fdffa77f3ed722d",
+      "input_sha256": "13e983360a9b088f23e76a351c201f2e2dcc826108dc8f1ee2e02c682e060ea1",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_commonsense_qa_001283",
+      "decision": "ready",
+      "subject": "passing sentence",
+      "relation_id": "action_to_required_decision",
+      "relation_definition": "The specific decision or judgment that a specified legal or procedural action requires the actor to produce.",
+      "direction": "specified action -> required decision",
+      "answer": "judgement",
+      "canonical_fact": "Passing sentence requires making a judgement.",
+      "prompt_en": "What must a jury make in order to pass sentence?",
+      "evidence_quotes": [
+        "the choice of passing sentence required them to make a what?",
+        "judgement"
+      ],
+      "reason": "Source question states that passing sentence required the jury to make a judgement; source answer is 'judgement.' No catalog relation captures an action-to-required-decision link, so a new precise relation 'action_to_required_decision' is proposed with direction 'specified action -> required decision.' The existing Qwen-3.8-Max extraction matches the source answer.",
+      "english": {
+        "prompt_en": "What must a jury make in order to pass sentence?",
+        "relation_definition": "The specific decision or judgment that a specified legal or procedural action requires the actor to produce.",
+        "answer": "judgement",
+        "canonical_fact": "Passing sentence requires making a judgement.",
+        "direction": "specified action -> required decision",
+        "relation_id": "action_to_required_decision",
+        "subject": "passing sentence",
+        "answer_aliases_en": [
+          "judgement"
+        ],
+        "relation_spec": {
+          "id": "action_to_required_decision",
+          "definition": "The specific decision or judgment that a specified legal or procedural action requires the actor to produce.",
+          "direction": "specified action -> required decision"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "85e2539238b8798b2ff938a5b826152d84d43e8c924c3168e8d84336ec83498e",
+      "input_sha256": "d7d4a20ae14e1dad605eb08d33dede84d19bfaab458784706cd49a12f8ea8dd9",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001271",
+        "historical:raw_commonsense_qa_001283"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "e2f8ff350d181ed5466e479c9779d4fb172e93dd7afd132730b89d58b1b76383",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2402,
+      "first_chunk_seconds": 6.417,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2703,
+        "prompt_tokens": 1579,
+        "total_tokens": 4282,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2216,
+          "text_tokens": 487
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1fe5c2b5dc24d703667bc6fb4d8b558252522ec87b313adbfad99d2dfe666c1a",
+      "status": "completed",
+      "latency_seconds": 46.727
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001271",
+        "historical:raw_commonsense_qa_001283"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "b32b525a9e9ab5a11ca97977c0ca12a9e45f0dccd82106f8c75429bac8aef288",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 11.059
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001271",
+        "historical:raw_commonsense_qa_001283"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "b32b525a9e9ab5a11ca97977c0ca12a9e45f0dccd82106f8c75429bac8aef288",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 22.138
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_commonsense_qa_001271",
+        "historical:raw_commonsense_qa_001283"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "b32b525a9e9ab5a11ca97977c0ca12a9e45f0dccd82106f8c75429bac8aef288",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 38.886
+    }
+  ],
+  "status": "failed"
+}

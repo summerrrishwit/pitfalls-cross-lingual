@@ -1,0 +1,242 @@
+{
+  "input_sha256": "afacfec7d07118d2d17da06fb35d7a9f13021c79dfbc9323e5811daeaefb9c71",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000770",
+      "decision": "ready",
+      "subject": "Earth",
+      "relation_id": "whole_to_part",
+      "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+      "direction": "whole -> part",
+      "answer": "crust, mantle, core",
+      "canonical_fact": "The Earth is divided into three parts: the crust, mantle, and core.",
+      "prompt_en": "What are the three internal layers into which the Earth is divided?",
+      "evidence_quotes": [
+        "What three parts is the earth divided into?",
+        "crust, mantle, core"
+      ],
+      "reason": "The source question asks for the three constituent parts of the Earth and the answer lists them explicitly. This is a straightforward whole-to-part relation with multiple valid parts, matching the catalog relation 'whole_to_part' exactly. Both model annotations agree on subject, answer, and canonical fact.",
+      "english": {
+        "prompt_en": "What are the three internal layers into which the Earth is divided?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "crust, mantle, core",
+        "canonical_fact": "The Earth is divided into three parts: the crust, mantle, and core.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "Earth",
+        "answer_aliases_en": [
+          "crust, mantle, core"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6a81921815490684b1b6015bfc0ad2da050f8b082218d69abed7b0ce6c87cd3e",
+      "input_sha256": "ab22f477cbdfc578aa129c3c71b21974af8a66b7c26c3d36ca48d5276bbf7403",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000771",
+      "decision": "ready",
+      "subject": "one gram of protein",
+      "relation_id": "substance_quantity_to_energy_yield",
+      "relation_definition": "The caloric/energy yield (in specified units such as calories or kilocalories) of a stated quantity of a named nutrient or substance. Direction: specified quantity of named substance -> energy yield value in stated units. Do not conflate with the total energy of a food item or with thermodynamic free energy.",
+      "direction": "specified quantity of named substance -> energy yield in stated units",
+      "answer": "4",
+      "canonical_fact": "One gram of protein provides 4 calories of energy.",
+      "prompt_en": "How many calories of energy does one gram of protein provide?",
+      "evidence_quotes": [
+        "How many calories of energy does one gram of protein provide?",
+        "4"
+      ],
+      "reason": "The source states a precise quantitative caloric value for a specific mass of a named nutrient. No existing catalog relation captures a per-unit-mass energy yield of a substance; the closest (entity_to_material, entity_to_class) do not fit the quantitative nutritional-property semantics. A new relation 'substance_quantity_to_energy_yield' is proposed to precisely encode this. Both model annotations agree on subject, answer, and canonical fact. The answer '4' is a literal substring of source_answer.",
+      "english": {
+        "prompt_en": "How many calories of energy does one gram of protein provide?",
+        "relation_definition": "The caloric/energy yield (in specified units such as calories or kilocalories) of a stated quantity of a named nutrient or substance. Direction: specified quantity of named substance -> energy yield value in stated units. Do not conflate with the total energy of a food item or with thermodynamic free energy.",
+        "answer": "4",
+        "canonical_fact": "One gram of protein provides 4 calories of energy.",
+        "direction": "specified quantity of named substance -> energy yield in stated units",
+        "relation_id": "substance_quantity_to_energy_yield",
+        "subject": "one gram of protein",
+        "answer_aliases_en": [
+          "4"
+        ],
+        "relation_spec": {
+          "id": "substance_quantity_to_energy_yield",
+          "definition": "The caloric/energy yield (in specified units such as calories or kilocalories) of a stated quantity of a named nutrient or substance. Direction: specified quantity of named substance -> energy yield value in stated units. Do not conflate with the total energy of a food item or with thermodynamic free energy.",
+          "direction": "specified quantity of named substance -> energy yield in stated units"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "999d211cacd88d5eb75dda43985bc6b98d07c46cedc2a68f7b272b9b82c3bb02",
+      "input_sha256": "ec5a4a52cf4783590ee0588e38c8227bfe995578ad8f651d072fb9003182bf90",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_sciq_000770",
+      "input_sha256": "ab22f477cbdfc578aa129c3c71b21974af8a66b7c26c3d36ca48d5276bbf7403",
+      "english": {
+        "prompt_en": "What are the three internal layers into which the Earth is divided?",
+        "relation_definition": "Specified constituent of a whole; account for multiple valid parts.",
+        "answer": "crust, mantle, core",
+        "canonical_fact": "The Earth is divided into three parts: the crust, mantle, and core.",
+        "direction": "whole -> part",
+        "relation_id": "whole_to_part",
+        "subject": "Earth",
+        "answer_aliases_en": [
+          "crust, mantle, core"
+        ],
+        "relation_spec": {
+          "id": "whole_to_part",
+          "direction": "whole -> part",
+          "definition": "Specified constituent of a whole; account for multiple valid parts."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "6a81921815490684b1b6015bfc0ad2da050f8b082218d69abed7b0ce6c87cd3e",
+      "translation": {
+        "record_id": "historical:raw_sciq_000770",
+        "subject_zh": "地球",
+        "prompt_zh": "地球被分为哪三个内部层次？",
+        "canonical_fact_zh": "地球被分为三个部分：地壳、地幔和地核。",
+        "answer_zh": "地壳、地幔、地核",
+        "answer_aliases_zh": [
+          "地壳、地幔、地核"
+        ]
+      },
+      "translation_sha256": "25bfdcc1a9d53e091fd13299a0005542b783b5ae337bdfed0977d5f317f75de8"
+    },
+    {
+      "record_id": "historical:raw_sciq_000771",
+      "input_sha256": "ec5a4a52cf4783590ee0588e38c8227bfe995578ad8f651d072fb9003182bf90",
+      "english": {
+        "prompt_en": "How many calories of energy does one gram of protein provide?",
+        "relation_definition": "The caloric/energy yield (in specified units such as calories or kilocalories) of a stated quantity of a named nutrient or substance. Direction: specified quantity of named substance -> energy yield value in stated units. Do not conflate with the total energy of a food item or with thermodynamic free energy.",
+        "answer": "4",
+        "canonical_fact": "One gram of protein provides 4 calories of energy.",
+        "direction": "specified quantity of named substance -> energy yield in stated units",
+        "relation_id": "substance_quantity_to_energy_yield",
+        "subject": "one gram of protein",
+        "answer_aliases_en": [
+          "4"
+        ],
+        "relation_spec": {
+          "id": "substance_quantity_to_energy_yield",
+          "definition": "The caloric/energy yield (in specified units such as calories or kilocalories) of a stated quantity of a named nutrient or substance. Direction: specified quantity of named substance -> energy yield value in stated units. Do not conflate with the total energy of a food item or with thermodynamic free energy.",
+          "direction": "specified quantity of named substance -> energy yield in stated units"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "999d211cacd88d5eb75dda43985bc6b98d07c46cedc2a68f7b272b9b82c3bb02",
+      "translation": {
+        "record_id": "historical:raw_sciq_000771",
+        "subject_zh": "一克蛋白质",
+        "prompt_zh": "一克蛋白质能提供多少卡路里的能量？",
+        "canonical_fact_zh": "一克蛋白质提供4卡路里的能量。",
+        "answer_zh": "4",
+        "answer_aliases_zh": [
+          "4"
+        ]
+      },
+      "translation_sha256": "50559fb57a4788cf9d784e83778e29ffaf143655e338677a8d5df6403731d3ea"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000770",
+        "historical:raw_sciq_000771"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "c0a54ee90c93d7d361c01c4518f7f2846c8961edb640529bab67ebf619f5aa33",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.876
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000770",
+        "historical:raw_sciq_000771"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "c0a54ee90c93d7d361c01c4518f7f2846c8961edb640529bab67ebf619f5aa33",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 91.765
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000770",
+        "historical:raw_sciq_000771"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "c0a54ee90c93d7d361c01c4518f7f2846c8961edb640529bab67ebf619f5aa33",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2010,
+      "first_chunk_seconds": 66.021,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2076,
+        "prompt_tokens": 1678,
+        "total_tokens": 3754,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1498,
+          "text_tokens": 578
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "ca58c0b70cd6678be998755a191a169dc750cc095b69899268bf05d1c2eb90f4",
+      "status": "completed",
+      "latency_seconds": 129.537
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000770",
+        "historical:raw_sciq_000771"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "ba69d6b48651e2bc4b5d1c04e77057125102a3f3f2e12cb63768cf3badd3af0a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 594,
+      "first_chunk_seconds": 0.98,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 655,
+        "prompt_tokens": 920,
+        "total_tokens": 1575,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 417,
+          "text_tokens": 238
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "d81c64444bfdc4bb121a84f773726f2ce02357aacf4d5c891a54f51480f1c51f",
+      "status": "completed",
+      "latency_seconds": 116.904
+    }
+  ],
+  "status": "completed"
+}

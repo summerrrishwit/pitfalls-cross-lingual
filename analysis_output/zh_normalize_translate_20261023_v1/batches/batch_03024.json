@@ -1,0 +1,211 @@
+{
+  "input_sha256": "3bd359c3adc298ca53d33ed2c597bb6da9c16c9a52fc7759fdcf3e1eaea0de16",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000488",
+      "decision": "ready",
+      "subject": "chordates",
+      "relation_id": "taxon_to_shared_feature",
+      "relation_definition": "Anatomical or biological structure that is a defining shared characteristic of all members of the specified taxonomic group.",
+      "direction": "taxonomic group -> shared anatomical/biological feature",
+      "answer": "notochord",
+      "canonical_fact": "All chordates share the anatomical feature of a notochord.",
+      "prompt_en": "What anatomical structure is a shared defining feature of all members of the phylum Chordata?",
+      "evidence_quotes": [
+        "What anatomical feature is shared by all chordates?",
+        "notochord"
+      ],
+      "reason": "No existing catalog relation fits a taxonomic-group-to-shared-anatomical-feature mapping exactly. whole_to_part requires a physical/conceptual whole with constituents; a taxonomic group is a category, not a whole in that sense. Proposing a precise new relation taxon_to_shared_feature. Answer 'notochord' is copied verbatim from source_answer.",
+      "english": {
+        "relation_definition": "Anatomical or biological structure that is a defining shared characteristic of all members of the specified taxonomic group.",
+        "direction": "taxonomic group -> shared anatomical/biological feature",
+        "subject": "chordates",
+        "relation_id": "taxon_to_shared_feature",
+        "prompt_en": "What anatomical structure is a shared defining feature of all members of the phylum Chordata?",
+        "answer": "notochord",
+        "canonical_fact": "All chordates share the anatomical feature of a notochord.",
+        "answer_aliases_en": [
+          "notochord"
+        ],
+        "relation_spec": {
+          "id": "taxon_to_shared_feature",
+          "definition": "Anatomical or biological structure that is a defining shared characteristic of all members of the specified taxonomic group.",
+          "direction": "taxonomic group -> shared anatomical/biological feature"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "454e09296bd9662f9de6316890b9bd384b185ba5348f25e28c9b164b8bc9deb8",
+      "input_sha256": "95fd4c143259d2b8582563436f2b0b34b3a0437b7b7cf9016293cf6bdee5be1a",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000489",
+      "decision": "ready",
+      "subject": "compounds that form crystals instead of molecules",
+      "relation_id": "description_to_term",
+      "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+      "direction": "description -> term",
+      "answer": "ionic compounds",
+      "canonical_fact": "Ionic compounds form crystals instead of molecules.",
+      "prompt_en": "In chemistry, what class of compounds forms crystalline lattices rather than discrete molecular units?",
+      "evidence_quotes": [
+        "What compounds form crystals instead of molecules?",
+        "ionic compounds"
+      ],
+      "reason": "The source question supplies an identifying description ('compounds that form crystals instead of molecules') and the answer is the conventional chemical term 'ionic compounds'. This maps directly to description_to_term (description -> term). No new relation needed.",
+      "english": {
+        "relation_definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition.",
+        "direction": "description -> term",
+        "subject": "compounds that form crystals instead of molecules",
+        "relation_id": "description_to_term",
+        "prompt_en": "In chemistry, what class of compounds forms crystalline lattices rather than discrete molecular units?",
+        "answer": "ionic compounds",
+        "canonical_fact": "Ionic compounds form crystals instead of molecules.",
+        "answer_aliases_en": [
+          "ionic compounds"
+        ],
+        "relation_spec": {
+          "id": "description_to_term",
+          "direction": "description -> term",
+          "definition": "Conventional term uniquely fitting a supplied defining description; distinct from the inverse term_to_definition."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "cacbee44a2f461089745c258dbabc42e19d57b1b705e86fae3e295a6059672eb",
+      "input_sha256": "994804a9fcf2679073982378303f5963139bd1a9481e3cfb2e9a3b9bcc5b7750",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000488",
+        "historical:raw_sciq_000489"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "dff13a812651449b64908fa596f0d74d5f9ea082c129758a604df4669966b827",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2111,
+      "first_chunk_seconds": 1.374,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2211,
+        "prompt_tokens": 1680,
+        "total_tokens": 3891,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1699,
+          "text_tokens": 512
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "05d16cd78412ac98076e12dbe814f73d25e23a9094407e3f62b5b38879797d07",
+      "status": "completed",
+      "latency_seconds": 68.582
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000488",
+        "historical:raw_sciq_000489"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "6e557bfaeb793ec0d1ee42e28dcf2867f8e14788edb4dcf0cb7af74ff80ab60a",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 555,
+      "first_chunk_seconds": 2.822,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 587,
+        "prompt_tokens": 857,
+        "total_tokens": 1444,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 428,
+          "text_tokens": 159
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "21703fa1dc6970d83bb5a4b6ab0d07c26dc79667375ad2c8df201dc11dba2d6d",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 10.836,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000488",
+        "historical:raw_sciq_000489"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "888c43469c03688f76ca2d48a06266feee2b6bedba204645f7495581fb22b5a1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1060,
+      "first_chunk_seconds": 6.85,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1132,
+        "prompt_tokens": 875,
+        "total_tokens": 2007,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 905,
+          "text_tokens": 227
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "7fefe875b73e9cd790dd607336f4b12586105871cb9c52f8d961069c1fd5ce16",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 45.21,
+      "validation_code": "chinese_answer_leak"
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000488",
+        "historical:raw_sciq_000489"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "888c43469c03688f76ca2d48a06266feee2b6bedba204645f7495581fb22b5a1",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1803,
+      "first_chunk_seconds": 5.531,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1868,
+        "prompt_tokens": 875,
+        "total_tokens": 2743,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1641,
+          "text_tokens": 227
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "712a28d0c2618e669c53c37c3c6e02d6e714a1251be828024be0888635aaff24",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 33.958,
+      "validation_code": "chinese_answer_leak"
+    }
+  ],
+  "status": "failed"
+}

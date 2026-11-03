@@ -1,0 +1,192 @@
+{
+  "input_sha256": "d60332aaea2ffc389acb3a9c922b8fdb2a413bdf986de93d9e0c7b7dc500a6ab",
+  "normalized": [
+    {
+      "record_id": "historical:raw_sciq_000120",
+      "decision": "ready",
+      "subject": "water",
+      "relation_id": "process_to_required_input",
+      "relation_definition": "The form of energy or substance explicitly stated as necessary to drive a specified decomposition or transformation process on a named entity.",
+      "direction": "specified process on entity -> required input",
+      "answer": "energy",
+      "canonical_fact": "Water can be broken down into hydrogen and oxygen gases by the addition of energy.",
+      "prompt_en": "What must be added to water to break it down into hydrogen and oxygen gases?",
+      "evidence_quotes": [
+        "Water can be broken down into hydrogen and oxygen gases by the addition of what?",
+        "energy"
+      ],
+      "reason": "Source explicitly states that energy is the input required for water decomposition into hydrogen and oxygen gases. No catalog relation covers a process-input relationship; proposing process_to_required_input to avoid forcing a broad category.",
+      "english": {
+        "direction": "specified process on entity -> required input",
+        "relation_id": "process_to_required_input",
+        "answer": "energy",
+        "canonical_fact": "Water can be broken down into hydrogen and oxygen gases by the addition of energy.",
+        "subject": "water",
+        "prompt_en": "What must be added to water to break it down into hydrogen and oxygen gases?",
+        "relation_definition": "The form of energy or substance explicitly stated as necessary to drive a specified decomposition or transformation process on a named entity.",
+        "answer_aliases_en": [
+          "energy"
+        ],
+        "relation_spec": {
+          "id": "process_to_required_input",
+          "definition": "The form of energy or substance explicitly stated as necessary to drive a specified decomposition or transformation process on a named entity.",
+          "direction": "specified process on entity -> required input"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "491fe6a2fdbca50687602a36761218cc8d8c207f9e23f29e7a85bda44a9e3652",
+      "input_sha256": "9576a6df587266ce1b5a00fd0e09f7df7765bfc957bb05d725e8e87d5eb83ce9",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_sciq_000121",
+      "decision": "ready",
+      "subject": "coast of California",
+      "relation_id": "location_to_climate_type",
+      "relation_definition": "The climate classification explicitly attributed to a specified geographic region or coastline.",
+      "direction": "specified location -> climate type",
+      "answer": "mediterranean",
+      "canonical_fact": "The coast of California has a Mediterranean climate.",
+      "prompt_en": "What type of climate is found along the coast of California?",
+      "evidence_quotes": [
+        "What type of climate does the coast of california have?",
+        "mediterranean"
+      ],
+      "reason": "Source explicitly identifies the climate of California's coast as mediterranean. No catalog relation covers location-to-climate-type; proposing location_to_climate_type with a precise definition rather than forcing entity_to_class or entity_to_containing_location.",
+      "english": {
+        "direction": "specified location -> climate type",
+        "relation_id": "location_to_climate_type",
+        "answer": "mediterranean",
+        "canonical_fact": "The coast of California has a Mediterranean climate.",
+        "subject": "coast of California",
+        "prompt_en": "What type of climate is found along the coast of California?",
+        "relation_definition": "The climate classification explicitly attributed to a specified geographic region or coastline.",
+        "answer_aliases_en": [
+          "mediterranean"
+        ],
+        "relation_spec": {
+          "id": "location_to_climate_type",
+          "definition": "The climate classification explicitly attributed to a specified geographic region or coastline.",
+          "direction": "specified location -> climate type"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "3343c6f855167e921f0ef880ffd498f71c5be7060972c4f540a10095e87188bc",
+      "input_sha256": "48d462c27544b2012d397eb3a1ad6d1b4c5f314e9727ad37865a97cc20e33ce5",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000120",
+        "historical:raw_sciq_000121"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "8fdd84615b975948003b302ac5814b87c9430e4194b0397ef5f3fcdd1355eeb6",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1939,
+      "first_chunk_seconds": 9.079,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1989,
+        "prompt_tokens": 1688,
+        "total_tokens": 3677,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1467,
+          "text_tokens": 522
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 1024
+        }
+      },
+      "content_sha256": "17c761d6eedc7b8652ec0a2afce75e7471020f405578630ef0ad597d2c5cd629",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 33.173,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_sciq_000120",
+        "historical:raw_sciq_000121"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "0fbf6fad138ee71307ed2b5f783dfb79254463db3e0fbf83d9dca5b0937b6164",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1724,
+      "first_chunk_seconds": 1.533,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1894,
+        "prompt_tokens": 1707,
+        "total_tokens": 3601,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1425,
+          "text_tokens": 469
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1fa921045a6166be65811fe882a42f6a04b91bf2421b2583b71ef72d6e69f0e4",
+      "status": "completed",
+      "latency_seconds": 104.842
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000120",
+        "historical:raw_sciq_000121"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "08c2c5f9445854346ef0a80092d289de106d8879ba94e3628fb1927b360814ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.041
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000120",
+        "historical:raw_sciq_000121"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "08c2c5f9445854346ef0a80092d289de106d8879ba94e3628fb1927b360814ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.242
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_sciq_000120",
+        "historical:raw_sciq_000121"
+      ],
+      "attempt": 3,
+      "prompt_sha256": "08c2c5f9445854346ef0a80092d289de106d8879ba94e3628fb1927b360814ef",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "status": "failed",
+      "error_type": "APIError",
+      "latency_seconds": 32.568
+    }
+  ],
+  "status": "failed"
+}

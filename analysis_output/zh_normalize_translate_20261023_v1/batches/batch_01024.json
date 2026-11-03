@@ -1,0 +1,264 @@
+{
+  "input_sha256": "bd673aed0e6e2a902c52422f147b544864356177ea03d9d94369c11aa3d2a348",
+  "normalized": [
+    {
+      "record_id": "public:pbf_5191c803d4e9e4d56c91",
+      "decision": "ready",
+      "subject": "most populated city in Australia",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "Sydney",
+      "canonical_fact": "Sydney is the most populated city in Australia.",
+      "prompt_en": "Which is the most populated city in Australia?",
+      "evidence_quotes": [
+        "which is the most populated city in australia",
+        "Sydney"
+      ],
+      "reason": "The question supplies an explicitly qualified identifying description ('most populated city in Australia') that uniquely resolves to the entity Sydney. This matches the existing catalog relation description_to_entity (identifying description -> entity) exactly. The answer 'Sydney' is taken verbatim from source_answer. The subject is reframed from the set 'cities in Australia' to the identifying description itself, consistent with the relation's direction.",
+      "english": {
+        "answer": "Sydney",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which is the most populated city in Australia?",
+        "direction": "identifying description -> entity",
+        "subject": "most populated city in Australia",
+        "canonical_fact": "Sydney is the most populated city in Australia.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Sydney",
+          "Sydney, New South Wales, Australia",
+          "Sydney, Australia",
+          "Sydney, NSW, Australia",
+          "Sydney, New South Wales",
+          "Sydney, NSW"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d7e6c105946bc00981d10347b606dda0cc98f895bd3fa509e372a8e4c79dbbc3",
+      "input_sha256": "bf2ebde97c538c61654eec505f97be1298a6fa5002be4a4673eca3eaeff291ff",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "public:pbf_51932666da4c23144c02",
+      "decision": "ready",
+      "subject": "G crochet hook",
+      "relation_id": "entity_to_dimension",
+      "relation_definition": "A specified physical dimension or measurement of a concrete object at stated granularity, including unit (e.g., size, length, diameter, weight). Distinct from entity_to_material (composition) and entity_to_class (taxonomy).",
+      "direction": "entity -> dimension",
+      "answer": "4.0",
+      "canonical_fact": "A G crochet hook is 4.0 mm in size.",
+      "prompt_en": "What size in mm is a G crochet hook?",
+      "evidence_quotes": [
+        "what size in mm is a g crochet hook",
+        "4.0"
+      ],
+      "reason": "No existing catalog relation covers a physical size/dimension measurement of a tool or object. entity_to_material concerns composition, entity_to_class concerns taxonomy membership; neither fits a numerical measure. Proposed new snake_case relation entity_to_dimension (entity -> dimension) with the definition above. The answer '4.0' is kept verbatim from source_answer; the unit (mm) is carried in the canonical_fact and subject context from the source question. No uncertainty or qualifiers in the source, so the fact is stated directly.",
+      "english": {
+        "answer": "4.0",
+        "relation_id": "entity_to_dimension",
+        "prompt_en": "What size in mm is a G crochet hook?",
+        "direction": "entity -> dimension",
+        "subject": "G crochet hook",
+        "canonical_fact": "A G crochet hook is 4.0 mm in size.",
+        "relation_definition": "A specified physical dimension or measurement of a concrete object at stated granularity, including unit (e.g., size, length, diameter, weight). Distinct from entity_to_material (composition) and entity_to_class (taxonomy).",
+        "answer_aliases_en": [
+          "4.0",
+          "4"
+        ],
+        "relation_spec": {
+          "id": "entity_to_dimension",
+          "definition": "A specified physical dimension or measurement of a concrete object at stated granularity, including unit (e.g., size, length, diameter, weight). Distinct from entity_to_material (composition) and entity_to_class (taxonomy).",
+          "direction": "entity -> dimension"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ff0bd723d6ed58d8f79afc2d00d7faf0c2155ebe298daba389ca8afe7ada6c2",
+      "input_sha256": "e16288d253e7610af81453f11c51ab03fa2026b55f231ad84c02f2f3aa31789c",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "public:pbf_5191c803d4e9e4d56c91",
+      "input_sha256": "bf2ebde97c538c61654eec505f97be1298a6fa5002be4a4673eca3eaeff291ff",
+      "english": {
+        "answer": "Sydney",
+        "relation_id": "description_to_entity",
+        "prompt_en": "Which is the most populated city in Australia?",
+        "direction": "identifying description -> entity",
+        "subject": "most populated city in Australia",
+        "canonical_fact": "Sydney is the most populated city in Australia.",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "Sydney",
+          "Sydney, New South Wales, Australia",
+          "Sydney, Australia",
+          "Sydney, NSW, Australia",
+          "Sydney, New South Wales",
+          "Sydney, NSW"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "d7e6c105946bc00981d10347b606dda0cc98f895bd3fa509e372a8e4c79dbbc3",
+      "translation": {
+        "record_id": "public:pbf_5191c803d4e9e4d56c91",
+        "subject_zh": "澳大利亚人口最多的城市",
+        "prompt_zh": "澳大利亚人口最多的城市是哪个？",
+        "canonical_fact_zh": "悉尼是澳大利亚人口最多的城市。",
+        "answer_zh": "悉尼",
+        "answer_aliases_zh": [
+          "悉尼",
+          "澳大利亚新南威尔士州悉尼",
+          "澳大利亚悉尼",
+          "澳大利亚新州悉尼",
+          "新南威尔士州悉尼",
+          "新州悉尼"
+        ]
+      },
+      "translation_sha256": "ebf7ea919bbc6b68b5a7cd45cf4c316b71f1ed5a3fd60859044147d25e539a02"
+    },
+    {
+      "record_id": "public:pbf_51932666da4c23144c02",
+      "input_sha256": "e16288d253e7610af81453f11c51ab03fa2026b55f231ad84c02f2f3aa31789c",
+      "english": {
+        "answer": "4.0",
+        "relation_id": "entity_to_dimension",
+        "prompt_en": "What size in mm is a G crochet hook?",
+        "direction": "entity -> dimension",
+        "subject": "G crochet hook",
+        "canonical_fact": "A G crochet hook is 4.0 mm in size.",
+        "relation_definition": "A specified physical dimension or measurement of a concrete object at stated granularity, including unit (e.g., size, length, diameter, weight). Distinct from entity_to_material (composition) and entity_to_class (taxonomy).",
+        "answer_aliases_en": [
+          "4.0",
+          "4"
+        ],
+        "relation_spec": {
+          "id": "entity_to_dimension",
+          "definition": "A specified physical dimension or measurement of a concrete object at stated granularity, including unit (e.g., size, length, diameter, weight). Distinct from entity_to_material (composition) and entity_to_class (taxonomy).",
+          "direction": "entity -> dimension"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "1ff0bd723d6ed58d8f79afc2d00d7faf0c2155ebe298daba389ca8afe7ada6c2",
+      "translation": {
+        "record_id": "public:pbf_51932666da4c23144c02",
+        "subject_zh": "G号钩针",
+        "prompt_zh": "G号钩针的尺寸是多少毫米？",
+        "canonical_fact_zh": "G号钩针的尺寸为4.0毫米。",
+        "answer_zh": "4.0",
+        "answer_aliases_zh": [
+          "4.0",
+          "4"
+        ]
+      },
+      "translation_sha256": "394e7dece01d789c19f8edc3659e61246bfab94dfd9a2304d408ecdc3a4c1296"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5191c803d4e9e4d56c91",
+        "public:pbf_51932666da4c23144c02"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "11a200823206314c335bcf0bfaee57bb93bf245abecd52b279668a7a1b2a3f4d",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2794,
+      "first_chunk_seconds": 12.844,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2940,
+        "prompt_tokens": 1610,
+        "total_tokens": 4550,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2399,
+          "text_tokens": 541
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "afe8f8c18244f2200a3add7fbbb3dd84bdc51d1ec97226491724411a2fe4302a",
+      "status": "failed",
+      "error_type": "ValueError",
+      "latency_seconds": 59.592,
+      "validation_code": "known_relation_spec_mismatch"
+    },
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "public:pbf_5191c803d4e9e4d56c91",
+        "public:pbf_51932666da4c23144c02"
+      ],
+      "attempt": 2,
+      "prompt_sha256": "3949af2271e333142e98739ac1a0765da3f97506025bd94a28ec81021d1f1568",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 2499,
+      "first_chunk_seconds": 2.514,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 2726,
+        "prompt_tokens": 1629,
+        "total_tokens": 4355,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 2143,
+          "text_tokens": 583
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "8f1d9c159a5fa301bab3a445880ab67bac674a7e3b8b043d93fc37491fb8c674",
+      "status": "completed",
+      "latency_seconds": 58.143
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "public:pbf_5191c803d4e9e4d56c91",
+        "public:pbf_51932666da4c23144c02"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "0a976560e72fc7a89f33c9969415167f1f558f93c898c83e7e1e754e2e064412",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1457,
+      "first_chunk_seconds": 12.828,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1507,
+        "prompt_tokens": 895,
+        "total_tokens": 2402,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1244,
+          "text_tokens": 263
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "1f6cf1e77ddb5d419186b461b2ebe32684d9cbcd1fd8b53be08c8216d13b323a",
+      "status": "completed",
+      "latency_seconds": 35.305
+    }
+  ],
+  "status": "completed"
+}

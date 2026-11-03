@@ -1,0 +1,214 @@
+{
+  "input_sha256": "1c833befd8d7db6b74cd3c5941485d364ba68abb21d3d6090a7c574c30c8b859",
+  "normalized": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001359",
+      "decision": "ready",
+      "subject": "part of a plant that makes sugar from carbon dioxide",
+      "relation_id": "description_to_entity",
+      "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+      "direction": "identifying description -> entity",
+      "answer": "leaf",
+      "canonical_fact": "The part of a plant that makes sugar from carbon dioxide is the leaf.",
+      "prompt_en": "Which part of a plant makes sugar from carbon dioxide?",
+      "evidence_quotes": [
+        "Which part of a plant makes sugar from carbon dioxide?",
+        "leaf"
+      ],
+      "reason": "Source question asks for the specific plant part that makes sugar from CO2; source answer is 'leaf'. The existing catalog relation description_to_entity fits exactly: the identifying description 'part of a plant that makes sugar from carbon dioxide' uniquely points to the entity 'leaf'.",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "leaf",
+        "canonical_fact": "The part of a plant that makes sugar from carbon dioxide is the leaf.",
+        "subject": "part of a plant that makes sugar from carbon dioxide",
+        "prompt_en": "Which part of a plant makes sugar from carbon dioxide?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "leaf"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "11f8518f88be214bdfef6bbabe58beb95f2538703920f54fdebe6b1bfeb1f25c",
+      "input_sha256": "cde02cb6b7336e63a2e21182cb6736f28662ff41e03dad9213b0dfdd2e015aa7",
+      "human_gold": false,
+      "independent_relation_review": false
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001366",
+      "decision": "ready",
+      "subject": "wind",
+      "relation_id": "agent_to_function_mechanism",
+      "relation_definition": "The specific process or mechanism by which a named agent carries out a stated function or effect. Direction: agent -> mechanism description.",
+      "direction": "agent -> function mechanism",
+      "answer": "spreading the plants' pollen",
+      "canonical_fact": "The wind helps many plants reproduce by spreading the plants' pollen.",
+      "prompt_en": "By what mechanism does wind help many plants reproduce?",
+      "evidence_quotes": [
+        "The wind helps many plants reproduce by ___.",
+        "spreading the plants' pollen"
+      ],
+      "reason": "Source question and answer establish that wind helps plants reproduce by spreading pollen. No catalog relation captures an agent-to-mechanism fact, so a new relation 'agent_to_function_mechanism' is proposed with an explicit definition and direction. The source supports the fact directly; no uncertainty or qualifiers are present.",
+      "english": {
+        "direction": "agent -> function mechanism",
+        "relation_id": "agent_to_function_mechanism",
+        "answer": "spreading the plants' pollen",
+        "canonical_fact": "The wind helps many plants reproduce by spreading the plants' pollen.",
+        "subject": "wind",
+        "prompt_en": "By what mechanism does wind help many plants reproduce?",
+        "relation_definition": "The specific process or mechanism by which a named agent carries out a stated function or effect. Direction: agent -> mechanism description.",
+        "answer_aliases_en": [
+          "spreading the plants' pollen"
+        ],
+        "relation_spec": {
+          "id": "agent_to_function_mechanism",
+          "definition": "The specific process or mechanism by which a named agent carries out a stated function or effect. Direction: agent -> mechanism description.",
+          "direction": "agent -> function mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "07bd2637f31ebe9a63da2af7a65a80c085db5a4e2f08d5559b396ebddabf4c93",
+      "input_sha256": "1a8d5679401452159c34ab6929659d2e251c60f33b90752e196293a511186810",
+      "human_gold": false,
+      "independent_relation_review": false
+    }
+  ],
+  "translated": [
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001359",
+      "input_sha256": "cde02cb6b7336e63a2e21182cb6736f28662ff41e03dad9213b0dfdd2e015aa7",
+      "english": {
+        "direction": "identifying description -> entity",
+        "relation_id": "description_to_entity",
+        "answer": "leaf",
+        "canonical_fact": "The part of a plant that makes sugar from carbon dioxide is the leaf.",
+        "subject": "part of a plant that makes sugar from carbon dioxide",
+        "prompt_en": "Which part of a plant makes sugar from carbon dioxide?",
+        "relation_definition": "Unique entity satisfying an explicitly qualified identifying description.",
+        "answer_aliases_en": [
+          "leaf"
+        ],
+        "relation_spec": {
+          "id": "description_to_entity",
+          "direction": "identifying description -> entity",
+          "definition": "Unique entity satisfying an explicitly qualified identifying description."
+        },
+        "catalog_known_relation": true
+      },
+      "english_sha256": "11f8518f88be214bdfef6bbabe58beb95f2538703920f54fdebe6b1bfeb1f25c",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001359",
+        "subject_zh": "能将二氧化碳转化为糖分的植物部位",
+        "prompt_zh": "能将二氧化碳转化为糖分的植物部位是什么？",
+        "canonical_fact_zh": "能将二氧化碳转化为糖分的植物部位是叶片。",
+        "answer_zh": "叶片",
+        "answer_aliases_zh": [
+          "叶片"
+        ]
+      },
+      "translation_sha256": "95406bb840e90f411f2221cdf19ab72cbc53154efc87edf9e592041a56d4b996"
+    },
+    {
+      "record_id": "historical:raw_ai2_arc_easy_001366",
+      "input_sha256": "1a8d5679401452159c34ab6929659d2e251c60f33b90752e196293a511186810",
+      "english": {
+        "direction": "agent -> function mechanism",
+        "relation_id": "agent_to_function_mechanism",
+        "answer": "spreading the plants' pollen",
+        "canonical_fact": "The wind helps many plants reproduce by spreading the plants' pollen.",
+        "subject": "wind",
+        "prompt_en": "By what mechanism does wind help many plants reproduce?",
+        "relation_definition": "The specific process or mechanism by which a named agent carries out a stated function or effect. Direction: agent -> mechanism description.",
+        "answer_aliases_en": [
+          "spreading the plants' pollen"
+        ],
+        "relation_spec": {
+          "id": "agent_to_function_mechanism",
+          "definition": "The specific process or mechanism by which a named agent carries out a stated function or effect. Direction: agent -> mechanism description.",
+          "direction": "agent -> function mechanism"
+        },
+        "catalog_known_relation": false
+      },
+      "english_sha256": "07bd2637f31ebe9a63da2af7a65a80c085db5a4e2f08d5559b396ebddabf4c93",
+      "translation": {
+        "record_id": "historical:raw_ai2_arc_easy_001366",
+        "subject_zh": "风",
+        "prompt_zh": "风通过什么机制帮助许多植物繁殖？",
+        "canonical_fact_zh": "风通过传播植物的花粉来帮助许多植物繁殖。",
+        "answer_zh": "传播植物的花粉",
+        "answer_aliases_zh": [
+          "传播植物的花粉"
+        ]
+      },
+      "translation_sha256": "2d975119061d9246231d5d21d0c92a6bda605123a64dc51cfe6668e26f8cfec1"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "normalize",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001359",
+        "historical:raw_ai2_arc_easy_001366"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "fcdd31af2bc562140cd58ab56bf05e21f0d3e60967dd419680e1168ee387fefe",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 1879,
+      "first_chunk_seconds": 25.983,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 1915,
+        "prompt_tokens": 1704,
+        "total_tokens": 3619,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 1418,
+          "text_tokens": 497
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "6e7d70eb0dbff253362f471d65098fecaf6e8c523c909d862872c0e3f2495434",
+      "status": "completed",
+      "latency_seconds": 55.783
+    },
+    {
+      "stage": "translate",
+      "record_ids": [
+        "historical:raw_ai2_arc_easy_001359",
+        "historical:raw_ai2_arc_easy_001366"
+      ],
+      "attempt": 1,
+      "prompt_sha256": "bdba4f911df3f747113f8f9320688a9518e9164d9ee966af8d15de3cea66fa04",
+      "requested_model": "qwen-3.8-max",
+      "worker_policy": "transport_stream_v1",
+      "stream": true,
+      "stream_chunks": 567,
+      "first_chunk_seconds": 17.182,
+      "finish_reason": "stop",
+      "response_model": "Qwen-3.8-Max",
+      "usage": {
+        "completion_tokens": 600,
+        "prompt_tokens": 830,
+        "total_tokens": 1430,
+        "completion_tokens_details": {
+          "audio_tokens": null,
+          "reasoning_tokens": 381,
+          "text_tokens": 219
+        },
+        "prompt_tokens_details": null
+      },
+      "content_sha256": "766b918e1bef12c5f47fe94c25537d5ea535326a96e293d81e0398368cf189f4",
+      "status": "completed",
+      "latency_seconds": 24.564
+    }
+  ],
+  "status": "completed"
+}
